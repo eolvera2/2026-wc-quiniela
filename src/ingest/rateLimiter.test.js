@@ -66,9 +66,11 @@ describe('rateLimiter', () => {
     const fn = vi.fn().mockRejectedValue(new Error('API error'));
 
     const promise = limiter.schedule(fn);
+    // Attach rejection handler BEFORE advancing timers so Node never sees an
+    // unhandled rejection (which would cause a non-zero exit even on passing tests).
+    const assertion = expect(promise).rejects.toThrow('API error');
     await vi.runAllTimersAsync();
-
-    await expect(promise).rejects.toThrow('API error');
+    await assertion;
   });
 
   it('continues processing after an error', async () => {
@@ -79,11 +81,15 @@ describe('rateLimiter', () => {
     const p1 = limiter.schedule(fn1);
     const p2 = limiter.schedule(fn2);
 
+    // Attach rejection handler BEFORE advancing timers so Node never sees an
+    // unhandled rejection (which would cause a non-zero exit even on passing tests).
+    const p1Assertion = expect(p1).rejects.toThrow('fail');
+
     await vi.advanceTimersByTimeAsync(0);
     await vi.advanceTimersByTimeAsync(100);
     await vi.advanceTimersByTimeAsync(100);
 
-    await expect(p1).rejects.toThrow('fail');
+    await p1Assertion;
     await expect(p2).resolves.toBe('success');
   });
 });
