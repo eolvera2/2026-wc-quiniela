@@ -12,12 +12,14 @@
     "cost-report": "node scripts/cost-report.js"
   },
   "dependencies": {
+    "@azure/storage-blob": "12.26.0",
     "better-sqlite3": "12.10.0",
     "dotenv": "16.4.7",
     "p-limit": "6.2.0",
     "zod": "3.24.2"
   },
   "devDependencies": {
+    "nock": "14.0.1",
     "vitest": "3.1.1"
   }
 }
