@@ -10,6 +10,11 @@ on:
         description: 'Force a specific pass (seed/refresh/lock) — overrides cadence logic'
         required: false
         type: string
+      demo_mode:
+        description: 'Skip live cadence pipeline; build dist/ from scripts/seed-demo.js (no API keys required)'
+        required: false
+        type: boolean
+        default: false
 
 concurrency:
   group: wc26-pipeline
@@ -40,7 +45,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Build demo site (skip live pipeline)
+        if: ${{ inputs.demo_mode == true }}
+        run: node scripts/seed-demo.js
+
       - name: Run cadence pipeline
+        if: ${{ inputs.demo_mode != true }}
         env:
           AZURE_AI_ENDPOINT: ${{ secrets.AZURE_AI_ENDPOINT }}
           AZURE_AI_KEY: ${{ secrets.AZURE_AI_KEY }}
