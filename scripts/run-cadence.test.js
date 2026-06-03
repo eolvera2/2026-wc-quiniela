@@ -31,14 +31,15 @@ vi.mock('../src/generate/batch.js', () => ({
   runBatch: vi.fn().mockResolvedValue({ succeeded: 0, failed: 0, skipped: 0 }),
 }));
 
-vi.mock('../src/publish/wordpress.js', () => ({
-  publishArticle: vi.fn().mockResolvedValue({ wpPostId: 1, action: 'created', link: '' }),
+vi.mock('../src/publish/staticSite.js', () => ({
+  buildSite: vi.fn().mockReturnValue([]),
 }));
 
 import { downloadDb, uploadDb } from '../src/storage/blob.js';
 import { openDb, closeDb } from '../src/db/db.js';
 import { selectPass } from '../src/cadence/selectPass.js';
 import { runBatch } from '../src/generate/batch.js';
+import { buildSite } from '../src/publish/staticSite.js';
 
 describe('run-cadence orchestrator', () => {
   beforeEach(() => {
@@ -54,8 +55,8 @@ describe('run-cadence orchestrator', () => {
       endpoint: 'https://test.openai.azure.com',
       apiKey: 'key',
       activeArticleTypes: ['pronostico_momios'],
-      wpBaseUrl: 'https://site.com',
-      wpAppPassword: 'pass',
+      siteBaseUrl: 'https://test.example.com',
+      outputDir: '/tmp/dist',
       affiliateUrls: { caliente: '', bet365: '', skimlinks: '' },
     };
 
@@ -89,8 +90,8 @@ describe('run-cadence orchestrator', () => {
       endpoint: 'https://test.openai.azure.com',
       apiKey: 'key',
       activeArticleTypes: ['pronostico_momios'],
-      wpBaseUrl: 'https://site.com',
-      wpAppPassword: 'pass',
+      siteBaseUrl: 'https://test.example.com',
+      outputDir: '/tmp/dist',
       affiliateUrls: { caliente: '', bet365: '', skimlinks: '' },
     };
 
@@ -107,6 +108,9 @@ describe('run-cadence orchestrator', () => {
 
     const mockDb = {
       prepare: vi.fn((sql) => {
+        if (sql.includes('FROM articles a')) {
+          return { all: vi.fn().mockReturnValue([]) };
+        }
         if (sql.includes('FROM fixtures')) {
           return { all: vi.fn().mockReturnValue(mockFixtures) };
         }
@@ -128,8 +132,8 @@ describe('run-cadence orchestrator', () => {
       endpoint: 'https://test.openai.azure.com',
       apiKey: 'key',
       activeArticleTypes: ['pronostico_momios'],
-      wpBaseUrl: 'https://site.com',
-      wpAppPassword: 'pass',
+      siteBaseUrl: 'https://test.example.com',
+      outputDir: '/tmp/dist',
       affiliateUrls: { caliente: '', bet365: '', skimlinks: '' },
     };
 

@@ -14,7 +14,7 @@ describe('db wrapper', () => {
 
   it('opens an in-memory DB and applies schema', () => {
     const row = db.prepare("SELECT version FROM schema_version").get();
-    expect(row.version).toBe(1);
+    expect(row.version).toBe(2);
   });
 
   it('upserts a team', () => {

@@ -5,8 +5,9 @@
  * Flow:
  *   1. Pull wc26.sqlite from Azure Blob (with lease)
  *   2. Select fixtures with due passes (selectPass)
- *   3. For each due fixture: ingest → generate → publish → advance lifecycle
- *   4. Upload mutated DB back to Blob (releases lease)
+ *   3. For each due fixture: ingest → generate → advance lifecycle
+ *   4. Full-site rebuild from all articles with content
+ *   5. Upload mutated DB back to Blob (releases lease)
  *
  * Idempotent: re-running is a no-op for already-processed passes.
  */
@@ -15,7 +16,7 @@ import { downloadDb, uploadDb } from '../src/storage/blob.js';
 import { openDb, closeDb } from '../src/db/db.js';
 import { selectPass } from '../src/cadence/selectPass.js';
 import { runBatch } from '../src/generate/batch.js';
-import { publishArticle } from '../src/publish/wordpress.js';
+import { buildSite } from '../src/publish/staticSite.js';
 
 /**
  * Main orchestration function (exported for testing).
@@ -30,8 +31,8 @@ export async function runCadence(config) {
     endpoint,
     apiKey,
     activeArticleTypes,
-    wpBaseUrl,
-    wpAppPassword,
+    siteBaseUrl,
+    outputDir = 'dist',
     affiliateUrls,
   } = config;
 
@@ -78,7 +79,7 @@ export async function runCadence(config) {
 
     console.log(`[cadence] ${dueFixtures.length} fixture×type combinations due for processing`);
 
-    // 4. Process due fixtures: generate → publish → advance state
+    // 4. Process due fixtures: generate → advance state
     for (const { fixture, articleType, pass } of dueFixtures) {
       try {
         // Generate
@@ -89,45 +90,53 @@ export async function runCadence(config) {
         });
 
         if (batchResult.succeeded > 0) {
-          // Get the generated article
-          const article = db.prepare(`
-            SELECT * FROM articles WHERE fixture_id = ? AND article_type = ?
-          `).get(fixture.id, articleType);
+          // Advance lifecycle state (publish happens as full-site rebuild below)
+          const stateMap = { seed: 'seeded', refresh: 'refreshed', lock: 'locked' };
+          db.prepare(`
+            UPDATE articles
+            SET lifecycle_state = ?, last_pass = ?,
+                last_refreshed_at = datetime('now'), updated_at = datetime('now')
+            WHERE fixture_id = ? AND article_type = ?
+          `).run(stateMap[pass], pass, fixture.id, articleType);
 
-          if (article && article.content_json) {
-            // Publish
-            const contentJson = JSON.parse(article.content_json);
-            const publishResult = await publishArticle({
-              wpBaseUrl,
-              wpAppPassword,
-              article: {
-                fixtureId: fixture.id,
-                articleType,
-                contentJson,
-                wpPostId: article.wp_post_id,
-              },
-              affiliateUrls,
-            });
-
-            // Advance lifecycle state
-            const stateMap = { seed: 'seeded', refresh: 'refreshed', lock: 'locked' };
-            db.prepare(`
-              UPDATE articles
-              SET lifecycle_state = ?, last_pass = ?, wp_post_id = ?,
-                  last_refreshed_at = datetime('now'), updated_at = datetime('now')
-              WHERE fixture_id = ? AND article_type = ?
-            `).run(stateMap[pass], pass, publishResult.wpPostId, fixture.id, articleType);
-
-            console.log(`[cadence] ${pass} complete: fixture ${fixture.api_football_id} / ${articleType}`);
-          }
+          console.log(`[cadence] ${pass} complete: fixture ${fixture.api_football_id} / ${articleType}`);
         }
       } catch (err) {
         console.error(`[cadence] ERROR processing fixture ${fixture.api_football_id} / ${articleType}: ${err.message}`);
         // Continue to next fixture — don't fail the whole run
       }
     }
+
+    // 5. Full-site rebuild: all articles with content
+    const allArticles = db.prepare(`
+      SELECT a.fixture_id AS fixtureId,
+             a.article_type AS articleType,
+             a.content_json,
+             ht.name AS homeTeam,
+             at.name AS awayTeam
+      FROM articles a
+      JOIN fixtures f ON f.id = a.fixture_id
+      JOIN teams ht ON ht.id = f.home_team_id
+      JOIN teams at ON at.id = f.away_team_id
+      WHERE a.content_json IS NOT NULL
+    `).all();
+
+    if (allArticles.length > 0) {
+      const articles = allArticles.map(row => ({
+        fixtureId: row.fixtureId,
+        articleType: row.articleType,
+        homeTeam: row.homeTeam,
+        awayTeam: row.awayTeam,
+        contentJson: JSON.parse(row.content_json),
+      }));
+
+      const slugs = buildSite({ articles, siteBaseUrl, outputDir, affiliateUrls });
+      console.log(`[cadence] Site built: ${slugs.length} articles → ${outputDir}/`);
+    } else {
+      console.log('[cadence] No articles with content; skipping site build');
+    }
   } finally {
-    // 5. Close DB and upload (always, even if no work was done)
+    // 6. Close DB and upload (always, even if no work was done)
     if (db) closeDb(db);
 
     await uploadDb({
@@ -152,8 +161,8 @@ if (process.argv[1] && import.meta.url.endsWith(process.argv[1].replace(/\\/g, '
     endpoint: process.env.AZURE_AI_ENDPOINT,
     apiKey: process.env.AZURE_AI_KEY,
     activeArticleTypes: (process.env.ACTIVE_ARTICLE_TYPES || 'pronostico_momios').split(','),
-    wpBaseUrl: process.env.WP_BASE_URL,
-    wpAppPassword: process.env.WP_APP_PASSWORD,
+    siteBaseUrl: process.env.SITE_BASE_URL || 'https://wc26quiniela.com',
+    outputDir: process.env.OUTPUT_DIR || 'dist',
     affiliateUrls: {
       caliente: process.env.CALIENTE_AFFILIATE_URL || '',
       bet365: process.env.BET365_AFFILIATE_URL || '',

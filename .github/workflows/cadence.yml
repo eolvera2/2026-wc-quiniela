@@ -45,13 +45,21 @@ jobs:
           AZURE_AI_ENDPOINT: ${{ secrets.AZURE_AI_ENDPOINT }}
           AZURE_AI_KEY: ${{ secrets.AZURE_AI_KEY }}
           RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
-          WP_BASE_URL: ${{ secrets.WP_BASE_URL }}
-          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+          SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
+          OUTPUT_DIR: dist
           AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
           CALIENTE_AFFILIATE_URL: ${{ secrets.CALIENTE_AFFILIATE_URL }}
           BET365_AFFILIATE_URL: ${{ secrets.BET365_AFFILIATE_URL }}
           SKIMLINKS_AFFILIATE_URL: ${{ secrets.SKIMLINKS_AFFILIATE_URL }}
         run: node scripts/run-cadence.js
+
+      - name: Deploy to Azure Static Web Apps
+        if: success()
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.SWA_DEPLOYMENT_TOKEN }}
+          app_location: dist
+          skip_app_build: true
 
       - name: Alert on failure
         if: failure()

@@ -49,7 +49,7 @@ export function buildSlug(articleType, homeTeam, awayTeam) {
  *   outputDir?: string,
  *   affiliateUrls: { caliente: string, bet365: string, skimlinks: string },
  * }} params
- * @returns {{ slugs: Array<{ fixtureId: number, articleType: string, slug: string }> }}
+ * @returns {Array<{ fixtureId: number, articleType: string, slug: string }>}
  */
 export function buildSite({ articles, siteBaseUrl, outputDir = 'dist', affiliateUrls }) {
   // Ensure output directory exists
@@ -90,7 +90,7 @@ export function buildSite({ articles, siteBaseUrl, outputDir = 'dist', affiliate
   const sitemapXml = generateSitemap(sitemapEntries);
   writeFileSync(join(outputDir, 'sitemap.xml'), sitemapXml, 'utf-8');
 
-  return { slugs };
+  return slugs;
 }
 
 // ---------------------------------------------------------------------------
