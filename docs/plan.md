@@ -1,9 +1,9 @@
 # 2026 World Cup Quiniela — Implementation Plan
 
 ## Problem & Approach
-Build the system described in `docs/WC26_Quiniela_Biz_Plan.docx`: an LLM-orchestrated pipeline that ingests World Cup match data from API-Football, generates Spanish-language SEO/betting articles via an Azure AI Foundry model-router (Claude Opus for tactical analysis, GPT-4o-mini for formatting), injects CPA affiliate links, and publishes to WordPress at scale.
+Build the system described in `docs/WC26_Quiniela_Biz_Plan.docx`: an LLM-orchestrated pipeline that ingests World Cup match data from API-Football, generates Spanish-language SEO/betting articles via two discrete Azure OpenAI deployments (gpt-4o for tactical analysis, gpt-4.1-mini for lighter article types), injects CPA affiliate links, and publishes to Azure Static Web Apps at scale.
 
-**Stack:** Node.js + SQLite (via `better-sqlite3`, persisted to Azure Blob Storage) + Azure AI Foundry (model-router) + API-Football (RapidAPI) + WordPress REST API + GitHub Actions (scheduler).
+**Stack:** Node.js + SQLite (via `better-sqlite3`, persisted to Azure Blob Storage) + Azure OpenAI (two deployments: gpt-4o and gpt-4.1-mini) + API-Football (RapidAPI) + Azure Static Web Apps (static HTML generation & hosting) + GitHub Actions (scheduler).
 
 > **Note on SQLite driver:** the business plan says "SQLite3"; we use `better-sqlite3` (synchronous, faster, simpler batch code). Functionally equivalent for our use; flagged as an intentional deviation.
 

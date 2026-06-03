@@ -14,6 +14,8 @@ node_modules/
 /data/*.sqlite-wal
 /data/*.sqlite-shm
 .env
+.env.*
+!.env.example
 *.log
 dist/
 coverage/

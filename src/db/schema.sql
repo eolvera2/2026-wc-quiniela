@@ -4,7 +4,7 @@ CREATE TABLE IF NOT EXISTS schema_version (
   applied_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
 
-INSERT OR IGNORE INTO schema_version (version) VALUES (1);
+INSERT OR IGNORE INTO schema_version (version) VALUES (2);
 
 -- Teams
 CREATE TABLE IF NOT EXISTS teams (

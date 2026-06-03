@@ -1,0 +1,65 @@
+name: WC26 Quiniela Cadence
+
+on:
+  schedule:
+    # Twice daily: 6am and 6pm UTC
+    - cron: '0 6,18 * * *'
+  workflow_dispatch:
+    inputs:
+      force_pass:
+        description: 'Force a specific pass (seed/refresh/lock) — overrides cadence logic'
+        required: false
+        type: string
+
+concurrency:
+  group: wc26-pipeline
+  cancel-in-progress: false
+
+env:
+  NODE_VERSION: '18'
+  BLOB_CONTAINER: 'wc26'
+  BLOB_NAME: 'wc26.sqlite'
+  DB_PATH: '/tmp/wc26.sqlite'
+  ACTIVE_ARTICLE_TYPES: 'pronostico_momios'
+
+jobs:
+  cadence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run cadence pipeline
+        env:
+          AZURE_AI_ENDPOINT: ${{ secrets.AZURE_AI_ENDPOINT }}
+          AZURE_AI_KEY: ${{ secrets.AZURE_AI_KEY }}
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+          WP_BASE_URL: ${{ secrets.WP_BASE_URL }}
+          WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          CALIENTE_AFFILIATE_URL: ${{ secrets.CALIENTE_AFFILIATE_URL }}
+          BET365_AFFILIATE_URL: ${{ secrets.BET365_AFFILIATE_URL }}
+          SKIMLINKS_AFFILIATE_URL: ${{ secrets.SKIMLINKS_AFFILIATE_URL }}
+        run: node scripts/run-cadence.js
+
+      - name: Alert on failure
+        if: failure()
+        env:
+          ALERT_WEBHOOK: ${{ secrets.ALERT_WEBHOOK_URL }}
+        run: |
+          if [ -n "$ALERT_WEBHOOK" ]; then
+            curl -s -X POST "$ALERT_WEBHOOK" \
+              -H 'Content-Type: application/json' \
+              -d "{\"text\":\"🚨 WC26 Cadence FAILED — run: ${{ github.run_id }}, ref: ${{ github.ref }}\"}"
+          fi
