@@ -5,9 +5,7 @@ describe('config/index', () => {
   const REQUIRED_VARS = {
     AZURE_AI_ENDPOINT: 'https://test.openai.azure.com/',
     AZURE_AI_KEY: 'test-key',
-    RAPIDAPI_KEY: 'test-rapid',
-    WP_BASE_URL: 'https://test.com',
-    WP_APP_PASSWORD: 'test-pass',
+    API_FOOTBALL_KEY: 'test-api-football',
     AZURE_STORAGE_CONNECTION_STRING: 'DefaultEndpointsProtocol=https;AccountName=test',
     CALIENTE_AFFILIATE_URL: 'https://caliente.mx/ref/test',
     BET365_AFFILIATE_URL: 'https://bet365.mx/ref/test',
@@ -28,7 +26,7 @@ describe('config/index', () => {
     const config = loadConfig();
     expect(config.azureAiEndpoint).toBe('https://test.openai.azure.com/');
     expect(config.azureAiKey).toBe('test-key');
-    expect(config.rapidApiKey).toBe('test-rapid');
+    expect(config.apiFootballKey).toBe('test-api-football');
   });
 
   it('throws when a required var is missing', () => {

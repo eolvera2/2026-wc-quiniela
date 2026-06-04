@@ -11,7 +11,7 @@ export function loadConfig() {
     azureAiKey: env('AZURE_AI_KEY'),
     azureAiDeploymentRobust: env('AZURE_AI_DEPLOYMENT_ROBUST'),
     azureAiDeploymentCheap: env('AZURE_AI_DEPLOYMENT_CHEAP'),
-    rapidApiKey: env('RAPIDAPI_KEY'),
+    apiFootballKey: env('API_FOOTBALL_KEY'),
     azureStorageConnectionString: env('AZURE_STORAGE_CONNECTION_STRING'),
     swaDeploymentToken: env('SWA_DEPLOYMENT_TOKEN'),
     siteBaseUrl: env('SITE_BASE_URL'),

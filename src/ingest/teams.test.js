@@ -2,8 +2,8 @@ import { describe, it, expect, afterEach } from 'vitest';
 import nock from 'nock';
 import { fetchTeamStats } from './teams.js';
 
-const RAPIDAPI_HOST = 'https://api-football-v1.p.rapidapi.com';
-const API_KEY = 'test-rapid-key';
+const API_FOOTBALL_HOST = 'https://v3.football.api-sports.io';
+const API_KEY = 'test-api-football-key';
 
 describe('ingest/teams', () => {
   afterEach(() => {
@@ -11,8 +11,8 @@ describe('ingest/teams', () => {
   });
 
   it('fetches team statistics and returns normalized data', async () => {
-    nock(RAPIDAPI_HOST)
-      .get('/v3/teams/statistics')
+    nock(API_FOOTBALL_HOST)
+      .get('/teams/statistics')
       .query(true)
       .reply(200, {
         response: {
@@ -31,8 +31,8 @@ describe('ingest/teams', () => {
   });
 
   it('handles missing goals data gracefully (risk T2-4)', async () => {
-    nock(RAPIDAPI_HOST)
-      .get('/v3/teams/statistics')
+    nock(API_FOOTBALL_HOST)
+      .get('/teams/statistics')
       .query(true)
       .reply(200, {
         response: {
@@ -50,7 +50,7 @@ describe('ingest/teams', () => {
   });
 
   it('throws on HTTP error', async () => {
-    nock(RAPIDAPI_HOST).get('/v3/teams/statistics').query(true).reply(500, 'Server error');
+    nock(API_FOOTBALL_HOST).get('/teams/statistics').query(true).reply(500, 'Server error');
 
     await expect(
       fetchTeamStats({ apiKey: API_KEY, teamId: 10, leagueId: 1, season: 2026 })

@@ -3,21 +3,17 @@
  * Reference: docs/plan.md "Phase 2 — Data Ingestion" teams.js
  */
 
-const RAPIDAPI_HOST = 'api-football-v1.p.rapidapi.com';
-const BASE_URL = `https://${RAPIDAPI_HOST}/v3`;
+import { API_FOOTBALL_BASE_URL, apiFootballHeaders } from './apiFootball.js';
 
 /**
  * @param {{ apiKey: string, teamId: number, leagueId: number, season: number }} params
  * @returns {Promise<{ teamApiId: number, form: string|null, goalsScored: number, goalsConceded: number, rawJson: object }>}
  */
 export async function fetchTeamStats({ apiKey, teamId, leagueId, season }) {
-  const url = `${BASE_URL}/teams/statistics?team=${teamId}&league=${leagueId}&season=${season}`;
+  const url = `${API_FOOTBALL_BASE_URL}/teams/statistics?team=${teamId}&league=${leagueId}&season=${season}`;
 
   const response = await fetch(url, {
-    headers: {
-      'x-rapidapi-host': RAPIDAPI_HOST,
-      'x-rapidapi-key': apiKey,
-    },
+    headers: apiFootballHeaders(apiKey),
   });
 
   if (!response.ok) {

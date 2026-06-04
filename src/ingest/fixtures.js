@@ -2,12 +2,11 @@
  * API-Football fixtures client.
  * Reference: docs/plan.md "Phase 2 — Data Ingestion" fixtures.js
  *
- * Fetches WC2026 fixtures from API-Football (RapidAPI) and normalizes
+ * Fetches WC2026 fixtures from API-Football direct/API-Sports and normalizes
  * them into our internal schema shape.
  */
 
-const RAPIDAPI_HOST = 'api-football-v1.p.rapidapi.com';
-const BASE_URL = `https://${RAPIDAPI_HOST}/v3`;
+import { API_FOOTBALL_BASE_URL, apiFootballHeaders } from './apiFootball.js';
 
 // API-Football status codes → our internal status
 const STATUS_MAP = {
@@ -45,13 +44,10 @@ const KNOCKOUT_KEYWORDS = ['quarter', 'semi', 'final', 'round of', 'knockout', '
  * }>>}
  */
 export async function fetchFixtures({ apiKey, leagueId, season }) {
-  const url = `${BASE_URL}/fixtures?league=${leagueId}&season=${season}`;
+  const url = `${API_FOOTBALL_BASE_URL}/fixtures?league=${leagueId}&season=${season}`;
 
   const response = await fetch(url, {
-    headers: {
-      'x-rapidapi-host': RAPIDAPI_HOST,
-      'x-rapidapi-key': apiKey,
-    },
+    headers: apiFootballHeaders(apiKey),
   });
 
   if (!response.ok) {

@@ -6,21 +6,17 @@
  * Graceful degradation: returns empty array if no odds available.
  */
 
-const RAPIDAPI_HOST = 'api-football-v1.p.rapidapi.com';
-const BASE_URL = `https://${RAPIDAPI_HOST}/v3`;
+import { API_FOOTBALL_BASE_URL, apiFootballHeaders } from './apiFootball.js';
 
 /**
  * @param {{ apiKey: string, fixtureId: number }} params
  * @returns {Promise<Array<{ bookmaker: string, homeWin: number, draw: number, awayWin: number, rawJson: object }>>}
  */
 export async function fetchOdds({ apiKey, fixtureId }) {
-  const url = `${BASE_URL}/odds?fixture=${fixtureId}`;
+  const url = `${API_FOOTBALL_BASE_URL}/odds?fixture=${fixtureId}`;
 
   const response = await fetch(url, {
-    headers: {
-      'x-rapidapi-host': RAPIDAPI_HOST,
-      'x-rapidapi-key': apiKey,
-    },
+    headers: apiFootballHeaders(apiKey),
   });
 
   if (!response.ok) {

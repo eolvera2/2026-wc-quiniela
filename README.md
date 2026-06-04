@@ -99,7 +99,7 @@ The following environment variables are consumed by `scripts/run-cadence.js` and
 |-----------------------------------|----------------------------------------------------------|
 | `AZURE_AI_ENDPOINT`               | Azure OpenAI endpoint URL                                |
 | `AZURE_AI_KEY`                    | Azure OpenAI API key                                     |
-| `RAPIDAPI_KEY`                    | API-Football access key (via RapidAPI)                   |
+| `API_FOOTBALL_KEY`                | API-Football direct / API-Sports access key              |
 | `AZURE_STORAGE_CONNECTION_STRING` | Azure Blob Storage connection string (SQLite persistence)|
 | `SITE_BASE_URL`                   | Canonical base URL for the static site                   |
 | `SWA_DEPLOYMENT_TOKEN`            | Azure Static Web Apps deploy token                       |

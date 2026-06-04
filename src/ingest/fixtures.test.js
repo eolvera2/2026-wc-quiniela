@@ -2,8 +2,8 @@ import { describe, it, expect, afterEach } from 'vitest';
 import nock from 'nock';
 import { fetchFixtures } from './fixtures.js';
 
-const RAPIDAPI_HOST = 'https://api-football-v1.p.rapidapi.com';
-const API_KEY = 'test-rapid-key';
+const API_FOOTBALL_HOST = 'https://v3.football.api-sports.io';
+const API_KEY = 'test-api-football-key';
 
 const SAMPLE_FIXTURES_RESPONSE = {
   response: [
@@ -42,8 +42,8 @@ describe('ingest/fixtures', () => {
   });
 
   it('fetches and normalizes WC2026 fixtures from API-Football', async () => {
-    nock(RAPIDAPI_HOST)
-      .get('/v3/fixtures')
+    nock(API_FOOTBALL_HOST)
+      .get('/fixtures')
       .query(true)
       .reply(200, SAMPLE_FIXTURES_RESPONSE);
 
@@ -74,7 +74,7 @@ describe('ingest/fixtures', () => {
       }],
     };
 
-    nock(RAPIDAPI_HOST).get('/v3/fixtures').query(true).reply(200, response);
+    nock(API_FOOTBALL_HOST).get('/fixtures').query(true).reply(200, response);
 
     const fixtures = await fetchFixtures({ apiKey: API_KEY, leagueId: 1, season: 2026 });
     expect(fixtures[0].status).toBe('resolved');
@@ -82,14 +82,14 @@ describe('ingest/fixtures', () => {
   });
 
   it('handles empty response gracefully (risk T2-4)', async () => {
-    nock(RAPIDAPI_HOST).get('/v3/fixtures').query(true).reply(200, { response: [] });
+    nock(API_FOOTBALL_HOST).get('/fixtures').query(true).reply(200, { response: [] });
 
     const fixtures = await fetchFixtures({ apiKey: API_KEY, leagueId: 1, season: 2026 });
     expect(fixtures).toEqual([]);
   });
 
   it('throws on HTTP error', async () => {
-    nock(RAPIDAPI_HOST).get('/v3/fixtures').query(true).reply(403, { message: 'Forbidden' });
+    nock(API_FOOTBALL_HOST).get('/fixtures').query(true).reply(403, { message: 'Forbidden' });
 
     await expect(
       fetchFixtures({ apiKey: API_KEY, leagueId: 1, season: 2026 })
@@ -97,7 +97,7 @@ describe('ingest/fixtures', () => {
   });
 
   it('throws on network failure', async () => {
-    nock(RAPIDAPI_HOST).get('/v3/fixtures').query(true).replyWithError('ECONNREFUSED');
+    nock(API_FOOTBALL_HOST).get('/fixtures').query(true).replyWithError('ECONNREFUSED');
 
     await expect(
       fetchFixtures({ apiKey: API_KEY, leagueId: 1, season: 2026 })

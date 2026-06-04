@@ -2,8 +2,8 @@ import { describe, it, expect, afterEach } from 'vitest';
 import nock from 'nock';
 import { fetchOdds } from './odds.js';
 
-const RAPIDAPI_HOST = 'https://api-football-v1.p.rapidapi.com';
-const API_KEY = 'test-rapid-key';
+const API_FOOTBALL_HOST = 'https://v3.football.api-sports.io';
+const API_KEY = 'test-api-football-key';
 
 describe('ingest/odds', () => {
   afterEach(() => {
@@ -11,8 +11,8 @@ describe('ingest/odds', () => {
   });
 
   it('fetches and normalizes odds for a fixture', async () => {
-    nock(RAPIDAPI_HOST)
-      .get('/v3/odds')
+    nock(API_FOOTBALL_HOST)
+      .get('/odds')
       .query(true)
       .reply(200, {
         response: [{
@@ -40,15 +40,15 @@ describe('ingest/odds', () => {
   });
 
   it('handles empty odds response gracefully (risk T2-4: odds unavailable early)', async () => {
-    nock(RAPIDAPI_HOST).get('/v3/odds').query(true).reply(200, { response: [] });
+    nock(API_FOOTBALL_HOST).get('/odds').query(true).reply(200, { response: [] });
 
     const odds = await fetchOdds({ apiKey: API_KEY, fixtureId: 1001 });
     expect(odds).toEqual([]);
   });
 
   it('handles missing Match Winner bet type', async () => {
-    nock(RAPIDAPI_HOST)
-      .get('/v3/odds')
+    nock(API_FOOTBALL_HOST)
+      .get('/odds')
       .query(true)
       .reply(200, {
         response: [{
@@ -65,7 +65,7 @@ describe('ingest/odds', () => {
   });
 
   it('throws on HTTP error', async () => {
-    nock(RAPIDAPI_HOST).get('/v3/odds').query(true).reply(429, 'Rate limited');
+    nock(API_FOOTBALL_HOST).get('/odds').query(true).reply(429, 'Rate limited');
 
     await expect(
       fetchOdds({ apiKey: API_KEY, fixtureId: 1001 })
