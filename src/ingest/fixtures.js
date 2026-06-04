@@ -1,14 +1,14 @@
 /**
- * API-Football fixtures client.
+ * FootballData.io fixtures client.
  * Reference: docs/plan.md "Phase 2 — Data Ingestion" fixtures.js
  *
- * Fetches WC2026 fixtures from API-Football direct/API-Sports and normalizes
+ * Fetches WC2026 fixtures from FootballData.io and normalizes
  * them into our internal schema shape.
  */
 
-import { API_FOOTBALL_BASE_URL, apiFootballHeaders } from './apiFootball.js';
+import { requestFootballData, resolveSeasonId } from './footballData.js';
 
-// API-Football status codes → our internal status
+// Provider status codes -> our internal status
 const STATUS_MAP = {
   NS: 'scheduled',   // Not Started
   TBD: 'scheduled',  // Time To Be Defined
@@ -44,46 +44,58 @@ const KNOCKOUT_KEYWORDS = ['quarter', 'semi', 'final', 'round of', 'knockout', '
  * }>>}
  */
 export async function fetchFixtures({ apiKey, leagueId, season }) {
-  const url = `${API_FOOTBALL_BASE_URL}/fixtures?league=${leagueId}&season=${season}`;
+  const seasonId = await resolveSeasonId({ apiKey, leagueId, season });
+  const matches = [];
+  let page = 1;
+  let totalPages = 1;
 
-  const response = await fetch(url, {
-    headers: apiFootballHeaders(apiKey),
-  });
+  do {
+    const data = await requestFootballData(`/leagues/${leagueId}/matches?season_id=${seasonId}&page=${page}&limit=50`, apiKey);
+    matches.push(...(data.data?.matches || []));
+    totalPages = data.meta?.pagination?.total_pages || data.meta?.total_pages || 1;
+    page += 1;
+  } while (page <= totalPages);
 
-  if (!response.ok) {
-    const text = await response.text();
-    throw new Error(`API-Football fixtures HTTP ${response.status}: ${text}`);
-  }
-
-  const data = await response.json();
-  const fixtures = data.response || [];
-
-  return fixtures.map((item) => {
-    const round = item.league?.round || '';
-    const statusShort = item.fixture?.status?.short || 'NS';
+  return matches.map((item) => {
+    const round = item.round?.name || `Game Week ${item.game_week || ''}`.trim();
+    const status = mapStatus(item.status);
 
     return {
-      apiFootballId: item.fixture.id,
+      apiFootballId: item.match_id,
       homeTeam: {
-        apiFootballId: item.teams.home.id,
-        name: item.teams.home.name,
-        logoUrl: item.teams.home.logo || null,
+        apiFootballId: item.home_team.team_id,
+        name: cleanTeamName(item.home_team.team_name),
+        logoUrl: item.home_team.team_logo || null,
       },
       awayTeam: {
-        apiFootballId: item.teams.away.id,
-        name: item.teams.away.name,
-        logoUrl: item.teams.away.logo || null,
+        apiFootballId: item.away_team.team_id,
+        name: cleanTeamName(item.away_team.team_name),
+        logoUrl: item.away_team.team_logo || null,
       },
-      kickoffUtc: item.fixture.date,
+      kickoffUtc: toIsoUtc(item.match_date),
       round,
-      stage: isKnockout(round) ? 'knockout' : 'group',
-      status: STATUS_MAP[statusShort] || 'scheduled',
-      venue: item.fixture.venue?.name || null,
+      stage: isKnockout(round, item.game_week) ? 'knockout' : 'group',
+      status,
+      venue: item.venue?.name || item.venue?.stadium_name || null,
     };
   });
 }
 
-function isKnockout(round) {
+function isKnockout(round, gameWeek) {
   const lower = round.toLowerCase();
-  return KNOCKOUT_KEYWORDS.some((kw) => lower.includes(kw));
+  return KNOCKOUT_KEYWORDS.some((kw) => lower.includes(kw)) || Number(gameWeek) > 3;
+}
+
+function mapStatus(status) {
+  return ['complete', 'finished', 'resolved'].includes(String(status).toLowerCase())
+    ? 'resolved'
+    : 'scheduled';
+}
+
+function cleanTeamName(name) {
+  return String(name || '').replace(/\s+National Team$/i, '');
+}
+
+function toIsoUtc(value) {
+  return new Date(`${value} UTC`).toISOString();
 }

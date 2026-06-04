@@ -1,9 +1,9 @@
 # 2026 World Cup Quiniela — Implementation Plan
 
 ## Problem & Approach
-Build the system described in `docs/WC26_Quiniela_Biz_Plan.docx`: an LLM-orchestrated pipeline that ingests World Cup match data from API-Football, generates Spanish-language SEO/betting articles via two discrete Azure OpenAI deployments (gpt-4o for tactical analysis, gpt-4.1-mini for lighter article types), injects CPA affiliate links, and publishes to Azure Static Web Apps at scale.
+Build the system described in `docs/WC26_Quiniela_Biz_Plan.docx`: an LLM-orchestrated pipeline that ingests World Cup match data from FootballData.io, generates Spanish-language SEO/betting articles via two discrete Azure OpenAI deployments (gpt-4o for tactical analysis, gpt-4.1-mini for lighter article types), injects CPA affiliate links, and publishes to Azure Static Web Apps at scale.
 
-**Stack:** Node.js + SQLite (via `better-sqlite3`, persisted to Azure Blob Storage) + Azure OpenAI (two deployments: gpt-4o and gpt-4.1-mini) + **API-Football direct / API-Sports** as the primary football data provider + Azure Static Web Apps (static HTML generation & hosting) + GitHub Actions (scheduler and deployment).
+**Stack:** Node.js + SQLite (via `better-sqlite3`, persisted to Azure Blob Storage) + Azure OpenAI (two deployments: gpt-4o and gpt-4.1-mini) + **FootballData.io** as the primary football data provider + Azure Static Web Apps (static HTML generation & hosting) + GitHub Actions (scheduler and deployment).
 
 > **Note on SQLite driver:** the business plan says "SQLite3"; we use `better-sqlite3` (synchronous, faster, simpler batch code). Functionally equivalent for our use; flagged as an intentional deviation.
 
@@ -20,7 +20,7 @@ Build the system described in `docs/WC26_Quiniela_Biz_Plan.docx`: an LLM-orchest
 
 **Staging rationale:** the matrix 4×'s generation volume and Azure token spend. v1 ships **only `pronostico_momios`** (1 article/fixture, the highest-intent type), instruments true cost-per-article from production logs, then v2 expands to the remaining three once cost-per-article is measured and the economics are validated. The schema, batch runner, and prompt layer are all built `article_type`-aware from day one so expansion is config-only (add types to the active set), not a rewrite.
 
-**Repo today:** the v1 Azure-native static site pipeline is implemented. The repository has the SQLite schema/wrapper, API-Football-style ingest clients, Azure OpenAI generation, static HTML publishing, Azure Blob DB persistence, GitHub Actions cadence workflow, demo-mode SWA deploy, and passing test coverage. Remaining implementation work is primarily real API credentialing, API-Football direct migration, deeper data ingest (H2H/injuries/lineups/extended odds), and production hardening.
+**Repo today:** the v1 Azure-native static site pipeline is implemented. The repository has the SQLite schema/wrapper, FootballData.io ingest clients, Azure OpenAI generation, static HTML publishing, Azure Blob DB persistence, GitHub Actions cadence workflow, demo-mode SWA deploy, and passing test coverage. Remaining implementation work is primarily deeper data ingest (H2H/injuries/lineups/extended odds), real affiliate links, and production hardening.
 
 ## Architecture Overview
 ```
@@ -38,7 +38,7 @@ Build the system described in `docs/WC26_Quiniela_Biz_Plan.docx`: an LLM-orchest
    T-10 SEED    T-2 REFRESH   T-3h LOCK     ◄─ lifecycle passes
        │            │             │
        ▼            ▼             ▼
-API-Football direct/API-Sports ──► ingest.js ──► SQLite (fixtures, teams, odds, kickoff_utc)
+FootballData.io ──► ingest.js ──► SQLite (fixtures, teams, odds, kickoff_utc)
                                        │
                                        ▼
                               generate.js ──► Azure OpenAI ──► {gpt-4o | gpt-4.1-mini}
@@ -87,7 +87,7 @@ The system is **not** a one-shot batch. Each match page has a lifecycle driven o
 **GitHub Actions workflow (`.github/workflows/cadence.yml`):**
 - `on.schedule` cron tick (twice daily, e.g. `0 6,18 * * *`) + `workflow_dispatch` for manual runs.
 - `concurrency: { group: wc26-pipeline, cancel-in-progress: false }` — the single-writer guarantee for the Blob-hosted DB.
-- Secrets (Azure AI endpoint/key, API-Football direct/API-Sports key, Azure Storage connection string, SWA deployment token, affiliate URLs) injected as GitHub Actions secrets, mapped to env vars (never committed).
+- Secrets (Azure AI endpoint/key, FootballData.io key, Azure Storage connection string, SWA deployment token, affiliate URLs) injected as GitHub Actions secrets, mapped to env vars (never committed).
 - Steps: checkout → setup Node → `npm ci` → `node scripts/run-cadence.js` or `node scripts/seed-demo.js` in `demo_mode` → deploy `dist/` to Azure Static Web Apps → (DB upload handled inside the cadence script).
 
 **Timing reality (today = 2026-06-01, opener ≈ 2026-06-11):** group-stage fixtures are already known and the early matches are **inside the T-10 window now** — so the first cadence run effectively Seeds the opening slate immediately, then settles into the rolling rhythm for everything after.
@@ -208,7 +208,7 @@ Position the site as an **ENTERTAINMENT / INFORMATION** platform, not a gambling
 - Set up Azure AI Foundry / Azure OpenAI project; deploy **gpt-4o** for higher-quality tactical analysis and **gpt-4.1-mini** for cheaper drafting/demo work; capture endpoint + key into `.env` and GitHub Actions secrets.
 - Smoke test the configured Azure OpenAI deployment with a trivial prompt before enabling scheduled generation.
 
-### Phase 2 — Data Ingestion (API-Football → SQLite)
+### Phase 2 — Data Ingestion (FootballData.io → SQLite)
 - Define SQLite schema: `fixtures`, `teams`, `team_stats`, `head_to_head`, `odds`, `articles`, `generation_log`.
   - `fixtures` must include **`kickoff_utc`** (the cadence scheduler keys every T-minus decision off this) plus `round`/`stage` (group vs knockout) and `status` (`scheduled` | `resolved` — knockout fixtures resolve only when prior rounds finish).
   - `articles` must include an **`article_type`** column (`pronostico_momios` | `alineacion_probable` | `quiniela_verdict` | `analisis_apostar`) so each fixture maps to multiple rows. Unique key: `(fixture_id, article_type)`. v1 writes only `pronostico_momios` rows; the column + key are built now so v2 expansion is config-only.
@@ -220,9 +220,15 @@ Position the site as an **ENTERTAINMENT / INFORMATION** platform, not a gambling
     - `cost_usd` (computed = tokens × per-model rate from a `config/pricing.js` table)
     - `latency_ms`, `status` (success/failed), `created_at`
     - A successful article = sum of its attempts' `cost_usd`. **Cost-per-article = `cost_usd` aggregated by `(fixture_id, article_type)`**, including failed/retried attempts so the real economic cost (waste included) is visible.
-- **Endpoint mapping (from biz plan §6):** API-Football direct/API-Sports (`https://v3.football.api-sports.io`) is the primary data provider. `/fixtures` → `fixtures`; `/teams/statistics` → `team_stats` (squad + recent form). `head_to_head` and `odds` come from API-Football's `/fixtures/headtohead` and `/odds` endpoints (justified by biz plan §4 "historical matchups, live odds"). Auth uses `x-apisports-key` for direct API-Sports access.
-- Implement `rateLimiter.js` (start at 1 req/sec, then tune from API-Sports quota headers and the purchased tier).
-- `ingest/fixtures.js`: pull WC26 fixtures (league id once known).
+- **Endpoint mapping:** FootballData.io (`https://footballdata.io/api/v1`) is the primary data provider. Auth uses `Authorization: Bearer <FOOTBALLDATA_KEY>`.
+  - `GET /leagues/50/seasons` resolves the 2026 World Cup season (`season_id=618` as verified in testing).
+  - `GET /leagues/50/matches?season_id=618` → `fixtures`.
+  - `GET /leagues/50/teams?season_id=618` or `GET /seasons/618/teams` → participating teams.
+  - `GET /teams/{team_id}/stats?season_id=618` → `team_stats`.
+  - `GET /teams/{team_id}/h2h/{opponent_id}` → `head_to_head` (future ingest).
+  - `GET /matches/{match_id}/odds` → `odds`.
+- Implement `rateLimiter.js` (start at 1 req/sec, then tune from FootballData.io usage data and plan limits).
+- `ingest/fixtures.js`: pull WC26 fixtures (league id `50`, season year `2026`; code resolves the season id).
 - `ingest/teams.js` + `team_stats.js`: pull squad + recent form per participating team.
 - `ingest/odds.js`: pull pre-match odds where available.
 - `scripts/run-ingest.js`: orchestrates all ingest jobs idempotently (upserts).
@@ -261,15 +267,15 @@ Position the site as an **ENTERTAINMENT / INFORMATION** platform, not a gambling
 - [ ] **Azure subscription** + AI Foundry project at `ai.azure.com`
 - [ ] Deployed Azure OpenAI models: **gpt-4o** + **gpt-4.1-mini** (use gpt-4.1-mini for development/demo runs where possible)
 - [ ] Azure endpoint URL + API key → `.env`
-- [ ] **API-Football direct/API-Sports** account + paid tier that explicitly covers WC2026 current-season data, odds, injuries, and lineups → `API_FOOTBALL_KEY` / GitHub secret
+- [ ] **FootballData.io** account + paid tier that explicitly covers WC2026 current-season data, odds, injuries, and lineups → `FOOTBALLDATA_KEY` / GitHub secret
 - [ ] **Azure Static Web App** (`swa-wc26-quiniela`) + deployment token → `SWA_DEPLOYMENT_TOKEN`
 - [ ] **Azure Blob Storage** account + container for the SQLite DB; capture the **connection string** (or SAS token) for the GitHub Action
-- [ ] **GitHub repository** with Actions enabled; add secrets: `AZURE_AI_ENDPOINT`, `AZURE_AI_KEY`, `API_FOOTBALL_KEY`, `AZURE_STORAGE_CONNECTION_STRING`, `SWA_DEPLOYMENT_TOKEN`, affiliate URLs; add repo variable `SITE_BASE_URL`
+- [ ] **GitHub repository** with Actions enabled; add secrets: `AZURE_AI_ENDPOINT`, `AZURE_AI_KEY`, `FOOTBALLDATA_KEY`, `AZURE_STORAGE_CONNECTION_STRING`, `SWA_DEPLOYMENT_TOKEN`, affiliate URLs; add repo variable `SITE_BASE_URL`
 - [ ] **Caliente.mx affiliate** program approval + tracking link
 - [ ] **Bet365 Partners** + **Skimlinks** signups (Phase 4)
 - [ ] **Google Search Console** verified property for the publishing domain
 - [ ] **Legal review** of disclaimers/entertainment-positioning by a licensed attorney (Mexico + target US states) BEFORE launch
-- [ ] **Azure Blob Storage** spend cap + budget alerts (50/80/100% thresholds); confirm API-Football tier covers WC2026
+- [ ] **Azure Blob Storage** spend cap + budget alerts (50/80/100% thresholds); confirm FootballData.io tier covers WC2026
 - [ ] **Verify Azure OpenAI response** exposes token usage and a usable model/deployment identifier (make one real test call, inspect raw JSON)
 - [ ] Static-site generation of `/robots.txt`, `/llms.txt`, `/llms-full.txt`, `sitemap.xml`, and JSON-LD validated in `dist/`
 - [ ] **Failure alerting webhook** (Discord/Telegram) wired to GitHub Actions `if: failure()` step
@@ -287,13 +293,13 @@ Position the site as an **ENTERTAINMENT / INFORMATION** platform, not a gambling
 Google's March 2024 "scaled content abuse" policy targets exactly this pattern (many programmatically generated pages to manipulate rankings); worst case is a **manual action that deindexes the whole domain**. Betting is YMYL (Your Money or Your Life) — held to the highest E-E-A-T standards. The old "600-word + unique JSON" mitigation is insufficient. Defensible-content mitigations to implement (these change the prompt, schema, and workflow):
 
 - **E-E-A-T author infrastructure**: real author bios with credentials and a visible prediction track record (e.g. "47/100 correct so far"). Every article gets a byline linking to an author page. Add an `authors` table and `author_id` column to `articles`.
-- **Original data per page**: inject real odds from API-Football with timestamps and 24-48h odds movement, H2H vs THIS opponent, injury/form specifics — not template variable swaps. This is the unique value Google rewards for YMYL content.
+- **Original data per page**: inject real odds from FootballData.io with timestamps and 24-48h odds movement, H2H vs THIS opponent, injury/form specifics — not template variable swaps. This is the unique value Google rewards for YMYL content.
 - **Human-in-the-loop signal + AI disclosure**: target ~30% original analysis per article; add a transparency line disclosing AI drafting + human review. Google explicitly recommends this for YMYL content.
 - **Gradual publishing**: 5-10 articles/day max — NOT hundreds at once (bulk drops are a scaled-abuse signal). This dovetails with the T-10 seed cadence; seeds naturally spread over days.
 - **Outcome tracking**: record predictions vs actual results; display accuracy honestly; post corrections. Strong trust signal for YMYL.
 - **`rel="sponsored"`** on all affiliate links (Google requirement; omission risks a penalty — see Legal & Compliance section).
 
-- API-Football WC26 data completeness/timing (fixtures may not be final until draw).
+- FootballData.io WC26 data completeness/timing (fixtures may not be final until draw).
 - Azure OpenAI cost overruns if expensive deployments are over-used — instrument token logging from day one.
 - Affiliate link compliance (disclosure requirements in MX/US) — see Legal & Compliance section for the full treatment.
 - **Multi-pass cost multiplier:** each article is now generated up to 3× (Seed/Refresh/Lock), so cost-per-article spans its full lifecycle — `cost-report.js` must aggregate all passes per `(fixture_id, article_type)`, and the v2 stage-gate projection must multiply by passes, not just article count.
@@ -304,7 +310,7 @@ Google's March 2024 "scaled content abuse" policy targets exactly this pattern (
 - **SQLite-in-Blob lost writes/corruption (High/Med-High)**: download→mutate→upload has no concurrency control beyond the Actions group; overlapping runs or interrupted uploads corrupt the DB. MITIGATE: Azure Blob lease (acquire before download, fail-fast if locked); atomic upload to temp blob then copy; enable blob versioning; VACUUM if >50MB.
 - **GitHub Actions free-minute exhaustion (High)**: ~64 fixtures × 3 passes × ~3min ≈ 576+ min just for generation, near the 2000 free-min/month cap. MITIGATE: paid plan or a cheap self-hosted runner (Azure Container Instance ~$0.03/hr); pre-tournament budget calc.
 - **LLM hallucination in YMYL (High/Med-High)**: fabricated lineups/odds/injuries erode trust and risk penalties/liability. MITIGATE: ground every fact in the API data payload ("only reference players/odds/stats in the provided data"); add a deterministic post-generation validator that cross-checks every player/team/number against the DB and flags entities not present in the payload; manual spot-check first 5 articles.
-- **API-Football WC2026 coverage/timing (Med-High/Med)**: lineups appear 24-48h out (not T-10), odds 48-72h out; major tournaments sometimes gated behind higher tiers. MITIGATE: verify tier covers WC2026 BEFORE June 11; graceful degradation (T-10 seed uses H2H+form, T-2 refresh enriches with lineups/odds); assert min-data thresholds before generating; 2s rate-limit spacing.
+- **FootballData.io WC2026 coverage/timing (Med-High/Med)**: lineups appear 24-48h out (not T-10), odds 48-72h out; major tournaments sometimes gated behind higher tiers. MITIGATE: verify tier covers WC2026 BEFORE June 11; graceful degradation (T-10 seed uses H2H+form, T-2 refresh enriches with lineups/odds); assert min-data thresholds before generating; 2s rate-limit spacing.
 - **gpt-4o cost during development (Med-High/High)**: uncontrolled prompt iteration on the higher-quality deployment burns budget pre-revenue. MITIGATE: $100/month hard cap; use gpt-4.1-mini for ALL dev/testing, gpt-4o only for production-quality runs; cache by input-data hash to skip unchanged fixtures.
 - **Single-maintainer silent failures (High/Med)**: a 30-day daily tournament; a silently-failed cron loses a time-sensitive window permanently. MITIGATE: `if: failure()` alerting to Discord/Telegram webhook; alert on zero-articles-published days; self-healing tolerance windows; a 1-page manual runbook; 3-day pre-kickoff dry run on historical fixtures.
 - **Azure Static Web Apps deploy/build failures (Med)**: failed `npm ci`, stale lockfiles, or SWA action config can block deployment. MITIGATE: keep `package-lock.json` synchronized, run `npm ci` in CI, set `action: upload`, keep `skip_app_build: true` for prebuilt `dist/`, and use `workflow_dispatch demo_mode=true` as a fast smoke test.

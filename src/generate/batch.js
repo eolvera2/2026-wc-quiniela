@@ -11,7 +11,7 @@ import { insertGenerationLog } from '../db/db.js';
  * writes article rows + generation_log rows (success AND failure).
  *
  * @param {import('better-sqlite3').Database} db
- * @param {number[]} fixtureApiIds - API-Football fixture IDs to process
+ * @param {number[]} fixtureApiIds - provider fixture IDs to process
  * @param {{ endpoint: string, apiKey: string, activeArticleTypes: string[] }} config
  * @returns {Promise<{ succeeded: number, failed: number, skipped: number }>}
  */

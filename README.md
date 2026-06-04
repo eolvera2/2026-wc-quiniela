@@ -2,7 +2,7 @@
 
 ## Overview
 
-An LLM-orchestrated content pipeline that generates Spanish-language World Cup 2026 match prediction articles (pronostico + momios/odds) and publishes them as a static site. Runs on a twice-daily GitHub Actions cron. Content is generated via Azure OpenAI, data is ingested from API-Football, persisted in a SQLite database stored in Azure Blob Storage (with lease-based locking), and published to Azure Static Web Apps.
+An LLM-orchestrated content pipeline that generates Spanish-language World Cup 2026 match prediction articles (pronostico + momios/odds) and publishes them as a static site. Runs on a twice-daily GitHub Actions cron. Content is generated via Azure OpenAI, data is ingested from FootballData.io, persisted in a SQLite database stored in Azure Blob Storage (with lease-based locking), and published to Azure Static Web Apps.
 
 ## Architecture
 
@@ -12,7 +12,7 @@ The pipeline executes in the following sequence:
 GitHub Actions cron
   -> pull wc26.sqlite from Azure Blob (lease lock)
   -> select T-minus lifecycle pass per fixture (Seed / Refresh / Lock)
-  -> ingest fixtures, teams, and odds from API-Football
+  -> ingest fixtures, teams, and odds from FootballData.io
   -> generate articles via Azure OpenAI
   -> rebuild entire static site (dist/)
   -> deploy dist/ to Azure Static Web Apps
@@ -53,7 +53,7 @@ Only the `pronostico_momios` article type is active in v1.
 │   │   ├── prompt.js           # Mexican-voice Spanish prompts
 │   │   └── router.js           # Azure OpenAI client
 │   ├── ingest/
-│   │   ├── fixtures.js         # API-Football fixture ingestion
+│   │   ├── fixtures.js         # FootballData.io fixture ingestion
 │   │   ├── teams.js            # Team data ingestion
 │   │   ├── odds.js             # Odds ingestion
 │   │   ├── dataThreshold.js    # Data completeness checks
@@ -99,7 +99,7 @@ The following environment variables are consumed by `scripts/run-cadence.js` and
 |-----------------------------------|----------------------------------------------------------|
 | `AZURE_AI_ENDPOINT`               | Azure OpenAI endpoint URL                                |
 | `AZURE_AI_KEY`                    | Azure OpenAI API key                                     |
-| `API_FOOTBALL_KEY`                | API-Football direct / API-Sports access key              |
+| `FOOTBALLDATA_KEY`                | FootballData.io API key                                  |
 | `AZURE_STORAGE_CONNECTION_STRING` | Azure Blob Storage connection string (SQLite persistence)|
 | `SITE_BASE_URL`                   | Canonical base URL for the static site                   |
 | `SWA_DEPLOYMENT_TOKEN`            | Azure Static Web Apps deploy token                       |

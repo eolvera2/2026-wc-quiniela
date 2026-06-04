@@ -2,8 +2,14 @@ import { describe, it, expect, afterEach } from 'vitest';
 import nock from 'nock';
 import { fetchTeamStats } from './teams.js';
 
-const API_FOOTBALL_HOST = 'https://v3.football.api-sports.io';
-const API_KEY = 'test-api-football-key';
+const FOOTBALLDATA_HOST = 'https://footballdata.io';
+const API_KEY = 'test-footballdata-key';
+
+function mockSeasons() {
+  return nock(FOOTBALLDATA_HOST)
+    .get('/api/v1/leagues/50/seasons')
+    .reply(200, { success: true, data: { seasons: [{ season_id: 618, year: 2026 }] } });
+}
 
 describe('ingest/teams', () => {
   afterEach(() => {
@@ -11,18 +17,20 @@ describe('ingest/teams', () => {
   });
 
   it('fetches team statistics and returns normalized data', async () => {
-    nock(API_FOOTBALL_HOST)
-      .get('/teams/statistics')
+    mockSeasons();
+    nock(FOOTBALLDATA_HOST)
+      .get('/api/v1/teams/10/stats')
       .query(true)
       .reply(200, {
-        response: {
-          team: { id: 10, name: 'Mexico' },
-          form: 'WWDLW',
-          goals: { for: { total: { total: 12 } }, against: { total: { total: 5 } } },
+        success: true,
+        data: {
+          team: { team_id: 10, team_name: 'Mexico' },
+          form: { overall: 'WWDLW' },
+          summary: { goals_for: 12, goals_against: 5 },
         },
       });
 
-    const stats = await fetchTeamStats({ apiKey: API_KEY, teamId: 10, leagueId: 1, season: 2026 });
+    const stats = await fetchTeamStats({ apiKey: API_KEY, teamId: 10, leagueId: 50, season: 2026 });
 
     expect(stats.teamApiId).toBe(10);
     expect(stats.form).toBe('WWDLW');
@@ -31,18 +39,20 @@ describe('ingest/teams', () => {
   });
 
   it('handles missing goals data gracefully (risk T2-4)', async () => {
-    nock(API_FOOTBALL_HOST)
-      .get('/teams/statistics')
+    mockSeasons();
+    nock(FOOTBALLDATA_HOST)
+      .get('/api/v1/teams/10/stats')
       .query(true)
       .reply(200, {
-        response: {
-          team: { id: 10, name: 'Mexico' },
-          form: null,
-          goals: { for: { total: {} }, against: { total: {} } },
+        success: true,
+        data: {
+          team: { team_id: 10, name: 'Mexico' },
+          form: { overall: null },
+          summary: {},
         },
       });
 
-    const stats = await fetchTeamStats({ apiKey: API_KEY, teamId: 10, leagueId: 1, season: 2026 });
+    const stats = await fetchTeamStats({ apiKey: API_KEY, teamId: 10, leagueId: 50, season: 2026 });
 
     expect(stats.form).toBeNull();
     expect(stats.goalsScored).toBe(0);
@@ -50,10 +60,11 @@ describe('ingest/teams', () => {
   });
 
   it('throws on HTTP error', async () => {
-    nock(API_FOOTBALL_HOST).get('/teams/statistics').query(true).reply(500, 'Server error');
+    mockSeasons();
+    nock(FOOTBALLDATA_HOST).get('/api/v1/teams/10/stats').query(true).reply(500, { success: false, error: { message: 'Server error' } });
 
     await expect(
-      fetchTeamStats({ apiKey: API_KEY, teamId: 10, leagueId: 1, season: 2026 })
+      fetchTeamStats({ apiKey: API_KEY, teamId: 10, leagueId: 50, season: 2026 })
     ).rejects.toThrow(/500/);
   });
 });

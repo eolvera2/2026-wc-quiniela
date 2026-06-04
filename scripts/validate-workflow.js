@@ -25,7 +25,7 @@ const REQUIRED_PATTERNS = [
   { pattern: /cancel-in-progress:\s*false/, label: 'cancel-in-progress: false' },
   { pattern: /secrets\.AZURE_AI_ENDPOINT/, label: 'AZURE_AI_ENDPOINT secret' },
   { pattern: /secrets\.AZURE_AI_KEY/, label: 'AZURE_AI_KEY secret' },
-  { pattern: /secrets\.API_FOOTBALL_KEY/, label: 'API_FOOTBALL_KEY secret' },
+  { pattern: /secrets\.FOOTBALLDATA_KEY/, label: 'FOOTBALLDATA_KEY secret' },
   { pattern: /secrets\.AZURE_STORAGE_CONNECTION_STRING/, label: 'AZURE_STORAGE_CONNECTION_STRING secret' },
   { pattern: /secrets\.SWA_DEPLOYMENT_TOKEN/, label: 'SWA_DEPLOYMENT_TOKEN secret' },
   { pattern: /Azure\/static-web-apps-deploy/, label: 'Azure Static Web Apps deploy step' },
