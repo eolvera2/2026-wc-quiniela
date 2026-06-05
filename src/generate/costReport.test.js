@@ -79,4 +79,13 @@ describe('costReport', () => {
     // Projection: costPerArticleFullyLoaded × 64 fixtures × 4 types × 3 passes
     expect(report.projection.v2TotalEstimate).toBeCloseTo(0.05 * 64 * 4 * 3, 2);
   });
+
+  it('defaults projection fixture count to the 104-match WC2026 format', () => {
+    const f1 = db.prepare("SELECT id FROM fixtures WHERE api_football_id = 100").get();
+    insertGenerationLog(db, { fixtureId: f1.id, articleType: 'pronostico_momios', attempt: 1, modelUsed: 'claude-opus', promptTokens: 1000, completionTokens: 500, totalTokens: 1500, costUsd: 0.05, latencyMs: 3000, status: 'success' });
+
+    const report = generateCostReport(db);
+    expect(report.projection.totalFixtures).toBe(104);
+    expect(report.projection.v2TotalEstimate).toBeCloseTo(0.05 * 104 * 4 * 3, 2);
+  });
 });

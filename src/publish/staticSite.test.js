@@ -2,7 +2,7 @@ import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { mkdtempSync, rmSync, readFileSync, existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { buildSlug, buildSite } from './staticSite.js';
+import { buildMatchSlug, buildSlug, buildSite } from './staticSite.js';
 
 const AFFILIATE_URLS = {
   caliente: 'https://caliente.mx/ref/TEST',
@@ -47,6 +47,17 @@ describe('publish/staticSite', () => {
     expect(slug).toBe('analisis-apostar-espana-vs-belgica');
   });
 
+  it('buildMatchSlug creates stable fixture slugs', () => {
+    const slug = buildMatchSlug({
+      fixtureId: 1,
+      matchNumber: 1,
+      homeTeam: 'México',
+      awayTeam: 'Alemania',
+      kickoffUtc: '2026-06-11T18:00:00Z',
+    });
+    expect(slug).toBe('partido-1-2026-06-11-mexico-vs-alemania');
+  });
+
   // ── buildSite ────────────────────────────────────────────────────────────────
 
   it('buildSite creates outputDir if it does not exist', () => {
@@ -60,7 +71,7 @@ describe('publish/staticSite', () => {
     expect(existsSync(outDir)).toBe(true);
   });
 
-  it('buildSite writes one HTML file per article using the slug as filename', () => {
+  it('buildSite writes one HTML file per fixture using the match slug as filename', () => {
     const outDir = join(tmpDir, 'dist');
     buildSite({
       articles: [SAMPLE_ARTICLE],
@@ -68,7 +79,7 @@ describe('publish/staticSite', () => {
       outputDir: outDir,
       affiliateUrls: AFFILIATE_URLS,
     });
-    const slug = 'pronostico-momios-mexico-vs-alemania';
+    const slug = 'fixture-1-fecha-por-confirmar-mexico-vs-alemania';
     expect(existsSync(join(outDir, `${slug}.html`))).toBe(true);
   });
 
@@ -80,11 +91,12 @@ describe('publish/staticSite', () => {
       outputDir: outDir,
       affiliateUrls: AFFILIATE_URLS,
     });
-    const slug = 'pronostico-momios-mexico-vs-alemania';
+    const slug = 'fixture-1-fecha-por-confirmar-mexico-vs-alemania';
     const html = readFileSync(join(outDir, `${slug}.html`), 'utf-8');
     expect(html).toContain('caliente.mx/ref/TEST');
     expect(html).toContain('rel="sponsored"');
     expect(html).toContain('entretenimiento e información únicamente');
+    expect(html).toContain('Alineación probable');
   });
 
   it('buildSite writes index.html listing all articles', () => {
@@ -96,8 +108,8 @@ describe('publish/staticSite', () => {
       affiliateUrls: AFFILIATE_URLS,
     });
     const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
-    expect(index).toContain('pronostico-momios-mexico-vs-alemania.html');
-    expect(index).toContain('Pronósticos y momios México vs Alemania');
+    expect(index).toContain('fixture-1-fecha-por-confirmar-mexico-vs-alemania.html');
+    expect(index).toContain('México vs Alemania');
   });
 
   it('buildSite writes sitemap.xml with SITE_BASE_URL in URLs', () => {
@@ -109,7 +121,8 @@ describe('publish/staticSite', () => {
       affiliateUrls: AFFILIATE_URLS,
     });
     const sitemap = readFileSync(join(outDir, 'sitemap.xml'), 'utf-8');
-    expect(sitemap).toContain('https://example.com/pronostico-momios-mexico-vs-alemania.html');
+    expect(sitemap).toContain('https://example.com/index.html');
+    expect(sitemap).toContain('https://example.com/fixture-1-fecha-por-confirmar-mexico-vs-alemania.html');
     expect(sitemap).toContain('<urlset');
   });
 
@@ -124,8 +137,8 @@ describe('publish/staticSite', () => {
     expect(result).toHaveLength(1);
     expect(result[0]).toEqual({
       fixtureId: 1,
-      articleType: 'pronostico_momios',
-      slug: 'pronostico-momios-mexico-vs-alemania',
+      articleType: 'match_page',
+      slug: 'fixture-1-fecha-por-confirmar-mexico-vs-alemania',
     });
   });
 });

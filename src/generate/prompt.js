@@ -43,6 +43,7 @@ REGLAS DE CONTENIDO:
 - NUNCA uses estas frases (contenido prohibido): ${BANNED_LANGUAGE.map(b => `"${b}"`).join(', ')}.
 - En vez, usa: "para fines de entretenimiento; los resultados pasados no garantizan resultados futuros."
 - Solo referencia jugadores, momios y estadísticas presentes en los datos proporcionados — NO inventes datos.
+- Revisa DATA_AVAILABILITY antes de escribir. Si un dato no está disponible, dilo explícitamente como "próximamente" o "no disponible todavía"; nunca lo rellenes por intuición.
 
 FORMATO DE SALIDA — responde ÚNICAMENTE con JSON válido:
 {
@@ -97,11 +98,11 @@ export function buildSystemPrompt(articleType) {
 
 /**
  * Builds the user prompt with match data injected.
- * @param {{ teamA: string, teamB: string, h2h: string, form: string, injuries: string, odds: object, kickoffUtc: string }} data
+ * @param {{ teamA: string, teamB: string, h2h: string, form: string, injuries: string, odds: object, kickoffUtc: string, dataAvailability?: object }} data
  * @returns {string}
  */
 export function buildUserPrompt(data) {
-  const { teamA, teamB, h2h, form, injuries, odds, kickoffUtc } = data;
+  const { teamA, teamB, h2h, form, injuries, odds, kickoffUtc, dataAvailability = {} } = data;
   const fmtOdd = (v) => (typeof v === 'number' ? v.toFixed(2) : (v || 'N/A'));
   return `DATOS DEL PARTIDO:
 - Equipos: ${teamA} vs ${teamB}
@@ -110,6 +111,7 @@ export function buildUserPrompt(data) {
 - Forma reciente: ${form}
 - Lesiones/Bajas: ${injuries || 'Ninguna reportada'}
 - Momios: Local ${fmtOdd(odds?.home)} | Empate ${fmtOdd(odds?.draw)} | Visitante ${fmtOdd(odds?.away)}
+- DATA_AVAILABILITY: ${JSON.stringify(dataAvailability)}
 
 Genera el artículo siguiendo las instrucciones del sistema. Responde SOLO con el JSON.`;
 }

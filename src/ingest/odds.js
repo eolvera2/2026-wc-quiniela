@@ -6,14 +6,28 @@
  * Graceful degradation: returns empty array if no odds available.
  */
 
-import { requestFootballData } from './footballData.js';
+import { requestFootballData, requestFootballDataCached } from './footballData.js';
 
 /**
- * @param {{ apiKey: string, fixtureId: number }} params
+ * @param {{ apiKey: string, fixtureId: number, db?: import('better-sqlite3').Database, internalFixtureId?: number, reason?: string, forceRefresh?: boolean }} params
  * @returns {Promise<Array<{ bookmaker: string, homeWin: number, draw: number, awayWin: number, rawJson: object }>>}
  */
-export async function fetchOdds({ apiKey, fixtureId }) {
-  const data = await requestFootballData(`/matches/${fixtureId}/odds`, apiKey);
+export async function fetchOdds({ apiKey, fixtureId, db, internalFixtureId = null, reason = 'odds', forceRefresh = false }) {
+  const path = `/matches/${fixtureId}/odds`;
+  const response = db
+    ? await requestFootballDataCached(db, {
+      path,
+      apiKey,
+      reason,
+      entityType: 'odds',
+      entityRefId: internalFixtureId,
+      ttlSeconds: 4 * 60 * 60,
+      negativeTtlSeconds: 12 * 60 * 60,
+      forceRefresh,
+      isEmptyResponse: isEmptyOdds,
+    })
+    : { data: await requestFootballData(path, apiKey) };
+  const data = response.data;
   const odds = data.data?.odds || {};
   const matchWinner = odds.match_winner || {};
 
@@ -30,4 +44,9 @@ export async function fetchOdds({ apiKey, fixtureId }) {
     awayWin,
     rawJson: odds,
   }];
+}
+
+function isEmptyOdds(data) {
+  const matchWinner = data.data?.odds?.match_winner || {};
+  return !Number(matchWinner.home || 0) || !Number(matchWinner.draw || 0) || !Number(matchWinner.away || 0);
 }

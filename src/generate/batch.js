@@ -40,9 +40,7 @@ export async function runBatch(db, fixtureApiIds, config) {
     for (const articleType of activeArticleTypes) {
       const startTime = Date.now();
 
-      // Prepare prompts
-      const systemPrompt = buildSystemPrompt(articleType);
-      const userPrompt = buildUserPrompt({
+      const matchData = {
         teamA: fixture.home_team,
         teamB: fixture.away_team,
         h2h: getH2H(db, fixture.id),
@@ -50,7 +48,30 @@ export async function runBatch(db, fixtureApiIds, config) {
         injuries: getInjuries(db, fixture.id),
         odds: getOdds(db, fixture.id),
         kickoffUtc: fixture.kickoff_utc,
-      });
+      };
+      const dataAvailability = getDataAvailability(matchData);
+
+      if (shouldUsePlaceholder(articleType, dataAvailability)) {
+        const article = buildPlaceholderArticle({ articleType, fixture, dataAvailability });
+        db.prepare(`
+          INSERT INTO articles (fixture_id, article_type, status, content_json, updated_at)
+          VALUES (@fixtureId, @articleType, 'placeholder', @contentJson, datetime('now'))
+          ON CONFLICT(fixture_id, article_type) DO UPDATE SET
+            status = 'placeholder',
+            content_json = excluded.content_json,
+            updated_at = datetime('now')
+        `).run({
+          fixtureId: fixture.id,
+          articleType,
+          contentJson: JSON.stringify(article),
+        });
+        succeeded++;
+        continue;
+      }
+
+      // Prepare prompts
+      const systemPrompt = buildSystemPrompt(articleType);
+      const userPrompt = buildUserPrompt({ ...matchData, dataAvailability });
 
       try {
         const result = await callRouter({
@@ -159,4 +180,46 @@ function getOdds(db, fixtureId) {
   const odds = db.prepare('SELECT home_win, draw, away_win FROM odds WHERE fixture_id = ? LIMIT 1').get(fixture.id);
   if (!odds) return { home: 'N/A', draw: 'N/A', away: 'N/A' };
   return { home: odds.home_win, draw: odds.draw, away: odds.away_win };
+}
+
+function getDataAvailability({ h2h, form, injuries, odds }) {
+  return {
+    h2h: Boolean(h2h && !/no historical|no data/i.test(h2h)),
+    form: Boolean(form && !/N\/A|No form/i.test(form)),
+    injuries: Boolean(injuries && !/No injury data/i.test(injuries)),
+    odds: Boolean(odds && typeof odds.home === 'number' && typeof odds.draw === 'number' && typeof odds.away === 'number'),
+    lineups: false,
+    advancedMarkets: Boolean(odds && typeof odds.home === 'number'),
+  };
+}
+
+function shouldUsePlaceholder(articleType, availability) {
+  if (articleType === 'alineacion_probable') return !availability.lineups && !availability.injuries;
+  if (articleType === 'analisis_apostar') return !availability.advancedMarkets;
+  return false;
+}
+
+function buildPlaceholderArticle({ articleType, fixture, dataAvailability }) {
+  const titleByType = {
+    alineacion_probable: `Alineación probable ${fixture.home_team} vs ${fixture.away_team}`,
+    analisis_apostar: `Análisis para apostar ${fixture.home_team} vs ${fixture.away_team}`,
+    quiniela_verdict: `¿Quién gana la quiniela: ${fixture.home_team} o ${fixture.away_team}?`,
+    pronostico_momios: `Pronósticos y momios ${fixture.home_team} vs ${fixture.away_team}`,
+  };
+  const messageByType = {
+    alineacion_probable: 'Próximamente: publicaremos la alineación probable cuando exista información confiable de convocatorias, bajas o lineups confirmados.',
+    analisis_apostar: 'Próximamente: agregaremos mercados avanzados cuando los momios, probabilidades y líneas estén disponibles cerca del partido.',
+    quiniela_verdict: 'Próximamente: actualizaremos este veredicto cuando haya más datos de forma y contexto competitivo.',
+    pronostico_momios: 'Próximamente: actualizaremos el pronóstico con momios cuando estén disponibles.',
+  };
+  const h1 = titleByType[articleType] || `${fixture.home_team} vs ${fixture.away_team}`;
+
+  return {
+    h1_title: h1,
+    meta_description: `${h1} Mundial 2026. Información se actualizará conforme haya datos confiables.`,
+    puntos_clave: [messageByType[articleType], 'No inventamos lesiones, alineaciones ni momios no confirmados.'],
+    analisis_tactico_html: `<section class="coming-soon" data-availability='${JSON.stringify(dataAvailability)}'><h2>${h1}</h2><p>${messageByType[articleType]}</p></section>`,
+    pronostico_quiniela: 'Próximamente',
+    url_slug: h1.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''),
+  };
 }

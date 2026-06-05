@@ -16,7 +16,7 @@
  * @returns {object} Cost report
  */
 export function generateCostReport(db, projectionParams = {}) {
-  const { totalFixtures = 64, articleTypesCount = 4, passesPerArticle = 3 } = projectionParams;
+  const { totalFixtures = 104, articleTypesCount = 4, passesPerArticle = 3 } = projectionParams;
 
   // Total spend (all attempts)
   const totalRow = db.prepare(`

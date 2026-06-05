@@ -9,7 +9,7 @@ Build the system described in `docs/WC26_Quiniela_Biz_Plan.docx`: an LLM-orchest
 
 > **DB persistence (Azure Blob Storage):** the system runs on a schedule via GitHub Actions, not an always-on server, so the SQLite file lives in an **Azure Blob Storage container**. Each scheduled run: (1) downloads `wc26.sqlite` from the blob, (2) runs its pass, (3) uploads the mutated file back. A GitHub Actions **concurrency group** (`group: wc26-pipeline, cancel-in-progress: false`) guarantees a single writer at a time — no corruption, no race. If write contention ever becomes a constraint (it won't at this cadence/volume), the upgrade path is **Azure SQL Database** or **Azure Database for PostgreSQL** — the `db.js` wrapper isolates this so the swap stays contained.
 
-**Core SEO model (from biz plan §2):** this is an *intent-capture engine*, not one article per match. The full model produces **multiple articles per fixture**, one per bottom-of-funnel keyword template. **We ship these in stages** to calibrate cost-per-article on real data before scaling volume:
+**Core SEO model (from biz plan §2):** this is an *intent-capture engine* organized around match pages. The site has a home page calendar of all games and **one durable page per fixture**. Each match page contains multiple bottom-of-funnel content sections:
 
 | Stage | Article type (`article_type`) | Keyword template | Intent |
 |-------|--------------------------------|------------------|--------|
@@ -18,9 +18,21 @@ Build the system described in `docs/WC26_Quiniela_Biz_Plan.docx`: an LLM-orchest
 | v2 (expand) | `quiniela_verdict` | `¿Quién gana la quiniela: [A] o [B]?` | High (pools) — Buy/Wait/Avoid verdict |
 | v2 (expand) | `analisis_apostar` | `Análisis para apostar en [Team]` | High (betting) — over/under, cards, player props |
 
-**Staging rationale:** the matrix 4×'s generation volume and Azure token spend. v1 ships **only `pronostico_momios`** (1 article/fixture, the highest-intent type), instruments true cost-per-article from production logs, then v2 expands to the remaining three once cost-per-article is measured and the economics are validated. The schema, batch runner, and prompt layer are all built `article_type`-aware from day one so expansion is config-only (add types to the active set), not a rewrite.
+**Staging rationale:** the matrix 4×'s generation volume and Azure token spend. v1 may generate **only `pronostico_momios`** first, but the publishing model should still render one match page with placeholders for the other sections. The schema, batch runner, and prompt layer remain `article_type`-aware, but the static builder groups those rows into a single fixture page instead of creating one URL per article type.
 
 **Repo today:** the v1 Azure-native static site pipeline is implemented. The repository has the SQLite schema/wrapper, FootballData.io ingest clients, Azure OpenAI generation, static HTML publishing, Azure Blob DB persistence, GitHub Actions cadence workflow, demo-mode SWA deploy, and passing test coverage. Remaining implementation work is primarily deeper data ingest (H2H/injuries/lineups/extended odds), real affiliate links, and production hardening.
+
+## Page Model & Placeholder Policy
+
+The target publishing model is:
+
+- **Home page:** a calendar/list of all World Cup games, grouped by date/stage and linking to one match page per fixture.
+- **Match page:** a stable fixture URL containing the match header, two team summary cards, and four ordered sections (`pronostico_momios`, `alineacion_probable`, `quiniela_verdict`, `analisis_apostar`).
+- **Section rows:** keep using the existing `articles` table keyed by `(fixture_id, article_type)` for generated section content. The publisher groups all section rows by `fixture_id`.
+- **Placeholders:** if a data piece is unavailable, the page still renders with explicit Spanish placeholders such as `Próximamente: alineaciones confirmadas`, `Momios disponibles más cerca del partido`, or `Mercados avanzados próximamente`.
+- **No invented data:** prompts must receive a `dataAvailability` object and must not fabricate injuries, confirmed lineups, odds, probabilities, or player props.
+
+Use match-based slugs that cannot collide if the same teams meet twice, e.g. include kickoff date or provider fixture id. If any per-article URLs are ever published before this pivot, add redirects rather than silently changing indexed URLs.
 
 ## Architecture Overview
 ```
@@ -38,13 +50,13 @@ Build the system described in `docs/WC26_Quiniela_Biz_Plan.docx`: an LLM-orchest
    T-10 SEED    T-2 REFRESH   T-3h LOCK     ◄─ lifecycle passes
        │            │             │
        ▼            ▼             ▼
-FootballData.io ──► ingest.js ──► SQLite (fixtures, teams, odds, kickoff_utc)
+FootballData.io ──► cached ingest ──► SQLite (fixtures, teams, cache, odds, kickoff_utc)
                                        │
                                        ▼
                               generate.js ──► Azure OpenAI ──► {gpt-4o | gpt-4.1-mini}
                                        │            (returns JSON article)
                                        ▼
-                              SQLite (articles + generation_log)
+                              SQLite (section rows + generation_log)
                                        │
                               staticSite.js ─► affiliate-injector ─► dist/*.html
                                        │       (full static-site rebuild)
@@ -72,15 +84,15 @@ README.md
 
 ## Publishing Cadence & Lifecycle
 
-The system is **not** a one-shot batch. Each match page has a lifecycle driven off the fixture's `kickoff_utc`, balancing two opposing forces: SEO needs pages published **early** (Google needs lead time to crawl/rank), while accuracy needs them **late** (lineups, injuries, `momios` stabilize near kickoff). We resolve this with **three passes per article**:
+The system is **not** a one-shot batch. Each match page has a lifecycle driven off the fixture's `kickoff_utc`, balancing two opposing forces: SEO needs pages published **early** (Google needs lead time to crawl/rank), while accuracy needs them **late** (lineups, injuries, `momios` stabilize near kickoff). We resolve this with **three passes per match page/section**:
 
 | Pass | Trigger (T-minus `kickoff_utc`) | Action | `lifecycle_state` |
 |------|--------------------------------|--------|-------------------|
-| **1 — Seed** | T-10 days | Generate + rebuild the static site with available data (H2H, season form, early odds). Claims the URL so it starts ranking. | `seeded` |
-| **2 — Refresh** | T-2 days | Re-ingest fresh data, regenerate, and rebuild the same article slug in `dist/`. Peak quiniela search intent. | `refreshed` |
-| **3 — Lock** | T-3 hours | Final confirmed-lineup update, in place. | `locked` |
+| **1 — Seed** | T-10 days | Generate + rebuild match pages with available data (cached teams/fixtures, H2H/form if present). Claims the URL so it starts ranking; missing volatile data renders as placeholders. | `seeded` |
+| **2 — Refresh** | T-2 days | Re-ingest stale data, refresh odds/probabilities where available, regenerate sections, and rebuild the same match URL. | `refreshed` |
+| **3 — Lock** | T-3 hours | Final close-to-kickoff refresh for odds/probabilities/team stats; lineups/injuries stay placeholders unless a concrete provider endpoint exists. | `locked` |
 
-**Scheduler (`scripts/run-cadence.js`):** on each GitHub Actions tick it (1) pulls `wc26.sqlite` from Azure Blob, (2) selects fixtures whose `kickoff_utc` crosses a T-minus threshold AND whose `lifecycle_state` hasn't yet reached that pass, (3) runs data refresh/generation for just those combinations, (4) rebuilds the full static site from all generated article rows, (5) advances `lifecycle_state` + `last_pass` + `last_refreshed_at`, and (6) uploads the mutated DB back. Idempotent: re-running a tick is a no-op for already-processed passes.
+**Scheduler (`scripts/run-cadence.js`):** on each GitHub Actions tick it (1) pulls `wc26.sqlite` from Azure Blob, (2) performs broad season-level refreshes when stale, (3) selects fixtures whose `kickoff_utc` crosses a T-minus threshold AND whose lifecycle state/data completeness requires work, (4) runs cached data enrichment/generation for just those fixtures, (5) rebuilds the full static site from fixtures + grouped section rows, (6) advances lifecycle fields without losing placeholder/completeness state, and (7) uploads the mutated DB back. Idempotent: re-running a tick should be a cache-hit/no-op unless data is stale or a missing section becomes available.
 
 **Knockout stages:** those fixtures don't exist until prior rounds finish. The scheduler keys off `fixtures.status` — a fixture flips `scheduled` → `resolved` once teams are known, and only then enters the T-minus cadence. Knockout turnaround (~2–4 days) naturally **compresses** Seed and Refresh closer together; the threshold logic clamps so a fixture resolved inside T-10 seeds immediately.
 
@@ -209,10 +221,10 @@ Position the site as an **ENTERTAINMENT / INFORMATION** platform, not a gambling
 - Smoke test the configured Azure OpenAI deployment with a trivial prompt before enabling scheduled generation.
 
 ### Phase 2 — Data Ingestion (FootballData.io → SQLite)
-- Define SQLite schema: `fixtures`, `teams`, `team_stats`, `head_to_head`, `odds`, `articles`, `generation_log`.
+- Define SQLite schema: `fixtures`, `teams`, `team_stats`, `head_to_head`, `odds`, `articles`, `generation_log`, plus provider caching tables for call minimization.
   - `fixtures` must include **`kickoff_utc`** (the cadence scheduler keys every T-minus decision off this) plus `round`/`stage` (group vs knockout) and `status` (`scheduled` | `resolved` — knockout fixtures resolve only when prior rounds finish).
-  - `articles` must include an **`article_type`** column (`pronostico_momios` | `alineacion_probable` | `quiniela_verdict` | `analisis_apostar`) so each fixture maps to multiple rows. Unique key: `(fixture_id, article_type)`. v1 writes only `pronostico_momios` rows; the column + key are built now so v2 expansion is config-only.
-  - `articles` also carries **lifecycle fields** (drive the cadence): `lifecycle_state` (`seeded` → `refreshed` → `locked`), `last_refreshed_at`, and `last_pass` (`seed` | `refresh` | `lock`). Static publishing is slug-based: each rebuild regenerates the same HTML filename for a fixture/article type rather than tracking a CMS post ID.
+  - `articles` must include an **`article_type`** column (`pronostico_momios` | `alineacion_probable` | `quiniela_verdict` | `analisis_apostar`) so each fixture maps to multiple section rows. Unique key: `(fixture_id, article_type)`.
+  - `articles` also carries **lifecycle fields** (drive the cadence): `lifecycle_state` (`seeded` → `refreshed` → `locked`), `last_refreshed_at`, and `last_pass` (`seed` | `refresh` | `lock`). Static publishing is fixture-slug-based: each rebuild regenerates the same match page and groups all section rows for that fixture.
   - **`generation_log`** (cost instrumentation, one row per model call) — the source of truth for cost-per-article:
     - `id`, `fixture_id`, `article_type`, `attempt` (retry counter)
     - `model_used` (e.g. `gpt-4o` | `gpt-4.1-mini` — captured from the Azure OpenAI response/config so cost reports can separate production-quality vs. low-cost calls)
@@ -220,25 +232,27 @@ Position the site as an **ENTERTAINMENT / INFORMATION** platform, not a gambling
     - `cost_usd` (computed = tokens × per-model rate from a `config/pricing.js` table)
     - `latency_ms`, `status` (success/failed), `created_at`
     - A successful article = sum of its attempts' `cost_usd`. **Cost-per-article = `cost_usd` aggregated by `(fixture_id, article_type)`**, including failed/retried attempts so the real economic cost (waste included) is visible.
-- **Endpoint mapping:** FootballData.io (`https://footballdata.io/api/v1`) is the primary data provider. Auth uses `Authorization: Bearer <FOOTBALLDATA_KEY>`.
-  - `GET /leagues/50/seasons` resolves the 2026 World Cup season (`season_id=618` as verified in testing).
-  - `GET /leagues/50/matches?season_id=618` → `fixtures`.
-  - `GET /leagues/50/teams?season_id=618` or `GET /seasons/618/teams` → participating teams.
-  - `GET /teams/{team_id}/stats?season_id=618` → `team_stats`.
-  - `GET /teams/{team_id}/h2h/{opponent_id}` → `head_to_head` (future ingest).
-  - `GET /matches/{match_id}/odds` → `odds`.
+- **Endpoint mapping:** FootballData.io (`https://footballdata.io/api/v1`) is the primary data provider. Auth uses `Authorization: Bearer <FOOTBALLDATA_KEY>`. Prefer broad season-level endpoints before per-match/per-team endpoints:
+  - Bootstrap/cache: `GET /leagues/50/seasons` → `seasons`; `GET /seasons/{season_id}/teams` → `teams`; `GET /seasons/{season_id}/matches` → `fixtures`; `GET /seasons/{season_id}/standings` → optional standings; `GET /fifa-rankings/current` → team-summary context.
+  - Seed enrichment: `GET /teams/{team_id}/stats?season_id={season_id}` only if stale/missing; `GET /teams/{team_id}/h2h/{opponent_id}` only once per fixture pair unless explicitly stale.
+  - Refresh/lock enrichment: `GET /matches/{match_id}/odds` and `GET /matches/{match_id}/probabilities` only for due fixtures close enough to kickoff; do not poll every match on every cron.
+  - Post-match archive: `GET /matches/{match_id}/events` and `GET /matches/{match_id}/stats` once for completed fixtures.
+  - Unavailable today: no documented injuries or confirmed-lineup endpoints; render placeholders or add a secondary provider later.
+- **Provider cache:** cache every provider response, including empty/negative responses, with per-resource freshness windows. `resolveSeasonId` must read the cache/`seasons` table so team/stat calls do not repeatedly call `/leagues/50/seasons`.
+- **Fetch log:** append every live provider call with endpoint, params hash, reason (`bootstrap`, `seed`, `refresh`, `lock`, `post_match`), HTTP status, and provider usage metadata when available.
+- **Migrations:** because production uses a persisted SQLite blob, new tables can be added with `CREATE TABLE IF NOT EXISTS`, but changes to existing tables require explicit `ALTER TABLE` migrations keyed by `schema_version`.
 - Implement `rateLimiter.js` (start at 1 req/sec, then tune from FootballData.io usage data and plan limits).
-- `ingest/fixtures.js`: pull WC26 fixtures (league id `50`, season year `2026`; code resolves the season id).
-- `ingest/teams.js` + `team_stats.js`: pull squad + recent form per participating team.
-- `ingest/odds.js`: pull pre-match odds where available.
+- `ingest/fixtures.js`: pull WC26 fixtures via season-level matches (league id `50`, season year `2026`; code resolves and caches the season id).
+- `ingest/teams.js` + `team_stats.js`: pull squad/details/stats only when missing or stale.
+- `ingest/odds.js`: pull pre-match odds only for due fixtures in refresh/lock windows.
 - `scripts/run-ingest.js`: orchestrates all ingest jobs idempotently (upserts).
 
 ### Phase 3 — Generation Engine (Azure OpenAI → JSON articles)
-- `prompt.js`: encode the doc's exact Spanish system prompt with `{teamA, teamB, h2h, form, injuries}` placeholders, plus a per-`article_type` task variant (the 4 keyword templates differ in instructions: tactical/momios vs. probable XI vs. quiniela verdict vs. betting props).
+- `prompt.js`: encode the doc's exact Spanish system prompt with `{teamA, teamB, h2h, form, injuries, odds, probabilities, dataAvailability}` placeholders, plus a per-`article_type` task variant (the 4 keyword templates differ in instructions: tactical/momios vs. probable XI vs. quiniela verdict vs. betting props).
   - **Brand voice (biz plan §2.3 — make-or-break):** the prompt MUST force seasoned TUDN/TV Azteca analyst voice using regional vernacular (`el Tri`, `la afición`, `el quinto partido`, `el área chica`, `contención`, `cancha`, `portero`). Robotic textbook Spanish = product failure. Bake this into the system role, not just a hint.
 - `router.js`: HTTPS call to the configured Azure OpenAI deployment; retries + exponential backoff.
 - Validate response with `zod` against the schema: `h1_title`, `meta_description`, `pronostico_quiniela`, `analisis_tactico_html`, `url_slug`.
-- `batch.js`: iterate the **fixture × active-`article_type` set** (v1 = `[pronostico_momios]` only → 1 article/fixture; v2 expands the set); persist article rows keyed `(fixture_id, article_type)`; track `status` (pending/generated/failed). The active set comes from `config` (e.g. `ACTIVE_ARTICLE_TYPES`), so expansion is a config change, not a code change.
+- `batch.js`: iterate the **fixture × active-`article_type` set**; persist section rows keyed `(fixture_id, article_type)`; track `status` (pending/generated/failed/placeholder). The active set comes from `config` (e.g. `ACTIVE_ARTICLE_TYPES`). If a section lacks required data, generate/store a placeholder block instead of inventing unsupported details.
 - **Cost capture (every model call):** `router.js` returns the raw usage block + model/deployment identifier; `batch.js` writes one `generation_log` row per call (success *and* failure), computing `cost_usd` from `config/pricing.js`. This is non-optional plumbing — without it there is no cost-per-article measurement.
 - `scripts/run-cadence.js`: concurrency-limited generation inside the cadence runner; after each run, `npm run cost-report` prints spend, cost-per-article, and model split from `generation_log`.
 
@@ -248,11 +262,13 @@ Position the site as an **ENTERTAINMENT / INFORMATION** platform, not a gambling
   - First occurrence of `pronóstico`/`juega` → Bet365 partner link.
   - First occurrence of `la verde`/`jersey`/`Nike` → Skimlinks link.
   - Unit-tested regex (case/accent-insensitive, only first match per trigger group).
-- `staticSite.js`: **full static-site builder** — reads all generated article rows with `content_json`, injects compliance copy and affiliate links, writes deterministic article slugs plus `dist/index.html`, and keeps Seed→Refresh→Lock updates on the same URL by overwriting the same HTML filename.
-- `scripts/run-cadence.js`: after generation, rebuilds the full `dist/` tree, deploys via GitHub Actions to Azure Static Web Apps, and advances `lifecycle_state`/`last_pass`/`last_refreshed_at`.
+- `staticSite.js`: **fixture-driven static-site builder** — reads fixtures first, left-joins generated section rows with `content_json`, injects compliance copy and affiliate links, writes deterministic match slugs plus `dist/index.html`, and keeps Seed→Refresh→Lock updates on the same match URL by overwriting the same HTML filename.
+- `index.html`: render a home calendar/list of all known games, grouped by date/stage, linking to match pages even if section content is still placeholder-only.
+- `match pages`: render match header, team summary cards, and the four ordered content sections. Missing sections render explicit coming-soon blocks.
+- `scripts/run-cadence.js`: after generation, rebuilds the full `dist/` tree, deploys via GitHub Actions to Azure Static Web Apps, and advances `lifecycle_state`/`last_pass`/`last_refreshed_at` without losing data-completeness state.
 
 ### Phase 5 — Execution, Deployment & Indexing
-- `sitemap.js`: regenerate XML sitemap from generated static article slugs.
+- `sitemap.js`: regenerate XML sitemap from home page + one static match slug per fixture, not one URL per article section.
 - Submit to Google Search Console (manual or via Search Console API stretch goal).
 - `npm run cadence` runs the scheduled pipeline (pull DB → select pass → generate/update articles → rebuild static site → upload DB). `workflow_dispatch` supports `demo_mode=true` for mock-data deploys without API credentials.
 - Azure log review checklist to confirm usage and cost split between gpt-4o and gpt-4.1-mini.
@@ -267,7 +283,7 @@ Position the site as an **ENTERTAINMENT / INFORMATION** platform, not a gambling
 - [ ] **Azure subscription** + AI Foundry project at `ai.azure.com`
 - [ ] Deployed Azure OpenAI models: **gpt-4o** + **gpt-4.1-mini** (use gpt-4.1-mini for development/demo runs where possible)
 - [ ] Azure endpoint URL + API key → `.env`
-- [ ] **FootballData.io** account + paid tier that explicitly covers WC2026 current-season data, odds, injuries, and lineups → `FOOTBALLDATA_KEY` / GitHub secret
+- [ ] **FootballData.io** account + plan that covers WC2026 current-season data and the required request volume → `FOOTBALLDATA_KEY` / GitHub secret. Current docs do not list injuries/confirmed-lineup endpoints, so those sections must render placeholders or use a secondary provider later.
 - [ ] **Azure Static Web App** (`swa-wc26-quiniela`) + deployment token → `SWA_DEPLOYMENT_TOKEN`
 - [ ] **Azure Blob Storage** account + container for the SQLite DB; capture the **connection string** (or SAS token) for the GitHub Action
 - [ ] **GitHub repository** with Actions enabled; add secrets: `AZURE_AI_ENDPOINT`, `AZURE_AI_KEY`, `FOOTBALLDATA_KEY`, `AZURE_STORAGE_CONNECTION_STRING`, `SWA_DEPLOYMENT_TOKEN`, affiliate URLs; add repo variable `SITE_BASE_URL`

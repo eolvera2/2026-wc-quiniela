@@ -104,7 +104,7 @@ describe('batch', () => {
     expect(logs[0].error_message).toContain('Router timeout');
   });
 
-  it('processes multiple article types per fixture when configured', async () => {
+  it('stores placeholders for sections with missing required data', async () => {
     callRouter.mockResolvedValue(MOCK_ROUTER_RESULT);
 
     const config = {
@@ -115,13 +115,15 @@ describe('batch', () => {
 
     const results = await runBatch(db, [100], config);
 
-    expect(callRouter).toHaveBeenCalledTimes(2);
+    expect(callRouter).toHaveBeenCalledTimes(1);
     expect(results.succeeded).toBe(2);
 
     const articles = db.prepare('SELECT * FROM articles WHERE fixture_id = 1').all();
     expect(articles).toHaveLength(2);
-    const types = articles.map((a) => a.article_type).sort();
-    expect(types).toEqual(['alineacion_probable', 'pronostico_momios']);
+    const byType = Object.fromEntries(articles.map((a) => [a.article_type, a]));
+    expect(byType.pronostico_momios.status).toBe('generated');
+    expect(byType.alineacion_probable.status).toBe('placeholder');
+    expect(JSON.parse(byType.alineacion_probable.content_json).pronostico_quiniela).toBe('Próximamente');
   });
 
   it('skips fixtures not found in DB', async () => {

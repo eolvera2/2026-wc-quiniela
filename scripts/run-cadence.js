@@ -107,7 +107,22 @@ export async function runCadence(config) {
       }
     }
 
-    // 5. Full-site rebuild: all articles with content
+    // 5. Full-site rebuild: all known fixtures plus generated/placeholder sections
+    const allFixtures = db.prepare(`
+      SELECT f.id AS fixtureId,
+             f.match_number AS matchNumber,
+             f.kickoff_utc AS kickoffUtc,
+             f.venue,
+             f.stage,
+             f.status,
+             CASE WHEN f.is_tbd = 1 THEN COALESCE(f.tbd_home_label, 'TBD') ELSE ht.name END AS homeTeam,
+             CASE WHEN f.is_tbd = 1 THEN COALESCE(f.tbd_away_label, 'TBD') ELSE at.name END AS awayTeam
+      FROM fixtures f
+      JOIN teams ht ON ht.id = f.home_team_id
+      JOIN teams at ON at.id = f.away_team_id
+      ORDER BY f.kickoff_utc, f.match_number, f.id
+    `).all();
+
     const allArticles = db.prepare(`
       SELECT a.fixture_id AS fixtureId,
              a.article_type AS articleType,
@@ -121,7 +136,7 @@ export async function runCadence(config) {
       WHERE a.content_json IS NOT NULL
     `).all();
 
-    if (allArticles.length > 0) {
+    if (allFixtures.length > 0) {
       const articles = allArticles.map(row => ({
         fixtureId: row.fixtureId,
         articleType: row.articleType,
@@ -130,10 +145,10 @@ export async function runCadence(config) {
         contentJson: JSON.parse(row.content_json),
       }));
 
-      const slugs = buildSite({ articles, siteBaseUrl, outputDir, affiliateUrls });
-      console.log(`[cadence] Site built: ${slugs.length} articles → ${outputDir}/`);
+      const slugs = buildSite({ fixtures: allFixtures, articles, siteBaseUrl, outputDir, affiliateUrls });
+      console.log(`[cadence] Site built: ${slugs.length} match pages → ${outputDir}/`);
     } else {
-      console.log('[cadence] No articles with content; skipping site build');
+      console.log('[cadence] No fixtures; skipping site build');
     }
   } finally {
     // 6. Close DB and upload (always, even if no work was done)

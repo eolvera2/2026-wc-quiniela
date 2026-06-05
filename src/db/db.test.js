@@ -13,8 +13,34 @@ describe('db wrapper', () => {
   });
 
   it('opens an in-memory DB and applies schema', () => {
-    const row = db.prepare("SELECT version FROM schema_version").get();
-    expect(row.version).toBe(2);
+    const row = db.prepare("SELECT MAX(version) AS version FROM schema_version").get();
+    expect(row.version).toBe(3);
+  });
+
+  it('applies provider cache schema migration', () => {
+    const tables = db.prepare(`
+      SELECT name FROM sqlite_master
+      WHERE type = 'table'
+      AND name IN ('sources', 'wc_groups', 'stadiums', 'localized_names', 'provider_id_mappings', 'fetch_log', 'provider_cache')
+      ORDER BY name
+    `).all().map((row) => row.name);
+    expect(tables).toEqual([
+      'fetch_log',
+      'localized_names',
+      'provider_cache',
+      'provider_id_mappings',
+      'sources',
+      'stadiums',
+      'wc_groups',
+    ]);
+
+    const columns = db.prepare("PRAGMA table_info(fixtures)").all().map((row) => row.name);
+    expect(columns).toContain('match_number');
+    expect(columns).toContain('stadium_id');
+    expect(columns).toContain('is_tbd');
+
+    const source = db.prepare("SELECT provider_id FROM provider_id_mappings WHERE entity_type = 'season'").get();
+    expect(source.provider_id).toBe('618');
   });
 
   it('upserts a team', () => {

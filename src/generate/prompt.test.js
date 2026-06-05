@@ -61,6 +61,7 @@ describe('prompt', () => {
         injuries: 'Raúl Jiménez (knee)',
         odds: { home: 2.10, draw: 3.40, away: 3.50 },
         kickoffUtc: '2026-06-11T18:00:00Z',
+        dataAvailability: { odds: true, injuries: true },
       };
       const prompt = buildUserPrompt(data);
       expect(prompt).toContain('México');
@@ -68,6 +69,7 @@ describe('prompt', () => {
       expect(prompt).toContain('3 wins');
       expect(prompt).toContain('Raúl Jiménez');
       expect(prompt).toContain('2.10');
+      expect(prompt).toContain('DATA_AVAILABILITY');
     });
   });
 

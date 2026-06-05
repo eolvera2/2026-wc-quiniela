@@ -34,10 +34,34 @@ export function buildSlug(articleType, homeTeam, awayTeam) {
   return `${normalize(articleType)}-${normalize(homeTeam)}-vs-${normalize(awayTeam)}`;
 }
 
+export function buildMatchSlug({ fixtureId, matchNumber, homeTeam, awayTeam, kickoffUtc }) {
+  const normalize = (s) =>
+    String(s)
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/-{2,}/g, '-')
+      .replace(/^-|-$/g, '');
+  const date = kickoffUtc ? kickoffUtc.slice(0, 10) : 'fecha-por-confirmar';
+  const number = matchNumber ? `partido-${matchNumber}` : `fixture-${fixtureId}`;
+  return `${number}-${date}-${normalize(homeTeam)}-vs-${normalize(awayTeam)}`;
+}
+
 /**
  * Renders all articles to a static site in outputDir.
  *
  * @param {{
+ *   fixtures?: Array<{
+ *     fixtureId: number,
+ *     matchNumber?: number|null,
+ *     homeTeam: string,
+ *     awayTeam: string,
+ *     kickoffUtc?: string,
+ *     venue?: string,
+ *     stage?: string,
+ *     status?: string,
+ *   }>,
  *   articles: Array<{
  *     fixtureId: number,
  *     articleType: string,
@@ -56,37 +80,40 @@ export function buildSite({ articles, siteBaseUrl, outputDir = 'dist', affiliate
   mkdirSync(outputDir, { recursive: true });
 
   const slugs = [];
+  const fixtures = arguments[0].fixtures || deriveFixturesFromArticles(articles);
+  const articlesByFixture = groupArticlesByFixture(articles);
 
-  for (const article of articles) {
-    const { fixtureId, articleType, homeTeam, awayTeam, contentJson } = article;
-    const slug = buildSlug(articleType, homeTeam, awayTeam);
+  for (const fixture of fixtures) {
+    const fixtureArticles = articlesByFixture.get(fixture.fixtureId) || new Map();
+    const slug = buildMatchSlug(fixture);
 
-    let html = contentJson.analisis_tactico_html || '';
-    html = injectAffiliateLinks(html, affiliateUrls);
-    html = html + '\n\n' + DISCLAIMER_FOOTER;
+    let bodyHtml = renderMatchHeader(fixture);
+    bodyHtml += '\n' + renderTeamSummaries(fixture);
+    bodyHtml += '\n' + renderSectionList({ fixture, fixtureArticles, affiliateUrls });
+    bodyHtml += '\n\n' + DISCLAIMER_FOOTER;
 
     const pageHtml = renderArticlePage({
-      title: contentJson.h1_title || `${homeTeam} vs ${awayTeam}`,
-      metaDescription: contentJson.meta_description || '',
-      bodyHtml: html,
+      title: `${fixture.homeTeam} vs ${fixture.awayTeam} — Mundial 2026`,
+      metaDescription: `Calendario, pronósticos y análisis de ${fixture.homeTeam} vs ${fixture.awayTeam} en el Mundial 2026.`,
+      bodyHtml,
       siteBaseUrl,
       slug,
     });
 
     writeFileSync(join(outputDir, `${slug}.html`), pageHtml, 'utf-8');
-    slugs.push({ fixtureId, articleType, slug });
+    slugs.push({ fixtureId: fixture.fixtureId, articleType: 'match_page', slug });
   }
 
   // Write index page
-  const indexHtml = renderIndexPage({ articles, slugs, siteBaseUrl });
+  const indexHtml = renderIndexPage({ fixtures, slugs, siteBaseUrl });
   writeFileSync(join(outputDir, 'index.html'), indexHtml, 'utf-8');
 
   // Write sitemap.xml
   const now = new Date().toISOString().slice(0, 10);
-  const sitemapEntries = slugs.map((s) => ({
+  const sitemapEntries = [{ url: `${siteBaseUrl}/index.html`, lastmod: now }, ...slugs.map((s) => ({
     url: `${siteBaseUrl}/${s.slug}.html`,
     lastmod: now,
-  }));
+  }))];
   const sitemapXml = generateSitemap(sitemapEntries);
   writeFileSync(join(outputDir, 'sitemap.xml'), sitemapXml, 'utf-8');
 
@@ -125,12 +152,76 @@ function renderArticlePage({ title, metaDescription, bodyHtml, siteBaseUrl, slug
 </html>`;
 }
 
-function renderIndexPage({ articles, slugs, siteBaseUrl }) {
+const SECTION_LABELS = {
+  pronostico_momios: 'Pronóstico y momios',
+  alineacion_probable: 'Alineación probable',
+  quiniela_verdict: 'Veredicto de quiniela',
+  analisis_apostar: 'Análisis para apostar',
+};
+
+function deriveFixturesFromArticles(articles) {
+  const seen = new Map();
+  for (const article of articles) {
+    if (!seen.has(article.fixtureId)) {
+      seen.set(article.fixtureId, {
+        fixtureId: article.fixtureId,
+        matchNumber: article.matchNumber || null,
+        homeTeam: article.homeTeam,
+        awayTeam: article.awayTeam,
+        kickoffUtc: article.kickoffUtc || null,
+        venue: article.venue || null,
+        stage: article.stage || null,
+        status: article.status || null,
+      });
+    }
+  }
+  return [...seen.values()];
+}
+
+function groupArticlesByFixture(articles) {
+  const grouped = new Map();
+  for (const article of articles) {
+    if (!grouped.has(article.fixtureId)) grouped.set(article.fixtureId, new Map());
+    grouped.get(article.fixtureId).set(article.articleType, article);
+  }
+  return grouped;
+}
+
+function renderMatchHeader(fixture) {
+  return `<header class="match-header">
+    <p class="match-meta">${escapeHtml(fixture.kickoffUtc || 'Fecha por confirmar')} · ${escapeHtml(fixture.venue || 'Sede por confirmar')}</p>
+    <p class="match-status">Estado: ${escapeHtml(fixture.status || 'scheduled')}</p>
+  </header>`;
+}
+
+function renderTeamSummaries(fixture) {
+  return `<section class="team-summaries">
+    <h2>Resumen de equipos</h2>
+    <article><h3>${escapeHtml(fixture.homeTeam)}</h3><p>Resumen del equipo próximamente.</p></article>
+    <article><h3>${escapeHtml(fixture.awayTeam)}</h3><p>Resumen del equipo próximamente.</p></article>
+  </section>`;
+}
+
+function renderSectionList({ fixture, fixtureArticles, affiliateUrls }) {
+  return Object.entries(SECTION_LABELS)
+    .map(([sectionType, label]) => {
+      const article = fixtureArticles.get(sectionType);
+      const content = article?.contentJson?.analisis_tactico_html
+        || `<section class="coming-soon"><h2>${escapeHtml(label)}</h2><p>Próximamente: actualizaremos esta sección de ${escapeHtml(fixture.homeTeam)} vs ${escapeHtml(fixture.awayTeam)} cuando tengamos datos confiables.</p></section>`;
+      return `<section class="match-section" data-section="${escapeHtml(sectionType)}">
+        ${injectAffiliateLinks(content, affiliateUrls)}
+      </section>`;
+    })
+    .join('\n');
+}
+
+function renderIndexPage({ fixtures, slugs }) {
   const links = slugs
     .map((s, i) => {
-      const a = articles[i];
-      const title = a?.contentJson?.h1_title || `${a?.homeTeam} vs ${a?.awayTeam}`;
-      return `  <li><a href="${escapeHtml(s.slug)}.html">${escapeHtml(title)}</a></li>`;
+      const fixture = fixtures[i];
+      const title = `${fixture?.homeTeam} vs ${fixture?.awayTeam}`;
+      const meta = fixture?.kickoffUtc ? ` — ${fixture.kickoffUtc.slice(0, 10)}` : '';
+      return `  <li><a href="${escapeHtml(s.slug)}.html">${escapeHtml(title)}${escapeHtml(meta)}</a></li>`;
     })
     .join('\n');
 
@@ -139,11 +230,10 @@ function renderIndexPage({ articles, slugs, siteBaseUrl }) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WC 2026 Quiniela — Pronósticos y Momios</title>
-  <link rel="canonical" href="${escapeHtml(siteBaseUrl)}/index.html">
+  <title>Calendario Mundial 2026 — Quiniela y Pronósticos</title>
 </head>
 <body>
-  <h1>Pronósticos y Momios — Mundial 2026</h1>
+  <h1>Calendario Mundial 2026 — Quiniela y Pronósticos</h1>
   <ul>
 ${links}
   </ul>
