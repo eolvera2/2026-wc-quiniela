@@ -24,6 +24,17 @@ const SAMPLE_ARTICLE = {
   updatedAt: '2026-06-11T18:00:00Z',
 };
 
+const SAMPLE_FIXTURE = {
+  fixtureId: 1,
+  matchNumber: 1,
+  homeTeam: 'México',
+  awayTeam: 'Alemania',
+  kickoffUtc: '2026-06-11T18:00:00Z',
+  venue: 'Estadio Azteca',
+  stage: 'group',
+  status: 'scheduled',
+};
+
 describe('publish/staticSite', () => {
   let tmpDir;
 
@@ -124,6 +135,30 @@ describe('publish/staticSite', () => {
     expect(sitemap).toContain('https://example.com/index.html');
     expect(sitemap).toContain('https://example.com/fixture-1-fecha-por-confirmar-mexico-vs-alemania.html');
     expect(sitemap).toContain('<urlset');
+  });
+
+  it('buildSite renders design-system calendar and match page components', () => {
+    const outDir = join(tmpDir, 'dist');
+    buildSite({
+      fixtures: [SAMPLE_FIXTURE],
+      articles: [],
+      siteBaseUrl: 'https://example.com',
+      outputDir: outDir,
+      affiliateUrls: AFFILIATE_URLS,
+    });
+
+    const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
+    expect(index).toContain('class="site-header"');
+    expect(index).toContain('class="date-tabs');
+    expect(index).toContain('class="match-card');
+    expect(index).toContain('id="equipos"');
+
+    const match = readFileSync(join(outDir, 'partido-1-2026-06-11-mexico-vs-alemania.html'), 'utf-8');
+    expect(match).toContain('"@type":"SportsEvent"');
+    expect(match).toContain('class="hero-match');
+    expect(match).toContain('Pronóstico y momios');
+    expect(match).toContain('Próximamente: actualizaremos esta sección');
+    expect(match).toContain('Tu quiniela');
   });
 
   it('buildSite returns array of { fixtureId, articleType, slug } objects', () => {

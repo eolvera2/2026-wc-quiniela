@@ -17,6 +17,7 @@ import { openDb, closeDb } from '../src/db/db.js';
 import { selectPass } from '../src/cadence/selectPass.js';
 import { runBatch } from '../src/generate/batch.js';
 import { buildSite } from '../src/publish/staticSite.js';
+import { seedStaticData } from './seed-static.js';
 
 /**
  * Main orchestration function (exported for testing).
@@ -48,6 +49,8 @@ export async function runCadence(config) {
   try {
     // 2. Open DB
     db = openDb(dbPath);
+    const seedResult = seedStaticData(db);
+    console.log(`[cadence] Static seed ready: ${seedResult.fixtures} fixtures, ${seedResult.teams} teams`);
 
     const now = new Date().toISOString();
 

@@ -35,11 +35,16 @@ vi.mock('../src/publish/staticSite.js', () => ({
   buildSite: vi.fn().mockReturnValue([]),
 }));
 
+vi.mock('./seed-static.js', () => ({
+  seedStaticData: vi.fn().mockReturnValue({ fixtures: 104, teams: 48, stadiums: 16, groups: 12 }),
+}));
+
 import { downloadDb, uploadDb } from '../src/storage/blob.js';
 import { openDb, closeDb } from '../src/db/db.js';
 import { selectPass } from '../src/cadence/selectPass.js';
 import { runBatch } from '../src/generate/batch.js';
 import { buildSite } from '../src/publish/staticSite.js';
+import { seedStaticData } from './seed-static.js';
 
 describe('run-cadence orchestrator', () => {
   beforeEach(() => {
@@ -69,6 +74,7 @@ describe('run-cadence orchestrator', () => {
       localPath: '/tmp/wc26.sqlite',
     });
     expect(openDb).toHaveBeenCalledWith('/tmp/wc26.sqlite');
+    expect(seedStaticData).toHaveBeenCalled();
     expect(uploadDb).toHaveBeenCalledWith({
       connectionString: 'conn-string',
       containerName: 'wc26',
