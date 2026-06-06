@@ -161,6 +161,8 @@ describe('publish/staticSite', () => {
     expect(index).toContain('id="equipo-mexico"');
     expect(index).toContain("querySelectorAll('.match-card[data-team-codes]')");
     expect(index).toContain('.date-tabs { position: sticky;');
+    expect(index).toContain('top: 3.85rem;');
+    expect(index).toContain('.home-hero h1 { max-width: 92rem;');
     expect(index).toContain('padding: 0.35rem 0 var(--space-m);');
 
     const match = readFileSync(join(outDir, 'partido-1-2026-06-11-mexico-vs-sudafrica.html'), 'utf-8');
