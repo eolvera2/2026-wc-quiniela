@@ -21,6 +21,7 @@ try {
 const REQUIRED_PATTERNS = [
   { pattern: /on:\s*\n\s+schedule:/, label: 'schedule trigger' },
   { pattern: /workflow_dispatch:/, label: 'workflow_dispatch trigger' },
+  { pattern: /NODE_VERSION:\s*'20'/, label: 'Node.js 20 runtime' },
   { pattern: /concurrency:\s*\n\s+group:\s*wc26-pipeline/, label: 'concurrency group' },
   { pattern: /cancel-in-progress:\s*false/, label: 'cancel-in-progress: false' },
   { pattern: /secrets\.AZURE_AI_ENDPOINT/, label: 'AZURE_AI_ENDPOINT secret' },
@@ -32,6 +33,7 @@ const REQUIRED_PATTERNS = [
   { pattern: /vars\.SITE_BASE_URL/, label: 'SITE_BASE_URL variable' },
   { pattern: /if:\s*failure\(\)/, label: 'failure alert step' },
   { pattern: /npm ci/, label: 'npm ci step' },
+  { pattern: /github\.event_name == 'schedule' \|\| inputs\.demo_mode == true/, label: 'scheduled static demo build' },
   { pattern: /run-cadence\.js/, label: 'run-cadence.js execution' },
 ];
 

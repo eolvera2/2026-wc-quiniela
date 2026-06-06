@@ -21,7 +21,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  NODE_VERSION: '18'
+  NODE_VERSION: '20'
   BLOB_CONTAINER: 'wc26'
   BLOB_NAME: 'wc26.sqlite'
   DB_PATH: '/tmp/wc26.sqlite'
@@ -46,11 +46,11 @@ jobs:
         run: npm ci
 
       - name: Build demo site (skip live pipeline)
-        if: ${{ inputs.demo_mode == true }}
+        if: ${{ github.event_name == 'schedule' || inputs.demo_mode == true }}
         run: node scripts/seed-demo.js
 
       - name: Run cadence pipeline
-        if: ${{ inputs.demo_mode != true }}
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.demo_mode != true }}
         env:
           AZURE_AI_ENDPOINT: ${{ secrets.AZURE_AI_ENDPOINT }}
           AZURE_AI_KEY: ${{ secrets.AZURE_AI_KEY }}
