@@ -161,7 +161,9 @@ describe('publish/staticSite', () => {
     expect(index).toContain('id="equipo-mexico"');
     expect(index).toContain("querySelectorAll('.match-card[data-team-codes]')");
     expect(index).toContain('.date-tabs { position: sticky;');
-    expect(index).toContain('top: 3.45rem;');
+    expect(index).toContain('top: var(--site-header-sticky-offset, 3rem);');
+    expect(index).toContain("document.documentElement.style.setProperty('--site-header-sticky-offset'");
+    expect(index).toContain('new ResizeObserver(setStickyOffset).observe(header);');
     expect(index).toContain('.home-hero h1 { max-width: 86rem;');
     expect(index).toContain('font-size: clamp(2.35rem, 5.35vw, 4.65rem);');
     expect(index).toContain('padding: .35rem 0 .55rem;');

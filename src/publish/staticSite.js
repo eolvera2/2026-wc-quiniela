@@ -321,6 +321,7 @@ function renderIndexPage({ fixtures, teams, slugs }) {
     ${teamsShortcut}
   </main>
   ${renderSiteFooter()}
+  <script>${STICKY_HEADER_SCRIPT}</script>
   <script>${HOME_FILTER_SCRIPT}</script>
 </body>
 </html>`;
@@ -571,7 +572,7 @@ h2 { font-size: var(--step-2); }
 .button--primary, .match-card__cta { background: var(--action-primary-bg); color: var(--action-primary-text); }
 .button--secondary { border: 1px solid rgba(255,255,255,.35); color: var(--text-primary); }
 .date-tabs { display: flex; gap: .55rem; overflow-x: auto; scroll-snap-type: x proximity; padding: .35rem 0 .55rem; }
-.date-tabs { position: sticky; top: 3.45rem; z-index: 9; background: rgba(2, 15, 42, .92); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border-subtle); box-shadow: 0 0 0 100vmax rgba(2, 15, 42, .92); clip-path: inset(0 -100vmax); }
+.date-tabs { position: sticky; top: var(--site-header-sticky-offset, 3rem); z-index: 9; background: rgba(2, 15, 42, .92); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border-subtle); box-shadow: 0 0 0 100vmax rgba(2, 15, 42, .92); clip-path: inset(0 -100vmax); }
 .date-tab { min-width: 5.15rem; scroll-snap-align: start; padding: .38rem .62rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); text-align: center; text-decoration: none; background: var(--surface-card); }
 .date-tab.is-active { background: var(--color-gold-400); color: var(--color-navy-950); }
 .date-tab__day { display: block; font-size: var(--step--2); text-transform: uppercase; }
@@ -610,6 +611,24 @@ h2 { font-size: var(--step-2); }
 .site-footer { margin-top: var(--space-xl); padding: var(--space-l) 0; background: var(--surface-raised); color: var(--text-secondary); border-top: 1px solid var(--border-subtle); }
 .numeric { font-variant-numeric: tabular-nums; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; } }
+`;
+
+const STICKY_HEADER_SCRIPT = `
+(() => {
+  const header = document.querySelector('.site-header');
+  if (!header) return;
+
+  const setStickyOffset = () => {
+    const headerHeight = header.getBoundingClientRect().height;
+    document.documentElement.style.setProperty('--site-header-sticky-offset', Math.max(0, headerHeight - 2) + 'px');
+  };
+
+  setStickyOffset();
+  window.addEventListener('resize', setStickyOffset);
+  if ('ResizeObserver' in window) {
+    new ResizeObserver(setStickyOffset).observe(header);
+  }
+})();
 `;
 
 const HOME_FILTER_SCRIPT = `
