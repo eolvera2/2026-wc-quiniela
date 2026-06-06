@@ -20,7 +20,7 @@ describe('seed-static', () => {
     expect(WORLD_CUP_TEAMS).toHaveLength(48);
     expect(WORLD_CUP_TEAMS.find((team) => team.code === 'RSA')).toMatchObject({
       displayName: 'Sudáfrica',
-      flag: '🇿🇦',
+      flag: 'za',
     });
   });
 

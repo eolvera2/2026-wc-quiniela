@@ -159,6 +159,8 @@ describe('publish/staticSite', () => {
     expect(index).toContain('id="equipos"');
     expect(index).toContain('href="index.html#equipo-mexico"');
     expect(index).toContain('id="equipo-mexico"');
+    expect(index).toContain("querySelectorAll('.match-card[data-team-codes]')");
+    expect(index).toContain('.date-tabs { position: sticky;');
 
     const match = readFileSync(join(outDir, 'partido-1-2026-06-11-mexico-vs-sudafrica.html'), 'utf-8');
     expect(match).toContain('"@type":"SportsEvent"');
@@ -191,15 +193,32 @@ describe('publish/staticSite', () => {
     });
 
     const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
-    expect(index).toContain('🇲🇽');
+    expect(index).toContain('https://flagcdn.com/24x18/mx.png');
     expect(index).toContain('México');
-    expect(index).toContain('🇿🇦');
+    expect(index).toContain('https://flagcdn.com/24x18/za.png');
     expect(index).toContain('Sudáfrica');
     expect(index).not.toContain('South Africa');
+    expect(index).toContain('data-team-codes="MEX RSA"');
+    expect(index).toContain('Mostrando partidos de ');
     const teamsSection = index.slice(index.indexOf('id="equipos"'), index.indexOf('</section>', index.indexOf('id="equipos"')));
     expect(index).not.toContain('data-team-code="">1A');
     expect(teamsSection).not.toContain('#A/B/C/D/F</span>');
     expect((teamsSection.match(/class="team-pill"/g) || []).length).toBe(48);
+  });
+
+  it('does not inject affiliate links into placeholder section text', () => {
+    const outDir = join(tmpDir, 'dist');
+    buildSite({
+      fixtures: [SAMPLE_FIXTURE],
+      articles: [],
+      siteBaseUrl: 'https://example.com',
+      outputDir: outDir,
+      affiliateUrls: AFFILIATE_URLS,
+    });
+
+    const match = readFileSync(join(outDir, 'partido-1-2026-06-11-mexico-vs-sudafrica.html'), 'utf-8');
+    expect(match).toContain('Análisis para apostar');
+    expect(match).not.toContain('<a href="https://caliente.mx/ref/TEST" rel="sponsored">apostar</a>');
   });
 
   it('buildSite returns array of { fixtureId, articleType, slug } objects', () => {

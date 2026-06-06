@@ -257,11 +257,12 @@ function renderSectionList({ fixture, fixtureArticles, affiliateUrls }) {
   return Object.entries(SECTION_LABELS)
     .map(([sectionType, label]) => {
       const article = fixtureArticles.get(sectionType);
+      const isPlaceholder = !article?.contentJson?.analisis_tactico_html;
       const content = article?.contentJson?.analisis_tactico_html
         || `<section class="coming-soon"><h2>${escapeHtml(label)}</h2><p>Próximamente: actualizaremos esta sección de ${escapeHtml(fixture.homeTeam)} vs ${escapeHtml(fixture.awayTeam)} cuando tengamos datos confiables.</p></section>`;
       return `<section id="${escapeHtml(sectionType)}" class="match-section container" data-section="${escapeHtml(sectionType)}">
         <p class="section-kicker">${escapeHtml(label)}</p>
-        <div class="match-article">${injectAffiliateLinks(content, affiliateUrls)}</div>
+        <div class="match-article">${isPlaceholder ? content : injectAffiliateLinks(content, affiliateUrls)}</div>
       </section>`;
     })
     .join('\n');
@@ -320,6 +321,7 @@ function renderIndexPage({ fixtures, teams, slugs }) {
     ${teamsShortcut}
   </main>
   ${renderSiteFooter()}
+  <script>${HOME_FILTER_SCRIPT}</script>
 </body>
 </html>`;
 }
@@ -362,7 +364,7 @@ function renderTeamsShortcut(teams) {
       <p>La base está precargada desde datos públicos; los perfiles completos se llenarán conforme haya información confiable.</p>
     </div>
     <div class="team-pill-grid">
-      ${teamList.map((team) => `<a id="${escapeHtml(team.anchorId)}" class="team-pill" href="#${escapeHtml(team.anchorId)}" data-team-code="${escapeHtml(team.code || '')}">${renderTeamName(team)}</a>`).join('\n')}
+      ${teamList.map((team) => `<a id="${escapeHtml(team.anchorId)}" class="team-pill" href="#${escapeHtml(team.anchorId)}" data-team-code="${escapeHtml(team.code || '')}" data-team-name="${escapeHtml(team.name)}">${renderTeamName(team)}</a>`).join('\n')}
     </div>
   </section>`;
 }
@@ -370,7 +372,7 @@ function renderTeamsShortcut(teams) {
 function renderMatchCard(fixture, slug) {
   const homeTeam = fixtureTeam(fixture, 'home');
   const awayTeam = fixtureTeam(fixture, 'away');
-  return `<article class="match-card match-card--${escapeHtml(fixture.status || 'upcoming')}">
+  return `<article class="match-card match-card--${escapeHtml(fixture.status || 'upcoming')}" data-team-codes="${escapeHtml([homeTeam.code, awayTeam.code].filter(Boolean).join(' '))}">
     <div class="match-card__top"><span class="status-pill">${escapeHtml(statusLabel(fixture.status))}</span><span>${escapeHtml(stageLabel(fixture.stage))}</span></div>
     <p class="match-card__date numeric">${escapeHtml(formatDateTime(fixture.kickoffUtc))}</p>
     <h3>${renderTeamName(homeTeam)} <span class="versus">vs</span> ${renderTeamName(awayTeam)}</h3>
@@ -425,9 +427,13 @@ function fixtureTeam(fixture, side) {
 
 function renderTeamName(team) {
   const flag = team?.flag && !team.isPlaceholder
-    ? `<span class="team-flag" aria-hidden="true">${escapeHtml(team.flag)}</span> `
+    ? `<img class="team-flag" src="${escapeHtml(flagImageUrl(team.flag))}" alt="" width="24" height="18" loading="lazy"> `
     : '';
   return `${flag}<span class="team-name">${escapeHtml(team?.name || '')}</span>`;
+}
+
+function flagImageUrl(flagCode) {
+  return `https://flagcdn.com/24x18/${flagCode}.png`;
 }
 
 function buildBreadcrumbJsonLd({ siteBaseUrl, slug, title }) {
@@ -560,11 +566,16 @@ h2 { font-size: var(--step-2); }
 .button--primary, .match-card__cta { background: var(--action-primary-bg); color: var(--action-primary-text); }
 .button--secondary { border: 1px solid rgba(255,255,255,.35); color: var(--text-primary); }
 .date-tabs { display: flex; gap: var(--space-xs); overflow-x: auto; scroll-snap-type: x proximity; padding: var(--space-m) 0; }
+.date-tabs { position: sticky; top: 4.6rem; z-index: 9; background: rgba(2, 15, 42, .92); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border-subtle); }
 .date-tab { min-width: 7rem; scroll-snap-align: start; padding: var(--space-xs); border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); text-align: center; text-decoration: none; background: var(--surface-card); }
 .date-tab.is-active { background: var(--color-gold-400); color: var(--color-navy-950); }
 .date-tab__day { display: block; font-size: var(--step--2); text-transform: uppercase; }
 .date-tab__date { display: block; font-weight: 900; }
 .calendar { padding-block: var(--space-l); }
+.filter-status { display: none; align-items: center; gap: var(--space-xs); margin-bottom: var(--space-m); padding: var(--space-s); border: 1px solid var(--border-subtle); border-radius: var(--radius-l); background: var(--surface-card); }
+.filter-status.is-active { display: flex; }
+.filter-status button { min-height: 44px; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); background: var(--surface-card-strong); color: var(--text-primary); font-weight: 900; }
+.calendar.is-filtered .match-card[hidden], .calendar.is-filtered .calendar-day[hidden] { display: none; }
 .section-heading { margin-bottom: var(--space-m); }
 .round-divider { margin: var(--space-l) 0 var(--space-s); padding: .6rem 1rem; border-radius: var(--radius-pill); background: rgba(245,166,35,.15); color: var(--color-gold-300); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
 .match-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-m); }
@@ -584,7 +595,7 @@ h2 { font-size: var(--step-2); }
 .team-pill-grid { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
 .team-pill { display: inline-flex; padding: .5rem .8rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); background: var(--surface-card); color: var(--text-primary); font-weight: 800; text-decoration: none; }
 .team-pill:target { background: var(--color-gold-400); color: var(--color-navy-950); }
-.team-flag { display: inline-block; margin-right: .25rem; }
+.team-flag { display: inline-block; width: 1.5rem; height: 1.125rem; margin-right: .25rem; border-radius: .125rem; object-fit: cover; vertical-align: -.15em; box-shadow: 0 0 0 1px rgba(255,255,255,.25); }
 .match-article { color: var(--text-secondary); }
 .match-article h2 { color: var(--text-primary); }
 .coming-soon { border-left: 4px solid var(--color-gold-400); padding-left: var(--space-s); }
@@ -594,4 +605,75 @@ h2 { font-size: var(--step-2); }
 .site-footer { margin-top: var(--space-xl); padding: var(--space-l) 0; background: var(--surface-raised); color: var(--text-secondary); border-top: 1px solid var(--border-subtle); }
 .numeric { font-variant-numeric: tabular-nums; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; } }
+`;
+
+const HOME_FILTER_SCRIPT = `
+(() => {
+  const calendar = document.querySelector('.calendar');
+  if (!calendar) return;
+
+  const heading = calendar.querySelector('.section-heading');
+  const status = document.createElement('div');
+  status.className = 'filter-status';
+  status.setAttribute('aria-live', 'polite');
+  status.innerHTML = '<span></span><button type="button">Ver todos</button>';
+  heading.insertAdjacentElement('afterend', status);
+
+  const label = status.querySelector('span');
+  const clearButton = status.querySelector('button');
+  const teamLinks = [...document.querySelectorAll('[data-team-code]')];
+  const cards = [...document.querySelectorAll('.match-card[data-team-codes]')];
+  const days = [...document.querySelectorAll('.calendar-day')];
+
+  function clearFilter() {
+    calendar.classList.remove('is-filtered');
+    status.classList.remove('is-active');
+    cards.forEach((card) => { card.hidden = false; });
+    days.forEach((day) => { day.hidden = false; });
+    teamLinks.forEach((link) => link.removeAttribute('aria-current'));
+  }
+
+  function applyFilter(code) {
+    const teamLink = teamLinks.find((link) => link.dataset.teamCode === code);
+    if (!teamLink) {
+      clearFilter();
+      return;
+    }
+    calendar.classList.add('is-filtered');
+    status.classList.add('is-active');
+    label.textContent = 'Mostrando partidos de ' + (teamLink.dataset.teamName || teamLink.textContent.trim());
+    teamLinks.forEach((link) => link.toggleAttribute('aria-current', link.dataset.teamCode === code));
+
+    cards.forEach((card) => {
+      card.hidden = !card.dataset.teamCodes.split(/\\s+/).includes(code);
+    });
+    days.forEach((day) => {
+      day.hidden = !day.querySelector('.match-card:not([hidden])');
+    });
+    document.querySelector('#partidos')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function applyFromHash() {
+    if (!location.hash) {
+      clearFilter();
+      return;
+    }
+    const target = document.querySelector(location.hash);
+    if (target?.dataset?.teamCode) {
+      applyFilter(target.dataset.teamCode);
+    }
+  }
+
+  teamLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      setTimeout(applyFromHash, 0);
+    });
+  });
+  clearButton.addEventListener('click', () => {
+    history.pushState('', document.title, location.pathname + location.search);
+    clearFilter();
+  });
+  window.addEventListener('hashchange', applyFromHash);
+  applyFromHash();
+})();
 `;
