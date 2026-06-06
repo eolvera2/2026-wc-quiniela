@@ -162,8 +162,10 @@ describe('publish/staticSite', () => {
     expect(index).toContain("querySelectorAll('.match-card[data-team-codes]')");
     expect(index).toContain('.date-tabs { position: sticky;');
     expect(index).toContain('top: 3.85rem;');
-    expect(index).toContain('.home-hero h1 { max-width: 92rem;');
-    expect(index).toContain('padding: 0.35rem 0 var(--space-m);');
+    expect(index).toContain('.home-hero h1 { max-width: 86rem;');
+    expect(index).toContain('font-size: clamp(2.35rem, 5.35vw, 4.65rem);');
+    expect(index).toContain('padding: .25rem 0 .85rem;');
+    expect(index).toContain('min-width: 5.8rem;');
 
     const match = readFileSync(join(outDir, 'partido-1-2026-06-11-mexico-vs-sudafrica.html'), 'utf-8');
     expect(match).toContain('"@type":"SportsEvent"');
