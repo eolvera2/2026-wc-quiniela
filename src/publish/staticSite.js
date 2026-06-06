@@ -565,7 +565,7 @@ h2 { font-size: var(--step-2); }
 .button, .match-card__cta { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; padding: .75rem 1rem; border-radius: var(--radius-pill); font-weight: 900; text-decoration: none; }
 .button--primary, .match-card__cta { background: var(--action-primary-bg); color: var(--action-primary-text); }
 .button--secondary { border: 1px solid rgba(255,255,255,.35); color: var(--text-primary); }
-.date-tabs { display: flex; gap: var(--space-xs); overflow-x: auto; scroll-snap-type: x proximity; padding: var(--space-m) 0; }
+.date-tabs { display: flex; gap: var(--space-xs); overflow-x: auto; scroll-snap-type: x proximity; padding: 0.35rem 0 var(--space-m); }
 .date-tabs { position: sticky; top: 4.6rem; z-index: 9; background: rgba(2, 15, 42, .92); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border-subtle); }
 .date-tab { min-width: 7rem; scroll-snap-align: start; padding: var(--space-xs); border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); text-align: center; text-decoration: none; background: var(--surface-card); }
 .date-tab.is-active { background: var(--color-gold-400); color: var(--color-navy-950); }
