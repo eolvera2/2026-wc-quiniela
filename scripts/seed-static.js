@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { closeDb, openDb } from '../src/db/db.js';
+import { WORLD_CUP_TEAMS } from '../src/data/worldCupTeams.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT_DIR = join(__dirname, '..');
@@ -18,56 +19,15 @@ const MONTHS = {
   Jul: 6, July: 6,
 };
 
-const TEAM_META = {
-  Mexico: { code: 'MEX', es: 'México', confederation: 'CONCACAF' },
-  'South Africa': { code: 'RSA', es: 'Sudáfrica', confederation: 'CAF' },
-  'South Korea': { code: 'KOR', es: 'Corea del Sur', confederation: 'AFC', fifaName: 'Korea Republic' },
-  'Czech Republic': { code: 'CZE', es: 'República Checa', confederation: 'UEFA', fifaName: 'Czechia' },
-  Canada: { code: 'CAN', es: 'Canadá', confederation: 'CONCACAF' },
-  'Bosnia & Herzegovina': { code: 'BIH', es: 'Bosnia y Herzegovina', confederation: 'UEFA', fifaName: 'Bosnia and Herzegovina' },
-  Qatar: { code: 'QAT', es: 'Catar', confederation: 'AFC' },
-  Switzerland: { code: 'SUI', es: 'Suiza', confederation: 'UEFA' },
-  Brazil: { code: 'BRA', es: 'Brasil', confederation: 'CONMEBOL' },
-  Morocco: { code: 'MAR', es: 'Marruecos', confederation: 'CAF' },
-  Haiti: { code: 'HAI', es: 'Haití', confederation: 'CONCACAF' },
-  Scotland: { code: 'SCO', es: 'Escocia', confederation: 'UEFA' },
-  USA: { code: 'USA', es: 'Estados Unidos', confederation: 'CONCACAF', fifaName: 'United States' },
-  Paraguay: { code: 'PAR', es: 'Paraguay', confederation: 'CONMEBOL' },
-  Australia: { code: 'AUS', es: 'Australia', confederation: 'AFC' },
-  Turkey: { code: 'TUR', es: 'Turquía', confederation: 'UEFA', fifaName: 'Türkiye' },
-  Germany: { code: 'GER', es: 'Alemania', confederation: 'UEFA' },
-  Curaçao: { code: 'CUW', es: 'Curazao', confederation: 'CONCACAF' },
-  'Ivory Coast': { code: 'CIV', es: 'Costa de Marfil', confederation: 'CAF', fifaName: "Côte d'Ivoire" },
-  Ecuador: { code: 'ECU', es: 'Ecuador', confederation: 'CONMEBOL' },
-  Netherlands: { code: 'NED', es: 'Países Bajos', confederation: 'UEFA' },
-  Japan: { code: 'JPN', es: 'Japón', confederation: 'AFC' },
-  Sweden: { code: 'SWE', es: 'Suecia', confederation: 'UEFA' },
-  Tunisia: { code: 'TUN', es: 'Túnez', confederation: 'CAF' },
-  Belgium: { code: 'BEL', es: 'Bélgica', confederation: 'UEFA' },
-  Egypt: { code: 'EGY', es: 'Egipto', confederation: 'CAF' },
-  Iran: { code: 'IRN', es: 'Irán', confederation: 'AFC', fifaName: 'IR Iran' },
-  'New Zealand': { code: 'NZL', es: 'Nueva Zelanda', confederation: 'OFC' },
-  Spain: { code: 'ESP', es: 'España', confederation: 'UEFA' },
-  'Cape Verde': { code: 'CPV', es: 'Cabo Verde', confederation: 'CAF', fifaName: 'Cabo Verde' },
-  'Saudi Arabia': { code: 'KSA', es: 'Arabia Saudita', confederation: 'AFC' },
-  Uruguay: { code: 'URU', es: 'Uruguay', confederation: 'CONMEBOL' },
-  France: { code: 'FRA', es: 'Francia', confederation: 'UEFA' },
-  Senegal: { code: 'SEN', es: 'Senegal', confederation: 'CAF' },
-  Iraq: { code: 'IRQ', es: 'Irak', confederation: 'AFC' },
-  Norway: { code: 'NOR', es: 'Noruega', confederation: 'UEFA' },
-  Argentina: { code: 'ARG', es: 'Argentina', confederation: 'CONMEBOL' },
-  Algeria: { code: 'ALG', es: 'Argelia', confederation: 'CAF' },
-  Austria: { code: 'AUT', es: 'Austria', confederation: 'UEFA' },
-  Jordan: { code: 'JOR', es: 'Jordania', confederation: 'AFC' },
-  Portugal: { code: 'POR', es: 'Portugal', confederation: 'UEFA' },
-  'DR Congo': { code: 'COD', es: 'República Democrática del Congo', confederation: 'CAF', fifaName: 'Congo DR' },
-  Uzbekistan: { code: 'UZB', es: 'Uzbekistán', confederation: 'AFC' },
-  Colombia: { code: 'COL', es: 'Colombia', confederation: 'CONMEBOL' },
-  England: { code: 'ENG', es: 'Inglaterra', confederation: 'UEFA' },
-  Croatia: { code: 'CRO', es: 'Croacia', confederation: 'UEFA' },
-  Ghana: { code: 'GHA', es: 'Ghana', confederation: 'CAF' },
-  Panama: { code: 'PAN', es: 'Panamá', confederation: 'CONCACAF' },
-};
+const TEAM_META = Object.fromEntries(WORLD_CUP_TEAMS.map((team) => [
+  team.seedName,
+  {
+    code: team.code,
+    es: team.displayName,
+    confederation: team.confederation,
+    fifaName: team.fifaName,
+  },
+]));
 
 export function parseOpenFootball({ cupText, finalsText, stadiumsCsv }) {
   const groups = parseGroups(cupText);

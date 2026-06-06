@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { closeDb, openDb } from '../src/db/db.js';
 import { parseOpenFootball, seedStaticData } from './seed-static.js';
+import { WORLD_CUP_TEAMS } from '../src/data/worldCupTeams.js';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -15,6 +16,14 @@ function staticInputs() {
 }
 
 describe('seed-static', () => {
+  it('defines presentation metadata for all 48 qualified teams', () => {
+    expect(WORLD_CUP_TEAMS).toHaveLength(48);
+    expect(WORLD_CUP_TEAMS.find((team) => team.code === 'RSA')).toMatchObject({
+      displayName: 'Sudáfrica',
+      flag: '🇿🇦',
+    });
+  });
+
   it('parses the complete openfootball WC2026 static dataset', () => {
     const data = parseOpenFootball(staticInputs());
 
@@ -49,6 +58,12 @@ describe('seed-static', () => {
       expect(db.prepare('SELECT COUNT(*) AS count FROM fixtures').get().count).toBe(104);
       expect(db.prepare('SELECT COUNT(*) AS count FROM fixtures WHERE is_tbd = 1').get().count).toBe(32);
       expect(db.prepare('SELECT COUNT(*) AS count FROM fetch_log').get().count).toBe(0);
+      expect(db.prepare(`
+        SELECT ln.name
+        FROM teams t
+        JOIN localized_names ln ON ln.entity_id = t.id AND ln.entity_type = 'team' AND ln.locale = 'es-MX'
+        WHERE t.fifa_code = 'RSA'
+      `).get().name).toBe('Sudáfrica');
     } finally {
       closeDb(db);
     }

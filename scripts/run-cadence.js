@@ -118,24 +118,41 @@ export async function runCadence(config) {
              f.venue,
              f.stage,
              f.status,
-             CASE WHEN f.is_tbd = 1 THEN COALESCE(f.tbd_home_label, 'TBD') ELSE ht.name END AS homeTeam,
-             CASE WHEN f.is_tbd = 1 THEN COALESCE(f.tbd_away_label, 'TBD') ELSE at.name END AS awayTeam
+             CASE WHEN f.is_tbd = 1 THEN COALESCE(f.tbd_home_label, 'TBD') ELSE COALESCE(hln.name, ht.name) END AS homeTeam,
+             CASE WHEN f.is_tbd = 1 THEN COALESCE(f.tbd_away_label, 'TBD') ELSE COALESCE(aln.name, at.name) END AS awayTeam,
+             CASE WHEN f.is_tbd = 1 THEN NULL ELSE ht.fifa_code END AS homeTeamCode,
+             CASE WHEN f.is_tbd = 1 THEN NULL ELSE at.fifa_code END AS awayTeamCode
       FROM fixtures f
       JOIN teams ht ON ht.id = f.home_team_id
       JOIN teams at ON at.id = f.away_team_id
+      LEFT JOIN localized_names hln ON hln.entity_type = 'team' AND hln.entity_id = ht.id AND hln.locale = 'es-MX'
+      LEFT JOIN localized_names aln ON aln.entity_type = 'team' AND aln.entity_id = at.id AND aln.locale = 'es-MX'
       ORDER BY f.kickoff_utc, f.match_number, f.id
+    `).all();
+
+    const allTeams = db.prepare(`
+      SELECT COALESCE(ln.name, t.name) AS name,
+             t.fifa_code AS code
+      FROM teams t
+      LEFT JOIN localized_names ln ON ln.entity_type = 'team' AND ln.entity_id = t.id AND ln.locale = 'es-MX'
+      WHERE t.id != 0 AND t.fifa_code != 'TBD'
+      ORDER BY COALESCE(ln.name, t.name)
     `).all();
 
     const allArticles = db.prepare(`
       SELECT a.fixture_id AS fixtureId,
              a.article_type AS articleType,
              a.content_json,
-             ht.name AS homeTeam,
-             at.name AS awayTeam
+             COALESCE(hln.name, ht.name) AS homeTeam,
+             COALESCE(aln.name, at.name) AS awayTeam,
+             ht.fifa_code AS homeTeamCode,
+             at.fifa_code AS awayTeamCode
       FROM articles a
       JOIN fixtures f ON f.id = a.fixture_id
       JOIN teams ht ON ht.id = f.home_team_id
       JOIN teams at ON at.id = f.away_team_id
+      LEFT JOIN localized_names hln ON hln.entity_type = 'team' AND hln.entity_id = ht.id AND hln.locale = 'es-MX'
+      LEFT JOIN localized_names aln ON aln.entity_type = 'team' AND aln.entity_id = at.id AND aln.locale = 'es-MX'
       WHERE a.content_json IS NOT NULL
     `).all();
 
@@ -145,10 +162,12 @@ export async function runCadence(config) {
         articleType: row.articleType,
         homeTeam: row.homeTeam,
         awayTeam: row.awayTeam,
+        homeTeamCode: row.homeTeamCode,
+        awayTeamCode: row.awayTeamCode,
         contentJson: JSON.parse(row.content_json),
       }));
 
-      const slugs = buildSite({ fixtures: allFixtures, articles, siteBaseUrl, outputDir, affiliateUrls });
+      const slugs = buildSite({ fixtures: allFixtures, teams: allTeams, articles, siteBaseUrl, outputDir, affiliateUrls });
       console.log(`[cadence] Site built: ${slugs.length} match pages → ${outputDir}/`);
     } else {
       console.log('[cadence] No fixtures; skipping site build');

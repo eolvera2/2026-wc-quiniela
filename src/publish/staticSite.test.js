@@ -3,6 +3,7 @@ import { mkdtempSync, rmSync, readFileSync, existsSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { buildMatchSlug, buildSlug, buildSite } from './staticSite.js';
+import { WORLD_CUP_TEAMS } from '../data/worldCupTeams.js';
 
 const AFFILIATE_URLS = {
   caliente: 'https://caliente.mx/ref/TEST',
@@ -28,7 +29,9 @@ const SAMPLE_FIXTURE = {
   fixtureId: 1,
   matchNumber: 1,
   homeTeam: 'México',
-  awayTeam: 'Alemania',
+  awayTeam: 'Sudáfrica',
+  homeTeamCode: 'MEX',
+  awayTeamCode: 'RSA',
   kickoffUtc: '2026-06-11T18:00:00Z',
   venue: 'Estadio Azteca',
   stage: 'group',
@@ -120,7 +123,8 @@ describe('publish/staticSite', () => {
     });
     const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
     expect(index).toContain('fixture-1-fecha-por-confirmar-mexico-vs-alemania.html');
-    expect(index).toContain('México vs Alemania');
+    expect(index).toContain('México');
+    expect(index).toContain('Alemania');
   });
 
   it('buildSite writes sitemap.xml with SITE_BASE_URL in URLs', () => {
@@ -141,6 +145,7 @@ describe('publish/staticSite', () => {
     const outDir = join(tmpDir, 'dist');
     buildSite({
       fixtures: [SAMPLE_FIXTURE],
+      teams: WORLD_CUP_TEAMS.map((team) => ({ name: team.displayName, code: team.code })),
       articles: [],
       siteBaseUrl: 'https://example.com',
       outputDir: outDir,
@@ -152,13 +157,49 @@ describe('publish/staticSite', () => {
     expect(index).toContain('class="date-tabs');
     expect(index).toContain('class="match-card');
     expect(index).toContain('id="equipos"');
+    expect(index).toContain('href="index.html#equipo-mexico"');
+    expect(index).toContain('id="equipo-mexico"');
 
-    const match = readFileSync(join(outDir, 'partido-1-2026-06-11-mexico-vs-alemania.html'), 'utf-8');
+    const match = readFileSync(join(outDir, 'partido-1-2026-06-11-mexico-vs-sudafrica.html'), 'utf-8');
     expect(match).toContain('"@type":"SportsEvent"');
     expect(match).toContain('class="hero-match');
     expect(match).toContain('Pronóstico y momios');
     expect(match).toContain('Próximamente: actualizaremos esta sección');
     expect(match).toContain('Tu quiniela');
+  });
+
+  it('renders Spanish country names, flags, and exactly 48 non-placeholder teams', () => {
+    const outDir = join(tmpDir, 'dist');
+    buildSite({
+      fixtures: [
+        SAMPLE_FIXTURE,
+        {
+          fixtureId: 99,
+          matchNumber: 99,
+          homeTeam: '1A',
+          awayTeam: '#A/B/C/D/F',
+          kickoffUtc: '2026-07-01T18:00:00Z',
+          stage: 'knockout',
+          status: 'tbd',
+        },
+      ],
+      teams: WORLD_CUP_TEAMS.map((team) => ({ name: team.displayName, code: team.code })),
+      articles: [],
+      siteBaseUrl: 'https://example.com',
+      outputDir: outDir,
+      affiliateUrls: AFFILIATE_URLS,
+    });
+
+    const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
+    expect(index).toContain('🇲🇽');
+    expect(index).toContain('México');
+    expect(index).toContain('🇿🇦');
+    expect(index).toContain('Sudáfrica');
+    expect(index).not.toContain('South Africa');
+    const teamsSection = index.slice(index.indexOf('id="equipos"'), index.indexOf('</section>', index.indexOf('id="equipos"')));
+    expect(index).not.toContain('data-team-code="">1A');
+    expect(teamsSection).not.toContain('#A/B/C/D/F</span>');
+    expect((teamsSection.match(/class="team-pill"/g) || []).length).toBe(48);
   });
 
   it('buildSite returns array of { fixtureId, articleType, slug } objects', () => {

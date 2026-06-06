@@ -12,6 +12,7 @@ import { join } from 'node:path';
 import { injectAffiliateLinks } from './affiliateInjector.js';
 import { DISCLAIMER_FOOTER } from '../generate/prompt.js';
 import { generateSitemap } from './sitemap.js';
+import { decorateTeam, isPlaceholderTeamName, teamAnchorId } from '../data/worldCupTeams.js';
 
 /**
  * Builds a URL-safe slug from article type and team names.
@@ -57,11 +58,14 @@ export function buildMatchSlug({ fixtureId, matchNumber, homeTeam, awayTeam, kic
  *     matchNumber?: number|null,
  *     homeTeam: string,
  *     awayTeam: string,
+ *     homeTeamCode?: string,
+ *     awayTeamCode?: string,
  *     kickoffUtc?: string,
  *     venue?: string,
  *     stage?: string,
  *     status?: string,
  *   }>,
+ *   teams?: Array<{ name: string, code?: string, flag?: string }>,
  *   articles: Array<{
  *     fixtureId: number,
  *     articleType: string,
@@ -75,12 +79,13 @@ export function buildMatchSlug({ fixtureId, matchNumber, homeTeam, awayTeam, kic
  * }} params
  * @returns {Array<{ fixtureId: number, articleType: string, slug: string }>}
  */
-export function buildSite({ fixtures: providedFixtures, articles, siteBaseUrl, outputDir = 'dist', affiliateUrls }) {
+export function buildSite({ fixtures: providedFixtures, teams: providedTeams, articles, siteBaseUrl, outputDir = 'dist', affiliateUrls }) {
   // Ensure output directory exists
   mkdirSync(outputDir, { recursive: true });
 
   const slugs = [];
   const fixtures = providedFixtures || deriveFixturesFromArticles(articles);
+  const teams = providedTeams || deriveTeamsFromFixtures(fixtures);
   const articlesByFixture = groupArticlesByFixture(articles);
 
   for (const fixture of fixtures) {
@@ -110,7 +115,7 @@ export function buildSite({ fixtures: providedFixtures, articles, siteBaseUrl, o
   }
 
   // Write index page
-  const indexHtml = renderIndexPage({ fixtures, slugs, siteBaseUrl });
+  const indexHtml = renderIndexPage({ fixtures, teams, slugs, siteBaseUrl });
   writeFileSync(join(outputDir, 'index.html'), indexHtml, 'utf-8');
 
   // Write sitemap.xml
@@ -180,6 +185,8 @@ function deriveFixturesFromArticles(articles) {
         matchNumber: article.matchNumber || null,
         homeTeam: article.homeTeam,
         awayTeam: article.awayTeam,
+        homeTeamCode: article.homeTeamCode || null,
+        awayTeamCode: article.awayTeamCode || null,
         kickoffUtc: article.kickoffUtc || null,
         venue: article.venue || null,
         stage: article.stage || null,
@@ -188,6 +195,22 @@ function deriveFixturesFromArticles(articles) {
     }
   }
   return [...seen.values()];
+}
+
+function deriveTeamsFromFixtures(fixtures) {
+  const teams = new Map();
+  for (const fixture of fixtures) {
+    [
+      { name: fixture.homeTeam, code: fixture.homeTeamCode, flag: fixture.homeTeamFlag },
+      { name: fixture.awayTeam, code: fixture.awayTeamCode, flag: fixture.awayTeamFlag },
+    ].forEach((team) => {
+      const decorated = decorateTeam(team);
+      if (!decorated.isPlaceholder && !isPlaceholderTeamName(decorated.name)) {
+        teams.set(decorated.code || decorated.name, decorated);
+      }
+    });
+  }
+  return [...teams.values()].sort((a, b) => a.name.localeCompare(b.name, 'es'));
 }
 
 function groupArticlesByFixture(articles) {
@@ -200,10 +223,12 @@ function groupArticlesByFixture(articles) {
 }
 
 function renderMatchHeader(fixture) {
+  const homeTeam = fixtureTeam(fixture, 'home');
+  const awayTeam = fixtureTeam(fixture, 'away');
   return `<header class="match-hero hero-match">
     <div class="container-wide hero-match__inner">
       <p class="eyebrow">${escapeHtml(stageLabel(fixture.stage))} · ${escapeHtml(statusLabel(fixture.status))}</p>
-      <h1>${escapeHtml(fixture.homeTeam)} <span>vs</span> ${escapeHtml(fixture.awayTeam)}</h1>
+      <h1>${renderTeamName(homeTeam)} <span class="versus">vs</span> ${renderTeamName(awayTeam)}</h1>
       <div class="hero-match__meta">
         <span class="numeric">${escapeHtml(formatDateTime(fixture.kickoffUtc))}</span>
         <span>${escapeHtml(fixture.venue || 'Sede por confirmar')}</span>
@@ -217,11 +242,13 @@ function renderMatchHeader(fixture) {
 }
 
 function renderTeamSummaries(fixture) {
+  const homeTeam = fixtureTeam(fixture, 'home');
+  const awayTeam = fixtureTeam(fixture, 'away');
   return `<section class="team-summaries container">
     <h2>Resumen de equipos</h2>
     <div class="team-summaries__grid">
-      <article class="team-card"><span class="team-chip">${escapeHtml(fixture.homeTeam)}</span><p>Resumen del equipo próximamente con grupo, forma reciente y claves para tu quiniela.</p></article>
-      <article class="team-card"><span class="team-chip">${escapeHtml(fixture.awayTeam)}</span><p>Resumen del equipo próximamente con grupo, forma reciente y claves para tu quiniela.</p></article>
+      <article class="team-card"><span class="team-chip">${renderTeamName(homeTeam)}</span><p>Resumen del equipo próximamente con grupo, forma reciente y claves para tu quiniela.</p></article>
+      <article class="team-card"><span class="team-chip">${renderTeamName(awayTeam)}</span><p>Resumen del equipo próximamente con grupo, forma reciente y claves para tu quiniela.</p></article>
     </div>
   </section>`;
 }
@@ -241,22 +268,26 @@ function renderSectionList({ fixture, fixtureArticles, affiliateUrls }) {
 }
 
 function renderPredictionPanel(fixture) {
+  const homeTeam = fixtureTeam(fixture, 'home');
+  const awayTeam = fixtureTeam(fixture, 'away');
   return `<section class="prediction-panel container" aria-label="Panel de quiniela">
     <h2>Tu quiniela</h2>
     <p>Sin apuestas, solo diversión. Elige tu pronóstico antes del kickoff.</p>
     <div class="prediction-options" role="group" aria-label="Pronóstico ${escapeHtml(fixture.homeTeam)} vs ${escapeHtml(fixture.awayTeam)}">
-      <button type="button">1 ${escapeHtml(fixture.homeTeam)}</button>
+      <button type="button">1 ${renderTeamName(homeTeam)}</button>
       <button type="button">X Empate</button>
-      <button type="button">2 ${escapeHtml(fixture.awayTeam)}</button>
+      <button type="button">2 ${renderTeamName(awayTeam)}</button>
     </div>
   </section>`;
 }
 
-function renderIndexPage({ fixtures, slugs }) {
+function renderIndexPage({ fixtures, teams, slugs }) {
   const nextFixture = fixtures[0];
   const dateTabs = renderDateTabs(fixtures);
   const calendar = renderCalendarSections(fixtures, slugs);
-  const teamsShortcut = renderTeamsShortcut(fixtures);
+  const teamsShortcut = renderTeamsShortcut(teams);
+  const nextHome = nextFixture ? fixtureTeam(nextFixture, 'home') : null;
+  const nextAway = nextFixture ? fixtureTeam(nextFixture, 'away') : null;
 
   return `<!DOCTYPE html>
 <html lang="es">
@@ -274,7 +305,7 @@ function renderIndexPage({ fixtures, slugs }) {
         <p class="eyebrow">Calendario Mundial 2026</p>
         <h1>Pronostica los partidos del Mundial con tus amigos</h1>
         <p class="hero-copy">Sin apuestas, solo diversión: consulta fechas, sedes, grupos y previas partido por partido.</p>
-        ${nextFixture ? `<div class="hero-match__meta"><span>Próximo partido</span><strong>${escapeHtml(nextFixture.homeTeam)} vs ${escapeHtml(nextFixture.awayTeam)}</strong><span class="numeric">${escapeHtml(formatDateTime(nextFixture.kickoffUtc))}</span></div>` : ''}
+        ${nextFixture ? `<div class="hero-match__meta"><span>Próximo partido</span><strong>${renderTeamName(nextHome)} vs ${renderTeamName(nextAway)}</strong><span class="numeric">${escapeHtml(formatDateTime(nextFixture.kickoffUtc))}</span></div>` : ''}
         <div class="hero-match__actions"><a class="button button--primary" href="#partidos">Ver partidos</a><a class="button button--secondary" href="#equipos">Ver equipos</a></div>
       </div>
     </section>
@@ -319,11 +350,11 @@ function renderCalendarSections(fixtures, slugs) {
   </section>`).join('\n');
 }
 
-function renderTeamsShortcut(fixtures) {
-  const teamNames = [...new Set(fixtures.flatMap((fixture) => [fixture.homeTeam, fixture.awayTeam]).filter(Boolean))]
-    .filter((name) => name !== 'TBD')
-    .sort((a, b) => a.localeCompare(b, 'es'))
-    .slice(0, 48);
+function renderTeamsShortcut(teams) {
+  const teamList = teams
+    .map((team) => decorateTeam(team))
+    .filter((team) => !team.isPlaceholder && !isPlaceholderTeamName(team.name))
+    .sort((a, b) => a.name.localeCompare(b.name, 'es'));
   return `<section id="equipos" class="teams-shortcut container-wide">
     <div class="section-heading">
       <p class="eyebrow">Equipos</p>
@@ -331,16 +362,18 @@ function renderTeamsShortcut(fixtures) {
       <p>La base está precargada desde datos públicos; los perfiles completos se llenarán conforme haya información confiable.</p>
     </div>
     <div class="team-pill-grid">
-      ${teamNames.map((name) => `<span class="team-pill">${escapeHtml(name)}</span>`).join('\n')}
+      ${teamList.map((team) => `<a id="${escapeHtml(team.anchorId)}" class="team-pill" href="#${escapeHtml(team.anchorId)}" data-team-code="${escapeHtml(team.code || '')}">${renderTeamName(team)}</a>`).join('\n')}
     </div>
   </section>`;
 }
 
 function renderMatchCard(fixture, slug) {
+  const homeTeam = fixtureTeam(fixture, 'home');
+  const awayTeam = fixtureTeam(fixture, 'away');
   return `<article class="match-card match-card--${escapeHtml(fixture.status || 'upcoming')}">
     <div class="match-card__top"><span class="status-pill">${escapeHtml(statusLabel(fixture.status))}</span><span>${escapeHtml(stageLabel(fixture.stage))}</span></div>
     <p class="match-card__date numeric">${escapeHtml(formatDateTime(fixture.kickoffUtc))}</p>
-    <h3>${escapeHtml(fixture.homeTeam)} <span>vs</span> ${escapeHtml(fixture.awayTeam)}</h3>
+    <h3>${renderTeamName(homeTeam)} <span class="versus">vs</span> ${renderTeamName(awayTeam)}</h3>
     <p class="match-card__venue">${escapeHtml(fixture.venue || 'Sede por confirmar')}</p>
     <a class="match-card__cta" href="${escapeHtml(slug)}.html">Ver pronóstico</a>
   </article>`;
@@ -353,7 +386,7 @@ function renderSiteHeader() {
       <a href="index.html">Inicio</a>
       <a href="index.html#partidos">Partidos</a>
       <a href="index.html#equipos">Equipos</a>
-      <a href="index.html#partidos">México</a>
+      <a href="index.html#equipo-mexico">México</a>
     </nav>
   </header>`;
 }
@@ -380,6 +413,21 @@ function buildSportsEventJsonLd(fixture) {
     homeTeam: { '@type': 'SportsTeam', name: fixture.homeTeam },
     awayTeam: { '@type': 'SportsTeam', name: fixture.awayTeam },
   };
+}
+
+function fixtureTeam(fixture, side) {
+  return decorateTeam({
+    name: fixture[`${side}Team`],
+    code: fixture[`${side}TeamCode`],
+    flag: fixture[`${side}TeamFlag`],
+  });
+}
+
+function renderTeamName(team) {
+  const flag = team?.flag && !team.isPlaceholder
+    ? `<span class="team-flag" aria-hidden="true">${escapeHtml(team.flag)}</span> `
+    : '';
+  return `${flag}<span class="team-name">${escapeHtml(team?.name || '')}</span>`;
 }
 
 function buildBreadcrumbJsonLd({ siteBaseUrl, slug, title }) {
@@ -504,7 +552,7 @@ a { color: var(--text-link); }
 .eyebrow, .section-kicker, .status-pill { color: var(--color-gold-300); font-size: var(--step--2); font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
 h1, h2, h3 { font-family: var(--font-display); line-height: 1.08; }
 h1 { font-size: var(--step-5); margin: var(--space-s) 0; text-transform: uppercase; letter-spacing: -.04em; }
-h1 span, h3 span { color: var(--color-gold-400); }
+h1 .versus, h3 .versus { color: var(--color-gold-400); }
 h2 { font-size: var(--step-2); }
 .hero-copy { max-width: 48rem; color: var(--text-secondary); }
 .hero-match__meta, .hero-match__actions { display: flex; flex-wrap: wrap; gap: var(--space-s); align-items: center; color: var(--text-secondary); }
@@ -534,7 +582,9 @@ h2 { font-size: var(--step-2); }
 .team-chip { display: inline-flex; padding: .4rem .75rem; border-radius: var(--radius-pill); background: var(--surface-card-strong); font-weight: 900; }
 .teams-shortcut { padding-block: var(--space-l); }
 .team-pill-grid { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
-.team-pill { display: inline-flex; padding: .5rem .8rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); background: var(--surface-card); font-weight: 800; }
+.team-pill { display: inline-flex; padding: .5rem .8rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); background: var(--surface-card); color: var(--text-primary); font-weight: 800; text-decoration: none; }
+.team-pill:target { background: var(--color-gold-400); color: var(--color-navy-950); }
+.team-flag { display: inline-block; margin-right: .25rem; }
 .match-article { color: var(--text-secondary); }
 .match-article h2 { color: var(--text-primary); }
 .coming-soon { border-left: 4px solid var(--color-gold-400); padding-left: var(--space-s); }
