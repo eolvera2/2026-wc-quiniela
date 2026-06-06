@@ -234,7 +234,7 @@ function renderMatchHeader(fixture) {
         <span>${escapeHtml(fixture.venue || 'Sede por confirmar')}</span>
       </div>
       <div class="hero-match__actions">
-        <a class="button button--primary" href="#pronostico_momios">Ver pronóstico</a>
+        <a class="button button--primary" href="#pronostico_momios">Ver datos</a>
         <a class="button button--secondary" href="index.html">Volver al calendario</a>
       </div>
     </div>
@@ -377,7 +377,7 @@ function renderMatchCard(fixture, slug) {
     <p class="match-card__date numeric">${escapeHtml(formatDateTime(fixture.kickoffUtc))}</p>
     <h3>${renderTeamName(homeTeam)} <span class="versus">vs</span> ${renderTeamName(awayTeam)}</h3>
     <p class="match-card__venue">${escapeHtml(fixture.venue || 'Sede por confirmar')}</p>
-    <a class="match-card__cta" href="${escapeHtml(slug)}.html">Ver pronóstico</a>
+    <a class="match-card__cta" href="${escapeHtml(slug)}.html">Ver datos</a>
   </article>`;
 }
 
@@ -570,12 +570,12 @@ h2 { font-size: var(--step-2); }
 .button, .match-card__cta { display: inline-flex; min-height: 40px; align-items: center; justify-content: center; padding: .55rem .85rem; border-radius: var(--radius-pill); font-size: var(--step--1); font-weight: 900; text-decoration: none; }
 .button--primary, .match-card__cta { background: var(--action-primary-bg); color: var(--action-primary-text); }
 .button--secondary { border: 1px solid rgba(255,255,255,.35); color: var(--text-primary); }
-.date-tabs { display: flex; gap: .65rem; overflow-x: auto; scroll-snap-type: x proximity; padding: .25rem 0 .85rem; }
-.date-tabs { position: sticky; top: 3.85rem; z-index: 9; background: rgba(2, 15, 42, .92); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border-subtle); }
-.date-tab { min-width: 5.8rem; scroll-snap-align: start; padding: .55rem .75rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); text-align: center; text-decoration: none; background: var(--surface-card); }
+.date-tabs { display: flex; gap: .55rem; overflow-x: auto; scroll-snap-type: x proximity; padding: 0 0 .55rem; }
+.date-tabs { position: sticky; top: 3.45rem; z-index: 9; background: rgba(2, 15, 42, .92); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border-subtle); }
+.date-tab { min-width: 5.15rem; scroll-snap-align: start; padding: .38rem .62rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); text-align: center; text-decoration: none; background: var(--surface-card); }
 .date-tab.is-active { background: var(--color-gold-400); color: var(--color-navy-950); }
 .date-tab__day { display: block; font-size: var(--step--2); text-transform: uppercase; }
-.date-tab__date { display: block; font-size: var(--step-0); font-weight: 900; }
+.date-tab__date { display: block; font-size: var(--step--1); font-weight: 900; }
 .calendar { padding-block: var(--space-l); }
 .filter-status { display: none; align-items: center; gap: var(--space-xs); margin-bottom: var(--space-m); padding: var(--space-s); border: 1px solid var(--border-subtle); border-radius: var(--radius-l); background: var(--surface-card); }
 .filter-status.is-active { display: flex; }
