@@ -1,7 +1,7 @@
 {
   "navigationFallback": {
     "rewrite": "/index.html",
-    "exclude": ["*.css", "*.js", "*.png", "*.jpg", "*.svg", "*.xml", "*.ico"]
+    "exclude": ["*.css", "*.js", "*.png", "*.jpg", "*.jpeg", "*.svg", "*.webp", "*.avif", "*.xml", "*.ico", "*.woff", "*.woff2", "*.webmanifest"]
   },
   "mimeTypes": {
     ".xml": "application/xml"

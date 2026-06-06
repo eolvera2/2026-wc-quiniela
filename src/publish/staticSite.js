@@ -7,12 +7,15 @@
  * Reference: docs/plans/2026-06-01-phase2-live-service-integration-implementation.md Task 9/12
  */
 
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { injectAffiliateLinks } from './affiliateInjector.js';
 import { DISCLAIMER_FOOTER } from '../generate/prompt.js';
 import { generateSitemap } from './sitemap.js';
 import { decorateTeam, isPlaceholderTeamName, teamAnchorId } from '../data/worldCupTeams.js';
+
+const SITE_ASSET_DIR = 'assets';
+const BRAND_MARK_FILENAME = 'quiniela-2026-mark.svg';
 
 /**
  * Builds a URL-safe slug from article type and team names.
@@ -82,6 +85,7 @@ export function buildMatchSlug({ fixtureId, matchNumber, homeTeam, awayTeam, kic
 export function buildSite({ fixtures: providedFixtures, teams: providedTeams, articles, siteBaseUrl, outputDir = 'dist', affiliateUrls }) {
   // Ensure output directory exists
   mkdirSync(outputDir, { recursive: true });
+  copyStaticAssets(outputDir);
 
   const slugs = [];
   const fixtures = providedFixtures || deriveFixturesFromArticles(articles);
@@ -112,6 +116,17 @@ export function buildSite({ fixtures: providedFixtures, teams: providedTeams, ar
 
     writeFileSync(join(outputDir, `${slug}.html`), pageHtml, 'utf-8');
     slugs.push({ fixtureId: fixture.fixtureId, articleType: 'match_page', slug });
+  }
+
+  function copyStaticAssets(outputDir) {
+    const assetDir = join(outputDir, SITE_ASSET_DIR);
+    mkdirSync(assetDir, { recursive: true });
+    copyFileSync(new URL(`./assets/${BRAND_MARK_FILENAME}`, import.meta.url), join(assetDir, BRAND_MARK_FILENAME));
+
+    const staticWebAppConfig = new URL('../../staticwebapp.config.json', import.meta.url);
+    if (existsSync(staticWebAppConfig)) {
+      copyFileSync(staticWebAppConfig, join(outputDir, 'staticwebapp.config.json'));
+    }
   }
 
   // Write index page
@@ -156,15 +171,17 @@ function renderArticlePage({ title, metaDescription, bodyHtml, siteBaseUrl, slug
   <meta name="description" content="${escapeHtml(metaDescription)}">
   <title>${escapeHtml(title)}</title>
   <link rel="canonical" href="${escapeHtml(siteBaseUrl)}/${escapeHtml(slug)}.html">
+  <script>document.documentElement.classList.add('js');</script>
   <style>${GLOBAL_CSS}</style>
   ${jsonLd}
 </head>
-<body>
+<body data-active-theme="navy">
   ${renderSiteHeader()}
   <main>
     ${bodyHtml}
   </main>
   ${renderSiteFooter()}
+  <script>${SITE_CHROME_SCRIPT}</script>
 </body>
 </html>`;
 }
@@ -225,7 +242,8 @@ function groupArticlesByFixture(articles) {
 function renderMatchHeader(fixture) {
   const homeTeam = fixtureTeam(fixture, 'home');
   const awayTeam = fixtureTeam(fixture, 'away');
-  return `<header class="match-hero hero-match">
+  return `<header class="match-hero hero-match reveal theme-section" data-theme="jungle">
+    ${renderDigitalBalls()}
     <div class="container-wide hero-match__inner">
       <p class="eyebrow">${escapeHtml(stageLabel(fixture.stage))} · ${escapeHtml(statusLabel(fixture.status))}</p>
       <h1>${renderTeamName(homeTeam)} <span class="versus">vs</span> ${renderTeamName(awayTeam)}</h1>
@@ -244,7 +262,7 @@ function renderMatchHeader(fixture) {
 function renderTeamSummaries(fixture) {
   const homeTeam = fixtureTeam(fixture, 'home');
   const awayTeam = fixtureTeam(fixture, 'away');
-  return `<section class="team-summaries container">
+  return `<section class="team-summaries container reveal theme-section" data-theme="navy">
     <h2>Resumen de equipos</h2>
     <div class="team-summaries__grid">
       <article class="team-card"><span class="team-chip">${renderTeamName(homeTeam)}</span><p>Resumen del equipo próximamente con grupo, forma reciente y claves para tu quiniela.</p></article>
@@ -260,7 +278,7 @@ function renderSectionList({ fixture, fixtureArticles, affiliateUrls }) {
       const isPlaceholder = !article?.contentJson?.analisis_tactico_html;
       const content = article?.contentJson?.analisis_tactico_html
         || `<section class="coming-soon"><h2>${escapeHtml(label)}</h2><p>Próximamente: actualizaremos esta sección de ${escapeHtml(fixture.homeTeam)} vs ${escapeHtml(fixture.awayTeam)} cuando tengamos datos confiables.</p></section>`;
-      return `<section id="${escapeHtml(sectionType)}" class="match-section container" data-section="${escapeHtml(sectionType)}">
+      return `<section id="${escapeHtml(sectionType)}" class="match-section container reveal" data-section="${escapeHtml(sectionType)}">
         <p class="section-kicker">${escapeHtml(label)}</p>
         <div class="match-article">${isPlaceholder ? content : injectAffiliateLinks(content, affiliateUrls)}</div>
       </section>`;
@@ -271,7 +289,7 @@ function renderSectionList({ fixture, fixtureArticles, affiliateUrls }) {
 function renderPredictionPanel(fixture) {
   const homeTeam = fixtureTeam(fixture, 'home');
   const awayTeam = fixtureTeam(fixture, 'away');
-  return `<section class="prediction-panel container" aria-label="Panel de quiniela">
+  return `<section class="prediction-panel container reveal theme-section" data-theme="festival" aria-label="Panel de quiniela">
     <h2>Tu quiniela</h2>
     <p>Sin apuestas, solo diversión. Elige tu pronóstico antes del kickoff.</p>
     <div class="prediction-options" role="group" aria-label="Pronóstico ${escapeHtml(fixture.homeTeam)} vs ${escapeHtml(fixture.awayTeam)}">
@@ -296,12 +314,14 @@ function renderIndexPage({ fixtures, teams, slugs }) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calendario Mundial 2026 — Quiniela y Pronósticos</title>
+  <script>document.documentElement.classList.add('js');</script>
   <style>${GLOBAL_CSS}</style>
 </head>
-<body>
+<body data-active-theme="navy">
   ${renderSiteHeader()}
   <main>
-    <section class="home-hero hero-match">
+    <section class="home-hero hero-match reveal theme-section" data-theme="navy">
+      ${renderDigitalBalls()}
       <div class="container-wide hero-match__inner">
         <p class="eyebrow">Calendario Mundial 2026</p>
         <h1>Pronostica los partidos del Mundial con tus amigos</h1>
@@ -311,7 +331,7 @@ function renderIndexPage({ fixtures, teams, slugs }) {
       </div>
     </section>
     ${dateTabs}
-    <section id="partidos" class="calendar container-wide">
+    <section id="partidos" class="calendar container-wide reveal theme-section" data-theme="jungle">
       <div class="section-heading">
         <p class="eyebrow">Partidos</p>
         <h2>Calendario de partidos</h2>
@@ -321,7 +341,7 @@ function renderIndexPage({ fixtures, teams, slugs }) {
     ${teamsShortcut}
   </main>
   ${renderSiteFooter()}
-  <script>${STICKY_HEADER_SCRIPT}</script>
+  <script>${SITE_CHROME_SCRIPT}</script>
   <script>${HOME_FILTER_SCRIPT}</script>
 </body>
 </html>`;
@@ -345,7 +365,7 @@ function renderCalendarSections(fixtures, slugs) {
     byDate.get(date).push({ fixture, slug: slugs[index]?.slug });
   });
 
-  return [...byDate.entries()].map(([date, rows]) => `<section id="fecha-${date}" class="calendar-day">
+  return [...byDate.entries()].map(([date, rows], index) => `<section id="fecha-${date}" class="calendar-day reveal" data-theme="${index % 2 === 0 ? 'jungle' : 'navy'}">
     <div class="round-divider">${escapeHtml(fullDate(date))}</div>
     <div class="match-grid">
       ${rows.map(({ fixture, slug }) => renderMatchCard(fixture, slug)).join('\n')}
@@ -358,7 +378,8 @@ function renderTeamsShortcut(teams) {
     .map((team) => decorateTeam(team))
     .filter((team) => !team.isPlaceholder && !isPlaceholderTeamName(team.name))
     .sort((a, b) => a.name.localeCompare(b.name, 'es'));
-  return `<section id="equipos" class="teams-shortcut container-wide">
+  return `<section id="equipos" class="teams-shortcut container-wide reveal theme-section" data-theme="festival">
+    ${renderDigitalBalls()}
     <div class="section-heading">
       <p class="eyebrow">Equipos</p>
       <h2>Selecciones en el calendario</h2>
@@ -384,7 +405,10 @@ function renderMatchCard(fixture, slug) {
 
 function renderSiteHeader() {
   return `<header class="site-header">
-    <a class="site-logo" href="index.html">Quiniela 2026</a>
+    <a class="site-logo" href="index.html" aria-label="Quiniela 2026 inicio">
+      <img class="site-logo__mark" src="${SITE_ASSET_DIR}/${BRAND_MARK_FILENAME}" alt="" width="40" height="40">
+      <span class="site-logo__text">Quiniela 2026</span>
+    </a>
     <nav aria-label="Navegación principal">
       <a href="index.html">Inicio</a>
       <a href="index.html#partidos">Partidos</a>
@@ -392,6 +416,10 @@ function renderSiteHeader() {
       <a href="index.html#equipo-mexico">México</a>
     </nav>
   </header>`;
+}
+
+function renderDigitalBalls() {
+  return `<span class="digital-ball digital-ball--left" aria-hidden="true"></span><span class="digital-ball digital-ball--right" aria-hidden="true"></span>`;
 }
 
 function renderSiteFooter() {
@@ -505,6 +533,15 @@ const GLOBAL_CSS = `
   --color-gold-300: #ffd166;
   --color-green-500: #16a34a;
   --color-red-600: #c8102e;
+  --color-jungle-950: #002018;
+  --color-jungle-900: #003020;
+  --color-jungle-800: #004030;
+  --color-jungle-700: #005040;
+  --color-jungle-600: #007050;
+  --color-turquoise-400: #00c6a3;
+  --color-jaguar-500: #d9942d;
+  --color-jaguar-300: #f4bd4f;
+  --color-lime-400: #d7ea1f;
   --color-white: #ffffff;
   --color-off-white: #f0f4ff;
   --color-neutral-300: #b7c3d7;
@@ -513,13 +550,18 @@ const GLOBAL_CSS = `
   --surface-raised: var(--color-navy-900);
   --surface-card: rgba(255, 255, 255, 0.08);
   --surface-card-strong: rgba(255, 255, 255, 0.14);
+  --surface-jungle: var(--color-jungle-950);
+  --surface-festival: linear-gradient(135deg, rgba(0, 48, 32, .96), rgba(7, 23, 51, .96));
   --text-primary: var(--color-white);
   --text-secondary: var(--color-neutral-300);
   --text-muted: var(--color-neutral-500);
   --text-link: var(--color-gold-400);
   --border-subtle: rgba(255, 255, 255, 0.14);
   --border-focus: var(--color-gold-400);
-  --action-primary-bg: var(--color-gold-400);
+  --accent-primary: var(--color-jaguar-300);
+  --accent-secondary: var(--color-turquoise-400);
+  --accent-electric: var(--color-lime-400);
+  --action-primary-bg: var(--accent-primary);
   --action-primary-text: var(--color-navy-950);
   --font-display: "Poppins", "Barlow Condensed", system-ui, sans-serif;
   --font-body: "Noto Sans", "Inter", "Segoe UI", system-ui, sans-serif;
@@ -542,39 +584,50 @@ const GLOBAL_CSS = `
   --radius-l: 1.25rem;
   --radius-pill: 999px;
   --shadow-card: 0 18px 60px rgba(0, 0, 0, 0.28);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --duration-med: 420ms;
+  --duration-slow: 900ms;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { margin: 0; background: radial-gradient(circle at top left, rgba(245,166,35,.18), transparent 32rem), var(--surface-base); color: var(--text-primary); font-family: var(--font-body); font-size: var(--step-0); line-height: 1.6; }
+body { margin: 0; background: radial-gradient(circle at top left, rgba(244,189,79,.2), transparent 32rem), radial-gradient(circle at 85% 10%, rgba(0,198,163,.14), transparent 28rem), var(--surface-base); color: var(--text-primary); font-family: var(--font-body); font-size: var(--step-0); line-height: 1.6; transition: background-color var(--duration-med) var(--ease-out-expo); }
+body[data-active-theme="jungle"] { background-color: var(--surface-jungle); }
+body[data-active-theme="festival"] { background-color: var(--color-jungle-900); }
 a { color: var(--text-link); }
 :focus-visible { outline: 3px solid var(--border-focus); outline-offset: 3px; }
 .container { width: min(100% - (var(--gutter) * 2), var(--container-content)); margin-inline: auto; }
 .container-wide { width: min(100% - (var(--gutter) * 2), var(--container-wide)); margin-inline: auto; }
-.site-header { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; gap: var(--space-s); padding: .65rem var(--gutter); background: rgba(2, 15, 42, .82); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border-subtle); }
-.site-logo { font-family: var(--font-display); font-weight: 900; text-transform: uppercase; text-decoration: none; color: var(--text-primary); letter-spacing: .08em; }
+.site-header { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; gap: var(--space-s); padding: .5rem var(--gutter); background: rgba(2, 15, 42, .76); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border-subtle); box-shadow: 0 10px 40px rgba(0,0,0,.18); transition: background var(--duration-med) var(--ease-out-expo), padding var(--duration-med) var(--ease-out-expo); }
+.site-header.is-scrolled { padding-block: .35rem; background: rgba(2, 15, 42, .94); }
+.site-logo { display: inline-flex; align-items: center; gap: .55rem; font-family: var(--font-display); font-weight: 900; text-transform: uppercase; text-decoration: none; color: var(--text-primary); letter-spacing: .08em; }
+.site-logo__mark { width: 2.5rem; height: 2.5rem; border-radius: .75rem; box-shadow: 0 0 0 1px rgba(255,255,255,.18), 0 10px 24px rgba(0,0,0,.25); }
+.site-logo__text { white-space: nowrap; }
 .site-header nav, .site-footer nav { display: flex; flex-wrap: wrap; gap: var(--space-s); }
 .site-header a, .site-footer a { color: var(--text-primary); text-decoration: none; font-weight: 700; }
-.hero-match { padding: var(--space-xl) 0; background: linear-gradient(135deg, rgba(16,35,74,.96), rgba(2,15,42,.92)); overflow: hidden; }
-.hero-match__inner { position: relative; padding: var(--space-xl); border: 1px solid var(--border-subtle); border-radius: var(--radius-l); background: var(--surface-card); box-shadow: var(--shadow-card); }
+.hero-match { position: relative; padding: var(--space-xl) 0; background: radial-gradient(circle at 15% 20%, rgba(0,198,163,.22), transparent 22rem), radial-gradient(circle at 85% 15%, rgba(244,189,79,.18), transparent 24rem), linear-gradient(135deg, rgba(0,48,32,.96), rgba(2,15,42,.94)); overflow: hidden; }
+.hero-match::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .22; background-image: radial-gradient(circle, rgba(244,189,79,.88) 0 .14rem, transparent .16rem); background-size: 2.6rem 2.6rem; mask-image: linear-gradient(115deg, transparent, #000 20%, transparent 70%); }
+.hero-match__inner { position: relative; z-index: 1; padding: var(--space-xl); border: 1px solid rgba(244,189,79,.24); border-radius: var(--radius-l); background: linear-gradient(135deg, rgba(255,255,255,.11), rgba(255,255,255,.05)); box-shadow: var(--shadow-card), inset 0 1px rgba(255,255,255,.1); overflow: hidden; }
+.hero-match__inner::after { content: ""; position: absolute; right: -4rem; bottom: -5rem; width: 16rem; height: 16rem; border-radius: 50%; background: radial-gradient(circle, rgba(215,234,31,.24), transparent 60%); pointer-events: none; }
 .home-hero { padding: clamp(1rem, 2vw, 2rem) 0; }
 .home-hero .hero-match__inner { padding: clamp(1.4rem, 3vw, 3rem); }
 .home-hero .eyebrow { margin: 0; }
 .home-hero h1 { max-width: 86rem; margin: .45rem 0 .65rem; font-size: clamp(2.35rem, 5.35vw, 4.65rem); line-height: 1.02; }
 .home-hero .hero-copy { margin: 0 0 .7rem; }
-.eyebrow, .section-kicker, .status-pill { color: var(--color-gold-300); font-size: var(--step--2); font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+.eyebrow, .section-kicker, .status-pill { color: var(--accent-primary); font-size: var(--step--2); font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
 h1, h2, h3 { font-family: var(--font-display); line-height: 1.08; }
 h1 { font-size: var(--step-5); margin: var(--space-s) 0; text-transform: uppercase; letter-spacing: -.04em; }
-h1 .versus, h3 .versus { color: var(--color-gold-400); }
+h1 .versus, h3 .versus { color: var(--accent-primary); }
 h2 { font-size: var(--step-2); }
 .hero-copy { max-width: 48rem; color: var(--text-secondary); }
 .hero-match__meta, .hero-match__actions { display: flex; flex-wrap: wrap; gap: var(--space-s); align-items: center; color: var(--text-secondary); }
-.button, .match-card__cta { display: inline-flex; min-height: 40px; align-items: center; justify-content: center; padding: .55rem .85rem; border-radius: var(--radius-pill); font-size: var(--step--1); font-weight: 900; text-decoration: none; }
+.button, .match-card__cta { display: inline-flex; min-height: 40px; align-items: center; justify-content: center; padding: .55rem .85rem; border-radius: var(--radius-pill); font-size: var(--step--1); font-weight: 900; text-decoration: none; transition: transform var(--duration-med) var(--ease-out-expo), box-shadow var(--duration-med) var(--ease-out-expo), background var(--duration-med) var(--ease-out-expo); }
+.button:hover, .match-card__cta:hover { transform: translateY(-1px); box-shadow: 0 10px 26px rgba(244,189,79,.22); }
 .button--primary, .match-card__cta { background: var(--action-primary-bg); color: var(--action-primary-text); }
 .button--secondary { border: 1px solid rgba(255,255,255,.35); color: var(--text-primary); }
 .date-tabs { display: flex; gap: .55rem; overflow-x: auto; scroll-snap-type: x proximity; padding: .35rem 0 .55rem; }
-.date-tabs { position: sticky; top: var(--site-header-sticky-offset, 3rem); z-index: 9; background: rgba(2, 15, 42, .92); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border-subtle); box-shadow: 0 0 0 100vmax rgba(2, 15, 42, .92); clip-path: inset(0 -100vmax); }
-.date-tab { min-width: 5.15rem; scroll-snap-align: start; padding: .38rem .62rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); text-align: center; text-decoration: none; background: var(--surface-card); }
-.date-tab.is-active { background: var(--color-gold-400); color: var(--color-navy-950); }
+.date-tabs { position: sticky; top: var(--site-header-sticky-offset, 3rem); z-index: 9; background: rgba(2, 15, 42, .94); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border-subtle); box-shadow: 0 0 0 100vmax rgba(2, 15, 42, .94); clip-path: inset(0 -100vmax); }
+.date-tab { min-width: 5.15rem; scroll-snap-align: start; padding: .38rem .62rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); text-align: center; text-decoration: none; background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.06)); }
+.date-tab.is-active { background: var(--accent-primary); color: var(--color-navy-950); }
 .date-tab__day { display: block; font-size: var(--step--2); text-transform: uppercase; }
 .date-tab__date { display: block; font-size: var(--step--1); font-weight: 900; }
 .calendar { padding-block: var(--space-l); }
@@ -583,12 +636,15 @@ h2 { font-size: var(--step-2); }
 .filter-status button { min-height: 40px; padding: .45rem .8rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); background: var(--surface-card-strong); color: var(--text-primary); font-size: var(--step--1); font-weight: 900; }
 .calendar.is-filtered .match-card[hidden], .calendar.is-filtered .calendar-day[hidden] { display: none; }
 .section-heading { margin-bottom: var(--space-m); }
-.round-divider { margin: var(--space-l) 0 var(--space-s); padding: .6rem 1rem; border-radius: var(--radius-pill); background: rgba(245,166,35,.15); color: var(--color-gold-300); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+.round-divider { margin: var(--space-l) 0 var(--space-s); padding: .6rem 1rem; border-radius: var(--radius-pill); background: linear-gradient(90deg, rgba(244,189,79,.18), rgba(0,198,163,.12)); color: var(--accent-primary); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
 .match-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-m); }
 @media (min-width: 768px) { .match-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 992px) { .match-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 .match-card, .team-card, .prediction-panel, .match-section { border: 1px solid var(--border-subtle); border-radius: var(--radius-l); background: var(--surface-card); box-shadow: var(--shadow-card); }
-.match-card { padding: var(--space-m); }
+.match-card { position: relative; overflow: hidden; padding: var(--space-m); transition: transform var(--duration-med) var(--ease-out-expo), border-color var(--duration-med) var(--ease-out-expo), background var(--duration-med) var(--ease-out-expo); }
+.match-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: .28rem; background: linear-gradient(var(--accent-primary), var(--accent-secondary)); }
+.match-card::after { content: ""; position: absolute; right: -2rem; top: -2rem; width: 8rem; height: 8rem; border-radius: 50%; background: radial-gradient(circle, rgba(215,234,31,.16), transparent 62%); pointer-events: none; }
+.match-card:hover { transform: translateY(-2px); border-color: rgba(244,189,79,.36); background: var(--surface-card-strong); }
 .match-card__top { display: flex; justify-content: space-between; gap: var(--space-xs); color: var(--text-muted); font-size: var(--step--1); }
 .match-card__date, .match-card__venue { color: var(--text-secondary); }
 .match-card h3 { font-size: var(--step-1); }
@@ -597,36 +653,81 @@ h2 { font-size: var(--step-2); }
 @media (min-width: 768px) { .team-summaries__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .team-card { padding: var(--space-m); }
 .team-chip { display: inline-flex; padding: .4rem .75rem; border-radius: var(--radius-pill); background: var(--surface-card-strong); font-weight: 900; }
-.teams-shortcut { padding-block: var(--space-l); }
+.teams-shortcut { position: relative; padding-block: var(--space-l); overflow: hidden; }
 .team-pill-grid { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
-.team-pill { display: inline-flex; padding: .5rem .8rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); background: var(--surface-card); color: var(--text-primary); font-weight: 800; text-decoration: none; }
-.team-pill:target { background: var(--color-gold-400); color: var(--color-navy-950); }
+.team-pill { display: inline-flex; padding: .5rem .8rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); background: linear-gradient(135deg, rgba(255,255,255,.11), rgba(255,255,255,.05)); color: var(--text-primary); font-weight: 800; text-decoration: none; transition: transform var(--duration-med) var(--ease-out-expo), background var(--duration-med) var(--ease-out-expo); }
+.team-pill:hover { transform: translateY(-1px); background: var(--surface-card-strong); }
+.team-pill:target { background: var(--accent-primary); color: var(--color-navy-950); }
 .team-flag { display: inline-block; width: 1.5rem; height: 1.125rem; margin-right: .25rem; border-radius: .125rem; object-fit: cover; vertical-align: -.15em; box-shadow: 0 0 0 1px rgba(255,255,255,.25); }
 .match-article { color: var(--text-secondary); }
 .match-article h2 { color: var(--text-primary); }
-.coming-soon { border-left: 4px solid var(--color-gold-400); padding-left: var(--space-s); }
+.coming-soon { border-left: 4px solid var(--accent-primary); padding-left: var(--space-s); }
 .prediction-options { display: grid; grid-template-columns: 1fr; gap: var(--space-xs); }
 @media (min-width: 768px) { .prediction-options { grid-template-columns: repeat(3, 1fr); } }
 .prediction-options button { min-height: 40px; padding: .5rem .85rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); background: var(--surface-card-strong); color: var(--text-primary); font-size: var(--step--1); font-weight: 900; }
-.site-footer { margin-top: var(--space-xl); padding: var(--space-l) 0; background: var(--surface-raised); color: var(--text-secondary); border-top: 1px solid var(--border-subtle); }
+.site-footer { margin-top: var(--space-xl); padding: var(--space-l) 0; background: linear-gradient(135deg, var(--color-jungle-950), var(--surface-raised)); color: var(--text-secondary); border-top: 1px solid var(--border-subtle); }
 .numeric { font-variant-numeric: tabular-nums; }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; } }
+.theme-section { transition: background-color var(--duration-med) var(--ease-out-expo), color var(--duration-med) var(--ease-out-expo); }
+.digital-ball { position: absolute; z-index: 0; width: clamp(7rem, 16vw, 16rem); aspect-ratio: 1; border-radius: 50%; pointer-events: none; opacity: .35; background: radial-gradient(circle at 35% 35%, rgba(255,255,255,.75), transparent 16%), radial-gradient(circle at center, rgba(0,198,163,.38), rgba(0,80,64,.18) 55%, transparent 58%), repeating-conic-gradient(from 18deg, rgba(244,189,79,.8) 0 8deg, transparent 8deg 22deg); filter: blur(.2px); transition: transform var(--duration-slow) var(--ease-out-expo), opacity var(--duration-slow) var(--ease-out-expo); }
+.digital-ball--left { left: max(-6rem, -8vw); top: 22%; transform: translateX(-30%) rotate(-18deg); }
+.digital-ball--right { right: max(-6rem, -8vw); bottom: 10%; transform: translateX(30%) rotate(18deg); }
+.reveal.is-visible .digital-ball--left { transform: translateX(0) rotate(8deg); }
+.reveal.is-visible .digital-ball--right { transform: translateX(0) rotate(-8deg); }
+html.js .reveal { opacity: .001; transform: translateY(1.1rem); transition: opacity var(--duration-slow) var(--ease-out-expo), transform var(--duration-slow) var(--ease-out-expo); }
+html.js .reveal.is-visible { opacity: 1; transform: translateY(0); }
+html.js .section-heading, html.js .round-divider, html.js .match-section > .section-kicker { transition: transform var(--duration-slow) var(--ease-out-expo), opacity var(--duration-slow) var(--ease-out-expo); }
+html.js .reveal:not(.is-visible) .section-heading, html.js .reveal:not(.is-visible) .round-divider, html.js .reveal:not(.is-visible).match-section > .section-kicker { opacity: .001; transform: translateY(-.75rem); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; } html.js .reveal, html.js .reveal:not(.is-visible) .section-heading, html.js .reveal:not(.is-visible) .round-divider, html.js .reveal:not(.is-visible).match-section > .section-kicker { opacity: 1; transform: none; } .digital-ball { display: none; } }
 `;
 
-const STICKY_HEADER_SCRIPT = `
+const SITE_CHROME_SCRIPT = `
 (() => {
   const header = document.querySelector('.site-header');
-  if (!header) return;
+  const revealItems = [...document.querySelectorAll('.reveal')];
+  const themedSections = [...document.querySelectorAll('[data-theme]')];
 
   const setStickyOffset = () => {
+    if (!header) return;
     const headerHeight = header.getBoundingClientRect().height;
     document.documentElement.style.setProperty('--site-header-sticky-offset', Math.max(0, headerHeight - 2) + 'px');
   };
 
+  const setHeaderScrollState = () => {
+    header?.classList.toggle('is-scrolled', window.scrollY > 8);
+  };
+
   setStickyOffset();
+  setHeaderScrollState();
   window.addEventListener('resize', setStickyOffset);
+  window.addEventListener('scroll', setHeaderScrollState, { passive: true });
   if ('ResizeObserver' in window) {
-    new ResizeObserver(setStickyOffset).observe(header);
+    if (header) new ResizeObserver(setStickyOffset).observe(header);
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    revealItems.forEach((item) => item.classList.add('is-visible'));
+    return;
+  }
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      entry.target.classList.toggle('is-visible', entry.isIntersecting);
+    });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.12 });
+  revealItems.forEach((item) => revealObserver.observe(item));
+
+  const themeObserver = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (visible?.target?.dataset?.theme) {
+      document.body.dataset.activeTheme = visible.target.dataset.theme;
+    }
+  }, { threshold: [0.2, 0.45, 0.7] });
+  themedSections.forEach((section) => themeObserver.observe(section));
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    revealItems.forEach((item) => item.classList.add('is-visible'));
   }
 })();
 `;

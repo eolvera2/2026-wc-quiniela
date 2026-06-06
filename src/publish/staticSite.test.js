@@ -83,6 +83,8 @@ describe('publish/staticSite', () => {
       affiliateUrls: AFFILIATE_URLS,
     });
     expect(existsSync(outDir)).toBe(true);
+    expect(existsSync(join(outDir, 'assets', 'quiniela-2026-mark.svg'))).toBe(true);
+    expect(existsSync(join(outDir, 'staticwebapp.config.json'))).toBe(true);
   });
 
   it('buildSite writes one HTML file per fixture using the match slug as filename', () => {
@@ -154,6 +156,9 @@ describe('publish/staticSite', () => {
 
     const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
     expect(index).toContain('class="site-header"');
+    expect(index).toContain('src="assets/quiniela-2026-mark.svg"');
+    expect(index).toContain('class="site-logo__text">Quiniela 2026</span>');
+    expect(index).not.toContain('digitalhub.fifa.com');
     expect(index).toContain('class="date-tabs');
     expect(index).toContain('class="match-card');
     expect(index).toContain('id="equipos"');
@@ -164,16 +169,24 @@ describe('publish/staticSite', () => {
     expect(index).toContain('top: var(--site-header-sticky-offset, 3rem);');
     expect(index).toContain("document.documentElement.style.setProperty('--site-header-sticky-offset'");
     expect(index).toContain('new ResizeObserver(setStickyOffset).observe(header);');
-    expect(index).toContain('.home-hero h1 { max-width: 86rem;');
-    expect(index).toContain('font-size: clamp(2.35rem, 5.35vw, 4.65rem);');
+    expect(index).toContain('class="home-hero hero-match reveal theme-section" data-theme="navy"');
+    expect(index).toContain('class="digital-ball digital-ball--left" aria-hidden="true"');
+    expect(index).toContain("const revealItems = [...document.querySelectorAll('.reveal')];");
+    expect(index).toContain("document.body.dataset.activeTheme = visible.target.dataset.theme;");
+    expect(index).toContain('html.js .reveal {');
+    expect(index).toContain('@media (prefers-reduced-motion: reduce)');
+    expect(index).toContain('--color-jungle-950: #002018;');
+    expect(index).toContain('--accent-secondary: var(--color-turquoise-400);');
     expect(index).toContain('padding: .35rem 0 .55rem;');
-    expect(index).toContain('box-shadow: 0 0 0 100vmax rgba(2, 15, 42, .92);');
+    expect(index).toContain('box-shadow: 0 0 0 100vmax');
     expect(index).toContain('min-width: 5.15rem;');
     expect(index).toContain('Ver datos');
 
     const match = readFileSync(join(outDir, 'partido-1-2026-06-11-mexico-vs-sudafrica.html'), 'utf-8');
     expect(match).toContain('"@type":"SportsEvent"');
-    expect(match).toContain('class="hero-match');
+    expect(match).toContain('class="match-hero hero-match reveal theme-section" data-theme="jungle"');
+    expect(match).toContain('src="assets/quiniela-2026-mark.svg"');
+    expect(match).toContain("const revealItems = [...document.querySelectorAll('.reveal')];");
     expect(match).toContain('Pronóstico y momios');
     expect(match).toContain('Próximamente: actualizaremos esta sección');
     expect(match).toContain('Tu quiniela');
