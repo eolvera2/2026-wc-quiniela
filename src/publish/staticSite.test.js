@@ -164,7 +164,8 @@ describe('publish/staticSite', () => {
     expect(index).toContain('top: 3.45rem;');
     expect(index).toContain('.home-hero h1 { max-width: 86rem;');
     expect(index).toContain('font-size: clamp(2.35rem, 5.35vw, 4.65rem);');
-    expect(index).toContain('padding: 0 0 .55rem;');
+    expect(index).toContain('padding: .35rem 0 .55rem;');
+    expect(index).toContain('box-shadow: 0 0 0 100vmax rgba(2, 15, 42, .92);');
     expect(index).toContain('min-width: 5.15rem;');
     expect(index).toContain('Ver datos');
 
