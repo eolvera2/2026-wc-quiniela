@@ -716,7 +716,7 @@ h2 { font-size: var(--step-2); }
 .date-tab.is-active { background: var(--accent-primary); color: var(--color-navy-950); }
 .date-tab__day { display: block; font-size: var(--step--2); text-transform: uppercase; }
 .date-tab__date { display: block; font-size: var(--step--1); font-weight: 900; }
-.calendar { padding-block: var(--space-l); scroll-margin-top: var(--sticky-anchor-offset, 8rem); }
+.calendar { padding: .65rem 0 var(--space-l); scroll-margin-top: var(--sticky-anchor-offset, 8rem); }
 .filter-status { display: none; align-items: center; gap: var(--space-xs); margin-bottom: var(--space-m); padding: var(--space-s); border: 1px solid var(--border-subtle); border-radius: var(--radius-l); background: var(--surface-card); }
 .filter-status.is-active { display: flex; }
 .filter-status button { min-height: 40px; padding: .45rem .8rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); background: var(--surface-card-strong); color: var(--text-primary); font-size: var(--step--1); font-weight: 900; }

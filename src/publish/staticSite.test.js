@@ -190,6 +190,7 @@ describe('publish/staticSite', () => {
     expect(footer).not.toContain('href="index.html#equipos"');
     expect(index).toContain('id="fecha-2026-06-11" class="calendar-day" data-theme="jungle"');
     expect(index).toContain('jueves, 11 de junio');
+    expect(index).toContain('.calendar { padding: .65rem 0 var(--space-l); scroll-margin-top: var(--sticky-anchor-offset, 8rem); }');
     expect(index).toContain('.calendar-day { scroll-margin-top: var(--sticky-anchor-offset, 8rem); }');
     expect(index).toContain('.calendar-day + .calendar-day { margin-top: var(--space-m); }');
     expect(index).not.toContain('class="calendar-day reveal"');
