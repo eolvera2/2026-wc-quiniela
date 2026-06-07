@@ -221,6 +221,16 @@ describe('publish/staticSite', () => {
     expect(match).toContain('Pronóstico y momios');
     expect(match).toContain('Próximamente: actualizaremos esta sección');
     expect(match).toContain('Tu quiniela');
+    expect(match).toContain('data-fixture-id="1"');
+    expect(match).toContain('data-pick="home"');
+    expect(match).toContain('data-pick="draw"');
+    expect(match).toContain('data-pick="away"');
+    expect(match).toContain('aria-pressed="false"');
+    expect(match).toContain('se guarda solo en este navegador');
+    expect(match).toContain('class="prediction-status" aria-live="polite"');
+    expect(match).toContain('predictagol:pick:');
+    expect(match).toContain("window.localStorage.setItem(key, value);");
+    expect(match).toContain('.prediction-options button[aria-pressed="true"]');
     expect(match).not.toContain('Todos los enlaces de afiliados están marcados con rel="sponsored".');
   });
 

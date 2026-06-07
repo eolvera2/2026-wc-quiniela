@@ -206,6 +206,7 @@ function renderArticlePage({ title, metaDescription, bodyHtml, siteBaseUrl, slug
   </main>
   ${renderSiteFooter()}
   <script>${SITE_CHROME_SCRIPT}</script>
+  <script>${PREDICTION_PANEL_SCRIPT}</script>
 </body>
 </html>`;
 }
@@ -349,14 +350,16 @@ function renderSectionList({ fixture, fixtureArticles, affiliateUrls }) {
 function renderPredictionPanel(fixture) {
   const homeTeam = fixtureTeam(fixture, 'home');
   const awayTeam = fixtureTeam(fixture, 'away');
-  return `<section class="prediction-panel container reveal theme-section" data-theme="festival" aria-label="Panel de quiniela">
+  const statusId = `prediction-status-${fixture.fixtureId}`;
+  return `<section class="prediction-panel container reveal theme-section" data-theme="festival" data-fixture-id="${escapeHtml(fixture.fixtureId)}" aria-label="Panel de quiniela">
     <h2>Tu quiniela</h2>
-    <p>Sin apuestas, solo diversión. Elige tu pronóstico antes del kickoff.</p>
-    <div class="prediction-options" role="group" aria-label="Pronóstico ${escapeHtml(fixture.homeTeam)} vs ${escapeHtml(fixture.awayTeam)}">
-      <button type="button">1 ${renderTeamName(homeTeam)}</button>
-      <button type="button">X Empate</button>
-      <button type="button">2 ${renderTeamName(awayTeam)}</button>
+    <p>Sin apuestas, solo diversión. Elige tu pronóstico antes del kickoff; se guarda solo en este navegador.</p>
+    <div class="prediction-options" role="group" aria-label="Pronóstico ${escapeHtml(fixture.homeTeam)} vs ${escapeHtml(fixture.awayTeam)}" aria-describedby="${escapeHtml(statusId)}">
+      <button type="button" data-pick="home" data-pick-label="${escapeHtml(homeTeam.name)}" aria-pressed="false">1 ${renderTeamName(homeTeam)}</button>
+      <button type="button" data-pick="draw" data-pick-label="Empate" aria-pressed="false">X Empate</button>
+      <button type="button" data-pick="away" data-pick-label="${escapeHtml(awayTeam.name)}" aria-pressed="false">2 ${renderTeamName(awayTeam)}</button>
     </div>
+    <p id="${escapeHtml(statusId)}" class="prediction-status" aria-live="polite">Elige una opción para guardar tu pick local.</p>
   </section>`;
 }
 
@@ -757,6 +760,8 @@ h2 { font-size: var(--step-2); }
 .prediction-options { display: grid; grid-template-columns: 1fr; gap: var(--space-xs); }
 @media (min-width: 768px) { .prediction-options { grid-template-columns: repeat(3, 1fr); } }
 .prediction-options button { min-height: 40px; padding: .5rem .85rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); background: var(--surface-card-strong); color: var(--text-primary); font-size: var(--step--1); font-weight: 900; }
+.prediction-options button[aria-pressed="true"] { border-color: rgba(244,189,79,.7); background: var(--accent-primary); color: var(--color-navy-950); box-shadow: 0 12px 28px rgba(244,189,79,.22); }
+.prediction-status { margin-bottom: 0; color: var(--text-secondary); font-size: var(--step--1); }
 .site-footer { margin-top: var(--space-xl); padding: var(--space-l) 0; background: linear-gradient(135deg, var(--color-jungle-950), var(--surface-raised)); color: var(--text-secondary); border-top: 1px solid var(--border-subtle); }
 .numeric { font-variant-numeric: tabular-nums; }
 .theme-section { transition: background-color var(--duration-med) var(--ease-out-expo), color var(--duration-med) var(--ease-out-expo); }
@@ -914,5 +919,61 @@ const HOME_FILTER_SCRIPT = `
   });
   window.addEventListener('hashchange', applyFromHash);
   applyFromHash();
+})();
+`;
+
+const PREDICTION_PANEL_SCRIPT = `
+(() => {
+  const panels = [...document.querySelectorAll('.prediction-panel[data-fixture-id]')];
+  if (!panels.length) return;
+
+  const storagePrefix = 'predictagol:pick:';
+
+  function readPick(key, status) {
+    try {
+      return window.localStorage.getItem(key);
+    } catch (error) {
+      console.warn('PredictaGol pick storage is unavailable.', error);
+      status.textContent = 'No pudimos leer picks guardados en este navegador.';
+      return null;
+    }
+  }
+
+  function writePick(key, value, status) {
+    try {
+      window.localStorage.setItem(key, value);
+      return true;
+    } catch (error) {
+      console.warn('PredictaGol pick storage failed.', error);
+      status.textContent = 'No pudimos guardar tu pick en este navegador.';
+      return false;
+    }
+  }
+
+  function updatePanel(panel, pick) {
+    const buttons = [...panel.querySelectorAll('[data-pick]')];
+    const status = panel.querySelector('.prediction-status');
+    buttons.forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.pick === pick));
+    });
+    const selected = buttons.find((button) => button.dataset.pick === pick);
+    status.textContent = selected
+      ? 'Tu pick guardado en este navegador: ' + selected.dataset.pickLabel + '.'
+      : 'Elige una opción para guardar tu pick local.';
+  }
+
+  panels.forEach((panel) => {
+    const status = panel.querySelector('.prediction-status');
+    const key = storagePrefix + panel.dataset.fixtureId;
+    updatePanel(panel, readPick(key, status));
+
+    panel.addEventListener('click', (event) => {
+      const button = event.target.closest('[data-pick]');
+      if (!button || !panel.contains(button)) return;
+      if (writePick(key, button.dataset.pick, status)) {
+        updatePanel(panel, button.dataset.pick);
+      }
+    });
+  });
 })();
 `;
