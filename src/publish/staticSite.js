@@ -118,17 +118,6 @@ export function buildSite({ fixtures: providedFixtures, teams: providedTeams, ar
     slugs.push({ fixtureId: fixture.fixtureId, articleType: 'match_page', slug });
   }
 
-  function copyStaticAssets(outputDir) {
-    const assetDir = join(outputDir, SITE_ASSET_DIR);
-    mkdirSync(assetDir, { recursive: true });
-    copyFileSync(new URL(`./assets/${BRAND_MARK_FILENAME}`, import.meta.url), join(assetDir, BRAND_MARK_FILENAME));
-
-    const staticWebAppConfig = new URL('../../staticwebapp.config.json', import.meta.url);
-    if (existsSync(staticWebAppConfig)) {
-      copyFileSync(staticWebAppConfig, join(outputDir, 'staticwebapp.config.json'));
-    }
-  }
-
   // Write index page
   const indexHtml = renderIndexPage({ fixtures, teams, slugs, siteBaseUrl });
   writeFileSync(join(outputDir, 'index.html'), indexHtml, 'utf-8');
@@ -145,9 +134,32 @@ export function buildSite({ fixtures: providedFixtures, teams: providedTeams, ar
   return slugs;
 }
 
+export function buildComingSoonSite({ siteBaseUrl = 'https://predictagol.com', outputDir = 'dist' } = {}) {
+  mkdirSync(outputDir, { recursive: true });
+  copyStaticAssets(outputDir);
+
+  const canonicalBaseUrl = normalizeBaseUrl(siteBaseUrl);
+  const indexHtml = renderComingSoonPage({ siteBaseUrl: canonicalBaseUrl });
+  writeFileSync(join(outputDir, 'index.html'), indexHtml, 'utf-8');
+
+  const sitemapXml = generateSitemap([{ url: `${canonicalBaseUrl}/`, lastmod: '2026-01-01' }]);
+  writeFileSync(join(outputDir, 'sitemap.xml'), sitemapXml, 'utf-8');
+}
+
 // ---------------------------------------------------------------------------
 // Private helpers
 // ---------------------------------------------------------------------------
+
+function copyStaticAssets(outputDir) {
+  const assetDir = join(outputDir, SITE_ASSET_DIR);
+  mkdirSync(assetDir, { recursive: true });
+  copyFileSync(new URL(`./assets/${BRAND_MARK_FILENAME}`, import.meta.url), join(assetDir, BRAND_MARK_FILENAME));
+
+  const staticWebAppConfig = new URL('../../staticwebapp.config.json', import.meta.url);
+  if (existsSync(staticWebAppConfig)) {
+    copyFileSync(staticWebAppConfig, join(outputDir, 'staticwebapp.config.json'));
+  }
+}
 
 function escapeHtml(str) {
   return String(str)
@@ -155,6 +167,10 @@ function escapeHtml(str) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
+}
+
+function normalizeBaseUrl(siteBaseUrl) {
+  return String(siteBaseUrl || 'https://predictagol.com').replace(/\/+$/g, '');
 }
 
 function renderArticlePage({ title, metaDescription, bodyHtml, siteBaseUrl, slug, structuredData = [] }) {
@@ -181,6 +197,42 @@ function renderArticlePage({ title, metaDescription, bodyHtml, siteBaseUrl, slug
     ${bodyHtml}
   </main>
   ${renderSiteFooter()}
+  <script>${SITE_CHROME_SCRIPT}</script>
+</body>
+</html>`;
+}
+
+function renderComingSoonPage({ siteBaseUrl }) {
+  return `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Predictagol se está preparando para el Mundial 2026. Muy pronto podrás armar tu quiniela y seguir pronósticos partido por partido.">
+  <title>Próximamente — Predictagol</title>
+  <link rel="canonical" href="${escapeHtml(siteBaseUrl)}/">
+  <script>document.documentElement.classList.add('js');</script>
+  <style>${GLOBAL_CSS}${COMING_SOON_CSS}</style>
+</head>
+<body data-active-theme="navy">
+  ${renderComingSoonHeader()}
+  <main class="coming-soon-page">
+    <section class="coming-soon-hero reveal theme-section" data-theme="navy" aria-labelledby="coming-soon-title">
+      ${renderDigitalBalls()}
+      <div class="coming-soon-hero__card">
+        <img class="coming-soon-hero__mark" src="${SITE_ASSET_DIR}/${BRAND_MARK_FILENAME}" alt="" width="96" height="96">
+        <p class="eyebrow">Predictagol · Mundial 2026</p>
+        <h1 id="coming-soon-title">Próximamente</h1>
+        <p class="coming-soon-hero__copy">Estamos preparando una experiencia para vivir la quiniela del Mundial con calendario, datos y pronósticos en español.</p>
+        <div class="coming-soon-hero__badges" aria-label="Funciones en preparación">
+          <span>Calendario</span>
+          <span>Pronósticos</span>
+          <span>Quiniela</span>
+        </div>
+      </div>
+    </section>
+  </main>
+  ${renderComingSoonFooter()}
   <script>${SITE_CHROME_SCRIPT}</script>
 </body>
 </html>`;
@@ -378,15 +430,17 @@ function renderTeamsShortcut(teams) {
     .map((team) => decorateTeam(team))
     .filter((team) => !team.isPlaceholder && !isPlaceholderTeamName(team.name))
     .sort((a, b) => a.name.localeCompare(b.name, 'es'));
-  return `<section id="equipos" class="teams-shortcut container-wide reveal theme-section" data-theme="festival">
+  return `<section id="equipos" class="teams-shortcut reveal theme-section" data-theme="festival">
     ${renderDigitalBalls()}
-    <div class="section-heading">
-      <p class="eyebrow">Equipos</p>
-      <h2>Selecciones en el calendario</h2>
-      <p>La base está precargada desde datos públicos; los perfiles completos se llenarán conforme haya información confiable.</p>
-    </div>
-    <div class="team-pill-grid">
-      ${teamList.map((team) => `<a id="${escapeHtml(team.anchorId)}" class="team-pill" href="#${escapeHtml(team.anchorId)}" data-team-code="${escapeHtml(team.code || '')}" data-team-name="${escapeHtml(team.name)}">${renderTeamName(team)}</a>`).join('\n')}
+    <div class="container-wide teams-shortcut__inner">
+      <div class="section-heading">
+        <p class="eyebrow">Equipos</p>
+        <h2>Selecciones en el calendario</h2>
+        <p>La base está precargada desde datos públicos; los perfiles completos se llenarán conforme haya información confiable.</p>
+      </div>
+      <div class="team-pill-grid">
+        ${teamList.map((team) => `<a id="${escapeHtml(team.anchorId)}" class="team-pill" href="#${escapeHtml(team.anchorId)}" data-team-code="${escapeHtml(team.code || '')}" data-team-name="${escapeHtml(team.name)}">${renderTeamName(team)}</a>`).join('\n')}
+      </div>
     </div>
   </section>`;
 }
@@ -428,6 +482,24 @@ function renderSiteFooter() {
       <strong>Quiniela 2026</strong>
       <p>Este sitio no está afiliado con FIFA. Sin apuestas, solo diversión y pronósticos para tu quiniela.</p>
       <nav aria-label="Footer"><a href="index.html">Inicio</a><a href="index.html#partidos">Partidos</a><a href="index.html#equipos">Equipos</a></nav>
+    </div>
+  </footer>`;
+}
+
+function renderComingSoonHeader() {
+  return `<header class="site-header site-header--simple">
+    <a class="site-logo" href="index.html" aria-label="Predictagol inicio">
+      <img class="site-logo__mark" src="${SITE_ASSET_DIR}/${BRAND_MARK_FILENAME}" alt="" width="40" height="40">
+      <span class="site-logo__text">Predictagol</span>
+    </a>
+  </header>`;
+}
+
+function renderComingSoonFooter() {
+  return `<footer class="site-footer site-footer--simple">
+    <div class="container">
+      <strong>Predictagol</strong>
+      <p>Este sitio no está afiliado con FIFA. Sin apuestas, solo diversión y pronósticos para tu quiniela.</p>
     </div>
   </footer>`;
 }
@@ -653,7 +725,9 @@ h2 { font-size: var(--step-2); }
 @media (min-width: 768px) { .team-summaries__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .team-card { padding: var(--space-m); }
 .team-chip { display: inline-flex; padding: .4rem .75rem; border-radius: var(--radius-pill); background: var(--surface-card-strong); font-weight: 900; }
-.teams-shortcut { position: relative; padding-block: var(--space-l); overflow: hidden; }
+.teams-shortcut { position: relative; margin-top: var(--space-l); padding-block: var(--space-xl); overflow: hidden; background: radial-gradient(circle at 15% 20%, rgba(0,198,163,.22), transparent 22rem), radial-gradient(circle at 85% 15%, rgba(244,189,79,.18), transparent 24rem), linear-gradient(135deg, rgba(0,48,32,.96), rgba(2,15,42,.94)); }
+.teams-shortcut::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .18; background-image: radial-gradient(circle, rgba(244,189,79,.88) 0 .14rem, transparent .16rem); background-size: 2.6rem 2.6rem; mask-image: linear-gradient(115deg, transparent, #000 20%, transparent 70%); }
+.teams-shortcut__inner { position: relative; z-index: 1; }
 .team-pill-grid { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
 .team-pill { display: inline-flex; padding: .5rem .8rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); background: linear-gradient(135deg, rgba(255,255,255,.11), rgba(255,255,255,.05)); color: var(--text-primary); font-weight: 800; text-decoration: none; transition: transform var(--duration-med) var(--ease-out-expo), background var(--duration-med) var(--ease-out-expo); }
 .team-pill:hover { transform: translateY(-1px); background: var(--surface-card-strong); }
@@ -671,13 +745,29 @@ h2 { font-size: var(--step-2); }
 .digital-ball { position: absolute; z-index: 0; width: clamp(7rem, 16vw, 16rem); aspect-ratio: 1; border-radius: 50%; pointer-events: none; opacity: .35; background: radial-gradient(circle at 35% 35%, rgba(255,255,255,.75), transparent 16%), radial-gradient(circle at center, rgba(0,198,163,.38), rgba(0,80,64,.18) 55%, transparent 58%), repeating-conic-gradient(from 18deg, rgba(244,189,79,.8) 0 8deg, transparent 8deg 22deg); filter: blur(.2px); transition: transform var(--duration-slow) var(--ease-out-expo), opacity var(--duration-slow) var(--ease-out-expo); }
 .digital-ball--left { left: max(-6rem, -8vw); top: 22%; transform: translateX(-30%) rotate(-18deg); }
 .digital-ball--right { right: max(-6rem, -8vw); bottom: 10%; transform: translateX(30%) rotate(18deg); }
+.teams-shortcut .digital-ball--left { left: max(-7rem, -9vw); top: 12%; }
+.teams-shortcut .digital-ball--right { right: max(-7rem, -9vw); bottom: 8%; }
 .reveal.is-visible .digital-ball--left { transform: translateX(0) rotate(8deg); }
 .reveal.is-visible .digital-ball--right { transform: translateX(0) rotate(-8deg); }
-html.js .reveal { opacity: .001; transform: translateY(1.1rem); transition: opacity var(--duration-slow) var(--ease-out-expo), transform var(--duration-slow) var(--ease-out-expo); }
-html.js .reveal.is-visible { opacity: 1; transform: translateY(0); }
+html.js .reveal { transition: none; }
 html.js .section-heading, html.js .round-divider, html.js .match-section > .section-kicker { transition: transform var(--duration-slow) var(--ease-out-expo), opacity var(--duration-slow) var(--ease-out-expo); }
 html.js .reveal:not(.is-visible) .section-heading, html.js .reveal:not(.is-visible) .round-divider, html.js .reveal:not(.is-visible).match-section > .section-kicker { opacity: .001; transform: translateY(-.75rem); }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; } html.js .reveal, html.js .reveal:not(.is-visible) .section-heading, html.js .reveal:not(.is-visible) .round-divider, html.js .reveal:not(.is-visible).match-section > .section-kicker { opacity: 1; transform: none; } .digital-ball { display: none; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; } html.js .reveal:not(.is-visible) .section-heading, html.js .reveal:not(.is-visible) .round-divider, html.js .reveal:not(.is-visible).match-section > .section-kicker { opacity: 1; transform: none; } .digital-ball { display: none; } }
+`;
+
+const COMING_SOON_CSS = `
+.site-header--simple { justify-content: center; }
+.coming-soon-page { min-height: calc(100svh - 8rem); display: grid; }
+.coming-soon-hero { position: relative; display: grid; place-items: center; min-height: calc(100svh - 8rem); padding: var(--space-xl) var(--gutter); overflow: hidden; background: radial-gradient(circle at 50% 0%, rgba(215,234,31,.14), transparent 28rem), radial-gradient(circle at 16% 80%, rgba(200,16,46,.2), transparent 22rem), linear-gradient(135deg, rgba(0,32,24,.96), rgba(2,15,42,.98)); }
+.coming-soon-hero::before { content: ""; position: absolute; inset: 0; opacity: .24; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 3.75rem 3.75rem; mask-image: radial-gradient(circle at center, #000, transparent 72%); }
+.coming-soon-hero__card { position: relative; z-index: 1; width: min(100%, 64rem); padding: clamp(2rem, 6vw, 5rem); border: 1px solid rgba(244,189,79,.28); border-radius: clamp(1.25rem, 3vw, 2rem); background: linear-gradient(135deg, rgba(255,255,255,.13), rgba(255,255,255,.05)); box-shadow: var(--shadow-card), inset 0 1px rgba(255,255,255,.12); text-align: center; overflow: hidden; }
+.coming-soon-hero__card::after { content: ""; position: absolute; inset: auto -8rem -10rem auto; width: 22rem; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(0,198,163,.24), transparent 62%); pointer-events: none; }
+.coming-soon-hero__mark { width: clamp(4.5rem, 10vw, 7.5rem); height: auto; margin-bottom: var(--space-s); border-radius: 1.4rem; box-shadow: 0 0 0 1px rgba(255,255,255,.2), 0 20px 42px rgba(0,0,0,.34); }
+.coming-soon-hero h1 { margin: .1em 0 .18em; font-size: clamp(3.5rem, 13vw, 11rem); line-height: .86; color: var(--color-white); text-shadow: 0 0 32px rgba(244,189,79,.22); }
+.coming-soon-hero__copy { max-width: 44rem; margin: 0 auto var(--space-m); color: var(--text-secondary); font-size: var(--step-1); }
+.coming-soon-hero__badges { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-xs); }
+.coming-soon-hero__badges span { display: inline-flex; min-height: 40px; align-items: center; padding: .45rem .85rem; border: 1px solid rgba(255,255,255,.24); border-radius: var(--radius-pill); background: rgba(255,255,255,.09); color: var(--text-primary); font-size: var(--step--1); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+.site-footer--simple { margin-top: 0; }
 `;
 
 const SITE_CHROME_SCRIPT = `

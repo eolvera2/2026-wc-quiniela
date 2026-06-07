@@ -1,8 +1,8 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { mkdtempSync, rmSync, readFileSync, existsSync } from 'node:fs';
+import { mkdtempSync, rmSync, readFileSync, existsSync, readdirSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { buildMatchSlug, buildSlug, buildSite } from './staticSite.js';
+import { buildComingSoonSite, buildMatchSlug, buildSlug, buildSite } from './staticSite.js';
 import { WORLD_CUP_TEAMS } from '../data/worldCupTeams.js';
 
 const AFFILIATE_URLS = {
@@ -170,10 +170,13 @@ describe('publish/staticSite', () => {
     expect(index).toContain("document.documentElement.style.setProperty('--site-header-sticky-offset'");
     expect(index).toContain('new ResizeObserver(setStickyOffset).observe(header);');
     expect(index).toContain('class="home-hero hero-match reveal theme-section" data-theme="navy"');
+    expect(index).toContain('id="equipos" class="teams-shortcut reveal theme-section" data-theme="festival"');
+    expect(index).toContain('class="container-wide teams-shortcut__inner"');
     expect(index).toContain('class="digital-ball digital-ball--left" aria-hidden="true"');
     expect(index).toContain("const revealItems = [...document.querySelectorAll('.reveal')];");
     expect(index).toContain("document.body.dataset.activeTheme = visible.target.dataset.theme;");
     expect(index).toContain('html.js .reveal {');
+    expect(index).toContain('html.js .reveal { transition: none; }');
     expect(index).toContain('@media (prefers-reduced-motion: reduce)');
     expect(index).toContain('--color-jungle-950: #002018;');
     expect(index).toContain('--accent-secondary: var(--color-turquoise-400);');
@@ -257,5 +260,31 @@ describe('publish/staticSite', () => {
       articleType: 'match_page',
       slug: 'fixture-1-fecha-por-confirmar-mexico-vs-alemania',
     });
+  });
+
+  it('buildComingSoonSite writes a branded landing page without match pages', () => {
+    const outDir = join(tmpDir, 'dist');
+    buildComingSoonSite({
+      siteBaseUrl: 'https://predictagol.com/',
+      outputDir: outDir,
+    });
+
+    const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
+    const outputFiles = readdirSync(outDir).sort();
+
+    expect(outputFiles).toEqual(['assets', 'index.html', 'sitemap.xml', 'staticwebapp.config.json']);
+    expect(existsSync(join(outDir, 'assets', 'quiniela-2026-mark.svg'))).toBe(true);
+    expect(index).toContain('Próximamente');
+    expect(index).toContain('Predictagol · Mundial 2026');
+    expect(index).toContain('src="assets/quiniela-2026-mark.svg"');
+    expect(index).toContain('<link rel="canonical" href="https://predictagol.com/">');
+    expect(index).toContain('--color-navy-950: #020f2a;');
+    expect(index).toContain('.coming-soon-hero');
+    expect(index).not.toContain('class="match-card');
+    expect(index).not.toContain('href="index.html#partidos"');
+    expect(index).not.toContain('href="index.html#equipos"');
+
+    const sitemap = readFileSync(join(outDir, 'sitemap.xml'), 'utf-8');
+    expect(sitemap).toContain('<loc>https://predictagol.com/</loc>');
   });
 });
