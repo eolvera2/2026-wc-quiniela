@@ -79,11 +79,12 @@ Build and preview the static site locally without any cloud credentials:
 
 ```bash
 npm install
+node scripts/build-coming-soon.js # builds the public Predictagol landing page
 node scripts/seed-demo.js        # builds dist/ from 3 synthetic demo articles
 npx swa start dist               # preview locally with Azure SWA CLI (optional)
 ```
 
-The seed script writes `dist/index.html`, three article pages, and `sitemap.xml`.
+The Coming Soon script writes a single branded `dist/index.html` for `predictagol.com`. The seed script writes `dist/index.html`, three article pages, and `sitemap.xml`.
 
 ## Testing
 
@@ -112,7 +113,7 @@ Copy `.env.example` to `.env` for local development.
 
 ## Deployment
 
-The GitHub Actions workflow (`.github/workflows/cadence.yml`) runs twice daily at 06:00 and 18:00 UTC. It executes the full cadence pipeline and deploys `dist/` to Azure Static Web Apps via the `Azure/static-web-apps-deploy` action.
+The GitHub Actions workflow (`.github/workflows/cadence.yml`) runs twice daily at 06:00 and 18:00 UTC. While the site is in pre-launch mode, scheduled runs build and deploy the `predictagol.com` Coming Soon page to Azure Static Web Apps via the `Azure/static-web-apps-deploy` action. Manual workflow dispatch defaults to the same production-safe Coming Soon build; `demo` and `live` manual targets are for internal builds and do not deploy unfinished content to production.
 
 Azure infrastructure (East US 2, resource group `rg-wc26-quiniela`):
 

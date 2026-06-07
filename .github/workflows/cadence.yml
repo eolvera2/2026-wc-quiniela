@@ -6,15 +6,15 @@ on:
     - cron: '0 6,18 * * *'
   workflow_dispatch:
     inputs:
-      force_pass:
-        description: 'Force a specific pass (seed/refresh/lock) — overrides cadence logic'
+      publish_target:
+        description: 'What to build. Only coming_soon deploys to production.'
         required: false
-        type: string
-      demo_mode:
-        description: 'Skip live cadence pipeline; build dist/ from scripts/seed-demo.js (no API keys required)'
-        required: false
-        type: boolean
-        default: false
+        type: choice
+        default: coming_soon
+        options:
+          - coming_soon
+          - demo
+          - live
 
 concurrency:
   group: wc26-pipeline
@@ -45,12 +45,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build demo site (skip live pipeline)
-        if: ${{ github.event_name == 'schedule' || inputs.demo_mode == true }}
+      - name: Build Coming Soon site
+        if: ${{ github.event_name == 'schedule' || inputs.publish_target == 'coming_soon' }}
+        env:
+          SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
+        run: npm run build:coming-soon
+
+      - name: Build demo site (internal only)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_target == 'demo' }}
         run: node scripts/seed-demo.js
 
-      - name: Run cadence pipeline
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.demo_mode != true }}
+      - name: Run cadence pipeline (internal only)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_target == 'live' }}
         env:
           AZURE_AI_ENDPOINT: ${{ secrets.AZURE_AI_ENDPOINT }}
           AZURE_AI_KEY: ${{ secrets.AZURE_AI_KEY }}
@@ -64,7 +70,7 @@ jobs:
         run: node scripts/run-cadence.js
 
       - name: Deploy to Azure Static Web Apps
-        if: success()
+        if: ${{ success() && (github.event_name == 'schedule' || inputs.publish_target == 'coming_soon') }}
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.SWA_DEPLOYMENT_TOKEN }}
