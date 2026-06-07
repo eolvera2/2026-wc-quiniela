@@ -220,7 +220,7 @@ describe('publish/staticSite', () => {
     expect(match).toContain("const revealItems = [...document.querySelectorAll('.reveal')];");
     expect(match).toContain('Pronóstico y momios');
     expect(match).toContain('Próximamente: actualizaremos esta sección');
-    expect(match).toContain('Tu quiniela');
+    expect(match).toContain('Tu predicción');
     expect(match).toContain('data-fixture-id="1"');
     expect(match).toContain('data-pick="home"');
     expect(match).toContain('data-pick="draw"');

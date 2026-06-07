@@ -352,7 +352,7 @@ function renderPredictionPanel(fixture) {
   const awayTeam = fixtureTeam(fixture, 'away');
   const statusId = `prediction-status-${fixture.fixtureId}`;
   return `<section class="prediction-panel container reveal theme-section" data-theme="festival" data-fixture-id="${escapeHtml(fixture.fixtureId)}" aria-label="Panel de quiniela">
-    <h2>Tu quiniela</h2>
+    <h2>Tu predicción</h2>
     <p>Sin apuestas, solo diversión. Elige tu pronóstico antes del kickoff; se guarda solo en este navegador.</p>
     <div class="prediction-options" role="group" aria-label="Pronóstico ${escapeHtml(fixture.homeTeam)} vs ${escapeHtml(fixture.awayTeam)}" aria-describedby="${escapeHtml(statusId)}">
       <button type="button" data-pick="home" data-pick-label="${escapeHtml(homeTeam.name)}" aria-pressed="false">1 ${renderTeamName(homeTeam)}</button>
