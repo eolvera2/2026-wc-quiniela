@@ -172,11 +172,16 @@ describe('publish/staticSite', () => {
     expect(index).toContain('class="home-hero hero-match reveal theme-section" data-theme="navy"');
     expect(index).toContain('id="equipos" class="teams-shortcut reveal theme-section" data-theme="festival"');
     expect(index).toContain('class="container-wide teams-shortcut__inner"');
+    expect(index).toContain('id="fecha-2026-06-11" class="calendar-day" data-theme="jungle"');
+    expect(index).toContain('jueves, 11 de junio');
+    expect(index).toContain('.calendar-day + .calendar-day { margin-top: var(--space-m); }');
+    expect(index).not.toContain('class="calendar-day reveal"');
     expect(index).toContain('class="digital-ball digital-ball--left" aria-hidden="true"');
     expect(index).toContain("const revealItems = [...document.querySelectorAll('.reveal')];");
     expect(index).toContain("document.body.dataset.activeTheme = visible.target.dataset.theme;");
     expect(index).toContain('html.js .reveal {');
     expect(index).toContain('html.js .reveal { transition: none; }');
+    expect(index).not.toContain('.reveal:not(.is-visible) .round-divider');
     expect(index).toContain('@media (prefers-reduced-motion: reduce)');
     expect(index).toContain('--color-jungle-950: #002018;');
     expect(index).toContain('--accent-secondary: var(--color-turquoise-400);');

@@ -417,7 +417,7 @@ function renderCalendarSections(fixtures, slugs) {
     byDate.get(date).push({ fixture, slug: slugs[index]?.slug });
   });
 
-  return [...byDate.entries()].map(([date, rows], index) => `<section id="fecha-${date}" class="calendar-day reveal" data-theme="${index % 2 === 0 ? 'jungle' : 'navy'}">
+  return [...byDate.entries()].map(([date, rows], index) => `<section id="fecha-${date}" class="calendar-day" data-theme="${index % 2 === 0 ? 'jungle' : 'navy'}">
     <div class="round-divider">${escapeHtml(fullDate(date))}</div>
     <div class="match-grid">
       ${rows.map(({ fixture, slug }) => renderMatchCard(fixture, slug)).join('\n')}
@@ -708,7 +708,10 @@ h2 { font-size: var(--step-2); }
 .filter-status button { min-height: 40px; padding: .45rem .8rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); background: var(--surface-card-strong); color: var(--text-primary); font-size: var(--step--1); font-weight: 900; }
 .calendar.is-filtered .match-card[hidden], .calendar.is-filtered .calendar-day[hidden] { display: none; }
 .section-heading { margin-bottom: var(--space-m); }
-.round-divider { margin: var(--space-l) 0 var(--space-s); padding: .6rem 1rem; border-radius: var(--radius-pill); background: linear-gradient(90deg, rgba(244,189,79,.18), rgba(0,198,163,.12)); color: var(--accent-primary); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+.calendar-day { scroll-margin-top: calc(var(--site-header-sticky-offset, 3rem) + 5rem); }
+.calendar-day + .calendar-day { margin-top: var(--space-m); }
+.round-divider { margin: var(--space-m) 0 var(--space-s); padding: .6rem 1rem; border-radius: var(--radius-pill); background: linear-gradient(90deg, rgba(244,189,79,.18), rgba(0,198,163,.12)); color: var(--accent-primary); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+.calendar-day:first-child .round-divider { margin-top: 0; }
 .match-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-m); }
 @media (min-width: 768px) { .match-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (min-width: 992px) { .match-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
@@ -750,9 +753,9 @@ h2 { font-size: var(--step-2); }
 .reveal.is-visible .digital-ball--left { transform: translateX(0) rotate(8deg); }
 .reveal.is-visible .digital-ball--right { transform: translateX(0) rotate(-8deg); }
 html.js .reveal { transition: none; }
-html.js .section-heading, html.js .round-divider, html.js .match-section > .section-kicker { transition: transform var(--duration-slow) var(--ease-out-expo), opacity var(--duration-slow) var(--ease-out-expo); }
-html.js .reveal:not(.is-visible) .section-heading, html.js .reveal:not(.is-visible) .round-divider, html.js .reveal:not(.is-visible).match-section > .section-kicker { opacity: .001; transform: translateY(-.75rem); }
-@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; } html.js .reveal:not(.is-visible) .section-heading, html.js .reveal:not(.is-visible) .round-divider, html.js .reveal:not(.is-visible).match-section > .section-kicker { opacity: 1; transform: none; } .digital-ball { display: none; } }
+html.js .section-heading, html.js .match-section > .section-kicker { transition: transform var(--duration-slow) var(--ease-out-expo), opacity var(--duration-slow) var(--ease-out-expo); }
+html.js .reveal:not(.is-visible) .section-heading, html.js .reveal:not(.is-visible).match-section > .section-kicker { opacity: .001; transform: translateY(-.75rem); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; } html.js .reveal:not(.is-visible) .section-heading, html.js .reveal:not(.is-visible).match-section > .section-kicker { opacity: 1; transform: none; } .digital-ball { display: none; } }
 `;
 
 const COMING_SOON_CSS = `
