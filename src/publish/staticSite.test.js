@@ -83,7 +83,7 @@ describe('publish/staticSite', () => {
       affiliateUrls: AFFILIATE_URLS,
     });
     expect(existsSync(outDir)).toBe(true);
-    expect(existsSync(join(outDir, 'assets', 'quiniela-2026-mark.svg'))).toBe(true);
+    expect(existsSync(join(outDir, 'public', 'PredictaGol_Logo.png'))).toBe(true);
     expect(existsSync(join(outDir, 'staticwebapp.config.json'))).toBe(true);
   });
 
@@ -156,7 +156,7 @@ describe('publish/staticSite', () => {
 
     const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
     expect(index).toContain('class="site-header"');
-    expect(index).toContain('src="assets/quiniela-2026-mark.svg"');
+    expect(index).toContain('src="public/PredictaGol_Logo.png"');
     expect(index).toContain('class="site-logo__text">Quiniela 2026</span>');
     expect(index).not.toContain('digitalhub.fifa.com');
     expect(index).toContain('class="date-tabs');
@@ -193,7 +193,7 @@ describe('publish/staticSite', () => {
     const match = readFileSync(join(outDir, 'partido-1-2026-06-11-mexico-vs-sudafrica.html'), 'utf-8');
     expect(match).toContain('"@type":"SportsEvent"');
     expect(match).toContain('class="match-hero hero-match reveal theme-section" data-theme="jungle"');
-    expect(match).toContain('src="assets/quiniela-2026-mark.svg"');
+    expect(match).toContain('src="public/PredictaGol_Logo.png"');
     expect(match).toContain("const revealItems = [...document.querySelectorAll('.reveal')];");
     expect(match).toContain('Pronóstico y momios');
     expect(match).toContain('Próximamente: actualizaremos esta sección');
@@ -277,11 +277,11 @@ describe('publish/staticSite', () => {
     const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
     const outputFiles = readdirSync(outDir).sort();
 
-    expect(outputFiles).toEqual(['assets', 'index.html', 'sitemap.xml', 'staticwebapp.config.json']);
-    expect(existsSync(join(outDir, 'assets', 'quiniela-2026-mark.svg'))).toBe(true);
+    expect(outputFiles).toEqual(['index.html', 'public', 'sitemap.xml', 'staticwebapp.config.json']);
+    expect(existsSync(join(outDir, 'public', 'PredictaGol_Logo.png'))).toBe(true);
     expect(index).toContain('Próximamente');
     expect(index).toContain('Predictagol · Mundial 2026');
-    expect(index).toContain('src="assets/quiniela-2026-mark.svg"');
+    expect(index).toContain('src="public/PredictaGol_Logo.png"');
     expect(index).toContain('<link rel="canonical" href="https://predictagol.com/">');
     expect(index).toContain('--color-navy-950: #020f2a;');
     expect(index).toContain('.coming-soon-hero');
@@ -305,9 +305,9 @@ describe('publish/staticSite', () => {
     const sitemap = readFileSync(join(outDir, 'comingsoon', 'sitemap.xml'), 'utf-8');
 
     expect(existsSync(join(outDir, 'index.html'))).toBe(false);
-    expect(existsSync(join(outDir, 'comingsoon', 'assets', 'quiniela-2026-mark.svg'))).toBe(true);
+    expect(existsSync(join(outDir, 'comingsoon', 'public', 'PredictaGol_Logo.png'))).toBe(true);
     expect(index).toContain('Próximamente');
-    expect(index).toContain('src="assets/quiniela-2026-mark.svg"');
+    expect(index).toContain('src="public/PredictaGol_Logo.png"');
     expect(index).toContain('<link rel="canonical" href="https://blue-plant-0287c640f.7.azurestaticapps.net/comingsoon/">');
     expect(sitemap).toContain('<loc>https://blue-plant-0287c640f.7.azurestaticapps.net/comingsoon/</loc>');
   });

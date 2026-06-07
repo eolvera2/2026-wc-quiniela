@@ -7,15 +7,15 @@
  * Reference: docs/plans/2026-06-01-phase2-live-service-integration-implementation.md Task 9/12
  */
 
-import { copyFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { injectAffiliateLinks } from './affiliateInjector.js';
 import { DISCLAIMER_FOOTER } from '../generate/prompt.js';
 import { generateSitemap } from './sitemap.js';
 import { decorateTeam, isPlaceholderTeamName, teamAnchorId } from '../data/worldCupTeams.js';
 
-const SITE_ASSET_DIR = 'assets';
-const BRAND_MARK_FILENAME = 'quiniela-2026-mark.svg';
+const PUBLIC_ASSET_DIR = 'public';
+const BRAND_MARK_PATH = 'public/PredictaGol_Logo.png';
 
 /**
  * Builds a URL-safe slug from article type and team names.
@@ -154,13 +154,14 @@ export function buildComingSoonSite({ siteBaseUrl = 'https://predictagol.com', o
 // ---------------------------------------------------------------------------
 
 function copyStaticAssets(outputDir) {
-  const assetDir = join(outputDir, SITE_ASSET_DIR);
-  mkdirSync(assetDir, { recursive: true });
-  copyFileSync(new URL(`./assets/${BRAND_MARK_FILENAME}`, import.meta.url), join(assetDir, BRAND_MARK_FILENAME));
+  const publicSource = new URL('../../public/', import.meta.url);
+  if (existsSync(publicSource)) {
+    cpSync(publicSource, join(outputDir, PUBLIC_ASSET_DIR), { recursive: true });
+  }
 
   const staticWebAppConfig = new URL('../../staticwebapp.config.json', import.meta.url);
   if (existsSync(staticWebAppConfig)) {
-    copyFileSync(staticWebAppConfig, join(outputDir, 'staticwebapp.config.json'));
+    cpSync(staticWebAppConfig, join(outputDir, 'staticwebapp.config.json'));
   }
 }
 
@@ -227,7 +228,7 @@ function renderComingSoonPage({ canonicalUrl }) {
     <section class="coming-soon-hero reveal theme-section" data-theme="navy" aria-labelledby="coming-soon-title">
       ${renderDigitalBalls()}
       <div class="coming-soon-hero__card">
-        <img class="coming-soon-hero__mark" src="${SITE_ASSET_DIR}/${BRAND_MARK_FILENAME}" alt="" width="96" height="96">
+        <img class="coming-soon-hero__mark" src="${BRAND_MARK_PATH}" alt="" width="96" height="96">
         <p class="eyebrow">Predictagol · Mundial 2026</p>
         <h1 id="coming-soon-title">Próximamente</h1>
         <p class="coming-soon-hero__copy">Estamos preparando una experiencia para vivir la quiniela del Mundial con calendario, datos y pronósticos en español.</p>
@@ -467,7 +468,7 @@ function renderMatchCard(fixture, slug) {
 function renderSiteHeader() {
   return `<header class="site-header">
     <a class="site-logo" href="index.html" aria-label="Quiniela 2026 inicio">
-      <img class="site-logo__mark" src="${SITE_ASSET_DIR}/${BRAND_MARK_FILENAME}" alt="" width="40" height="40">
+      <img class="site-logo__mark" src="${BRAND_MARK_PATH}" alt="" width="40" height="40">
       <span class="site-logo__text">Quiniela 2026</span>
     </a>
     <nav aria-label="Navegación principal">
@@ -496,7 +497,7 @@ function renderSiteFooter() {
 function renderComingSoonHeader() {
   return `<header class="site-header site-header--simple">
     <a class="site-logo" href="index.html" aria-label="Predictagol inicio">
-      <img class="site-logo__mark" src="${SITE_ASSET_DIR}/${BRAND_MARK_FILENAME}" alt="" width="40" height="40">
+      <img class="site-logo__mark" src="${BRAND_MARK_PATH}" alt="" width="40" height="40">
       <span class="site-logo__text">Predictagol</span>
     </a>
   </header>`;
@@ -679,7 +680,7 @@ a { color: var(--text-link); }
 .site-header { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; gap: var(--space-s); padding: .5rem var(--gutter); background: rgba(2, 15, 42, .76); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border-subtle); box-shadow: 0 10px 40px rgba(0,0,0,.18); transition: background var(--duration-med) var(--ease-out-expo), padding var(--duration-med) var(--ease-out-expo); }
 .site-header.is-scrolled { padding-block: .35rem; background: rgba(2, 15, 42, .94); }
 .site-logo { display: inline-flex; align-items: center; gap: .55rem; font-family: var(--font-display); font-weight: 900; text-transform: uppercase; text-decoration: none; color: var(--text-primary); letter-spacing: .08em; }
-.site-logo__mark { width: 2.5rem; height: 2.5rem; border-radius: .75rem; box-shadow: 0 0 0 1px rgba(255,255,255,.18), 0 10px 24px rgba(0,0,0,.25); }
+.site-logo__mark { width: 2.5rem; height: 2.5rem; padding: .18rem; border-radius: .75rem; background: rgba(2, 15, 42, .96); object-fit: contain; box-shadow: 0 0 0 1px rgba(255,255,255,.18), 0 10px 24px rgba(0,0,0,.25); }
 .site-logo__text { white-space: nowrap; }
 .site-header nav, .site-footer nav { display: flex; flex-wrap: wrap; gap: var(--space-s); }
 .site-header a, .site-footer a { color: var(--text-primary); text-decoration: none; font-weight: 700; }
@@ -772,7 +773,7 @@ const COMING_SOON_CSS = `
 .coming-soon-hero::before { content: ""; position: absolute; inset: 0; opacity: .24; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 3.75rem 3.75rem; mask-image: radial-gradient(circle at center, #000, transparent 72%); }
 .coming-soon-hero__card { position: relative; z-index: 1; width: min(100%, 64rem); padding: clamp(2rem, 6vw, 5rem); border: 1px solid rgba(244,189,79,.28); border-radius: clamp(1.25rem, 3vw, 2rem); background: linear-gradient(135deg, rgba(255,255,255,.13), rgba(255,255,255,.05)); box-shadow: var(--shadow-card), inset 0 1px rgba(255,255,255,.12); text-align: center; overflow: hidden; }
 .coming-soon-hero__card::after { content: ""; position: absolute; inset: auto -8rem -10rem auto; width: 22rem; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(0,198,163,.24), transparent 62%); pointer-events: none; }
-.coming-soon-hero__mark { width: clamp(4.5rem, 10vw, 7.5rem); height: auto; margin-bottom: var(--space-s); border-radius: 1.4rem; box-shadow: 0 0 0 1px rgba(255,255,255,.2), 0 20px 42px rgba(0,0,0,.34); }
+.coming-soon-hero__mark { width: clamp(4.5rem, 10vw, 7.5rem); height: auto; padding: .35rem; margin-bottom: var(--space-s); border-radius: 1.4rem; background: rgba(2, 15, 42, .96); object-fit: contain; box-shadow: 0 0 0 1px rgba(255,255,255,.2), 0 20px 42px rgba(0,0,0,.34); }
 .coming-soon-hero h1 { margin: .1em 0 .18em; font-size: clamp(3.5rem, 13vw, 11rem); line-height: .86; color: var(--color-white); text-shadow: 0 0 32px rgba(244,189,79,.22); }
 .coming-soon-hero__copy { max-width: 44rem; margin: 0 auto var(--space-m); color: var(--text-secondary); font-size: var(--step-1); }
 .coming-soon-hero__badges { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-xs); }
