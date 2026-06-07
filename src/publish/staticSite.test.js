@@ -213,10 +213,15 @@ describe('publish/staticSite', () => {
     expect(match).toContain('src="public/PredictaGol_Logo.png"');
     expect(match).toContain('class="site-logo__text brand-wordmark">PREDICTAGOL</span>');
     expect(match).toContain('<strong class="brand-wordmark">PREDICTAGOL</strong>');
+    expect(match).toContain('.team-name { display: inline-flex; align-items: center; gap: .35rem; vertical-align: middle; }');
+    expect(match).toContain('.match-hero h1 .team-flag { width: clamp(2rem, 3.7vw, 3.9rem); height: auto; border-radius: .22rem; }');
+    expect(match).toContain('.team-chip { display: inline-flex; align-items: center;');
+    expect(match).toContain('.team-chip .team-flag { width: 1.7rem; height: 1.275rem; }');
     expect(match).toContain("const revealItems = [...document.querySelectorAll('.reveal')];");
     expect(match).toContain('Pronóstico y momios');
     expect(match).toContain('Próximamente: actualizaremos esta sección');
     expect(match).toContain('Tu quiniela');
+    expect(match).not.toContain('Todos los enlaces de afiliados están marcados con rel="sponsored".');
   });
 
   it('renders Spanish country names, flags, and exactly 48 non-placeholder teams', () => {

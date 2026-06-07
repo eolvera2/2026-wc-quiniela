@@ -89,6 +89,7 @@ describe('prompt', () => {
 
     it('contains affiliate disclosure', () => {
       expect(DISCLAIMER_FOOTER).toContain('comisión');
+      expect(DISCLAIMER_FOOTER).not.toContain('Todos los enlaces de afiliados están marcados con rel="sponsored".');
     });
 
     it('contains age gate', () => {

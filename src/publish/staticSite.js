@@ -530,9 +530,9 @@ function fixtureTeam(fixture, side) {
 
 function renderTeamName(team) {
   const flag = team?.flag && !team.isPlaceholder
-    ? `<img class="team-flag" src="${escapeHtml(flagImageUrl(team.flag))}" alt="" width="24" height="18" loading="lazy"> `
+    ? `<img class="team-flag" src="${escapeHtml(flagImageUrl(team.flag))}" alt="" width="24" height="18" loading="lazy">`
     : '';
-  return `${flag}<span class="team-name">${escapeHtml(team?.name || '')}</span>`;
+  return `<span class="team-name">${flag}<span class="team-name__label">${escapeHtml(team?.name || '')}</span></span>`;
 }
 
 function flagImageUrl(flagCode) {
@@ -738,7 +738,7 @@ h2 { font-size: var(--step-2); }
 .team-summaries__grid { display: grid; grid-template-columns: 1fr; gap: var(--space-m); }
 @media (min-width: 768px) { .team-summaries__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .team-card { padding: var(--space-m); }
-.team-chip { display: inline-flex; padding: .4rem .75rem; border-radius: var(--radius-pill); background: var(--surface-card-strong); font-weight: 900; }
+.team-chip { display: inline-flex; align-items: center; padding: .4rem .75rem; border-radius: var(--radius-pill); background: var(--surface-card-strong); font-weight: 900; }
 .teams-shortcut { position: relative; margin-top: var(--space-l); padding-block: var(--space-xl); overflow: hidden; scroll-margin-top: var(--sticky-anchor-offset, 8rem); background: radial-gradient(circle at 15% 20%, rgba(0,198,163,.22), transparent 22rem), radial-gradient(circle at 85% 15%, rgba(244,189,79,.18), transparent 24rem), linear-gradient(135deg, rgba(0,48,32,.96), rgba(2,15,42,.94)); }
 .teams-shortcut::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .18; background-image: radial-gradient(circle, rgba(244,189,79,.88) 0 .14rem, transparent .16rem); background-size: 2.6rem 2.6rem; mask-image: linear-gradient(115deg, transparent, #000 20%, transparent 70%); }
 .teams-shortcut__inner { position: relative; z-index: 1; }
@@ -746,7 +746,11 @@ h2 { font-size: var(--step-2); }
 .team-pill { display: inline-flex; padding: .5rem .8rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); background: linear-gradient(135deg, rgba(255,255,255,.11), rgba(255,255,255,.05)); color: var(--text-primary); font-weight: 800; text-decoration: none; transition: transform var(--duration-med) var(--ease-out-expo), background var(--duration-med) var(--ease-out-expo); }
 .team-pill:hover { transform: translateY(-1px); background: var(--surface-card-strong); }
 .team-pill:target { background: var(--accent-primary); color: var(--color-navy-950); }
-.team-flag { display: inline-block; width: 1.5rem; height: 1.125rem; margin-right: .25rem; border-radius: .125rem; object-fit: cover; vertical-align: -.15em; box-shadow: 0 0 0 1px rgba(255,255,255,.25); }
+.team-name { display: inline-flex; align-items: center; gap: .35rem; vertical-align: middle; }
+.team-flag { display: block; flex: 0 0 auto; width: 1.5rem; height: 1.125rem; border-radius: .125rem; object-fit: cover; box-shadow: 0 0 0 1px rgba(255,255,255,.25); }
+.match-hero h1 .team-name { align-items: center; gap: .6rem; }
+.match-hero h1 .team-flag { width: clamp(2rem, 3.7vw, 3.9rem); height: auto; border-radius: .22rem; }
+.team-chip .team-flag { width: 1.7rem; height: 1.275rem; }
 .match-article { color: var(--text-secondary); }
 .match-article h2 { color: var(--text-primary); }
 .coming-soon { border-left: 4px solid var(--accent-primary); padding-left: var(--space-s); }

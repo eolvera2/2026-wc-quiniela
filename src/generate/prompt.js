@@ -23,7 +23,7 @@ export const DISCLAIMER_FOOTER = `
   <p><strong>Aviso legal:</strong> Este sitio es de entretenimiento e información únicamente. No somos operadores de juego. Las apuestas conllevan riesgos; apuesta solo lo que puedas permitirte perder. Ninguna predicción está garantizada. Debes tener 18+ años (21+ en algunos estados de EE.UU.) para participar en apuestas donde sea legal.</p>
   <p><strong>Disclaimer:</strong> This site is for entertainment and informational purposes only. We are not a gambling operator. Gambling involves risk; only bet what you can afford to lose. No prediction is guaranteed. You must be 18+ (21+ in some US states) where gambling is legal.</p>
   <p><strong>Juego responsable:</strong> Si necesitas ayuda, contacta: <a href="tel:18006973735">1-800-MY-RESET (1-800-697-3735)</a> (EE.UU., bilingüe 24/7) | <a href="https://cij.org.mx" rel="noopener">cij.org.mx</a> (México, CONADIC/CIJ)</p>
-  <p><strong>Divulgación de afiliados:</strong> Recibimos una comisión si haces clic en ciertos enlaces y te registras, sin costo adicional para ti. Todos los enlaces de afiliados están marcados con rel="sponsored".</p>
+  <p><strong>Divulgación de afiliados:</strong> Recibimos una comisión si haces clic en ciertos enlaces y te registras, sin costo adicional para ti.</p>
 </div>
 `.trim();
 
