@@ -395,7 +395,7 @@ function renderIndexPage({ fixtures, teams, slugs }) {
     </section>
     ${dateTabs}
     <section id="partidos" class="calendar container-wide reveal theme-section" data-theme="jungle">
-      <div class="section-heading">
+      <div class="section-heading calendar__heading">
         <p class="eyebrow">Partidos</p>
         <h2>Calendario de partidos</h2>
       </div>
@@ -716,7 +716,8 @@ h2 { font-size: var(--step-2); }
 .date-tab.is-active { background: var(--accent-primary); color: var(--color-navy-950); }
 .date-tab__day { display: block; font-size: var(--step--2); text-transform: uppercase; }
 .date-tab__date { display: block; font-size: var(--step--1); font-weight: 900; }
-.calendar { padding: .65rem 0 var(--space-l); scroll-margin-top: var(--sticky-anchor-offset, 8rem); }
+.calendar { padding: .2rem 0 var(--space-l); scroll-margin-top: var(--sticky-anchor-offset, 8rem); }
+.calendar__heading { position: absolute; width: 1px; height: 1px; margin: 0; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .filter-status { display: none; align-items: center; gap: var(--space-xs); margin-bottom: var(--space-m); padding: var(--space-s); border: 1px solid var(--border-subtle); border-radius: var(--radius-l); background: var(--surface-card); }
 .filter-status.is-active { display: flex; }
 .filter-status button { min-height: 40px; padding: .45rem .8rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); background: var(--surface-card-strong); color: var(--text-primary); font-size: var(--step--1); font-weight: 900; }
@@ -796,16 +797,19 @@ const COMING_SOON_CSS = `
 const SITE_CHROME_SCRIPT = `
 (() => {
   const header = document.querySelector('.site-header');
+  const homeHero = document.querySelector('.home-hero');
   const dateTabs = document.querySelector('.date-tabs');
   const revealItems = [...document.querySelectorAll('.reveal')];
   const themedSections = [...document.querySelectorAll('[data-theme]')];
 
   const setStickyMetrics = () => {
     const headerHeight = header ? header.getBoundingClientRect().height : 0;
+    const heroHeight = homeHero ? homeHero.getBoundingClientRect().height : 0;
     const dateTabsHeight = dateTabs ? dateTabs.getBoundingClientRect().height : 0;
     document.documentElement.style.setProperty('--site-header-sticky-offset', Math.max(0, Math.ceil(headerHeight)) + 'px');
     document.documentElement.style.setProperty('--date-tabs-sticky-height', Math.max(0, Math.ceil(dateTabsHeight)) + 'px');
     document.documentElement.style.setProperty('--sticky-anchor-offset', Math.max(0, Math.ceil(headerHeight + dateTabsHeight)) + 'px');
+    document.documentElement.style.setProperty('--schedule-stack-height', Math.max(0, Math.ceil(headerHeight + heroHeight + dateTabsHeight)) + 'px');
   };
 
   const setHeaderScrollState = () => {
@@ -820,6 +824,7 @@ const SITE_CHROME_SCRIPT = `
   header?.addEventListener('transitionend', setStickyMetrics);
   if ('ResizeObserver' in window) {
     if (header) new ResizeObserver(setStickyMetrics).observe(header);
+    if (homeHero) new ResizeObserver(setStickyMetrics).observe(homeHero);
     if (dateTabs) new ResizeObserver(setStickyMetrics).observe(dateTabs);
   }
 

@@ -176,7 +176,9 @@ describe('publish/staticSite', () => {
     expect(index).toContain("document.documentElement.style.setProperty('--site-header-sticky-offset'");
     expect(index).toContain("document.documentElement.style.setProperty('--date-tabs-sticky-height'");
     expect(index).toContain("document.documentElement.style.setProperty('--sticky-anchor-offset'");
+    expect(index).toContain("document.documentElement.style.setProperty('--schedule-stack-height'");
     expect(index).toContain('new ResizeObserver(setStickyMetrics).observe(header);');
+    expect(index).toContain('new ResizeObserver(setStickyMetrics).observe(homeHero);');
     expect(index).toContain('new ResizeObserver(setStickyMetrics).observe(dateTabs);');
     expect(index).toContain('class="home-hero hero-match reveal theme-section" data-theme="navy"');
     expect(index).toContain('id="equipos" class="teams-shortcut reveal theme-section" data-theme="festival"');
@@ -190,7 +192,9 @@ describe('publish/staticSite', () => {
     expect(footer).not.toContain('href="index.html#equipos"');
     expect(index).toContain('id="fecha-2026-06-11" class="calendar-day" data-theme="jungle"');
     expect(index).toContain('jueves, 11 de junio');
-    expect(index).toContain('.calendar { padding: .65rem 0 var(--space-l); scroll-margin-top: var(--sticky-anchor-offset, 8rem); }');
+    expect(index).toContain('class="section-heading calendar__heading"');
+    expect(index).toContain('.calendar { padding: .2rem 0 var(--space-l); scroll-margin-top: var(--sticky-anchor-offset, 8rem); }');
+    expect(index).toContain('.calendar__heading { position: absolute; width: 1px; height: 1px;');
     expect(index).toContain('.calendar-day { scroll-margin-top: var(--sticky-anchor-offset, 8rem); }');
     expect(index).toContain('.calendar-day + .calendar-day { margin-top: var(--space-m); }');
     expect(index).not.toContain('class="calendar-day reveal"');
