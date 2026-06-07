@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       publish_target:
-        description: 'What to build. coming_soon and manual demo deploy to production.'
+        description: 'What to build. Only coming_soon deploys to production.'
         required: false
         type: choice
         default: coming_soon
@@ -70,7 +70,7 @@ jobs:
         run: node scripts/run-cadence.js
 
       - name: Deploy to Azure Static Web Apps
-        if: ${{ success() && (github.event_name == 'schedule' || inputs.publish_target == 'coming_soon' || inputs.publish_target == 'demo') }}
+        if: ${{ success() && (github.event_name == 'schedule' || inputs.publish_target == 'coming_soon') }}
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.SWA_DEPLOYMENT_TOKEN }}
