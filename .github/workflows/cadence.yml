@@ -7,10 +7,10 @@ on:
   workflow_dispatch:
     inputs:
       publish_target:
-        description: 'What to build. Only coming_soon deploys to production.'
+        description: 'What to build. Demo/full site deploys to Azure root; coming soon is available at /comingsoon.'
         required: false
         type: choice
-        default: coming_soon
+        default: demo
         options:
           - coming_soon
           - demo
@@ -45,15 +45,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build Coming Soon site
-        if: ${{ github.event_name == 'schedule' || inputs.publish_target == 'coming_soon' }}
+      - name: Build demo site
+        if: ${{ github.event_name == 'schedule' || inputs.publish_target == 'demo' }}
         env:
           SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
-        run: npm run build:coming-soon
-
-      - name: Build demo site (internal only)
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_target == 'demo' }}
         run: node scripts/seed-demo.js
+
+      - name: Build Coming Soon page only
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_target == 'coming_soon' }}
+        env:
+          SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
+          BASE_PATH: /comingsoon
+        run: npm run build:coming-soon
 
       - name: Run cadence pipeline (internal only)
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_target == 'live' }}
@@ -70,7 +73,7 @@ jobs:
         run: node scripts/run-cadence.js
 
       - name: Deploy to Azure Static Web Apps
-        if: ${{ success() && (github.event_name == 'schedule' || inputs.publish_target == 'coming_soon') }}
+        if: ${{ success() && (github.event_name == 'schedule' || inputs.publish_target == 'demo') }}
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.SWA_DEPLOYMENT_TOKEN }}

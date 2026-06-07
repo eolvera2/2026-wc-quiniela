@@ -292,4 +292,23 @@ describe('publish/staticSite', () => {
     const sitemap = readFileSync(join(outDir, 'sitemap.xml'), 'utf-8');
     expect(sitemap).toContain('<loc>https://predictagol.com/</loc>');
   });
+
+  it('buildComingSoonSite can write the landing page under /comingsoon', () => {
+    const outDir = join(tmpDir, 'dist');
+    buildComingSoonSite({
+      siteBaseUrl: 'https://blue-plant-0287c640f.7.azurestaticapps.net',
+      outputDir: outDir,
+      basePath: '/comingsoon',
+    });
+
+    const index = readFileSync(join(outDir, 'comingsoon', 'index.html'), 'utf-8');
+    const sitemap = readFileSync(join(outDir, 'comingsoon', 'sitemap.xml'), 'utf-8');
+
+    expect(existsSync(join(outDir, 'index.html'))).toBe(false);
+    expect(existsSync(join(outDir, 'comingsoon', 'assets', 'quiniela-2026-mark.svg'))).toBe(true);
+    expect(index).toContain('Próximamente');
+    expect(index).toContain('src="assets/quiniela-2026-mark.svg"');
+    expect(index).toContain('<link rel="canonical" href="https://blue-plant-0287c640f.7.azurestaticapps.net/comingsoon/">');
+    expect(sitemap).toContain('<loc>https://blue-plant-0287c640f.7.azurestaticapps.net/comingsoon/</loc>');
+  });
 });

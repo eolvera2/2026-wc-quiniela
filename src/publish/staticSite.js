@@ -134,16 +134,19 @@ export function buildSite({ fixtures: providedFixtures, teams: providedTeams, ar
   return slugs;
 }
 
-export function buildComingSoonSite({ siteBaseUrl = 'https://predictagol.com', outputDir = 'dist' } = {}) {
-  mkdirSync(outputDir, { recursive: true });
-  copyStaticAssets(outputDir);
+export function buildComingSoonSite({ siteBaseUrl = 'https://predictagol.com', outputDir = 'dist', basePath = '' } = {}) {
+  const normalizedBasePath = normalizePath(basePath);
+  const pageOutputDir = normalizedBasePath ? join(outputDir, normalizedBasePath) : outputDir;
+  mkdirSync(pageOutputDir, { recursive: true });
+  copyStaticAssets(pageOutputDir);
 
   const canonicalBaseUrl = normalizeBaseUrl(siteBaseUrl);
-  const indexHtml = renderComingSoonPage({ siteBaseUrl: canonicalBaseUrl });
-  writeFileSync(join(outputDir, 'index.html'), indexHtml, 'utf-8');
+  const canonicalUrl = `${canonicalBaseUrl}${normalizedBasePath ? `/${normalizedBasePath}/` : '/'}`;
+  const indexHtml = renderComingSoonPage({ canonicalUrl });
+  writeFileSync(join(pageOutputDir, 'index.html'), indexHtml, 'utf-8');
 
-  const sitemapXml = generateSitemap([{ url: `${canonicalBaseUrl}/`, lastmod: '2026-01-01' }]);
-  writeFileSync(join(outputDir, 'sitemap.xml'), sitemapXml, 'utf-8');
+  const sitemapXml = generateSitemap([{ url: canonicalUrl, lastmod: '2026-01-01' }]);
+  writeFileSync(join(pageOutputDir, 'sitemap.xml'), sitemapXml, 'utf-8');
 }
 
 // ---------------------------------------------------------------------------
@@ -171,6 +174,10 @@ function escapeHtml(str) {
 
 function normalizeBaseUrl(siteBaseUrl) {
   return String(siteBaseUrl || 'https://predictagol.com').replace(/\/+$/g, '');
+}
+
+function normalizePath(basePath) {
+  return String(basePath || '').replace(/^\/+|\/+$/g, '');
 }
 
 function renderArticlePage({ title, metaDescription, bodyHtml, siteBaseUrl, slug, structuredData = [] }) {
@@ -202,7 +209,7 @@ function renderArticlePage({ title, metaDescription, bodyHtml, siteBaseUrl, slug
 </html>`;
 }
 
-function renderComingSoonPage({ siteBaseUrl }) {
+function renderComingSoonPage({ canonicalUrl }) {
   return `<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -210,7 +217,7 @@ function renderComingSoonPage({ siteBaseUrl }) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Predictagol se está preparando para el Mundial 2026. Muy pronto podrás armar tu quiniela y seguir pronósticos partido por partido.">
   <title>Próximamente — Predictagol</title>
-  <link rel="canonical" href="${escapeHtml(siteBaseUrl)}/">
+  <link rel="canonical" href="${escapeHtml(canonicalUrl)}">
   <script>document.documentElement.classList.add('js');</script>
   <style>${GLOBAL_CSS}${COMING_SOON_CSS}</style>
 </head>

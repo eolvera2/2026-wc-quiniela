@@ -34,12 +34,12 @@ const REQUIRED_PATTERNS = [
   { pattern: /if:\s*failure\(\)/, label: 'failure alert step' },
   { pattern: /npm ci/, label: 'npm ci step' },
   { pattern: /publish_target:/, label: 'publish target dispatch input' },
-  { pattern: /default:\s*coming_soon/, label: 'coming soon default dispatch target' },
+  { pattern: /default:\s*demo/, label: 'demo default dispatch target' },
   { pattern: /run:\s*npm run build:coming-soon/, label: 'coming soon build step' },
-  { pattern: /github\.event_name == 'schedule' \|\| inputs\.publish_target == 'coming_soon'/, label: 'scheduled coming soon build' },
-  { pattern: /github\.event_name == 'workflow_dispatch' && inputs\.publish_target == 'demo'/, label: 'manual demo build' },
+  { pattern: /github\.event_name == 'schedule' \|\| inputs\.publish_target == 'demo'/, label: 'scheduled demo build' },
+  { pattern: /github\.event_name == 'schedule' \|\| inputs\.publish_target == 'demo'/, label: 'scheduled/manual demo build' },
   { pattern: /github\.event_name == 'workflow_dispatch' && inputs\.publish_target == 'live'/, label: 'manual live cadence build' },
-  { pattern: /success\(\) && \(github\.event_name == 'schedule' \|\| inputs\.publish_target == 'coming_soon'\)/, label: 'production deploy limited to coming soon' },
+  { pattern: /success\(\) && \(github\.event_name == 'schedule' \|\| inputs\.publish_target == 'demo'\)/, label: 'demo deploy enabled' },
   { pattern: /run-cadence\.js/, label: 'run-cadence.js execution' },
 ];
 

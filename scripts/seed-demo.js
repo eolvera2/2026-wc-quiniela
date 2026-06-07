@@ -8,12 +8,13 @@
  */
 
 import { openDb, closeDb } from '../src/db/db.js';
-import { buildSite } from '../src/publish/staticSite.js';
+import { buildComingSoonSite, buildSite } from '../src/publish/staticSite.js';
 import { seedStaticData } from './seed-static.js';
 import { rmSync } from 'node:fs';
 
 const db = openDb(':memory:');
 const outputDir = 'dist';
+const siteBaseUrl = process.env.SITE_BASE_URL || 'https://wc26quiniela.example.com';
 
 try {
   const seedResult = seedStaticData(db);
@@ -51,7 +52,7 @@ try {
     fixtures,
     teams,
     articles: [],
-    siteBaseUrl: 'https://wc26quiniela.example.com',
+    siteBaseUrl,
     outputDir,
     affiliateUrls: {
       caliente: '',
@@ -59,9 +60,10 @@ try {
       skimlinks: '',
     },
   });
+  buildComingSoonSite({ siteBaseUrl, outputDir, basePath: '/comingsoon' });
 
   console.log(`\n✓ Static demo seed: ${seedResult.fixtures} fixtures, ${seedResult.teams} teams`);
-  console.log(`✓ Demo site built — ${slugs.length + 1} HTML pages plus sitemap written to dist/\n`);
+  console.log(`✓ Demo site built — ${slugs.length + 2} HTML pages plus sitemap and /comingsoon written to dist/\n`);
   console.log('Preview options:');
   console.log('  npx swa start dist');
   console.log('  start dist\\index.html  (Windows)\n');

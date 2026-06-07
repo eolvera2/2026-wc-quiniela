@@ -8,9 +8,10 @@ import { buildComingSoonSite } from '../src/publish/staticSite.js';
 
 const outputDir = process.env.OUTPUT_DIR || 'dist';
 const siteBaseUrl = process.env.SITE_BASE_URL || 'https://predictagol.com';
+const basePath = process.env.BASE_PATH ?? '/comingsoon';
 
 rmSync(outputDir, { recursive: true, force: true });
 
-buildComingSoonSite({ siteBaseUrl, outputDir });
+buildComingSoonSite({ siteBaseUrl, outputDir, basePath });
 
-console.log(`✓ Coming Soon site built for ${siteBaseUrl} in ${outputDir}`);
+console.log(`✓ Coming Soon site built for ${siteBaseUrl}${basePath} in ${outputDir}`);
