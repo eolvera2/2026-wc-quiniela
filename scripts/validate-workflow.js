@@ -39,7 +39,7 @@ const REQUIRED_PATTERNS = [
   { pattern: /github\.event_name == 'schedule' \|\| inputs\.publish_target == 'coming_soon'/, label: 'scheduled coming soon build' },
   { pattern: /github\.event_name == 'workflow_dispatch' && inputs\.publish_target == 'demo'/, label: 'manual demo build' },
   { pattern: /github\.event_name == 'workflow_dispatch' && inputs\.publish_target == 'live'/, label: 'manual live cadence build' },
-  { pattern: /success\(\) && \(github\.event_name == 'schedule' \|\| inputs\.publish_target == 'coming_soon'\)/, label: 'production deploy limited to coming soon' },
+  { pattern: /success\(\) && \(github\.event_name == 'schedule' \|\| inputs\.publish_target == 'coming_soon' \|\| inputs\.publish_target == 'demo'\)/, label: 'manual demo deploy enabled' },
   { pattern: /run-cadence\.js/, label: 'run-cadence.js execution' },
 ];
 
