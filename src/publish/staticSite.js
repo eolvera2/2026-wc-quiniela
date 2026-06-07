@@ -708,18 +708,18 @@ h2 { font-size: var(--step-2); }
 .button--primary, .match-card__cta { background: var(--action-primary-bg); color: var(--action-primary-text); }
 .button--secondary { border: 1px solid rgba(255,255,255,.35); color: var(--text-primary); }
 .date-tabs { display: flex; gap: .55rem; overflow-x: auto; scroll-snap-type: x proximity; padding: .35rem 0 .55rem; }
-.date-tabs { position: sticky; top: var(--site-header-sticky-offset, 3rem); z-index: 9; background: rgba(2, 15, 42, .94); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border-subtle); box-shadow: 0 0 0 100vmax rgba(2, 15, 42, .94); clip-path: inset(0 -100vmax); }
+.date-tabs { position: sticky; top: calc(var(--site-header-sticky-offset, 3rem) - 1px); z-index: 9; background: rgba(2, 15, 42, .94); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border-subtle); box-shadow: 0 0 0 100vmax rgba(2, 15, 42, .94); clip-path: inset(0 -100vmax); }
 .date-tab { min-width: 5.15rem; scroll-snap-align: start; padding: .38rem .62rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); text-align: center; text-decoration: none; background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.06)); }
 .date-tab.is-active { background: var(--accent-primary); color: var(--color-navy-950); }
 .date-tab__day { display: block; font-size: var(--step--2); text-transform: uppercase; }
 .date-tab__date { display: block; font-size: var(--step--1); font-weight: 900; }
-.calendar { padding-block: var(--space-l); }
+.calendar { padding-block: var(--space-l); scroll-margin-top: var(--sticky-anchor-offset, 8rem); }
 .filter-status { display: none; align-items: center; gap: var(--space-xs); margin-bottom: var(--space-m); padding: var(--space-s); border: 1px solid var(--border-subtle); border-radius: var(--radius-l); background: var(--surface-card); }
 .filter-status.is-active { display: flex; }
 .filter-status button { min-height: 40px; padding: .45rem .8rem; border: 1px solid var(--border-subtle); border-radius: var(--radius-pill); background: var(--surface-card-strong); color: var(--text-primary); font-size: var(--step--1); font-weight: 900; }
 .calendar.is-filtered .match-card[hidden], .calendar.is-filtered .calendar-day[hidden] { display: none; }
 .section-heading { margin-bottom: var(--space-m); }
-.calendar-day { scroll-margin-top: calc(var(--site-header-sticky-offset, 3rem) + 5rem); }
+.calendar-day { scroll-margin-top: var(--sticky-anchor-offset, 8rem); }
 .calendar-day + .calendar-day { margin-top: var(--space-m); }
 .round-divider { margin: var(--space-m) 0 var(--space-s); padding: .6rem 1rem; border-radius: var(--radius-pill); background: linear-gradient(90deg, rgba(244,189,79,.18), rgba(0,198,163,.12)); color: var(--accent-primary); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
 .calendar-day:first-child .round-divider { margin-top: 0; }
@@ -739,7 +739,7 @@ h2 { font-size: var(--step-2); }
 @media (min-width: 768px) { .team-summaries__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .team-card { padding: var(--space-m); }
 .team-chip { display: inline-flex; padding: .4rem .75rem; border-radius: var(--radius-pill); background: var(--surface-card-strong); font-weight: 900; }
-.teams-shortcut { position: relative; margin-top: var(--space-l); padding-block: var(--space-xl); overflow: hidden; background: radial-gradient(circle at 15% 20%, rgba(0,198,163,.22), transparent 22rem), radial-gradient(circle at 85% 15%, rgba(244,189,79,.18), transparent 24rem), linear-gradient(135deg, rgba(0,48,32,.96), rgba(2,15,42,.94)); }
+.teams-shortcut { position: relative; margin-top: var(--space-l); padding-block: var(--space-xl); overflow: hidden; scroll-margin-top: var(--sticky-anchor-offset, 8rem); background: radial-gradient(circle at 15% 20%, rgba(0,198,163,.22), transparent 22rem), radial-gradient(circle at 85% 15%, rgba(244,189,79,.18), transparent 24rem), linear-gradient(135deg, rgba(0,48,32,.96), rgba(2,15,42,.94)); }
 .teams-shortcut::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .18; background-image: radial-gradient(circle, rgba(244,189,79,.88) 0 .14rem, transparent .16rem); background-size: 2.6rem 2.6rem; mask-image: linear-gradient(115deg, transparent, #000 20%, transparent 70%); }
 .teams-shortcut__inner { position: relative; z-index: 1; }
 .team-pill-grid { display: flex; flex-wrap: wrap; gap: var(--space-xs); }
@@ -787,25 +787,31 @@ const COMING_SOON_CSS = `
 const SITE_CHROME_SCRIPT = `
 (() => {
   const header = document.querySelector('.site-header');
+  const dateTabs = document.querySelector('.date-tabs');
   const revealItems = [...document.querySelectorAll('.reveal')];
   const themedSections = [...document.querySelectorAll('[data-theme]')];
 
-  const setStickyOffset = () => {
-    if (!header) return;
-    const headerHeight = header.getBoundingClientRect().height;
-    document.documentElement.style.setProperty('--site-header-sticky-offset', Math.max(0, headerHeight - 2) + 'px');
+  const setStickyMetrics = () => {
+    const headerHeight = header ? header.getBoundingClientRect().height : 0;
+    const dateTabsHeight = dateTabs ? dateTabs.getBoundingClientRect().height : 0;
+    document.documentElement.style.setProperty('--site-header-sticky-offset', Math.max(0, Math.ceil(headerHeight)) + 'px');
+    document.documentElement.style.setProperty('--date-tabs-sticky-height', Math.max(0, Math.ceil(dateTabsHeight)) + 'px');
+    document.documentElement.style.setProperty('--sticky-anchor-offset', Math.max(0, Math.ceil(headerHeight + dateTabsHeight)) + 'px');
   };
 
   const setHeaderScrollState = () => {
     header?.classList.toggle('is-scrolled', window.scrollY > 8);
+    requestAnimationFrame(setStickyMetrics);
   };
 
-  setStickyOffset();
+  setStickyMetrics();
   setHeaderScrollState();
-  window.addEventListener('resize', setStickyOffset);
+  window.addEventListener('resize', setStickyMetrics);
   window.addEventListener('scroll', setHeaderScrollState, { passive: true });
+  header?.addEventListener('transitionend', setStickyMetrics);
   if ('ResizeObserver' in window) {
-    if (header) new ResizeObserver(setStickyOffset).observe(header);
+    if (header) new ResizeObserver(setStickyMetrics).observe(header);
+    if (dateTabs) new ResizeObserver(setStickyMetrics).observe(dateTabs);
   }
 
   if (!('IntersectionObserver' in window)) {

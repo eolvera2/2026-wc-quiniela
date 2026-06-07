@@ -172,12 +172,16 @@ describe('publish/staticSite', () => {
     expect(index).toContain('id="equipo-mexico"');
     expect(index).toContain("querySelectorAll('.match-card[data-team-codes]')");
     expect(index).toContain('.date-tabs { position: sticky;');
-    expect(index).toContain('top: var(--site-header-sticky-offset, 3rem);');
+    expect(index).toContain('top: calc(var(--site-header-sticky-offset, 3rem) - 1px);');
     expect(index).toContain("document.documentElement.style.setProperty('--site-header-sticky-offset'");
-    expect(index).toContain('new ResizeObserver(setStickyOffset).observe(header);');
+    expect(index).toContain("document.documentElement.style.setProperty('--date-tabs-sticky-height'");
+    expect(index).toContain("document.documentElement.style.setProperty('--sticky-anchor-offset'");
+    expect(index).toContain('new ResizeObserver(setStickyMetrics).observe(header);');
+    expect(index).toContain('new ResizeObserver(setStickyMetrics).observe(dateTabs);');
     expect(index).toContain('class="home-hero hero-match reveal theme-section" data-theme="navy"');
     expect(index).toContain('id="equipos" class="teams-shortcut reveal theme-section" data-theme="festival"');
     expect(index).toContain('class="container-wide teams-shortcut__inner"');
+    expect(index).toContain('scroll-margin-top: var(--sticky-anchor-offset, 8rem);');
     expect(index).not.toContain('Selecciones en el calendario');
     expect(index).not.toContain('La base está precargada');
     const footer = index.slice(index.indexOf('<footer class="site-footer">'), index.indexOf('</footer>') + '</footer>'.length);
@@ -186,6 +190,7 @@ describe('publish/staticSite', () => {
     expect(footer).not.toContain('href="index.html#equipos"');
     expect(index).toContain('id="fecha-2026-06-11" class="calendar-day" data-theme="jungle"');
     expect(index).toContain('jueves, 11 de junio');
+    expect(index).toContain('.calendar-day { scroll-margin-top: var(--sticky-anchor-offset, 8rem); }');
     expect(index).toContain('.calendar-day + .calendar-day { margin-top: var(--space-m); }');
     expect(index).not.toContain('class="calendar-day reveal"');
     expect(index).toContain('class="digital-ball digital-ball--left" aria-hidden="true"');
