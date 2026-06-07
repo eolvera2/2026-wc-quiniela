@@ -441,11 +441,6 @@ function renderTeamsShortcut(teams) {
   return `<section id="equipos" class="teams-shortcut reveal theme-section" data-theme="festival">
     ${renderDigitalBalls()}
     <div class="container-wide teams-shortcut__inner">
-      <div class="section-heading">
-        <p class="eyebrow">Equipos</p>
-        <h2>Selecciones en el calendario</h2>
-        <p>La base está precargada desde datos públicos; los perfiles completos se llenarán conforme haya información confiable.</p>
-      </div>
       <div class="team-pill-grid">
         ${teamList.map((team) => `<a id="${escapeHtml(team.anchorId)}" class="team-pill" href="#${escapeHtml(team.anchorId)}" data-team-code="${escapeHtml(team.code || '')}" data-team-name="${escapeHtml(team.name)}">${renderTeamName(team)}</a>`).join('\n')}
       </div>
@@ -467,9 +462,9 @@ function renderMatchCard(fixture, slug) {
 
 function renderSiteHeader() {
   return `<header class="site-header">
-    <a class="site-logo" href="index.html" aria-label="Quiniela 2026 inicio">
+    <a class="site-logo" href="index.html" aria-label="Predictagol inicio">
       <img class="site-logo__mark" src="${BRAND_MARK_PATH}" alt="" width="40" height="40">
-      <span class="site-logo__text">Quiniela 2026</span>
+      <span class="site-logo__text brand-wordmark">PREDICTAGOL</span>
     </a>
     <nav aria-label="Navegación principal">
       <a href="index.html">Inicio</a>
@@ -487,9 +482,8 @@ function renderDigitalBalls() {
 function renderSiteFooter() {
   return `<footer class="site-footer">
     <div class="container">
-      <strong>Quiniela 2026</strong>
+      <strong class="brand-wordmark">PREDICTAGOL</strong>
       <p>Este sitio no está afiliado con FIFA. Sin apuestas, solo diversión y pronósticos para tu quiniela.</p>
-      <nav aria-label="Footer"><a href="index.html">Inicio</a><a href="index.html#partidos">Partidos</a><a href="index.html#equipos">Equipos</a></nav>
     </div>
   </footer>`;
 }
@@ -498,7 +492,7 @@ function renderComingSoonHeader() {
   return `<header class="site-header site-header--simple">
     <a class="site-logo" href="index.html" aria-label="Predictagol inicio">
       <img class="site-logo__mark" src="${BRAND_MARK_PATH}" alt="" width="40" height="40">
-      <span class="site-logo__text">Predictagol</span>
+      <span class="site-logo__text brand-wordmark">PREDICTAGOL</span>
     </a>
   </header>`;
 }
@@ -506,7 +500,7 @@ function renderComingSoonHeader() {
 function renderComingSoonFooter() {
   return `<footer class="site-footer site-footer--simple">
     <div class="container">
-      <strong>Predictagol</strong>
+      <strong class="brand-wordmark">PREDICTAGOL</strong>
       <p>Este sitio no está afiliado con FIFA. Sin apuestas, solo diversión y pronósticos para tu quiniela.</p>
     </div>
   </footer>`;
@@ -604,6 +598,13 @@ function statusLabel(status) {
 }
 
 const GLOBAL_CSS = `
+@font-face {
+  font-family: "PredictaGol";
+  src: url("public/fonts/PredictaGol-NormalRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 :root {
   --color-navy-950: #020f2a;
   --color-navy-900: #071733;
@@ -643,6 +644,7 @@ const GLOBAL_CSS = `
   --accent-electric: var(--color-lime-400);
   --action-primary-bg: var(--accent-primary);
   --action-primary-text: var(--color-navy-950);
+  --font-brand: "PredictaGol", "Poppins", "Barlow Condensed", system-ui, sans-serif;
   --font-display: "Poppins", "Barlow Condensed", system-ui, sans-serif;
   --font-body: "Noto Sans", "Inter", "Segoe UI", system-ui, sans-serif;
   --step--2: clamp(0.75rem, 0.72rem + 0.12vw, 0.82rem);
@@ -682,6 +684,7 @@ a { color: var(--text-link); }
 .site-logo { display: inline-flex; align-items: center; gap: .55rem; font-family: var(--font-display); font-weight: 900; text-transform: uppercase; text-decoration: none; color: var(--text-primary); letter-spacing: .08em; }
 .site-logo__mark { width: 2.5rem; height: 2.5rem; padding: .18rem; border-radius: .75rem; background: rgba(2, 15, 42, .96); object-fit: contain; box-shadow: 0 0 0 1px rgba(255,255,255,.18), 0 10px 24px rgba(0,0,0,.25); }
 .site-logo__text { white-space: nowrap; }
+.brand-wordmark { font-family: var(--font-brand); font-weight: 400; letter-spacing: .08em; text-transform: uppercase; }
 .site-header nav, .site-footer nav { display: flex; flex-wrap: wrap; gap: var(--space-s); }
 .site-header a, .site-footer a { color: var(--text-primary); text-decoration: none; font-weight: 700; }
 .hero-match { position: relative; padding: var(--space-xl) 0; background: radial-gradient(circle at 15% 20%, rgba(0,198,163,.22), transparent 22rem), radial-gradient(circle at 85% 15%, rgba(244,189,79,.18), transparent 24rem), linear-gradient(135deg, rgba(0,48,32,.96), rgba(2,15,42,.94)); overflow: hidden; }

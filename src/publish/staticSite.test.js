@@ -84,6 +84,7 @@ describe('publish/staticSite', () => {
     });
     expect(existsSync(outDir)).toBe(true);
     expect(existsSync(join(outDir, 'public', 'PredictaGol_Logo.png'))).toBe(true);
+    expect(existsSync(join(outDir, 'public', 'fonts', 'PredictaGol-NormalRegular.ttf'))).toBe(true);
     expect(existsSync(join(outDir, 'staticwebapp.config.json'))).toBe(true);
   });
 
@@ -157,7 +158,12 @@ describe('publish/staticSite', () => {
     const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
     expect(index).toContain('class="site-header"');
     expect(index).toContain('src="public/PredictaGol_Logo.png"');
-    expect(index).toContain('class="site-logo__text">Quiniela 2026</span>');
+    expect(index).toContain('@font-face');
+    expect(index).toContain('font-family: "PredictaGol"');
+    expect(index).toContain('src: url("public/fonts/PredictaGol-NormalRegular.ttf") format("truetype");');
+    expect(index).toContain('class="site-logo__text brand-wordmark">PREDICTAGOL</span>');
+    expect(index).toContain('<strong class="brand-wordmark">PREDICTAGOL</strong>');
+    expect(index).not.toContain('Quiniela 2026');
     expect(index).not.toContain('digitalhub.fifa.com');
     expect(index).toContain('class="date-tabs');
     expect(index).toContain('class="match-card');
@@ -172,6 +178,12 @@ describe('publish/staticSite', () => {
     expect(index).toContain('class="home-hero hero-match reveal theme-section" data-theme="navy"');
     expect(index).toContain('id="equipos" class="teams-shortcut reveal theme-section" data-theme="festival"');
     expect(index).toContain('class="container-wide teams-shortcut__inner"');
+    expect(index).not.toContain('Selecciones en el calendario');
+    expect(index).not.toContain('La base está precargada');
+    const footer = index.slice(index.indexOf('<footer class="site-footer">'), index.indexOf('</footer>') + '</footer>'.length);
+    expect(footer).not.toContain('<nav');
+    expect(footer).not.toContain('href="index.html#partidos"');
+    expect(footer).not.toContain('href="index.html#equipos"');
     expect(index).toContain('id="fecha-2026-06-11" class="calendar-day" data-theme="jungle"');
     expect(index).toContain('jueves, 11 de junio');
     expect(index).toContain('.calendar-day + .calendar-day { margin-top: var(--space-m); }');
@@ -194,6 +206,8 @@ describe('publish/staticSite', () => {
     expect(match).toContain('"@type":"SportsEvent"');
     expect(match).toContain('class="match-hero hero-match reveal theme-section" data-theme="jungle"');
     expect(match).toContain('src="public/PredictaGol_Logo.png"');
+    expect(match).toContain('class="site-logo__text brand-wordmark">PREDICTAGOL</span>');
+    expect(match).toContain('<strong class="brand-wordmark">PREDICTAGOL</strong>');
     expect(match).toContain("const revealItems = [...document.querySelectorAll('.reveal')];");
     expect(match).toContain('Pronóstico y momios');
     expect(match).toContain('Próximamente: actualizaremos esta sección');
@@ -279,9 +293,11 @@ describe('publish/staticSite', () => {
 
     expect(outputFiles).toEqual(['index.html', 'public', 'sitemap.xml', 'staticwebapp.config.json']);
     expect(existsSync(join(outDir, 'public', 'PredictaGol_Logo.png'))).toBe(true);
+    expect(existsSync(join(outDir, 'public', 'fonts', 'PredictaGol-NormalRegular.ttf'))).toBe(true);
     expect(index).toContain('Próximamente');
     expect(index).toContain('Predictagol · Mundial 2026');
     expect(index).toContain('src="public/PredictaGol_Logo.png"');
+    expect(index).toContain('class="site-logo__text brand-wordmark">PREDICTAGOL</span>');
     expect(index).toContain('<link rel="canonical" href="https://predictagol.com/">');
     expect(index).toContain('--color-navy-950: #020f2a;');
     expect(index).toContain('.coming-soon-hero');
@@ -306,6 +322,7 @@ describe('publish/staticSite', () => {
 
     expect(existsSync(join(outDir, 'index.html'))).toBe(false);
     expect(existsSync(join(outDir, 'comingsoon', 'public', 'PredictaGol_Logo.png'))).toBe(true);
+    expect(existsSync(join(outDir, 'comingsoon', 'public', 'fonts', 'PredictaGol-NormalRegular.ttf'))).toBe(true);
     expect(index).toContain('Próximamente');
     expect(index).toContain('src="public/PredictaGol_Logo.png"');
     expect(index).toContain('<link rel="canonical" href="https://blue-plant-0287c640f.7.azurestaticapps.net/comingsoon/">');
