@@ -7,7 +7,10 @@
     "node": ">=20.0.0"
   },
   "scripts": {
+    "build:demo": "node scripts/seed-demo.js",
     "build:coming-soon": "node scripts/build-coming-soon.js",
+    "preview:demo": "npm run build:demo && swa start dist",
+    "check:demo": "npm test && npm run validate-workflow && npm run build:demo",
     "test": "vitest run",
     "test:watch": "vitest",
     "cost-report": "node scripts/cost-report.js",
