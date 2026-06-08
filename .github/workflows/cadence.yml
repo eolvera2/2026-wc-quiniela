@@ -55,7 +55,7 @@ jobs:
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_target == 'coming_soon' }}
         env:
           SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
-          BASE_PATH: /comingsoon
+          BASE_PATH: ''
         run: npm run build:coming-soon
 
       - name: Run cadence pipeline (internal only)
@@ -73,7 +73,7 @@ jobs:
         run: node scripts/run-cadence.js
 
       - name: Deploy to Azure Static Web Apps
-        if: ${{ success() && (github.event_name == 'schedule' || inputs.publish_target == 'demo') }}
+        if: ${{ success() && (github.event_name == 'schedule' || inputs.publish_target == 'demo' || inputs.publish_target == 'coming_soon') }}
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.SWA_DEPLOYMENT_TOKEN }}
