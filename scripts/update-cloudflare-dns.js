@@ -11,6 +11,7 @@ const azureHostname = args.azureHostname || process.env.AZURE_STATIC_WEBAPP_HOST
 const validationToken = args.validationToken || args._[0] || process.env.AZURE_STATIC_WEBAPP_VALIDATION_TOKEN;
 const apexProxied = parseBoolean(args.apexProxied ?? process.env.CLOUDFLARE_APEX_PROXIED ?? 'true');
 const includeWww = parseBoolean(args.www ?? 'true');
+const wwwProxied = parseBoolean(args.wwwProxied ?? process.env.CLOUDFLARE_WWW_PROXIED ?? 'true');
 
 const apiToken = process.env.CLOUDFLARE_API_TOKEN;
 const configuredZoneId = process.env.CLOUDFLARE_ZONE_ID;
@@ -52,7 +53,7 @@ if (includeWww) {
     name: `www.${domain}`,
     content: azureHostname,
     ttl: 1,
-    proxied: true,
+    proxied: wwwProxied,
   });
 }
 
@@ -60,7 +61,7 @@ console.log(`Cloudflare DNS updated for ${domain}.`);
 console.log(`- TXT asuid.${domain} -> ${validationToken}`);
 console.log(`- CNAME ${domain} -> ${azureHostname} (${apexProxied ? 'proxied' : 'DNS only'})`);
 if (includeWww) {
-  console.log(`- CNAME www.${domain} -> ${azureHostname} (proxied)`);
+  console.log(`- CNAME www.${domain} -> ${azureHostname} (${wwwProxied ? 'proxied' : 'DNS only'})`);
 }
 
 function parseArgs(values) {
