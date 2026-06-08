@@ -233,11 +233,6 @@ function renderComingSoonPage({ canonicalUrl }) {
         <p class="eyebrow">Predictagol · Mundial 2026</p>
         <h1 id="coming-soon-title">Próximamente</h1>
         <p class="coming-soon-hero__copy">Estamos preparando una experiencia para vivir la quiniela del Mundial con calendario, datos y pronósticos en español.</p>
-        <div class="coming-soon-hero__badges" aria-label="Funciones en preparación">
-          <span>Calendario</span>
-          <span>Pronósticos</span>
-          <span>Quiniela</span>
-        </div>
       </div>
     </section>
   </main>
@@ -787,10 +782,8 @@ const COMING_SOON_CSS = `
 .coming-soon-hero__card { position: relative; z-index: 1; width: min(100%, 64rem); padding: clamp(2rem, 6vw, 5rem); border: 1px solid rgba(244,189,79,.28); border-radius: clamp(1.25rem, 3vw, 2rem); background: linear-gradient(135deg, rgba(255,255,255,.13), rgba(255,255,255,.05)); box-shadow: var(--shadow-card), inset 0 1px rgba(255,255,255,.12); text-align: center; overflow: hidden; }
 .coming-soon-hero__card::after { content: ""; position: absolute; inset: auto -8rem -10rem auto; width: 22rem; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(0,198,163,.24), transparent 62%); pointer-events: none; }
 .coming-soon-hero__mark { width: clamp(4.5rem, 10vw, 7.5rem); height: auto; padding: .35rem; margin-bottom: var(--space-s); border-radius: 1.4rem; background: rgba(2, 15, 42, .96); object-fit: contain; box-shadow: 0 0 0 1px rgba(255,255,255,.2), 0 20px 42px rgba(0,0,0,.34); }
-.coming-soon-hero h1 { margin: .1em 0 .18em; font-size: clamp(3.5rem, 13vw, 11rem); line-height: .86; color: var(--color-white); text-shadow: 0 0 32px rgba(244,189,79,.22); }
-.coming-soon-hero__copy { max-width: 44rem; margin: 0 auto var(--space-m); color: var(--text-secondary); font-size: var(--step-1); }
-.coming-soon-hero__badges { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-xs); }
-.coming-soon-hero__badges span { display: inline-flex; min-height: 40px; align-items: center; padding: .45rem .85rem; border: 1px solid rgba(255,255,255,.24); border-radius: var(--radius-pill); background: rgba(255,255,255,.09); color: var(--text-primary); font-size: var(--step--1); font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+.coming-soon-hero h1 { max-width: 100%; margin: .1em auto .22em; font-size: clamp(2.6rem, 8.4vw, 7rem); line-height: .92; color: var(--color-white); overflow-wrap: anywhere; text-align: center; text-shadow: 0 0 32px rgba(244,189,79,.22); }
+.coming-soon-hero__copy { max-width: 44rem; margin: 0 auto; color: var(--text-secondary); font-size: var(--step-1); }
 .site-footer--simple { margin-top: 0; }
 `;
 

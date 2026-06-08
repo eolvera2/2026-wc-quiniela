@@ -326,6 +326,11 @@ describe('publish/staticSite', () => {
     expect(index).toContain('<link rel="canonical" href="https://predictagol.com/">');
     expect(index).toContain('--color-navy-950: #020f2a;');
     expect(index).toContain('.coming-soon-hero');
+    expect(index).toContain('.coming-soon-hero h1 { max-width: 100%; margin: .1em auto .22em; font-size: clamp(2.6rem, 8.4vw, 7rem);');
+    expect(index).not.toContain('class="coming-soon-hero__badges"');
+    expect(index).not.toContain('<span>Calendario</span>');
+    expect(index).not.toContain('<span>Pronósticos</span>');
+    expect(index).not.toContain('<span>Quiniela</span>');
     expect(index).not.toContain('class="match-card');
     expect(index).not.toContain('href="index.html#partidos"');
     expect(index).not.toContain('href="index.html#equipos"');
