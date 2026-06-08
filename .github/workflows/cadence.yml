@@ -46,13 +46,13 @@ jobs:
         run: npm ci
 
       - name: Build demo site
-        if: ${{ github.event_name == 'schedule' || inputs.publish_target == 'demo' }}
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_target == 'demo' }}
         env:
           SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
         run: node scripts/seed-demo.js
 
       - name: Build Coming Soon page only
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_target == 'coming_soon' }}
+        if: ${{ github.event_name == 'schedule' || inputs.publish_target == 'coming_soon' }}
         env:
           SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
           BASE_PATH: ''

@@ -36,8 +36,14 @@ const REQUIRED_PATTERNS = [
   { pattern: /publish_target:/, label: 'publish target dispatch input' },
   { pattern: /default:\s*demo/, label: 'demo default dispatch target' },
   { pattern: /run:\s*npm run build:coming-soon/, label: 'coming soon build step' },
-  { pattern: /github\.event_name == 'schedule' \|\| inputs\.publish_target == 'demo'/, label: 'scheduled demo build' },
-  { pattern: /github\.event_name == 'schedule' \|\| inputs\.publish_target == 'demo'/, label: 'scheduled/manual demo build' },
+  {
+    pattern: /github\.event_name == 'workflow_dispatch' && inputs\.publish_target == 'demo'/,
+    label: 'manual demo build',
+  },
+  {
+    pattern: /github\.event_name == 'schedule' \|\| inputs\.publish_target == 'coming_soon'/,
+    label: 'scheduled/manual coming soon build',
+  },
   { pattern: /github\.event_name == 'workflow_dispatch' && inputs\.publish_target == 'live'/, label: 'manual live cadence build' },
   { pattern: /BASE_PATH:\s*''/, label: 'coming soon root build' },
   {
