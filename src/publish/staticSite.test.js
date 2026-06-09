@@ -212,7 +212,12 @@ describe('publish/staticSite', () => {
     expect(index).toContain('min-width: 5.15rem;');
     expect(index).toContain('Ver datos');
     expect(index).toContain('class="match-card__actions"');
+    expect(index).toContain('.match-card__actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;');
+    expect(index).toContain('href="partido-1-2026-06-11-mexico-vs-sudafrica.html">Ver datos</a>');
+    expect(index).toContain('.match-card__cta--disabled, .match-card__cta--disabled:hover { opacity: .54; cursor: not-allowed; transform: none; box-shadow: none; }');
     expect(index).toContain('class="pgs-pill pgs-pill--inline"');
+    expect(index).toContain('letter-spacing: normal; text-align: left; text-transform: none;');
+    expect(index).toContain('.pgs-pill--inline { min-height: 0; margin-left: auto;');
     expect(index).toContain('Resultado PredictaGoal Score basado en los datos más recientes: México # - Sudáfrica #');
     expect(index).toContain('https://flagcdn.com/24x18/mx.png');
     expect(index).toContain('https://flagcdn.com/24x18/za.png');
@@ -305,6 +310,9 @@ describe('publish/staticSite', () => {
     expect(index).not.toContain('South Africa');
     expect(index).toContain('data-team-codes="MEX RSA"');
     expect(index).toContain('Mostrando partidos de ');
+    const placeholderKnockoutCard = index.slice(index.indexOf('<h3><span class="team-name"><span class="team-name__label">1A</span>'), index.indexOf('</article>', index.indexOf('<h3><span class="team-name"><span class="team-name__label">1A</span>')) + '</article>'.length);
+    expect(placeholderKnockoutCard).toContain('<span class="match-card__cta match-card__cta--disabled" aria-disabled="true">Ver datos</span>');
+    expect(placeholderKnockoutCard).not.toContain('href=');
     const teamsSection = index.slice(index.indexOf('id="equipos"'), index.indexOf('</section>', index.indexOf('id="equipos"')));
     expect(index).not.toContain('data-team-code="">1A');
     expect(teamsSection).not.toContain('#A/B/C/D/F</span>');

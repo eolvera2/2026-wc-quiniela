@@ -13,6 +13,10 @@ import { injectAffiliateLinks } from './affiliateInjector.js';
 import { DISCLAIMER_FOOTER } from '../generate/prompt.js';
 import { generateSitemap } from './sitemap.js';
 import { decorateTeam, isPlaceholderTeamName, teamAnchorId } from '../data/worldCupTeams.js';
+import {
+  INITIAL_FIXTURE_CONTENT,
+  INITIAL_FIXTURE_CONTENT_ALIASES,
+} from '../data/fixtureContent/index.js';
 
 const PUBLIC_ASSET_DIR = 'public';
 const BRAND_MARK_PATH = 'public/PredictaGol_Logo.png';
@@ -256,50 +260,6 @@ const SECTION_LABELS = {
   quiniela_verdict: 'Veredicto de quiniela',
   alineacion_probable: 'Alineación probable',
   analisis_apostar: 'Análisis para apostar',
-};
-
-const INITIAL_FIXTURE_CONTENT = {
-  'MEX-RSA-2026-06-11': {
-    pgs: { home: 2, away: 1 },
-    teamSummaries: {
-      MEX: `<p><strong>México</strong> abre el Mundial como anfitrión con impulso, presión y ventaja contextual. El ciclo de Javier Aguirre llega respaldado por Nations League y Gold Cup 2025, con Edson Álvarez, Raúl Jiménez y Johan Vásquez como referencias de equilibrio, experiencia y solidez.</p>
-        <p>Este análisis preliminar proviene de múltiples fuentes de análisis deportivo: localía en el Azteca, altura, apoyo masivo y una lectura de mercado que lo perfila favorito de grupo, no candidato fuerte al título. Los datos de momios, forma e incidencias se actualizarán cerca del partido.</p>`,
-      RSA: `<p><strong>Sudáfrica</strong> regresa al Mundial por primera vez desde 2010 con Hugo Broos al mando y Ronwen Williams como líder. Bafana Bafana clasificó con un 3-0 ante Ruanda y combina orden, transiciones y piezas como Oswin Appollis, Lyle Foster y Teboho Mokoena.</p>
-        <p>El reto es enorme: abrir contra el anfitrión en el Azteca. Sus señales recientes son mixtas, con empates ante Nicaragua y Jamaica y dudas de Broos sobre mentalidad y contundencia. El plan inicial lo trata como underdog peligroso si resiste la presión mexicana inicial.</p>`,
-    },
-    sections: {
-      pronostico_momios: `<section class="initial-section">
-        <h2>Análisis preliminar</h2>
-        <p class="freshness-label">Versión inicial. Se actualizará con datos actuales cerca del partido.</p>
-        <p>La lectura temprana favorece a México por localía, altura, contexto de anfitrión y ventaja de grupo de acuerdo a diversas fuentes de análisis deportivo. A nivel torneo, México sigue siendo un longshot para ganar el Mundial, pero el mercado lo perfila como favorito ligero para navegar el Grupo A.</p>
-        <p>Sudáfrica llega como underdog amplio: tiene estructura y velocidad en transición, pero enfrenta el partido inaugural en un entorno de máxima presión. Los datos definitivos serán actualizados más adelante conforme nueva información pública esté disponible y el encuentro se encuentre más próximo.</p>
-      </section>`,
-      quiniela_verdict: `<section class="initial-section">
-        <h2>México con ventaja inicial</h2>
-        <p class="freshness-label">Veredicto preliminar. Se actualizará con datos actuales cerca del partido.</p>
-        <p><strong>Pick inicial para quiniela: México gana.</strong> La localía en el Azteca, el impulso reciente en CONCACAF y la presión ambiental inclinan la balanza hacia el anfitrión.</p>
-        <p>El empate no se descarta si Sudáfrica sostiene el 0-0 durante el primer tramo y logra correr con Appollis o Foster en campo abierto. Para una quiniela conservadora, México es la selección lógica; para una quiniela de riesgo, el empate gana valor si las alineaciones o momios finales muestran rotaciones mexicanas.</p>
-      </section>`,
-      alineacion_probable: `<section class="initial-section">
-        <h2>Lectura preliminar</h2>
-        <p class="freshness-label">Alineaciones no confirmadas. Esta sección se actualizará con datos actuales cerca del partido.</p>
-        <p><strong>México:</strong> la expectativa pública apunta a una estructura flexible de Aguirre, con Edson Álvarez como pieza de equilibrio, Johan Vásquez en la zaga y Raúl Jiménez como referencia ofensiva principal. Guillermo Martínez y otros atacantes aparecen como alternativas, pero no como titulares confirmados. La portería debe vigilarse por el debate mediático entre experiencia y forma reciente.</p>
-        <p><strong>Sudáfrica:</strong> Broos suele priorizar orden, salida rápida y disciplina colectiva. Ronwen Williams parte como referencia en portería; Mokoena debe marcar el ritmo en medio campo, mientras Appollis y Foster son los focos de peligro en transición y pelota parada.</p>
-      </section>`,
-      analisis_apostar: `<section class="initial-section">
-        <h2>Ángulos educativos iniciales</h2>
-        <p class="freshness-label">Contenido informativo y de entretenimiento. No es recomendación financiera; se actualizará con datos actuales cerca del partido.</p>
-        <p>Los ángulos tempranos giran alrededor de tres factores: presión inicial de México, resistencia sudafricana en los primeros 30 minutos y posible valor de mercados conservadores si la línea favorece demasiado al anfitrión. Sin cuotas frescas, conviene evitar conclusiones rígidas.</p>
-        <p>Qué revisar cerca del partido: cambios en los momios para triunfo de México, empate o triunfo de Sudáfrica, total de goles, noticias de Edson Álvarez y los delanteros mexicanos, estado físico de Sudáfrica tras su campamento en Pachuca y si Broos ajusta para protegerse de la presión alta mexicana. Los datos definitivos serán actualizados más adelante conforme nueva información pública esté disponible y el encuentro se encuentre más próximo.</p>
-      </section>`,
-    },
-  },
-};
-
-const INITIAL_FIXTURE_CONTENT_ALIASES = {
-  'MEX-SUDÁFRICA-2026-06-11': INITIAL_FIXTURE_CONTENT['MEX-RSA-2026-06-11'],
-  'MÉXICO-RSA-2026-06-11': INITIAL_FIXTURE_CONTENT['MEX-RSA-2026-06-11'],
-  'MÉXICO-SUDÁFRICA-2026-06-11': INITIAL_FIXTURE_CONTENT['MEX-RSA-2026-06-11'],
 };
 
 function deriveFixturesFromArticles(articles) {
@@ -546,16 +506,23 @@ function renderMatchCard(fixture, slug) {
   const homeTeam = fixtureTeam(fixture, 'home');
   const awayTeam = fixtureTeam(fixture, 'away');
   const placeholderPgs = { pgs: { home: '#', away: '#' } };
+  const dataCta = isUndecidedKnockoutFixture(fixture, homeTeam, awayTeam)
+    ? '<span class="match-card__cta match-card__cta--disabled" aria-disabled="true">Ver datos</span>'
+    : `<a class="match-card__cta" href="${escapeHtml(slug)}.html">Ver datos</a>`;
   return `<article class="match-card match-card--${escapeHtml(fixture.status || 'upcoming')}" data-team-codes="${escapeHtml([homeTeam.code, awayTeam.code].filter(Boolean).join(' '))}">
     <div class="match-card__top"><span class="status-pill">${escapeHtml(statusLabel(fixture.status))}</span><span>${escapeHtml(stageLabel(fixture.stage))}</span></div>
     <p class="match-card__date numeric">${escapeHtml(formatDateTime(fixture.kickoffUtc))}</p>
     <h3>${renderTeamName(homeTeam)} <span class="versus">vs</span> ${renderTeamName(awayTeam)}</h3>
     <p class="match-card__venue">${escapeHtml(fixture.venue || 'Sede por confirmar')}</p>
     <div class="match-card__actions">
-      <a class="match-card__cta" href="${escapeHtml(slug)}.html">Ver datos</a>
+      ${dataCta}
       ${renderPgsPill(fixture, placeholderPgs, 'pgs-pill--inline')}
     </div>
   </article>`;
+}
+
+function isUndecidedKnockoutFixture(fixture, homeTeam, awayTeam) {
+  return fixture.stage === 'knockout' && (homeTeam.isPlaceholder || awayTeam.isPlaceholder);
 }
 
 function renderSiteHeader() {
@@ -807,6 +774,7 @@ h2 { font-size: var(--step-2); }
 .button, .match-card__cta { display: inline-flex; min-height: 40px; align-items: center; justify-content: center; padding: .55rem .85rem; border-radius: var(--radius-pill); font-size: var(--step--1); font-weight: 900; text-decoration: none; transition: transform var(--duration-med) var(--ease-out-expo), box-shadow var(--duration-med) var(--ease-out-expo), background var(--duration-med) var(--ease-out-expo); }
 .button:hover, .match-card__cta:hover { transform: translateY(-1px); box-shadow: 0 10px 26px rgba(244,189,79,.22); }
 .button--primary, .match-card__cta { background: var(--action-primary-bg); color: var(--action-primary-text); }
+.match-card__cta--disabled, .match-card__cta--disabled:hover { opacity: .54; cursor: not-allowed; transform: none; box-shadow: none; }
 .button--secondary { border: 1px solid rgba(255,255,255,.35); color: var(--text-primary); }
 .date-tabs { display: flex; gap: .55rem; overflow-x: auto; scroll-snap-type: x proximity; padding: .35rem 0 .55rem; }
 .date-tabs { position: sticky; top: calc(var(--site-header-sticky-offset, 3rem) - 1px); z-index: 9; background: rgba(2, 15, 42, .94); backdrop-filter: blur(18px); border-bottom: 1px solid var(--border-subtle); box-shadow: 0 0 0 100vmax rgba(2, 15, 42, .94); clip-path: inset(0 -100vmax); }
@@ -836,7 +804,7 @@ h2 { font-size: var(--step-2); }
 .match-card__top { display: flex; justify-content: space-between; gap: var(--space-xs); color: var(--text-muted); font-size: var(--step--1); }
 .match-card__date, .match-card__venue { color: var(--text-secondary); }
 .match-card h3 { font-size: var(--step-1); }
-.match-card__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-xs); }
+.match-card__actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-xs); }
 .team-summaries, .prediction-panel, .match-section { margin-block: var(--space-l); padding: var(--space-m); }
 .match-hero + .team-summaries { margin-top: var(--space-m); }
 .team-summaries__heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-xs); margin: 0 0 var(--space-s); }
@@ -846,12 +814,12 @@ h2 { font-size: var(--step-2); }
 .team-card { padding: var(--space-m); }
 .team-chip { display: inline-flex; align-items: center; padding: .4rem .75rem; border-radius: var(--radius-pill); background: var(--surface-card-strong); font-weight: 900; }
 .pgs-pill { position: relative; display: inline-flex; align-items: center; gap: .4rem; min-height: 2.15rem; padding: .38rem .72rem; border: 1px solid rgba(255,209,102,.6); border-radius: var(--radius-pill); background: linear-gradient(135deg, var(--color-gold-400), var(--color-jaguar-500)); color: var(--color-navy-950); font-size: var(--step--1); font-weight: 950; box-shadow: 0 10px 28px rgba(245,166,35,.24); cursor: help; }
-.pgs-pill::after { content: attr(title); position: absolute; right: 0; bottom: calc(100% + .55rem); z-index: 5; width: max-content; max-width: min(18rem, 78vw); padding: .45rem .65rem; border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius-m); background: rgba(2,15,42,.96); color: var(--text-primary); font-size: var(--step--2); font-weight: 800; line-height: 1.35; opacity: 0; pointer-events: none; transform: translateY(.25rem); transition: opacity var(--duration-med) var(--ease-out-expo), transform var(--duration-med) var(--ease-out-expo); }
+.pgs-pill::after { content: attr(title); position: absolute; right: 0; bottom: calc(100% + .55rem); z-index: 5; width: max-content; max-width: min(18rem, 78vw); padding: .45rem .65rem; border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius-m); background: rgba(2,15,42,.96); color: var(--text-primary); font-size: var(--step--2); font-weight: 800; line-height: 1.35; letter-spacing: normal; text-align: left; text-transform: none; opacity: 0; pointer-events: none; transform: translateY(.25rem); transition: opacity var(--duration-med) var(--ease-out-expo), transform var(--duration-med) var(--ease-out-expo); }
 .pgs-pill:hover::after, .pgs-pill:focus-visible::after { opacity: 1; transform: translateY(0); }
 .pgs-pill__label, .pgs-pill__team { display: inline-flex; align-items: center; gap: .25rem; }
 .pgs-pill__flag { display: block; width: 1.35rem; height: auto; border-radius: .12rem; box-shadow: 0 0 0 1px rgba(2,15,42,.22); }
 .pgs-pill__dash { opacity: .8; }
-.pgs-pill--inline { min-height: 0; padding: 0; border: 0; border-radius: 0; background: transparent; color: var(--accent-primary); font-size: var(--step--2); letter-spacing: .12em; text-transform: uppercase; box-shadow: none; }
+.pgs-pill--inline { min-height: 0; margin-left: auto; padding: 0; border: 0; border-radius: 0; background: transparent; color: var(--accent-primary); font-size: var(--step--2); letter-spacing: .12em; text-transform: uppercase; box-shadow: none; }
 .pgs-pill--inline .pgs-pill__flag { width: 1.1rem; box-shadow: 0 0 0 1px rgba(255,255,255,.25); }
 .teams-shortcut { position: relative; margin-top: var(--space-l); padding-block: var(--space-xl); overflow: hidden; scroll-margin-top: var(--sticky-anchor-offset, 8rem); background: radial-gradient(circle at 15% 20%, rgba(0,198,163,.22), transparent 22rem), radial-gradient(circle at 85% 15%, rgba(244,189,79,.18), transparent 24rem), linear-gradient(135deg, rgba(0,48,32,.96), rgba(2,15,42,.94)); }
 .teams-shortcut::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: .18; background-image: radial-gradient(circle, rgba(244,189,79,.88) 0 .14rem, transparent .16rem); background-size: 2.6rem 2.6rem; mask-image: linear-gradient(115deg, transparent, #000 20%, transparent 70%); }
