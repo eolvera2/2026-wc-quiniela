@@ -139,6 +139,22 @@ export function buildSite({ fixtures: providedFixtures, teams: providedTeams, ar
   const sitemapXml = generateSitemap(sitemapEntries);
   writeFileSync(join(outputDir, 'sitemap.xml'), sitemapXml, 'utf-8');
 
+  writeFileSync(join(outputDir, 'robots.txt'), renderRobotsTxt({ sitemapUrl: `${siteBaseUrl}/sitemap.xml` }), 'utf-8');
+  writeFileSync(
+    join(outputDir, 'llms.txt'),
+    renderLlmsTxt({
+      siteBaseUrl,
+      sections: [
+        { title: 'Calendario y pronósticos', url: `${siteBaseUrl}/index.html`, description: 'Calendario completo, equipos y partidos del Mundial 2026 con previas y datos PGS®.' },
+        ...slugs.slice(0, 24).map((s) => ({
+          url: `${siteBaseUrl}/${s.slug}.html`,
+          title: s.slug.replace(/\.html$/, '').replace(/-/g, ' '),
+        })),
+      ],
+    }),
+    'utf-8',
+  );
+
   return slugs;
 }
 
@@ -153,8 +169,21 @@ export function buildComingSoonSite({ siteBaseUrl = 'https://predictagol.com', o
   const indexHtml = renderComingSoonPage({ canonicalUrl });
   writeFileSync(join(pageOutputDir, 'index.html'), indexHtml, 'utf-8');
 
+  const sitemapUrl = `${canonicalUrl.replace(/\/$/, '')}/sitemap.xml`;
   const sitemapXml = generateSitemap([{ url: canonicalUrl, lastmod: '2026-01-01' }]);
   writeFileSync(join(pageOutputDir, 'sitemap.xml'), sitemapXml, 'utf-8');
+
+  writeFileSync(join(pageOutputDir, 'robots.txt'), renderRobotsTxt({ sitemapUrl }), 'utf-8');
+  writeFileSync(
+    join(pageOutputDir, 'llms.txt'),
+    renderLlmsTxt({
+      siteBaseUrl: canonicalUrl.replace(/\/$/, ''),
+      sections: [
+        { title: 'Próximamente', url: canonicalUrl, description: 'Página de lanzamiento de Predictagol, la quiniela del Mundial 2026 en español.' },
+      ],
+    }),
+    'utf-8',
+  );
 }
 
 function buildFixtureAliasSlug(fixture) {
@@ -194,20 +223,116 @@ function normalizePath(basePath) {
   return String(basePath || '').replace(/^\/+|\/+$/g, '');
 }
 
+/**
+ * Renders shared SEO meta tags: description, canonical, favicon, theme-color,
+ * Open Graph, and Twitter Card. Centralizes head boilerplate so every page
+ * gets consistent metadata for Google, social previews, and AI crawlers.
+ */
+function renderSeoMetaTags({ canonicalUrl, title, description, ogImageUrl, locale = 'es_MX' }) {
+  return `<meta name="description" content="${escapeHtml(description)}">
+  <meta name="theme-color" content="#020f2a">
+  <meta name="color-scheme" content="dark light">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="${escapeHtml(canonicalUrl)}">
+  <link rel="icon" type="image/png" sizes="any" href="${escapeHtml(BRAND_MARK_PATH)}">
+  <link rel="apple-touch-icon" href="${escapeHtml(BRAND_MARK_PATH)}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Predictagol">
+  <meta property="og:title" content="${escapeHtml(title)}">
+  <meta property="og:description" content="${escapeHtml(description)}">
+  <meta property="og:url" content="${escapeHtml(canonicalUrl)}">
+  <meta property="og:image" content="${escapeHtml(ogImageUrl)}">
+  <meta property="og:locale" content="${escapeHtml(locale)}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${escapeHtml(title)}">
+  <meta name="twitter:description" content="${escapeHtml(description)}">
+  <meta name="twitter:image" content="${escapeHtml(ogImageUrl)}">`;
+}
+
+/**
+ * Generates a robots.txt that allows all well-behaved crawlers and points to
+ * the sitemap. Major AI crawlers (GPTBot, ClaudeBot, Google-Extended, etc.)
+ * are explicitly allowed so the site can be discovered and cited.
+ */
+function renderRobotsTxt({ sitemapUrl }) {
+  return [
+    'User-agent: *',
+    'Allow: /',
+    '',
+    '# AI crawlers — explicitly allowed for citation and training opt-in',
+    'User-agent: GPTBot',
+    'Allow: /',
+    'User-agent: OAI-SearchBot',
+    'Allow: /',
+    'User-agent: ChatGPT-User',
+    'Allow: /',
+    'User-agent: ClaudeBot',
+    'Allow: /',
+    'User-agent: Claude-Web',
+    'Allow: /',
+    'User-agent: anthropic-ai',
+    'Allow: /',
+    'User-agent: PerplexityBot',
+    'Allow: /',
+    'User-agent: Google-Extended',
+    'Allow: /',
+    'User-agent: CCBot',
+    'Allow: /',
+    '',
+    `Sitemap: ${sitemapUrl}`,
+    '',
+  ].join('\n');
+}
+
+/**
+ * Generates an llms.txt summary following the llmstxt.org convention:
+ * a single-page, markdown-formatted brief that helps LLMs understand the
+ * site's purpose and locate the most useful URLs without scraping HTML.
+ */
+function renderLlmsTxt({ siteBaseUrl, sections = [] }) {
+  const lines = [
+    '# Predictagol',
+    '',
+    '> Quiniela del Mundial 2026 en español: calendario, equipos, sedes, alineaciones probables y el PredictaGoal Score (PGS®). Sin apuestas, solo diversión.',
+    '',
+    'Predictagol es un sitio editorial independiente, no afiliado a FIFA. Todo el contenido se publica en español (es-MX) y está optimizado para aficionados que arman quinielas con sus amigos.',
+    '',
+    '## Recursos principales',
+    '',
+  ];
+  for (const section of sections) {
+    const title = section.title || section.url;
+    const desc = section.description ? `: ${section.description}` : '';
+    lines.push(`- [${title}](${section.url})${desc}`);
+  }
+  lines.push('');
+  lines.push('## Política de uso por agentes');
+  lines.push('');
+  lines.push('- Permitido citar y resumir el contenido con atribución a Predictagol y enlace a la URL original.');
+  lines.push('- No publicamos cuotas ni promovemos apuestas. No utilices el contenido para sugerir apuestas reales.');
+  lines.push('- Los datos pueden actualizarse; verifica la fecha de publicación o la URL antes de citar.');
+  lines.push('');
+  lines.push(`Sitio: ${siteBaseUrl}`);
+  lines.push('');
+  return lines.join('\n');
+}
+
 function renderArticlePage({ title, metaDescription, bodyHtml, siteBaseUrl, slug, structuredData = [] }) {
   const jsonLd = structuredData
     .filter(Boolean)
     .map((data) => `<script type="application/ld+json">${JSON.stringify(data)}</script>`)
     .join('\n');
 
+  const canonicalUrl = `${siteBaseUrl}/${slug}.html`;
+  const ogImageUrl = `${siteBaseUrl}/${BRAND_MARK_PATH}`;
+
   return `<!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="${escapeHtml(metaDescription)}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>${escapeHtml(title)}</title>
-  <link rel="canonical" href="${escapeHtml(siteBaseUrl)}/${escapeHtml(slug)}.html">
+  ${renderSeoMetaTags({ canonicalUrl, title, description: metaDescription, ogImageUrl })}
   <script>document.documentElement.classList.add('js');</script>
   <style>${GLOBAL_CSS}</style>
   ${jsonLd}
@@ -225,14 +350,16 @@ function renderArticlePage({ title, metaDescription, bodyHtml, siteBaseUrl, slug
 }
 
 function renderComingSoonPage({ canonicalUrl }) {
+  const description = 'Predictagol se está preparando para el Mundial 2026. Muy pronto podrás armar tu quiniela y seguir pronósticos partido por partido.';
+  const title = 'Próximamente — Predictagol';
+  const ogImageUrl = `${canonicalUrl.replace(/\/$/, '')}/${BRAND_MARK_PATH}`;
   return `<!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Predictagol se está preparando para el Mundial 2026. Muy pronto podrás armar tu quiniela y seguir pronósticos partido por partido.">
-  <title>Próximamente — Predictagol</title>
-  <link rel="canonical" href="${escapeHtml(canonicalUrl)}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>${escapeHtml(title)}</title>
+  ${renderSeoMetaTags({ canonicalUrl, title, description, ogImageUrl })}
   <script>document.documentElement.classList.add('js');</script>
   <style>${GLOBAL_CSS}${COMING_SOON_CSS}</style>
 </head>
@@ -413,22 +540,37 @@ function renderPredictionPanel(fixture) {
   </section>`;
 }
 
-function renderIndexPage({ fixtures, teams, slugs }) {
+function renderIndexPage({ fixtures, teams, slugs, siteBaseUrl }) {
   const nextFixture = fixtures[0];
   const dateTabs = renderDateTabs(fixtures);
   const calendar = renderCalendarSections(fixtures, slugs);
   const teamsShortcut = renderTeamsShortcut(teams);
   const nextHome = nextFixture ? fixtureTeam(nextFixture, 'home') : null;
   const nextAway = nextFixture ? fixtureTeam(nextFixture, 'away') : null;
+  const title = 'Calendario Mundial 2026 — Quiniela y Pronósticos | Predictagol';
+  const description = 'Calendario completo del Mundial 2026: partidos, sedes, equipos, pronósticos PGS® y quiniela en español, sin apuestas.';
+  const canonicalUrl = siteBaseUrl ? `${siteBaseUrl.replace(/\/$/, '')}/` : 'index.html';
+  const ogImageUrl = siteBaseUrl ? `${siteBaseUrl.replace(/\/$/, '')}/${BRAND_MARK_PATH}` : BRAND_MARK_PATH;
+
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Predictagol',
+    url: canonicalUrl,
+    inLanguage: 'es-MX',
+    description,
+  };
 
   return `<!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendario Mundial 2026 — Quiniela y Pronósticos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>${escapeHtml(title)}</title>
+  ${renderSeoMetaTags({ canonicalUrl, title, description, ogImageUrl })}
   <script>document.documentElement.classList.add('js');</script>
   <style>${GLOBAL_CSS}</style>
+  <script type="application/ld+json">${JSON.stringify(websiteJsonLd)}</script>
 </head>
 <body data-active-theme="navy">
   ${renderSiteHeader()}
@@ -868,6 +1010,25 @@ html.js .reveal { transition: none; }
 html.js .section-heading, html.js .match-section > .section-kicker { transition: transform var(--duration-slow) var(--ease-out-expo), opacity var(--duration-slow) var(--ease-out-expo); }
 html.js .reveal:not(.is-visible) .section-heading, html.js .reveal:not(.is-visible).match-section > .section-kicker { opacity: .001; transform: translateY(-.75rem); }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; } html.js .reveal:not(.is-visible) .section-heading, html.js .reveal:not(.is-visible).match-section > .section-kicker { opacity: 1; transform: none; } .digital-ball { display: none; } }
+@media (max-width: 640px) {
+  .site-header { gap: .5rem; padding: .4rem var(--gutter); }
+  .site-header nav { gap: .25rem .5rem; row-gap: .25rem; font-size: var(--step--1); }
+  .site-header nav a { padding: .2rem .25rem; }
+  .site-logo__text { font-size: .95rem; letter-spacing: .06em; }
+  .hero-match__inner { padding: 1.1rem; }
+  .home-hero h1 { font-size: clamp(1.9rem, 8vw, 2.6rem); }
+  .hero-match__actions .button { flex: 1 1 0; min-width: 0; }
+  .date-tabs { gap: .35rem; padding-inline: var(--gutter); }
+  .match-card { padding: 1rem; }
+  .match-card h3 { font-size: 1.05rem; }
+  .pgs-pill { padding: .3rem .55rem; font-size: var(--step--2); }
+  .team-pill { padding: .4rem .65rem; font-size: var(--step--1); }
+  .container, .container-wide { width: min(100% - 2rem, var(--container-wide)); }
+}
+@media (max-width: 380px) {
+  .site-logo__text { display: none; }
+}
+@media (hover: none) { .match-card:hover, .button:hover, .match-card__cta:hover, .team-pill:hover { transform: none; box-shadow: none; } }
 `;
 
 const COMING_SOON_CSS = `

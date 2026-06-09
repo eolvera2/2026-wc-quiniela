@@ -361,7 +361,7 @@ describe('publish/staticSite', () => {
     const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
     const outputFiles = readdirSync(outDir).sort();
 
-    expect(outputFiles).toEqual(['index.html', 'public', 'sitemap.xml', 'staticwebapp.config.json']);
+    expect(outputFiles).toEqual(['index.html', 'llms.txt', 'public', 'robots.txt', 'sitemap.xml', 'staticwebapp.config.json']);
     expect(existsSync(join(outDir, 'public', 'PredictaGol_Logo.png'))).toBe(true);
     expect(existsSync(join(outDir, 'public', 'fonts', 'PredictaGol-NormalRegular.ttf'))).toBe(true);
     expect(index).toContain('Próximamente');
@@ -382,6 +382,20 @@ describe('publish/staticSite', () => {
 
     const sitemap = readFileSync(join(outDir, 'sitemap.xml'), 'utf-8');
     expect(sitemap).toContain('<loc>https://predictagol.com/</loc>');
+
+    expect(index).toContain('<meta property="og:title"');
+    expect(index).toContain('<meta name="twitter:card" content="summary_large_image">');
+    expect(index).toContain('lang="es-MX"');
+
+    const robots = readFileSync(join(outDir, 'robots.txt'), 'utf-8');
+    expect(robots).toContain('User-agent: *');
+    expect(robots).toContain('User-agent: GPTBot');
+    expect(robots).toContain('User-agent: ClaudeBot');
+    expect(robots).toContain('Sitemap: https://predictagol.com/sitemap.xml');
+
+    const llms = readFileSync(join(outDir, 'llms.txt'), 'utf-8');
+    expect(llms).toContain('# Predictagol');
+    expect(llms).toContain('https://predictagol.com');
   });
 
   it('buildComingSoonSite can write the landing page under /comingsoon', () => {
