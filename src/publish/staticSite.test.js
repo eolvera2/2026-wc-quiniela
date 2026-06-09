@@ -218,10 +218,11 @@ describe('publish/staticSite', () => {
     expect(index).toContain('class="pgs-pill pgs-pill--inline"');
     expect(index).toContain('letter-spacing: normal; text-align: left; text-transform: none;');
     expect(index).toContain('.pgs-pill--inline { min-height: 0; margin-left: auto;');
-    expect(index).toContain('Resultado PredictaGoal Score basado en los datos más recientes: México # - Sudáfrica #');
+    expect(index).toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 2 - Sudáfrica 1');
     expect(index).toContain('https://flagcdn.com/24x18/mx.png');
     expect(index).toContain('https://flagcdn.com/24x18/za.png');
-    expect(index).toContain('<span class="pgs-pill__score">#</span>');
+    expect(index).toContain('<span class="pgs-pill__score">2</span>');
+    expect(index).toContain('<span class="pgs-pill__score">1</span>');
 
     const match = readFileSync(join(outDir, 'partido-1-2026-06-11-mexico-vs-sudafrica.html'), 'utf-8');
     expect(existsSync(join(outDir, 'fixture-1-2026-06-11-mexico-vs-sudafrica.html'))).toBe(true);

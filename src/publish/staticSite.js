@@ -318,10 +318,9 @@ function renderMatchHeader(fixture) {
       <h1>${renderTeamName(homeTeam)} <span class="versus">vs</span> ${renderTeamName(awayTeam)}</h1>
       <div class="hero-match__meta">
         <span class="numeric">${escapeHtml(formatDateTime(fixture.kickoffUtc))}</span>
-        <span>${escapeHtml(fixture.venue || 'Sede por confirmar')}</span>
+        <span>${escapeHtml(translateVenue(fixture.venue) || 'Sede por confirmar')}</span>
       </div>
       <div class="hero-match__actions">
-        <a class="button button--primary" href="#pronostico_momios">Ver datos</a>
         <a class="button button--secondary" href="index.html">Volver al calendario</a>
       </div>
     </div>
@@ -505,7 +504,10 @@ function renderTeamsShortcut(teams) {
 function renderMatchCard(fixture, slug) {
   const homeTeam = fixtureTeam(fixture, 'home');
   const awayTeam = fixtureTeam(fixture, 'away');
-  const placeholderPgs = { pgs: { home: '#', away: '#' } };
+  const initialContent = getInitialFixtureContent(fixture);
+  const pgsSource = initialContent && initialContent.pgs
+    ? { pgs: initialContent.pgs }
+    : { pgs: { home: '#', away: '#' } };
   const dataCta = isUndecidedKnockoutFixture(fixture, homeTeam, awayTeam)
     ? '<span class="match-card__cta match-card__cta--disabled" aria-disabled="true">Ver datos</span>'
     : `<a class="match-card__cta" href="${escapeHtml(slug)}.html">Ver datos</a>`;
@@ -513,12 +515,21 @@ function renderMatchCard(fixture, slug) {
     <div class="match-card__top"><span class="status-pill">${escapeHtml(statusLabel(fixture.status))}</span><span>${escapeHtml(stageLabel(fixture.stage))}</span></div>
     <p class="match-card__date numeric">${escapeHtml(formatDateTime(fixture.kickoffUtc))}</p>
     <h3>${renderTeamName(homeTeam)} <span class="versus">vs</span> ${renderTeamName(awayTeam)}</h3>
-    <p class="match-card__venue">${escapeHtml(fixture.venue || 'Sede por confirmar')}</p>
+    <p class="match-card__venue">${escapeHtml(translateVenue(fixture.venue) || 'Sede por confirmar')}</p>
     <div class="match-card__actions">
       ${dataCta}
-      ${renderPgsPill(fixture, placeholderPgs, 'pgs-pill--inline')}
+      ${renderPgsPill(fixture, pgsSource, 'pgs-pill--inline')}
     </div>
   </article>`;
+}
+
+const VENUE_TRANSLATIONS = {
+  'Mexico City': 'Ciudad de México',
+};
+
+function translateVenue(venue) {
+  if (!venue) return venue;
+  return VENUE_TRANSLATIONS[venue] || venue;
 }
 
 function isUndecidedKnockoutFixture(fixture, homeTeam, awayTeam) {
@@ -579,7 +590,7 @@ function buildSportsEventJsonLd(fixture) {
     startDate: fixture.kickoffUtc || undefined,
     eventStatus: fixture.status === 'resolved' ? 'https://schema.org/EventCompleted' : 'https://schema.org/EventScheduled',
     sport: 'Football',
-    location: fixture.venue ? { '@type': 'Place', name: fixture.venue } : undefined,
+    location: fixture.venue ? { '@type': 'Place', name: translateVenue(fixture.venue) } : undefined,
     homeTeam: { '@type': 'SportsTeam', name: fixture.homeTeam },
     awayTeam: { '@type': 'SportsTeam', name: fixture.awayTeam },
   };

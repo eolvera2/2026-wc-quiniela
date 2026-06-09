@@ -2,7 +2,7 @@ export const WORLD_CUP_TEAMS = [
   { seedName: 'Mexico', code: 'MEX', displayName: 'México', flag: 'mx', confederation: 'CONCACAF', groupCode: 'A' },
   { seedName: 'South Africa', code: 'RSA', displayName: 'Sudáfrica', flag: 'za', confederation: 'CAF', groupCode: 'A' },
   { seedName: 'South Korea', code: 'KOR', displayName: 'Corea del Sur', flag: 'kr', confederation: 'AFC', fifaName: 'Korea Republic', groupCode: 'A' },
-  { seedName: 'Czech Republic', code: 'CZE', displayName: 'República Checa', flag: 'cz', confederation: 'UEFA', fifaName: 'Czechia', groupCode: 'A' },
+  { seedName: 'Czech Republic', code: 'CZE', displayName: 'Chequia', flag: 'cz', confederation: 'UEFA', fifaName: 'Czechia', groupCode: 'A' },
   { seedName: 'Canada', code: 'CAN', displayName: 'Canadá', flag: 'ca', confederation: 'CONCACAF', groupCode: 'B' },
   { seedName: 'Bosnia & Herzegovina', code: 'BIH', displayName: 'Bosnia y Herzegovina', flag: 'ba', confederation: 'UEFA', fifaName: 'Bosnia and Herzegovina', groupCode: 'B' },
   { seedName: 'Qatar', code: 'QAT', displayName: 'Catar', flag: 'qa', confederation: 'AFC', groupCode: 'B' },
