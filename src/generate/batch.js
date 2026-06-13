@@ -12,11 +12,11 @@ import { insertGenerationLog } from '../db/db.js';
  *
  * @param {import('better-sqlite3').Database} db
  * @param {number[]} fixtureApiIds - provider fixture IDs to process
- * @param {{ endpoint: string, apiKey: string, activeArticleTypes: string[] }} config
+ * @param {{ endpoint: string, apiKey: string, activeArticleTypes: string[], deploymentName?: string }} config
  * @returns {Promise<{ succeeded: number, failed: number, skipped: number }>}
  */
 export async function runBatch(db, fixtureApiIds, config) {
-  const { endpoint, apiKey, activeArticleTypes } = config;
+  const { endpoint, apiKey, activeArticleTypes, deploymentName } = config;
   let succeeded = 0;
   let failed = 0;
   let skipped = 0;
@@ -25,10 +25,13 @@ export async function runBatch(db, fixtureApiIds, config) {
     // Resolve internal fixture ID
     const fixture = db.prepare(`
       SELECT f.id, f.kickoff_utc, f.venue,
-             ht.name as home_team, at.name as away_team
+             COALESCE(hln.name, ht.name) AS home_team,
+             COALESCE(aln.name, at.name) AS away_team
       FROM fixtures f
       JOIN teams ht ON f.home_team_id = ht.id
       JOIN teams at ON f.away_team_id = at.id
+      LEFT JOIN localized_names hln ON hln.entity_type = 'team' AND hln.entity_id = ht.id AND hln.locale = 'es-MX'
+      LEFT JOIN localized_names aln ON aln.entity_type = 'team' AND aln.entity_id = at.id AND aln.locale = 'es-MX'
       WHERE f.api_football_id = ?
     `).get(apiId);
 
@@ -77,6 +80,7 @@ export async function runBatch(db, fixtureApiIds, config) {
         const result = await callRouter({
           endpoint,
           apiKey,
+          deploymentName,
           systemPrompt,
           userPrompt,
         });

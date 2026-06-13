@@ -22,33 +22,53 @@ describe('selectPass', () => {
     expect(result).toBeNull();
   });
 
-  it('returns "refresh" when now is T-2 days and state is "seeded"', () => {
-    const result = selectPass({ kickoffUtc: kickoff, lifecycleState: 'seeded', now: daysBeforeKickoff(2) });
-    expect(result).toBe('refresh');
-  });
-
-  it('returns "refresh" when now is T-1 day (past threshold, self-healing)', () => {
+  it('returns "refresh" when now is T-1 day and state is "seeded"', () => {
     const result = selectPass({ kickoffUtc: kickoff, lifecycleState: 'seeded', now: daysBeforeKickoff(1) });
     expect(result).toBe('refresh');
   });
 
-  it('returns null when state is "seeded" but T-5 (not yet T-2)', () => {
-    const result = selectPass({ kickoffUtc: kickoff, lifecycleState: 'seeded', now: daysBeforeKickoff(5) });
+  it('returns "refresh" when now is T-12h (past threshold, self-healing)', () => {
+    const result = selectPass({ kickoffUtc: kickoff, lifecycleState: 'seeded', now: hoursBeforeKickoff(12) });
+    expect(result).toBe('refresh');
+  });
+
+  it('returns null when state is "seeded" but T-2 (not yet T-1)', () => {
+    const result = selectPass({ kickoffUtc: kickoff, lifecycleState: 'seeded', now: daysBeforeKickoff(2) });
     expect(result).toBeNull();
   });
 
-  it('returns "lock" when now is T-3h and state is "refreshed"', () => {
+  it('returns "final_refresh" when now is T-3h and state is "refreshed"', () => {
     const result = selectPass({ kickoffUtc: kickoff, lifecycleState: 'refreshed', now: hoursBeforeKickoff(3) });
+    expect(result).toBe('final_refresh');
+  });
+
+  it('returns "final_refresh" inside T-5h even if earlier passes were missed', () => {
+    const result = selectPass({ kickoffUtc: kickoff, lifecycleState: null, now: hoursBeforeKickoff(4) });
+    expect(result).toBe('final_refresh');
+  });
+
+  it('returns "final_refresh" inside T-5h from seeded state instead of waiting for another refresh run', () => {
+    const result = selectPass({ kickoffUtc: kickoff, lifecycleState: 'seeded', now: hoursBeforeKickoff(4) });
+    expect(result).toBe('final_refresh');
+  });
+
+  it('returns "lock" when now is T-1h from final_refreshed state', () => {
+    const result = selectPass({ kickoffUtc: kickoff, lifecycleState: 'final_refreshed', now: hoursBeforeKickoff(1) });
     expect(result).toBe('lock');
   });
 
-  it('returns "lock" when now is T-1h (past threshold, self-healing)', () => {
+  it('returns "lock" when now is T-1h even if earlier passes were missed', () => {
     const result = selectPass({ kickoffUtc: kickoff, lifecycleState: 'refreshed', now: hoursBeforeKickoff(1) });
     expect(result).toBe('lock');
   });
 
   it('returns null when state is "refreshed" but T-6h (not yet T-5h window)', () => {
     const result = selectPass({ kickoffUtc: kickoff, lifecycleState: 'refreshed', now: hoursBeforeKickoff(6) });
+    expect(result).toBeNull();
+  });
+
+  it('returns null after final_refresh but before T-1h lock window', () => {
+    const result = selectPass({ kickoffUtc: kickoff, lifecycleState: 'final_refreshed', now: hoursBeforeKickoff(2) });
     expect(result).toBeNull();
   });
 
@@ -71,8 +91,8 @@ describe('selectPass', () => {
   });
 
   // Knockout compressed: seed + refresh can be close together
-  it('returns "refresh" when seeded and already at T-2', () => {
-    const result = selectPass({ kickoffUtc: kickoff, lifecycleState: 'seeded', now: daysBeforeKickoff(2) });
+  it('returns "refresh" when seeded and already at T-1', () => {
+    const result = selectPass({ kickoffUtc: kickoff, lifecycleState: 'seeded', now: daysBeforeKickoff(1) });
     expect(result).toBe('refresh');
   });
 });

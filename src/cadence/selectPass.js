@@ -7,8 +7,9 @@
  *
  * Thresholds:
  *   Seed:    T-10 days (trigger when ≤10 days to kickoff)
- *   Refresh: T-2 days  (trigger when ≤2 days to kickoff)
- *   Lock:    T-5 hours (trigger when ≤5 hours to kickoff — scheduled at T-4h to catch T-3h)
+ *   Refresh:       T-1 day   (trigger when ≤1 day to kickoff)
+ *   Final refresh: T-5 hours (trigger when ≤5 hours to kickoff)
+ *   Lock:          T-1 hour  (trigger when ≤1 hour to kickoff)
  *
  * Self-healing: once past a threshold, the pass remains due until executed.
  * This means a missed cron tick self-heals on the next run.
@@ -24,12 +25,13 @@ const MS_PER_DAY = 24 * MS_PER_HOUR;
 
 // Thresholds in milliseconds before kickoff
 const SEED_THRESHOLD = 10 * MS_PER_DAY;
-const REFRESH_THRESHOLD = 2 * MS_PER_DAY;
-const LOCK_THRESHOLD = 5 * MS_PER_HOUR;
+const REFRESH_THRESHOLD = 1 * MS_PER_DAY;
+const FINAL_REFRESH_THRESHOLD = 5 * MS_PER_HOUR;
+const LOCK_THRESHOLD = 1 * MS_PER_HOUR;
 
 /**
  * @param {{ kickoffUtc: string, lifecycleState: string|null, now: string }} params
- * @returns {'seed' | 'refresh' | 'lock' | null}
+ * @returns {'seed' | 'refresh' | 'final_refresh' | 'lock' | null}
  */
 export function selectPass({ kickoffUtc, lifecycleState, now }) {
   const kickoffMs = new Date(kickoffUtc).getTime();
@@ -46,7 +48,16 @@ export function selectPass({ kickoffUtc, lifecycleState, now }) {
     return null;
   }
 
-  // State machine: determine what's due based on current state + time
+  // State machine: choose the most urgent due pass. This lets missed earlier
+  // passes self-heal in later windows instead of needing multiple runs.
+  if (timeUntilKickoff <= LOCK_THRESHOLD) {
+    return 'lock';
+  }
+
+  if (timeUntilKickoff <= FINAL_REFRESH_THRESHOLD && lifecycleState !== 'final_refreshed') {
+    return 'final_refresh';
+  }
+
   if (lifecycleState === null || lifecycleState === undefined) {
     // Not yet seeded — seed is due if within threshold
     if (timeUntilKickoff <= SEED_THRESHOLD) {
@@ -64,7 +75,13 @@ export function selectPass({ kickoffUtc, lifecycleState, now }) {
   }
 
   if (lifecycleState === 'refreshed') {
-    // Lock is due if within threshold (T-5h window, scheduled at T-4h)
+    if (timeUntilKickoff <= FINAL_REFRESH_THRESHOLD) {
+      return 'final_refresh';
+    }
+    return null;
+  }
+
+  if (lifecycleState === 'final_refreshed') {
     if (timeUntilKickoff <= LOCK_THRESHOLD) {
       return 'lock';
     }

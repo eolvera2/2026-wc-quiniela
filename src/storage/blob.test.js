@@ -1,15 +1,18 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { downloadDb, uploadDb } from './blob.js';
+import { downloadDb, renewDbLease, uploadDb } from './blob.js';
 
 // Mock @azure/storage-blob
 vi.mock('@azure/storage-blob', () => {
   const mockLeaseClient = {
     acquireLease: vi.fn().mockResolvedValue({ leaseId: 'lease-123' }),
     releaseLease: vi.fn().mockResolvedValue({}),
+    renewLease: vi.fn().mockResolvedValue({}),
   };
 
   const mockBlockBlobClient = {
+  exists: vi.fn().mockResolvedValue(true),
     downloadToFile: vi.fn().mockResolvedValue({}),
+  uploadData: vi.fn().mockResolvedValue({}),
     uploadFile: vi.fn().mockResolvedValue({}),
     getBlobLeaseClient: vi.fn().mockReturnValue(mockLeaseClient),
     beginCopyFromURL: vi.fn().mockResolvedValue({ pollUntilDone: vi.fn().mockResolvedValue({}) }),
@@ -18,6 +21,7 @@ vi.mock('@azure/storage-blob', () => {
   };
 
   const mockContainerClient = {
+    createIfNotExists: vi.fn().mockResolvedValue({}),
     getBlockBlobClient: vi.fn().mockReturnValue(mockBlockBlobClient),
   };
 
@@ -55,7 +59,22 @@ describe('storage/blob', () => {
     expect(result.leaseId).toBe('lease-123');
   });
 
-  it('uploads the DB atomically (temp blob + copy) then releases lease', async () => {
+  it('bootstraps an empty DB blob when the cadence DB does not exist yet', async () => {
+    __mockBlockBlobClient.exists.mockResolvedValueOnce(false);
+
+    const result = await downloadDb({
+      connectionString: 'DefaultEndpointsProtocol=https;AccountName=test',
+      containerName: 'wc26',
+      blobName: 'wc26.sqlite',
+      localPath: '/tmp/wc26.sqlite',
+    });
+
+    expect(__mockBlockBlobClient.uploadData).toHaveBeenCalled();
+    expect(__mockLeaseClient.acquireLease).toHaveBeenCalledWith(60);
+    expect(result.leaseId).toBe('lease-123');
+  });
+
+  it('uploads the DB with the active lease then releases lease', async () => {
     await uploadDb({
       connectionString: 'DefaultEndpointsProtocol=https;AccountName=test',
       containerName: 'wc26',
@@ -64,10 +83,7 @@ describe('storage/blob', () => {
       leaseId: 'lease-123',
     });
 
-    // Should upload to a temp blob first
-    expect(__mockBlockBlobClient.uploadFile).toHaveBeenCalledWith('/tmp/wc26.sqlite');
-    // Should copy from temp to final
-    expect(__mockBlockBlobClient.beginCopyFromURL).toHaveBeenCalled();
+    expect(__mockBlockBlobClient.uploadFile).toHaveBeenCalledWith('/tmp/wc26.sqlite', { conditions: { leaseId: 'lease-123' } });
     // Should release lease
     expect(__mockLeaseClient.releaseLease).toHaveBeenCalled();
   });
@@ -87,6 +103,18 @@ describe('storage/blob', () => {
 
     // Lease should still be released
     expect(__mockLeaseClient.releaseLease).toHaveBeenCalled();
+  });
+
+  it('renews an active DB lease', async () => {
+    await renewDbLease({
+      connectionString: 'DefaultEndpointsProtocol=https;AccountName=test',
+      containerName: 'wc26',
+      blobName: 'wc26.sqlite',
+      leaseId: 'lease-123',
+    });
+
+    expect(__mockBlockBlobClient.getBlobLeaseClient).toHaveBeenCalledWith('lease-123');
+    expect(__mockLeaseClient.renewLease).toHaveBeenCalled();
   });
 
   it('fails fast if lease cannot be acquired', async () => {

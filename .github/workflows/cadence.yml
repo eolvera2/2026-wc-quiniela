@@ -2,15 +2,15 @@ name: WC26 Quiniela Cadence
 
 on:
   schedule:
-    # Twice daily: 6am and 6pm UTC
-    - cron: '0 6,18 * * *'
+    # Hourly during launch/tournament windows so T-5h refresh and T-1h lock updates cannot be missed.
+    - cron: '0 * * * *'
   workflow_dispatch:
     inputs:
       publish_target:
-        description: 'What to build. Demo/full site deploys to Azure root; coming soon is available at /comingsoon.'
+        description: 'What to build. Scheduled/live runs deploy the full cadence site to Azure root; coming soon is manual only.'
         required: false
         type: choice
-        default: demo
+        default: live
         options:
           - coming_soon
           - demo
@@ -45,8 +45,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build demo site
-        if: ${{ github.event_name == 'schedule' || inputs.publish_target == 'demo' }}
+      - name: Build demo site (manual preview only)
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_target == 'demo' }}
         env:
           SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
         run: node scripts/seed-demo.js
@@ -58,11 +58,12 @@ jobs:
           BASE_PATH: ''
         run: npm run build:coming-soon
 
-      - name: Run cadence pipeline (internal only)
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.publish_target == 'live' }}
+      - name: Run cadence pipeline
+        if: ${{ github.event_name == 'schedule' || inputs.publish_target == 'live' }}
         env:
           AZURE_AI_ENDPOINT: ${{ secrets.AZURE_AI_ENDPOINT }}
           AZURE_AI_KEY: ${{ secrets.AZURE_AI_KEY }}
+          AZURE_AI_DEPLOYMENT_ROBUST: ${{ secrets.AZURE_AI_DEPLOYMENT_ROBUST }}
           FOOTBALLDATA_KEY: ${{ secrets.FOOTBALLDATA_KEY }}
           SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
           OUTPUT_DIR: dist
@@ -73,7 +74,7 @@ jobs:
         run: node scripts/run-cadence.js
 
       - name: Deploy to Azure Static Web Apps
-        if: ${{ success() && (github.event_name == 'schedule' || inputs.publish_target == 'demo') }}
+        if: ${{ success() && (github.event_name == 'schedule' || inputs.publish_target == 'live') }}
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.SWA_DEPLOYMENT_TOKEN }}

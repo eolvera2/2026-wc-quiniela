@@ -47,7 +47,7 @@ Use match-based slugs that cannot collide if the same teams meet twice, e.g. inc
                     │
        ┌────────────┼─────────────┐
        ▼            ▼             ▼
-   T-10 SEED    T-2 REFRESH   T-3h LOCK     ◄─ lifecycle passes
+   T-10 SEED    T-1 REFRESH   T-5h REFRESH   T-1h LOCK   T+2 FINAL SCORE
        │            │             │
        ▼            ▼             ▼
 FootballData.io ──► cached ingest ──► SQLite (fixtures, teams, cache, odds, kickoff_utc)
@@ -89,8 +89,10 @@ The system is **not** a one-shot batch. Each match page has a lifecycle driven o
 | Pass | Trigger (T-minus `kickoff_utc`) | Action | `lifecycle_state` |
 |------|--------------------------------|--------|-------------------|
 | **1 — Seed** | T-10 days | Generate + rebuild match pages with available data (cached teams/fixtures, H2H/form if present). Claims the URL so it starts ranking; missing volatile data renders as placeholders. | `seeded` |
-| **2 — Refresh** | T-2 days | Re-ingest stale data, refresh odds/probabilities where available, regenerate sections, and rebuild the same match URL. | `refreshed` |
-| **3 — Lock** | T-3 hours | Final close-to-kickoff refresh for odds/probabilities/team stats; lineups/injuries stay placeholders unless a concrete provider endpoint exists. | `locked` |
+| **2 — Refresh** | T-1 day | Re-ingest stale data, refresh odds/probabilities where available, regenerate sections, and rebuild the same match URL. | `refreshed` |
+| **3 — Final refresh** | T-5 hours | Close-to-kickoff refresh for odds/probabilities and team context; cached T-1 team stats are reused unless missing. | `final_refreshed` |
+| **4 — Lock** | T-1 hour | Final pregame lock for lineups/final editorial content where reliable sources exist; otherwise preserve explicit unavailable-data handling. | `locked` |
+| **5 — Final score** | T+2 hours | Apply final scores from verified public sources only, then rebuild cards and match pages. | `resolved` fixture status |
 
 **Scheduler (`scripts/run-cadence.js`):** on each GitHub Actions tick it (1) pulls `wc26.sqlite` from Azure Blob, (2) performs broad season-level refreshes when stale, (3) selects fixtures whose `kickoff_utc` crosses a T-minus threshold AND whose lifecycle state/data completeness requires work, (4) runs cached data enrichment/generation for just those fixtures, (5) rebuilds the full static site from fixtures + grouped section rows, (6) advances lifecycle fields without losing placeholder/completeness state, and (7) uploads the mutated DB back. Idempotent: re-running a tick should be a cache-hit/no-op unless data is stale or a missing section becomes available.
 
@@ -224,7 +226,7 @@ Position the site as an **ENTERTAINMENT / INFORMATION** platform, not a gambling
 - Define SQLite schema: `fixtures`, `teams`, `team_stats`, `head_to_head`, `odds`, `articles`, `generation_log`, plus provider caching tables for call minimization.
   - `fixtures` must include **`kickoff_utc`** (the cadence scheduler keys every T-minus decision off this) plus `round`/`stage` (group vs knockout) and `status` (`scheduled` | `resolved` — knockout fixtures resolve only when prior rounds finish).
   - `articles` must include an **`article_type`** column (`pronostico_momios` | `alineacion_probable` | `quiniela_verdict` | `analisis_apostar`) so each fixture maps to multiple section rows. Unique key: `(fixture_id, article_type)`.
-  - `articles` also carries **lifecycle fields** (drive the cadence): `lifecycle_state` (`seeded` → `refreshed` → `locked`), `last_refreshed_at`, and `last_pass` (`seed` | `refresh` | `lock`). Static publishing is fixture-slug-based: each rebuild regenerates the same match page and groups all section rows for that fixture.
+  - `articles` also carries **lifecycle fields** (drive the cadence): `lifecycle_state` (`seeded` → `refreshed` → `final_refreshed` → `locked`), `last_refreshed_at`, and `last_pass` (`seed` | `refresh` | `final_refresh` | `lock`). Static publishing is fixture-slug-based: each rebuild regenerates the same match page and groups all section rows for that fixture.
   - **`generation_log`** (cost instrumentation, one row per model call) — the source of truth for cost-per-article:
     - `id`, `fixture_id`, `article_type`, `attempt` (retry counter)
     - `model_used` (e.g. `gpt-4o` | `gpt-4.1-mini` — captured from the Azure OpenAI response/config so cost reports can separate production-quality vs. low-cost calls)
@@ -235,7 +237,7 @@ Position the site as an **ENTERTAINMENT / INFORMATION** platform, not a gambling
 - **Endpoint mapping:** FootballData.io (`https://footballdata.io/api/v1`) is the primary data provider. Auth uses `Authorization: Bearer <FOOTBALLDATA_KEY>`. Prefer broad season-level endpoints before per-match/per-team endpoints:
   - Bootstrap/cache: `GET /leagues/50/seasons` → `seasons`; `GET /seasons/{season_id}/teams` → `teams`; `GET /seasons/{season_id}/matches` → `fixtures`; `GET /seasons/{season_id}/standings` → optional standings; `GET /fifa-rankings/current` → team-summary context.
   - Seed enrichment: `GET /teams/{team_id}/stats?season_id={season_id}` only if stale/missing; `GET /teams/{team_id}/h2h/{opponent_id}` only once per fixture pair unless explicitly stale.
-  - Refresh/lock enrichment: `GET /matches/{match_id}/odds` and `GET /matches/{match_id}/probabilities` only for due fixtures close enough to kickoff; do not poll every match on every cron.
+  - Refresh/final-refresh/lock enrichment: `GET /matches/{match_id}/odds` and `GET /matches/{match_id}/probabilities` only for due fixtures close enough to kickoff; do not poll every match on every cron.
   - Post-match archive: `GET /matches/{match_id}/events` and `GET /matches/{match_id}/stats` once for completed fixtures.
   - Unavailable today: no documented injuries or confirmed-lineup endpoints; render placeholders or add a secondary provider later.
 - **Provider cache:** cache every provider response, including empty/negative responses, with per-resource freshness windows. `resolveSeasonId` must read the cache/`seasons` table so team/stat calls do not repeatedly call `/leagues/50/seasons`.
@@ -319,22 +321,22 @@ Google's March 2024 "scaled content abuse" policy targets exactly this pattern (
 - Azure OpenAI cost overruns if expensive deployments are over-used — instrument token logging from day one.
 - Affiliate link compliance (disclosure requirements in MX/US) — see Legal & Compliance section for the full treatment.
 - **Multi-pass cost multiplier:** each article is now generated up to 3× (Seed/Refresh/Lock), so cost-per-article spans its full lifecycle — `cost-report.js` must aggregate all passes per `(fixture_id, article_type)`, and the v2 stage-gate projection must multiply by passes, not just article count.
-- **GitHub Actions scheduling reliability:** cron triggers can be delayed or skipped under platform load, and the T-3h Lock pass is time-sensitive. Mitigate with a tolerance window (process any fixture *past* its threshold not yet at the target state) so a missed tick self-heals on the next run, plus `workflow_dispatch` for manual catch-up.
+- **GitHub Actions scheduling reliability:** cron triggers can be delayed or skipped under platform load, and the T-5h refresh/T-1h Lock passes are time-sensitive. Mitigate with a tolerance window (process any fixture *past* its threshold not yet at the target state) so a missed tick self-heals on the next run, plus `workflow_dispatch` for manual catch-up.
 - **Blob DB single-writer dependency:** the concurrency group is the only thing preventing DB corruption from overlapping runs. A failed upload mid-run could lose a tick's writes — mitigate by uploading only on successful completion and keeping blob versioning enabled for rollback.
-- **Stale-data window:** between Refresh (T-2d) and Lock (T-3h), late-breaking lineup/injury news isn't reflected. Accept for v1; the Lock pass closes most of the gap.
+- **Stale-data window:** between Refresh (T-1d), Final refresh (T-5h), and Lock (T-1h), late-breaking lineup/injury news may still be unavailable from providers. Accept for v1; the T-1h Lock pass closes most of the gap when reliable public/provider data exists.
 - **Azure OpenAI opaque metadata (High/High)**: cost tracking assumes the response reveals token usage and enough model/deployment identity to classify spend. MITIGATE: make one real call now and inspect raw JSON; if model identity is hidden, record the deployment selected by our own routing/config; set an Azure spend cap regardless.
 - **SQLite-in-Blob lost writes/corruption (High/Med-High)**: download→mutate→upload has no concurrency control beyond the Actions group; overlapping runs or interrupted uploads corrupt the DB. MITIGATE: Azure Blob lease (acquire before download, fail-fast if locked); atomic upload to temp blob then copy; enable blob versioning; VACUUM if >50MB.
 - **GitHub Actions free-minute exhaustion (High)**: ~64 fixtures × 3 passes × ~3min ≈ 576+ min just for generation, near the 2000 free-min/month cap. MITIGATE: paid plan or a cheap self-hosted runner (Azure Container Instance ~$0.03/hr); pre-tournament budget calc.
 - **LLM hallucination in YMYL (High/Med-High)**: fabricated lineups/odds/injuries erode trust and risk penalties/liability. MITIGATE: ground every fact in the API data payload ("only reference players/odds/stats in the provided data"); add a deterministic post-generation validator that cross-checks every player/team/number against the DB and flags entities not present in the payload; manual spot-check first 5 articles.
-- **FootballData.io WC2026 coverage/timing (Med-High/Med)**: lineups appear 24-48h out (not T-10), odds 48-72h out; major tournaments sometimes gated behind higher tiers. MITIGATE: verify tier covers WC2026 BEFORE June 11; graceful degradation (T-10 seed uses H2H+form, T-2 refresh enriches with lineups/odds); assert min-data thresholds before generating; 2s rate-limit spacing.
+- **FootballData.io WC2026 coverage/timing (Med-High/Med)**: lineups appear late or may be unavailable, odds 48-72h out; major tournaments sometimes gated behind higher tiers. MITIGATE: verify tier covers WC2026 before match windows; graceful degradation (T-10 seed uses cached/static data, T-1 refresh enriches with API odds/team stats, T-5h final refresh updates odds again, T-1h lock uses lineups only from reliable sources); assert min-data thresholds before generating; 2s rate-limit spacing.
 - **gpt-4o cost during development (Med-High/High)**: uncontrolled prompt iteration on the higher-quality deployment burns budget pre-revenue. MITIGATE: $100/month hard cap; use gpt-4.1-mini for ALL dev/testing, gpt-4o only for production-quality runs; cache by input-data hash to skip unchanged fixtures.
 - **Single-maintainer silent failures (High/Med)**: a 30-day daily tournament; a silently-failed cron loses a time-sensitive window permanently. MITIGATE: `if: failure()` alerting to Discord/Telegram webhook; alert on zero-articles-published days; self-healing tolerance windows; a 1-page manual runbook; 3-day pre-kickoff dry run on historical fixtures.
 - **Azure Static Web Apps deploy/build failures (Med)**: failed `npm ci`, stale lockfiles, or SWA action config can block deployment. MITIGATE: keep `package-lock.json` synchronized, run `npm ci` in CI, set `action: upload`, keep `skip_app_build: true` for prebuilt `dist/`, and use `workflow_dispatch demo_mode=true` as a fast smoke test.
 - **Spanish vernacular drift (Med)**: LLMs default to neutral/Spain Spanish; losing "momios" (MX) for "cuotas" (ES) costs keyword relevance. MITIGATE: locale-locked system prompt ("Mexican Spanish, use 'momios', informal tú"); inject a 20-term MX betting glossary; spot-check first 5.
-- **GitHub Actions cron drift (Med)**: cron can be 5-30min late; the T-3h lock pass is time-sensitive. MITIGATE: schedule the lock check at T-4h verifying kickoff is within 3-5h; everything in UTC; `workflow_dispatch` manual backup.
+- **GitHub Actions cron drift (Med)**: cron can be 5-30min late; the T-5h refresh and T-1h lock passes are time-sensitive. MITIGATE: hourly cadence verifies kickoff is within each threshold window; everything in UTC; `workflow_dispatch` manual backup.
 - **Secrets/supply-chain (Med/Low-but-severe)**: 4+ secrets in Actions; a malicious npm postinstall could exfiltrate them. MITIGATE: pin exact dependency versions, `npm ci` not `npm install`; minimal deps; GitHub Environments to scope secrets; `::add-mask::` secret values in logs.
 - **DB schema migration in a file store (Low-Med)**: no migration tooling; a failed ALTER mid-run corrupts production data. MITIGATE: `schema_version` table + sequential migrations; backup blob before any migration; keep schema simple, prefer JSON columns for flexible data.
-- **Google indexing latency for new domain (Med)**: T-3h articles may index after the match (dead keyword). MITIGATE: submit via IndexNow + Search Console URL Inspection API on every publish; internal linking between fixture articles; T-10 seeds have the best shot at matchday indexing — set expectations accordingly.
+- **Google indexing latency for new domain (Med)**: T-5h lock articles may index after the match (dead keyword). MITIGATE: submit via IndexNow + Search Console URL Inspection API on every publish; internal linking between fixture articles; T-10 seeds have the best shot at matchday indexing — set expectations accordingly.
 
 ## Todos
 Tracked in the SQL todos table (see session DB).

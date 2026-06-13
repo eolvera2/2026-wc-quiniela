@@ -12,11 +12,13 @@
  * Idempotent: re-running is a no-op for already-processed passes.
  */
 
-import { downloadDb, uploadDb } from '../src/storage/blob.js';
+import { downloadDb, renewDbLease, uploadDb } from '../src/storage/blob.js';
 import { openDb, closeDb } from '../src/db/db.js';
 import { selectPass } from '../src/cadence/selectPass.js';
 import { runBatch } from '../src/generate/batch.js';
 import { buildSite } from '../src/publish/staticSite.js';
+import { hydrateFixtureFromFootballData } from '../src/ingest/matchHydration.js';
+import { applyPublicFinalScores } from '../src/ingest/publicFinalScores.js';
 import { seedStaticData } from './seed-static.js';
 
 /**
@@ -31,10 +33,14 @@ export async function runCadence(config) {
     dbPath,
     endpoint,
     apiKey,
+    deploymentName,
+    footballDataKey,
     activeArticleTypes,
     siteBaseUrl,
     outputDir = 'dist',
     affiliateUrls,
+    forceFixtureMatch,
+    forcePass,
   } = config;
 
   // 1. Download DB with lease
@@ -44,6 +50,17 @@ export async function runCadence(config) {
     blobName,
     localPath: dbPath,
   });
+  const leaseRenewal = setInterval(() => {
+    renewDbLease({
+      connectionString: azureStorageConnectionString,
+      containerName,
+      blobName,
+      leaseId,
+    }).catch((err) => {
+      console.warn(`[cadence] WARN DB lease renewal failed: ${err.message}`);
+    });
+  }, 30_000);
+  leaseRenewal.unref?.();
 
   let db;
   try {
@@ -53,17 +70,38 @@ export async function runCadence(config) {
     console.log(`[cadence] Static seed ready: ${seedResult.fixtures} fixtures, ${seedResult.teams} teams`);
 
     const now = new Date().toISOString();
+    const finalScoreResult = applyPublicFinalScores(db, { now });
+    if (finalScoreResult.applied > 0 || finalScoreResult.skipped > 0) {
+      console.log(`[cadence] Public final scores applied=${finalScoreResult.applied}, skipped=${finalScoreResult.skipped}`);
+    }
+    const forceTokens = parseForceFixtureTokens(forceFixtureMatch);
 
     // 3. Get all scheduled/resolved fixtures
     const fixtures = db.prepare(`
-      SELECT id, api_football_id, kickoff_utc, status
-      FROM fixtures
-      WHERE status IN ('scheduled', 'resolved')
+      SELECT f.id,
+             f.api_football_id,
+             f.kickoff_utc,
+             f.status,
+             f.home_team_id AS homeTeamId,
+             f.away_team_id AS awayTeamId,
+             COALESCE(hln.name, ht.name) AS homeTeam,
+             COALESCE(aln.name, at.name) AS awayTeam
+      FROM fixtures f
+      JOIN teams ht ON ht.id = f.home_team_id
+      JOIN teams at ON at.id = f.away_team_id
+      LEFT JOIN localized_names hln ON hln.entity_type = 'team' AND hln.entity_id = ht.id AND hln.locale = 'es-MX'
+      LEFT JOIN localized_names aln ON aln.entity_type = 'team' AND aln.entity_id = at.id AND aln.locale = 'es-MX'
+      WHERE f.status IN ('scheduled', 'resolved')
+        AND f.is_tbd = 0
     `).all();
 
     const dueFixtures = [];
 
     for (const fixture of fixtures) {
+      if (forceTokens.length > 0 && !fixtureMatchesTokens(fixture, forceTokens)) {
+        continue;
+      }
+
       // Check each article type for due passes
       for (const articleType of activeArticleTypes) {
         const article = db.prepare(`
@@ -72,7 +110,7 @@ export async function runCadence(config) {
         `).get(fixture.id, articleType);
 
         const lifecycleState = article?.lifecycle_state || null;
-        const pass = selectPass({ kickoffUtc: fixture.kickoff_utc, lifecycleState, now });
+        const pass = forceTokens.length > 0 ? (forcePass || 'lock') : selectPass({ kickoffUtc: fixture.kickoff_utc, lifecycleState, now });
 
         if (pass) {
           dueFixtures.push({ fixture, articleType, pass });
@@ -85,16 +123,32 @@ export async function runCadence(config) {
     // 4. Process due fixtures: generate → advance state
     for (const { fixture, articleType, pass } of dueFixtures) {
       try {
+        const hydration = await hydrateFixtureFromFootballData(db, {
+          ...fixture,
+          kickoffUtc: fixture.kickoff_utc,
+        }, {
+          apiKey: footballDataKey,
+          pass,
+        });
+        console.log(
+          `[cadence] FootballData ${hydration.matched ? `matched ${hydration.providerFixtureId}` : 'not matched'}: ` +
+          `fixture ${fixture.api_football_id}, odds=${hydration.odds}, teamStats=${hydration.teamStats}`,
+        );
+        for (const warning of hydration.warnings || []) {
+          console.warn(`[cadence] WARN ${warning}`);
+        }
+
         // Generate
         const batchResult = await runBatch(db, [fixture.api_football_id], {
           endpoint,
           apiKey,
+          deploymentName,
           activeArticleTypes: [articleType],
         });
 
         if (batchResult.succeeded > 0) {
           // Advance lifecycle state (publish happens as full-site rebuild below)
-          const stateMap = { seed: 'seeded', refresh: 'refreshed', lock: 'locked' };
+          const stateMap = { seed: 'seeded', refresh: 'refreshed', final_refresh: 'final_refreshed', lock: 'locked' };
           db.prepare(`
             UPDATE articles
             SET lifecycle_state = ?, last_pass = ?,
@@ -118,6 +172,10 @@ export async function runCadence(config) {
              f.venue,
              f.stage,
              f.status,
+             f.final_home_score AS finalHomeScore,
+             f.final_away_score AS finalAwayScore,
+             f.final_score_source_name AS finalScoreSourceName,
+             f.final_score_source_url AS finalScoreSourceUrl,
              CASE WHEN f.is_tbd = 1 THEN COALESCE(f.tbd_home_label, 'TBD') ELSE COALESCE(hln.name, ht.name) END AS homeTeam,
              CASE WHEN f.is_tbd = 1 THEN COALESCE(f.tbd_away_label, 'TBD') ELSE COALESCE(aln.name, at.name) END AS awayTeam,
              CASE WHEN f.is_tbd = 1 THEN NULL ELSE ht.fifa_code END AS homeTeamCode,
@@ -142,6 +200,9 @@ export async function runCadence(config) {
     const allArticles = db.prepare(`
       SELECT a.fixture_id AS fixtureId,
              a.article_type AS articleType,
+             a.status,
+             a.lifecycle_state AS lifecycleState,
+             a.last_pass AS lastPass,
              a.content_json,
              COALESCE(hln.name, ht.name) AS homeTeam,
              COALESCE(aln.name, at.name) AS awayTeam,
@@ -160,6 +221,9 @@ export async function runCadence(config) {
       const articles = allArticles.map(row => ({
         fixtureId: row.fixtureId,
         articleType: row.articleType,
+        status: row.status,
+        lifecycleState: row.lifecycleState,
+        lastPass: row.lastPass,
         homeTeam: row.homeTeam,
         awayTeam: row.awayTeam,
         homeTeamCode: row.homeTeamCode,
@@ -176,13 +240,17 @@ export async function runCadence(config) {
     // 6. Close DB and upload (always, even if no work was done)
     if (db) closeDb(db);
 
-    await uploadDb({
-      connectionString: azureStorageConnectionString,
-      containerName,
-      blobName,
-      localPath: dbPath,
-      leaseId,
-    });
+    try {
+      await uploadDb({
+        connectionString: azureStorageConnectionString,
+        containerName,
+        blobName,
+        localPath: dbPath,
+        leaseId,
+      });
+    } finally {
+      clearInterval(leaseRenewal);
+    }
 
     console.log('[cadence] DB uploaded, lease released');
   }
@@ -197,6 +265,8 @@ if (process.argv[1] && import.meta.url.endsWith(process.argv[1].replace(/\\/g, '
     dbPath: process.env.DB_PATH || '/tmp/wc26.sqlite',
     endpoint: process.env.AZURE_AI_ENDPOINT,
     apiKey: process.env.AZURE_AI_KEY,
+    deploymentName: process.env.AZURE_AI_DEPLOYMENT_ROBUST || process.env.AZURE_AI_DEPLOYMENT_CHEAP,
+    footballDataKey: process.env.FOOTBALLDATA_KEY,
     activeArticleTypes: (process.env.ACTIVE_ARTICLE_TYPES || 'pronostico_momios').split(','),
     siteBaseUrl: process.env.SITE_BASE_URL || 'https://wc26quiniela.com',
     outputDir: process.env.OUTPUT_DIR || 'dist',
@@ -205,9 +275,32 @@ if (process.argv[1] && import.meta.url.endsWith(process.argv[1].replace(/\\/g, '
       bet365: process.env.BET365_AFFILIATE_URL || '',
       skimlinks: process.env.SKIMLINKS_AFFILIATE_URL || '',
     },
+    forceFixtureMatch: process.env.FORCE_FIXTURE_MATCH || '',
+    forcePass: process.env.FORCE_PASS || '',
   };
 
   runCadence(config)
     .then(() => { console.log('[cadence] Run complete'); process.exit(0); })
     .catch((err) => { console.error(`[cadence] FATAL: ${err.message}`); process.exit(1); });
+}
+
+function parseForceFixtureTokens(value) {
+  return String(value || '')
+    .split(/[,|]/)
+    .map((token) => normalizeToken(token))
+    .filter(Boolean);
+}
+
+function fixtureMatchesTokens(fixture, tokens) {
+  const haystack = normalizeToken(`${fixture.homeTeam} ${fixture.awayTeam}`);
+  return tokens.every((token) => haystack.includes(token));
+}
+
+function normalizeToken(value) {
+  return String(value || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
 }

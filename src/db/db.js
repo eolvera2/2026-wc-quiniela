@@ -160,6 +160,26 @@ const MIGRATIONS = [
       migrate();
     },
   },
+  {
+    version: 4,
+    up: (db) => {
+      for (const sql of [
+        'ALTER TABLE fixtures ADD COLUMN final_home_score INTEGER',
+        'ALTER TABLE fixtures ADD COLUMN final_away_score INTEGER',
+        'ALTER TABLE fixtures ADD COLUMN final_score_source_name TEXT',
+        'ALTER TABLE fixtures ADD COLUMN final_score_source_url TEXT',
+        'ALTER TABLE fixtures ADD COLUMN final_score_updated_at TEXT',
+      ]) {
+        try {
+          db.exec(sql);
+        } catch (err) {
+          if (!String(err.message).includes('duplicate column name')) {
+            throw err;
+          }
+        }
+      }
+    },
+  },
 ];
 
 /**

@@ -1,4 +1,6 @@
 import { BlobServiceClient } from '@azure/storage-blob';
+import { mkdirSync } from 'node:fs';
+import { dirname } from 'node:path';
 
 /**
  * Azure Blob Storage persistence with lease-based locking.
@@ -20,13 +22,19 @@ const LEASE_DURATION_SECONDS = 60; // 60s lease; renew if processing takes longe
 export async function downloadDb({ connectionString, containerName, blobName, localPath }) {
   const blobServiceClient = BlobServiceClient.fromConnectionString(connectionString);
   const containerClient = blobServiceClient.getContainerClient(containerName);
+  await containerClient.createIfNotExists();
   const blobClient = containerClient.getBlockBlobClient(blobName);
+
+  if (!(await blobClient.exists())) {
+    await blobClient.uploadData(Buffer.alloc(0));
+  }
 
   // Acquire lease — fail fast if another run holds it
   const leaseClient = blobClient.getBlobLeaseClient();
   const lease = await leaseClient.acquireLease(LEASE_DURATION_SECONDS);
 
   // Download with lease held
+  mkdirSync(dirname(localPath), { recursive: true });
   await blobClient.downloadToFile(localPath);
 
   return { leaseId: lease.leaseId };
@@ -42,23 +50,23 @@ export async function uploadDb({ connectionString, containerName, blobName, loca
   const blobServiceClient = BlobServiceClient.fromConnectionString(connectionString);
   const containerClient = blobServiceClient.getContainerClient(containerName);
   const finalBlobClient = containerClient.getBlockBlobClient(blobName);
-  const tempBlobName = `${blobName}.tmp-${Date.now()}`;
-  const tempBlobClient = containerClient.getBlockBlobClient(tempBlobName);
 
-  const leaseClient = finalBlobClient.getBlobLeaseClient();
+  const leaseClient = finalBlobClient.getBlobLeaseClient(leaseId);
 
   try {
-    // Upload to temp blob
-    await tempBlobClient.uploadFile(localPath);
-
-    // Atomic copy: temp → final
-    const copyPoller = await finalBlobClient.beginCopyFromURL(tempBlobClient.url);
-    await copyPoller.pollUntilDone();
-
-    // Clean up temp
-    await tempBlobClient.deleteIfExists();
+    await finalBlobClient.uploadFile(localPath, { conditions: { leaseId } });
   } finally {
     // Always release lease
-    await leaseClient.releaseLease();
+    if (leaseId) {
+      await leaseClient.releaseLease();
+    }
   }
+}
+
+export async function renewDbLease({ connectionString, containerName, blobName, leaseId }) {
+  const blobServiceClient = BlobServiceClient.fromConnectionString(connectionString);
+  const containerClient = blobServiceClient.getContainerClient(containerName);
+  const blobClient = containerClient.getBlockBlobClient(blobName);
+  const leaseClient = blobClient.getBlobLeaseClient(leaseId);
+  await leaseClient.renewLease();
 }

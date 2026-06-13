@@ -129,13 +129,19 @@ export function buildSite({ fixtures: providedFixtures, teams: providedTeams, ar
   // Write index page
   const indexHtml = renderIndexPage({ fixtures, teams, slugs, siteBaseUrl });
   writeFileSync(join(outputDir, 'index.html'), indexHtml, 'utf-8');
+  writeLegalPages({ outputDir, siteBaseUrl });
 
   // Write sitemap.xml
   const now = new Date().toISOString().slice(0, 10);
-  const sitemapEntries = [{ url: `${siteBaseUrl}/index.html`, lastmod: now }, ...slugs.map((s) => ({
-    url: `${siteBaseUrl}/${s.slug}.html`,
-    lastmod: now,
-  }))];
+  const sitemapEntries = [
+    { url: `${siteBaseUrl}/index.html`, lastmod: now },
+    { url: `${siteBaseUrl}/privacy.html`, lastmod: now },
+    { url: `${siteBaseUrl}/terms.html`, lastmod: now },
+    ...slugs.map((s) => ({
+      url: `${siteBaseUrl}/${s.slug}.html`,
+      lastmod: now,
+    })),
+  ];
   const sitemapXml = generateSitemap(sitemapEntries);
   writeFileSync(join(outputDir, 'sitemap.xml'), sitemapXml, 'utf-8');
 
@@ -146,6 +152,8 @@ export function buildSite({ fixtures: providedFixtures, teams: providedTeams, ar
       siteBaseUrl,
       sections: [
         { title: 'Calendario y pronósticos', url: `${siteBaseUrl}/index.html`, description: 'Calendario completo, equipos y partidos del Mundial 2026 con previas y datos PGS®.' },
+        { title: 'Privacidad', url: `${siteBaseUrl}/privacy.html`, description: 'Aviso de privacidad de Predictagol.' },
+        { title: 'Términos', url: `${siteBaseUrl}/terms.html`, description: 'Términos de uso de Predictagol.' },
         ...slugs.slice(0, 24).map((s) => ({
           url: `${siteBaseUrl}/${s.slug}.html`,
           title: s.slug.replace(/\.html$/, '').replace(/-/g, ' '),
@@ -168,9 +176,15 @@ export function buildComingSoonSite({ siteBaseUrl = 'https://predictagol.com', o
   const canonicalUrl = `${canonicalBaseUrl}${normalizedBasePath ? `/${normalizedBasePath}/` : '/'}`;
   const indexHtml = renderComingSoonPage({ canonicalUrl });
   writeFileSync(join(pageOutputDir, 'index.html'), indexHtml, 'utf-8');
+  const legalBaseUrl = canonicalUrl.replace(/\/$/, '');
+  writeLegalPages({ outputDir: pageOutputDir, siteBaseUrl: legalBaseUrl });
 
   const sitemapUrl = `${canonicalUrl.replace(/\/$/, '')}/sitemap.xml`;
-  const sitemapXml = generateSitemap([{ url: canonicalUrl, lastmod: '2026-01-01' }]);
+  const sitemapXml = generateSitemap([
+    { url: canonicalUrl, lastmod: '2026-01-01' },
+    { url: `${legalBaseUrl}/privacy.html`, lastmod: '2026-01-01' },
+    { url: `${legalBaseUrl}/terms.html`, lastmod: '2026-01-01' },
+  ]);
   writeFileSync(join(pageOutputDir, 'sitemap.xml'), sitemapXml, 'utf-8');
 
   writeFileSync(join(pageOutputDir, 'robots.txt'), renderRobotsTxt({ sitemapUrl }), 'utf-8');
@@ -180,6 +194,8 @@ export function buildComingSoonSite({ siteBaseUrl = 'https://predictagol.com', o
       siteBaseUrl: canonicalUrl.replace(/\/$/, ''),
       sections: [
         { title: 'Próximamente', url: canonicalUrl, description: 'Página de lanzamiento de Predictagol, la quiniela del Mundial 2026 en español.' },
+        { title: 'Privacidad', url: `${legalBaseUrl}/privacy.html`, description: 'Aviso de privacidad de Predictagol.' },
+        { title: 'Términos', url: `${legalBaseUrl}/terms.html`, description: 'Términos de uso de Predictagol.' },
       ],
     }),
     'utf-8',
@@ -205,6 +221,32 @@ function copyStaticAssets(outputDir) {
   if (existsSync(staticWebAppConfig)) {
     cpSync(staticWebAppConfig, join(outputDir, 'staticwebapp.config.json'));
   }
+}
+
+function writeLegalPages({ outputDir, siteBaseUrl }) {
+  const baseUrl = normalizeBaseUrl(siteBaseUrl);
+  writeFileSync(
+    join(outputDir, 'privacy.html'),
+    renderLegalPage({
+      title: 'Aviso de privacidad — Predictagol',
+      slug: 'privacy',
+      metaDescription: 'Aviso de privacidad de Predictagol para usuarios y visitantes.',
+      bodyHtml: renderPrivacyPolicyBody(),
+      siteBaseUrl: baseUrl,
+    }),
+    'utf-8',
+  );
+  writeFileSync(
+    join(outputDir, 'terms.html'),
+    renderLegalPage({
+      title: 'Términos de uso — Predictagol',
+      slug: 'terms',
+      metaDescription: 'Términos de uso de Predictagol para usuarios y visitantes.',
+      bodyHtml: renderTermsBody(),
+      siteBaseUrl: baseUrl,
+    }),
+    'utf-8',
+  );
 }
 
 function escapeHtml(str) {
@@ -349,6 +391,50 @@ function renderArticlePage({ title, metaDescription, bodyHtml, siteBaseUrl, slug
 </html>`;
 }
 
+function renderLegalPage({ title, metaDescription, bodyHtml, siteBaseUrl, slug }) {
+  return renderArticlePage({
+    title,
+    metaDescription,
+    bodyHtml: `<section class="legal-page container">${bodyHtml}</section>`,
+    siteBaseUrl,
+    slug,
+  });
+}
+
+function renderPrivacyPolicyBody() {
+  return `
+    <p class="eyebrow">Legal</p>
+    <h1>Aviso de privacidad</h1>
+    <p>Predictagol es un juego social de pronósticos para la Copa Mundial 2026. No es una casa de apuestas.</p>
+    <h2>Información que podemos recibir</h2>
+    <p>Podemos recibir información que compartes voluntariamente, como datos de contacto, mensajes, preferencias de comunicación o interacciones con nuestros perfiles sociales.</p>
+    <h2>Uso de la información</h2>
+    <p>Usamos esta información para operar el sitio, responder mensajes, mejorar la experiencia, publicar contenido aprobado y mantener la seguridad de nuestras cuentas.</p>
+    <h2>Servicios de terceros</h2>
+    <p>Podemos usar servicios como Google, YouTube, Meta, Instagram, Threads y X para publicar contenido, medir rendimiento básico y autenticar cuentas administradas por Predictagol.</p>
+    <h2>Contacto</h2>
+    <p>Para temas de privacidad, usa el correo de contacto publicado en nuestros canales oficiales de Predictagol.</p>
+    <p><strong>Última actualización:</strong> junio de 2026.</p>
+  `;
+}
+
+function renderTermsBody() {
+  return `
+    <p class="eyebrow">Legal</p>
+    <h1>Términos de uso</h1>
+    <p>Al usar Predictagol aceptas estos términos. Predictagol ofrece contenido y dinámicas sociales de pronósticos deportivos para entretenimiento.</p>
+    <h2>No apuestas</h2>
+    <p>Predictagol no es una casa de apuestas, no recibe apuestas, no paga premios monetarios por apuestas y no promueve apostar dinero.</p>
+    <h2>Contenido y disponibilidad</h2>
+    <p>El contenido puede cambiar conforme avanza la Copa Mundial 2026. Podemos actualizar, pausar o retirar funciones y publicaciones sin previo aviso.</p>
+    <h2>Uso permitido</h2>
+    <p>No uses Predictagol para actividades ilegales, abuso de plataformas, spam, suplantación de identidad o manipulación de sistemas externos.</p>
+    <h2>Contacto</h2>
+    <p>Para preguntas sobre estos términos, usa el correo de contacto publicado en nuestros canales oficiales de Predictagol.</p>
+    <p><strong>Última actualización:</strong> junio de 2026.</p>
+  `;
+}
+
 function renderComingSoonPage({ canonicalUrl }) {
   const description = 'Predictagol se está preparando para el Mundial 2026. Muy pronto podrás armar tu quiniela y seguir pronósticos partido por partido.';
   const title = 'Próximamente — Predictagol';
@@ -404,6 +490,10 @@ function deriveFixturesFromArticles(articles) {
         venue: article.venue || null,
         stage: article.stage || null,
         status: article.status || null,
+        finalHomeScore: article.finalHomeScore ?? null,
+        finalAwayScore: article.finalAwayScore ?? null,
+        finalScoreSourceName: article.finalScoreSourceName || null,
+        finalScoreSourceUrl: article.finalScoreSourceUrl || null,
       });
     }
   }
@@ -461,7 +551,7 @@ function renderTeamSummaries(fixture) {
   return `<section class="team-summaries container reveal theme-section" data-theme="navy">
     <div class="team-summaries__heading">
       <h2>Resumen de equipos</h2>
-      ${renderPgsPill(fixture, initialContent)}
+      ${renderScoreCluster(fixture, initialContent, 'score-cluster--inline')}
     </div>
     <div class="team-summaries__grid">
       ${renderTeamSummaryCard(homeTeam, initialContent)}
@@ -472,14 +562,18 @@ function renderTeamSummaries(fixture) {
 
 function renderSectionList({ fixture, fixtureArticles, affiliateUrls }) {
   const initialContent = getInitialFixtureContent(fixture);
+  const hasGeneratedFixtureContent = [...fixtureArticles.values()].some((article) =>
+    article?.status === 'generated' || ['refresh', 'lock'].includes(article?.lastPass) || ['refreshed', 'locked'].includes(article?.lifecycleState)
+  );
   return Object.entries(SECTION_LABELS)
     .map(([sectionType, label]) => {
       const article = fixtureArticles.get(sectionType);
       const hasArticleContent = Boolean(article?.contentJson?.analisis_tactico_html);
       const initialSection = initialContent?.sections?.[sectionType];
+      const displayInitialSection = hasGeneratedFixtureContent ? stripFreshnessLabels(initialSection) : initialSection;
       const isPlaceholder = !hasArticleContent && !initialSection;
       const content = article?.contentJson?.analisis_tactico_html
-        || initialSection
+        || displayInitialSection
         || `<section class="coming-soon"><h2>${escapeHtml(label)}</h2><p>Próximamente: actualizaremos esta sección de ${escapeHtml(fixture.homeTeam)} vs ${escapeHtml(fixture.awayTeam)} cuando tengamos datos confiables.</p></section>`;
       return `<section id="${escapeHtml(sectionType)}" class="match-section container reveal" data-section="${escapeHtml(sectionType)}">
         <p class="section-kicker">${escapeHtml(label)}</p>
@@ -505,6 +599,33 @@ function renderPgsPill(fixture, initialContent, className = '') {
     <span class="pgs-pill__dash">-</span>
     ${renderPgsTeamScore(awayTeam, initialContent.pgs.away)}
   </span>`;
+}
+
+function renderScoreCluster(fixture, initialContent, className = '') {
+  const finalScore = renderFinalScorePill(fixture);
+  const pgs = renderPgsPill(fixture, initialContent, 'pgs-pill--inline');
+  if (!finalScore && !pgs) return '';
+  return `<div class="${escapeHtml(['score-cluster', className].filter(Boolean).join(' '))}">${finalScore}${pgs}</div>`;
+}
+
+function renderFinalScorePill(fixture, className = '') {
+  if (!hasFinalScore(fixture)) return '';
+  const homeTeam = fixtureTeam(fixture, 'home');
+  const awayTeam = fixtureTeam(fixture, 'away');
+  const source = fixture.finalScoreSourceName ? ` Fuente: ${fixture.finalScoreSourceName}.` : '';
+  const sourceAttrs = fixture.finalScoreSourceUrl
+    ? ` title="${escapeHtml(`Marcador final de fuente pública.${source}`)}"`
+    : ` title="${escapeHtml(`Marcador final de fuente pública.${source}`)}"`;
+  return `<span class="${escapeHtml(['final-score-pill', className].filter(Boolean).join(' '))}"${sourceAttrs}>
+    <span class="final-score-pill__label">Final:</span>
+    ${renderPgsTeamScore(homeTeam, fixture.finalHomeScore)}
+    <span class="pgs-pill__dash">-</span>
+    ${renderPgsTeamScore(awayTeam, fixture.finalAwayScore)}
+  </span>`;
+}
+
+function hasFinalScore(fixture) {
+  return Number.isInteger(fixture?.finalHomeScore) && Number.isInteger(fixture?.finalAwayScore);
 }
 
 function renderPgsTeamScore(team, score) {
@@ -603,7 +724,7 @@ function renderIndexPage({ fixtures, teams, slugs, siteBaseUrl }) {
 }
 
 function renderDateTabs(fixtures) {
-  const dates = uniqueDates(fixtures).slice(0, 18);
+  const dates = uniqueDates(fixtures).filter((date) => date !== 'por-confirmar').slice(0, 18);
   if (dates.length === 0) return '';
   const tabs = dates.map((date, index) => `<a class="date-tab ${index === 0 ? 'is-active' : ''}" href="#fecha-${date}" ${index === 0 ? 'aria-current="date"' : ''}>
       <span class="date-tab__day">${escapeHtml(shortDay(date))}</span>
@@ -615,7 +736,7 @@ function renderDateTabs(fixtures) {
 function renderCalendarSections(fixtures, slugs) {
   const byDate = new Map();
   fixtures.forEach((fixture, index) => {
-    const date = fixture.kickoffUtc ? fixture.kickoffUtc.slice(0, 10) : 'por-confirmar';
+    const date = localDateKey(fixture.kickoffUtc);
     if (!byDate.has(date)) byDate.set(date, []);
     byDate.get(date).push({ fixture, slug: slugs[index]?.slug });
   });
@@ -660,7 +781,7 @@ function renderMatchCard(fixture, slug) {
     <p class="match-card__venue">${escapeHtml(translateVenue(fixture.venue) || 'Sede por confirmar')}</p>
     <div class="match-card__actions">
       ${dataCta}
-      ${renderPgsPill(fixture, pgsSource, 'pgs-pill--inline')}
+      ${renderScoreCluster(fixture, pgsSource, 'score-cluster--card')}
     </div>
   </article>`;
 }
@@ -769,7 +890,21 @@ function buildBreadcrumbJsonLd({ siteBaseUrl, slug, title }) {
 }
 
 function uniqueDates(fixtures) {
-  return [...new Set(fixtures.map((fixture) => fixture.kickoffUtc?.slice(0, 10)).filter(Boolean))];
+  return [...new Set(fixtures.map((fixture) => localDateKey(fixture.kickoffUtc)).filter(Boolean))];
+}
+
+function localDateKey(value) {
+  if (!value) return 'por-confirmar';
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return 'por-confirmar';
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    timeZone: 'America/Mexico_City',
+  }).formatToParts(parsed);
+  const map = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return `${map.year}-${map.month}-${map.day}`;
 }
 
 function formatDateTime(value) {
@@ -800,6 +935,11 @@ function shortDay(value) {
 
 function shortDate(value) {
   return new Intl.DateTimeFormat('es-MX', { month: 'short', day: 'numeric', timeZone: 'America/Mexico_City' }).format(new Date(`${value}T12:00:00Z`));
+}
+
+function stripFreshnessLabels(html) {
+  if (!html) return html;
+  return String(html).replace(/<p\s+class="freshness-label">[\s\S]*?<\/p>/gi, '');
 }
 
 function stageLabel(stage) {
@@ -967,6 +1107,11 @@ h2 { font-size: var(--step-2); }
 .team-card { padding: var(--space-m); }
 .team-chip { display: inline-flex; align-items: center; padding: .4rem .75rem; border-radius: var(--radius-pill); background: var(--surface-card-strong); font-weight: 900; }
 .pgs-pill { position: relative; display: inline-flex; align-items: center; gap: .4rem; min-height: 2.15rem; padding: .38rem .72rem; border: 1px solid rgba(255,209,102,.6); border-radius: var(--radius-pill); background: linear-gradient(135deg, var(--color-gold-400), var(--color-jaguar-500)); color: var(--color-navy-950); font-size: var(--step--1); font-weight: 950; box-shadow: 0 10px 28px rgba(245,166,35,.24); cursor: help; }
+.score-cluster { display: inline-flex; align-items: center; gap: .45rem; }
+.score-cluster--inline { justify-content: flex-end; margin-left: auto; }
+.score-cluster--card { flex-direction: column; align-items: flex-end; margin-left: auto; gap: .25rem; }
+.final-score-pill { display: inline-flex; align-items: center; gap: .4rem; min-height: 2.15rem; padding: .38rem .72rem; border: 1px solid rgba(0,198,163,.5); border-radius: var(--radius-pill); background: linear-gradient(135deg, rgba(0,198,163,.24), rgba(255,255,255,.1)); color: var(--text-primary); font-size: var(--step--1); font-weight: 950; box-shadow: 0 10px 28px rgba(0,198,163,.14); }
+.final-score-pill__label { color: var(--accent-secondary); text-transform: uppercase; letter-spacing: .08em; }
 .pgs-pill::after { content: attr(title); position: absolute; right: 0; bottom: calc(100% + .55rem); z-index: 5; width: max-content; max-width: min(18rem, 78vw); padding: .45rem .65rem; border: 1px solid rgba(255,255,255,.2); border-radius: var(--radius-m); background: rgba(2,15,42,.96); color: var(--text-primary); font-size: var(--step--2); font-weight: 800; line-height: 1.35; letter-spacing: normal; text-align: left; text-transform: none; opacity: 0; pointer-events: none; transform: translateY(.25rem); transition: opacity var(--duration-med) var(--ease-out-expo), transform var(--duration-med) var(--ease-out-expo); }
 .pgs-pill:hover::after, .pgs-pill:focus-visible::after { opacity: 1; transform: translateY(0); }
 .pgs-pill__label, .pgs-pill__team { display: inline-flex; align-items: center; gap: .25rem; }

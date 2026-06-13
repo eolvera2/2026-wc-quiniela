@@ -14,7 +14,7 @@ describe('db wrapper', () => {
 
   it('opens an in-memory DB and applies schema', () => {
     const row = db.prepare("SELECT MAX(version) AS version FROM schema_version").get();
-    expect(row.version).toBe(3);
+    expect(row.version).toBe(4);
   });
 
   it('applies provider cache schema migration', () => {
@@ -38,6 +38,9 @@ describe('db wrapper', () => {
     expect(columns).toContain('match_number');
     expect(columns).toContain('stadium_id');
     expect(columns).toContain('is_tbd');
+    expect(columns).toContain('final_home_score');
+    expect(columns).toContain('final_away_score');
+    expect(columns).toContain('final_score_source_url');
 
     const source = db.prepare("SELECT provider_id FROM provider_id_mappings WHERE entity_type = 'season'").get();
     expect(source.provider_id).toBe('618');

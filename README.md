@@ -2,7 +2,7 @@
 
 ## Overview
 
-An LLM-orchestrated content pipeline that generates Spanish-language World Cup 2026 match prediction articles (pronostico + momios/odds) and publishes them as a static site. Runs on a twice-daily GitHub Actions cron. Content is generated via Azure OpenAI, data is ingested from FootballData.io, persisted in a SQLite database stored in Azure Blob Storage (with lease-based locking), and published to Azure Static Web Apps.
+An LLM-orchestrated content pipeline that generates Spanish-language World Cup 2026 match prediction articles (pronostico + momios/odds) and publishes them as a static site. Runs on an hourly GitHub Actions cron so T-5h refreshes, T-1h match locks, and T+2h public final-score updates cannot be missed. Content is generated via Azure OpenAI, data is ingested from FootballData.io, persisted in a SQLite database stored in Azure Blob Storage (with lease-based locking), and published to Azure Static Web Apps.
 
 ## Architecture
 
@@ -23,9 +23,11 @@ Each fixture passes through three lifecycle stages:
 
 | Pass    | Trigger     | Purpose                                      |
 |---------|-------------|----------------------------------------------|
-| Seed    | T-10 days   | Initial article creation with early odds      |
-| Refresh | T-2 days    | Updated odds and team news                   |
-| Lock    | T-3 hours   | Final prediction with locked lineups          |
+| Seed          | T-10 days   | Initial article creation with static/cached data |
+| Refresh       | T-1 day     | Updated odds and team context from FootballData.io |
+| Final refresh | T-5 hours   | Close-to-kickoff FootballData.io refresh |
+| Lock          | T-1 hour    | Final pregame lock for lineups/final editorial pass |
+| Final score   | T+2 hours   | Public-source final score update after full time |
 
 Only the `pronostico_momios` article type is active in v1.
 
@@ -40,7 +42,7 @@ Only the `pronostico_momios` article type is active in v1.
 │   └── validate-workflow.js    # Workflow validation utility
 ├── src/
 │   ├── cadence/
-│   │   └── selectPass.js       # T-10 / T-2 / T-3h lifecycle state machine
+│   │   └── selectPass.js       # T-10 / T-1d / T-5h / T-1h lifecycle state machine
 │   ├── config/
 │   │   └── index.js            # Environment variable loader
 │   ├── db/
@@ -113,7 +115,7 @@ Copy `.env.example` to `.env` for local development.
 
 ## Deployment
 
-The GitHub Actions workflow (`.github/workflows/cadence.yml`) runs twice daily at 06:00 and 18:00 UTC. While the site is in pre-launch mode, scheduled runs build and deploy the `predictagol.com` Coming Soon page to Azure Static Web Apps via the `Azure/static-web-apps-deploy` action. Manual workflow dispatch defaults to the same production-safe Coming Soon build; `demo` and `live` manual targets are for internal builds and do not deploy unfinished content to production.
+The GitHub Actions workflow (`.github/workflows/cadence.yml`) runs hourly. Scheduled runs execute the live cadence pipeline, refresh due fixtures from FootballData.io, rebuild `dist/`, and deploy the full site to Azure Static Web Apps. Manual `coming_soon` remains available for the launch page, and manual `demo` builds a static demo without FootballData.io or Azure OpenAI calls but does not deploy to production.
 
 Azure infrastructure (East US 2, resource group `rg-wc26-quiniela`):
 

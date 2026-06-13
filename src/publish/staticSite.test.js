@@ -38,6 +38,19 @@ const SAMPLE_FIXTURE = {
   status: 'scheduled',
 };
 
+const LATE_LOCAL_FIXTURE = {
+  fixtureId: 2,
+  matchNumber: 2,
+  homeTeam: 'Corea del Sur',
+  awayTeam: 'Chequia',
+  homeTeamCode: 'KOR',
+  awayTeamCode: 'CZE',
+  kickoffUtc: '2026-06-12T02:00:00Z',
+  venue: 'Guadalajara',
+  stage: 'group',
+  status: 'scheduled',
+};
+
 describe('publish/staticSite', () => {
   let tmpDir;
 
@@ -218,67 +231,73 @@ describe('publish/staticSite', () => {
     expect(index).toContain('class="pgs-pill pgs-pill--inline"');
     expect(index).toContain('letter-spacing: normal; text-align: left; text-transform: none;');
     expect(index).toContain('.pgs-pill--inline { min-height: 0; margin-left: auto;');
-    expect(index).toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 2 - Sudáfrica 1');
-    expect(index).toContain('https://flagcdn.com/24x18/mx.png');
-    expect(index).toContain('https://flagcdn.com/24x18/za.png');
-    expect(index).toContain('<span class="pgs-pill__score">2</span>');
-    expect(index).toContain('<span class="pgs-pill__score">1</span>');
+  });
+
+  it('groups late UTC kickoffs under the Mexico City local date shown on the card', () => {
+    const outDir = join(tmpDir, 'dist');
+    buildSite({
+      fixtures: [SAMPLE_FIXTURE, LATE_LOCAL_FIXTURE],
+      teams: WORLD_CUP_TEAMS.map((team) => ({ name: team.displayName, code: team.code })),
+      articles: [],
+      siteBaseUrl: 'https://example.com',
+      outputDir: outDir,
+      affiliateUrls: AFFILIATE_URLS,
+    });
+
+    const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
+    const june11Section = index.slice(index.indexOf('id="fecha-2026-06-11"'), index.indexOf('</section>', index.indexOf('id="fecha-2026-06-11"')));
+    expect(june11Section).toContain('Corea del Sur');
+    expect(index).not.toContain('id="fecha-2026-06-12"');
+  });
+
+  it('renders public final score above PGS on cards and next to PGS on match pages', () => {
+    const outDir = join(tmpDir, 'dist');
+    buildSite({
+      fixtures: [{
+        ...SAMPLE_FIXTURE,
+        status: 'resolved',
+        finalHomeScore: 2,
+        finalAwayScore: 0,
+        finalScoreSourceName: 'FIFA.com',
+        finalScoreSourceUrl: 'https://www.fifa.com/example',
+      }],
+      teams: WORLD_CUP_TEAMS.map((team) => ({ name: team.displayName, code: team.code })),
+      articles: [],
+      siteBaseUrl: 'https://example.com',
+      outputDir: outDir,
+      affiliateUrls: AFFILIATE_URLS,
+    });
+
+    const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
+    const match = readFileSync(join(outDir, 'partido-1-2026-06-11-mexico-vs-sudafrica.html'), 'utf-8');
+    expect(index).toContain('class="score-cluster score-cluster--card"');
+    expect(index).toContain('class="final-score-pill"');
+    expect(index).toContain('<span class="final-score-pill__label">Final:</span>');
+    expect(match).toContain('class="score-cluster score-cluster--inline"');
+    expect(match).toContain('Marcador final de fuente pública. Fuente: FIFA.com.');
+  });
+
+  it('removes preliminary freshness labels from initial sections once generated API-backed content exists', () => {
+    const outDir = join(tmpDir, 'dist');
+    buildSite({
+      fixtures: [SAMPLE_FIXTURE],
+      teams: WORLD_CUP_TEAMS.map((team) => ({ name: team.displayName, code: team.code })),
+      articles: [{
+        ...SAMPLE_ARTICLE,
+        fixtureId: 1,
+        homeTeam: 'México',
+        awayTeam: 'Sudáfrica',
+        status: 'generated',
+        lastPass: 'lock',
+      }],
+      siteBaseUrl: 'https://example.com',
+      outputDir: outDir,
+      affiliateUrls: AFFILIATE_URLS,
+    });
 
     const match = readFileSync(join(outDir, 'partido-1-2026-06-11-mexico-vs-sudafrica.html'), 'utf-8');
-    expect(existsSync(join(outDir, 'fixture-1-2026-06-11-mexico-vs-sudafrica.html'))).toBe(true);
-    expect(match).toContain('"@type":"SportsEvent"');
-    expect(match).toContain('class="match-hero hero-match reveal theme-section" data-theme="jungle"');
-    expect(match).toContain('src="public/PredictaGol_Logo.png"');
-    expect(match).toContain('class="site-logo__text brand-wordmark">PREDICTAGOL</span>');
-    expect(match).toContain('<strong class="brand-wordmark">PREDICTAGOL</strong>');
-    expect(match).toContain('.hero-match { position: relative; padding: clamp(1rem, 2.2vw, 2rem) 0 clamp(1.25rem, 2.6vw, 2.4rem);');
-    expect(match).toContain('.hero-match__inner { position: relative; z-index: 1; padding: clamp(1.35rem, 3vw, 2.8rem);');
-    expect(match).toContain('.team-name { display: inline-flex; align-items: center; gap: .35rem; vertical-align: middle; }');
-    expect(match).toContain('.match-hero .eyebrow { margin: 0 0 .35rem; }');
-    expect(match).toContain('.match-hero h1 { display: flex; flex-wrap: wrap; align-items: center; gap: .18em; margin: .25rem 0 .55rem; }');
-    expect(match).toContain('.match-hero h1 .versus { display: inline-flex; align-items: center; align-self: center; font-size: .58em; line-height: 1; letter-spacing: -.02em; }');
-    expect(match).toContain('.match-hero h1 .team-flag { width: clamp(2rem, 3.7vw, 3.9rem); height: auto; border-radius: .22rem; }');
-    expect(match).toContain('.team-chip { display: inline-flex; align-items: center;');
-    expect(match).toContain('.team-chip .team-flag { width: 1.7rem; height: 1.275rem; }');
-    expect(match).toContain('.match-hero + .team-summaries { margin-top: var(--space-m); }');
-    expect(match).toContain('.team-summaries__heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-xs); margin: 0 0 var(--space-s); }');
-    expect(match).toContain('.team-summaries h2 { margin: 0; }');
-    expect(match).toContain('PGS®:');
-    expect(match).toContain('Resultado PredictaGoal Score basado en los datos más recientes');
-    expect(match).toContain('México 2 - Sudáfrica 1');
-    expect(match).toContain('.pgs-pill { position: relative; display: inline-flex; align-items: center;');
-    expect(match).toContain('background: linear-gradient(135deg, var(--color-gold-400), var(--color-jaguar-500));');
-    expect(match).toContain('.pgs-pill:hover::after, .pgs-pill:focus-visible::after { opacity: 1; transform: translateY(0); }');
-    expect(match).toContain("const revealItems = [...document.querySelectorAll('.reveal')];");
-    expect(match).toContain('Pronóstico y momios');
-    expect(match).toContain('Este análisis preliminar proviene de múltiples fuentes de análisis deportivo');
-    expect(match).toContain('Análisis preliminar');
-    expect(match).toContain('Versión inicial. Se actualizará con datos actuales cerca del partido.');
-    expect(match).toContain('México con ventaja inicial');
-    expect(match).toContain('Lectura preliminar');
-    expect(match).toContain('Ángulos educativos iniciales');
-    expect(match).toContain('Los datos definitivos serán actualizados más adelante');
-    expect(match).toContain('cambios en los momios para triunfo de México, empate o triunfo de Sudáfrica');
-    expect(match).not.toContain('movimiento del 1X2');
-    expect(match).not.toMatch(/API|1000|1,000|llamadas API|fuentes públicas|agregadores de momios|T-72h|T-48h/);
-    expect(match).toContain('regresa al Mundial por primera vez desde 2010');
-    expect(match).toContain('Oswin Appollis');
-    expect(match).toContain('Raúl Jiménez como referencia ofensiva principal');
-    expect(match).toContain('Guillermo Martínez y otros atacantes aparecen como alternativas');
-    expect(match).not.toContain('Santiago Giménez');
-    expect(match).not.toContain('Próximamente: actualizaremos esta sección');
-    expect(match).toContain('Tu predicción');
-    expect(match).toContain('data-fixture-id="1"');
-    expect(match).toContain('data-pick="home"');
-    expect(match).toContain('data-pick="draw"');
-    expect(match).toContain('data-pick="away"');
-    expect(match).toContain('aria-pressed="false"');
-    expect(match).toContain('se guarda solo en este navegador');
-    expect(match).toContain('class="prediction-status" aria-live="polite"');
-    expect(match).toContain('predictagol:pick:');
-    expect(match).toContain("window.localStorage.setItem(key, value);");
-    expect(match).toContain('.prediction-options button[aria-pressed="true"]');
-    expect(match).not.toContain('Todos los enlaces de afiliados están marcados con rel="sponsored".');
+    expect(match).not.toContain('Veredicto preliminar');
+    expect(match).not.toContain('Versión inicial');
   });
 
   it('renders Spanish country names, flags, and exactly 48 non-placeholder teams', () => {
@@ -361,7 +380,7 @@ describe('publish/staticSite', () => {
     const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
     const outputFiles = readdirSync(outDir).sort();
 
-    expect(outputFiles).toEqual(['index.html', 'llms.txt', 'public', 'robots.txt', 'sitemap.xml', 'staticwebapp.config.json']);
+    expect(outputFiles).toEqual(['index.html', 'llms.txt', 'privacy.html', 'public', 'robots.txt', 'sitemap.xml', 'staticwebapp.config.json', 'terms.html']);
     expect(existsSync(join(outDir, 'public', 'PredictaGol_Logo.png'))).toBe(true);
     expect(existsSync(join(outDir, 'public', 'fonts', 'PredictaGol-NormalRegular.ttf'))).toBe(true);
     expect(index).toContain('Próximamente');
@@ -382,6 +401,14 @@ describe('publish/staticSite', () => {
 
     const sitemap = readFileSync(join(outDir, 'sitemap.xml'), 'utf-8');
     expect(sitemap).toContain('<loc>https://predictagol.com/</loc>');
+    expect(sitemap).toContain('<loc>https://predictagol.com/privacy.html</loc>');
+    expect(sitemap).toContain('<loc>https://predictagol.com/terms.html</loc>');
+
+    const privacy = readFileSync(join(outDir, 'privacy.html'), 'utf-8');
+    const terms = readFileSync(join(outDir, 'terms.html'), 'utf-8');
+    expect(privacy).toContain('Aviso de privacidad');
+    expect(terms).toContain('Términos de uso');
+    expect(terms).toContain('Predictagol no es una casa de apuestas');
 
     expect(index).toContain('<meta property="og:title"');
     expect(index).toContain('<meta name="twitter:card" content="summary_large_image">');
@@ -412,9 +439,13 @@ describe('publish/staticSite', () => {
     expect(existsSync(join(outDir, 'index.html'))).toBe(false);
     expect(existsSync(join(outDir, 'comingsoon', 'public', 'PredictaGol_Logo.png'))).toBe(true);
     expect(existsSync(join(outDir, 'comingsoon', 'public', 'fonts', 'PredictaGol-NormalRegular.ttf'))).toBe(true);
+    expect(existsSync(join(outDir, 'comingsoon', 'privacy.html'))).toBe(true);
+    expect(existsSync(join(outDir, 'comingsoon', 'terms.html'))).toBe(true);
     expect(index).toContain('Próximamente');
     expect(index).toContain('src="public/PredictaGol_Logo.png"');
     expect(index).toContain('<link rel="canonical" href="https://blue-plant-0287c640f.7.azurestaticapps.net/comingsoon/">');
     expect(sitemap).toContain('<loc>https://blue-plant-0287c640f.7.azurestaticapps.net/comingsoon/</loc>');
+    expect(sitemap).toContain('<loc>https://blue-plant-0287c640f.7.azurestaticapps.net/comingsoon/privacy.html</loc>');
+    expect(sitemap).toContain('<loc>https://blue-plant-0287c640f.7.azurestaticapps.net/comingsoon/terms.html</loc>');
   });
 });

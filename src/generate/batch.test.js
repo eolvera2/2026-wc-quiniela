@@ -58,6 +58,7 @@ describe('batch', () => {
     const results = await runBatch(db, [100], config);
 
     expect(callRouter).toHaveBeenCalledTimes(1);
+    expect(callRouter).toHaveBeenCalledWith(expect.objectContaining({ deploymentName: undefined }));
     expect(results.succeeded).toBe(1);
     expect(results.failed).toBe(0);
 
@@ -157,5 +158,18 @@ describe('batch', () => {
     const log = db.prepare('SELECT cost_usd FROM generation_log WHERE fixture_id = 1').get();
     // claude-opus: 1000 * 15/1M + 600 * 75/1M = 0.015 + 0.045 = 0.06
     expect(log.cost_usd).toBeCloseTo(0.06, 4);
+  });
+
+  it('passes configured deployment name to the router', async () => {
+    callRouter.mockResolvedValue(MOCK_ROUTER_RESULT);
+
+    await runBatch(db, [100], {
+      endpoint: 'https://test.openai.azure.com',
+      apiKey: 'key',
+      deploymentName: 'gpt-4o',
+      activeArticleTypes: ['pronostico_momios'],
+    });
+
+    expect(callRouter).toHaveBeenCalledWith(expect.objectContaining({ deploymentName: 'gpt-4o' }));
   });
 });

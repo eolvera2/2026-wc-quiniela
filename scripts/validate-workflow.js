@@ -26,6 +26,7 @@ const REQUIRED_PATTERNS = [
   { pattern: /cancel-in-progress:\s*false/, label: 'cancel-in-progress: false' },
   { pattern: /secrets\.AZURE_AI_ENDPOINT/, label: 'AZURE_AI_ENDPOINT secret' },
   { pattern: /secrets\.AZURE_AI_KEY/, label: 'AZURE_AI_KEY secret' },
+  { pattern: /secrets\.AZURE_AI_DEPLOYMENT_ROBUST/, label: 'AZURE_AI_DEPLOYMENT_ROBUST secret' },
   { pattern: /secrets\.FOOTBALLDATA_KEY/, label: 'FOOTBALLDATA_KEY secret' },
   { pattern: /secrets\.AZURE_STORAGE_CONNECTION_STRING/, label: 'AZURE_STORAGE_CONNECTION_STRING secret' },
   { pattern: /secrets\.SWA_DEPLOYMENT_TOKEN/, label: 'SWA_DEPLOYMENT_TOKEN secret' },
@@ -34,22 +35,23 @@ const REQUIRED_PATTERNS = [
   { pattern: /if:\s*failure\(\)/, label: 'failure alert step' },
   { pattern: /npm ci/, label: 'npm ci step' },
   { pattern: /publish_target:/, label: 'publish target dispatch input' },
-  { pattern: /default:\s*demo/, label: 'demo default dispatch target' },
+  { pattern: /default:\s*live/, label: 'live default dispatch target' },
   { pattern: /run:\s*npm run build:coming-soon/, label: 'coming soon build step' },
-  {
-    pattern: /github\.event_name == 'schedule' \|\| inputs\.publish_target == 'demo'/,
-    label: 'scheduled/manual demo build',
-  },
+  { pattern: /cron:\s*'0 \* \* \* \*'/, label: 'hourly schedule' },
+  { pattern: /github\.event_name == 'workflow_dispatch' && inputs\.publish_target == 'demo'/, label: 'manual demo build' },
   {
     pattern: /github\.event_name == 'workflow_dispatch' && inputs\.publish_target == 'coming_soon'/,
     label: 'manual coming soon build',
   },
-  { pattern: /github\.event_name == 'workflow_dispatch' && inputs\.publish_target == 'live'/, label: 'manual live cadence build' },
+  { pattern: /github\.event_name == 'schedule' \|\| inputs\.publish_target == 'live'/, label: 'scheduled/manual live cadence build' },
   { pattern: /BASE_PATH:\s*''/, label: 'coming soon root build' },
   {
-    pattern:
-      /success\(\) && \(github\.event_name == 'schedule' \|\| inputs\.publish_target == 'demo'\)/,
-    label: 'demo deploy enabled',
+    pattern: /success\(\) && \(github\.event_name == 'schedule' \|\| inputs\.publish_target == 'live'\)/,
+    label: 'scheduled/live deploy enabled',
+  },
+  {
+    pattern: /Build demo site \(manual preview only\)/,
+    label: 'demo deploy path removed from production',
   },
   { pattern: /run-cadence\.js/, label: 'run-cadence.js execution' },
 ];
