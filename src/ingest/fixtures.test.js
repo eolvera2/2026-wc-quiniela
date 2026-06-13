@@ -1,6 +1,7 @@
 import { describe, it, expect, afterEach } from 'vitest';
 import nock from 'nock';
 import { fetchFixtures } from './fixtures.js';
+import { closeDb, openDb } from '../db/db.js';
 
 const FOOTBALLDATA_HOST = 'https://footballdata.io';
 const API_KEY = 'test-footballdata-key';
@@ -39,8 +40,12 @@ const SAMPLE_FIXTURES_RESPONSE = {
 };
 
 describe('ingest/fixtures', () => {
+  let db;
+
   afterEach(() => {
     nock.cleanAll();
+    if (db) closeDb(db);
+    db = null;
   });
 
   it('fetches and normalizes WC2026 fixtures from FootballData.io', async () => {
@@ -99,6 +104,23 @@ describe('ingest/fixtures', () => {
 
     const fixtures = await fetchFixtures({ apiKey: API_KEY, leagueId: 50, season: 2026 });
     expect(fixtures).toEqual([]);
+  });
+
+  it('caches fixture-list pages when a DB is provided', async () => {
+    db = openDb(':memory:');
+    nock(FOOTBALLDATA_HOST)
+      .get('/api/v1/leagues/50/matches')
+      .query(true)
+      .once()
+      .reply(200, SAMPLE_FIXTURES_RESPONSE);
+
+    const first = await fetchFixtures({ apiKey: API_KEY, leagueId: 50, season: 2026, db, reason: 'fixture_mapping' });
+    const second = await fetchFixtures({ apiKey: API_KEY, leagueId: 50, season: 2026, db, reason: 'fixture_mapping' });
+
+    expect(first).toHaveLength(2);
+    expect(second).toHaveLength(2);
+    expect(db.prepare("SELECT COUNT(*) AS count FROM fetch_log WHERE endpoint = '/leagues/50/matches' AND cached = 0").get().count).toBe(1);
+    expect(db.prepare("SELECT COUNT(*) AS count FROM fetch_log WHERE endpoint = '/leagues/50/matches' AND cached = 1").get().count).toBe(1);
   });
 
   it('throws on HTTP error', async () => {

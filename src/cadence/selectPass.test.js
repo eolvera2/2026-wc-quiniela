@@ -57,9 +57,9 @@ describe('selectPass', () => {
     expect(result).toBe('lock');
   });
 
-  it('returns "lock" when now is T-1h even if earlier passes were missed', () => {
+  it('returns "final_refresh" when now is T-1h and final refresh was missed', () => {
     const result = selectPass({ kickoffUtc: kickoff, lifecycleState: 'refreshed', now: hoursBeforeKickoff(1) });
-    expect(result).toBe('lock');
+    expect(result).toBe('final_refresh');
   });
 
   it('returns null when state is "refreshed" but T-6h (not yet T-5h window)', () => {

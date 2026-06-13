@@ -50,7 +50,7 @@ export function selectPass({ kickoffUtc, lifecycleState, now }) {
 
   // State machine: choose the most urgent due pass. This lets missed earlier
   // passes self-heal in later windows instead of needing multiple runs.
-  if (timeUntilKickoff <= LOCK_THRESHOLD) {
+  if (timeUntilKickoff <= LOCK_THRESHOLD && lifecycleState === 'final_refreshed') {
     return 'lock';
   }
 

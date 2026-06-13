@@ -132,10 +132,14 @@ export async function runCadence(config) {
           apiKey: footballDataKey,
           pass,
         });
-        console.log(
-          `[cadence] FootballData ${hydration.matched ? `matched ${hydration.providerFixtureId}` : 'not matched'}: ` +
-          `fixture ${fixture.api_football_id}, odds=${hydration.odds}, teamStats=${hydration.teamStats}`,
-        );
+        if (hydration.skipped) {
+          console.log(`[cadence] FootballData skipped for ${pass}: fixture ${fixture.api_football_id}`);
+        } else {
+          console.log(
+            `[cadence] FootballData ${hydration.matched ? `matched ${hydration.providerFixtureId}` : 'not matched'}: ` +
+            `fixture ${fixture.api_football_id}, odds=${hydration.odds}, teamStats=${hydration.teamStats}`,
+          );
+        }
         for (const warning of hydration.warnings || []) {
           console.warn(`[cadence] WARN ${warning}`);
         }

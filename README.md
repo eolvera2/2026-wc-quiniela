@@ -31,6 +31,15 @@ Each fixture passes through three lifecycle stages:
 
 Only the `pronostico_momios` article type is active in v1.
 
+FootballData.io quota guardrails:
+- T-10 seed uses static/cached content only and makes **0 FootballData calls**.
+- Fixture-list pages are cached for 24 hours and used only for provider ID mapping during data-backed passes.
+- T-1 refresh and T-5 final refresh are the only passes that fetch odds; team stats use a 72-hour cache.
+- T-1 lock reuses existing FootballData content and makes **0 odds/team-stat calls**.
+- Public final scores never use FootballData.
+
+Expected first-30-day usage stays below 1000 calls: about 208 match-odds calls for 104 fixtures (T-1 + T-5), about 480 worst-case team-stat calls with a 72-hour cache across 48 teams, and about 90 fixture-list page calls at three pages per day for 30 days, leaving roughly 200+ calls of buffer.
+
 ## Project Structure
 
 ```

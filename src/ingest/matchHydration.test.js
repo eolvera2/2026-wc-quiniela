@@ -12,8 +12,34 @@ describe('ingest/matchHydration', () => {
 
   afterEach(() => {
     nock.cleanAll();
+    nock.enableNetConnect();
     if (db) closeDb(db);
     db = null;
+  });
+
+  it('skips FootballData entirely for seed passes', async () => {
+    nock.disableNetConnect();
+    db = openDb(':memory:');
+    seedStaticData(db);
+
+    const fixture = db.prepare(`
+      SELECT f.id,
+             f.api_football_id,
+             f.kickoff_utc AS kickoffUtc,
+             f.home_team_id AS homeTeamId,
+             f.away_team_id AS awayTeamId,
+             COALESCE(hln.name, ht.name) AS homeTeam,
+             COALESCE(aln.name, at.name) AS awayTeam
+      FROM fixtures f
+      JOIN teams ht ON ht.id = f.home_team_id
+      JOIN teams at ON at.id = f.away_team_id
+      LEFT JOIN localized_names hln ON hln.entity_type = 'team' AND hln.entity_id = ht.id AND hln.locale = 'es-MX'
+      LEFT JOIN localized_names aln ON aln.entity_type = 'team' AND aln.entity_id = at.id AND aln.locale = 'es-MX'
+      WHERE ht.name = 'Qatar' AND at.name = 'Switzerland'
+    `).get();
+
+    await expect(hydrateFixtureFromFootballData(db, fixture, { apiKey: API_KEY, pass: 'seed' }))
+      .resolves.toMatchObject({ skipped: true, matched: false, odds: 0, teamStats: 0 });
   });
 
   it('matches localized fixtures to FootballData provider names', async () => {
@@ -80,7 +106,7 @@ describe('ingest/matchHydration', () => {
 
     const result = await hydrateFixtureFromFootballData(db, fixture, {
       apiKey: API_KEY,
-      pass: 'seed',
+      pass: 'lock',
     });
 
     expect(result).toMatchObject({
@@ -105,7 +131,7 @@ describe('ingest/matchHydration', () => {
       LEFT JOIN localized_names aln ON aln.entity_type = 'team' AND aln.entity_id = at.id AND aln.locale = 'es-MX'
       WHERE ht.name = 'Canada' AND at.name = 'Bosnia & Herzegovina'
     `).get();
-    await expect(hydrateFixtureFromFootballData(db, canada, { apiKey: API_KEY, pass: 'seed' }))
+    await expect(hydrateFixtureFromFootballData(db, canada, { apiKey: API_KEY, pass: 'lock' }))
       .resolves.toMatchObject({ matched: true, providerFixtureId: 211661 });
 
     const usa = db.prepare(`
@@ -123,7 +149,7 @@ describe('ingest/matchHydration', () => {
       LEFT JOIN localized_names aln ON aln.entity_type = 'team' AND aln.entity_id = at.id AND aln.locale = 'es-MX'
       WHERE ht.name = 'USA' AND at.name = 'Paraguay'
     `).get();
-    await expect(hydrateFixtureFromFootballData(db, usa, { apiKey: API_KEY, pass: 'seed' }))
+    await expect(hydrateFixtureFromFootballData(db, usa, { apiKey: API_KEY, pass: 'lock' }))
       .resolves.toMatchObject({ matched: true, providerFixtureId: 204602 });
   });
 });

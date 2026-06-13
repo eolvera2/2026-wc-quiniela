@@ -31,6 +31,17 @@ export async function hydrateFixtureFromFootballData(db, fixture, {
   apiKey,
   pass,
 } = {}) {
+  if (pass === 'seed') {
+    return {
+      matched: false,
+      providerFixtureId: null,
+      odds: 0,
+      teamStats: 0,
+      warnings: [],
+      skipped: true,
+    };
+  }
+
   if (!apiKey) {
     throw new Error('FOOTBALLDATA_KEY is required to hydrate fixture data');
   }
@@ -49,7 +60,7 @@ export async function hydrateFixtureFromFootballData(db, fixture, {
   upsertProviderFixtureMapping(db, fixture.id, providerFixture);
   syncProviderFixtureFields(db, fixture.id, providerFixture);
 
-  if (pass === 'seed') {
+  if (pass === 'lock') {
     return {
       matched: true,
       providerFixtureId: providerFixture.apiFootballId,
@@ -119,16 +130,19 @@ async function resolveProviderFixture(db, fixture, apiKey) {
     return JSON.parse(mapped.extra_json);
   }
 
-  const providerFixtures = await getProviderFixtures(apiKey);
+  const providerFixtures = await getProviderFixtures(apiKey, db);
   return findMatchingProviderFixture(fixture, providerFixtures);
 }
 
-async function getProviderFixtures(apiKey) {
+async function getProviderFixtures(apiKey, db) {
   if (!providerFixturesPromise) {
     providerFixturesPromise = fetchFixtures({
       apiKey,
+      db,
       leagueId: FOOTBALLDATA_WORLD_CUP_LEAGUE_ID,
       season: 2026,
+      ttlSeconds: 24 * 60 * 60,
+      reason: 'fixture_mapping',
     });
   }
   return providerFixturesPromise;

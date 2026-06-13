@@ -6,7 +6,7 @@
  * them into our internal schema shape.
  */
 
-import { requestFootballData, resolveSeasonId } from './footballData.js';
+import { requestFootballData, requestFootballDataCached, resolveSeasonId } from './footballData.js';
 
 // Provider status codes -> our internal status
 const STATUS_MAP = {
@@ -43,14 +43,27 @@ const KNOCKOUT_KEYWORDS = ['quarter', 'semi', 'final', 'round of', 'knockout', '
  *   venue: string|null,
  * }>>}
  */
-export async function fetchFixtures({ apiKey, leagueId, season }) {
+export async function fetchFixtures({ apiKey, leagueId, season, db, reason = 'fixtures', ttlSeconds = 24 * 60 * 60 }) {
   const seasonId = await resolveSeasonId({ apiKey, leagueId, season });
   const matches = [];
   let page = 1;
   let totalPages = 1;
 
   do {
-    const data = await requestFootballData(`/leagues/${leagueId}/matches?season_id=${seasonId}&page=${page}&limit=50`, apiKey);
+    const path = `/leagues/${leagueId}/matches?season_id=${seasonId}&page=${page}&limit=50`;
+    const response = db
+      ? await requestFootballDataCached(db, {
+        path,
+        apiKey,
+        reason,
+        entityType: 'fixtures',
+        entityRefId: leagueId,
+        ttlSeconds,
+        negativeTtlSeconds: 60 * 60,
+        isEmptyResponse: (data) => (data.data?.matches || []).length === 0,
+      })
+      : { data: await requestFootballData(path, apiKey) };
+    const data = response.data;
     matches.push(...(data.data?.matches || []));
     totalPages = data.meta?.pagination?.total_pages || data.meta?.total_pages || 1;
     page += 1;
