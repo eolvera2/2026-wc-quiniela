@@ -84,6 +84,8 @@ export async function runCadence(config) {
              f.status,
              f.home_team_id AS homeTeamId,
              f.away_team_id AS awayTeamId,
+             ht.name AS homeTeamRaw,
+             at.name AS awayTeamRaw,
              COALESCE(hln.name, ht.name) AS homeTeam,
              COALESCE(aln.name, at.name) AS awayTeam
       FROM fixtures f

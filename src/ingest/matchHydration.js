@@ -135,8 +135,8 @@ async function getProviderFixtures(apiKey) {
 }
 
 function findMatchingProviderFixture(fixture, providerFixtures) {
-  const home = canonicalTeamName(fixture.homeTeam);
-  const away = canonicalTeamName(fixture.awayTeam);
+  const homeNames = candidateTeamNames(fixture.homeTeam, fixture.homeTeamRaw);
+  const awayNames = candidateTeamNames(fixture.awayTeam, fixture.awayTeamRaw);
   const kickoffMs = new Date(fixture.kickoffUtc).getTime();
   const toleranceMs = 12 * 60 * 60 * 1000;
 
@@ -144,10 +144,14 @@ function findMatchingProviderFixture(fixture, providerFixtures) {
     const candidateHome = canonicalTeamName(candidate.homeTeam.name);
     const candidateAway = canonicalTeamName(candidate.awayTeam.name);
     const candidateKickoffMs = new Date(candidate.kickoffUtc).getTime();
-    const sameTeams = candidateHome === home && candidateAway === away;
+    const sameTeams = homeNames.includes(candidateHome) && awayNames.includes(candidateAway);
     const closeKickoff = Math.abs(candidateKickoffMs - kickoffMs) <= toleranceMs;
     return sameTeams && closeKickoff;
   }) || null;
+}
+
+function candidateTeamNames(...values) {
+  return [...new Set(values.map((value) => canonicalTeamName(value)).filter(Boolean))];
 }
 
 function canonicalTeamName(value) {
