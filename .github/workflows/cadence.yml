@@ -2,8 +2,8 @@ name: WC26 Quiniela Cadence
 
 on:
   schedule:
-    # Hourly during launch/tournament windows so T-5h refresh and T-1h lock updates cannot be missed.
-    - cron: '0 * * * *'
+    # Frequent checks during launch/tournament windows reduce Actions scheduling drift around T-5h/T-1h thresholds.
+    - cron: '*/15 * * * *'
   workflow_dispatch:
     inputs:
       publish_target:

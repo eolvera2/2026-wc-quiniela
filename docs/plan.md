@@ -99,7 +99,7 @@ The system is **not** a one-shot batch. Each match page has a lifecycle driven o
 **Knockout stages:** those fixtures don't exist until prior rounds finish. The scheduler keys off `fixtures.status` — a fixture flips `scheduled` → `resolved` once teams are known, and only then enters the T-minus cadence. Knockout turnaround (~2–4 days) naturally **compresses** Seed and Refresh closer together; the threshold logic clamps so a fixture resolved inside T-10 seeds immediately.
 
 **GitHub Actions workflow (`.github/workflows/cadence.yml`):**
-- `on.schedule` cron tick (twice daily, e.g. `0 6,18 * * *`) + `workflow_dispatch` for manual runs.
+- `on.schedule` cron tick every 15 minutes during launch/tournament windows + `workflow_dispatch` for manual runs. Lifecycle state prevents repeated FootballData/API work after a threshold pass completes.
 - `concurrency: { group: wc26-pipeline, cancel-in-progress: false }` — the single-writer guarantee for the Blob-hosted DB.
 - Secrets (Azure AI endpoint/key, FootballData.io key, Azure Storage connection string, SWA deployment token, affiliate URLs) injected as GitHub Actions secrets, mapped to env vars (never committed).
 - Steps: checkout → setup Node → `npm ci` → `node scripts/run-cadence.js` or `node scripts/seed-demo.js` in `demo_mode` → deploy `dist/` to Azure Static Web Apps → (DB upload handled inside the cadence script).

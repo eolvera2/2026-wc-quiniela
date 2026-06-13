@@ -25,5 +25,14 @@
     "awayScore": 1,
     "sourceName": "FIFA.com",
     "sourceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/canada-bosnia-and-herzegovina-highlights-match-report"
+  },
+  {
+    "homeTeam": "USA",
+    "awayTeam": "Paraguay",
+    "kickoffLocalDate": "2026-06-12",
+    "homeScore": 4,
+    "awayScore": 1,
+    "sourceName": "ESPN",
+    "sourceUrl": "https://www.espn.com/football/match/_/gameId/760417"
   }
 ]

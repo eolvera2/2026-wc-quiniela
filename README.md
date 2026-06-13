@@ -2,7 +2,7 @@
 
 ## Overview
 
-An LLM-orchestrated content pipeline that generates Spanish-language World Cup 2026 match prediction articles (pronostico + momios/odds) and publishes them as a static site. Runs on an hourly GitHub Actions cron so T-5h refreshes, T-1h match locks, and T+2h public final-score updates cannot be missed. Content is generated via Azure OpenAI, data is ingested from FootballData.io, persisted in a SQLite database stored in Azure Blob Storage (with lease-based locking), and published to Azure Static Web Apps.
+An LLM-orchestrated content pipeline that generates Spanish-language World Cup 2026 match prediction articles (pronostico + momios/odds) and publishes them as a static site. Runs on a 15-minute GitHub Actions cron so T-5h refreshes, T-1h match locks, and T+2h public final-score updates are picked up promptly despite Actions scheduling drift. Content is generated via Azure OpenAI, data is ingested from FootballData.io, persisted in a SQLite database stored in Azure Blob Storage (with lease-based locking), and published to Azure Static Web Apps.
 
 ## Architecture
 
