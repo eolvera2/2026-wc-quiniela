@@ -15,7 +15,8 @@
  *   - Does not inject inside existing <a>...</a> tags
  */
 
-const PLACEHOLDER_AFFILIATE_URL = 'https://www.predictagol.com/placeholder-not-configured';
+const PLACEHOLDER_AFFILIATE_PATH = 'placeholder-not-configured';
+const PLACEHOLDER_AFFILIATE_URL = `https://www.predictagol.com/${PLACEHOLDER_AFFILIATE_PATH}`;
 
 /**
  * @param {string} html - The article HTML content
@@ -110,12 +111,12 @@ function replaceFirstOutsideLinks(html, pattern, url) {
 }
 
 function isUsableAffiliateUrl(url) {
-  return Boolean(url) && url !== PLACEHOLDER_AFFILIATE_URL;
+  return Boolean(url) && url !== PLACEHOLDER_AFFILIATE_URL && url !== PLACEHOLDER_AFFILIATE_PATH;
 }
 
 function stripPlaceholderLinks(html) {
   return String(html || '').replace(
-    /<a\b([^>]*\s)?href=["']https:\/\/www\.predictagol\.com\/placeholder-not-configured["'][^>]*>([\s\S]*?)<\/a>/gi,
+    /<a\b([^>]*\s)?href=["'](?:https:\/\/www\.predictagol\.com\/)?placeholder-not-configured["'][^>]*>([\s\S]*?)<\/a>/gi,
     '$2',
   );
 }

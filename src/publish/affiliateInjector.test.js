@@ -107,4 +107,11 @@ describe('affiliateInjector', () => {
     expect(result).toContain('Pronóstico');
     expect(result).not.toContain('placeholder-not-configured');
   });
+
+  it('strips relative placeholder affiliate links while preserving text', () => {
+    const html = '<p>Según los <a href="placeholder-not-configured" rel="sponsored">momios</a> disponibles.</p>';
+    const result = injectAffiliateLinks(html, AFFILIATE_URLS);
+    expect(result).toContain('momios');
+    expect(result).not.toContain('placeholder-not-configured');
+  });
 });
