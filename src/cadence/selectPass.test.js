@@ -6,6 +6,7 @@ describe('selectPass', () => {
   const kickoff = '2026-06-11T18:00:00Z';
   const daysBeforeKickoff = (days) => new Date(new Date(kickoff).getTime() - days * 24 * 60 * 60 * 1000).toISOString();
   const hoursBeforeKickoff = (hours) => new Date(new Date(kickoff).getTime() - hours * 60 * 60 * 1000).toISOString();
+  const hoursAfterKickoff = (hours) => new Date(new Date(kickoff).getTime() + hours * 60 * 60 * 1000).toISOString();
 
   it('returns "seed" when now is T-10 days or closer and no state', () => {
     const result = selectPass({ kickoffUtc: kickoff, lifecycleState: null, now: daysBeforeKickoff(10) });
@@ -77,7 +78,17 @@ describe('selectPass', () => {
     expect(result).toBeNull();
   });
 
-  it('returns null for past kickoffs (no retroactive processing)', () => {
+  it('returns "lock" shortly after kickoff when the pregame lock was missed', () => {
+    const result = selectPass({ kickoffUtc: kickoff, lifecycleState: null, now: hoursAfterKickoff(0.5) });
+    expect(result).toBe('lock');
+  });
+
+  it('returns null after the started-match catch-up window', () => {
+    const result = selectPass({ kickoffUtc: kickoff, lifecycleState: null, now: hoursAfterKickoff(3) });
+    expect(result).toBeNull();
+  });
+
+  it('returns null for old past kickoffs (no retroactive pregame generation)', () => {
     const pastKickoff = '2026-05-01T18:00:00Z';
     const result = selectPass({ kickoffUtc: pastKickoff, lifecycleState: null, now: '2026-06-01T00:00:00Z' });
     expect(result).toBeNull();

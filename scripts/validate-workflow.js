@@ -26,7 +26,7 @@ const REQUIRED_PATTERNS = [
   { pattern: /cancel-in-progress:\s*false/, label: 'cancel-in-progress: false' },
   { pattern: /secrets\.AZURE_AI_ENDPOINT/, label: 'AZURE_AI_ENDPOINT secret' },
   { pattern: /secrets\.AZURE_AI_KEY/, label: 'AZURE_AI_KEY secret' },
-  { pattern: /secrets\.AZURE_AI_DEPLOYMENT_ROBUST/, label: 'AZURE_AI_DEPLOYMENT_ROBUST secret' },
+  { pattern: /AZURE_AI_DEPLOYMENT_ROBUST:\s*\$\{\{\s*vars\.AZURE_AI_DEPLOYMENT_ROBUST\s*\|\|\s*'gpt-4o'\s*\}\}/, label: 'AZURE_AI_DEPLOYMENT_ROBUST default' },
   { pattern: /secrets\.FOOTBALLDATA_KEY/, label: 'FOOTBALLDATA_KEY secret' },
   { pattern: /secrets\.AZURE_STORAGE_CONNECTION_STRING/, label: 'AZURE_STORAGE_CONNECTION_STRING secret' },
   { pattern: /secrets\.SWA_DEPLOYMENT_TOKEN/, label: 'SWA_DEPLOYMENT_TOKEN secret' },

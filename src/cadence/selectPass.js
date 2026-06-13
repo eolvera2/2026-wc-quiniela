@@ -10,6 +10,7 @@
  *   Refresh:       T-1 day   (trigger when ≤1 day to kickoff)
  *   Final refresh: T-5 hours (trigger when ≤5 hours to kickoff)
  *   Lock:          T-1 hour  (trigger when ≤1 hour to kickoff)
+ *   Started catch-up: T+2 hours (missed lock can self-heal without provider calls)
  *
  * Self-healing: once past a threshold, the pass remains due until executed.
  * This means a missed cron tick self-heals on the next run.
@@ -17,7 +18,8 @@
  * Knockout clamp: a fixture resolved inside T-10 seeds immediately (the
  * threshold check handles this naturally — if ≤10 days, seed is due).
  *
- * Does NOT process past kickoffs (no retroactive generation).
+ * Pregame generation only self-heals shortly after kickoff; later postgame work
+ * is handled by public final-score ingestion.
  */
 
 const MS_PER_HOUR = 60 * 60 * 1000;
@@ -28,6 +30,7 @@ const SEED_THRESHOLD = 10 * MS_PER_DAY;
 const REFRESH_THRESHOLD = 1 * MS_PER_DAY;
 const FINAL_REFRESH_THRESHOLD = 5 * MS_PER_HOUR;
 const LOCK_THRESHOLD = 1 * MS_PER_HOUR;
+const STARTED_CATCHUP_THRESHOLD = -2 * MS_PER_HOUR;
 
 /**
  * @param {{ kickoffUtc: string, lifecycleState: string|null, now: string }} params
@@ -38,8 +41,10 @@ export function selectPass({ kickoffUtc, lifecycleState, now }) {
   const nowMs = new Date(now).getTime();
   const timeUntilKickoff = kickoffMs - nowMs;
 
-  // Don't process past kickoffs
   if (timeUntilKickoff <= 0) {
+    if (timeUntilKickoff >= STARTED_CATCHUP_THRESHOLD && lifecycleState !== 'locked') {
+      return 'lock';
+    }
     return null;
   }
 

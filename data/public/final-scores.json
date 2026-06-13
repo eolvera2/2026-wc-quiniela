@@ -34,5 +34,14 @@
     "awayScore": 1,
     "sourceName": "ESPN",
     "sourceUrl": "https://www.espn.com/football/match/_/gameId/760417"
+  },
+  {
+    "homeTeam": "Qatar",
+    "awayTeam": "Switzerland",
+    "kickoffLocalDate": "2026-06-13",
+    "homeScore": 1,
+    "awayScore": 1,
+    "sourceName": "ESPN",
+    "sourceUrl": "https://www.espn.com/football/match/_/gameId/760420/switzerland-qatar"
   }
 ]
