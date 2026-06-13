@@ -37,6 +37,12 @@ describe('prompt', () => {
       expect(prompt).toContain('url_slug');
     });
 
+    it('requires parseable final score predictions for pronostico_momios', () => {
+      const prompt = buildSystemPrompt('pronostico_momios');
+      expect(prompt).toContain('Predicción final: [Equipo A] X-Y [Equipo B]');
+      expect(prompt).toContain('[Equipo A] X-Y [Equipo B]');
+    });
+
     it('varies instructions by article_type', () => {
       const momios = buildSystemPrompt('pronostico_momios');
       const alineacion = buildSystemPrompt('alineacion_probable');

@@ -101,7 +101,7 @@ export function buildSite({ fixtures: providedFixtures, teams: providedTeams, ar
     const slug = buildMatchSlug(fixture);
 
     let bodyHtml = renderMatchHeader(fixture);
-    bodyHtml += '\n' + renderTeamSummaries(fixture);
+    bodyHtml += '\n' + renderTeamSummaries(fixture, fixtureArticles);
     bodyHtml += '\n' + renderSectionList({ fixture, fixtureArticles, affiliateUrls });
     bodyHtml += '\n' + renderPredictionPanel(fixture);
     bodyHtml += '\n\n' + `<div class="container">${DISCLAIMER_FOOTER}</div>`;
@@ -127,7 +127,7 @@ export function buildSite({ fixtures: providedFixtures, teams: providedTeams, ar
   }
 
   // Write index page
-  const indexHtml = renderIndexPage({ fixtures, teams, slugs, siteBaseUrl });
+  const indexHtml = renderIndexPage({ fixtures, teams, slugs, siteBaseUrl, articlesByFixture });
   writeFileSync(join(outputDir, 'index.html'), indexHtml, 'utf-8');
   writeLegalPages({ outputDir, siteBaseUrl });
 
@@ -544,14 +544,15 @@ function renderMatchHeader(fixture) {
   </header>`;
 }
 
-function renderTeamSummaries(fixture) {
+function renderTeamSummaries(fixture, fixtureArticles = new Map()) {
   const homeTeam = fixtureTeam(fixture, 'home');
   const awayTeam = fixtureTeam(fixture, 'away');
   const initialContent = getInitialFixtureContent(fixture);
+  const pgsSource = getFixturePgsSource(fixture, fixtureArticles);
   return `<section class="team-summaries container reveal theme-section" data-theme="navy">
     <div class="team-summaries__heading">
       <h2>Resumen de equipos</h2>
-      ${renderScoreCluster(fixture, initialContent, 'score-cluster--inline')}
+      ${renderScoreCluster(fixture, pgsSource, 'score-cluster--inline')}
     </div>
     <div class="team-summaries__grid">
       ${renderTeamSummaryCard(homeTeam, initialContent)}
@@ -563,7 +564,9 @@ function renderTeamSummaries(fixture) {
 function renderSectionList({ fixture, fixtureArticles, affiliateUrls }) {
   const initialContent = getInitialFixtureContent(fixture);
   const hasGeneratedFixtureContent = [...fixtureArticles.values()].some((article) =>
-    article?.status === 'generated' || ['refresh', 'lock'].includes(article?.lastPass) || ['refreshed', 'locked'].includes(article?.lifecycleState)
+    article?.status === 'generated'
+    || ['refresh', 'final_refresh', 'lock'].includes(article?.lastPass)
+    || ['refreshed', 'final_refreshed', 'locked'].includes(article?.lifecycleState)
   );
   return Object.entries(SECTION_LABELS)
     .map(([sectionType, label]) => {
@@ -588,22 +591,22 @@ function renderTeamSummaryCard(team, initialContent) {
   return `<article class="team-card"><span class="team-chip">${renderTeamName(team)}</span>${summary || '<p>Resumen del equipo próximamente con grupo, forma reciente y claves para tu quiniela.</p>'}</article>`;
 }
 
-function renderPgsPill(fixture, initialContent, className = '') {
-  if (!initialContent?.pgs) return '';
+function renderPgsPill(fixture, pgsSource, className = '') {
+  if (!pgsSource?.pgs) return '';
   const homeTeam = fixtureTeam(fixture, 'home');
   const awayTeam = fixtureTeam(fixture, 'away');
   const classes = ['pgs-pill', className].filter(Boolean).join(' ');
-  return `<span class="${escapeHtml(classes)}" tabindex="0" title="Resultado PredictaGoal Score basado en los datos más recientes" aria-label="Resultado PredictaGoal Score basado en los datos más recientes: ${escapeHtml(homeTeam.name)} ${escapeHtml(initialContent.pgs.home)} - ${escapeHtml(awayTeam.name)} ${escapeHtml(initialContent.pgs.away)}">
+  return `<span class="${escapeHtml(classes)}" tabindex="0" title="Resultado PredictaGoal Score basado en los datos más recientes" aria-label="Resultado PredictaGoal Score basado en los datos más recientes: ${escapeHtml(homeTeam.name)} ${escapeHtml(pgsSource.pgs.home)} - ${escapeHtml(awayTeam.name)} ${escapeHtml(pgsSource.pgs.away)}">
     <span class="pgs-pill__label">PGS®:</span>
-    ${renderPgsTeamScore(homeTeam, initialContent.pgs.home)}
+    ${renderPgsTeamScore(homeTeam, pgsSource.pgs.home)}
     <span class="pgs-pill__dash">-</span>
-    ${renderPgsTeamScore(awayTeam, initialContent.pgs.away)}
+    ${renderPgsTeamScore(awayTeam, pgsSource.pgs.away)}
   </span>`;
 }
 
-function renderScoreCluster(fixture, initialContent, className = '') {
+function renderScoreCluster(fixture, pgsSource, className = '') {
   const finalScore = renderFinalScorePill(fixture);
-  const pgs = renderPgsPill(fixture, initialContent, 'pgs-pill--inline');
+  const pgs = renderPgsPill(fixture, pgsSource, 'pgs-pill--inline');
   if (!finalScore && !pgs) return '';
   return `<div class="${escapeHtml(['score-cluster', className].filter(Boolean).join(' '))}">${finalScore}${pgs}</div>`;
 }
@@ -645,6 +648,47 @@ function getInitialFixtureContent(fixture) {
     || null;
 }
 
+function getFixturePgsSource(fixture, fixtureArticles = new Map()) {
+  const generatedPgs = extractGeneratedPgs(fixtureArticles.get('pronostico_momios')?.contentJson);
+  if (generatedPgs) return { pgs: generatedPgs };
+
+  const initialContent = getInitialFixtureContent(fixture);
+  if (initialContent?.pgs) return { ...initialContent, pgs: initialContent.pgs };
+  return { pgs: { home: '#', away: '#' } };
+}
+
+function extractGeneratedPgs(contentJson) {
+  const structuredForecast = extractScoreFromText(contentJson?.pronostico_quiniela);
+  if (structuredForecast) return structuredForecast;
+
+  const html = contentJson?.analisis_tactico_html;
+  if (!html) return null;
+  const text = decodeHtmlEntities(stripHtml(html)).replace(/\s+/g, ' ').trim();
+  return extractScoreFromText(text);
+}
+
+function extractScoreFromText(value) {
+  if (!value) return null;
+  const text = decodeHtmlEntities(stripHtml(value)).replace(/\s+/g, ' ').trim();
+  const match = text.match(/\b(?:predicci[oó]n(?:\s+final)?|pron[oó]stico(?:\s+del\s+marcador)?|marcador final|previsi[oó]n)?\b[\s:.,;]*(?:[^\d]{0,220}?)\b(\d{1,2})\s*[-–]\s*(\d{1,2})\b/i);
+  if (!match) return null;
+  return { home: Number(match[1]), away: Number(match[2]) };
+}
+
+function stripHtml(value) {
+  return String(value || '').replace(/<[^>]+>/g, ' ');
+}
+
+function decodeHtmlEntities(value) {
+  return String(value || '')
+    .replace(/&nbsp;/gi, ' ')
+    .replace(/&amp;/gi, '&')
+    .replace(/&lt;/gi, '<')
+    .replace(/&gt;/gi, '>')
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;/gi, "'");
+}
+
 function renderPredictionPanel(fixture) {
   const homeTeam = fixtureTeam(fixture, 'home');
   const awayTeam = fixtureTeam(fixture, 'away');
@@ -661,10 +705,10 @@ function renderPredictionPanel(fixture) {
   </section>`;
 }
 
-function renderIndexPage({ fixtures, teams, slugs, siteBaseUrl }) {
+function renderIndexPage({ fixtures, teams, slugs, siteBaseUrl, articlesByFixture = new Map() }) {
   const nextFixture = fixtures[0];
   const dateTabs = renderDateTabs(fixtures);
-  const calendar = renderCalendarSections(fixtures, slugs);
+  const calendar = renderCalendarSections(fixtures, slugs, articlesByFixture);
   const teamsShortcut = renderTeamsShortcut(teams);
   const nextHome = nextFixture ? fixtureTeam(nextFixture, 'home') : null;
   const nextAway = nextFixture ? fixtureTeam(nextFixture, 'away') : null;
@@ -733,7 +777,7 @@ function renderDateTabs(fixtures) {
   return `<nav class="date-tabs container-wide" aria-label="Calendario por fecha">${tabs}</nav>`;
 }
 
-function renderCalendarSections(fixtures, slugs) {
+function renderCalendarSections(fixtures, slugs, articlesByFixture = new Map()) {
   const byDate = new Map();
   fixtures.forEach((fixture, index) => {
     const date = localDateKey(fixture.kickoffUtc);
@@ -744,7 +788,7 @@ function renderCalendarSections(fixtures, slugs) {
   return [...byDate.entries()].map(([date, rows], index) => `<section id="fecha-${date}" class="calendar-day" data-theme="${index % 2 === 0 ? 'jungle' : 'navy'}">
     <div class="round-divider">${escapeHtml(fullDate(date))}</div>
     <div class="match-grid">
-      ${rows.map(({ fixture, slug }) => renderMatchCard(fixture, slug)).join('\n')}
+      ${rows.map(({ fixture, slug }) => renderMatchCard(fixture, slug, articlesByFixture.get(fixture.fixtureId) || new Map())).join('\n')}
     </div>
   </section>`).join('\n');
 }
@@ -764,13 +808,10 @@ function renderTeamsShortcut(teams) {
   </section>`;
 }
 
-function renderMatchCard(fixture, slug) {
+function renderMatchCard(fixture, slug, fixtureArticles = new Map()) {
   const homeTeam = fixtureTeam(fixture, 'home');
   const awayTeam = fixtureTeam(fixture, 'away');
-  const initialContent = getInitialFixtureContent(fixture);
-  const pgsSource = initialContent && initialContent.pgs
-    ? { pgs: initialContent.pgs }
-    : { pgs: { home: '#', away: '#' } };
+  const pgsSource = getFixturePgsSource(fixture, fixtureArticles);
   const dataCta = isUndecidedKnockoutFixture(fixture, homeTeam, awayTeam)
     ? '<span class="match-card__cta match-card__cta--disabled" aria-disabled="true">Ver datos</span>'
     : `<a class="match-card__cta" href="${escapeHtml(slug)}.html">Ver datos</a>`;

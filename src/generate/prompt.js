@@ -51,7 +51,7 @@ FORMATO DE SALIDA — responde ÚNICAMENTE con JSON válido:
   "meta_description": "string — 150-160 chars, incluye equipo + tipo de contenido",
   "puntos_clave": ["string", "string", "string", "string"],
   "analisis_tactico_html": "string — artículo completo en HTML (mínimo 600 palabras)",
-  "pronostico_quiniela": "string — predicción concisa (ej: 'México 2-1')",
+  "pronostico_quiniela": "string — predicción concisa con marcador exacto parseable (ej: 'México 2-1 Alemania')",
   "url_slug": "string — slug SEO-friendly sin acentos"
 }`;
 
@@ -61,6 +61,8 @@ TAREA ESPECÍFICA: Escribe un artículo de pronóstico y momios para el partido.
 - Analiza los momios proporcionados y explica el valor de cada línea.
 - Incluye análisis táctico de cómo se enfrentarán ambos equipos.
 - Da un pronóstico claro con marcador y explicación.
+- Incluye una línea explícita en el HTML con el formato exacto: "Predicción final: [Equipo A] X-Y [Equipo B]".
+- El campo pronostico_quiniela debe repetir el mismo marcador exacto con el formato "[Equipo A] X-Y [Equipo B]".
 - Menciona momios específicos con el formato "Momios: Local X.XX | Empate X.XX | Visitante X.XX".
 - El H1 debe seguir el patrón: "Pronósticos y momios [Equipo A] vs [Equipo B]"`,
 

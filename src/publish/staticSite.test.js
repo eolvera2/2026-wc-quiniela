@@ -277,6 +277,122 @@ describe('publish/staticSite', () => {
     expect(match).toContain('Marcador final de fuente pública. Fuente: FIFA.com.');
   });
 
+  it('uses the latest generated final prediction as the PGS score on cards and match pages', () => {
+    const outDir = join(tmpDir, 'dist');
+    buildSite({
+      fixtures: [SAMPLE_FIXTURE],
+      teams: WORLD_CUP_TEAMS.map((team) => ({ name: team.displayName, code: team.code })),
+      articles: [{
+        ...SAMPLE_ARTICLE,
+        fixtureId: 1,
+        homeTeam: 'México',
+        awayTeam: 'Sudáfrica',
+        status: 'generated',
+        lastPass: 'lock',
+        contentJson: {
+          h1_title: 'Pronóstico México vs Sudáfrica',
+          meta_description: 'Pronóstico actualizado.',
+          analisis_tactico_html: '<h2>Pronóstico</h2><p>Predicción final: México 3-1 Sudáfrica.</p>',
+        },
+      }],
+      siteBaseUrl: 'https://example.com',
+      outputDir: outDir,
+      affiliateUrls: AFFILIATE_URLS,
+    });
+
+    const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
+    const match = readFileSync(join(outDir, 'partido-1-2026-06-11-mexico-vs-sudafrica.html'), 'utf-8');
+    expect(index).toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 3 - Sudáfrica 1');
+    expect(match).toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 3 - Sudáfrica 1');
+  });
+
+  it('uses generated "nuestra predicción es" score wording as the PGS score', () => {
+    const outDir = join(tmpDir, 'dist');
+    buildSite({
+      fixtures: [SAMPLE_FIXTURE],
+      teams: WORLD_CUP_TEAMS.map((team) => ({ name: team.displayName, code: team.code })),
+      articles: [{
+        ...SAMPLE_ARTICLE,
+        fixtureId: 1,
+        homeTeam: 'México',
+        awayTeam: 'Sudáfrica',
+        status: 'generated',
+        lastPass: 'lock',
+        contentJson: {
+          h1_title: 'Pronóstico México vs Sudáfrica',
+          meta_description: 'Pronóstico actualizado.',
+          analisis_tactico_html: '<h2>Pronóstico para este partido</h2><p>Nuestra predicción es un 4-2 a favor de México.</p>',
+        },
+      }],
+      siteBaseUrl: 'https://example.com',
+      outputDir: outDir,
+      affiliateUrls: AFFILIATE_URLS,
+    });
+
+    const match = readFileSync(join(outDir, 'partido-1-2026-06-11-mexico-vs-sudafrica.html'), 'utf-8');
+    expect(match).toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 4 - Sudáfrica 2');
+  });
+
+  it('prefers structured pronostico_quiniela as the generated PGS score', () => {
+    const outDir = join(tmpDir, 'dist');
+    buildSite({
+      fixtures: [SAMPLE_FIXTURE],
+      teams: WORLD_CUP_TEAMS.map((team) => ({ name: team.displayName, code: team.code })),
+      articles: [{
+        ...SAMPLE_ARTICLE,
+        fixtureId: 1,
+        homeTeam: 'México',
+        awayTeam: 'Sudáfrica',
+        status: 'generated',
+        lastPass: 'lock',
+        contentJson: {
+          h1_title: 'Pronóstico México vs Sudáfrica',
+          meta_description: 'Pronóstico actualizado.',
+          pronostico_quiniela: 'México 1-0 Sudáfrica',
+          analisis_tactico_html: '<h2>Pronóstico</h2><p>Predicción final: México 3-1 Sudáfrica.</p>',
+        },
+      }],
+      siteBaseUrl: 'https://example.com',
+      outputDir: outDir,
+      affiliateUrls: AFFILIATE_URLS,
+    });
+
+    const match = readFileSync(join(outDir, 'partido-1-2026-06-11-mexico-vs-sudafrica.html'), 'utf-8');
+    expect(match).toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 1 - Sudáfrica 0');
+    expect(match).not.toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 3 - Sudáfrica 1');
+  });
+
+  it('does not render placeholder affiliate URLs from generated content or injection config', () => {
+    const outDir = join(tmpDir, 'dist');
+    buildSite({
+      fixtures: [SAMPLE_FIXTURE],
+      articles: [{
+        ...SAMPLE_ARTICLE,
+        fixtureId: 1,
+        homeTeam: 'México',
+        awayTeam: 'Sudáfrica',
+        status: 'generated',
+        lastPass: 'lock',
+        contentJson: {
+          h1_title: 'Pronóstico México vs Sudáfrica',
+          meta_description: 'Pronóstico actualizado.',
+          analisis_tactico_html: '<h2><a href="https://www.predictagol.com/placeholder-not-configured">Pronóstico</a></h2><p>Los momios son recientes.</p>',
+        },
+      }],
+      siteBaseUrl: 'https://example.com',
+      outputDir: outDir,
+      affiliateUrls: {
+        caliente: 'https://www.predictagol.com/placeholder-not-configured',
+        bet365: 'https://www.predictagol.com/placeholder-not-configured',
+        skimlinks: '',
+      },
+    });
+
+    const match = readFileSync(join(outDir, 'partido-1-2026-06-11-mexico-vs-sudafrica.html'), 'utf-8');
+    expect(match).toContain('<h2>Pronóstico</h2>');
+    expect(match).not.toContain('placeholder-not-configured');
+  });
+
   it('removes preliminary freshness labels from initial sections once generated API-backed content exists', () => {
     const outDir = join(tmpDir, 'dist');
     buildSite({

@@ -94,4 +94,17 @@ describe('affiliateInjector', () => {
       expect(link).toContain('rel="sponsored"');
     }
   });
+
+  it('does not inject links when an affiliate URL is missing', () => {
+    const html = '<p>Nuestro pronóstico para el partido es local.</p>';
+    const result = injectAffiliateLinks(html, { ...AFFILIATE_URLS, bet365: '' });
+    expect(result).toBe(html);
+  });
+
+  it('strips placeholder affiliate links while preserving text', () => {
+    const html = '<p><a href="https://www.predictagol.com/placeholder-not-configured" rel="sponsored">Pronóstico</a> final.</p>';
+    const result = injectAffiliateLinks(html, AFFILIATE_URLS);
+    expect(result).toContain('Pronóstico');
+    expect(result).not.toContain('placeholder-not-configured');
+  });
 });

@@ -15,6 +15,8 @@
  *   - Does not inject inside existing <a>...</a> tags
  */
 
+const PLACEHOLDER_AFFILIATE_URL = 'https://www.predictagol.com/placeholder-not-configured';
+
 /**
  * @param {string} html - The article HTML content
  * @param {{ caliente: string, bet365: string, skimlinks: string }} urls - Affiliate URLs
@@ -37,19 +39,21 @@ export function injectAffiliateLinks(html, urls) {
     },
   ];
 
-  let result = html;
+  let result = stripPlaceholderLinks(html);
 
   for (const group of groups) {
     result = replaceFirstOutsideLinks(result, group.pattern, group.url);
   }
 
-  return result;
+  return stripPlaceholderLinks(result);
 }
 
 /**
  * Replaces the first occurrence of `pattern` that is NOT inside an <a>...</a> tag.
  */
 function replaceFirstOutsideLinks(html, pattern, url) {
+  if (!isUsableAffiliateUrl(url)) return html;
+
   // Split by <a ...>...</a> segments to avoid injecting inside links
   // Strategy: walk through HTML, find segments outside <a> tags, apply replacement to first match found
   let replaced = false;
@@ -103,4 +107,15 @@ function replaceFirstOutsideLinks(html, pattern, url) {
   }
 
   return result;
+}
+
+function isUsableAffiliateUrl(url) {
+  return Boolean(url) && url !== PLACEHOLDER_AFFILIATE_URL;
+}
+
+function stripPlaceholderLinks(html) {
+  return String(html || '').replace(
+    /<a\b([^>]*\s)?href=["']https:\/\/www\.predictagol\.com\/placeholder-not-configured["'][^>]*>([\s\S]*?)<\/a>/gi,
+    '$2',
+  );
 }
