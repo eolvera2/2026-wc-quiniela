@@ -18,7 +18,7 @@ import { selectPass } from '../src/cadence/selectPass.js';
 import { runBatch } from '../src/generate/batch.js';
 import { buildSite } from '../src/publish/staticSite.js';
 import { hydrateFixtureFromFootballData } from '../src/ingest/matchHydration.js';
-import { applyPublicFinalScores } from '../src/ingest/publicFinalScores.js';
+import { applyPublicFinalScores, findMissingPublicFinalScores } from '../src/ingest/publicFinalScores.js';
 import { seedStaticData } from './seed-static.js';
 
 /**
@@ -73,6 +73,14 @@ export async function runCadence(config) {
     const finalScoreResult = applyPublicFinalScores(db, { now });
     if (finalScoreResult.applied > 0 || finalScoreResult.skipped > 0) {
       console.log(`[cadence] Public final scores applied=${finalScoreResult.applied}, skipped=${finalScoreResult.skipped}`);
+    }
+    const missingFinalScores = findMissingPublicFinalScores(db, { now });
+    for (const missing of missingFinalScores) {
+      if (!missing.homeTeam || !missing.awayTeam || !missing.kickoffUtc) continue;
+      console.warn(
+        `[cadence] WARN Missing public final score after T+2h: ` +
+        `${missing.homeTeam} vs ${missing.awayTeam} (fixture ${missing.apiFootballId}, kickoff ${missing.kickoffUtc})`,
+      );
     }
     const forceTokens = parseForceFixtureTokens(forceFixtureMatch);
 

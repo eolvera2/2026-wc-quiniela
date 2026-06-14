@@ -4,7 +4,7 @@ import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { openDb, closeDb } from '../db/db.js';
 import { seedStaticData } from '../../scripts/seed-static.js';
-import { applyPublicFinalScores } from './publicFinalScores.js';
+import { applyPublicFinalScores, findMissingPublicFinalScores } from './publicFinalScores.js';
 
 describe('ingest/publicFinalScores', () => {
   let db;
@@ -100,5 +100,18 @@ describe('ingest/publicFinalScores', () => {
     expect(row.status).toBe('scheduled');
     expect(row.final_home_score).toBeNull();
     expect(row.final_away_score).toBeNull();
+  });
+
+  it('lists fixtures past T+2h that are missing public final scores', () => {
+    db = openDb(':memory:');
+    seedStaticData(db);
+
+    const missing = findMissingPublicFinalScores(db, {
+      now: '2026-06-14T08:00:00.000Z',
+      limit: 5,
+    });
+
+    expect(missing.some((fixture) => fixture.homeTeam === 'Brazil' && fixture.awayTeam === 'Morocco')).toBe(true);
+    expect(missing.every((fixture) => fixture.kickoffUtc <= '2026-06-14T06:00:00.000Z')).toBe(true);
   });
 });

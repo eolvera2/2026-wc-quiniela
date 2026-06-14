@@ -43,5 +43,32 @@
     "awayScore": 1,
     "sourceName": "ESPN",
     "sourceUrl": "https://www.espn.com/football/match/_/gameId/760420/switzerland-qatar"
+  },
+  {
+    "homeTeam": "Brazil",
+    "awayTeam": "Morocco",
+    "kickoffLocalDate": "2026-06-13",
+    "homeScore": 1,
+    "awayScore": 1,
+    "sourceName": "ESPN",
+    "sourceUrl": "https://www.espn.com/football/match/_/gameId/760419"
+  },
+  {
+    "homeTeam": "Haiti",
+    "awayTeam": "Scotland",
+    "kickoffLocalDate": "2026-06-13",
+    "homeScore": 0,
+    "awayScore": 1,
+    "sourceName": "FIFA.com",
+    "sourceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/haiti-scotland-highlights-match-report"
+  },
+  {
+    "homeTeam": "Australia",
+    "awayTeam": "Turkey",
+    "kickoffLocalDate": "2026-06-13",
+    "homeScore": 2,
+    "awayScore": 0,
+    "sourceName": "ESPN",
+    "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/760421"
   }
 ]

@@ -59,6 +59,30 @@ export function applyPublicFinalScores(db, {
   return { applied, skipped };
 }
 
+export function findMissingPublicFinalScores(db, {
+  now = new Date().toISOString(),
+  delayHours = 2,
+  limit = 12,
+} = {}) {
+  const cutoff = new Date(new Date(now).getTime() - delayHours * 60 * 60 * 1000).toISOString();
+  return db.prepare(`
+    SELECT f.id,
+           f.api_football_id AS apiFootballId,
+           f.kickoff_utc AS kickoffUtc,
+           h.name AS homeTeam,
+           a.name AS awayTeam
+    FROM fixtures f
+    JOIN teams h ON h.id = f.home_team_id
+    JOIN teams a ON a.id = f.away_team_id
+    WHERE f.is_tbd = 0
+      AND f.kickoff_utc <= @cutoff
+      AND f.final_home_score IS NULL
+      AND f.final_away_score IS NULL
+    ORDER BY f.kickoff_utc DESC
+    LIMIT @limit
+  `).all({ cutoff, limit });
+}
+
 function findFixtureForFinalScore(db, entry) {
   if (Number.isInteger(entry.matchNumber)) {
     const byNumber = db.prepare('SELECT id, kickoff_utc FROM fixtures WHERE match_number = ?').get(entry.matchNumber);
