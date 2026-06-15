@@ -77,10 +77,11 @@ export async function runCadence(config) {
     const missingFinalScores = findMissingPublicFinalScores(db, { now });
     for (const missing of missingFinalScores) {
       if (!missing.homeTeam || !missing.awayTeam || !missing.kickoffUtc) continue;
-      console.warn(
-        `[cadence] WARN Missing public final score after T+2h: ` +
-        `${missing.homeTeam} vs ${missing.awayTeam} (fixture ${missing.apiFootballId}, kickoff ${missing.kickoffUtc})`,
-      );
+      const message = `Missing public final score after T+2h: ${missing.homeTeam} vs ${missing.awayTeam} ` +
+        `(fixture ${missing.apiFootballId}, kickoff ${missing.kickoffUtc}). ` +
+        'Add a verified public-source entry to data/public/final-scores.json.';
+      console.warn(`[cadence] WARN ${message}`);
+      console.warn(`::warning title=Missing public final score::${message}`);
     }
     const forceTokens = parseForceFixtureTokens(forceFixtureMatch);
 

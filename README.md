@@ -38,7 +38,7 @@ FootballData.io quota guardrails:
 - T-1 lock reuses existing FootballData content and makes **0 odds/team-stat calls**.
 - Public final scores never use FootballData.
 - If Actions or generation misses T-1, a started match can self-heal the lock pass for up to two hours after kickoff without additional FootballData calls.
-- Cadence logs a warning for any fixture past T+2h that still lacks a public final-score entry, so missing manual/public score updates are visible instead of silent.
+- Cadence logs a GitHub Actions warning annotation for any fixture past T+2h that still lacks a public final-score entry, so the required public-source retrieval/backfill is visible instead of silent.
 
 Expected first-30-day usage stays below 1000 calls: about 208 match-odds calls for 104 fixtures (T-1 + T-5), about 480 worst-case team-stat calls with a 72-hour cache across 48 teams, and about 90 fixture-list page calls at three pages per day for 30 days, leaving roughly 200+ calls of buffer.
 

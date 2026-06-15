@@ -70,5 +70,32 @@
     "awayScore": 0,
     "sourceName": "ESPN",
     "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/760421"
+  },
+  {
+    "homeTeam": "Germany",
+    "awayTeam": "Curacao",
+    "kickoffLocalDate": "2026-06-14",
+    "homeScore": 7,
+    "awayScore": 1,
+    "sourceName": "ESPN",
+    "sourceUrl": "https://www.espn.com/football/match/_/gameId/760422"
+  },
+  {
+    "homeTeam": "Netherlands",
+    "awayTeam": "Japan",
+    "kickoffLocalDate": "2026-06-14",
+    "homeScore": 2,
+    "awayScore": 2,
+    "sourceName": "FIFA.com",
+    "sourceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/netherlands-japan-highlights-match-report"
+  },
+  {
+    "homeTeam": "Ivory Coast",
+    "awayTeam": "Ecuador",
+    "kickoffLocalDate": "2026-06-14",
+    "homeScore": 1,
+    "awayScore": 0,
+    "sourceName": "USA Today",
+    "sourceUrl": "https://www.usatoday.com/story/sports/soccer/worldcup/2026/06/14/ivory-coast-ecuador-world-cup-prediction-analysis-odds/90546421007/"
   }
 ]
