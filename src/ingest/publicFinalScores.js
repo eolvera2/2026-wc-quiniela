@@ -73,7 +73,9 @@ export function findMissingPublicFinalScores(db, {
            f.api_football_id AS apiFootballId,
            f.kickoff_utc AS kickoffUtc,
            h.name AS homeTeam,
-           a.name AS awayTeam
+           a.name AS awayTeam,
+           h.fifa_code AS homeTeamCode,
+           a.fifa_code AS awayTeamCode
     FROM fixtures f
     JOIN teams h ON h.id = f.home_team_id
     JOIN teams a ON a.id = f.away_team_id

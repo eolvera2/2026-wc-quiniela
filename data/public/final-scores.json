@@ -106,5 +106,14 @@
     "awayScore": 1,
     "sourceName": "ESPN",
     "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/760424"
+  },
+  {
+    "homeTeam": "Spain",
+    "awayTeam": "Cape Verde",
+    "kickoffLocalDate": "2026-06-15",
+    "homeScore": 0,
+    "awayScore": 0,
+    "sourceName": "ESPN",
+    "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/760428/cape-verde-spain"
   }
 ]

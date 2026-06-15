@@ -89,20 +89,74 @@ describe('ingest/publicFinalScoreSources', () => {
     });
   });
 
-  it('warns when a T+2h fixture has no configured public source', async () => {
+  it('retrieves and applies a public final score from ESPN scoreboard when no source is configured', async () => {
     db = openDb(':memory:');
     seedStaticData(db);
     tmpDir = mkdtempSync(join(tmpdir(), 'final-score-sources-test-'));
     const sourcesPath = join(tmpDir, 'final-score-sources.json');
     writeFileSync(sourcesPath, JSON.stringify([]));
 
+    nock.disableNetConnect();
+    nock('https://site.api.espn.com')
+      .get('/apis/site/v2/sports/soccer/fifa.world/scoreboard')
+      .query({ dates: '20260615' })
+      .reply(200, {
+        events: [{
+          id: '760428',
+          links: [{ rel: ['summary'], href: 'https://www.espn.com/soccer/match/_/gameId/760428/cape-verde-spain' }],
+          competitions: [{
+            status: { type: { completed: true } },
+            competitors: [
+              { homeAway: 'home', score: '0', team: { abbreviation: 'ESP', displayName: 'Spain' } },
+              { homeAway: 'away', score: '0', team: { abbreviation: 'CPV', displayName: 'Cape Verde' } },
+            ],
+          }],
+        }],
+      });
+
+    const result = await retrievePublicFinalScores(db, {
+      now: '2026-06-15T19:00:00.000Z',
+      sourcesPath,
+      limit: 1,
+    });
+
+    expect(result.applied).toBe(1);
+    expect(result.warnings).toEqual([]);
+    const row = db.prepare(`
+      SELECT final_home_score, final_away_score, final_score_source_name, final_score_source_url
+      FROM fixtures f
+      JOIN teams h ON h.id = f.home_team_id
+      JOIN teams a ON a.id = f.away_team_id
+      WHERE h.name = 'Spain' AND a.name = 'Cape Verde'
+    `).get();
+    expect(row).toEqual({
+      final_home_score: 0,
+      final_away_score: 0,
+      final_score_source_name: 'ESPN',
+      final_score_source_url: 'https://www.espn.com/soccer/match/_/gameId/760428/cape-verde-spain',
+    });
+  });
+
+  it('warns when neither configured sources nor ESPN scoreboard have the final score', async () => {
+    db = openDb(':memory:');
+    seedStaticData(db);
+    tmpDir = mkdtempSync(join(tmpdir(), 'final-score-sources-test-'));
+    const sourcesPath = join(tmpDir, 'final-score-sources.json');
+    writeFileSync(sourcesPath, JSON.stringify([]));
+
+    nock.disableNetConnect();
+    nock('https://site.api.espn.com')
+      .get('/apis/site/v2/sports/soccer/fifa.world/scoreboard')
+      .query({ dates: '20260614' })
+      .reply(200, { events: [] });
+
     const result = await retrievePublicFinalScores(db, {
       now: '2026-06-15T05:00:00.000Z',
       sourcesPath,
-      limit: 100,
+      limit: 1,
     });
 
     expect(result.applied).toBe(0);
-    expect(result.warnings).toContain('No public final-score source configured for Sweden vs Tunisia (2026-06-14).');
+    expect(result.warnings).toContain('No public final-score source found for Sweden vs Tunisia (2026-06-14).');
   });
 });
