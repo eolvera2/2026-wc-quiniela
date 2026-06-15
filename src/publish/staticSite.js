@@ -762,6 +762,7 @@ function renderIndexPage({ fixtures, teams, slugs, siteBaseUrl, articlesByFixtur
   </main>
   ${renderSiteFooter()}
   <script>${SITE_CHROME_SCRIPT}</script>
+  <script>${HOME_SCHEDULE_SCRIPT}</script>
   <script>${HOME_FILTER_SCRIPT}</script>
 </body>
 </html>`;
@@ -770,7 +771,7 @@ function renderIndexPage({ fixtures, teams, slugs, siteBaseUrl, articlesByFixtur
 function renderDateTabs(fixtures) {
   const dates = uniqueDates(fixtures).filter((date) => date !== 'por-confirmar').slice(0, 18);
   if (dates.length === 0) return '';
-  const tabs = dates.map((date, index) => `<a class="date-tab ${index === 0 ? 'is-active' : ''}" href="#fecha-${date}" ${index === 0 ? 'aria-current="date"' : ''}>
+  const tabs = dates.map((date, index) => `<a class="date-tab ${index === 0 ? 'is-active' : ''}" href="#fecha-${date}" data-date="${date}" ${index === 0 ? 'aria-current="date"' : ''}>
       <span class="date-tab__day">${escapeHtml(shortDay(date))}</span>
       <span class="date-tab__date">${escapeHtml(shortDate(date))}</span>
     </a>`).join('\n');
@@ -785,7 +786,7 @@ function renderCalendarSections(fixtures, slugs, articlesByFixture = new Map()) 
     byDate.get(date).push({ fixture, slug: slugs[index]?.slug });
   });
 
-  return [...byDate.entries()].map(([date, rows], index) => `<section id="fecha-${date}" class="calendar-day" data-theme="${index % 2 === 0 ? 'jungle' : 'navy'}">
+  return [...byDate.entries()].map(([date, rows], index) => `<section id="fecha-${date}" class="calendar-day" data-date="${date}" data-theme="${index % 2 === 0 ? 'jungle' : 'navy'}">
     <div class="round-divider">${escapeHtml(fullDate(date))}</div>
     <div class="match-grid">
       ${rows.map(({ fixture, slug }) => renderMatchCard(fixture, slug, articlesByFixture.get(fixture.fixtureId) || new Map())).join('\n')}
@@ -1289,6 +1290,61 @@ const SITE_CHROME_SCRIPT = `
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     revealItems.forEach((item) => item.classList.add('is-visible'));
   }
+})();
+`;
+
+const HOME_SCHEDULE_SCRIPT = `
+(() => {
+  const dateTabs = [...document.querySelectorAll('.date-tab[data-date]')];
+  const days = [...document.querySelectorAll('.calendar-day[data-date]')];
+  if (!dateTabs.length || !days.length) return;
+
+  function mexicoCityDateKey(date = new Date()) {
+    const parts = new Intl.DateTimeFormat('en-CA', {
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+      timeZone: 'America/Mexico_City',
+    }).formatToParts(date);
+    const map = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+    return map.year + '-' + map.month + '-' + map.day;
+  }
+
+  function setActiveDate(dateKey) {
+    dateTabs.forEach((tab) => {
+      const active = tab.dataset.date === dateKey;
+      tab.classList.toggle('is-active', active);
+      if (active) tab.setAttribute('aria-current', 'date');
+      else tab.removeAttribute('aria-current');
+    });
+  }
+
+  function findDefaultDate() {
+    const today = mexicoCityDateKey();
+    if (days.some((day) => day.dataset.date === today)) return today;
+    return days.find((day) => day.dataset.date)?.dataset.date || '';
+  }
+
+  function scrollToDate(dateKey, behavior = 'auto') {
+    const day = document.querySelector('#fecha-' + dateKey);
+    if (!day) return;
+    setActiveDate(dateKey);
+    requestAnimationFrame(() => {
+      day.scrollIntoView({ behavior, block: 'start' });
+      const activeTab = dateTabs.find((tab) => tab.dataset.date === dateKey);
+      activeTab?.scrollIntoView({ behavior, block: 'nearest', inline: 'center' });
+    });
+  }
+
+  dateTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      if (tab.dataset.date) setActiveDate(tab.dataset.date);
+    });
+  });
+
+  const hashDate = location.hash.match(/^#fecha-(\\d{4}-\\d{2}-\\d{2})$/)?.[1];
+  const defaultDate = hashDate || findDefaultDate();
+  if (defaultDate) scrollToDate(defaultDate);
 })();
 `;
 

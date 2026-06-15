@@ -179,6 +179,7 @@ describe('publish/staticSite', () => {
     expect(index).not.toContain('Quiniela 2026');
     expect(index).not.toContain('digitalhub.fifa.com');
     expect(index).toContain('class="date-tabs');
+    expect(index).toContain('data-date="2026-06-11"');
     expect(index).toContain('class="match-card');
     expect(index).toContain('id="equipos"');
     expect(index).toContain('href="index.html#equipo-mexico"');
@@ -190,6 +191,9 @@ describe('publish/staticSite', () => {
     expect(index).toContain("document.documentElement.style.setProperty('--date-tabs-sticky-height'");
     expect(index).toContain("document.documentElement.style.setProperty('--sticky-anchor-offset'");
     expect(index).toContain("document.documentElement.style.setProperty('--schedule-stack-height'");
+    expect(index).toContain("timeZone: 'America/Mexico_City'");
+    expect(index).toContain("const defaultDate = hashDate || findDefaultDate();");
+    expect(index).toContain("day.scrollIntoView({ behavior, block: 'start' });");
     expect(index).toContain('new ResizeObserver(setStickyMetrics).observe(header);');
     expect(index).toContain('new ResizeObserver(setStickyMetrics).observe(homeHero);');
     expect(index).toContain('new ResizeObserver(setStickyMetrics).observe(dateTabs);');
@@ -203,7 +207,7 @@ describe('publish/staticSite', () => {
     expect(footer).not.toContain('<nav');
     expect(footer).not.toContain('href="index.html#partidos"');
     expect(footer).not.toContain('href="index.html#equipos"');
-    expect(index).toContain('id="fecha-2026-06-11" class="calendar-day" data-theme="jungle"');
+    expect(index).toContain('id="fecha-2026-06-11" class="calendar-day" data-date="2026-06-11" data-theme="jungle"');
     expect(index).toContain('jueves, 11 de junio');
     expect(index).toContain('class="section-heading calendar__heading"');
     expect(index).toContain('.calendar { padding: .2rem 0 var(--space-l); scroll-margin-top: var(--sticky-anchor-offset, 8rem); }');
