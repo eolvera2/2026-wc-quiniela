@@ -1,0 +1,98 @@
+[
+  {
+    "homeTeam": "Mexico",
+    "awayTeam": "South Africa",
+    "kickoffLocalDate": "2026-06-11",
+    "sourceName": "FIFA.com",
+    "sourceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/mexico-south-africa-highlights-match-report",
+    "parserType": "generic"
+  },
+  {
+    "homeTeam": "South Korea",
+    "awayTeam": "Czech Republic",
+    "kickoffLocalDate": "2026-06-11",
+    "sourceName": "ESPN",
+    "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/760414/czechia-south-korea",
+    "parserType": "espn"
+  },
+  {
+    "homeTeam": "Canada",
+    "awayTeam": "Bosnia & Herzegovina",
+    "kickoffLocalDate": "2026-06-12",
+    "sourceName": "FIFA.com",
+    "sourceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/canada-bosnia-and-herzegovina-highlights-match-report",
+    "parserType": "generic"
+  },
+  {
+    "homeTeam": "USA",
+    "awayTeam": "Paraguay",
+    "kickoffLocalDate": "2026-06-12",
+    "sourceName": "ESPN",
+    "sourceUrl": "https://www.espn.com/football/match/_/gameId/760417",
+    "parserType": "espn"
+  },
+  {
+    "homeTeam": "Qatar",
+    "awayTeam": "Switzerland",
+    "kickoffLocalDate": "2026-06-13",
+    "sourceName": "ESPN",
+    "sourceUrl": "https://www.espn.com/football/match/_/gameId/760420/switzerland-qatar",
+    "parserType": "espn"
+  },
+  {
+    "homeTeam": "Brazil",
+    "awayTeam": "Morocco",
+    "kickoffLocalDate": "2026-06-13",
+    "sourceName": "ESPN",
+    "sourceUrl": "https://www.espn.com/football/match/_/gameId/760419",
+    "parserType": "espn"
+  },
+  {
+    "homeTeam": "Haiti",
+    "awayTeam": "Scotland",
+    "kickoffLocalDate": "2026-06-13",
+    "sourceName": "FIFA.com",
+    "sourceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/haiti-scotland-highlights-match-report",
+    "parserType": "generic"
+  },
+  {
+    "homeTeam": "Australia",
+    "awayTeam": "Turkey",
+    "kickoffLocalDate": "2026-06-13",
+    "sourceName": "ESPN",
+    "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/760421",
+    "parserType": "espn"
+  },
+  {
+    "homeTeam": "Germany",
+    "awayTeam": "Curacao",
+    "kickoffLocalDate": "2026-06-14",
+    "sourceName": "ESPN",
+    "sourceUrl": "https://www.espn.com/football/match/_/gameId/760422",
+    "parserType": "espn"
+  },
+  {
+    "homeTeam": "Netherlands",
+    "awayTeam": "Japan",
+    "kickoffLocalDate": "2026-06-14",
+    "sourceName": "FIFA.com",
+    "sourceUrl": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/netherlands-japan-highlights-match-report",
+    "parserType": "generic"
+  },
+  {
+    "homeTeam": "Ivory Coast",
+    "awayTeam": "Ecuador",
+    "kickoffLocalDate": "2026-06-14",
+    "sourceName": "USA Today",
+    "sourceUrl": "https://www.usatoday.com/story/sports/soccer/worldcup/2026/06/14/ivory-coast-ecuador-world-cup-prediction-analysis-odds/90546421007/",
+    "parserType": "generic"
+  },
+  {
+    "homeTeam": "Sweden",
+    "awayTeam": "Tunisia",
+    "kickoffLocalDate": "2026-06-14",
+    "sourceName": "ESPN",
+    "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/760424",
+    "parserType": "espn"
+  }
+]

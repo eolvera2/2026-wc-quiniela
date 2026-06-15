@@ -13,6 +13,13 @@ export function applyPublicFinalScores(db, {
   }
 
   const entries = JSON.parse(readFileSync(finalScoresPath, 'utf-8'));
+  return applyPublicFinalScoreEntries(db, entries, { now, delayHours });
+}
+
+export function applyPublicFinalScoreEntries(db, entries, {
+  now = new Date().toISOString(),
+  delayHours = 2,
+} = {}) {
   let applied = 0;
   let skipped = 0;
 
@@ -28,10 +35,6 @@ export function applyPublicFinalScores(db, {
     if (!fixture || !isPastFinalScoreWindow(fixture.kickoff_utc, now, delayHours)) {
       skipped += 1;
       continue;
-    }
-
-    function isPastFinalScoreWindow(kickoffUtc, now, delayHours) {
-      return new Date(kickoffUtc).getTime() + delayHours * 60 * 60 * 1000 <= new Date(now).getTime();
     }
 
     const result = db.prepare(`
@@ -83,7 +86,7 @@ export function findMissingPublicFinalScores(db, {
   `).all({ cutoff, limit });
 }
 
-function findFixtureForFinalScore(db, entry) {
+export function findFixtureForFinalScore(db, entry) {
   if (Number.isInteger(entry.matchNumber)) {
     const byNumber = db.prepare('SELECT id, kickoff_utc FROM fixtures WHERE match_number = ?').get(entry.matchNumber);
     if (byNumber) return byNumber;
@@ -110,7 +113,7 @@ function findFixtureForFinalScore(db, entry) {
   ) || null;
 }
 
-function canonicalTeamName(value) {
+export function canonicalTeamName(value) {
   return String(value || '')
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
@@ -120,7 +123,7 @@ function canonicalTeamName(value) {
     .trim();
 }
 
-function localDateKey(value) {
+export function localDateKey(value) {
   const parts = new Intl.DateTimeFormat('en-CA', {
     year: 'numeric',
     month: '2-digit',
@@ -129,4 +132,8 @@ function localDateKey(value) {
   }).formatToParts(new Date(value));
   const map = Object.fromEntries(parts.map((part) => [part.type, part.value]));
   return `${map.year}-${map.month}-${map.day}`;
+}
+
+export function isPastFinalScoreWindow(kickoffUtc, now, delayHours = 2) {
+  return new Date(kickoffUtc).getTime() + delayHours * 60 * 60 * 1000 <= new Date(now).getTime();
 }
