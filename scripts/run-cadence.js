@@ -18,7 +18,7 @@ import { selectPass } from '../src/cadence/selectPass.js';
 import { runBatch } from '../src/generate/batch.js';
 import { buildSite } from '../src/publish/staticSite.js';
 import { hydrateFixtureFromFootballData } from '../src/ingest/matchHydration.js';
-import { applyPublicFinalScores, findMissingPublicFinalScores } from '../src/ingest/publicFinalScores.js';
+import { applyPublicFinalScores, findMissingPublicFinalScores, findUpcomingPublicFinalScoreWindows } from '../src/ingest/publicFinalScores.js';
 import { retrievePublicFinalScores } from '../src/ingest/publicFinalScoreSources.js';
 import { seedStaticData } from './seed-static.js';
 
@@ -43,6 +43,7 @@ export async function runCadence(config) {
     forceFixtureMatch,
     forcePass,
     finalScoreSourcesPath,
+    finalScoreWaitMinutes = 0,
   } = config;
 
   // 1. Download DB with lease
@@ -71,7 +72,9 @@ export async function runCadence(config) {
     const seedResult = seedStaticData(db);
     console.log(`[cadence] Static seed ready: ${seedResult.fixtures} fixtures, ${seedResult.teams} teams`);
 
-    const now = new Date().toISOString();
+    let now = new Date().toISOString();
+    console.log(`[cadence] Now=${now}`);
+    now = await waitForUpcomingFinalScoreWindow(db, { now, finalScoreWaitMinutes });
     const finalScoreResult = applyPublicFinalScores(db, { now });
     if (finalScoreResult.applied > 0 || finalScoreResult.skipped > 0) {
       console.log(`[cadence] Public final scores applied=${finalScoreResult.applied}, skipped=${finalScoreResult.skipped}`);
@@ -87,8 +90,9 @@ export async function runCadence(config) {
     const missingFinalScores = findMissingPublicFinalScores(db, { now });
     for (const missing of missingFinalScores) {
       if (!missing.homeTeam || !missing.awayTeam || !missing.kickoffUtc) continue;
+      const eligibleAt = new Date(new Date(missing.kickoffUtc).getTime() + 2 * 60 * 60 * 1000).toISOString();
       const message = `Missing public final score after T+2h: ${missing.homeTeam} vs ${missing.awayTeam} ` +
-        `(fixture ${missing.apiFootballId}, kickoff ${missing.kickoffUtc}). ` +
+        `(fixture ${missing.apiFootballId}, kickoff ${missing.kickoffUtc}, eligible ${eligibleAt}). ` +
         'Add a verified public-source entry to data/public/final-scores.json.';
       console.warn(`[cadence] WARN ${message}`);
       console.warn(`::warning title=Missing public final score::${message}`);
@@ -303,6 +307,7 @@ if (process.argv[1] && import.meta.url.endsWith(process.argv[1].replace(/\\/g, '
     forceFixtureMatch: process.env.FORCE_FIXTURE_MATCH || '',
     forcePass: process.env.FORCE_PASS || '',
     finalScoreSourcesPath: process.env.FINAL_SCORE_SOURCES_PATH || '',
+    finalScoreWaitMinutes: Number(process.env.FINAL_SCORE_WAIT_MINUTES || 45),
   };
 
   runCadence(config)
@@ -329,4 +334,26 @@ function normalizeToken(value) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
+}
+
+async function waitForUpcomingFinalScoreWindow(db, { now, finalScoreWaitMinutes }) {
+  if (!Number.isFinite(finalScoreWaitMinutes) || finalScoreWaitMinutes <= 0) return now;
+  const upcoming = findUpcomingPublicFinalScoreWindows(db, {
+    now,
+    lookaheadMinutes: finalScoreWaitMinutes,
+    limit: 24,
+  });
+  if (upcoming.length === 0) return now;
+
+  const next = upcoming[0];
+  const waitMs = Math.max(0, new Date(next.finalScoreEligibleAt).getTime() - new Date(now).getTime()) + 5_000;
+  const waitMinutes = Math.ceil(waitMs / 60_000);
+  const message = `Upcoming public final-score window: ${next.homeTeam} vs ${next.awayTeam} ` +
+    `(fixture ${next.apiFootballId}) eligible at ${next.finalScoreEligibleAt}; waiting ${waitMinutes}m to avoid missing T+2.`;
+  console.warn(`[cadence] WARN ${message}`);
+  console.warn(`::warning title=Waiting for public final-score window::${message}`);
+  await new Promise((resolve) => setTimeout(resolve, waitMs));
+  const resumedAt = new Date().toISOString();
+  console.log(`[cadence] Resuming after final-score wait: now=${resumedAt}`);
+  return resumedAt;
 }

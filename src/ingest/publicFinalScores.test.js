@@ -4,7 +4,7 @@ import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { openDb, closeDb } from '../db/db.js';
 import { seedStaticData } from '../../scripts/seed-static.js';
-import { applyPublicFinalScores, findMissingPublicFinalScores } from './publicFinalScores.js';
+import { applyPublicFinalScores, findMissingPublicFinalScores, findUpcomingPublicFinalScoreWindows } from './publicFinalScores.js';
 
 describe('ingest/publicFinalScores', () => {
   let db;
@@ -113,5 +113,24 @@ describe('ingest/publicFinalScores', () => {
 
     expect(missing.some((fixture) => fixture.homeTeam === 'Brazil' && fixture.awayTeam === 'Morocco')).toBe(true);
     expect(missing.every((fixture) => fixture.kickoffUtc <= '2026-06-14T06:00:00.000Z')).toBe(true);
+  });
+
+  it('lists final-score windows that will become eligible soon', () => {
+    db = openDb(':memory:');
+    seedStaticData(db);
+
+    const upcoming = findUpcomingPublicFinalScoreWindows(db, {
+      now: '2026-06-15T23:30:00.000Z',
+      lookaheadMinutes: 45,
+      limit: 60,
+    });
+
+    expect(upcoming).toContainEqual(expect.objectContaining({
+      homeTeam: 'Saudi Arabia',
+      awayTeam: 'Uruguay',
+      kickoffUtc: '2026-06-15T22:00:00.000Z',
+      finalScoreEligibleAt: '2026-06-16T00:00:00.000Z',
+      minutesUntilEligible: 30,
+    }));
   });
 });

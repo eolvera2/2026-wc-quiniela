@@ -88,6 +88,41 @@ export function findMissingPublicFinalScores(db, {
   `).all({ cutoff, limit });
 }
 
+export function findUpcomingPublicFinalScoreWindows(db, {
+  now = new Date().toISOString(),
+  delayHours = 2,
+  lookaheadMinutes = 45,
+  limit = 12,
+} = {}) {
+  const nowMs = new Date(now).getTime();
+  const lookaheadMs = nowMs + lookaheadMinutes * 60 * 1000;
+  return db.prepare(`
+    SELECT f.id,
+           f.api_football_id AS apiFootballId,
+           f.kickoff_utc AS kickoffUtc,
+           h.name AS homeTeam,
+           a.name AS awayTeam
+    FROM fixtures f
+    JOIN teams h ON h.id = f.home_team_id
+    JOIN teams a ON a.id = f.away_team_id
+    WHERE f.is_tbd = 0
+      AND f.final_home_score IS NULL
+      AND f.final_away_score IS NULL
+    ORDER BY f.kickoff_utc
+    LIMIT @limit
+  `).all({ limit }).map((fixture) => {
+    const eligibleAtMs = new Date(fixture.kickoffUtc).getTime() + delayHours * 60 * 60 * 1000;
+    return {
+      ...fixture,
+      finalScoreEligibleAt: new Date(eligibleAtMs).toISOString(),
+      minutesUntilEligible: Math.max(0, Math.ceil((eligibleAtMs - nowMs) / 60_000)),
+    };
+  }).filter((fixture) => {
+    const eligibleAtMs = new Date(fixture.finalScoreEligibleAt).getTime();
+    return eligibleAtMs > nowMs && eligibleAtMs <= lookaheadMs;
+  });
+}
+
 export function findFixtureForFinalScore(db, entry) {
   if (Number.isInteger(entry.matchNumber)) {
     const byNumber = db.prepare('SELECT id, kickoff_utc FROM fixtures WHERE match_number = ?').get(entry.matchNumber);

@@ -38,6 +38,8 @@ const REQUIRED_PATTERNS = [
   { pattern: /default:\s*live/, label: 'live default dispatch target' },
   { pattern: /run:\s*npm run build:coming-soon/, label: 'coming soon build step' },
   { pattern: /cron:\s*'\*\/15 \* \* \* \*'/, label: '15-minute schedule' },
+  { pattern: /timeout-minutes:\s*75/, label: 'extended cadence timeout' },
+  { pattern: /FINAL_SCORE_WAIT_MINUTES:\s*'45'/, label: 'final-score wait window' },
   { pattern: /github\.event_name == 'workflow_dispatch' && inputs\.publish_target == 'demo'/, label: 'manual demo build' },
   {
     pattern: /github\.event_name == 'workflow_dispatch' && inputs\.publish_target == 'coming_soon'/,

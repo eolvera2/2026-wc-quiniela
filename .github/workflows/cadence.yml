@@ -30,7 +30,7 @@ env:
 jobs:
   cadence:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 75
 
     steps:
       - name: Checkout
@@ -67,6 +67,7 @@ jobs:
           FOOTBALLDATA_KEY: ${{ secrets.FOOTBALLDATA_KEY }}
           SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
           OUTPUT_DIR: dist
+          FINAL_SCORE_WAIT_MINUTES: '45'
           AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
           CALIENTE_AFFILIATE_URL: ${{ secrets.CALIENTE_AFFILIATE_URL }}
           BET365_AFFILIATE_URL: ${{ secrets.BET365_AFFILIATE_URL }}
