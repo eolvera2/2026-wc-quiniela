@@ -145,11 +145,15 @@ As users shift to ChatGPT/Copilot/Perplexity/Grok, being cited by AI answer engi
 
 To overcome the new-domain authority gap, drive direct traffic via social. 94% of US Hispanic fans use social media for football content. Social channels are the fastest path to early traffic before organic rankings mature.
 
-**Platforms & viral formats:**
-- **TikTok**: 15–45s vertical "quiniela picks" in TUDN-analyst tone; hot takes; score-prediction challenges (`#PronósticoMundial`). Hook in first 2 seconds.
-- **Instagram**: Reels + carousel bracket breakdowns; Stories polls ("¿México pasa de grupos?"). Saveable carousel = high share rate.
-- **X (Twitter)**: prediction threads (numbered picks build engagement); live match-day reaction; polls with results.
-- **Facebook**: groups + community debate posts; share article links with strong hook text.
+**Active daily platforms & viral formats:**
+- **Instagram**: Reels (7-30 sec), carousels, Stories polls, and prediction-vs-reality accountability recaps. Optimize for shares/sends, saves, watch time, and non-follower reach.
+- **X (Twitter)**: single hot takes, threads, quote posts, native polls, and live replies. Keep hashtags to 0-2 and avoid external links in the first post when reach matters.
+- **Threads**: debate prompts, short lists, match-thread replies, and cross-posted graphics with rewritten captions. Never copy-paste the Instagram/X caption unchanged.
+
+**Deferred/optional channels:**
+- **TikTok**: keep optional until a native short-video/audio workflow exists. Do not make it a daily manual requirement.
+- **YouTube**: use for evergreen brand/SEO explainers, not daily match cards.
+- **Facebook**: do not generate daily dashboard cards; it adds manual work without matching the current priority channels.
 
 **Compliance-safe framing (CRITICAL — read before posting anything):**
 - On social, frame all content as "predicción / análisis / mi pick" — NOT gambling promotion.
@@ -157,20 +161,25 @@ To overcome the new-domain authority gap, drive direct traffic via social. 94% o
 - **NO direct betting/affiliate links on social posts** — use "link in bio" → site. All affiliate conversion happens on-site only.
 - Meta requires pre-authorization for **paid** gambling ads; TikTok **bans gambling content** in ads. Organic prediction content is generally permitted; paid promotion of gambling is not. Do not run paid ads for betting content on either platform without legal clearance.
 
-**Repurposing pipeline (automatable ~80%):**
-- The structured JSON article already produced by the generation engine (`analisis_tactico_html`, `pronostico_quiniela`, `momios`, key facts) feeds per-platform templates via variable substitution.
-- Per-platform outputs: TikTok script (hook + 3 picks + CTA), IG carousel slides (cover + 3 data slides + CTA), X thread (5-tweet sequence), FB post (conversational paragraph).
-- Human review required for: tone/compliance check, trending-audio selection (TikTok/Reels), platform-specific hashtag optimization.
-- **Implementation note**: the `/social` module is out of scope for v1 build, but the article JSON schema must remain clean and structured enough to template from. No free-form blobs.
+**Repurposing pipeline (manual effort minimized):**
+- The structured match data and fixture content feed `marketing-board` cards with `platform_copy` for Instagram, X, and Threads.
+- The board displays a countdown, platform-specific copy, assets, and direct open/copy/mark-posted actions.
+- Human work should be limited to downloading/copying the asset, pasting text into the platform, publishing, and confirming the post.
+- Each platform gets native wording and a native format: Instagram gets Reels/carousels/Story polls/accountability recap visuals with 3-5 hashtags, X gets hot takes/threads/quote posts/live replies with 0-2 hashtags, and Threads gets debate prompts/short lists/match-thread replies/cross-post rewrites.
 
-**Posting cadence:**
-- T-48h: match preview / bracket context
-- T-24h: full prediction picks + key stats
-- T-2h: last-minute lineup/injury update
-- Halftime: live reaction + second-half pick
-- Post-match: "called it" / "got burned" recap (builds authentic voice)
+**Posting cadence for featured matches:**
+| Window | Instagram | X | Threads |
+|---|---|---|---|
+| T-48h | Breakdown carousel | Breakdown thread | Short list |
+| T-24h | Feed graphic/carousel | Single hot take | Cross-posted graphic with rewritten caption |
+| T-4h | Story poll with animated MP4 + PNG fallback | Native poll | Debate prompt |
+| T-60m | 7-30s Reel storyboard | Thread | Match-thread reply |
+| T-15m | — | Quote post or single hot take | — |
+| Halftime | — | Live reply | Match-thread reply |
+| FT+30m | Accountability recap with 1080x1080 visual | Thread | Accountability prompt |
+| Next morning | Carousel for saves | — | Short list |
 
-**Bilingual hashtags:** `#Quiniela #Mexico2026 #WorldCup2026 #ElTri #Pronósticos #MundialDeClubFIFA`
+**Hashtag rules:** Instagram 3-5 targeted tags; X 0-2; Threads 0-2. Prefer `#PredictaGol`, `#Mundial2026`, `#WorldCup2026`, match/team-specific tags, and avoid generic hashtag stuffing.
 
 ---
 

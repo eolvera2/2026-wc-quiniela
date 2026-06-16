@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:03:25.683Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "title": "Arabia Saudita vs Uruguay: HT debate en vivo",
+      "stage": "to_be_posted",
+      "owner": "stark",
+      "pillar": "quiniela_challenge",
+      "priority": 6,
+      "expires_at": "2026-06-15T23:30:00.000Z",
+      "platforms": [
+        "x",
+        "threads"
+      ],
+      "payload": {
+        "scheduled_for": "2026-06-15T16:55:00-06:00",
+        "window_key": "halftime",
+        "window_label": "HT · debate en vivo",
+        "expires_at": "2026-06-15T23:30:00.000Z",
+        "target_match": {
+          "home": "Arabia Saudita",
+          "away": "Uruguay",
+          "kickoff_iso": "2026-06-15T16:00:00-06:00"
+        },
+        "caption": "Reply live para HT en Arabia Saudita vs Uruguay:\n\nEl pick inicial era Uruguay gana (PGS® 0-2). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+        "hashtags": [
+          "#WorldCup2026"
+        ],
+        "platform_copy": {
+          "x": {
+            "format": "live_reply",
+            "text": "Reply live para HT en Arabia Saudita vs Uruguay:\n\nEl pick inicial era Uruguay gana (PGS® 0-2). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+            "hashtags": [
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "match_thread_reply",
+            "text": "Para responder en un thread activo del partido:\n\nMedio tiempo en Arabia Saudita vs Uruguay. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Uruguay gana o ves giro en el segundo tiempo?",
+            "hashtags": [
+              "#PredictaGol"
+            ]
+          }
+        },
+        "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+      }
+    }
+  },
+  "card": {
+    "id": "c_cf89",
+    "title": "Arabia Saudita vs Uruguay: HT debate en vivo",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "quiniela_challenge",
+    "platforms": [
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-15T16:55:00-06:00",
+      "window_key": "halftime",
+      "window_label": "HT · debate en vivo",
+      "expires_at": "2026-06-15T23:30:00.000Z",
+      "target_match": {
+        "home": "Arabia Saudita",
+        "away": "Uruguay",
+        "kickoff_iso": "2026-06-15T16:00:00-06:00"
+      },
+      "caption": "Reply live para HT en Arabia Saudita vs Uruguay:\n\nEl pick inicial era Uruguay gana (PGS® 0-2). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+      "hashtags": [
+        "#WorldCup2026"
+      ],
+      "platform_copy": {
+        "x": {
+          "format": "live_reply",
+          "text": "Reply live para HT en Arabia Saudita vs Uruguay:\n\nEl pick inicial era Uruguay gana (PGS® 0-2). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "match_thread_reply",
+          "text": "Para responder en un thread activo del partido:\n\nMedio tiempo en Arabia Saudita vs Uruguay. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Uruguay gana o ves giro en el segundo tiempo?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+    },
+    "priority": 6,
+    "stalled_at": null,
+    "expires_at": "2026-06-15T23:30:00.000Z",
+    "created_at": "2026-06-15 03:09:54",
+    "updated_at": "2026-06-15 15:03:25",
+    "posts": [],
+    "events": [
+      {
+        "id": 668,
+        "card_id": "c_cf89",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Arabia Saudita vs Uruguay: HT debate en vivo\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":6,\"expires_at\":\"2026-06-15T23:30:00.000Z\",\"platforms\":[\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T16:55:00-06:00\",\"window_key\":\"halftime\",\"window_label\":\"HT · debate en vivo\",\"expires_at\":\"2026-06-15T23:30:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\"},\"caption\":\"Reply live para HT en Arabia Saudita vs Uruguay:\\n\\nEl pick inicial era Uruguay gana (PGS® 0-2). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?\",\"hashtags\":[\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"live_reply\",\"text\":\"Reply live para HT en Arabia Saudita vs Uruguay:\\n\\nEl pick inicial era Uruguay gana (PGS® 0-2). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Para responder en un thread activo del partido:\\n\\nMedio tiempo en Arabia Saudita vs Uruguay. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Uruguay gana o ves giro en el segundo tiempo?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 15:03:25",
+        "meta": {
+          "title": "Arabia Saudita vs Uruguay: HT debate en vivo",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 6,
+          "expires_at": "2026-06-15T23:30:00.000Z",
+          "platforms": [
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T16:55:00-06:00",
+            "window_key": "halftime",
+            "window_label": "HT · debate en vivo",
+            "expires_at": "2026-06-15T23:30:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00"
+            },
+            "caption": "Reply live para HT en Arabia Saudita vs Uruguay:\n\nEl pick inicial era Uruguay gana (PGS® 0-2). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+            "hashtags": [
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "live_reply",
+                "text": "Reply live para HT en Arabia Saudita vs Uruguay:\n\nEl pick inicial era Uruguay gana (PGS® 0-2). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Para responder en un thread activo del partido:\n\nMedio tiempo en Arabia Saudita vs Uruguay. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Uruguay gana o ves giro en el segundo tiempo?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 559,
+        "card_id": "c_cf89",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Arabia Saudita vs Uruguay: HT debate en vivo\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":6,\"expires_at\":\"2026-06-15T23:30:00.000Z\",\"platforms\":[\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T16:55:00-06:00\",\"window_key\":\"halftime\",\"window_label\":\"HT · debate en vivo\",\"expires_at\":\"2026-06-15T23:30:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\"},\"caption\":\"HT en Arabia Saudita vs Uruguay.\\n\\nNuestro pick inicial: Uruguay gana (PGS® 0-2). ¿Mantienes tu marcador o ya lo cambiaste?\",\"hashtags\":[\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"live_update\",\"text\":\"HT en Arabia Saudita vs Uruguay.\\n\\nNuestro pick inicial: Uruguay gana (PGS® 0-2). ¿Mantienes tu marcador o ya lo cambiaste?\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Medio tiempo: Arabia Saudita vs Uruguay.\\n\\nSi tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con el pick inicial o ves giro en el segundo tiempo?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 14:48:27",
+        "meta": {
+          "title": "Arabia Saudita vs Uruguay: HT debate en vivo",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 6,
+          "expires_at": "2026-06-15T23:30:00.000Z",
+          "platforms": [
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T16:55:00-06:00",
+            "window_key": "halftime",
+            "window_label": "HT · debate en vivo",
+            "expires_at": "2026-06-15T23:30:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00"
+            },
+            "caption": "HT en Arabia Saudita vs Uruguay.\n\nNuestro pick inicial: Uruguay gana (PGS® 0-2). ¿Mantienes tu marcador o ya lo cambiaste?",
+            "hashtags": [
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "live_update",
+                "text": "HT en Arabia Saudita vs Uruguay.\n\nNuestro pick inicial: Uruguay gana (PGS® 0-2). ¿Mantienes tu marcador o ya lo cambiaste?",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Medio tiempo: Arabia Saudita vs Uruguay.\n\nSi tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con el pick inicial o ves giro en el segundo tiempo?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 489,
+        "card_id": "c_cf89",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Arabia Saudita vs Uruguay: HT debate en vivo\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":6,\"expires_at\":\"2026-06-15T23:30:00.000Z\",\"platforms\":[\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T16:55:00-06:00\",\"window_key\":\"halftime\",\"window_label\":\"HT · debate en vivo\",\"expires_at\":\"2026-06-15T23:30:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\"},\"caption\":\"HT en Arabia Saudita vs Uruguay.\\n\\nNuestro pick inicial: Uruguay gana (PGS® 0-2). ¿Mantienes tu marcador o ya lo cambiaste?\",\"hashtags\":[\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"live_update\",\"text\":\"HT en Arabia Saudita vs Uruguay.\\n\\nNuestro pick inicial: Uruguay gana (PGS® 0-2). ¿Mantienes tu marcador o ya lo cambiaste?\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Medio tiempo: Arabia Saudita vs Uruguay.\\n\\nSi tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con el pick inicial o ves giro en el segundo tiempo?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 03:22:00",
+        "meta": {
+          "title": "Arabia Saudita vs Uruguay: HT debate en vivo",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 6,
+          "expires_at": "2026-06-15T23:30:00.000Z",
+          "platforms": [
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T16:55:00-06:00",
+            "window_key": "halftime",
+            "window_label": "HT · debate en vivo",
+            "expires_at": "2026-06-15T23:30:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00"
+            },
+            "caption": "HT en Arabia Saudita vs Uruguay.\n\nNuestro pick inicial: Uruguay gana (PGS® 0-2). ¿Mantienes tu marcador o ya lo cambiaste?",
+            "hashtags": [
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "live_update",
+                "text": "HT en Arabia Saudita vs Uruguay.\n\nNuestro pick inicial: Uruguay gana (PGS® 0-2). ¿Mantienes tu marcador o ya lo cambiaste?",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Medio tiempo: Arabia Saudita vs Uruguay.\n\nSi tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con el pick inicial o ves giro en el segundo tiempo?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 437,
+        "card_id": "c_cf89",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"expires_at\":\"2026-06-15T23:30:00.000Z\"}",
+        "created_at": "2026-06-15 03:09:54",
+        "meta": {
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "expires_at": "2026-06-15T23:30:00.000Z"
+        }
+      }
+    ]
+  }
+}

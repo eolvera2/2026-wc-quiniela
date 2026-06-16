@@ -17,17 +17,30 @@
     "cadence": "node scripts/run-cadence.js",
     "seed-static": "node scripts/seed-static.js",
     "cloudflare:dns": "node scripts/update-cloudflare-dns.js",
-    "validate-workflow": "node scripts/validate-workflow.js"
+    "validate-workflow": "node scripts/validate-workflow.js",
+    "board": "node marketing-board/server.js",
+    "board:seed": "node marketing-board/scripts/seed-wave1.js",
+    "marketing:pulse": "node marketing-board/scripts/run-widow-refresh.mjs",
+    "marketing:seed-day": "node marketing-board/scripts/seed-matches-for-date.mjs",
+    "marketing:housekeeping": "node marketing-board/scripts/housekeeping-expire.mjs",
+    "marketing:calendar": "node marketing-board/scripts/seed-matches-for-date.mjs",
+    "marketing:render": "node marketing-board/scripts/run-shuri-wave1.js",
+    "marketing:review": "node marketing-board/scripts/run-cap-wave1-review.js",
+    "marketing:regen-assets": "node marketing-board/scripts/regen-wave1-assets.mjs",
+    "marketing:validate-creative": "node marketing-board/scripts/validate-creative-text.mjs"
   },
   "dependencies": {
     "@azure/storage-blob": "12.26.0",
+    "@resvg/resvg-js": "^2.6.2",
     "better-sqlite3": "12.10.0",
     "dotenv": "16.4.7",
+    "express": "^4.21.2",
     "p-limit": "6.2.0",
     "zod": "3.24.2"
   },
   "devDependencies": {
     "@azure/static-web-apps-cli": "^2.0.0",
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
     "nock": "14.0.1",
     "vitest": "3.1.1"
   }

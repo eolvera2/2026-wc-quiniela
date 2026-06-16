@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:17:08.979Z",
+  "event": {
+    "type": "create",
+    "actor": "seed-wave1",
+    "to_stage": "posted"
+  },
+  "card": {
+    "id": "c_1014",
+    "title": "Publicado: thread de momentos que cambiaron quinielas",
+    "stage": "posted",
+    "owner": "stark",
+    "pillar": "momento_del_partido",
+    "platforms": [
+      "threads"
+    ],
+    "payload": {
+      "permalink": "demo://threads/momentos-quiniela"
+    },
+    "priority": 5,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:17:08",
+    "updated_at": "2026-06-10 19:17:08",
+    "posts": [],
+    "events": [
+      {
+        "id": 114,
+        "card_id": "c_1014",
+        "actor": "seed-wave1",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "posted",
+        "note": "Wave-1 demo seed",
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"momento_del_partido\"}",
+        "created_at": "2026-06-10 19:17:08",
+        "meta": {
+          "owner": "stark",
+          "pillar": "momento_del_partido"
+        }
+      }
+    ]
+  }
+}

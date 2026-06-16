@@ -1,0 +1,856 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:03:01.551Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "template": "pronostico-carousel-3up",
+        "format_variant": "carousel_3up",
+        "scheduled_for": "2026-06-15T09:00:00-06:00",
+        "window_key": "t_minus_60",
+        "window_label": "T-60m · predicción final",
+        "expires_at": "2026-06-15T15:45:00.000Z",
+        "target_match": {
+          "home": "España",
+          "away": "Cabo Verde",
+          "kickoff_iso": "2026-06-15T10:00:00-06:00",
+          "venue": "Atlanta, EE.UU."
+        },
+        "homeTeam": "España",
+        "awayTeam": "Cabo Verde",
+        "flagCodeHome": "es",
+        "flagCodeAway": "cv",
+        "slideTitle": "España vs Cabo Verde",
+        "kickoff": "2026-06-15T10:00:00-06:00",
+        "venue": "Atlanta, EE.UU.",
+        "pgsHome": "2",
+        "pgsAway": "0",
+        "pickShort": "España gana",
+        "hook": "España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.",
+        "cta": "Tu pick en predictagol.com",
+        "caption": "España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\n\nNuestro pick final: España gana.\n\nPGS® España 2-0 Cabo Verde. Guarda este Reel y compara al FT.",
+        "alt_text": "Storyboard de Reel para España vs Cabo Verde: hook, PGS® y pick final.",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#Espana",
+          "#CaboVerde",
+          "#PronosticoDelDia"
+        ],
+        "platform_copy": {
+          "instagram": {
+            "format": "reel_7_30s",
+            "caption": "España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\n\nNuestro pick final: España gana.\n\nPGS® España 2-0 Cabo Verde. Guarda este Reel y compara al FT.",
+            "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"España vs Cabo Verde: nuestro pick final\".\n3-8s: Mostrar slide PGS® 2-0.\n9-16s: Decir la razón corta: \"España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"España gana. ¿Lo bancas o ves sorpresa?\"",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Espana",
+              "#CaboVerde",
+              "#PronosticoDelDia"
+            ],
+            "alt_text": "Storyboard de Reel para España vs Cabo Verde: hook, PGS® y pick final.",
+            "asset_keys": [
+              "slide_1",
+              "slide_2",
+              "slide_3"
+            ]
+          },
+          "x": {
+            "format": "thread",
+            "text": "Hilo express a 1h de España vs Cabo Verde 🧵\n\n1/ Pick final: España gana\n2/ PGS®: 2-0\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+            "reply_text": "Más contexto y picks en predictagol.com",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "match_thread_reply",
+            "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con España gana para España vs Cabo Verde. PGS® 2-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026"
+            ]
+          }
+        },
+        "assets": {
+          "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_1.png",
+          "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_2.png",
+          "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_3.png"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_4b9d",
+    "title": "España vs Cabo Verde: T-60 predicción final",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "template": "pronostico-carousel-3up",
+      "format_variant": "carousel_3up",
+      "scheduled_for": "2026-06-15T09:00:00-06:00",
+      "window_key": "t_minus_60",
+      "window_label": "T-60m · predicción final",
+      "expires_at": "2026-06-15T15:45:00.000Z",
+      "target_match": {
+        "home": "España",
+        "away": "Cabo Verde",
+        "kickoff_iso": "2026-06-15T10:00:00-06:00",
+        "venue": "Atlanta, EE.UU."
+      },
+      "homeTeam": "España",
+      "awayTeam": "Cabo Verde",
+      "flagCodeHome": "es",
+      "flagCodeAway": "cv",
+      "slideTitle": "España vs Cabo Verde",
+      "kickoff": "2026-06-15T10:00:00-06:00",
+      "venue": "Atlanta, EE.UU.",
+      "pgsHome": "2",
+      "pgsAway": "0",
+      "pickShort": "España gana",
+      "hook": "España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.",
+      "cta": "Tu pick en predictagol.com",
+      "caption": "España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\n\nNuestro pick final: España gana.\n\nPGS® España 2-0 Cabo Verde. Guarda este Reel y compara al FT.",
+      "alt_text": "Storyboard de Reel para España vs Cabo Verde: hook, PGS® y pick final.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Espana",
+        "#CaboVerde",
+        "#PronosticoDelDia"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "reel_7_30s",
+          "caption": "España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\n\nNuestro pick final: España gana.\n\nPGS® España 2-0 Cabo Verde. Guarda este Reel y compara al FT.",
+          "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"España vs Cabo Verde: nuestro pick final\".\n3-8s: Mostrar slide PGS® 2-0.\n9-16s: Decir la razón corta: \"España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"España gana. ¿Lo bancas o ves sorpresa?\"",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#Espana",
+            "#CaboVerde",
+            "#PronosticoDelDia"
+          ],
+          "alt_text": "Storyboard de Reel para España vs Cabo Verde: hook, PGS® y pick final.",
+          "asset_keys": [
+            "slide_1",
+            "slide_2",
+            "slide_3"
+          ]
+        },
+        "x": {
+          "format": "thread",
+          "text": "Hilo express a 1h de España vs Cabo Verde 🧵\n\n1/ Pick final: España gana\n2/ PGS®: 2-0\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+          "reply_text": "Más contexto y picks en predictagol.com",
+          "hashtags": [
+            "#PredictaGol",
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "match_thread_reply",
+          "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con España gana para España vs Cabo Verde. PGS® 2-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026"
+          ]
+        }
+      },
+      "assets": {
+        "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_1.png",
+        "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_2.png",
+        "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_3.png"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": "2026-06-15T15:45:00.000Z",
+    "created_at": "2026-06-15 03:09:46",
+    "updated_at": "2026-06-15 15:03:01",
+    "posts": [
+      {
+        "id": 44,
+        "card_id": "c_4b9d",
+        "platform": "threads",
+        "status": "posted_manual",
+        "permalink": null,
+        "error": null,
+        "posted_at": "2026-06-15T14:47:52.150Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-15 14:47:52",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      },
+      {
+        "id": 43,
+        "card_id": "c_4b9d",
+        "platform": "x",
+        "status": "posted_manual",
+        "permalink": null,
+        "error": null,
+        "posted_at": "2026-06-15T14:47:52.131Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-15 14:47:52",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      },
+      {
+        "id": 42,
+        "card_id": "c_4b9d",
+        "platform": "instagram",
+        "status": "posted_manual",
+        "permalink": null,
+        "error": null,
+        "posted_at": "2026-06-15T14:47:52.105Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-15 14:47:52",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      }
+    ],
+    "events": [
+      {
+        "id": 639,
+        "card_id": "c_4b9d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T09:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-15T15:45:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"slideTitle\":\"España vs Cabo Verde\",\"kickoff\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"España gana\",\"hook\":\"España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\\n\\nNuestro pick final: España gana.\\n\\nPGS® España 2-0 Cabo Verde. Guarda este Reel y compara al FT.\",\"alt_text\":\"Storyboard de Reel para España vs Cabo Verde: hook, PGS® y pick final.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"reel_7_30s\",\"caption\":\"España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\\n\\nNuestro pick final: España gana.\\n\\nPGS® España 2-0 Cabo Verde. Guarda este Reel y compara al FT.\",\"script\":\"Reel 7-30s:\\n0-2s: Hook en pantalla: \\\"España vs Cabo Verde: nuestro pick final\\\".\\n3-8s: Mostrar slide PGS® 2-0.\\n9-16s: Decir la razón corta: \\\"España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\\".\\n17-24s: Cierre: \\\"España gana. ¿Lo bancas o ves sorpresa?\\\"\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#PronosticoDelDia\"],\"alt_text\":\"Storyboard de Reel para España vs Cabo Verde: hook, PGS® y pick final.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"thread\",\"text\":\"Hilo express a 1h de España vs Cabo Verde 🧵\\n\\n1/ Pick final: España gana\\n2/ PGS®: 2-0\\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Respuesta lista para usar en threads de cuentas grandes del partido:\\n\\nPredictaGol llega con España gana para España vs Cabo Verde. PGS® 2-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:03:01",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T09:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-15T15:45:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "slideTitle": "España vs Cabo Verde",
+            "kickoff": "2026-06-15T10:00:00-06:00",
+            "venue": "Atlanta, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "España gana",
+            "hook": "España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\n\nNuestro pick final: España gana.\n\nPGS® España 2-0 Cabo Verde. Guarda este Reel y compara al FT.",
+            "alt_text": "Storyboard de Reel para España vs Cabo Verde: hook, PGS® y pick final.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Espana",
+              "#CaboVerde",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "reel_7_30s",
+                "caption": "España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\n\nNuestro pick final: España gana.\n\nPGS® España 2-0 Cabo Verde. Guarda este Reel y compara al FT.",
+                "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"España vs Cabo Verde: nuestro pick final\".\n3-8s: Mostrar slide PGS® 2-0.\n9-16s: Decir la razón corta: \"España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"España gana. ¿Lo bancas o ves sorpresa?\"",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Espana",
+                  "#CaboVerde",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Storyboard de Reel para España vs Cabo Verde: hook, PGS® y pick final.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "thread",
+                "text": "Hilo express a 1h de España vs Cabo Verde 🧵\n\n1/ Pick final: España gana\n2/ PGS®: 2-0\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con España gana para España vs Cabo Verde. PGS® 2-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 638,
+        "card_id": "c_4b9d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"España vs Cabo Verde: T-60 predicción final\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":8,\"expires_at\":\"2026-06-15T15:45:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T09:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-15T15:45:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"slideTitle\":\"España vs Cabo Verde\",\"kickoff\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"España gana\",\"hook\":\"España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\\n\\nNuestro pick final: España gana.\\n\\nPGS® España 2-0 Cabo Verde. Guarda este Reel y compara al FT.\",\"alt_text\":\"Storyboard de Reel para España vs Cabo Verde: hook, PGS® y pick final.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"reel_7_30s\",\"caption\":\"España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\\n\\nNuestro pick final: España gana.\\n\\nPGS® España 2-0 Cabo Verde. Guarda este Reel y compara al FT.\",\"script\":\"Reel 7-30s:\\n0-2s: Hook en pantalla: \\\"España vs Cabo Verde: nuestro pick final\\\".\\n3-8s: Mostrar slide PGS® 2-0.\\n9-16s: Decir la razón corta: \\\"España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\\".\\n17-24s: Cierre: \\\"España gana. ¿Lo bancas o ves sorpresa?\\\"\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#PronosticoDelDia\"],\"alt_text\":\"Storyboard de Reel para España vs Cabo Verde: hook, PGS® y pick final.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"thread\",\"text\":\"Hilo express a 1h de España vs Cabo Verde 🧵\\n\\n1/ Pick final: España gana\\n2/ PGS®: 2-0\\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Respuesta lista para usar en threads de cuentas grandes del partido:\\n\\nPredictaGol llega con España gana para España vs Cabo Verde. PGS® 2-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:03:00",
+        "meta": {
+          "title": "España vs Cabo Verde: T-60 predicción final",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 8,
+          "expires_at": "2026-06-15T15:45:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T09:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-15T15:45:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "slideTitle": "España vs Cabo Verde",
+            "kickoff": "2026-06-15T10:00:00-06:00",
+            "venue": "Atlanta, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "España gana",
+            "hook": "España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\n\nNuestro pick final: España gana.\n\nPGS® España 2-0 Cabo Verde. Guarda este Reel y compara al FT.",
+            "alt_text": "Storyboard de Reel para España vs Cabo Verde: hook, PGS® y pick final.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Espana",
+              "#CaboVerde",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "reel_7_30s",
+                "caption": "España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\n\nNuestro pick final: España gana.\n\nPGS® España 2-0 Cabo Verde. Guarda este Reel y compara al FT.",
+                "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"España vs Cabo Verde: nuestro pick final\".\n3-8s: Mostrar slide PGS® 2-0.\n9-16s: Decir la razón corta: \"España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"España gana. ¿Lo bancas o ves sorpresa?\"",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Espana",
+                  "#CaboVerde",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Storyboard de Reel para España vs Cabo Verde: hook, PGS® y pick final.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "thread",
+                "text": "Hilo express a 1h de España vs Cabo Verde 🧵\n\n1/ Pick final: España gana\n2/ PGS®: 2-0\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con España gana para España vs Cabo Verde. PGS® 2-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 530,
+        "card_id": "c_4b9d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T09:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-15T15:45:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"slideTitle\":\"España vs Cabo Verde\",\"kickoff\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"España gana\",\"hook\":\"España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\\n\\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® España 2-0 Cabo Verde · 🎯 Pick inicial: España gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para España vs Cabo Verde: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel\",\"caption\":\"España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\\n\\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® España 2-0 Cabo Verde · 🎯 Pick inicial: España gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#PronosticoDelDia\"],\"alt_text\":\"Carrusel de 3 slides para España vs Cabo Verde: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"single_post\",\"text\":\"Falta 1 hora para España vs Cabo Verde.\\n\\n📊 PGS® España 2-0 Cabo Verde\\n🎯 Pick inicial: España gana\\n\\n¿Cuál es tu marcador?\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"España vs Cabo Verde: nuestro pick está listo.\\n\\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nPGS® 2-0. ¿Lo ves igual o hay sorpresa?\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 14:48:01",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T09:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-15T15:45:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "slideTitle": "España vs Cabo Verde",
+            "kickoff": "2026-06-15T10:00:00-06:00",
+            "venue": "Atlanta, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "España gana",
+            "hook": "España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\n\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® España 2-0 Cabo Verde · 🎯 Pick inicial: España gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para España vs Cabo Verde: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Espana",
+              "#CaboVerde",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel",
+                "caption": "España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\n\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® España 2-0 Cabo Verde · 🎯 Pick inicial: España gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Espana",
+                  "#CaboVerde",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Carrusel de 3 slides para España vs Cabo Verde: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "single_post",
+                "text": "Falta 1 hora para España vs Cabo Verde.\n\n📊 PGS® España 2-0 Cabo Verde\n🎯 Pick inicial: España gana\n\n¿Cuál es tu marcador?",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "España vs Cabo Verde: nuestro pick está listo.\n\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nPGS® 2-0. ¿Lo ves igual o hay sorpresa?",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 529,
+        "card_id": "c_4b9d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"España vs Cabo Verde: T-60 predicción final\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":8,\"expires_at\":\"2026-06-15T15:45:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T09:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-15T15:45:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"slideTitle\":\"España vs Cabo Verde\",\"kickoff\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"España gana\",\"hook\":\"España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\\n\\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® España 2-0 Cabo Verde · 🎯 Pick inicial: España gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para España vs Cabo Verde: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel\",\"caption\":\"España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\\n\\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® España 2-0 Cabo Verde · 🎯 Pick inicial: España gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#PronosticoDelDia\"],\"alt_text\":\"Carrusel de 3 slides para España vs Cabo Verde: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"single_post\",\"text\":\"Falta 1 hora para España vs Cabo Verde.\\n\\n📊 PGS® España 2-0 Cabo Verde\\n🎯 Pick inicial: España gana\\n\\n¿Cuál es tu marcador?\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"España vs Cabo Verde: nuestro pick está listo.\\n\\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nPGS® 2-0. ¿Lo ves igual o hay sorpresa?\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 14:47:59",
+        "meta": {
+          "title": "España vs Cabo Verde: T-60 predicción final",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 8,
+          "expires_at": "2026-06-15T15:45:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T09:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-15T15:45:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "slideTitle": "España vs Cabo Verde",
+            "kickoff": "2026-06-15T10:00:00-06:00",
+            "venue": "Atlanta, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "España gana",
+            "hook": "España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\n\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® España 2-0 Cabo Verde · 🎯 Pick inicial: España gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para España vs Cabo Verde: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Espana",
+              "#CaboVerde",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel",
+                "caption": "España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\n\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® España 2-0 Cabo Verde · 🎯 Pick inicial: España gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Espana",
+                  "#CaboVerde",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Carrusel de 3 slides para España vs Cabo Verde: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "single_post",
+                "text": "Falta 1 hora para España vs Cabo Verde.\n\n📊 PGS® España 2-0 Cabo Verde\n🎯 Pick inicial: España gana\n\n¿Cuál es tu marcador?",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "España vs Cabo Verde: nuestro pick está listo.\n\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nPGS® 2-0. ¿Lo ves igual o hay sorpresa?",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 527,
+        "card_id": "c_4b9d",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "posted",
+        "note": "Manual threads post confirmed",
+        "meta_json": "{}",
+        "created_at": "2026-06-15 14:47:52",
+        "meta": {}
+      },
+      {
+        "id": 526,
+        "card_id": "c_4b9d",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual threads post confirmed",
+        "meta_json": "{\"platform\":\"threads\",\"permalink\":null}",
+        "created_at": "2026-06-15 14:47:52",
+        "meta": {
+          "platform": "threads",
+          "permalink": null
+        }
+      },
+      {
+        "id": 525,
+        "card_id": "c_4b9d",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual x post confirmed",
+        "meta_json": "{\"platform\":\"x\",\"permalink\":null}",
+        "created_at": "2026-06-15 14:47:52",
+        "meta": {
+          "platform": "x",
+          "permalink": null
+        }
+      },
+      {
+        "id": 524,
+        "card_id": "c_4b9d",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual instagram post confirmed",
+        "meta_json": "{\"platform\":\"instagram\",\"permalink\":null}",
+        "created_at": "2026-06-15 14:47:52",
+        "meta": {
+          "platform": "instagram",
+          "permalink": null
+        }
+      },
+      {
+        "id": 462,
+        "card_id": "c_4b9d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T09:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-15T15:45:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"slideTitle\":\"España vs Cabo Verde\",\"kickoff\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"España gana\",\"hook\":\"España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\\n\\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® España 2-0 Cabo Verde · 🎯 Pick inicial: España gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para España vs Cabo Verde: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel\",\"caption\":\"España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\\n\\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® España 2-0 Cabo Verde · 🎯 Pick inicial: España gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#PronosticoDelDia\"],\"alt_text\":\"Carrusel de 3 slides para España vs Cabo Verde: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"single_post\",\"text\":\"Falta 1 hora para España vs Cabo Verde.\\n\\n📊 PGS® España 2-0 Cabo Verde\\n🎯 Pick inicial: España gana\\n\\n¿Cuál es tu marcador?\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"España vs Cabo Verde: nuestro pick está listo.\\n\\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nPGS® 2-0. ¿Lo ves igual o hay sorpresa?\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 03:21:51",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T09:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-15T15:45:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "slideTitle": "España vs Cabo Verde",
+            "kickoff": "2026-06-15T10:00:00-06:00",
+            "venue": "Atlanta, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "España gana",
+            "hook": "España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\n\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® España 2-0 Cabo Verde · 🎯 Pick inicial: España gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para España vs Cabo Verde: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Espana",
+              "#CaboVerde",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel",
+                "caption": "España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\n\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® España 2-0 Cabo Verde · 🎯 Pick inicial: España gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Espana",
+                  "#CaboVerde",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Carrusel de 3 slides para España vs Cabo Verde: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "single_post",
+                "text": "Falta 1 hora para España vs Cabo Verde.\n\n📊 PGS® España 2-0 Cabo Verde\n🎯 Pick inicial: España gana\n\n¿Cuál es tu marcador?",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "España vs Cabo Verde: nuestro pick está listo.\n\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nPGS® 2-0. ¿Lo ves igual o hay sorpresa?",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 461,
+        "card_id": "c_4b9d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"España vs Cabo Verde: T-60 predicción final\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":8,\"expires_at\":\"2026-06-15T15:45:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T09:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-15T15:45:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"slideTitle\":\"España vs Cabo Verde\",\"kickoff\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"España gana\",\"hook\":\"España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\\n\\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® España 2-0 Cabo Verde · 🎯 Pick inicial: España gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para España vs Cabo Verde: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel\",\"caption\":\"España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\\n\\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® España 2-0 Cabo Verde · 🎯 Pick inicial: España gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#PronosticoDelDia\"],\"alt_text\":\"Carrusel de 3 slides para España vs Cabo Verde: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"single_post\",\"text\":\"Falta 1 hora para España vs Cabo Verde.\\n\\n📊 PGS® España 2-0 Cabo Verde\\n🎯 Pick inicial: España gana\\n\\n¿Cuál es tu marcador?\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"España vs Cabo Verde: nuestro pick está listo.\\n\\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nPGS® 2-0. ¿Lo ves igual o hay sorpresa?\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_4b9d\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 03:21:50",
+        "meta": {
+          "title": "España vs Cabo Verde: T-60 predicción final",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 8,
+          "expires_at": "2026-06-15T15:45:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T09:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-15T15:45:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "slideTitle": "España vs Cabo Verde",
+            "kickoff": "2026-06-15T10:00:00-06:00",
+            "venue": "Atlanta, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "España gana",
+            "hook": "España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\n\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® España 2-0 Cabo Verde · 🎯 Pick inicial: España gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para España vs Cabo Verde: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Espana",
+              "#CaboVerde",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel",
+                "caption": "España vs Cabo Verde hoy lunes, 15 de junio, 10:00 a.m.\n\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® España 2-0 Cabo Verde · 🎯 Pick inicial: España gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Espana",
+                  "#CaboVerde",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Carrusel de 3 slides para España vs Cabo Verde: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "single_post",
+                "text": "Falta 1 hora para España vs Cabo Verde.\n\n📊 PGS® España 2-0 Cabo Verde\n🎯 Pick inicial: España gana\n\n¿Cuál es tu marcador?",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "España vs Cabo Verde: nuestro pick está listo.\n\nEspaña vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nPGS® 2-0. ¿Lo ves igual o hay sorpresa?",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_4b9d\\slide_3.png"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,671 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-16T01:41:01.485Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "template": "pronostico-carousel-3up",
+        "format_variant": "carousel_3up",
+        "scheduled_for": "2026-06-16T21:00:00-06:00",
+        "window_key": "t_minus_60",
+        "window_label": "T-60m · predicción final",
+        "expires_at": "2026-06-17T03:45:00.000Z",
+        "target_match": {
+          "home": "Austria",
+          "away": "Jordania",
+          "kickoff_iso": "2026-06-16T22:00:00-06:00",
+          "venue": "Santa Clara, EE.UU."
+        },
+        "homeTeam": "Austria",
+        "awayTeam": "Jordania",
+        "flagCodeHome": "at",
+        "flagCodeAway": "jo",
+        "slideTitle": "Austria vs Jordania",
+        "kickoff": "2026-06-16T22:00:00-06:00",
+        "venue": "Santa Clara, EE.UU.",
+        "pgsHome": "2",
+        "pgsAway": "0",
+        "pickShort": "Austria gana",
+        "hook": "Austria vs Jordania: el algoritmo PGS® tiene su veredicto.",
+        "cta": "Tu pick en predictagol.com",
+        "caption": "Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\n\nNuestro pick final: Austria gana.\n\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.",
+        "alt_text": "Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#Austria",
+          "#Jordania",
+          "#PronosticoDelDia"
+        ],
+        "platform_copy": {
+          "instagram": {
+            "format": "reel_7_30s",
+            "caption": "Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\n\nNuestro pick final: Austria gana.\n\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.",
+            "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"Austria vs Jordania: nuestro pick final\".\n3-8s: Mostrar slide PGS® 2-0.\n9-16s: Decir la razón corta: \"Austria vs Jordania: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"Austria gana. ¿Lo bancas o ves sorpresa?\"",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Austria",
+              "#Jordania",
+              "#PronosticoDelDia"
+            ],
+            "alt_text": "Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.",
+            "asset_keys": [
+              "slide_1",
+              "slide_2",
+              "slide_3"
+            ]
+          },
+          "x": {
+            "format": "thread",
+            "text": "Hilo express a 1h de Austria vs Jordania 🧵\n\n1/ Pick final: Austria gana\n2/ PGS®: 2-0\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+            "reply_text": "Más contexto y picks en predictagol.com",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "match_thread_reply",
+            "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con Austria gana para Austria vs Jordania. PGS® 2-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026"
+            ]
+          }
+        },
+        "assets": {
+          "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_1.png",
+          "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_2.png",
+          "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_3.png"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_866d",
+    "title": "Austria vs Jordania: T-60 predicción final",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "template": "pronostico-carousel-3up",
+      "format_variant": "carousel_3up",
+      "scheduled_for": "2026-06-16T21:00:00-06:00",
+      "window_key": "t_minus_60",
+      "window_label": "T-60m · predicción final",
+      "expires_at": "2026-06-17T03:45:00.000Z",
+      "target_match": {
+        "home": "Austria",
+        "away": "Jordania",
+        "kickoff_iso": "2026-06-16T22:00:00-06:00",
+        "venue": "Santa Clara, EE.UU."
+      },
+      "homeTeam": "Austria",
+      "awayTeam": "Jordania",
+      "flagCodeHome": "at",
+      "flagCodeAway": "jo",
+      "slideTitle": "Austria vs Jordania",
+      "kickoff": "2026-06-16T22:00:00-06:00",
+      "venue": "Santa Clara, EE.UU.",
+      "pgsHome": "2",
+      "pgsAway": "0",
+      "pickShort": "Austria gana",
+      "hook": "Austria vs Jordania: el algoritmo PGS® tiene su veredicto.",
+      "cta": "Tu pick en predictagol.com",
+      "caption": "Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\n\nNuestro pick final: Austria gana.\n\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.",
+      "alt_text": "Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Austria",
+        "#Jordania",
+        "#PronosticoDelDia"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "reel_7_30s",
+          "caption": "Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\n\nNuestro pick final: Austria gana.\n\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.",
+          "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"Austria vs Jordania: nuestro pick final\".\n3-8s: Mostrar slide PGS® 2-0.\n9-16s: Decir la razón corta: \"Austria vs Jordania: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"Austria gana. ¿Lo bancas o ves sorpresa?\"",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#Austria",
+            "#Jordania",
+            "#PronosticoDelDia"
+          ],
+          "alt_text": "Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.",
+          "asset_keys": [
+            "slide_1",
+            "slide_2",
+            "slide_3"
+          ]
+        },
+        "x": {
+          "format": "thread",
+          "text": "Hilo express a 1h de Austria vs Jordania 🧵\n\n1/ Pick final: Austria gana\n2/ PGS®: 2-0\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+          "reply_text": "Más contexto y picks en predictagol.com",
+          "hashtags": [
+            "#PredictaGol",
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "match_thread_reply",
+          "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con Austria gana para Austria vs Jordania. PGS® 2-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026"
+          ]
+        }
+      },
+      "assets": {
+        "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_1.png",
+        "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_2.png",
+        "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_3.png"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": "2026-06-17T03:45:00.000Z",
+    "created_at": "2026-06-15 14:49:24",
+    "updated_at": "2026-06-16 01:41:01",
+    "posts": [],
+    "events": [
+      {
+        "id": 857,
+        "card_id": "c_866d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-16T21:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-17T03:45:00.000Z\",\"target_match\":{\"home\":\"Austria\",\"away\":\"Jordania\",\"kickoff_iso\":\"2026-06-16T22:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\"},\"homeTeam\":\"Austria\",\"awayTeam\":\"Jordania\",\"flagCodeHome\":\"at\",\"flagCodeAway\":\"jo\",\"slideTitle\":\"Austria vs Jordania\",\"kickoff\":\"2026-06-16T22:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"Austria gana\",\"hook\":\"Austria vs Jordania: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\\n\\nNuestro pick final: Austria gana.\\n\\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.\",\"alt_text\":\"Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Austria\",\"#Jordania\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"reel_7_30s\",\"caption\":\"Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\\n\\nNuestro pick final: Austria gana.\\n\\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.\",\"script\":\"Reel 7-30s:\\n0-2s: Hook en pantalla: \\\"Austria vs Jordania: nuestro pick final\\\".\\n3-8s: Mostrar slide PGS® 2-0.\\n9-16s: Decir la razón corta: \\\"Austria vs Jordania: el algoritmo PGS® tiene su veredicto.\\\".\\n17-24s: Cierre: \\\"Austria gana. ¿Lo bancas o ves sorpresa?\\\"\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Austria\",\"#Jordania\",\"#PronosticoDelDia\"],\"alt_text\":\"Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"thread\",\"text\":\"Hilo express a 1h de Austria vs Jordania 🧵\\n\\n1/ Pick final: Austria gana\\n2/ PGS®: 2-0\\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Respuesta lista para usar en threads de cuentas grandes del partido:\\n\\nPredictaGol llega con Austria gana para Austria vs Jordania. PGS® 2-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_866d\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_866d\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_866d\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-16 01:41:01",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-16T21:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-17T03:45:00.000Z",
+            "target_match": {
+              "home": "Austria",
+              "away": "Jordania",
+              "kickoff_iso": "2026-06-16T22:00:00-06:00",
+              "venue": "Santa Clara, EE.UU."
+            },
+            "homeTeam": "Austria",
+            "awayTeam": "Jordania",
+            "flagCodeHome": "at",
+            "flagCodeAway": "jo",
+            "slideTitle": "Austria vs Jordania",
+            "kickoff": "2026-06-16T22:00:00-06:00",
+            "venue": "Santa Clara, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "Austria gana",
+            "hook": "Austria vs Jordania: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\n\nNuestro pick final: Austria gana.\n\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.",
+            "alt_text": "Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Austria",
+              "#Jordania",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "reel_7_30s",
+                "caption": "Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\n\nNuestro pick final: Austria gana.\n\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.",
+                "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"Austria vs Jordania: nuestro pick final\".\n3-8s: Mostrar slide PGS® 2-0.\n9-16s: Decir la razón corta: \"Austria vs Jordania: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"Austria gana. ¿Lo bancas o ves sorpresa?\"",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Austria",
+                  "#Jordania",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "thread",
+                "text": "Hilo express a 1h de Austria vs Jordania 🧵\n\n1/ Pick final: Austria gana\n2/ PGS®: 2-0\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con Austria gana para Austria vs Jordania. PGS® 2-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 856,
+        "card_id": "c_866d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Austria vs Jordania: T-60 predicción final\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":8,\"expires_at\":\"2026-06-17T03:45:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-16T21:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-17T03:45:00.000Z\",\"target_match\":{\"home\":\"Austria\",\"away\":\"Jordania\",\"kickoff_iso\":\"2026-06-16T22:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\"},\"homeTeam\":\"Austria\",\"awayTeam\":\"Jordania\",\"flagCodeHome\":\"at\",\"flagCodeAway\":\"jo\",\"slideTitle\":\"Austria vs Jordania\",\"kickoff\":\"2026-06-16T22:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"Austria gana\",\"hook\":\"Austria vs Jordania: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\\n\\nNuestro pick final: Austria gana.\\n\\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.\",\"alt_text\":\"Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Austria\",\"#Jordania\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"reel_7_30s\",\"caption\":\"Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\\n\\nNuestro pick final: Austria gana.\\n\\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.\",\"script\":\"Reel 7-30s:\\n0-2s: Hook en pantalla: \\\"Austria vs Jordania: nuestro pick final\\\".\\n3-8s: Mostrar slide PGS® 2-0.\\n9-16s: Decir la razón corta: \\\"Austria vs Jordania: el algoritmo PGS® tiene su veredicto.\\\".\\n17-24s: Cierre: \\\"Austria gana. ¿Lo bancas o ves sorpresa?\\\"\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Austria\",\"#Jordania\",\"#PronosticoDelDia\"],\"alt_text\":\"Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"thread\",\"text\":\"Hilo express a 1h de Austria vs Jordania 🧵\\n\\n1/ Pick final: Austria gana\\n2/ PGS®: 2-0\\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Respuesta lista para usar en threads de cuentas grandes del partido:\\n\\nPredictaGol llega con Austria gana para Austria vs Jordania. PGS® 2-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_866d\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_866d\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_866d\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-16 01:40:59",
+        "meta": {
+          "title": "Austria vs Jordania: T-60 predicción final",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 8,
+          "expires_at": "2026-06-17T03:45:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-16T21:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-17T03:45:00.000Z",
+            "target_match": {
+              "home": "Austria",
+              "away": "Jordania",
+              "kickoff_iso": "2026-06-16T22:00:00-06:00",
+              "venue": "Santa Clara, EE.UU."
+            },
+            "homeTeam": "Austria",
+            "awayTeam": "Jordania",
+            "flagCodeHome": "at",
+            "flagCodeAway": "jo",
+            "slideTitle": "Austria vs Jordania",
+            "kickoff": "2026-06-16T22:00:00-06:00",
+            "venue": "Santa Clara, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "Austria gana",
+            "hook": "Austria vs Jordania: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\n\nNuestro pick final: Austria gana.\n\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.",
+            "alt_text": "Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Austria",
+              "#Jordania",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "reel_7_30s",
+                "caption": "Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\n\nNuestro pick final: Austria gana.\n\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.",
+                "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"Austria vs Jordania: nuestro pick final\".\n3-8s: Mostrar slide PGS® 2-0.\n9-16s: Decir la razón corta: \"Austria vs Jordania: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"Austria gana. ¿Lo bancas o ves sorpresa?\"",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Austria",
+                  "#Jordania",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "thread",
+                "text": "Hilo express a 1h de Austria vs Jordania 🧵\n\n1/ Pick final: Austria gana\n2/ PGS®: 2-0\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con Austria gana para Austria vs Jordania. PGS® 2-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 730,
+        "card_id": "c_866d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-16T21:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-17T03:45:00.000Z\",\"target_match\":{\"home\":\"Austria\",\"away\":\"Jordania\",\"kickoff_iso\":\"2026-06-16T22:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\"},\"homeTeam\":\"Austria\",\"awayTeam\":\"Jordania\",\"flagCodeHome\":\"at\",\"flagCodeAway\":\"jo\",\"slideTitle\":\"Austria vs Jordania\",\"kickoff\":\"2026-06-16T22:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"Austria gana\",\"hook\":\"Austria vs Jordania: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\\n\\nNuestro pick final: Austria gana.\\n\\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.\",\"alt_text\":\"Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Austria\",\"#Jordania\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"reel_7_30s\",\"caption\":\"Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\\n\\nNuestro pick final: Austria gana.\\n\\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.\",\"script\":\"Reel 7-30s:\\n0-2s: Hook en pantalla: \\\"Austria vs Jordania: nuestro pick final\\\".\\n3-8s: Mostrar slide PGS® 2-0.\\n9-16s: Decir la razón corta: \\\"Austria vs Jordania: el algoritmo PGS® tiene su veredicto.\\\".\\n17-24s: Cierre: \\\"Austria gana. ¿Lo bancas o ves sorpresa?\\\"\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Austria\",\"#Jordania\",\"#PronosticoDelDia\"],\"alt_text\":\"Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"thread\",\"text\":\"Hilo express a 1h de Austria vs Jordania 🧵\\n\\n1/ Pick final: Austria gana\\n2/ PGS®: 2-0\\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Respuesta lista para usar en threads de cuentas grandes del partido:\\n\\nPredictaGol llega con Austria gana para Austria vs Jordania. PGS® 2-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_866d\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_866d\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_866d\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:04:24",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-16T21:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-17T03:45:00.000Z",
+            "target_match": {
+              "home": "Austria",
+              "away": "Jordania",
+              "kickoff_iso": "2026-06-16T22:00:00-06:00",
+              "venue": "Santa Clara, EE.UU."
+            },
+            "homeTeam": "Austria",
+            "awayTeam": "Jordania",
+            "flagCodeHome": "at",
+            "flagCodeAway": "jo",
+            "slideTitle": "Austria vs Jordania",
+            "kickoff": "2026-06-16T22:00:00-06:00",
+            "venue": "Santa Clara, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "Austria gana",
+            "hook": "Austria vs Jordania: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\n\nNuestro pick final: Austria gana.\n\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.",
+            "alt_text": "Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Austria",
+              "#Jordania",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "reel_7_30s",
+                "caption": "Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\n\nNuestro pick final: Austria gana.\n\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.",
+                "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"Austria vs Jordania: nuestro pick final\".\n3-8s: Mostrar slide PGS® 2-0.\n9-16s: Decir la razón corta: \"Austria vs Jordania: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"Austria gana. ¿Lo bancas o ves sorpresa?\"",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Austria",
+                  "#Jordania",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "thread",
+                "text": "Hilo express a 1h de Austria vs Jordania 🧵\n\n1/ Pick final: Austria gana\n2/ PGS®: 2-0\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con Austria gana para Austria vs Jordania. PGS® 2-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 729,
+        "card_id": "c_866d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Austria vs Jordania: T-60 predicción final\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":8,\"expires_at\":\"2026-06-17T03:45:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-16T21:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-17T03:45:00.000Z\",\"target_match\":{\"home\":\"Austria\",\"away\":\"Jordania\",\"kickoff_iso\":\"2026-06-16T22:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\"},\"homeTeam\":\"Austria\",\"awayTeam\":\"Jordania\",\"flagCodeHome\":\"at\",\"flagCodeAway\":\"jo\",\"slideTitle\":\"Austria vs Jordania\",\"kickoff\":\"2026-06-16T22:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"Austria gana\",\"hook\":\"Austria vs Jordania: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\\n\\nNuestro pick final: Austria gana.\\n\\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.\",\"alt_text\":\"Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Austria\",\"#Jordania\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"reel_7_30s\",\"caption\":\"Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\\n\\nNuestro pick final: Austria gana.\\n\\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.\",\"script\":\"Reel 7-30s:\\n0-2s: Hook en pantalla: \\\"Austria vs Jordania: nuestro pick final\\\".\\n3-8s: Mostrar slide PGS® 2-0.\\n9-16s: Decir la razón corta: \\\"Austria vs Jordania: el algoritmo PGS® tiene su veredicto.\\\".\\n17-24s: Cierre: \\\"Austria gana. ¿Lo bancas o ves sorpresa?\\\"\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Austria\",\"#Jordania\",\"#PronosticoDelDia\"],\"alt_text\":\"Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"thread\",\"text\":\"Hilo express a 1h de Austria vs Jordania 🧵\\n\\n1/ Pick final: Austria gana\\n2/ PGS®: 2-0\\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Respuesta lista para usar en threads de cuentas grandes del partido:\\n\\nPredictaGol llega con Austria gana para Austria vs Jordania. PGS® 2-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_866d\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_866d\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_866d\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:04:23",
+        "meta": {
+          "title": "Austria vs Jordania: T-60 predicción final",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 8,
+          "expires_at": "2026-06-17T03:45:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-16T21:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-17T03:45:00.000Z",
+            "target_match": {
+              "home": "Austria",
+              "away": "Jordania",
+              "kickoff_iso": "2026-06-16T22:00:00-06:00",
+              "venue": "Santa Clara, EE.UU."
+            },
+            "homeTeam": "Austria",
+            "awayTeam": "Jordania",
+            "flagCodeHome": "at",
+            "flagCodeAway": "jo",
+            "slideTitle": "Austria vs Jordania",
+            "kickoff": "2026-06-16T22:00:00-06:00",
+            "venue": "Santa Clara, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "Austria gana",
+            "hook": "Austria vs Jordania: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\n\nNuestro pick final: Austria gana.\n\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.",
+            "alt_text": "Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Austria",
+              "#Jordania",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "reel_7_30s",
+                "caption": "Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\n\nNuestro pick final: Austria gana.\n\nPGS® Austria 2-0 Jordania. Guarda este Reel y compara al FT.",
+                "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"Austria vs Jordania: nuestro pick final\".\n3-8s: Mostrar slide PGS® 2-0.\n9-16s: Decir la razón corta: \"Austria vs Jordania: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"Austria gana. ¿Lo bancas o ves sorpresa?\"",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Austria",
+                  "#Jordania",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Storyboard de Reel para Austria vs Jordania: hook, PGS® y pick final.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "thread",
+                "text": "Hilo express a 1h de Austria vs Jordania 🧵\n\n1/ Pick final: Austria gana\n2/ PGS®: 2-0\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con Austria gana para Austria vs Jordania. PGS® 2-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 621,
+        "card_id": "c_866d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-16T21:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-17T03:45:00.000Z\",\"target_match\":{\"home\":\"Austria\",\"away\":\"Jordania\",\"kickoff_iso\":\"2026-06-16T22:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\"},\"homeTeam\":\"Austria\",\"awayTeam\":\"Jordania\",\"flagCodeHome\":\"at\",\"flagCodeAway\":\"jo\",\"slideTitle\":\"Austria vs Jordania\",\"kickoff\":\"2026-06-16T22:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"Austria gana\",\"hook\":\"Austria vs Jordania: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\\n\\nAustria vs Jordania: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Austria 2-0 Jordania · 🎯 Pick inicial: Austria gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Austria vs Jordania: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Austria\",\"#Jordania\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel\",\"caption\":\"Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\\n\\nAustria vs Jordania: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Austria 2-0 Jordania · 🎯 Pick inicial: Austria gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Austria\",\"#Jordania\",\"#PronosticoDelDia\"],\"alt_text\":\"Carrusel de 3 slides para Austria vs Jordania: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"single_post\",\"text\":\"Falta 1 hora para Austria vs Jordania.\\n\\n📊 PGS® Austria 2-0 Jordania\\n🎯 Pick inicial: Austria gana\\n\\n¿Cuál es tu marcador?\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Austria vs Jordania: nuestro pick está listo.\\n\\nAustria vs Jordania: el algoritmo PGS® tiene su veredicto.\\n\\nPGS® 2-0. ¿Lo ves igual o hay sorpresa?\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_866d\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_866d\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_866d\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 14:49:26",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-16T21:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-17T03:45:00.000Z",
+            "target_match": {
+              "home": "Austria",
+              "away": "Jordania",
+              "kickoff_iso": "2026-06-16T22:00:00-06:00",
+              "venue": "Santa Clara, EE.UU."
+            },
+            "homeTeam": "Austria",
+            "awayTeam": "Jordania",
+            "flagCodeHome": "at",
+            "flagCodeAway": "jo",
+            "slideTitle": "Austria vs Jordania",
+            "kickoff": "2026-06-16T22:00:00-06:00",
+            "venue": "Santa Clara, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "Austria gana",
+            "hook": "Austria vs Jordania: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\n\nAustria vs Jordania: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Austria 2-0 Jordania · 🎯 Pick inicial: Austria gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Austria vs Jordania: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Austria",
+              "#Jordania",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel",
+                "caption": "Austria vs Jordania hoy martes, 16 de junio, 10:00 p.m.\n\nAustria vs Jordania: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Austria 2-0 Jordania · 🎯 Pick inicial: Austria gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Austria",
+                  "#Jordania",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Carrusel de 3 slides para Austria vs Jordania: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "single_post",
+                "text": "Falta 1 hora para Austria vs Jordania.\n\n📊 PGS® Austria 2-0 Jordania\n🎯 Pick inicial: Austria gana\n\n¿Cuál es tu marcador?",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Austria vs Jordania: nuestro pick está listo.\n\nAustria vs Jordania: el algoritmo PGS® tiene su veredicto.\n\nPGS® 2-0. ¿Lo ves igual o hay sorpresa?",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_866d\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 620,
+        "card_id": "c_866d",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"expires_at\":\"2026-06-17T03:45:00.000Z\"}",
+        "created_at": "2026-06-15 14:49:24",
+        "meta": {
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "expires_at": "2026-06-17T03:45:00.000Z"
+        }
+      }
+    ]
+  }
+}

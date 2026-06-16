@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:27:49.812Z",
+  "event": {
+    "type": "create",
+    "actor": "strange",
+    "to_stage": "ideas"
+  },
+  "card": {
+    "id": "c_af4e",
+    "title": "Dato curioso: Brasil no necesita correr para acelerar el partido",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "datos_curiosos",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-13T12:00:00-06:00",
+      "hook": "El dato no es la velocidad: es cuándo Brasil decide cambiarla.",
+      "body_brief": "Construir una pieza de lectura táctica simple: pausas, tercer hombre y ráfagas por banda. Conectar con Marruecos como prueba de paciencia y orden.",
+      "template": "datos-curiosos",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Brasil",
+        "#DatosCuriosos"
+      ],
+      "notes": "Usar dato visual sin números inventados; si Shuri requiere cifra, validar con fuente antes de render.",
+      "target_match": {
+        "home": "Brazil",
+        "away": "Morocco",
+        "kickoff_iso": "2026-06-13T16:00:00-06:00",
+        "venue": "New York/New Jersey (East Rutherford)"
+      }
+    },
+    "priority": 7,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:27:49",
+    "updated_at": "2026-06-10 19:27:49",
+    "posts": [],
+    "events": [
+      {
+        "id": 136,
+        "card_id": "c_af4e",
+        "actor": "strange",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "ideas",
+        "note": null,
+        "meta_json": "{\"owner\":\"strange\",\"pillar\":\"datos_curiosos\"}",
+        "created_at": "2026-06-10 19:27:49",
+        "meta": {
+          "owner": "strange",
+          "pillar": "datos_curiosos"
+        }
+      }
+    ]
+  }
+}

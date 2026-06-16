@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:22:20.945Z",
+  "event": {
+    "type": "create",
+    "actor": "widow",
+    "to_stage": "pulse_signals"
+  },
+  "card": {
+    "id": "c_a60d",
+    "title": "El partido en YouTube cambia el consumo: mundial móvil, gratis y de segunda pantalla",
+    "stage": "pulse_signals",
+    "owner": "widow",
+    "pillar": "pulse",
+    "platforms": [
+      "youtube"
+    ],
+    "payload": {
+      "signal_type": "viral_format",
+      "platform_origin": "youtube",
+      "evidence_urls": [
+        "https://vanguardia.com.mx/deportes/podras-ver-el-mexico-vs-sudafrica-en-youtube-tudn-transmitira-gratis-el-partido-inaugural-del-mundial-2026-MB21027931",
+        "https://www.xataka.com.mx/streaming/televisa-encontro-forma-pelear-tv-azteca-mexico-vs-sudafrica-transmitirlo-gratis-youtube",
+        "https://publimetro.sv/deportes/2026/05/30/el-mundial-llega-a-youtube-tudn-transmitira-gratis-el-partido-inaugural-de-mexico/"
+      ],
+      "predictagol_angle": "Empujar formatos “mientras lo ves en el cel”: story poll de marcador y hilo de aciertos minuto a minuto.",
+      "suggested_pillar": "Momento del Partido",
+      "urgency": "today",
+      "confidence": "high"
+    },
+    "priority": 10,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:22:20",
+    "updated_at": "2026-06-10 19:22:20",
+    "posts": [],
+    "events": [
+      {
+        "id": 120,
+        "card_id": "c_a60d",
+        "actor": "widow",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "pulse_signals",
+        "note": null,
+        "meta_json": "{\"owner\":\"widow\",\"pillar\":\"pulse\"}",
+        "created_at": "2026-06-10 19:22:20",
+        "meta": {
+          "owner": "widow",
+          "pillar": "pulse"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "c_273c",
+  "signal_type": "fixture-window",
+  "fixture_key": "NED-JPN-2026-06-14",
+  "target_match": {
+    "home": "NED",
+    "away": "JPN",
+    "kickoff_iso": "2026-06-14T19:00:00.000Z"
+  },
+  "pgs": {
+    "home": 2,
+    "away": 1
+  },
+  "hook_candidates": [
+    "Países Bajos vs Japón: el algoritmo PGS ya tiene veredicto.",
+    "Antes del silbatazo: cómo se siente Países Bajos contra Japón.",
+    "Países Bajos-Japón: tres datos rápidos para tu pick."
+  ],
+  "notes": "Pulse incremental generado por Widow refresh — ventana 48h. TTL hasta 2026-06-15T07:00:00.000Z.",
+  "expires_at": "2026-06-15T07:00:00.000Z"
+}

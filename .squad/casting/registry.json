@@ -1,3 +1,39 @@
 {
-  "agents": {}
+  "agents": {
+    "scout": {
+      "persistent_name": "Black Widow",
+      "universe": "Marvel Cinematic Universe",
+      "created_at": "2026-06-10T00:00:00Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "strategist": {
+      "persistent_name": "Doctor Strange",
+      "universe": "Marvel Cinematic Universe",
+      "created_at": "2026-06-10T00:00:00Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "creator": {
+      "persistent_name": "Shuri",
+      "universe": "Marvel Cinematic Universe",
+      "created_at": "2026-06-10T00:00:00Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "guardian": {
+      "persistent_name": "Captain America",
+      "universe": "Marvel Cinematic Universe",
+      "created_at": "2026-06-10T00:00:00Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "operator": {
+      "persistent_name": "Iron Man",
+      "universe": "Marvel Cinematic Universe",
+      "created_at": "2026-06-10T00:00:00Z",
+      "legacy_named": false,
+      "status": "active"
+    }
+  }
 }

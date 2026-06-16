@@ -1,0 +1,836 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:03:39.265Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "template": "pronostico-carousel-3up",
+        "format_variant": "carousel_3up",
+        "scheduled_for": "2026-06-14T13:00:00-06:00",
+        "window_key": "t_minus_48h",
+        "window_label": "T-48h · breakdown",
+        "expires_at": "2026-06-15T19:00:00.000Z",
+        "target_match": {
+          "home": "Francia",
+          "away": "Senegal",
+          "kickoff_iso": "2026-06-16T13:00:00-06:00",
+          "venue": "East Rutherford, EE.UU."
+        },
+        "homeTeam": "Francia",
+        "awayTeam": "Senegal",
+        "flagCodeHome": "fr",
+        "flagCodeAway": "sn",
+        "slideTitle": "Francia vs Senegal",
+        "kickoff": "2026-06-16T13:00:00-06:00",
+        "venue": "East Rutherford, EE.UU.",
+        "pgsHome": "2",
+        "pgsAway": "1",
+        "pickShort": "Francia gana",
+        "hook": "Francia vs Senegal: 3 señales para empezar a leer el partido.",
+        "cta": "Guárdalo para tu quiniela",
+        "caption": "Francia vs Senegal: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Francia gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+        "alt_text": "Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#Francia",
+          "#Senegal",
+          "#ElDato"
+        ],
+        "platform_copy": {
+          "instagram": {
+            "format": "breakdown_carousel",
+            "caption": "Francia vs Senegal: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Francia gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Francia",
+              "#Senegal",
+              "#ElDato"
+            ],
+            "alt_text": "Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.",
+            "asset_keys": [
+              "slide_1",
+              "slide_2",
+              "slide_3"
+            ]
+          },
+          "x": {
+            "format": "breakdown_thread",
+            "text": "Breakdown temprano: Francia vs Senegal 🧵\n\n1/ PGS® inicial: 2-1\n2/ Pick temprano: Francia gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+            "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+            "hashtags": [
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "short_list",
+            "text": "3 señales a 48h de Francia vs Senegal:\n\n1. PGS® inicial 2-1\n2. Pick temprano: Francia gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+            "hashtags": [
+              "#PredictaGol"
+            ]
+          }
+        },
+        "assets": {
+          "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_1.png",
+          "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_2.png",
+          "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_3.png"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_5c1f",
+    "title": "Francia vs Senegal: T-48 breakdown",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "tu_equipo_tu_data",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "template": "pronostico-carousel-3up",
+      "format_variant": "carousel_3up",
+      "scheduled_for": "2026-06-14T13:00:00-06:00",
+      "window_key": "t_minus_48h",
+      "window_label": "T-48h · breakdown",
+      "expires_at": "2026-06-15T19:00:00.000Z",
+      "target_match": {
+        "home": "Francia",
+        "away": "Senegal",
+        "kickoff_iso": "2026-06-16T13:00:00-06:00",
+        "venue": "East Rutherford, EE.UU."
+      },
+      "homeTeam": "Francia",
+      "awayTeam": "Senegal",
+      "flagCodeHome": "fr",
+      "flagCodeAway": "sn",
+      "slideTitle": "Francia vs Senegal",
+      "kickoff": "2026-06-16T13:00:00-06:00",
+      "venue": "East Rutherford, EE.UU.",
+      "pgsHome": "2",
+      "pgsAway": "1",
+      "pickShort": "Francia gana",
+      "hook": "Francia vs Senegal: 3 señales para empezar a leer el partido.",
+      "cta": "Guárdalo para tu quiniela",
+      "caption": "Francia vs Senegal: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Francia gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+      "alt_text": "Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Francia",
+        "#Senegal",
+        "#ElDato"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "breakdown_carousel",
+          "caption": "Francia vs Senegal: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Francia gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#Francia",
+            "#Senegal",
+            "#ElDato"
+          ],
+          "alt_text": "Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.",
+          "asset_keys": [
+            "slide_1",
+            "slide_2",
+            "slide_3"
+          ]
+        },
+        "x": {
+          "format": "breakdown_thread",
+          "text": "Breakdown temprano: Francia vs Senegal 🧵\n\n1/ PGS® inicial: 2-1\n2/ Pick temprano: Francia gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+          "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "short_list",
+          "text": "3 señales a 48h de Francia vs Senegal:\n\n1. PGS® inicial 2-1\n2. Pick temprano: Francia gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "assets": {
+        "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_1.png",
+        "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_2.png",
+        "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_3.png"
+      }
+    },
+    "priority": 9,
+    "stalled_at": null,
+    "expires_at": "2026-06-15T19:00:00.000Z",
+    "created_at": "2026-06-15 02:52:51",
+    "updated_at": "2026-06-15 15:03:39",
+    "posts": [
+      {
+        "id": 41,
+        "card_id": "c_5c1f",
+        "platform": "threads",
+        "status": "posted_manual",
+        "permalink": null,
+        "error": null,
+        "posted_at": "2026-06-15T03:33:48.629Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-15 03:33:48",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      },
+      {
+        "id": 40,
+        "card_id": "c_5c1f",
+        "platform": "x",
+        "status": "posted_manual",
+        "permalink": null,
+        "error": null,
+        "posted_at": "2026-06-15T03:33:48.613Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-15 03:33:48",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      },
+      {
+        "id": 39,
+        "card_id": "c_5c1f",
+        "platform": "instagram",
+        "status": "posted_manual",
+        "permalink": null,
+        "error": null,
+        "posted_at": "2026-06-15T03:33:48.588Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-15 03:33:48",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      }
+    ],
+    "events": [
+      {
+        "id": 685,
+        "card_id": "c_5c1f",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T13:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-15T19:00:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"slideTitle\":\"Francia vs Senegal\",\"kickoff\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Francia gana\",\"hook\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Francia gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Francia gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Francia vs Senegal 🧵\\n\\n1/ PGS® inicial: 2-1\\n2/ Pick temprano: Francia gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"short_list\",\"text\":\"3 señales a 48h de Francia vs Senegal:\\n\\n1. PGS® inicial 2-1\\n2. Pick temprano: Francia gana\\n3. La primera media hora puede cambiar toda la quiniela.\\n\\n¿Cuál señal estás viendo tú?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:03:39",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T13:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-15T19:00:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "slideTitle": "Francia vs Senegal",
+            "kickoff": "2026-06-16T13:00:00-06:00",
+            "venue": "East Rutherford, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Francia gana",
+            "hook": "Francia vs Senegal: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Francia vs Senegal: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Francia gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Francia",
+              "#Senegal",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Francia vs Senegal: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Francia gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Francia",
+                  "#Senegal",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Francia vs Senegal 🧵\n\n1/ PGS® inicial: 2-1\n2/ Pick temprano: Francia gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "short_list",
+                "text": "3 señales a 48h de Francia vs Senegal:\n\n1. PGS® inicial 2-1\n2. Pick temprano: Francia gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 684,
+        "card_id": "c_5c1f",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Francia vs Senegal: T-48 breakdown\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"tu_equipo_tu_data\",\"priority\":9,\"expires_at\":\"2026-06-15T19:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T13:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-15T19:00:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"slideTitle\":\"Francia vs Senegal\",\"kickoff\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Francia gana\",\"hook\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Francia gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Francia gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Francia vs Senegal 🧵\\n\\n1/ PGS® inicial: 2-1\\n2/ Pick temprano: Francia gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"short_list\",\"text\":\"3 señales a 48h de Francia vs Senegal:\\n\\n1. PGS® inicial 2-1\\n2. Pick temprano: Francia gana\\n3. La primera media hora puede cambiar toda la quiniela.\\n\\n¿Cuál señal estás viendo tú?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:03:38",
+        "meta": {
+          "title": "Francia vs Senegal: T-48 breakdown",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "tu_equipo_tu_data",
+          "priority": 9,
+          "expires_at": "2026-06-15T19:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T13:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-15T19:00:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "slideTitle": "Francia vs Senegal",
+            "kickoff": "2026-06-16T13:00:00-06:00",
+            "venue": "East Rutherford, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Francia gana",
+            "hook": "Francia vs Senegal: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Francia vs Senegal: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Francia gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Francia",
+              "#Senegal",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Francia vs Senegal: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Francia gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Francia",
+                  "#Senegal",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Francia vs Senegal 🧵\n\n1/ PGS® inicial: 2-1\n2/ Pick temprano: Francia gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "short_list",
+                "text": "3 señales a 48h de Francia vs Senegal:\n\n1. PGS® inicial 2-1\n2. Pick temprano: Francia gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 576,
+        "card_id": "c_5c1f",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T13:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-15T19:00:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"slideTitle\":\"Francia vs Senegal\",\"kickoff\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Francia gana\",\"hook\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Francia gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Francia gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Francia vs Senegal 🧵\\n\\n1/ PGS® inicial: 2-1\\n2/ Pick temprano: Francia gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"discussion_breakdown\",\"text\":\"Francia vs Senegal, lectura a 48h.\\n\\nPGS® inicial 2-1. Pick temprano: Francia gana.\\n\\n¿Qué señal estás viendo tú antes de que cambie la conversación?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 14:48:40",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T13:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-15T19:00:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "slideTitle": "Francia vs Senegal",
+            "kickoff": "2026-06-16T13:00:00-06:00",
+            "venue": "East Rutherford, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Francia gana",
+            "hook": "Francia vs Senegal: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Francia vs Senegal: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Francia gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Francia",
+              "#Senegal",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Francia vs Senegal: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Francia gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Francia",
+                  "#Senegal",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Francia vs Senegal 🧵\n\n1/ PGS® inicial: 2-1\n2/ Pick temprano: Francia gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "discussion_breakdown",
+                "text": "Francia vs Senegal, lectura a 48h.\n\nPGS® inicial 2-1. Pick temprano: Francia gana.\n\n¿Qué señal estás viendo tú antes de que cambie la conversación?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 575,
+        "card_id": "c_5c1f",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Francia vs Senegal: T-48 breakdown\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"tu_equipo_tu_data\",\"priority\":9,\"expires_at\":\"2026-06-15T19:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T13:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-15T19:00:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"slideTitle\":\"Francia vs Senegal\",\"kickoff\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Francia gana\",\"hook\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Francia gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Francia gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Francia vs Senegal 🧵\\n\\n1/ PGS® inicial: 2-1\\n2/ Pick temprano: Francia gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"discussion_breakdown\",\"text\":\"Francia vs Senegal, lectura a 48h.\\n\\nPGS® inicial 2-1. Pick temprano: Francia gana.\\n\\n¿Qué señal estás viendo tú antes de que cambie la conversación?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 14:48:39",
+        "meta": {
+          "title": "Francia vs Senegal: T-48 breakdown",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "tu_equipo_tu_data",
+          "priority": 9,
+          "expires_at": "2026-06-15T19:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T13:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-15T19:00:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "slideTitle": "Francia vs Senegal",
+            "kickoff": "2026-06-16T13:00:00-06:00",
+            "venue": "East Rutherford, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Francia gana",
+            "hook": "Francia vs Senegal: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Francia vs Senegal: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Francia gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Francia",
+              "#Senegal",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Francia vs Senegal: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Francia gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Francia",
+                  "#Senegal",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Francia vs Senegal 🧵\n\n1/ PGS® inicial: 2-1\n2/ Pick temprano: Francia gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "discussion_breakdown",
+                "text": "Francia vs Senegal, lectura a 48h.\n\nPGS® inicial 2-1. Pick temprano: Francia gana.\n\n¿Qué señal estás viendo tú antes de que cambie la conversación?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 518,
+        "card_id": "c_5c1f",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "posted",
+        "note": "Manual threads post confirmed",
+        "meta_json": "{}",
+        "created_at": "2026-06-15 03:33:48",
+        "meta": {}
+      },
+      {
+        "id": 517,
+        "card_id": "c_5c1f",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual threads post confirmed",
+        "meta_json": "{\"platform\":\"threads\",\"permalink\":null}",
+        "created_at": "2026-06-15 03:33:48",
+        "meta": {
+          "platform": "threads",
+          "permalink": null
+        }
+      },
+      {
+        "id": 516,
+        "card_id": "c_5c1f",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual x post confirmed",
+        "meta_json": "{\"platform\":\"x\",\"permalink\":null}",
+        "created_at": "2026-06-15 03:33:48",
+        "meta": {
+          "platform": "x",
+          "permalink": null
+        }
+      },
+      {
+        "id": 515,
+        "card_id": "c_5c1f",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual instagram post confirmed",
+        "meta_json": "{\"platform\":\"instagram\",\"permalink\":null}",
+        "created_at": "2026-06-15 03:33:48",
+        "meta": {
+          "platform": "instagram",
+          "permalink": null
+        }
+      },
+      {
+        "id": 381,
+        "card_id": "c_5c1f",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T13:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-15T19:00:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"slideTitle\":\"Francia vs Senegal\",\"kickoff\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Francia gana\",\"hook\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Francia gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Francia gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Francia vs Senegal 🧵\\n\\n1/ PGS® inicial: 2-1\\n2/ Pick temprano: Francia gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"discussion_breakdown\",\"text\":\"Francia vs Senegal, lectura a 48h.\\n\\nPGS® inicial 2-1. Pick temprano: Francia gana.\\n\\n¿Qué señal estás viendo tú antes de que cambie la conversación?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 02:53:29",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T13:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-15T19:00:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "slideTitle": "Francia vs Senegal",
+            "kickoff": "2026-06-16T13:00:00-06:00",
+            "venue": "East Rutherford, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Francia gana",
+            "hook": "Francia vs Senegal: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Francia vs Senegal: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Francia gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Francia",
+              "#Senegal",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Francia vs Senegal: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Francia gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Francia",
+                  "#Senegal",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Francia vs Senegal 🧵\n\n1/ PGS® inicial: 2-1\n2/ Pick temprano: Francia gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "discussion_breakdown",
+                "text": "Francia vs Senegal, lectura a 48h.\n\nPGS® inicial 2-1. Pick temprano: Francia gana.\n\n¿Qué señal estás viendo tú antes de que cambie la conversación?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 380,
+        "card_id": "c_5c1f",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Francia vs Senegal: T-48 breakdown\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"tu_equipo_tu_data\",\"priority\":9,\"expires_at\":\"2026-06-15T19:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T13:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-15T19:00:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"slideTitle\":\"Francia vs Senegal\",\"kickoff\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Francia gana\",\"hook\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Francia gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Francia vs Senegal: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Francia gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Francia vs Senegal 🧵\\n\\n1/ PGS® inicial: 2-1\\n2/ Pick temprano: Francia gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"discussion_breakdown\",\"text\":\"Francia vs Senegal, lectura a 48h.\\n\\nPGS® inicial 2-1. Pick temprano: Francia gana.\\n\\n¿Qué señal estás viendo tú antes de que cambie la conversación?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_5c1f\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 02:53:27",
+        "meta": {
+          "title": "Francia vs Senegal: T-48 breakdown",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "tu_equipo_tu_data",
+          "priority": 9,
+          "expires_at": "2026-06-15T19:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T13:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-15T19:00:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "slideTitle": "Francia vs Senegal",
+            "kickoff": "2026-06-16T13:00:00-06:00",
+            "venue": "East Rutherford, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Francia gana",
+            "hook": "Francia vs Senegal: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Francia vs Senegal: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Francia gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Francia",
+              "#Senegal",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Francia vs Senegal: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Francia gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Francia",
+                  "#Senegal",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Francia vs Senegal: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Francia vs Senegal 🧵\n\n1/ PGS® inicial: 2-1\n2/ Pick temprano: Francia gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "discussion_breakdown",
+                "text": "Francia vs Senegal, lectura a 48h.\n\nPGS® inicial 2-1. Pick temprano: Francia gana.\n\n¿Qué señal estás viendo tú antes de que cambie la conversación?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_5c1f\\slide_3.png"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

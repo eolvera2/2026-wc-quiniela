@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:27:49.851Z",
+  "event": {
+    "type": "create",
+    "actor": "strange",
+    "to_stage": "ideas"
+  },
+  "card": {
+    "id": "c_47dd",
+    "title": "Pronóstico del día: España vs Cabo Verde abre con presión de gigante",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-15T09:00:00-06:00",
+      "hook": "España tiene pelota; Cabo Verde tiene un debut para jugar sin miedo.",
+      "body_brief": "Preview del Grupo H: control español, paciencia ante bloque bajo y atención a la primera transición. Predicción suave: si España anota temprano, el partido cambia de tono.",
+      "template": "pronostico-del-dia",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Espana",
+        "#CaboVerde"
+      ],
+      "notes": "Usar nombre normalizado Cabo Verde en copy final.",
+      "target_match": {
+        "home": "Spain",
+        "away": "Cape Verde",
+        "kickoff_iso": "2026-06-15T10:00:00-06:00",
+        "venue": "Atlanta"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:27:49",
+    "updated_at": "2026-06-10 19:27:49",
+    "posts": [],
+    "events": [
+      {
+        "id": 142,
+        "card_id": "c_47dd",
+        "actor": "strange",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "ideas",
+        "note": null,
+        "meta_json": "{\"owner\":\"strange\",\"pillar\":\"pronostico_del_dia\"}",
+        "created_at": "2026-06-10 19:27:49",
+        "meta": {
+          "owner": "strange",
+          "pillar": "pronostico_del_dia"
+        }
+      }
+    ]
+  }
+}

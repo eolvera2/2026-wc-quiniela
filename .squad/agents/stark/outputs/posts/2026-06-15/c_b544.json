@@ -1,0 +1,466 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:04:14.404Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "template": "pronostico-carousel-3up",
+        "format_variant": "carousel_3up",
+        "scheduled_for": "2026-06-14T22:00:00-06:00",
+        "window_key": "t_minus_48h",
+        "window_label": "T-48h · breakdown",
+        "expires_at": "2026-06-16T04:00:00.000Z",
+        "target_match": {
+          "home": "Austria",
+          "away": "Jordania",
+          "kickoff_iso": "2026-06-16T22:00:00-06:00",
+          "venue": "Santa Clara, EE.UU."
+        },
+        "homeTeam": "Austria",
+        "awayTeam": "Jordania",
+        "flagCodeHome": "at",
+        "flagCodeAway": "jo",
+        "slideTitle": "Austria vs Jordania",
+        "kickoff": "2026-06-16T22:00:00-06:00",
+        "venue": "Santa Clara, EE.UU.",
+        "pgsHome": "2",
+        "pgsAway": "0",
+        "pickShort": "Austria gana",
+        "hook": "Austria vs Jordania: 3 señales para empezar a leer el partido.",
+        "cta": "Guárdalo para tu quiniela",
+        "caption": "Austria vs Jordania: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: Austria gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+        "alt_text": "Breakdown de 3 slides para Austria vs Jordania: contexto, PGS® y pick temprano.",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#Austria",
+          "#Jordania",
+          "#ElDato"
+        ],
+        "platform_copy": {
+          "instagram": {
+            "format": "breakdown_carousel",
+            "caption": "Austria vs Jordania: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: Austria gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Austria",
+              "#Jordania",
+              "#ElDato"
+            ],
+            "alt_text": "Breakdown de 3 slides para Austria vs Jordania: contexto, PGS® y pick temprano.",
+            "asset_keys": [
+              "slide_1",
+              "slide_2",
+              "slide_3"
+            ]
+          },
+          "x": {
+            "format": "breakdown_thread",
+            "text": "Breakdown temprano: Austria vs Jordania 🧵\n\n1/ PGS® inicial: 2-0\n2/ Pick temprano: Austria gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+            "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+            "hashtags": [
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "short_list",
+            "text": "3 señales a 48h de Austria vs Jordania:\n\n1. PGS® inicial 2-0\n2. Pick temprano: Austria gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+            "hashtags": [
+              "#PredictaGol"
+            ]
+          }
+        },
+        "assets": {
+          "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_b544\\slide_1.png",
+          "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_b544\\slide_2.png",
+          "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_b544\\slide_3.png"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_b544",
+    "title": "Austria vs Jordania: T-48 breakdown",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "tu_equipo_tu_data",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "template": "pronostico-carousel-3up",
+      "format_variant": "carousel_3up",
+      "scheduled_for": "2026-06-14T22:00:00-06:00",
+      "window_key": "t_minus_48h",
+      "window_label": "T-48h · breakdown",
+      "expires_at": "2026-06-16T04:00:00.000Z",
+      "target_match": {
+        "home": "Austria",
+        "away": "Jordania",
+        "kickoff_iso": "2026-06-16T22:00:00-06:00",
+        "venue": "Santa Clara, EE.UU."
+      },
+      "homeTeam": "Austria",
+      "awayTeam": "Jordania",
+      "flagCodeHome": "at",
+      "flagCodeAway": "jo",
+      "slideTitle": "Austria vs Jordania",
+      "kickoff": "2026-06-16T22:00:00-06:00",
+      "venue": "Santa Clara, EE.UU.",
+      "pgsHome": "2",
+      "pgsAway": "0",
+      "pickShort": "Austria gana",
+      "hook": "Austria vs Jordania: 3 señales para empezar a leer el partido.",
+      "cta": "Guárdalo para tu quiniela",
+      "caption": "Austria vs Jordania: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: Austria gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+      "alt_text": "Breakdown de 3 slides para Austria vs Jordania: contexto, PGS® y pick temprano.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Austria",
+        "#Jordania",
+        "#ElDato"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "breakdown_carousel",
+          "caption": "Austria vs Jordania: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: Austria gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#Austria",
+            "#Jordania",
+            "#ElDato"
+          ],
+          "alt_text": "Breakdown de 3 slides para Austria vs Jordania: contexto, PGS® y pick temprano.",
+          "asset_keys": [
+            "slide_1",
+            "slide_2",
+            "slide_3"
+          ]
+        },
+        "x": {
+          "format": "breakdown_thread",
+          "text": "Breakdown temprano: Austria vs Jordania 🧵\n\n1/ PGS® inicial: 2-0\n2/ Pick temprano: Austria gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+          "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "short_list",
+          "text": "3 señales a 48h de Austria vs Jordania:\n\n1. PGS® inicial 2-0\n2. Pick temprano: Austria gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "assets": {
+        "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_b544\\slide_1.png",
+        "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_b544\\slide_2.png",
+        "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_b544\\slide_3.png"
+      }
+    },
+    "priority": 9,
+    "stalled_at": null,
+    "expires_at": "2026-06-16T04:00:00.000Z",
+    "created_at": "2026-06-15 14:49:14",
+    "updated_at": "2026-06-15 15:04:14",
+    "posts": [],
+    "events": [
+      {
+        "id": 724,
+        "card_id": "c_b544",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T22:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-16T04:00:00.000Z\",\"target_match\":{\"home\":\"Austria\",\"away\":\"Jordania\",\"kickoff_iso\":\"2026-06-16T22:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\"},\"homeTeam\":\"Austria\",\"awayTeam\":\"Jordania\",\"flagCodeHome\":\"at\",\"flagCodeAway\":\"jo\",\"slideTitle\":\"Austria vs Jordania\",\"kickoff\":\"2026-06-16T22:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"Austria gana\",\"hook\":\"Austria vs Jordania: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Austria vs Jordania: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: Austria gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Austria vs Jordania: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Austria\",\"#Jordania\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Austria vs Jordania: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: Austria gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Austria\",\"#Jordania\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Austria vs Jordania: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Austria vs Jordania 🧵\\n\\n1/ PGS® inicial: 2-0\\n2/ Pick temprano: Austria gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"short_list\",\"text\":\"3 señales a 48h de Austria vs Jordania:\\n\\n1. PGS® inicial 2-0\\n2. Pick temprano: Austria gana\\n3. La primera media hora puede cambiar toda la quiniela.\\n\\n¿Cuál señal estás viendo tú?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_b544\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_b544\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_b544\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:04:14",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T22:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-16T04:00:00.000Z",
+            "target_match": {
+              "home": "Austria",
+              "away": "Jordania",
+              "kickoff_iso": "2026-06-16T22:00:00-06:00",
+              "venue": "Santa Clara, EE.UU."
+            },
+            "homeTeam": "Austria",
+            "awayTeam": "Jordania",
+            "flagCodeHome": "at",
+            "flagCodeAway": "jo",
+            "slideTitle": "Austria vs Jordania",
+            "kickoff": "2026-06-16T22:00:00-06:00",
+            "venue": "Santa Clara, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "Austria gana",
+            "hook": "Austria vs Jordania: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Austria vs Jordania: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: Austria gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Austria vs Jordania: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Austria",
+              "#Jordania",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Austria vs Jordania: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: Austria gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Austria",
+                  "#Jordania",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Austria vs Jordania: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Austria vs Jordania 🧵\n\n1/ PGS® inicial: 2-0\n2/ Pick temprano: Austria gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "short_list",
+                "text": "3 señales a 48h de Austria vs Jordania:\n\n1. PGS® inicial 2-0\n2. Pick temprano: Austria gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_b544\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_b544\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_b544\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 723,
+        "card_id": "c_b544",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Austria vs Jordania: T-48 breakdown\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"tu_equipo_tu_data\",\"priority\":9,\"expires_at\":\"2026-06-16T04:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T22:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-16T04:00:00.000Z\",\"target_match\":{\"home\":\"Austria\",\"away\":\"Jordania\",\"kickoff_iso\":\"2026-06-16T22:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\"},\"homeTeam\":\"Austria\",\"awayTeam\":\"Jordania\",\"flagCodeHome\":\"at\",\"flagCodeAway\":\"jo\",\"slideTitle\":\"Austria vs Jordania\",\"kickoff\":\"2026-06-16T22:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"Austria gana\",\"hook\":\"Austria vs Jordania: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Austria vs Jordania: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: Austria gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Austria vs Jordania: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Austria\",\"#Jordania\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Austria vs Jordania: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: Austria gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Austria\",\"#Jordania\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Austria vs Jordania: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Austria vs Jordania 🧵\\n\\n1/ PGS® inicial: 2-0\\n2/ Pick temprano: Austria gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"short_list\",\"text\":\"3 señales a 48h de Austria vs Jordania:\\n\\n1. PGS® inicial 2-0\\n2. Pick temprano: Austria gana\\n3. La primera media hora puede cambiar toda la quiniela.\\n\\n¿Cuál señal estás viendo tú?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_b544\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_b544\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_b544\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:04:13",
+        "meta": {
+          "title": "Austria vs Jordania: T-48 breakdown",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "tu_equipo_tu_data",
+          "priority": 9,
+          "expires_at": "2026-06-16T04:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T22:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-16T04:00:00.000Z",
+            "target_match": {
+              "home": "Austria",
+              "away": "Jordania",
+              "kickoff_iso": "2026-06-16T22:00:00-06:00",
+              "venue": "Santa Clara, EE.UU."
+            },
+            "homeTeam": "Austria",
+            "awayTeam": "Jordania",
+            "flagCodeHome": "at",
+            "flagCodeAway": "jo",
+            "slideTitle": "Austria vs Jordania",
+            "kickoff": "2026-06-16T22:00:00-06:00",
+            "venue": "Santa Clara, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "Austria gana",
+            "hook": "Austria vs Jordania: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Austria vs Jordania: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: Austria gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Austria vs Jordania: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Austria",
+              "#Jordania",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Austria vs Jordania: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: Austria gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Austria",
+                  "#Jordania",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Austria vs Jordania: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Austria vs Jordania 🧵\n\n1/ PGS® inicial: 2-0\n2/ Pick temprano: Austria gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "short_list",
+                "text": "3 señales a 48h de Austria vs Jordania:\n\n1. PGS® inicial 2-0\n2. Pick temprano: Austria gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_b544\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_b544\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_b544\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 615,
+        "card_id": "c_b544",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T22:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-16T04:00:00.000Z\",\"target_match\":{\"home\":\"Austria\",\"away\":\"Jordania\",\"kickoff_iso\":\"2026-06-16T22:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\"},\"homeTeam\":\"Austria\",\"awayTeam\":\"Jordania\",\"flagCodeHome\":\"at\",\"flagCodeAway\":\"jo\",\"slideTitle\":\"Austria vs Jordania\",\"kickoff\":\"2026-06-16T22:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"Austria gana\",\"hook\":\"Austria vs Jordania: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Austria vs Jordania: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: Austria gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Austria vs Jordania: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Austria\",\"#Jordania\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Austria vs Jordania: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: Austria gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Austria\",\"#Jordania\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Austria vs Jordania: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Austria vs Jordania 🧵\\n\\n1/ PGS® inicial: 2-0\\n2/ Pick temprano: Austria gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"discussion_breakdown\",\"text\":\"Austria vs Jordania, lectura a 48h.\\n\\nPGS® inicial 2-0. Pick temprano: Austria gana.\\n\\n¿Qué señal estás viendo tú antes de que cambie la conversación?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_b544\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_b544\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_b544\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 14:49:16",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T22:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-16T04:00:00.000Z",
+            "target_match": {
+              "home": "Austria",
+              "away": "Jordania",
+              "kickoff_iso": "2026-06-16T22:00:00-06:00",
+              "venue": "Santa Clara, EE.UU."
+            },
+            "homeTeam": "Austria",
+            "awayTeam": "Jordania",
+            "flagCodeHome": "at",
+            "flagCodeAway": "jo",
+            "slideTitle": "Austria vs Jordania",
+            "kickoff": "2026-06-16T22:00:00-06:00",
+            "venue": "Santa Clara, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "Austria gana",
+            "hook": "Austria vs Jordania: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Austria vs Jordania: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: Austria gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Austria vs Jordania: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Austria",
+              "#Jordania",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Austria vs Jordania: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: Austria gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Austria",
+                  "#Jordania",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Austria vs Jordania: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Austria vs Jordania 🧵\n\n1/ PGS® inicial: 2-0\n2/ Pick temprano: Austria gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "discussion_breakdown",
+                "text": "Austria vs Jordania, lectura a 48h.\n\nPGS® inicial 2-0. Pick temprano: Austria gana.\n\n¿Qué señal estás viendo tú antes de que cambie la conversación?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_b544\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_b544\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_b544\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 614,
+        "card_id": "c_b544",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"tu_equipo_tu_data\",\"expires_at\":\"2026-06-16T04:00:00.000Z\"}",
+        "created_at": "2026-06-15 14:49:14",
+        "meta": {
+          "owner": "stark",
+          "pillar": "tu_equipo_tu_data",
+          "expires_at": "2026-06-16T04:00:00.000Z"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,549 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:03:11.898Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "scheduled_for": "2026-06-15T09:00:00-06:00",
+        "window_key": "t_minus_4h",
+        "window_label": "T-4h · poll comunidad",
+        "expires_at": "2026-06-15T17:30:00.000Z",
+        "target_match": {
+          "home": "Bélgica",
+          "away": "Egipto",
+          "kickoff_iso": "2026-06-15T13:00:00-06:00"
+        },
+        "caption": "Poll de comunidad: Bélgica vs Egipto\n\nSticker sugerido: ¿Quién gana?\nOpciones: Bélgica / Empate / Egipto\n\nNuestro pick temprano: Bélgica gana",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#QuinielaPredictaGol"
+        ],
+        "platform_copy": {
+          "instagram": {
+            "format": "story_poll",
+            "caption": "Poll de comunidad: Bélgica vs Egipto\n\nSticker sugerido: ¿Quién gana?\nOpciones: Bélgica / Empate / Egipto\n\nNuestro pick temprano: Bélgica gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "alt_text": "GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "asset_keys": [
+              "animated_gif",
+              "1080x1080"
+            ]
+          },
+          "x": {
+            "format": "native_poll",
+            "text": "Poll a 4h: Bélgica vs Egipto\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Bélgica / Empate / Egipto / No sé",
+            "hashtags": [
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "debate_prompt",
+            "text": "Debate a 4h: Bélgica vs Egipto.\n\nPredictaGol trae Bélgica gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+            "hashtags": [
+              "#PredictaGol"
+            ]
+          }
+        },
+        "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+        "template": "poll-question-gif",
+        "format_variant": "poll_question_gif",
+        "homeTeam": "Bélgica",
+        "awayTeam": "Egipto",
+        "flagCodeHome": "be",
+        "flagCodeAway": "eg",
+        "question": "¿Quién gana?",
+        "challengeQuestion": "¿Quién gana?",
+        "alt_text": "GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+        "assets": {
+          "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b4bd\\1080x1080.png",
+          "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b4bd\\animated_gif.gif"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_b4bd",
+    "title": "Bélgica vs Egipto: T-4 poll comunidad",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "quiniela_challenge",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-15T09:00:00-06:00",
+      "window_key": "t_minus_4h",
+      "window_label": "T-4h · poll comunidad",
+      "expires_at": "2026-06-15T17:30:00.000Z",
+      "target_match": {
+        "home": "Bélgica",
+        "away": "Egipto",
+        "kickoff_iso": "2026-06-15T13:00:00-06:00"
+      },
+      "caption": "Poll de comunidad: Bélgica vs Egipto\n\nSticker sugerido: ¿Quién gana?\nOpciones: Bélgica / Empate / Egipto\n\nNuestro pick temprano: Bélgica gana",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#QuinielaPredictaGol"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "story_poll",
+          "caption": "Poll de comunidad: Bélgica vs Egipto\n\nSticker sugerido: ¿Quién gana?\nOpciones: Bélgica / Empate / Egipto\n\nNuestro pick temprano: Bélgica gana",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#QuinielaPredictaGol"
+          ],
+          "alt_text": "GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+          "asset_keys": [
+            "animated_gif",
+            "1080x1080"
+          ]
+        },
+        "x": {
+          "format": "native_poll",
+          "text": "Poll a 4h: Bélgica vs Egipto\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Bélgica / Empate / Egipto / No sé",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "debate_prompt",
+          "text": "Debate a 4h: Bélgica vs Egipto.\n\nPredictaGol trae Bélgica gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+      "template": "poll-question-gif",
+      "format_variant": "poll_question_gif",
+      "homeTeam": "Bélgica",
+      "awayTeam": "Egipto",
+      "flagCodeHome": "be",
+      "flagCodeAway": "eg",
+      "question": "¿Quién gana?",
+      "challengeQuestion": "¿Quién gana?",
+      "alt_text": "GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b4bd\\1080x1080.png",
+        "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b4bd\\animated_gif.gif"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": "2026-06-15T17:30:00.000Z",
+    "created_at": "2026-06-15 03:09:49",
+    "updated_at": "2026-06-15 15:03:11",
+    "posts": [],
+    "events": [
+      {
+        "id": 650,
+        "card_id": "c_b4bd",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"scheduled_for\":\"2026-06-15T09:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-15T17:30:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\"},\"caption\":\"Poll de comunidad: Bélgica vs Egipto\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Bélgica / Empate / Egipto\\n\\nNuestro pick temprano: Bélgica gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"story_poll\",\"caption\":\"Poll de comunidad: Bélgica vs Egipto\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Bélgica / Empate / Egipto\\n\\nNuestro pick temprano: Bélgica gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Bélgica vs Egipto\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Bélgica / Empate / Egipto / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Debate a 4h: Bélgica vs Egipto.\\n\\nPredictaGol trae Bélgica gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_b4bd\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_b4bd\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 15:03:11",
+        "meta": {
+          "payload": {
+            "scheduled_for": "2026-06-15T09:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-15T17:30:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: Bélgica vs Egipto\n\nSticker sugerido: ¿Quién gana?\nOpciones: Bélgica / Empate / Egipto\n\nNuestro pick temprano: Bélgica gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll",
+                "caption": "Poll de comunidad: Bélgica vs Egipto\n\nSticker sugerido: ¿Quién gana?\nOpciones: Bélgica / Empate / Egipto\n\nNuestro pick temprano: Bélgica gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Bélgica vs Egipto\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Bélgica / Empate / Egipto / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Debate a 4h: Bélgica vs Egipto.\n\nPredictaGol trae Bélgica gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b4bd\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b4bd\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 649,
+        "card_id": "c_b4bd",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Bélgica vs Egipto: T-4 poll comunidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":8,\"expires_at\":\"2026-06-15T17:30:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T09:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-15T17:30:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\"},\"caption\":\"Poll de comunidad: Bélgica vs Egipto\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Bélgica / Empate / Egipto\\n\\nNuestro pick temprano: Bélgica gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"story_poll\",\"caption\":\"Poll de comunidad: Bélgica vs Egipto\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Bélgica / Empate / Egipto\\n\\nNuestro pick temprano: Bélgica gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Bélgica vs Egipto\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Bélgica / Empate / Egipto / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Debate a 4h: Bélgica vs Egipto.\\n\\nPredictaGol trae Bélgica gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_b4bd\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_b4bd\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 15:03:03",
+        "meta": {
+          "title": "Bélgica vs Egipto: T-4 poll comunidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 8,
+          "expires_at": "2026-06-15T17:30:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T09:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-15T17:30:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: Bélgica vs Egipto\n\nSticker sugerido: ¿Quién gana?\nOpciones: Bélgica / Empate / Egipto\n\nNuestro pick temprano: Bélgica gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll",
+                "caption": "Poll de comunidad: Bélgica vs Egipto\n\nSticker sugerido: ¿Quién gana?\nOpciones: Bélgica / Empate / Egipto\n\nNuestro pick temprano: Bélgica gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Bélgica vs Egipto\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Bélgica / Empate / Egipto / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Debate a 4h: Bélgica vs Egipto.\n\nPredictaGol trae Bélgica gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b4bd\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b4bd\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 541,
+        "card_id": "c_b4bd",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"scheduled_for\":\"2026-06-15T09:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-15T17:30:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\"},\"caption\":\"Poll de comunidad: Bélgica vs Egipto\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Bélgica / Empate / Egipto\\n\\nNuestro pick temprano: Bélgica gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"animated_poll_gif\",\"caption\":\"Poll de comunidad: Bélgica vs Egipto\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Bélgica / Empate / Egipto\\n\\nNuestro pick temprano: Bélgica gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Bélgica vs Egipto\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Bélgica / Empate / Egipto / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"community_question\",\"text\":\"Bélgica vs Egipto: a 4 horas del partido, la comunidad decide.\\n\\n¿Te quedas con Bélgica gana o cambias por contexto/lineup?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_b4bd\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_b4bd\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 14:48:12",
+        "meta": {
+          "payload": {
+            "scheduled_for": "2026-06-15T09:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-15T17:30:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: Bélgica vs Egipto\n\nSticker sugerido: ¿Quién gana?\nOpciones: Bélgica / Empate / Egipto\n\nNuestro pick temprano: Bélgica gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "animated_poll_gif",
+                "caption": "Poll de comunidad: Bélgica vs Egipto\n\nSticker sugerido: ¿Quién gana?\nOpciones: Bélgica / Empate / Egipto\n\nNuestro pick temprano: Bélgica gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Bélgica vs Egipto\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Bélgica / Empate / Egipto / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "community_question",
+                "text": "Bélgica vs Egipto: a 4 horas del partido, la comunidad decide.\n\n¿Te quedas con Bélgica gana o cambias por contexto/lineup?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b4bd\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b4bd\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 540,
+        "card_id": "c_b4bd",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Bélgica vs Egipto: T-4 poll comunidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":8,\"expires_at\":\"2026-06-15T17:30:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T09:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-15T17:30:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\"},\"caption\":\"Poll de comunidad: Bélgica vs Egipto\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Bélgica / Empate / Egipto\\n\\nNuestro pick temprano: Bélgica gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"animated_poll_gif\",\"caption\":\"Poll de comunidad: Bélgica vs Egipto\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Bélgica / Empate / Egipto\\n\\nNuestro pick temprano: Bélgica gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Bélgica vs Egipto\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Bélgica / Empate / Egipto / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"community_question\",\"text\":\"Bélgica vs Egipto: a 4 horas del partido, la comunidad decide.\\n\\n¿Te quedas con Bélgica gana o cambias por contexto/lineup?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\"}}",
+        "created_at": "2026-06-15 14:48:03",
+        "meta": {
+          "title": "Bélgica vs Egipto: T-4 poll comunidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 8,
+          "expires_at": "2026-06-15T17:30:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T09:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-15T17:30:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: Bélgica vs Egipto\n\nSticker sugerido: ¿Quién gana?\nOpciones: Bélgica / Empate / Egipto\n\nNuestro pick temprano: Bélgica gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "animated_poll_gif",
+                "caption": "Poll de comunidad: Bélgica vs Egipto\n\nSticker sugerido: ¿Quién gana?\nOpciones: Bélgica / Empate / Egipto\n\nNuestro pick temprano: Bélgica gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Bélgica vs Egipto\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Bélgica / Empate / Egipto / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "community_question",
+                "text": "Bélgica vs Egipto: a 4 horas del partido, la comunidad decide.\n\n¿Te quedas con Bélgica gana o cambias por contexto/lineup?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "GIF animado de poll de comunidad para Bélgica vs Egipto, con logo PredictaGol, signo de pregunta y banderas de ambos equipos."
+          }
+        }
+      },
+      {
+        "id": 472,
+        "card_id": "c_b4bd",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Bélgica vs Egipto: T-4 poll comunidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":8,\"expires_at\":\"2026-06-15T17:30:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T09:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-15T17:30:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\"},\"caption\":\"Poll de comunidad: Bélgica vs Egipto\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Bélgica / Empate / Egipto\\n\\nNuestro pick temprano: Bélgica gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"story_poll\",\"caption\":\"Poll de comunidad: Bélgica vs Egipto\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Bélgica / Empate / Egipto\\n\\nNuestro pick temprano: Bélgica gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Bélgica vs Egipto\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Bélgica / Empate / Egipto / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"community_question\",\"text\":\"Bélgica vs Egipto: a 4 horas del partido, la comunidad decide.\\n\\n¿Te quedas con Bélgica gana o cambias por contexto/lineup?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 03:21:54",
+        "meta": {
+          "title": "Bélgica vs Egipto: T-4 poll comunidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 8,
+          "expires_at": "2026-06-15T17:30:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T09:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-15T17:30:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: Bélgica vs Egipto\n\nSticker sugerido: ¿Quién gana?\nOpciones: Bélgica / Empate / Egipto\n\nNuestro pick temprano: Bélgica gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll",
+                "caption": "Poll de comunidad: Bélgica vs Egipto\n\nSticker sugerido: ¿Quién gana?\nOpciones: Bélgica / Empate / Egipto\n\nNuestro pick temprano: Bélgica gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Bélgica vs Egipto\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Bélgica / Empate / Egipto / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "community_question",
+                "text": "Bélgica vs Egipto: a 4 horas del partido, la comunidad decide.\n\n¿Te quedas con Bélgica gana o cambias por contexto/lineup?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 420,
+        "card_id": "c_b4bd",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"expires_at\":\"2026-06-15T17:30:00.000Z\"}",
+        "created_at": "2026-06-15 03:09:49",
+        "meta": {
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "expires_at": "2026-06-15T17:30:00.000Z"
+        }
+      }
+    ]
+  }
+}

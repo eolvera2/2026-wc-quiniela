@@ -1,0 +1,709 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-16T03:54:44.088Z",
+  "event": {
+    "type": "kill",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "killed",
+    "note": "Bulk discard expired To Be Posted cards from column header",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_0034",
+    "title": "España vs Cabo Verde: T-48 breakdown",
+    "stage": "killed",
+    "owner": "stark",
+    "pillar": "tu_equipo_tu_data",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "template": "pronostico-carousel-3up",
+      "format_variant": "carousel_3up",
+      "scheduled_for": "2026-06-13T10:00:00-06:00",
+      "window_key": "t_minus_48h",
+      "window_label": "T-48h · breakdown",
+      "expires_at": "2026-06-14T16:00:00.000Z",
+      "target_match": {
+        "home": "España",
+        "away": "Cabo Verde",
+        "kickoff_iso": "2026-06-15T10:00:00-06:00",
+        "venue": "Atlanta, EE.UU."
+      },
+      "homeTeam": "España",
+      "awayTeam": "Cabo Verde",
+      "flagCodeHome": "es",
+      "flagCodeAway": "cv",
+      "slideTitle": "España vs Cabo Verde",
+      "kickoff": "2026-06-15T10:00:00-06:00",
+      "venue": "Atlanta, EE.UU.",
+      "pgsHome": "2",
+      "pgsAway": "0",
+      "pickShort": "España gana",
+      "hook": "España vs Cabo Verde: 3 señales para empezar a leer el partido.",
+      "cta": "Guárdalo para tu quiniela",
+      "caption": "España vs Cabo Verde: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: España gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+      "alt_text": "Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Espana",
+        "#CaboVerde",
+        "#ElDato"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "breakdown_carousel",
+          "caption": "España vs Cabo Verde: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: España gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#Espana",
+            "#CaboVerde",
+            "#ElDato"
+          ],
+          "alt_text": "Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.",
+          "asset_keys": [
+            "slide_1",
+            "slide_2",
+            "slide_3"
+          ]
+        },
+        "x": {
+          "format": "breakdown_thread",
+          "text": "Breakdown temprano: España vs Cabo Verde 🧵\n\n1/ PGS® inicial: 2-0\n2/ Pick temprano: España gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+          "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "short_list",
+          "text": "3 señales a 48h de España vs Cabo Verde:\n\n1. PGS® inicial 2-0\n2. Pick temprano: España gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "assets": {
+        "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_1.png",
+        "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_2.png",
+        "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_3.png"
+      }
+    },
+    "priority": 9,
+    "stalled_at": null,
+    "expires_at": "2026-06-14T16:00:00.000Z",
+    "created_at": "2026-06-15 03:09:43",
+    "updated_at": "2026-06-16 03:54:44",
+    "posts": [],
+    "events": [
+      {
+        "id": 872,
+        "card_id": "c_0034",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Bulk discard expired To Be Posted cards from column header",
+        "meta_json": "{}",
+        "created_at": "2026-06-16 03:54:44",
+        "meta": {}
+      },
+      {
+        "id": 760,
+        "card_id": "c_0034",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T10:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T16:00:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"slideTitle\":\"España vs Cabo Verde\",\"kickoff\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"España gana\",\"hook\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: España gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: España gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: España vs Cabo Verde 🧵\\n\\n1/ PGS® inicial: 2-0\\n2/ Pick temprano: España gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"short_list\",\"text\":\"3 señales a 48h de España vs Cabo Verde:\\n\\n1. PGS® inicial 2-0\\n2. Pick temprano: España gana\\n3. La primera media hora puede cambiar toda la quiniela.\\n\\n¿Cuál señal estás viendo tú?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-16 01:38:32",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T10:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T16:00:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "slideTitle": "España vs Cabo Verde",
+            "kickoff": "2026-06-15T10:00:00-06:00",
+            "venue": "Atlanta, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "España gana",
+            "hook": "España vs Cabo Verde: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "España vs Cabo Verde: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: España gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Espana",
+              "#CaboVerde",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "España vs Cabo Verde: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: España gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Espana",
+                  "#CaboVerde",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: España vs Cabo Verde 🧵\n\n1/ PGS® inicial: 2-0\n2/ Pick temprano: España gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "short_list",
+                "text": "3 señales a 48h de España vs Cabo Verde:\n\n1. PGS® inicial 2-0\n2. Pick temprano: España gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 759,
+        "card_id": "c_0034",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "killed",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"España vs Cabo Verde: T-48 breakdown\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"tu_equipo_tu_data\",\"priority\":9,\"expires_at\":\"2026-06-14T16:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T10:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T16:00:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"slideTitle\":\"España vs Cabo Verde\",\"kickoff\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"España gana\",\"hook\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: España gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: España gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: España vs Cabo Verde 🧵\\n\\n1/ PGS® inicial: 2-0\\n2/ Pick temprano: España gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"short_list\",\"text\":\"3 señales a 48h de España vs Cabo Verde:\\n\\n1. PGS® inicial 2-0\\n2. Pick temprano: España gana\\n3. La primera media hora puede cambiar toda la quiniela.\\n\\n¿Cuál señal estás viendo tú?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-16 01:38:31",
+        "meta": {
+          "title": "España vs Cabo Verde: T-48 breakdown",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "tu_equipo_tu_data",
+          "priority": 9,
+          "expires_at": "2026-06-14T16:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T10:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T16:00:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "slideTitle": "España vs Cabo Verde",
+            "kickoff": "2026-06-15T10:00:00-06:00",
+            "venue": "Atlanta, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "España gana",
+            "hook": "España vs Cabo Verde: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "España vs Cabo Verde: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: España gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Espana",
+              "#CaboVerde",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "España vs Cabo Verde: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: España gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Espana",
+                  "#CaboVerde",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: España vs Cabo Verde 🧵\n\n1/ PGS® inicial: 2-0\n2/ Pick temprano: España gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "short_list",
+                "text": "3 señales a 48h de España vs Cabo Verde:\n\n1. PGS® inicial 2-0\n2. Pick temprano: España gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 736,
+        "card_id": "c_0034",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-16 01:26:00",
+        "meta": {}
+      },
+      {
+        "id": 633,
+        "card_id": "c_0034",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T10:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T16:00:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"slideTitle\":\"España vs Cabo Verde\",\"kickoff\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"España gana\",\"hook\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: España gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: España gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: España vs Cabo Verde 🧵\\n\\n1/ PGS® inicial: 2-0\\n2/ Pick temprano: España gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"short_list\",\"text\":\"3 señales a 48h de España vs Cabo Verde:\\n\\n1. PGS® inicial 2-0\\n2. Pick temprano: España gana\\n3. La primera media hora puede cambiar toda la quiniela.\\n\\n¿Cuál señal estás viendo tú?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:02:50",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T10:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T16:00:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "slideTitle": "España vs Cabo Verde",
+            "kickoff": "2026-06-15T10:00:00-06:00",
+            "venue": "Atlanta, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "España gana",
+            "hook": "España vs Cabo Verde: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "España vs Cabo Verde: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: España gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Espana",
+              "#CaboVerde",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "España vs Cabo Verde: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: España gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Espana",
+                  "#CaboVerde",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: España vs Cabo Verde 🧵\n\n1/ PGS® inicial: 2-0\n2/ Pick temprano: España gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "short_list",
+                "text": "3 señales a 48h de España vs Cabo Verde:\n\n1. PGS® inicial 2-0\n2. Pick temprano: España gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 632,
+        "card_id": "c_0034",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "killed",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"España vs Cabo Verde: T-48 breakdown\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"tu_equipo_tu_data\",\"priority\":9,\"expires_at\":\"2026-06-14T16:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T10:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T16:00:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"slideTitle\":\"España vs Cabo Verde\",\"kickoff\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"España gana\",\"hook\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: España gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: España gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: España vs Cabo Verde 🧵\\n\\n1/ PGS® inicial: 2-0\\n2/ Pick temprano: España gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"short_list\",\"text\":\"3 señales a 48h de España vs Cabo Verde:\\n\\n1. PGS® inicial 2-0\\n2. Pick temprano: España gana\\n3. La primera media hora puede cambiar toda la quiniela.\\n\\n¿Cuál señal estás viendo tú?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:02:49",
+        "meta": {
+          "title": "España vs Cabo Verde: T-48 breakdown",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "tu_equipo_tu_data",
+          "priority": 9,
+          "expires_at": "2026-06-14T16:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T10:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T16:00:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "slideTitle": "España vs Cabo Verde",
+            "kickoff": "2026-06-15T10:00:00-06:00",
+            "venue": "Atlanta, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "España gana",
+            "hook": "España vs Cabo Verde: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "España vs Cabo Verde: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: España gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Espana",
+              "#CaboVerde",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "España vs Cabo Verde: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: España gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Espana",
+                  "#CaboVerde",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: España vs Cabo Verde 🧵\n\n1/ PGS® inicial: 2-0\n2/ Pick temprano: España gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "short_list",
+                "text": "3 señales a 48h de España vs Cabo Verde:\n\n1. PGS® inicial 2-0\n2. Pick temprano: España gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 627,
+        "card_id": "c_0034",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-15 14:55:37",
+        "meta": {}
+      },
+      {
+        "id": 520,
+        "card_id": "c_0034",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T10:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T16:00:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"slideTitle\":\"España vs Cabo Verde\",\"kickoff\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"España gana\",\"hook\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: España gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: España gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: España vs Cabo Verde 🧵\\n\\n1/ PGS® inicial: 2-0\\n2/ Pick temprano: España gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"discussion_breakdown\",\"text\":\"España vs Cabo Verde, lectura a 48h.\\n\\nPGS® inicial 2-0. Pick temprano: España gana.\\n\\n¿Qué señal estás viendo tú antes de que cambie la conversación?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 14:47:50",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T10:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T16:00:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "slideTitle": "España vs Cabo Verde",
+            "kickoff": "2026-06-15T10:00:00-06:00",
+            "venue": "Atlanta, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "España gana",
+            "hook": "España vs Cabo Verde: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "España vs Cabo Verde: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: España gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Espana",
+              "#CaboVerde",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "España vs Cabo Verde: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: España gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Espana",
+                  "#CaboVerde",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: España vs Cabo Verde 🧵\n\n1/ PGS® inicial: 2-0\n2/ Pick temprano: España gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "discussion_breakdown",
+                "text": "España vs Cabo Verde, lectura a 48h.\n\nPGS® inicial 2-0. Pick temprano: España gana.\n\n¿Qué señal estás viendo tú antes de que cambie la conversación?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 519,
+        "card_id": "c_0034",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "killed",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"España vs Cabo Verde: T-48 breakdown\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"tu_equipo_tu_data\",\"priority\":9,\"expires_at\":\"2026-06-14T16:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T10:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T16:00:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"slideTitle\":\"España vs Cabo Verde\",\"kickoff\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"0\",\"pickShort\":\"España gana\",\"hook\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: España gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"España vs Cabo Verde: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-0\\n3. Pick temprano: España gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Espana\",\"#CaboVerde\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: España vs Cabo Verde 🧵\\n\\n1/ PGS® inicial: 2-0\\n2/ Pick temprano: España gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"discussion_breakdown\",\"text\":\"España vs Cabo Verde, lectura a 48h.\\n\\nPGS® inicial 2-0. Pick temprano: España gana.\\n\\n¿Qué señal estás viendo tú antes de que cambie la conversación?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0034\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 14:47:49",
+        "meta": {
+          "title": "España vs Cabo Verde: T-48 breakdown",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "tu_equipo_tu_data",
+          "priority": 9,
+          "expires_at": "2026-06-14T16:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T10:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T16:00:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "slideTitle": "España vs Cabo Verde",
+            "kickoff": "2026-06-15T10:00:00-06:00",
+            "venue": "Atlanta, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "0",
+            "pickShort": "España gana",
+            "hook": "España vs Cabo Verde: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "España vs Cabo Verde: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: España gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Espana",
+              "#CaboVerde",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "España vs Cabo Verde: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-0\n3. Pick temprano: España gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Espana",
+                  "#CaboVerde",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para España vs Cabo Verde: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: España vs Cabo Verde 🧵\n\n1/ PGS® inicial: 2-0\n2/ Pick temprano: España gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "discussion_breakdown",
+                "text": "España vs Cabo Verde, lectura a 48h.\n\nPGS® inicial 2-0. Pick temprano: España gana.\n\n¿Qué señal estás viendo tú antes de que cambie la conversación?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0034\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 504,
+        "card_id": "c_0034",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-15 03:27:56",
+        "meta": {}
+      }
+    ]
+  }
+}

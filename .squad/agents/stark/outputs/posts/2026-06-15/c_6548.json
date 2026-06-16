@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:04:01.549Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "template": "data-callout",
+        "format_variant": "data_callout",
+        "scheduled_for": "2026-06-16T18:45:00-06:00",
+        "window_key": "t_minus_15",
+        "window_label": "T-15m · dato clave",
+        "expires_at": "2026-06-17T01:15:00.000Z",
+        "target_match": {
+          "home": "Argentina",
+          "away": "Argelia",
+          "kickoff_iso": "2026-06-16T19:00:00-06:00",
+          "venue": "Kansas City, EE.UU."
+        },
+        "homeTeam": "Argentina",
+        "awayTeam": "Argelia",
+        "flagCodeHome": "ar",
+        "flagCodeAway": "dz",
+        "bigNumber": "2-0",
+        "eyebrow": "PGS® Argentina vs Argelia",
+        "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Kansas City, EE.UU.",
+        "cta": "Más datos en predictagol.com",
+        "caption": "Dato a 15 minutos del Argentina vs Argelia:\n\nPGS® 2-0. Argentina vs Argelia: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+        "alt_text": "Tarjeta cuadrada con el número PGS® 2-0 para Argentina vs Argelia.",
+        "hashtags": [
+          "#PredictaGol",
+          "#WorldCup2026"
+        ],
+        "platform_copy": {
+          "x": {
+            "format": "quote_post",
+            "text": "Para quote-postear sobre una alineación/dato oficial de Argentina vs Argelia:\n\nPGS® 2-0. Argentina vs Argelia: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+          }
+        },
+        "assets": {
+          "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_6548\\1080x1080.png"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_6548",
+    "title": "PGS® Argentina 2-0 Argelia — T-15 dato clave",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "datos_curiosos",
+    "platforms": [
+      "x"
+    ],
+    "payload": {
+      "template": "data-callout",
+      "format_variant": "data_callout",
+      "scheduled_for": "2026-06-16T18:45:00-06:00",
+      "window_key": "t_minus_15",
+      "window_label": "T-15m · dato clave",
+      "expires_at": "2026-06-17T01:15:00.000Z",
+      "target_match": {
+        "home": "Argentina",
+        "away": "Argelia",
+        "kickoff_iso": "2026-06-16T19:00:00-06:00",
+        "venue": "Kansas City, EE.UU."
+      },
+      "homeTeam": "Argentina",
+      "awayTeam": "Argelia",
+      "flagCodeHome": "ar",
+      "flagCodeAway": "dz",
+      "bigNumber": "2-0",
+      "eyebrow": "PGS® Argentina vs Argelia",
+      "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Kansas City, EE.UU.",
+      "cta": "Más datos en predictagol.com",
+      "caption": "Dato a 15 minutos del Argentina vs Argelia:\n\nPGS® 2-0. Argentina vs Argelia: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+      "alt_text": "Tarjeta cuadrada con el número PGS® 2-0 para Argentina vs Argelia.",
+      "hashtags": [
+        "#PredictaGol",
+        "#WorldCup2026"
+      ],
+      "platform_copy": {
+        "x": {
+          "format": "quote_post",
+          "text": "Para quote-postear sobre una alineación/dato oficial de Argentina vs Argelia:\n\nPGS® 2-0. Argentina vs Argelia: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+          "hashtags": [
+            "#PredictaGol",
+            "#WorldCup2026"
+          ],
+          "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+        }
+      },
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_6548\\1080x1080.png"
+      }
+    },
+    "priority": 7,
+    "stalled_at": null,
+    "expires_at": "2026-06-17T01:15:00.000Z",
+    "created_at": "2026-06-15 14:49:02",
+    "updated_at": "2026-06-15 15:04:01",
+    "posts": [],
+    "events": [
+      {
+        "id": 706,
+        "card_id": "c_6548",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-16T18:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-17T01:15:00.000Z\",\"target_match\":{\"home\":\"Argentina\",\"away\":\"Argelia\",\"kickoff_iso\":\"2026-06-16T19:00:00-06:00\",\"venue\":\"Kansas City, EE.UU.\"},\"homeTeam\":\"Argentina\",\"awayTeam\":\"Argelia\",\"flagCodeHome\":\"ar\",\"flagCodeAway\":\"dz\",\"bigNumber\":\"2-0\",\"eyebrow\":\"PGS® Argentina vs Argelia\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Kansas City, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Argentina vs Argelia:\\n\\nPGS® 2-0. Argentina vs Argelia: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-0 para Argentina vs Argelia.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Argentina vs Argelia:\\n\\nPGS® 2-0. Argentina vs Argelia: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_6548\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:04:01",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-16T18:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-17T01:15:00.000Z",
+            "target_match": {
+              "home": "Argentina",
+              "away": "Argelia",
+              "kickoff_iso": "2026-06-16T19:00:00-06:00",
+              "venue": "Kansas City, EE.UU."
+            },
+            "homeTeam": "Argentina",
+            "awayTeam": "Argelia",
+            "flagCodeHome": "ar",
+            "flagCodeAway": "dz",
+            "bigNumber": "2-0",
+            "eyebrow": "PGS® Argentina vs Argelia",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Kansas City, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Argentina vs Argelia:\n\nPGS® 2-0. Argentina vs Argelia: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-0 para Argentina vs Argelia.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Argentina vs Argelia:\n\nPGS® 2-0. Argentina vs Argelia: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_6548\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 705,
+        "card_id": "c_6548",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Argentina 2-0 Argelia — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-17T01:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-16T18:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-17T01:15:00.000Z\",\"target_match\":{\"home\":\"Argentina\",\"away\":\"Argelia\",\"kickoff_iso\":\"2026-06-16T19:00:00-06:00\",\"venue\":\"Kansas City, EE.UU.\"},\"homeTeam\":\"Argentina\",\"awayTeam\":\"Argelia\",\"flagCodeHome\":\"ar\",\"flagCodeAway\":\"dz\",\"bigNumber\":\"2-0\",\"eyebrow\":\"PGS® Argentina vs Argelia\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Kansas City, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Argentina vs Argelia:\\n\\nPGS® 2-0. Argentina vs Argelia: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-0 para Argentina vs Argelia.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Argentina vs Argelia:\\n\\nPGS® 2-0. Argentina vs Argelia: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_6548\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:04:01",
+        "meta": {
+          "title": "PGS® Argentina 2-0 Argelia — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-17T01:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-16T18:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-17T01:15:00.000Z",
+            "target_match": {
+              "home": "Argentina",
+              "away": "Argelia",
+              "kickoff_iso": "2026-06-16T19:00:00-06:00",
+              "venue": "Kansas City, EE.UU."
+            },
+            "homeTeam": "Argentina",
+            "awayTeam": "Argelia",
+            "flagCodeHome": "ar",
+            "flagCodeAway": "dz",
+            "bigNumber": "2-0",
+            "eyebrow": "PGS® Argentina vs Argelia",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Kansas City, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Argentina vs Argelia:\n\nPGS® 2-0. Argentina vs Argelia: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-0 para Argentina vs Argelia.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Argentina vs Argelia:\n\nPGS® 2-0. Argentina vs Argelia: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_6548\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 597,
+        "card_id": "c_6548",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-16T18:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-17T01:15:00.000Z\",\"target_match\":{\"home\":\"Argentina\",\"away\":\"Argelia\",\"kickoff_iso\":\"2026-06-16T19:00:00-06:00\",\"venue\":\"Kansas City, EE.UU.\"},\"homeTeam\":\"Argentina\",\"awayTeam\":\"Argelia\",\"flagCodeHome\":\"ar\",\"flagCodeAway\":\"dz\",\"bigNumber\":\"2-0\",\"eyebrow\":\"PGS® Argentina vs Argelia\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Kansas City, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Argentina vs Argelia:\\n\\nPGS® 2-0. Argentina vs Argelia: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-0 para Argentina vs Argelia.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Argentina vs Argelia:\\n\\nPGS® 2-0. Argentina vs Argelia: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_6548\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 14:49:02",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-16T18:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-17T01:15:00.000Z",
+            "target_match": {
+              "home": "Argentina",
+              "away": "Argelia",
+              "kickoff_iso": "2026-06-16T19:00:00-06:00",
+              "venue": "Kansas City, EE.UU."
+            },
+            "homeTeam": "Argentina",
+            "awayTeam": "Argelia",
+            "flagCodeHome": "ar",
+            "flagCodeAway": "dz",
+            "bigNumber": "2-0",
+            "eyebrow": "PGS® Argentina vs Argelia",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Kansas City, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Argentina vs Argelia:\n\nPGS® 2-0. Argentina vs Argelia: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-0 para Argentina vs Argelia.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Argentina vs Argelia:\n\nPGS® 2-0. Argentina vs Argelia: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_6548\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 596,
+        "card_id": "c_6548",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"expires_at\":\"2026-06-17T01:15:00.000Z\"}",
+        "created_at": "2026-06-15 14:49:02",
+        "meta": {
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "expires_at": "2026-06-17T01:15:00.000Z"
+        }
+      }
+    ]
+  }
+}

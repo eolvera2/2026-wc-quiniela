@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:27:49.800Z",
+  "event": {
+    "type": "create",
+    "actor": "strange",
+    "to_stage": "ideas"
+  },
+  "card": {
+    "id": "c_7921",
+    "title": "Reactivo: primer golpe de USA vs Paraguay",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "momento_del_partido",
+    "platforms": [
+      "x",
+      "threads",
+      "instagram",
+      "tiktok",
+      "youtube"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-12T19:30:00-06:00",
+      "hook": "¿Quién leyó mejor el arranque en Los Ángeles?",
+      "body_brief": "Slot para gol temprano, presión alta o tarjeta que cambie el ritmo. Pedir respuesta rápida: sostener pick, cambiar marcador mental o esperar al descanso.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#USMNT",
+        "#QuinielaPredictaGol"
+      ],
+      "notes": "Mantenerlo ágil para segunda pantalla. No usar lenguaje de cierre urgente.",
+      "target_match": {
+        "home": "USA",
+        "away": "Paraguay",
+        "kickoff_iso": "2026-06-12T19:00:00-06:00",
+        "venue": "Los Angeles (Inglewood)"
+      }
+    },
+    "priority": 7,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:27:49",
+    "updated_at": "2026-06-10 19:27:49",
+    "posts": [],
+    "events": [
+      {
+        "id": 134,
+        "card_id": "c_7921",
+        "actor": "strange",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "ideas",
+        "note": null,
+        "meta_json": "{\"owner\":\"strange\",\"pillar\":\"momento_del_partido\"}",
+        "created_at": "2026-06-10 19:27:49",
+        "meta": {
+          "owner": "strange",
+          "pillar": "momento_del_partido"
+        }
+      }
+    ]
+  }
+}

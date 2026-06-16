@@ -1,0 +1,673 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-16T03:54:44.184Z",
+  "event": {
+    "type": "kill",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "killed",
+    "note": "Bulk discard expired To Be Posted cards from column header",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_6cdd",
+    "title": "España vs Cabo Verde: T-4 poll comunidad",
+    "stage": "killed",
+    "owner": "stark",
+    "pillar": "quiniela_challenge",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-15T06:00:00-06:00",
+      "window_key": "t_minus_4h",
+      "window_label": "T-4h · poll comunidad",
+      "expires_at": "2026-06-15T14:30:00.000Z",
+      "target_match": {
+        "home": "España",
+        "away": "Cabo Verde",
+        "kickoff_iso": "2026-06-15T10:00:00-06:00"
+      },
+      "caption": "Poll de comunidad: España vs Cabo Verde\n\nSticker sugerido: ¿Quién gana?\nOpciones: España / Empate / Cabo Verde\n\nNuestro pick temprano: España gana",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#QuinielaPredictaGol"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "story_poll_video",
+          "caption": "Poll de comunidad: España vs Cabo Verde\n\nSticker sugerido: ¿Quién gana?\nOpciones: España / Empate / Cabo Verde\n\nNuestro pick temprano: España gana",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#QuinielaPredictaGol"
+          ],
+          "alt_text": "Video corto de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+          "asset_keys": [
+            "animated_mp4",
+            "1080x1080"
+          ]
+        },
+        "x": {
+          "format": "native_poll",
+          "text": "Poll a 4h: España vs Cabo Verde\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: España / Empate / Cabo Verde / No sé",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "debate_prompt",
+          "text": "Debate a 4h: España vs Cabo Verde.\n\nPredictaGol trae España gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "notes": "Usa el MP4 animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+      "template": "poll-question-video",
+      "format_variant": "poll_question_mp4",
+      "homeTeam": "España",
+      "awayTeam": "Cabo Verde",
+      "flagCodeHome": "es",
+      "flagCodeAway": "cv",
+      "question": "¿Quién gana?",
+      "challengeQuestion": "¿Quién gana?",
+      "alt_text": "Video corto de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_6cdd\\1080x1080.png",
+        "animated_mp4": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_6cdd\\animated_mp4.mp4"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": "2026-06-15T14:30:00.000Z",
+    "created_at": "2026-06-15 03:09:46",
+    "updated_at": "2026-06-16 03:54:44",
+    "posts": [],
+    "events": [
+      {
+        "id": 881,
+        "card_id": "c_6cdd",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Bulk discard expired To Be Posted cards from column header",
+        "meta_json": "{}",
+        "created_at": "2026-06-16 03:54:44",
+        "meta": {}
+      },
+      {
+        "id": 764,
+        "card_id": "c_6cdd",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"scheduled_for\":\"2026-06-15T06:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-15T14:30:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\"},\"caption\":\"Poll de comunidad: España vs Cabo Verde\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: España / Empate / Cabo Verde\\n\\nNuestro pick temprano: España gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"story_poll_video\",\"caption\":\"Poll de comunidad: España vs Cabo Verde\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: España / Empate / Cabo Verde\\n\\nNuestro pick temprano: España gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"Video corto de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_mp4\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: España vs Cabo Verde\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: España / Empate / Cabo Verde / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Debate a 4h: España vs Cabo Verde.\\n\\nPredictaGol trae España gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el MP4 animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-video\",\"format_variant\":\"poll_question_mp4\",\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"Video corto de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_6cdd\\\\1080x1080.png\",\"animated_mp4\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_6cdd\\\\animated_mp4.mp4\"}}}",
+        "created_at": "2026-06-16 01:38:47",
+        "meta": {
+          "payload": {
+            "scheduled_for": "2026-06-15T06:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-15T14:30:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: España vs Cabo Verde\n\nSticker sugerido: ¿Quién gana?\nOpciones: España / Empate / Cabo Verde\n\nNuestro pick temprano: España gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll_video",
+                "caption": "Poll de comunidad: España vs Cabo Verde\n\nSticker sugerido: ¿Quién gana?\nOpciones: España / Empate / Cabo Verde\n\nNuestro pick temprano: España gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "Video corto de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_mp4",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: España vs Cabo Verde\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: España / Empate / Cabo Verde / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Debate a 4h: España vs Cabo Verde.\n\nPredictaGol trae España gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el MP4 animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-video",
+            "format_variant": "poll_question_mp4",
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "Video corto de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_6cdd\\1080x1080.png",
+              "animated_mp4": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_6cdd\\animated_mp4.mp4"
+            }
+          }
+        }
+      },
+      {
+        "id": 763,
+        "card_id": "c_6cdd",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "killed",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"España vs Cabo Verde: T-4 poll comunidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":8,\"expires_at\":\"2026-06-15T14:30:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T06:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-15T14:30:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\"},\"caption\":\"Poll de comunidad: España vs Cabo Verde\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: España / Empate / Cabo Verde\\n\\nNuestro pick temprano: España gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"story_poll_video\",\"caption\":\"Poll de comunidad: España vs Cabo Verde\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: España / Empate / Cabo Verde\\n\\nNuestro pick temprano: España gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"Video corto de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_mp4\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: España vs Cabo Verde\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: España / Empate / Cabo Verde / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Debate a 4h: España vs Cabo Verde.\\n\\nPredictaGol trae España gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el MP4 animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-video\",\"format_variant\":\"poll_question_mp4\",\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"Video corto de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_6cdd\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_6cdd\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-16 01:38:32",
+        "meta": {
+          "title": "España vs Cabo Verde: T-4 poll comunidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 8,
+          "expires_at": "2026-06-15T14:30:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T06:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-15T14:30:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: España vs Cabo Verde\n\nSticker sugerido: ¿Quién gana?\nOpciones: España / Empate / Cabo Verde\n\nNuestro pick temprano: España gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll_video",
+                "caption": "Poll de comunidad: España vs Cabo Verde\n\nSticker sugerido: ¿Quién gana?\nOpciones: España / Empate / Cabo Verde\n\nNuestro pick temprano: España gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "Video corto de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_mp4",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: España vs Cabo Verde\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: España / Empate / Cabo Verde / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Debate a 4h: España vs Cabo Verde.\n\nPredictaGol trae España gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el MP4 animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-video",
+            "format_variant": "poll_question_mp4",
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "Video corto de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_6cdd\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_6cdd\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 748,
+        "card_id": "c_6cdd",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-16 01:27:29",
+        "meta": {}
+      },
+      {
+        "id": 637,
+        "card_id": "c_6cdd",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"scheduled_for\":\"2026-06-15T06:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-15T14:30:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\"},\"caption\":\"Poll de comunidad: España vs Cabo Verde\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: España / Empate / Cabo Verde\\n\\nNuestro pick temprano: España gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"story_poll\",\"caption\":\"Poll de comunidad: España vs Cabo Verde\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: España / Empate / Cabo Verde\\n\\nNuestro pick temprano: España gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: España vs Cabo Verde\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: España / Empate / Cabo Verde / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Debate a 4h: España vs Cabo Verde.\\n\\nPredictaGol trae España gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"GIF animado de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_6cdd\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_6cdd\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 15:03:00",
+        "meta": {
+          "payload": {
+            "scheduled_for": "2026-06-15T06:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-15T14:30:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: España vs Cabo Verde\n\nSticker sugerido: ¿Quién gana?\nOpciones: España / Empate / Cabo Verde\n\nNuestro pick temprano: España gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll",
+                "caption": "Poll de comunidad: España vs Cabo Verde\n\nSticker sugerido: ¿Quién gana?\nOpciones: España / Empate / Cabo Verde\n\nNuestro pick temprano: España gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: España vs Cabo Verde\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: España / Empate / Cabo Verde / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Debate a 4h: España vs Cabo Verde.\n\nPredictaGol trae España gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "GIF animado de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_6cdd\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_6cdd\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 636,
+        "card_id": "c_6cdd",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"España vs Cabo Verde: T-4 poll comunidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":8,\"expires_at\":\"2026-06-15T14:30:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T06:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-15T14:30:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\"},\"caption\":\"Poll de comunidad: España vs Cabo Verde\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: España / Empate / Cabo Verde\\n\\nNuestro pick temprano: España gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"story_poll\",\"caption\":\"Poll de comunidad: España vs Cabo Verde\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: España / Empate / Cabo Verde\\n\\nNuestro pick temprano: España gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: España vs Cabo Verde\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: España / Empate / Cabo Verde / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Debate a 4h: España vs Cabo Verde.\\n\\nPredictaGol trae España gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"GIF animado de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_6cdd\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_6cdd\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 15:02:51",
+        "meta": {
+          "title": "España vs Cabo Verde: T-4 poll comunidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 8,
+          "expires_at": "2026-06-15T14:30:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T06:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-15T14:30:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: España vs Cabo Verde\n\nSticker sugerido: ¿Quién gana?\nOpciones: España / Empate / Cabo Verde\n\nNuestro pick temprano: España gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll",
+                "caption": "Poll de comunidad: España vs Cabo Verde\n\nSticker sugerido: ¿Quién gana?\nOpciones: España / Empate / Cabo Verde\n\nNuestro pick temprano: España gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: España vs Cabo Verde\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: España / Empate / Cabo Verde / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Debate a 4h: España vs Cabo Verde.\n\nPredictaGol trae España gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "GIF animado de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_6cdd\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_6cdd\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 528,
+        "card_id": "c_6cdd",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"scheduled_for\":\"2026-06-15T06:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-15T14:30:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\"},\"caption\":\"Poll de comunidad: España vs Cabo Verde\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: España / Empate / Cabo Verde\\n\\nNuestro pick temprano: España gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"animated_poll_gif\",\"caption\":\"Poll de comunidad: España vs Cabo Verde\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: España / Empate / Cabo Verde\\n\\nNuestro pick temprano: España gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: España vs Cabo Verde\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: España / Empate / Cabo Verde / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"community_question\",\"text\":\"España vs Cabo Verde: a 4 horas del partido, la comunidad decide.\\n\\n¿Te quedas con España gana o cambias por contexto/lineup?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"GIF animado de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_6cdd\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_6cdd\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 14:47:59",
+        "meta": {
+          "payload": {
+            "scheduled_for": "2026-06-15T06:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-15T14:30:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: España vs Cabo Verde\n\nSticker sugerido: ¿Quién gana?\nOpciones: España / Empate / Cabo Verde\n\nNuestro pick temprano: España gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "animated_poll_gif",
+                "caption": "Poll de comunidad: España vs Cabo Verde\n\nSticker sugerido: ¿Quién gana?\nOpciones: España / Empate / Cabo Verde\n\nNuestro pick temprano: España gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: España vs Cabo Verde\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: España / Empate / Cabo Verde / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "community_question",
+                "text": "España vs Cabo Verde: a 4 horas del partido, la comunidad decide.\n\n¿Te quedas con España gana o cambias por contexto/lineup?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "GIF animado de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_6cdd\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_6cdd\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 523,
+        "card_id": "c_6cdd",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"España vs Cabo Verde: T-4 poll comunidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":8,\"expires_at\":\"2026-06-15T14:30:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T06:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-15T14:30:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\"},\"caption\":\"Poll de comunidad: España vs Cabo Verde\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: España / Empate / Cabo Verde\\n\\nNuestro pick temprano: España gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"animated_poll_gif\",\"caption\":\"Poll de comunidad: España vs Cabo Verde\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: España / Empate / Cabo Verde\\n\\nNuestro pick temprano: España gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: España vs Cabo Verde\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: España / Empate / Cabo Verde / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"community_question\",\"text\":\"España vs Cabo Verde: a 4 horas del partido, la comunidad decide.\\n\\n¿Te quedas con España gana o cambias por contexto/lineup?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"GIF animado de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\"}}",
+        "created_at": "2026-06-15 14:47:50",
+        "meta": {
+          "title": "España vs Cabo Verde: T-4 poll comunidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 8,
+          "expires_at": "2026-06-15T14:30:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T06:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-15T14:30:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: España vs Cabo Verde\n\nSticker sugerido: ¿Quién gana?\nOpciones: España / Empate / Cabo Verde\n\nNuestro pick temprano: España gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "animated_poll_gif",
+                "caption": "Poll de comunidad: España vs Cabo Verde\n\nSticker sugerido: ¿Quién gana?\nOpciones: España / Empate / Cabo Verde\n\nNuestro pick temprano: España gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: España vs Cabo Verde\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: España / Empate / Cabo Verde / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "community_question",
+                "text": "España vs Cabo Verde: a 4 horas del partido, la comunidad decide.\n\n¿Te quedas con España gana o cambias por contexto/lineup?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "GIF animado de poll de comunidad para España vs Cabo Verde, con logo PredictaGol, signo de pregunta y banderas de ambos equipos."
+          }
+        }
+      },
+      {
+        "id": 460,
+        "card_id": "c_6cdd",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"España vs Cabo Verde: T-4 poll comunidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":8,\"expires_at\":\"2026-06-15T14:30:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T06:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-15T14:30:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\"},\"caption\":\"Poll de comunidad: España vs Cabo Verde\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: España / Empate / Cabo Verde\\n\\nNuestro pick temprano: España gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"story_poll\",\"caption\":\"Poll de comunidad: España vs Cabo Verde\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: España / Empate / Cabo Verde\\n\\nNuestro pick temprano: España gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: España vs Cabo Verde\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: España / Empate / Cabo Verde / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"community_question\",\"text\":\"España vs Cabo Verde: a 4 horas del partido, la comunidad decide.\\n\\n¿Te quedas con España gana o cambias por contexto/lineup?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 03:21:50",
+        "meta": {
+          "title": "España vs Cabo Verde: T-4 poll comunidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 8,
+          "expires_at": "2026-06-15T14:30:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T06:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-15T14:30:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: España vs Cabo Verde\n\nSticker sugerido: ¿Quién gana?\nOpciones: España / Empate / Cabo Verde\n\nNuestro pick temprano: España gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll",
+                "caption": "Poll de comunidad: España vs Cabo Verde\n\nSticker sugerido: ¿Quién gana?\nOpciones: España / Empate / Cabo Verde\n\nNuestro pick temprano: España gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: España vs Cabo Verde\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: España / Empate / Cabo Verde / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "community_question",
+                "text": "España vs Cabo Verde: a 4 horas del partido, la comunidad decide.\n\n¿Te quedas con España gana o cambias por contexto/lineup?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 408,
+        "card_id": "c_6cdd",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"expires_at\":\"2026-06-15T14:30:00.000Z\"}",
+        "created_at": "2026-06-15 03:09:46",
+        "meta": {
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "expires_at": "2026-06-15T14:30:00.000Z"
+        }
+      }
+    ]
+  }
+}

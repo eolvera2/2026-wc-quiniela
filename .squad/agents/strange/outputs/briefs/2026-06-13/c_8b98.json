@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-13T02:44:36.150Z",
+  "event": {
+    "type": "kill",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "killed",
+    "note": "Descartada desde tarjeta (To Be Posted)",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_8b98",
+    "title": "Tu data: USA abre contra Paraguay con examen de ritmo",
+    "stage": "killed",
+    "owner": "strange",
+    "pillar": "tu_equipo_tu_data",
+    "platforms": [
+      "instagram",
+      "threads",
+      "tiktok"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-12T17:15:00-06:00",
+      "hook": "USA llega a casa; Paraguay llega a incomodar el libreto.",
+      "body_brief": "Hacer grid de tres líneas: presión alta, bandas y control emocional. Enfoque LatAm: Paraguay como rival que no regala metros. Cerrar con pick de resultado.",
+      "template": "tu-equipo-tu-data",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#USMNT",
+        "#Paraguay"
+      ],
+      "notes": "No-México fuerte de semana; útil para captar audiencia de anfitrión norteamericano.",
+      "target_match": {
+        "home": "USA",
+        "away": "Paraguay",
+        "kickoff_iso": "2026-06-12T19:00:00-06:00",
+        "venue": "Los Angeles (Inglewood)"
+      },
+      "homeTeam": "USA",
+      "flagEmojiHome": "🇺🇸",
+      "form": "Ritmo",
+      "goals": "Bandas",
+      "cleanSheets": "Pausa",
+      "caption": "USA llega a casa; Paraguay llega a incomodar el libreto. 📊\n\nLa lectura: si acelera por bandas, Paraguay puede obligar a jugar con cabeza fría.\n\nDinos qué zona te dio más confianza y arma tu pick con la banda.\n\nTu pick en predictagol.com",
+      "alt_text": "Gráfico de datos de USA con tres bloques para leer forma, goles y solidez antes de compartir tu pick.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#USMNT",
+        "#TuEquipoTuData"
+      ],
+      "assets": {
+        "1080x1920": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_8b98\\1080x1920.png",
+        "1080x1350": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_8b98\\1080x1350.png",
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_8b98\\1080x1080.png"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:27:49",
+    "updated_at": "2026-06-13 02:44:36",
+    "posts": [],
+    "events": [
+      {
+        "id": 212,
+        "card_id": "c_8b98",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-13 02:44:36",
+        "meta": {}
+      },
+      {
+        "id": 176,
+        "card_id": "c_8b98",
+        "actor": "cap",
+        "type": "advance",
+        "from_stage": "review",
+        "to_stage": "to_be_posted",
+        "note": "Approved for autonomous publish",
+        "meta_json": "{\"scorecard\":[{\"gate\":1,\"name\":\"Forbidden vocabulary\",\"score\":\"G\",\"note\":\"No forbidden vocabulary detected.\"},{\"gate\":2,\"name\":\"Sportsbook positioning\",\"score\":\"G\",\"note\":\"Soft/no CTA; no sportsbook-positioning pattern detected.\"},{\"gate\":3,\"name\":\"Brand-safe imagery\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":4,\"name\":\"Design tokens\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":5,\"name\":\"Typography & wordmark\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":6,\"name\":\"Safe zones\",\"score\":\"G\",\"note\":\"Renderer SAFE_ZONES constant enforced.\"},{\"gate\":7,\"name\":\"Factual accuracy\",\"score\":\"G\",\"note\":\"No verifiable false claim detected; opinion-framed predictions allowed.\"},{\"gate\":8,\"name\":\"Spanish quality\",\"score\":\"G\",\"note\":\"Natural Spanish quality heuristic passed.\"}],\"verdict\":\"PASS\"}",
+        "created_at": "2026-06-10 21:29:28",
+        "meta": {
+          "scorecard": [
+            {
+              "gate": 1,
+              "name": "Forbidden vocabulary",
+              "score": "G",
+              "note": "No forbidden vocabulary detected."
+            },
+            {
+              "gate": 2,
+              "name": "Sportsbook positioning",
+              "score": "G",
+              "note": "Soft/no CTA; no sportsbook-positioning pattern detected."
+            },
+            {
+              "gate": 3,
+              "name": "Brand-safe imagery",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 4,
+              "name": "Design tokens",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 5,
+              "name": "Typography & wordmark",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 6,
+              "name": "Safe zones",
+              "score": "G",
+              "note": "Renderer SAFE_ZONES constant enforced."
+            },
+            {
+              "gate": 7,
+              "name": "Factual accuracy",
+              "score": "G",
+              "note": "No verifiable false claim detected; opinion-framed predictions allowed."
+            },
+            {
+              "gate": 8,
+              "name": "Spanish quality",
+              "score": "G",
+              "note": "Natural Spanish quality heuristic passed."
+            }
+          ],
+          "verdict": "PASS"
+        }
+      },
+      {
+        "id": 175,
+        "card_id": "c_8b98",
+        "actor": "cap",
+        "type": "advance",
+        "from_stage": "copywritten",
+        "to_stage": "review",
+        "note": "Cap intermediate gate passed",
+        "meta_json": "{\"scorecard\":[{\"gate\":1,\"name\":\"Forbidden vocabulary\",\"score\":\"G\",\"note\":\"No forbidden vocabulary detected.\"},{\"gate\":2,\"name\":\"Sportsbook positioning\",\"score\":\"G\",\"note\":\"Soft/no CTA; no sportsbook-positioning pattern detected.\"},{\"gate\":3,\"name\":\"Brand-safe imagery\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":4,\"name\":\"Design tokens\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":5,\"name\":\"Typography & wordmark\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":6,\"name\":\"Safe zones\",\"score\":\"G\",\"note\":\"Renderer SAFE_ZONES constant enforced.\"},{\"gate\":7,\"name\":\"Factual accuracy\",\"score\":\"G\",\"note\":\"No verifiable false claim detected; opinion-framed predictions allowed.\"},{\"gate\":8,\"name\":\"Spanish quality\",\"score\":\"G\",\"note\":\"Natural Spanish quality heuristic passed.\"}],\"verdict\":\"PASS\"}",
+        "created_at": "2026-06-10 21:29:28",
+        "meta": {
+          "scorecard": [
+            {
+              "gate": 1,
+              "name": "Forbidden vocabulary",
+              "score": "G",
+              "note": "No forbidden vocabulary detected."
+            },
+            {
+              "gate": 2,
+              "name": "Sportsbook positioning",
+              "score": "G",
+              "note": "Soft/no CTA; no sportsbook-positioning pattern detected."
+            },
+            {
+              "gate": 3,
+              "name": "Brand-safe imagery",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 4,
+              "name": "Design tokens",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 5,
+              "name": "Typography & wordmark",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 6,
+              "name": "Safe zones",
+              "score": "G",
+              "note": "Renderer SAFE_ZONES constant enforced."
+            },
+            {
+              "gate": 7,
+              "name": "Factual accuracy",
+              "score": "G",
+              "note": "No verifiable false claim detected; opinion-framed predictions allowed."
+            },
+            {
+              "gate": 8,
+              "name": "Spanish quality",
+              "score": "G",
+              "note": "Natural Spanish quality heuristic passed."
+            }
+          ],
+          "verdict": "PASS"
+        }
+      },
+      {
+        "id": 166,
+        "card_id": "c_8b98",
+        "actor": "shuri",
+        "type": "advance",
+        "from_stage": "ideas",
+        "to_stage": "copywritten",
+        "note": "Wave 1 creative ready",
+        "meta_json": "{}",
+        "created_at": "2026-06-10 21:27:07",
+        "meta": {}
+      },
+      {
+        "id": 165,
+        "card_id": "c_8b98",
+        "actor": "shuri",
+        "type": "edit",
+        "from_stage": "ideas",
+        "to_stage": "ideas",
+        "note": "Wave 1 creative packet",
+        "meta_json": "{\"title\":\"Tu data: USA abre contra Paraguay con examen de ritmo\",\"payload\":{\"scheduled_for\":\"2026-06-12T17:15:00-06:00\",\"hook\":\"USA llega a casa; Paraguay llega a incomodar el libreto.\",\"body_brief\":\"Hacer grid de tres líneas: presión alta, bandas y control emocional. Enfoque LatAm: Paraguay como rival que no regala metros. Cerrar con pick de resultado.\",\"template\":\"tu-equipo-tu-data\",\"cta\":\"Tu pick en predictagol.com\",\"hashtag_brief\":[\"#PredictaGol\",\"#Mundial2026\",\"#USMNT\",\"#Paraguay\"],\"notes\":\"No-México fuerte de semana; útil para captar audiencia de anfitrión norteamericano.\",\"target_match\":{\"home\":\"USA\",\"away\":\"Paraguay\",\"kickoff_iso\":\"2026-06-12T19:00:00-06:00\",\"venue\":\"Los Angeles (Inglewood)\"},\"homeTeam\":\"USA\",\"flagEmojiHome\":\"🇺🇸\",\"form\":\"Ritmo\",\"goals\":\"Bandas\",\"cleanSheets\":\"Pausa\",\"caption\":\"USA llega a casa; Paraguay llega a incomodar el libreto. 📊\\n\\nLa lectura: si acelera por bandas, Paraguay puede obligar a jugar con cabeza fría.\\n\\nDinos qué zona te dio más confianza y arma tu pick con la banda.\\n\\nTu pick en predictagol.com\\n\\n#PredictaGol #Mundial2026 #USMNT #TuEquipoTuData\",\"alt_text\":\"Gráfico de datos de USA con tres bloques para leer forma, goles y solidez antes de compartir tu pick.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#USMNT\",\"#TuEquipoTuData\"],\"assets\":{\"1080x1920\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-11\\\\c_8b98\\\\1080x1920.png\",\"1080x1350\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-11\\\\c_8b98\\\\1080x1350.png\",\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-11\\\\c_8b98\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-10 21:27:07",
+        "meta": {
+          "title": "Tu data: USA abre contra Paraguay con examen de ritmo",
+          "payload": {
+            "scheduled_for": "2026-06-12T17:15:00-06:00",
+            "hook": "USA llega a casa; Paraguay llega a incomodar el libreto.",
+            "body_brief": "Hacer grid de tres líneas: presión alta, bandas y control emocional. Enfoque LatAm: Paraguay como rival que no regala metros. Cerrar con pick de resultado.",
+            "template": "tu-equipo-tu-data",
+            "cta": "Tu pick en predictagol.com",
+            "hashtag_brief": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#USMNT",
+              "#Paraguay"
+            ],
+            "notes": "No-México fuerte de semana; útil para captar audiencia de anfitrión norteamericano.",
+            "target_match": {
+              "home": "USA",
+              "away": "Paraguay",
+              "kickoff_iso": "2026-06-12T19:00:00-06:00",
+              "venue": "Los Angeles (Inglewood)"
+            },
+            "homeTeam": "USA",
+            "flagEmojiHome": "🇺🇸",
+            "form": "Ritmo",
+            "goals": "Bandas",
+            "cleanSheets": "Pausa",
+            "caption": "USA llega a casa; Paraguay llega a incomodar el libreto. 📊\n\nLa lectura: si acelera por bandas, Paraguay puede obligar a jugar con cabeza fría.\n\nDinos qué zona te dio más confianza y arma tu pick con la banda.\n\nTu pick en predictagol.com\n\n#PredictaGol #Mundial2026 #USMNT #TuEquipoTuData",
+            "alt_text": "Gráfico de datos de USA con tres bloques para leer forma, goles y solidez antes de compartir tu pick.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#USMNT",
+              "#TuEquipoTuData"
+            ],
+            "assets": {
+              "1080x1920": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_8b98\\1080x1920.png",
+              "1080x1350": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_8b98\\1080x1350.png",
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_8b98\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 133,
+        "card_id": "c_8b98",
+        "actor": "strange",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "ideas",
+        "note": null,
+        "meta_json": "{\"owner\":\"strange\",\"pillar\":\"tu_equipo_tu_data\"}",
+        "created_at": "2026-06-10 19:27:49",
+        "meta": {
+          "owner": "strange",
+          "pillar": "tu_equipo_tu_data"
+        }
+      }
+    ]
+  }
+}

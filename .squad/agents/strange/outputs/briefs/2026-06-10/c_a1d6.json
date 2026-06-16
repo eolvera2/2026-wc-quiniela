@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T21:29:28.535Z",
+  "event": {
+    "type": "advance",
+    "actor": "cap",
+    "from_stage": "review",
+    "to_stage": "to_be_posted",
+    "note": "Approved for autonomous publish",
+    "meta": {
+      "scorecard": [
+        {
+          "gate": 1,
+          "name": "Forbidden vocabulary",
+          "score": "G",
+          "note": "No forbidden vocabulary detected."
+        },
+        {
+          "gate": 2,
+          "name": "Sportsbook positioning",
+          "score": "G",
+          "note": "Soft/no CTA; no sportsbook-positioning pattern detected."
+        },
+        {
+          "gate": 3,
+          "name": "Brand-safe imagery",
+          "score": "G",
+          "note": "Renderer-tokens enforced."
+        },
+        {
+          "gate": 4,
+          "name": "Design tokens",
+          "score": "G",
+          "note": "Renderer-tokens enforced."
+        },
+        {
+          "gate": 5,
+          "name": "Typography & wordmark",
+          "score": "G",
+          "note": "Renderer-tokens enforced."
+        },
+        {
+          "gate": 6,
+          "name": "Safe zones",
+          "score": "G",
+          "note": "Renderer SAFE_ZONES constant enforced."
+        },
+        {
+          "gate": 7,
+          "name": "Factual accuracy",
+          "score": "G",
+          "note": "No verifiable false claim detected; opinion-framed predictions allowed."
+        },
+        {
+          "gate": 8,
+          "name": "Spanish quality",
+          "score": "G",
+          "note": "Natural Spanish quality heuristic passed."
+        }
+      ],
+      "verdict": "PASS"
+    }
+  },
+  "card": {
+    "id": "c_a1d6",
+    "title": "Pronóstico del día: México vs Sudáfrica abre la historia",
+    "stage": "to_be_posted",
+    "owner": "strange",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-11T11:30:00-06:00",
+      "hook": "México abre en casa: ¿nervio de debut o golpe de autoridad?",
+      "body_brief": "Enmarcar el 1-1 de 2010 como espejo emocional, no como destino. Señalar el factor localía en CDMX, la primera media hora y una predicción suave: México empuja desde el inicio, pero necesita paciencia.",
+      "template": "pronostico-del-dia",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#ElTri",
+        "#MexicoSudafrica",
+        "#PronosticoDelDia"
+      ],
+      "notes": "Abrir con matchup limpio. Sin vocabulario de mercado; pedir marcador como conversación.",
+      "target_match": {
+        "home": "Mexico",
+        "away": "South Africa",
+        "kickoff_iso": "2026-06-11T13:00:00-06:00",
+        "venue": "Mexico City"
+      },
+      "signal_source": "widow-2026-06-10-01",
+      "homeTeam": "México",
+      "awayTeam": "Sudáfrica",
+      "flagEmojiHome": "🇲🇽",
+      "flagEmojiAway": "🇿🇦",
+      "kickoff": "2026-06-11T13:00:00-06:00",
+      "venue": "Mexico City",
+      "caption": "México vs Sudáfrica hoy 🇲🇽⚽\n\nMéxico abre en casa: ¿nervio de debut o golpe de autoridad?\n\nNuestra lectura: México empuja desde el inicio, pero la paciencia vale más que la prisa. ¿Y tú?\n\nTu pick en predictagol.com\n\n#PredictaGol #Mundial2026 #ElTri #PronosticoDelDia",
+      "alt_text": "Gráfico de pronóstico del día para México vs Sudáfrica, con horario, sede y llamado a compartir tu pick.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#ElTri",
+        "#PronosticoDelDia"
+      ],
+      "assets": {
+        "1080x1920": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_a1d6\\1080x1920.png",
+        "1080x1350": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_a1d6\\1080x1350.png",
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_a1d6\\1080x1080.png"
+      }
+    },
+    "priority": 10,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:27:49",
+    "updated_at": "2026-06-10 21:29:28",
+    "posts": [],
+    "events": [
+      {
+        "id": 168,
+        "card_id": "c_a1d6",
+        "actor": "cap",
+        "type": "advance",
+        "from_stage": "review",
+        "to_stage": "to_be_posted",
+        "note": "Approved for autonomous publish",
+        "meta_json": "{\"scorecard\":[{\"gate\":1,\"name\":\"Forbidden vocabulary\",\"score\":\"G\",\"note\":\"No forbidden vocabulary detected.\"},{\"gate\":2,\"name\":\"Sportsbook positioning\",\"score\":\"G\",\"note\":\"Soft/no CTA; no sportsbook-positioning pattern detected.\"},{\"gate\":3,\"name\":\"Brand-safe imagery\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":4,\"name\":\"Design tokens\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":5,\"name\":\"Typography & wordmark\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":6,\"name\":\"Safe zones\",\"score\":\"G\",\"note\":\"Renderer SAFE_ZONES constant enforced.\"},{\"gate\":7,\"name\":\"Factual accuracy\",\"score\":\"G\",\"note\":\"No verifiable false claim detected; opinion-framed predictions allowed.\"},{\"gate\":8,\"name\":\"Spanish quality\",\"score\":\"G\",\"note\":\"Natural Spanish quality heuristic passed.\"}],\"verdict\":\"PASS\"}",
+        "created_at": "2026-06-10 21:29:28",
+        "meta": {
+          "scorecard": [
+            {
+              "gate": 1,
+              "name": "Forbidden vocabulary",
+              "score": "G",
+              "note": "No forbidden vocabulary detected."
+            },
+            {
+              "gate": 2,
+              "name": "Sportsbook positioning",
+              "score": "G",
+              "note": "Soft/no CTA; no sportsbook-positioning pattern detected."
+            },
+            {
+              "gate": 3,
+              "name": "Brand-safe imagery",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 4,
+              "name": "Design tokens",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 5,
+              "name": "Typography & wordmark",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 6,
+              "name": "Safe zones",
+              "score": "G",
+              "note": "Renderer SAFE_ZONES constant enforced."
+            },
+            {
+              "gate": 7,
+              "name": "Factual accuracy",
+              "score": "G",
+              "note": "No verifiable false claim detected; opinion-framed predictions allowed."
+            },
+            {
+              "gate": 8,
+              "name": "Spanish quality",
+              "score": "G",
+              "note": "Natural Spanish quality heuristic passed."
+            }
+          ],
+          "verdict": "PASS"
+        }
+      },
+      {
+        "id": 167,
+        "card_id": "c_a1d6",
+        "actor": "cap",
+        "type": "advance",
+        "from_stage": "copywritten",
+        "to_stage": "review",
+        "note": "Cap intermediate gate passed",
+        "meta_json": "{\"scorecard\":[{\"gate\":1,\"name\":\"Forbidden vocabulary\",\"score\":\"G\",\"note\":\"No forbidden vocabulary detected.\"},{\"gate\":2,\"name\":\"Sportsbook positioning\",\"score\":\"G\",\"note\":\"Soft/no CTA; no sportsbook-positioning pattern detected.\"},{\"gate\":3,\"name\":\"Brand-safe imagery\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":4,\"name\":\"Design tokens\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":5,\"name\":\"Typography & wordmark\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":6,\"name\":\"Safe zones\",\"score\":\"G\",\"note\":\"Renderer SAFE_ZONES constant enforced.\"},{\"gate\":7,\"name\":\"Factual accuracy\",\"score\":\"G\",\"note\":\"No verifiable false claim detected; opinion-framed predictions allowed.\"},{\"gate\":8,\"name\":\"Spanish quality\",\"score\":\"G\",\"note\":\"Natural Spanish quality heuristic passed.\"}],\"verdict\":\"PASS\"}",
+        "created_at": "2026-06-10 21:29:28",
+        "meta": {
+          "scorecard": [
+            {
+              "gate": 1,
+              "name": "Forbidden vocabulary",
+              "score": "G",
+              "note": "No forbidden vocabulary detected."
+            },
+            {
+              "gate": 2,
+              "name": "Sportsbook positioning",
+              "score": "G",
+              "note": "Soft/no CTA; no sportsbook-positioning pattern detected."
+            },
+            {
+              "gate": 3,
+              "name": "Brand-safe imagery",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 4,
+              "name": "Design tokens",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 5,
+              "name": "Typography & wordmark",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 6,
+              "name": "Safe zones",
+              "score": "G",
+              "note": "Renderer SAFE_ZONES constant enforced."
+            },
+            {
+              "gate": 7,
+              "name": "Factual accuracy",
+              "score": "G",
+              "note": "No verifiable false claim detected; opinion-framed predictions allowed."
+            },
+            {
+              "gate": 8,
+              "name": "Spanish quality",
+              "score": "G",
+              "note": "Natural Spanish quality heuristic passed."
+            }
+          ],
+          "verdict": "PASS"
+        }
+      },
+      {
+        "id": 156,
+        "card_id": "c_a1d6",
+        "actor": "shuri",
+        "type": "advance",
+        "from_stage": "ideas",
+        "to_stage": "copywritten",
+        "note": "Wave 1 creative ready",
+        "meta_json": "{}",
+        "created_at": "2026-06-10 21:27:01",
+        "meta": {}
+      },
+      {
+        "id": 155,
+        "card_id": "c_a1d6",
+        "actor": "shuri",
+        "type": "edit",
+        "from_stage": "ideas",
+        "to_stage": "ideas",
+        "note": "Wave 1 creative packet",
+        "meta_json": "{\"title\":\"Pronóstico del día: México vs Sudáfrica abre la historia\",\"payload\":{\"scheduled_for\":\"2026-06-11T11:30:00-06:00\",\"hook\":\"México abre en casa: ¿nervio de debut o golpe de autoridad?\",\"body_brief\":\"Enmarcar el 1-1 de 2010 como espejo emocional, no como destino. Señalar el factor localía en CDMX, la primera media hora y una predicción suave: México empuja desde el inicio, pero necesita paciencia.\",\"template\":\"pronostico-del-dia\",\"cta\":\"Tu pick en predictagol.com\",\"hashtag_brief\":[\"#PredictaGol\",\"#Mundial2026\",\"#ElTri\",\"#MexicoSudafrica\",\"#PronosticoDelDia\"],\"notes\":\"Abrir con matchup limpio. Sin vocabulario de mercado; pedir marcador como conversación.\",\"target_match\":{\"home\":\"Mexico\",\"away\":\"South Africa\",\"kickoff_iso\":\"2026-06-11T13:00:00-06:00\",\"venue\":\"Mexico City\"},\"signal_source\":\"widow-2026-06-10-01\",\"homeTeam\":\"México\",\"awayTeam\":\"Sudáfrica\",\"flagEmojiHome\":\"🇲🇽\",\"flagEmojiAway\":\"🇿🇦\",\"kickoff\":\"2026-06-11T13:00:00-06:00\",\"venue\":\"Mexico City\",\"caption\":\"México vs Sudáfrica hoy 🇲🇽⚽\\n\\nMéxico abre en casa: ¿nervio de debut o golpe de autoridad?\\n\\nNuestra lectura: México empuja desde el inicio, pero la paciencia vale más que la prisa. ¿Y tú?\\n\\nTu pick en predictagol.com\\n\\n#PredictaGol #Mundial2026 #ElTri #PronosticoDelDia\",\"alt_text\":\"Gráfico de pronóstico del día para México vs Sudáfrica, con horario, sede y llamado a compartir tu pick.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ElTri\",\"#PronosticoDelDia\"],\"assets\":{\"1080x1920\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-11\\\\c_a1d6\\\\1080x1920.png\",\"1080x1350\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-11\\\\c_a1d6\\\\1080x1350.png\",\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-11\\\\c_a1d6\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-10 21:27:01",
+        "meta": {
+          "title": "Pronóstico del día: México vs Sudáfrica abre la historia",
+          "payload": {
+            "scheduled_for": "2026-06-11T11:30:00-06:00",
+            "hook": "México abre en casa: ¿nervio de debut o golpe de autoridad?",
+            "body_brief": "Enmarcar el 1-1 de 2010 como espejo emocional, no como destino. Señalar el factor localía en CDMX, la primera media hora y una predicción suave: México empuja desde el inicio, pero necesita paciencia.",
+            "template": "pronostico-del-dia",
+            "cta": "Tu pick en predictagol.com",
+            "hashtag_brief": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ElTri",
+              "#MexicoSudafrica",
+              "#PronosticoDelDia"
+            ],
+            "notes": "Abrir con matchup limpio. Sin vocabulario de mercado; pedir marcador como conversación.",
+            "target_match": {
+              "home": "Mexico",
+              "away": "South Africa",
+              "kickoff_iso": "2026-06-11T13:00:00-06:00",
+              "venue": "Mexico City"
+            },
+            "signal_source": "widow-2026-06-10-01",
+            "homeTeam": "México",
+            "awayTeam": "Sudáfrica",
+            "flagEmojiHome": "🇲🇽",
+            "flagEmojiAway": "🇿🇦",
+            "kickoff": "2026-06-11T13:00:00-06:00",
+            "venue": "Mexico City",
+            "caption": "México vs Sudáfrica hoy 🇲🇽⚽\n\nMéxico abre en casa: ¿nervio de debut o golpe de autoridad?\n\nNuestra lectura: México empuja desde el inicio, pero la paciencia vale más que la prisa. ¿Y tú?\n\nTu pick en predictagol.com\n\n#PredictaGol #Mundial2026 #ElTri #PronosticoDelDia",
+            "alt_text": "Gráfico de pronóstico del día para México vs Sudáfrica, con horario, sede y llamado a compartir tu pick.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ElTri",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "1080x1920": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_a1d6\\1080x1920.png",
+              "1080x1350": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_a1d6\\1080x1350.png",
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_a1d6\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 128,
+        "card_id": "c_a1d6",
+        "actor": "strange",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "ideas",
+        "note": null,
+        "meta_json": "{\"owner\":\"strange\",\"pillar\":\"pronostico_del_dia\"}",
+        "created_at": "2026-06-10 19:27:49",
+        "meta": {
+          "owner": "strange",
+          "pillar": "pronostico_del_dia"
+        }
+      }
+    ]
+  }
+}

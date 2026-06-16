@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:27:49.844Z",
+  "event": {
+    "type": "create",
+    "actor": "strange",
+    "to_stage": "ideas"
+  },
+  "card": {
+    "id": "c_b434",
+    "title": "Reactivo: noche mundialista en Monterrey, Suecia vs Túnez",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "momento_del_partido",
+    "platforms": [
+      "x",
+      "threads",
+      "instagram",
+      "tiktok",
+      "youtube"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-14T20:30:00-06:00",
+      "hook": "Monterrey tiene partido y la quiniela todavía respira.",
+      "body_brief": "Slot para gol, empate parcial o cierre intenso. El ángulo es México como sede activa más allá del Tri, con reacción rápida y pregunta de marcador final.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Monterrey",
+        "#QuinielaPredictaGol"
+      ],
+      "notes": "Acento local de sede mexicana. No usar marcas de estadio si no están autorizadas.",
+      "target_match": {
+        "home": "Sweden",
+        "away": "Tunisia",
+        "kickoff_iso": "2026-06-14T20:00:00-06:00",
+        "venue": "Monterrey (Guadalupe)"
+      }
+    },
+    "priority": 6,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:27:49",
+    "updated_at": "2026-06-10 19:27:49",
+    "posts": [],
+    "events": [
+      {
+        "id": 141,
+        "card_id": "c_b434",
+        "actor": "strange",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "ideas",
+        "note": null,
+        "meta_json": "{\"owner\":\"strange\",\"pillar\":\"momento_del_partido\"}",
+        "created_at": "2026-06-10 19:27:49",
+        "meta": {
+          "owner": "strange",
+          "pillar": "momento_del_partido"
+        }
+      }
+    ]
+  }
+}

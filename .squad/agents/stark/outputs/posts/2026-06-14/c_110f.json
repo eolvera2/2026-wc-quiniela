@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-14T15:32:27.172Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "title": "PGS® Suecia 1-0 Túnez — dato del día",
+      "stage": "to_be_posted",
+      "payload": {
+        "template": "data-callout",
+        "format_variant": "data_callout",
+        "scheduled_for": "2026-06-14T20:00:00-06:00",
+        "target_match": {
+          "home": "Suecia",
+          "away": "Túnez",
+          "kickoff_iso": "2026-06-14T20:00:00-06:00",
+          "venue": "Guadalupe, México"
+        },
+        "homeTeam": "Suecia",
+        "awayTeam": "Túnez",
+        "flagCodeHome": "se",
+        "flagCodeAway": "tn",
+        "bigNumber": "1-0",
+        "eyebrow": "PGS® Suecia vs Túnez",
+        "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Guadalupe, México",
+        "cta": "Más datos en predictagol.com",
+        "caption": "📊 PGS® inicial · Suecia 1-0 Túnez\n\nSuecia vs Túnez: el algoritmo PGS® tiene su veredicto.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+        "alt_text": "Tarjeta cuadrada con el número PGS® 1-0 para Suecia vs Túnez.",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#Suecia",
+          "#Tunez",
+          "#PGS"
+        ],
+        "assets": {
+          "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_110f\\1080x1080.png"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_110f",
+    "title": "PGS® Suecia 1-0 Túnez — dato del día",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "x"
+    ],
+    "payload": {
+      "template": "data-callout",
+      "format_variant": "data_callout",
+      "scheduled_for": "2026-06-14T20:00:00-06:00",
+      "target_match": {
+        "home": "Suecia",
+        "away": "Túnez",
+        "kickoff_iso": "2026-06-14T20:00:00-06:00",
+        "venue": "Guadalupe, México"
+      },
+      "homeTeam": "Suecia",
+      "awayTeam": "Túnez",
+      "flagCodeHome": "se",
+      "flagCodeAway": "tn",
+      "bigNumber": "1-0",
+      "eyebrow": "PGS® Suecia vs Túnez",
+      "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Guadalupe, México",
+      "cta": "Más datos en predictagol.com",
+      "caption": "📊 PGS® inicial · Suecia 1-0 Túnez\n\nSuecia vs Túnez: el algoritmo PGS® tiene su veredicto.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+      "alt_text": "Tarjeta cuadrada con el número PGS® 1-0 para Suecia vs Túnez.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Suecia",
+        "#Tunez",
+        "#PGS"
+      ],
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_110f\\1080x1080.png"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": null,
+    "created_at": "2026-06-14 15:30:44",
+    "updated_at": "2026-06-14 15:32:27",
+    "posts": [],
+    "events": [
+      {
+        "id": 332,
+        "card_id": "c_110f",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Suecia 1-0 Túnez — dato del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-14T20:00:00-06:00\",\"target_match\":{\"home\":\"Suecia\",\"away\":\"Túnez\",\"kickoff_iso\":\"2026-06-14T20:00:00-06:00\",\"venue\":\"Guadalupe, México\"},\"homeTeam\":\"Suecia\",\"awayTeam\":\"Túnez\",\"flagCodeHome\":\"se\",\"flagCodeAway\":\"tn\",\"bigNumber\":\"1-0\",\"eyebrow\":\"PGS® Suecia vs Túnez\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Guadalupe, México\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Suecia 1-0 Túnez\\n\\nSuecia vs Túnez: el algoritmo PGS® tiene su veredicto.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-0 para Suecia vs Túnez.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Suecia\",\"#Tunez\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_110f\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-14 15:32:27",
+        "meta": {
+          "title": "PGS® Suecia 1-0 Túnez — dato del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-14T20:00:00-06:00",
+            "target_match": {
+              "home": "Suecia",
+              "away": "Túnez",
+              "kickoff_iso": "2026-06-14T20:00:00-06:00",
+              "venue": "Guadalupe, México"
+            },
+            "homeTeam": "Suecia",
+            "awayTeam": "Túnez",
+            "flagCodeHome": "se",
+            "flagCodeAway": "tn",
+            "bigNumber": "1-0",
+            "eyebrow": "PGS® Suecia vs Túnez",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Guadalupe, México",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Suecia 1-0 Túnez\n\nSuecia vs Túnez: el algoritmo PGS® tiene su veredicto.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-0 para Suecia vs Túnez.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Suecia",
+              "#Tunez",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_110f\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 317,
+        "card_id": "c_110f",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-14T20:00:00-06:00\",\"target_match\":{\"home\":\"Suecia\",\"away\":\"Túnez\",\"kickoff_iso\":\"2026-06-14T20:00:00-06:00\",\"venue\":\"Guadalupe, México\"},\"homeTeam\":\"Suecia\",\"awayTeam\":\"Túnez\",\"flagCodeHome\":\"se\",\"flagCodeAway\":\"tn\",\"bigNumber\":\"1-0\",\"eyebrow\":\"PGS® Suecia vs Túnez\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Guadalupe, México\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Suecia 1-0 Túnez\\n\\nSuecia vs Túnez: el algoritmo PGS® tiene su veredicto.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-0 para Suecia vs Túnez.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Suecia\",\"#Tunez\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_110f\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-14 15:31:58",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-14T20:00:00-06:00",
+            "target_match": {
+              "home": "Suecia",
+              "away": "Túnez",
+              "kickoff_iso": "2026-06-14T20:00:00-06:00",
+              "venue": "Guadalupe, México"
+            },
+            "homeTeam": "Suecia",
+            "awayTeam": "Túnez",
+            "flagCodeHome": "se",
+            "flagCodeAway": "tn",
+            "bigNumber": "1-0",
+            "eyebrow": "PGS® Suecia vs Túnez",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Guadalupe, México",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Suecia 1-0 Túnez\n\nSuecia vs Túnez: el algoritmo PGS® tiene su veredicto.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-0 para Suecia vs Túnez.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Suecia",
+              "#Tunez",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_110f\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 316,
+        "card_id": "c_110f",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Suecia 1-0 Túnez — dato del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-14T20:00:00-06:00\",\"target_match\":{\"home\":\"Suecia\",\"away\":\"Túnez\",\"kickoff_iso\":\"2026-06-14T20:00:00-06:00\",\"venue\":\"Guadalupe, México\"},\"homeTeam\":\"Suecia\",\"awayTeam\":\"Túnez\",\"flagCodeHome\":\"se\",\"flagCodeAway\":\"tn\",\"bigNumber\":\"1-0\",\"eyebrow\":\"PGS® Suecia vs Túnez\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Guadalupe, México\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Suecia 1-0 Túnez\\n\\nSuecia vs Túnez: el algoritmo PGS® tiene su veredicto.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-0 para Suecia vs Túnez.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Suecia\",\"#Tunez\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_110f\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-14 15:31:57",
+        "meta": {
+          "title": "PGS® Suecia 1-0 Túnez — dato del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-14T20:00:00-06:00",
+            "target_match": {
+              "home": "Suecia",
+              "away": "Túnez",
+              "kickoff_iso": "2026-06-14T20:00:00-06:00",
+              "venue": "Guadalupe, México"
+            },
+            "homeTeam": "Suecia",
+            "awayTeam": "Túnez",
+            "flagCodeHome": "se",
+            "flagCodeAway": "tn",
+            "bigNumber": "1-0",
+            "eyebrow": "PGS® Suecia vs Túnez",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Guadalupe, México",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Suecia 1-0 Túnez\n\nSuecia vs Túnez: el algoritmo PGS® tiene su veredicto.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-0 para Suecia vs Túnez.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Suecia",
+              "#Tunez",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_110f\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 301,
+        "card_id": "c_110f",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-14T20:00:00-06:00\",\"target_match\":{\"home\":\"Suecia\",\"away\":\"Túnez\",\"kickoff_iso\":\"2026-06-14T20:00:00-06:00\",\"venue\":\"Guadalupe, México\"},\"homeTeam\":\"Suecia\",\"awayTeam\":\"Túnez\",\"flagCodeHome\":\"se\",\"flagCodeAway\":\"tn\",\"bigNumber\":\"1-0\",\"eyebrow\":\"PGS® Suecia vs Túnez\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Guadalupe, México\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Suecia 1-0 Túnez\\n\\nSuecia vs Túnez: el algoritmo PGS® tiene su veredicto.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-0 para Suecia vs Túnez.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Suecia\",\"#Tunez\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_110f\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-14 15:30:45",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-14T20:00:00-06:00",
+            "target_match": {
+              "home": "Suecia",
+              "away": "Túnez",
+              "kickoff_iso": "2026-06-14T20:00:00-06:00",
+              "venue": "Guadalupe, México"
+            },
+            "homeTeam": "Suecia",
+            "awayTeam": "Túnez",
+            "flagCodeHome": "se",
+            "flagCodeAway": "tn",
+            "bigNumber": "1-0",
+            "eyebrow": "PGS® Suecia vs Túnez",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Guadalupe, México",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Suecia 1-0 Túnez\n\nSuecia vs Túnez: el algoritmo PGS® tiene su veredicto.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-0 para Suecia vs Túnez.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Suecia",
+              "#Tunez",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_110f\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 300,
+        "card_id": "c_110f",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"expires_at\":null}",
+        "created_at": "2026-06-14 15:30:44",
+        "meta": {
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "expires_at": null
+        }
+      }
+    ]
+  }
+}

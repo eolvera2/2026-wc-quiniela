@@ -1,0 +1,421 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-13T14:24:39.512Z",
+  "event": {
+    "type": "edit",
+    "actor": "demo",
+    "meta": {
+      "payload": {
+        "template": "data-callout",
+        "format_variant": "data_callout",
+        "scheduled_for": "2026-06-13T19:00:00-06:00",
+        "target_match": {
+          "home": "Haití",
+          "away": "Escocia",
+          "kickoff_iso": "2026-06-13T19:00:00-06:00",
+          "venue": "Foxborough, EE.UU."
+        },
+        "homeTeam": "Haití",
+        "awayTeam": "Escocia",
+        "flagCodeHome": "ht",
+        "flagCodeAway": "gb-sct",
+        "bigNumber": "0-1",
+        "eyebrow": "PGS® Haití vs Escocia",
+        "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.",
+        "cta": "Más datos en predictagol.com",
+        "caption": "📊 PGS® inicial · Haití 0-1 Escocia\n\nEscocia trae estructura, Haití trae historia. El primer gol redibuja el partido.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+        "alt_text": "Tarjeta cuadrada con el número PGS® 0-1 para Haití vs Escocia.",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#Haití",
+          "#Escocia",
+          "#PGS"
+        ],
+        "assets": {
+          "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e222\\1080x1080.png"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_e222",
+    "title": "PGS® Haití 0-1 Escocia — dato del día",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "template": "data-callout",
+      "format_variant": "data_callout",
+      "scheduled_for": "2026-06-13T19:00:00-06:00",
+      "target_match": {
+        "home": "Haití",
+        "away": "Escocia",
+        "kickoff_iso": "2026-06-13T19:00:00-06:00",
+        "venue": "Foxborough, EE.UU."
+      },
+      "homeTeam": "Haití",
+      "awayTeam": "Escocia",
+      "flagCodeHome": "ht",
+      "flagCodeAway": "gb-sct",
+      "bigNumber": "0-1",
+      "eyebrow": "PGS® Haití vs Escocia",
+      "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.",
+      "cta": "Más datos en predictagol.com",
+      "caption": "📊 PGS® inicial · Haití 0-1 Escocia\n\nEscocia trae estructura, Haití trae historia. El primer gol redibuja el partido.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+      "alt_text": "Tarjeta cuadrada con el número PGS® 0-1 para Haití vs Escocia.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Haití",
+        "#Escocia",
+        "#PGS"
+      ],
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e222\\1080x1080.png"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": null,
+    "created_at": "2026-06-13 14:19:15",
+    "updated_at": "2026-06-13 14:24:39",
+    "posts": [],
+    "events": [
+      {
+        "id": 264,
+        "card_id": "c_e222",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-13T19:00:00-06:00\",\"target_match\":{\"home\":\"Haití\",\"away\":\"Escocia\",\"kickoff_iso\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Haití\",\"awayTeam\":\"Escocia\",\"flagCodeHome\":\"ht\",\"flagCodeAway\":\"gb-sct\",\"bigNumber\":\"0-1\",\"eyebrow\":\"PGS® Haití vs Escocia\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Haití 0-1 Escocia\\n\\nEscocia trae estructura, Haití trae historia. El primer gol redibuja el partido.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-1 para Haití vs Escocia.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Haití\",\"#Escocia\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e222\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-13 14:24:39",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-13T19:00:00-06:00",
+            "target_match": {
+              "home": "Haití",
+              "away": "Escocia",
+              "kickoff_iso": "2026-06-13T19:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Haití",
+            "awayTeam": "Escocia",
+            "flagCodeHome": "ht",
+            "flagCodeAway": "gb-sct",
+            "bigNumber": "0-1",
+            "eyebrow": "PGS® Haití vs Escocia",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Haití 0-1 Escocia\n\nEscocia trae estructura, Haití trae historia. El primer gol redibuja el partido.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-1 para Haití vs Escocia.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Haití",
+              "#Escocia",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e222\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 263,
+        "card_id": "c_e222",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Haití 0-1 Escocia — dato del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-13T19:00:00-06:00\",\"target_match\":{\"home\":\"Haití\",\"away\":\"Escocia\",\"kickoff_iso\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Haití\",\"awayTeam\":\"Escocia\",\"flagCodeHome\":\"ht\",\"flagCodeAway\":\"gb-sct\",\"bigNumber\":\"0-1\",\"eyebrow\":\"PGS® Haití vs Escocia\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Haití 0-1 Escocia\\n\\nEscocia trae estructura, Haití trae historia. El primer gol redibuja el partido.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-1 para Haití vs Escocia.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Haití\",\"#Escocia\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e222\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-13 14:24:39",
+        "meta": {
+          "title": "PGS® Haití 0-1 Escocia — dato del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-13T19:00:00-06:00",
+            "target_match": {
+              "home": "Haití",
+              "away": "Escocia",
+              "kickoff_iso": "2026-06-13T19:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Haití",
+            "awayTeam": "Escocia",
+            "flagCodeHome": "ht",
+            "flagCodeAway": "gb-sct",
+            "bigNumber": "0-1",
+            "eyebrow": "PGS® Haití vs Escocia",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Haití 0-1 Escocia\n\nEscocia trae estructura, Haití trae historia. El primer gol redibuja el partido.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-1 para Haití vs Escocia.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Haití",
+              "#Escocia",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e222\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 252,
+        "card_id": "c_e222",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-13T19:00:00-06:00\",\"target_match\":{\"home\":\"Haití\",\"away\":\"Escocia\",\"kickoff_iso\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Haití\",\"awayTeam\":\"Escocia\",\"flagCodeHome\":\"ht\",\"flagCodeAway\":\"gb-sct\",\"bigNumber\":\"0-1\",\"eyebrow\":\"PGS® Haití vs Escocia\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Haití 0-1 Escocia\\n\\nEscocia trae estructura, Haití trae historia. El primer gol redibuja el partido.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-1 para Haití vs Escocia.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Haití\",\"#Escocia\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e222\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-13 14:23:42",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-13T19:00:00-06:00",
+            "target_match": {
+              "home": "Haití",
+              "away": "Escocia",
+              "kickoff_iso": "2026-06-13T19:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Haití",
+            "awayTeam": "Escocia",
+            "flagCodeHome": "ht",
+            "flagCodeAway": "gb-sct",
+            "bigNumber": "0-1",
+            "eyebrow": "PGS® Haití vs Escocia",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Haití 0-1 Escocia\n\nEscocia trae estructura, Haití trae historia. El primer gol redibuja el partido.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-1 para Haití vs Escocia.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Haití",
+              "#Escocia",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e222\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 251,
+        "card_id": "c_e222",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Haití 0-1 Escocia — dato del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-13T19:00:00-06:00\",\"target_match\":{\"home\":\"Haití\",\"away\":\"Escocia\",\"kickoff_iso\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Haití\",\"awayTeam\":\"Escocia\",\"flagCodeHome\":\"ht\",\"flagCodeAway\":\"gb-sct\",\"bigNumber\":\"0-1\",\"eyebrow\":\"PGS® Haití vs Escocia\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Haití 0-1 Escocia\\n\\nEscocia trae estructura, Haití trae historia. El primer gol redibuja el partido.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-1 para Haití vs Escocia.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Haití\",\"#Escocia\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e222\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-13 14:23:41",
+        "meta": {
+          "title": "PGS® Haití 0-1 Escocia — dato del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-13T19:00:00-06:00",
+            "target_match": {
+              "home": "Haití",
+              "away": "Escocia",
+              "kickoff_iso": "2026-06-13T19:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Haití",
+            "awayTeam": "Escocia",
+            "flagCodeHome": "ht",
+            "flagCodeAway": "gb-sct",
+            "bigNumber": "0-1",
+            "eyebrow": "PGS® Haití vs Escocia",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Haití 0-1 Escocia\n\nEscocia trae estructura, Haití trae historia. El primer gol redibuja el partido.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-1 para Haití vs Escocia.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Haití",
+              "#Escocia",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e222\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 240,
+        "card_id": "c_e222",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-13T19:00:00-06:00\",\"target_match\":{\"home\":\"Haití\",\"away\":\"Escocia\",\"kickoff_iso\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Haití\",\"awayTeam\":\"Escocia\",\"flagCodeHome\":\"ht\",\"flagCodeAway\":\"gb-sct\",\"bigNumber\":\"0-1\",\"eyebrow\":\"PGS® Haití vs Escocia\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU..\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Haití 0-1 Escocia\\n\\nEscocia trae estructura, Haití trae historia. El primer gol redibuja el partido.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-1 para Haití vs Escocia.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Haití\",\"#Escocia\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e222\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-13 14:22:27",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-13T19:00:00-06:00",
+            "target_match": {
+              "home": "Haití",
+              "away": "Escocia",
+              "kickoff_iso": "2026-06-13T19:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Haití",
+            "awayTeam": "Escocia",
+            "flagCodeHome": "ht",
+            "flagCodeAway": "gb-sct",
+            "bigNumber": "0-1",
+            "eyebrow": "PGS® Haití vs Escocia",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU..",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Haití 0-1 Escocia\n\nEscocia trae estructura, Haití trae historia. El primer gol redibuja el partido.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-1 para Haití vs Escocia.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Haití",
+              "#Escocia",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e222\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 239,
+        "card_id": "c_e222",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Haití 0-1 Escocia — dato del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-13T19:00:00-06:00\",\"target_match\":{\"home\":\"Haití\",\"away\":\"Escocia\",\"kickoff_iso\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Haití\",\"awayTeam\":\"Escocia\",\"flagCodeHome\":\"ht\",\"flagCodeAway\":\"gb-sct\",\"bigNumber\":\"0-1\",\"eyebrow\":\"PGS® Haití vs Escocia\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU..\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Haití 0-1 Escocia\\n\\nEscocia trae estructura, Haití trae historia. El primer gol redibuja el partido.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-1 para Haití vs Escocia.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Haití\",\"#Escocia\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e222\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-13 14:22:27",
+        "meta": {
+          "title": "PGS® Haití 0-1 Escocia — dato del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-13T19:00:00-06:00",
+            "target_match": {
+              "home": "Haití",
+              "away": "Escocia",
+              "kickoff_iso": "2026-06-13T19:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Haití",
+            "awayTeam": "Escocia",
+            "flagCodeHome": "ht",
+            "flagCodeAway": "gb-sct",
+            "bigNumber": "0-1",
+            "eyebrow": "PGS® Haití vs Escocia",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU..",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Haití 0-1 Escocia\n\nEscocia trae estructura, Haití trae historia. El primer gol redibuja el partido.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-1 para Haití vs Escocia.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Haití",
+              "#Escocia",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e222\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 228,
+        "card_id": "c_e222",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-13T16:00:00-06:00\",\"target_match\":{\"home\":\"Haití\",\"away\":\"Escocia\",\"kickoff_iso\":\"2026-06-13T16:00:00-06:00\",\"venue\":\"Toronto\"},\"homeTeam\":\"Haití\",\"awayTeam\":\"Escocia\",\"flagCodeHome\":\"ht\",\"flagCodeAway\":\"gb-sct\",\"bigNumber\":\"0-1\",\"eyebrow\":\"PGS® Haití vs Escocia\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Toronto.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Haití 0-1 Escocia\\n\\nEscocia trae estructura, Haití trae historia. El primer gol redibuja el partido.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-1 para Haití vs Escocia.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Haití\",\"#Escocia\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e222\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-13 14:19:16",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-13T16:00:00-06:00",
+            "target_match": {
+              "home": "Haití",
+              "away": "Escocia",
+              "kickoff_iso": "2026-06-13T16:00:00-06:00",
+              "venue": "Toronto"
+            },
+            "homeTeam": "Haití",
+            "awayTeam": "Escocia",
+            "flagCodeHome": "ht",
+            "flagCodeAway": "gb-sct",
+            "bigNumber": "0-1",
+            "eyebrow": "PGS® Haití vs Escocia",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Toronto.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Haití 0-1 Escocia\n\nEscocia trae estructura, Haití trae historia. El primer gol redibuja el partido.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-1 para Haití vs Escocia.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Haití",
+              "#Escocia",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e222\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 227,
+        "card_id": "c_e222",
+        "actor": "demo",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"expires_at\":null}",
+        "created_at": "2026-06-13 14:19:15",
+        "meta": {
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "expires_at": null
+        }
+      }
+    ]
+  }
+}

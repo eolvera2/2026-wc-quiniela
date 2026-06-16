@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:27:49.922Z",
+  "event": {
+    "type": "create",
+    "actor": "strange",
+    "to_stage": "ideas"
+  },
+  "card": {
+    "id": "c_f567",
+    "title": "Quiniela: Portugal vs DR Congo abre el Grupo K",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "quiniela_challenge",
+    "platforms": [
+      "instagram",
+      "tiktok",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-17T10:15:00-06:00",
+      "hook": "Primer pick del Grupo K: control portugués o partido incómodo.",
+      "body_brief": "Dinámica de marcador antes del juego en Houston. Dar tres chips simples: Portugal por uno, empate con goles o golpe temprano de DR Congo.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#QuinielaPredictaGol",
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Portugal"
+      ],
+      "notes": "Usar Congo DR si Cap prefiere nombre normalizado en arte final.",
+      "target_match": {
+        "home": "Portugal",
+        "away": "DR Congo",
+        "kickoff_iso": "2026-06-17T11:00:00-06:00",
+        "venue": "Houston"
+      }
+    },
+    "priority": 7,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:27:49",
+    "updated_at": "2026-06-10 19:27:49",
+    "posts": [],
+    "events": [
+      {
+        "id": 151,
+        "card_id": "c_f567",
+        "actor": "strange",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "ideas",
+        "note": null,
+        "meta_json": "{\"owner\":\"strange\",\"pillar\":\"quiniela_challenge\"}",
+        "created_at": "2026-06-10 19:27:49",
+        "meta": {
+          "owner": "strange",
+          "pillar": "quiniela_challenge"
+        }
+      }
+    ]
+  }
+}

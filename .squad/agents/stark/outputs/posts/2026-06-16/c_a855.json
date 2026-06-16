@@ -1,0 +1,509 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-16T03:54:44.192Z",
+  "event": {
+    "type": "kill",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "killed",
+    "note": "Bulk discard expired To Be Posted cards from column header",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_a855",
+    "title": "PGS® Irán 1-0 Nueva Zelanda — T-15 dato clave",
+    "stage": "killed",
+    "owner": "stark",
+    "pillar": "datos_curiosos",
+    "platforms": [
+      "x"
+    ],
+    "payload": {
+      "template": "data-callout",
+      "format_variant": "data_callout",
+      "scheduled_for": "2026-06-15T18:45:00-06:00",
+      "window_key": "t_minus_15",
+      "window_label": "T-15m · dato clave",
+      "expires_at": "2026-06-16T01:15:00.000Z",
+      "target_match": {
+        "home": "Irán",
+        "away": "Nueva Zelanda",
+        "kickoff_iso": "2026-06-15T19:00:00-06:00",
+        "venue": "Inglewood, EE.UU."
+      },
+      "homeTeam": "Irán",
+      "awayTeam": "Nueva Zelanda",
+      "flagCodeHome": "ir",
+      "flagCodeAway": "nz",
+      "bigNumber": "1-0",
+      "eyebrow": "PGS® Irán vs Nueva Zelanda",
+      "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Inglewood, EE.UU.",
+      "cta": "Más datos en predictagol.com",
+      "caption": "Dato a 15 minutos del Irán vs Nueva Zelanda:\n\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+      "alt_text": "Tarjeta cuadrada con el número PGS® 1-0 para Irán vs Nueva Zelanda.",
+      "hashtags": [
+        "#PredictaGol",
+        "#WorldCup2026"
+      ],
+      "platform_copy": {
+        "x": {
+          "format": "quote_post",
+          "text": "Para quote-postear sobre una alineación/dato oficial de Irán vs Nueva Zelanda:\n\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+          "hashtags": [
+            "#PredictaGol",
+            "#WorldCup2026"
+          ],
+          "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+        }
+      },
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_a855\\1080x1080.png"
+      }
+    },
+    "priority": 7,
+    "stalled_at": null,
+    "expires_at": "2026-06-16T01:15:00.000Z",
+    "created_at": "2026-06-15 03:22:04",
+    "updated_at": "2026-06-16 03:54:44",
+    "posts": [],
+    "events": [
+      {
+        "id": 882,
+        "card_id": "c_a855",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Bulk discard expired To Be Posted cards from column header",
+        "meta_json": "{}",
+        "created_at": "2026-06-16 03:54:44",
+        "meta": {}
+      },
+      {
+        "id": 807,
+        "card_id": "c_a855",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T18:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T01:15:00.000Z\",\"target_match\":{\"home\":\"Irán\",\"away\":\"Nueva Zelanda\",\"kickoff_iso\":\"2026-06-15T19:00:00-06:00\",\"venue\":\"Inglewood, EE.UU.\"},\"homeTeam\":\"Irán\",\"awayTeam\":\"Nueva Zelanda\",\"flagCodeHome\":\"ir\",\"flagCodeAway\":\"nz\",\"bigNumber\":\"1-0\",\"eyebrow\":\"PGS® Irán vs Nueva Zelanda\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Inglewood, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Irán vs Nueva Zelanda:\\n\\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-0 para Irán vs Nueva Zelanda.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Irán vs Nueva Zelanda:\\n\\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_a855\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-16 01:39:44",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T18:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T01:15:00.000Z",
+            "target_match": {
+              "home": "Irán",
+              "away": "Nueva Zelanda",
+              "kickoff_iso": "2026-06-15T19:00:00-06:00",
+              "venue": "Inglewood, EE.UU."
+            },
+            "homeTeam": "Irán",
+            "awayTeam": "Nueva Zelanda",
+            "flagCodeHome": "ir",
+            "flagCodeAway": "nz",
+            "bigNumber": "1-0",
+            "eyebrow": "PGS® Irán vs Nueva Zelanda",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Inglewood, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Irán vs Nueva Zelanda:\n\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-0 para Irán vs Nueva Zelanda.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Irán vs Nueva Zelanda:\n\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_a855\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 806,
+        "card_id": "c_a855",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Irán 1-0 Nueva Zelanda — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-16T01:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T18:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T01:15:00.000Z\",\"target_match\":{\"home\":\"Irán\",\"away\":\"Nueva Zelanda\",\"kickoff_iso\":\"2026-06-15T19:00:00-06:00\",\"venue\":\"Inglewood, EE.UU.\"},\"homeTeam\":\"Irán\",\"awayTeam\":\"Nueva Zelanda\",\"flagCodeHome\":\"ir\",\"flagCodeAway\":\"nz\",\"bigNumber\":\"1-0\",\"eyebrow\":\"PGS® Irán vs Nueva Zelanda\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Inglewood, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Irán vs Nueva Zelanda:\\n\\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-0 para Irán vs Nueva Zelanda.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Irán vs Nueva Zelanda:\\n\\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_a855\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-16 01:39:44",
+        "meta": {
+          "title": "PGS® Irán 1-0 Nueva Zelanda — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-16T01:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T18:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T01:15:00.000Z",
+            "target_match": {
+              "home": "Irán",
+              "away": "Nueva Zelanda",
+              "kickoff_iso": "2026-06-15T19:00:00-06:00",
+              "venue": "Inglewood, EE.UU."
+            },
+            "homeTeam": "Irán",
+            "awayTeam": "Nueva Zelanda",
+            "flagCodeHome": "ir",
+            "flagCodeAway": "nz",
+            "bigNumber": "1-0",
+            "eyebrow": "PGS® Irán vs Nueva Zelanda",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Inglewood, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Irán vs Nueva Zelanda:\n\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-0 para Irán vs Nueva Zelanda.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Irán vs Nueva Zelanda:\n\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_a855\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 680,
+        "card_id": "c_a855",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T18:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T01:15:00.000Z\",\"target_match\":{\"home\":\"Irán\",\"away\":\"Nueva Zelanda\",\"kickoff_iso\":\"2026-06-15T19:00:00-06:00\",\"venue\":\"Inglewood, EE.UU.\"},\"homeTeam\":\"Irán\",\"awayTeam\":\"Nueva Zelanda\",\"flagCodeHome\":\"ir\",\"flagCodeAway\":\"nz\",\"bigNumber\":\"1-0\",\"eyebrow\":\"PGS® Irán vs Nueva Zelanda\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Inglewood, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Irán vs Nueva Zelanda:\\n\\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-0 para Irán vs Nueva Zelanda.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Irán vs Nueva Zelanda:\\n\\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_a855\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:03:37",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T18:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T01:15:00.000Z",
+            "target_match": {
+              "home": "Irán",
+              "away": "Nueva Zelanda",
+              "kickoff_iso": "2026-06-15T19:00:00-06:00",
+              "venue": "Inglewood, EE.UU."
+            },
+            "homeTeam": "Irán",
+            "awayTeam": "Nueva Zelanda",
+            "flagCodeHome": "ir",
+            "flagCodeAway": "nz",
+            "bigNumber": "1-0",
+            "eyebrow": "PGS® Irán vs Nueva Zelanda",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Inglewood, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Irán vs Nueva Zelanda:\n\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-0 para Irán vs Nueva Zelanda.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Irán vs Nueva Zelanda:\n\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_a855\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 679,
+        "card_id": "c_a855",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Irán 1-0 Nueva Zelanda — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-16T01:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T18:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T01:15:00.000Z\",\"target_match\":{\"home\":\"Irán\",\"away\":\"Nueva Zelanda\",\"kickoff_iso\":\"2026-06-15T19:00:00-06:00\",\"venue\":\"Inglewood, EE.UU.\"},\"homeTeam\":\"Irán\",\"awayTeam\":\"Nueva Zelanda\",\"flagCodeHome\":\"ir\",\"flagCodeAway\":\"nz\",\"bigNumber\":\"1-0\",\"eyebrow\":\"PGS® Irán vs Nueva Zelanda\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Inglewood, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Irán vs Nueva Zelanda:\\n\\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-0 para Irán vs Nueva Zelanda.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Irán vs Nueva Zelanda:\\n\\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_a855\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:03:37",
+        "meta": {
+          "title": "PGS® Irán 1-0 Nueva Zelanda — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-16T01:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T18:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T01:15:00.000Z",
+            "target_match": {
+              "home": "Irán",
+              "away": "Nueva Zelanda",
+              "kickoff_iso": "2026-06-15T19:00:00-06:00",
+              "venue": "Inglewood, EE.UU."
+            },
+            "homeTeam": "Irán",
+            "awayTeam": "Nueva Zelanda",
+            "flagCodeHome": "ir",
+            "flagCodeAway": "nz",
+            "bigNumber": "1-0",
+            "eyebrow": "PGS® Irán vs Nueva Zelanda",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Inglewood, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Irán vs Nueva Zelanda:\n\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-0 para Irán vs Nueva Zelanda.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Irán vs Nueva Zelanda:\n\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_a855\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 571,
+        "card_id": "c_a855",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T18:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T01:15:00.000Z\",\"target_match\":{\"home\":\"Irán\",\"away\":\"Nueva Zelanda\",\"kickoff_iso\":\"2026-06-15T19:00:00-06:00\",\"venue\":\"Inglewood, EE.UU.\"},\"homeTeam\":\"Irán\",\"awayTeam\":\"Nueva Zelanda\",\"flagCodeHome\":\"ir\",\"flagCodeAway\":\"nz\",\"bigNumber\":\"1-0\",\"eyebrow\":\"PGS® Irán vs Nueva Zelanda\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Inglewood, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Irán vs Nueva Zelanda:\\n\\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-0 para Irán vs Nueva Zelanda.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Irán vs Nueva Zelanda:\\n\\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_a855\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 14:48:38",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T18:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T01:15:00.000Z",
+            "target_match": {
+              "home": "Irán",
+              "away": "Nueva Zelanda",
+              "kickoff_iso": "2026-06-15T19:00:00-06:00",
+              "venue": "Inglewood, EE.UU."
+            },
+            "homeTeam": "Irán",
+            "awayTeam": "Nueva Zelanda",
+            "flagCodeHome": "ir",
+            "flagCodeAway": "nz",
+            "bigNumber": "1-0",
+            "eyebrow": "PGS® Irán vs Nueva Zelanda",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Inglewood, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Irán vs Nueva Zelanda:\n\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-0 para Irán vs Nueva Zelanda.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Irán vs Nueva Zelanda:\n\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_a855\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 570,
+        "card_id": "c_a855",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Irán 1-0 Nueva Zelanda — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-16T01:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T18:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T01:15:00.000Z\",\"target_match\":{\"home\":\"Irán\",\"away\":\"Nueva Zelanda\",\"kickoff_iso\":\"2026-06-15T19:00:00-06:00\",\"venue\":\"Inglewood, EE.UU.\"},\"homeTeam\":\"Irán\",\"awayTeam\":\"Nueva Zelanda\",\"flagCodeHome\":\"ir\",\"flagCodeAway\":\"nz\",\"bigNumber\":\"1-0\",\"eyebrow\":\"PGS® Irán vs Nueva Zelanda\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Inglewood, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Irán vs Nueva Zelanda:\\n\\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-0 para Irán vs Nueva Zelanda.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Irán vs Nueva Zelanda:\\n\\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_a855\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 14:48:38",
+        "meta": {
+          "title": "PGS® Irán 1-0 Nueva Zelanda — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-16T01:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T18:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T01:15:00.000Z",
+            "target_match": {
+              "home": "Irán",
+              "away": "Nueva Zelanda",
+              "kickoff_iso": "2026-06-15T19:00:00-06:00",
+              "venue": "Inglewood, EE.UU."
+            },
+            "homeTeam": "Irán",
+            "awayTeam": "Nueva Zelanda",
+            "flagCodeHome": "ir",
+            "flagCodeAway": "nz",
+            "bigNumber": "1-0",
+            "eyebrow": "PGS® Irán vs Nueva Zelanda",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Inglewood, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Irán vs Nueva Zelanda:\n\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-0 para Irán vs Nueva Zelanda.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Irán vs Nueva Zelanda:\n\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_a855\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 500,
+        "card_id": "c_a855",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T18:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T01:15:00.000Z\",\"target_match\":{\"home\":\"Irán\",\"away\":\"Nueva Zelanda\",\"kickoff_iso\":\"2026-06-15T19:00:00-06:00\",\"venue\":\"Inglewood, EE.UU.\"},\"homeTeam\":\"Irán\",\"awayTeam\":\"Nueva Zelanda\",\"flagCodeHome\":\"ir\",\"flagCodeAway\":\"nz\",\"bigNumber\":\"1-0\",\"eyebrow\":\"PGS® Irán vs Nueva Zelanda\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Inglewood, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Irán vs Nueva Zelanda:\\n\\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-0 para Irán vs Nueva Zelanda.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Irán vs Nueva Zelanda:\\n\\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_a855\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 03:22:05",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T18:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T01:15:00.000Z",
+            "target_match": {
+              "home": "Irán",
+              "away": "Nueva Zelanda",
+              "kickoff_iso": "2026-06-15T19:00:00-06:00",
+              "venue": "Inglewood, EE.UU."
+            },
+            "homeTeam": "Irán",
+            "awayTeam": "Nueva Zelanda",
+            "flagCodeHome": "ir",
+            "flagCodeAway": "nz",
+            "bigNumber": "1-0",
+            "eyebrow": "PGS® Irán vs Nueva Zelanda",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Inglewood, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Irán vs Nueva Zelanda:\n\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-0 para Irán vs Nueva Zelanda.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Irán vs Nueva Zelanda:\n\nPGS® 1-0. Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_a855\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 499,
+        "card_id": "c_a855",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"expires_at\":\"2026-06-16T01:15:00.000Z\"}",
+        "created_at": "2026-06-15 03:22:04",
+        "meta": {
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "expires_at": "2026-06-16T01:15:00.000Z"
+        }
+      }
+    ]
+  }
+}

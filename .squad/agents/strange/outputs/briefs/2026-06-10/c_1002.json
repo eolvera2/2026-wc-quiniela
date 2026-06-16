@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:17:08.923Z",
+  "event": {
+    "type": "create",
+    "actor": "seed-wave1",
+    "to_stage": "ideas"
+  },
+  "card": {
+    "id": "c_1002",
+    "title": "Idea: ¿Quién será el caballo negro del Mundial 2026?",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "quiniela_challenge",
+    "platforms": [
+      "x",
+      "instagram",
+      "threads"
+    ],
+    "payload": {
+      "caption": "Pregunta rápida para activar comentarios y quinielas."
+    },
+    "priority": 20,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:17:08",
+    "updated_at": "2026-06-10 19:17:08",
+    "posts": [],
+    "events": [
+      {
+        "id": 102,
+        "card_id": "c_1002",
+        "actor": "seed-wave1",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "ideas",
+        "note": "Wave-1 demo seed",
+        "meta_json": "{\"owner\":\"strange\",\"pillar\":\"quiniela_challenge\"}",
+        "created_at": "2026-06-10 19:17:08",
+        "meta": {
+          "owner": "strange",
+          "pillar": "quiniela_challenge"
+        }
+      }
+    ]
+  }
+}

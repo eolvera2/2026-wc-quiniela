@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:22:18.894Z",
+  "event": {
+    "type": "create",
+    "actor": "widow",
+    "to_stage": "pulse_signals"
+  },
+  "card": {
+    "id": "c_6241",
+    "title": "La ceremonia ya es plan de grupo: música latina, horario comida y previa larga",
+    "stage": "pulse_signals",
+    "owner": "widow",
+    "pillar": "pulse",
+    "platforms": [],
+    "payload": {
+      "signal_type": "cultural_moment",
+      "platform_origin": "news",
+      "evidence_urls": [
+        "https://www.infobae.com/mexico/deportes/2026/05/13/a-menos-de-un-mes-asi-sera-la-inauguracion-del-mundial-2026-en-el-estadio-ciudad-de-mexico-el-proximo-11-de-junio/",
+        "https://www.sopitas.com/deportes/donde-ver-mexico-vs-sudafrica-ceremonia-inauguracion-mundial-2026/",
+        "https://expansion.mx/tendencias/2026/06/08/cuando-a-que-hora-es-inauguracion-mundial-2026"
+      ],
+      "predictagol_angle": "Crear “previa de 90 minutos”: encuesta de canción, botana y marcador para meter el pick antes del silbatazo.",
+      "suggested_pillar": "Momento del Partido",
+      "urgency": "today",
+      "confidence": "high"
+    },
+    "priority": 10,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:22:18",
+    "updated_at": "2026-06-10 19:22:18",
+    "posts": [],
+    "events": [
+      {
+        "id": 119,
+        "card_id": "c_6241",
+        "actor": "widow",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "pulse_signals",
+        "note": null,
+        "meta_json": "{\"owner\":\"widow\",\"pillar\":\"pulse\"}",
+        "created_at": "2026-06-10 19:22:18",
+        "meta": {
+          "owner": "widow",
+          "pillar": "pulse"
+        }
+      }
+    ]
+  }
+}

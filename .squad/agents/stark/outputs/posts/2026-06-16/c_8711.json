@@ -1,0 +1,709 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-16T03:54:44.043Z",
+  "event": {
+    "type": "kill",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "killed",
+    "note": "Bulk discard expired To Be Posted cards from column header",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_8711",
+    "title": "Arabia Saudita vs Uruguay: T-48 breakdown",
+    "stage": "killed",
+    "owner": "stark",
+    "pillar": "tu_equipo_tu_data",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "template": "pronostico-carousel-3up",
+      "format_variant": "carousel_3up",
+      "scheduled_for": "2026-06-13T16:00:00-06:00",
+      "window_key": "t_minus_48h",
+      "window_label": "T-48h · breakdown",
+      "expires_at": "2026-06-14T22:00:00.000Z",
+      "target_match": {
+        "home": "Arabia Saudita",
+        "away": "Uruguay",
+        "kickoff_iso": "2026-06-15T16:00:00-06:00",
+        "venue": "Miami Gardens, EE.UU."
+      },
+      "homeTeam": "Arabia Saudita",
+      "awayTeam": "Uruguay",
+      "flagCodeHome": "sa",
+      "flagCodeAway": "uy",
+      "slideTitle": "Arabia Saudita vs Uruguay",
+      "kickoff": "2026-06-15T16:00:00-06:00",
+      "venue": "Miami Gardens, EE.UU.",
+      "pgsHome": "0",
+      "pgsAway": "2",
+      "pickShort": "Uruguay gana",
+      "hook": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.",
+      "cta": "Guárdalo para tu quiniela",
+      "caption": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 0-2\n3. Pick temprano: Uruguay gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+      "alt_text": "Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#ArabiaSaudita",
+        "#Uruguay",
+        "#ElDato"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "breakdown_carousel",
+          "caption": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 0-2\n3. Pick temprano: Uruguay gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#ArabiaSaudita",
+            "#Uruguay",
+            "#ElDato"
+          ],
+          "alt_text": "Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.",
+          "asset_keys": [
+            "slide_1",
+            "slide_2",
+            "slide_3"
+          ]
+        },
+        "x": {
+          "format": "breakdown_thread",
+          "text": "Breakdown temprano: Arabia Saudita vs Uruguay 🧵\n\n1/ PGS® inicial: 0-2\n2/ Pick temprano: Uruguay gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+          "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "short_list",
+          "text": "3 señales a 48h de Arabia Saudita vs Uruguay:\n\n1. PGS® inicial 0-2\n2. Pick temprano: Uruguay gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "assets": {
+        "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_1.png",
+        "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_2.png",
+        "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_3.png"
+      }
+    },
+    "priority": 9,
+    "stalled_at": null,
+    "expires_at": "2026-06-14T22:00:00.000Z",
+    "created_at": "2026-06-15 03:09:51",
+    "updated_at": "2026-06-16 03:54:44",
+    "posts": [],
+    "events": [
+      {
+        "id": 868,
+        "card_id": "c_8711",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Bulk discard expired To Be Posted cards from column header",
+        "meta_json": "{}",
+        "created_at": "2026-06-16 03:54:44",
+        "meta": {}
+      },
+      {
+        "id": 786,
+        "card_id": "c_8711",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T16:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T22:00:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"slideTitle\":\"Arabia Saudita vs Uruguay\",\"kickoff\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Uruguay gana\",\"hook\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 0-2\\n3. Pick temprano: Uruguay gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 0-2\\n3. Pick temprano: Uruguay gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Arabia Saudita vs Uruguay 🧵\\n\\n1/ PGS® inicial: 0-2\\n2/ Pick temprano: Uruguay gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"short_list\",\"text\":\"3 señales a 48h de Arabia Saudita vs Uruguay:\\n\\n1. PGS® inicial 0-2\\n2. Pick temprano: Uruguay gana\\n3. La primera media hora puede cambiar toda la quiniela.\\n\\n¿Cuál señal estás viendo tú?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-16 01:39:08",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T16:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T22:00:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "slideTitle": "Arabia Saudita vs Uruguay",
+            "kickoff": "2026-06-15T16:00:00-06:00",
+            "venue": "Miami Gardens, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Uruguay gana",
+            "hook": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 0-2\n3. Pick temprano: Uruguay gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ArabiaSaudita",
+              "#Uruguay",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 0-2\n3. Pick temprano: Uruguay gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#ArabiaSaudita",
+                  "#Uruguay",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Arabia Saudita vs Uruguay 🧵\n\n1/ PGS® inicial: 0-2\n2/ Pick temprano: Uruguay gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "short_list",
+                "text": "3 señales a 48h de Arabia Saudita vs Uruguay:\n\n1. PGS® inicial 0-2\n2. Pick temprano: Uruguay gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 785,
+        "card_id": "c_8711",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "killed",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Arabia Saudita vs Uruguay: T-48 breakdown\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"tu_equipo_tu_data\",\"priority\":9,\"expires_at\":\"2026-06-14T22:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T16:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T22:00:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"slideTitle\":\"Arabia Saudita vs Uruguay\",\"kickoff\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Uruguay gana\",\"hook\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 0-2\\n3. Pick temprano: Uruguay gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 0-2\\n3. Pick temprano: Uruguay gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Arabia Saudita vs Uruguay 🧵\\n\\n1/ PGS® inicial: 0-2\\n2/ Pick temprano: Uruguay gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"short_list\",\"text\":\"3 señales a 48h de Arabia Saudita vs Uruguay:\\n\\n1. PGS® inicial 0-2\\n2. Pick temprano: Uruguay gana\\n3. La primera media hora puede cambiar toda la quiniela.\\n\\n¿Cuál señal estás viendo tú?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-16 01:39:06",
+        "meta": {
+          "title": "Arabia Saudita vs Uruguay: T-48 breakdown",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "tu_equipo_tu_data",
+          "priority": 9,
+          "expires_at": "2026-06-14T22:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T16:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T22:00:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "slideTitle": "Arabia Saudita vs Uruguay",
+            "kickoff": "2026-06-15T16:00:00-06:00",
+            "venue": "Miami Gardens, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Uruguay gana",
+            "hook": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 0-2\n3. Pick temprano: Uruguay gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ArabiaSaudita",
+              "#Uruguay",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 0-2\n3. Pick temprano: Uruguay gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#ArabiaSaudita",
+                  "#Uruguay",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Arabia Saudita vs Uruguay 🧵\n\n1/ PGS® inicial: 0-2\n2/ Pick temprano: Uruguay gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "short_list",
+                "text": "3 señales a 48h de Arabia Saudita vs Uruguay:\n\n1. PGS® inicial 0-2\n2. Pick temprano: Uruguay gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 738,
+        "card_id": "c_8711",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-16 01:26:06",
+        "meta": {}
+      },
+      {
+        "id": 659,
+        "card_id": "c_8711",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T16:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T22:00:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"slideTitle\":\"Arabia Saudita vs Uruguay\",\"kickoff\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Uruguay gana\",\"hook\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 0-2\\n3. Pick temprano: Uruguay gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 0-2\\n3. Pick temprano: Uruguay gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Arabia Saudita vs Uruguay 🧵\\n\\n1/ PGS® inicial: 0-2\\n2/ Pick temprano: Uruguay gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"short_list\",\"text\":\"3 señales a 48h de Arabia Saudita vs Uruguay:\\n\\n1. PGS® inicial 0-2\\n2. Pick temprano: Uruguay gana\\n3. La primera media hora puede cambiar toda la quiniela.\\n\\n¿Cuál señal estás viendo tú?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:03:14",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T16:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T22:00:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "slideTitle": "Arabia Saudita vs Uruguay",
+            "kickoff": "2026-06-15T16:00:00-06:00",
+            "venue": "Miami Gardens, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Uruguay gana",
+            "hook": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 0-2\n3. Pick temprano: Uruguay gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ArabiaSaudita",
+              "#Uruguay",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 0-2\n3. Pick temprano: Uruguay gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#ArabiaSaudita",
+                  "#Uruguay",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Arabia Saudita vs Uruguay 🧵\n\n1/ PGS® inicial: 0-2\n2/ Pick temprano: Uruguay gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "short_list",
+                "text": "3 señales a 48h de Arabia Saudita vs Uruguay:\n\n1. PGS® inicial 0-2\n2. Pick temprano: Uruguay gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 658,
+        "card_id": "c_8711",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "killed",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Arabia Saudita vs Uruguay: T-48 breakdown\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"tu_equipo_tu_data\",\"priority\":9,\"expires_at\":\"2026-06-14T22:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T16:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T22:00:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"slideTitle\":\"Arabia Saudita vs Uruguay\",\"kickoff\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Uruguay gana\",\"hook\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 0-2\\n3. Pick temprano: Uruguay gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 0-2\\n3. Pick temprano: Uruguay gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Arabia Saudita vs Uruguay 🧵\\n\\n1/ PGS® inicial: 0-2\\n2/ Pick temprano: Uruguay gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"short_list\",\"text\":\"3 señales a 48h de Arabia Saudita vs Uruguay:\\n\\n1. PGS® inicial 0-2\\n2. Pick temprano: Uruguay gana\\n3. La primera media hora puede cambiar toda la quiniela.\\n\\n¿Cuál señal estás viendo tú?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:03:13",
+        "meta": {
+          "title": "Arabia Saudita vs Uruguay: T-48 breakdown",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "tu_equipo_tu_data",
+          "priority": 9,
+          "expires_at": "2026-06-14T22:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T16:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T22:00:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "slideTitle": "Arabia Saudita vs Uruguay",
+            "kickoff": "2026-06-15T16:00:00-06:00",
+            "venue": "Miami Gardens, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Uruguay gana",
+            "hook": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 0-2\n3. Pick temprano: Uruguay gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ArabiaSaudita",
+              "#Uruguay",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 0-2\n3. Pick temprano: Uruguay gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#ArabiaSaudita",
+                  "#Uruguay",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Arabia Saudita vs Uruguay 🧵\n\n1/ PGS® inicial: 0-2\n2/ Pick temprano: Uruguay gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "short_list",
+                "text": "3 señales a 48h de Arabia Saudita vs Uruguay:\n\n1. PGS® inicial 0-2\n2. Pick temprano: Uruguay gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 629,
+        "card_id": "c_8711",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-15 14:55:41",
+        "meta": {}
+      },
+      {
+        "id": 550,
+        "card_id": "c_8711",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T16:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T22:00:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"slideTitle\":\"Arabia Saudita vs Uruguay\",\"kickoff\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Uruguay gana\",\"hook\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 0-2\\n3. Pick temprano: Uruguay gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 0-2\\n3. Pick temprano: Uruguay gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Arabia Saudita vs Uruguay 🧵\\n\\n1/ PGS® inicial: 0-2\\n2/ Pick temprano: Uruguay gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"discussion_breakdown\",\"text\":\"Arabia Saudita vs Uruguay, lectura a 48h.\\n\\nPGS® inicial 0-2. Pick temprano: Uruguay gana.\\n\\n¿Qué señal estás viendo tú antes de que cambie la conversación?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 14:48:15",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T16:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T22:00:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "slideTitle": "Arabia Saudita vs Uruguay",
+            "kickoff": "2026-06-15T16:00:00-06:00",
+            "venue": "Miami Gardens, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Uruguay gana",
+            "hook": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 0-2\n3. Pick temprano: Uruguay gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ArabiaSaudita",
+              "#Uruguay",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 0-2\n3. Pick temprano: Uruguay gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#ArabiaSaudita",
+                  "#Uruguay",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Arabia Saudita vs Uruguay 🧵\n\n1/ PGS® inicial: 0-2\n2/ Pick temprano: Uruguay gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "discussion_breakdown",
+                "text": "Arabia Saudita vs Uruguay, lectura a 48h.\n\nPGS® inicial 0-2. Pick temprano: Uruguay gana.\n\n¿Qué señal estás viendo tú antes de que cambie la conversación?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 549,
+        "card_id": "c_8711",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "killed",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Arabia Saudita vs Uruguay: T-48 breakdown\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"tu_equipo_tu_data\",\"priority\":9,\"expires_at\":\"2026-06-14T22:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T16:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T22:00:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"slideTitle\":\"Arabia Saudita vs Uruguay\",\"kickoff\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Uruguay gana\",\"hook\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 0-2\\n3. Pick temprano: Uruguay gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 0-2\\n3. Pick temprano: Uruguay gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Arabia Saudita vs Uruguay 🧵\\n\\n1/ PGS® inicial: 0-2\\n2/ Pick temprano: Uruguay gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"discussion_breakdown\",\"text\":\"Arabia Saudita vs Uruguay, lectura a 48h.\\n\\nPGS® inicial 0-2. Pick temprano: Uruguay gana.\\n\\n¿Qué señal estás viendo tú antes de que cambie la conversación?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_8711\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 14:48:13",
+        "meta": {
+          "title": "Arabia Saudita vs Uruguay: T-48 breakdown",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "tu_equipo_tu_data",
+          "priority": 9,
+          "expires_at": "2026-06-14T22:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T16:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T22:00:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "slideTitle": "Arabia Saudita vs Uruguay",
+            "kickoff": "2026-06-15T16:00:00-06:00",
+            "venue": "Miami Gardens, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Uruguay gana",
+            "hook": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 0-2\n3. Pick temprano: Uruguay gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ArabiaSaudita",
+              "#Uruguay",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Arabia Saudita vs Uruguay: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 0-2\n3. Pick temprano: Uruguay gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#ArabiaSaudita",
+                  "#Uruguay",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Arabia Saudita vs Uruguay: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Arabia Saudita vs Uruguay 🧵\n\n1/ PGS® inicial: 0-2\n2/ Pick temprano: Uruguay gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "discussion_breakdown",
+                "text": "Arabia Saudita vs Uruguay, lectura a 48h.\n\nPGS® inicial 0-2. Pick temprano: Uruguay gana.\n\n¿Qué señal estás viendo tú antes de que cambie la conversación?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_8711\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 506,
+        "card_id": "c_8711",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-15 03:28:14",
+        "meta": {}
+      }
+    ]
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:04:13.106Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "title": "Irak vs Noruega: HT debate en vivo",
+      "stage": "to_be_posted",
+      "owner": "stark",
+      "pillar": "quiniela_challenge",
+      "priority": 6,
+      "expires_at": "2026-06-16T23:30:00.000Z",
+      "platforms": [
+        "x",
+        "threads"
+      ],
+      "payload": {
+        "scheduled_for": "2026-06-16T16:55:00-06:00",
+        "window_key": "halftime",
+        "window_label": "HT · debate en vivo",
+        "expires_at": "2026-06-16T23:30:00.000Z",
+        "target_match": {
+          "home": "Irak",
+          "away": "Noruega",
+          "kickoff_iso": "2026-06-16T16:00:00-06:00"
+        },
+        "caption": "Reply live para HT en Irak vs Noruega:\n\nEl pick inicial era Noruega gana (PGS® 0-2). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+        "hashtags": [
+          "#WorldCup2026"
+        ],
+        "platform_copy": {
+          "x": {
+            "format": "live_reply",
+            "text": "Reply live para HT en Irak vs Noruega:\n\nEl pick inicial era Noruega gana (PGS® 0-2). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+            "hashtags": [
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "match_thread_reply",
+            "text": "Para responder en un thread activo del partido:\n\nMedio tiempo en Irak vs Noruega. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Noruega gana o ves giro en el segundo tiempo?",
+            "hashtags": [
+              "#PredictaGol"
+            ]
+          }
+        },
+        "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+      }
+    }
+  },
+  "card": {
+    "id": "c_5a9d",
+    "title": "Irak vs Noruega: HT debate en vivo",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "quiniela_challenge",
+    "platforms": [
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-16T16:55:00-06:00",
+      "window_key": "halftime",
+      "window_label": "HT · debate en vivo",
+      "expires_at": "2026-06-16T23:30:00.000Z",
+      "target_match": {
+        "home": "Irak",
+        "away": "Noruega",
+        "kickoff_iso": "2026-06-16T16:00:00-06:00"
+      },
+      "caption": "Reply live para HT en Irak vs Noruega:\n\nEl pick inicial era Noruega gana (PGS® 0-2). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+      "hashtags": [
+        "#WorldCup2026"
+      ],
+      "platform_copy": {
+        "x": {
+          "format": "live_reply",
+          "text": "Reply live para HT en Irak vs Noruega:\n\nEl pick inicial era Noruega gana (PGS® 0-2). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "match_thread_reply",
+          "text": "Para responder en un thread activo del partido:\n\nMedio tiempo en Irak vs Noruega. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Noruega gana o ves giro en el segundo tiempo?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+    },
+    "priority": 6,
+    "stalled_at": null,
+    "expires_at": "2026-06-16T23:30:00.000Z",
+    "created_at": "2026-06-15 02:53:04",
+    "updated_at": "2026-06-15 15:04:13",
+    "posts": [],
+    "events": [
+      {
+        "id": 720,
+        "card_id": "c_5a9d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Irak vs Noruega: HT debate en vivo\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":6,\"expires_at\":\"2026-06-16T23:30:00.000Z\",\"platforms\":[\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-16T16:55:00-06:00\",\"window_key\":\"halftime\",\"window_label\":\"HT · debate en vivo\",\"expires_at\":\"2026-06-16T23:30:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\"},\"caption\":\"Reply live para HT en Irak vs Noruega:\\n\\nEl pick inicial era Noruega gana (PGS® 0-2). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?\",\"hashtags\":[\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"live_reply\",\"text\":\"Reply live para HT en Irak vs Noruega:\\n\\nEl pick inicial era Noruega gana (PGS® 0-2). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Para responder en un thread activo del partido:\\n\\nMedio tiempo en Irak vs Noruega. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Noruega gana o ves giro en el segundo tiempo?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 15:04:13",
+        "meta": {
+          "title": "Irak vs Noruega: HT debate en vivo",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 6,
+          "expires_at": "2026-06-16T23:30:00.000Z",
+          "platforms": [
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-16T16:55:00-06:00",
+            "window_key": "halftime",
+            "window_label": "HT · debate en vivo",
+            "expires_at": "2026-06-16T23:30:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00"
+            },
+            "caption": "Reply live para HT en Irak vs Noruega:\n\nEl pick inicial era Noruega gana (PGS® 0-2). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+            "hashtags": [
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "live_reply",
+                "text": "Reply live para HT en Irak vs Noruega:\n\nEl pick inicial era Noruega gana (PGS® 0-2). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Para responder en un thread activo del partido:\n\nMedio tiempo en Irak vs Noruega. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Noruega gana o ves giro en el segundo tiempo?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 611,
+        "card_id": "c_5a9d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Irak vs Noruega: HT debate en vivo\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":6,\"expires_at\":\"2026-06-16T23:30:00.000Z\",\"platforms\":[\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-16T16:55:00-06:00\",\"window_key\":\"halftime\",\"window_label\":\"HT · debate en vivo\",\"expires_at\":\"2026-06-16T23:30:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\"},\"caption\":\"HT en Irak vs Noruega.\\n\\nNuestro pick inicial: Noruega gana (PGS® 0-2). ¿Mantienes tu marcador o ya lo cambiaste?\",\"hashtags\":[\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"live_update\",\"text\":\"HT en Irak vs Noruega.\\n\\nNuestro pick inicial: Noruega gana (PGS® 0-2). ¿Mantienes tu marcador o ya lo cambiaste?\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Medio tiempo: Irak vs Noruega.\\n\\nSi tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con el pick inicial o ves giro en el segundo tiempo?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 14:49:14",
+        "meta": {
+          "title": "Irak vs Noruega: HT debate en vivo",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 6,
+          "expires_at": "2026-06-16T23:30:00.000Z",
+          "platforms": [
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-16T16:55:00-06:00",
+            "window_key": "halftime",
+            "window_label": "HT · debate en vivo",
+            "expires_at": "2026-06-16T23:30:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00"
+            },
+            "caption": "HT en Irak vs Noruega.\n\nNuestro pick inicial: Noruega gana (PGS® 0-2). ¿Mantienes tu marcador o ya lo cambiaste?",
+            "hashtags": [
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "live_update",
+                "text": "HT en Irak vs Noruega.\n\nNuestro pick inicial: Noruega gana (PGS® 0-2). ¿Mantienes tu marcador o ya lo cambiaste?",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Medio tiempo: Irak vs Noruega.\n\nSi tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con el pick inicial o ves giro en el segundo tiempo?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 401,
+        "card_id": "c_5a9d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Irak vs Noruega: HT debate en vivo\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":6,\"expires_at\":\"2026-06-16T23:30:00.000Z\",\"platforms\":[\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-16T16:55:00-06:00\",\"window_key\":\"halftime\",\"window_label\":\"HT · debate en vivo\",\"expires_at\":\"2026-06-16T23:30:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\"},\"caption\":\"HT en Irak vs Noruega.\\n\\nNuestro pick inicial: Noruega gana (PGS® 0-2). ¿Mantienes tu marcador o ya lo cambiaste?\",\"hashtags\":[\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"live_update\",\"text\":\"HT en Irak vs Noruega.\\n\\nNuestro pick inicial: Noruega gana (PGS® 0-2). ¿Mantienes tu marcador o ya lo cambiaste?\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Medio tiempo: Irak vs Noruega.\\n\\nSi tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con el pick inicial o ves giro en el segundo tiempo?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 02:53:34",
+        "meta": {
+          "title": "Irak vs Noruega: HT debate en vivo",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 6,
+          "expires_at": "2026-06-16T23:30:00.000Z",
+          "platforms": [
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-16T16:55:00-06:00",
+            "window_key": "halftime",
+            "window_label": "HT · debate en vivo",
+            "expires_at": "2026-06-16T23:30:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00"
+            },
+            "caption": "HT en Irak vs Noruega.\n\nNuestro pick inicial: Noruega gana (PGS® 0-2). ¿Mantienes tu marcador o ya lo cambiaste?",
+            "hashtags": [
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "live_update",
+                "text": "HT en Irak vs Noruega.\n\nNuestro pick inicial: Noruega gana (PGS® 0-2). ¿Mantienes tu marcador o ya lo cambiaste?",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Medio tiempo: Irak vs Noruega.\n\nSi tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con el pick inicial o ves giro en el segundo tiempo?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 377,
+        "card_id": "c_5a9d",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"expires_at\":\"2026-06-16T23:30:00.000Z\"}",
+        "created_at": "2026-06-15 02:53:04",
+        "meta": {
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "expires_at": "2026-06-16T23:30:00.000Z"
+        }
+      }
+    ]
+  }
+}

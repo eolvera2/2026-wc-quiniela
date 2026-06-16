@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-13T01:59:29.508Z",
+  "event": {
+    "type": "manual_post_confirmed",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "posted",
+    "note": "Manual threads post confirmed",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_728d",
+    "title": "Bienvenido a PredictaGol: tu Mundial se pronostica con amigos",
+    "stage": "posted",
+    "owner": "strange",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-11T09:00:00-06:00",
+      "hook": "Arranca el Mundial y tu quiniela también.",
+      "body_brief": "Presentar PredictaGol como juego social de pronósticos para vivir el fixture con amigos. Tono cálido: datos, picks y conversación diaria sin vender humo. Cerrar con el primer llamado al pick del día.",
+      "template": "launch-announcement",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#ElTri",
+        "#QuinielaPredictaGol"
+      ],
+      "notes": "Única tarjeta de lanzamiento del Día 1. Usar logo propio y energía de bienvenida; evitar marcas oficiales.",
+      "signal_source": "widow-2026-06-10-09",
+      "eyebrow": "BIENVENIDOS AL MUNDIAL 2026",
+      "statLine": "Pronósticos, datos y quiniela gratis para vivir cada partido con tu gente.",
+      "caption": "Arranca el Mundial y tu quiniela también. 🌎⚽\n\nEn PredictaGol vivimos los 104 partidos contigo: pronósticos, datos curiosos y tu quiniela gratis con la banda.\n\nJuego social: solo orgullo de grupo.\n\nTu pick en predictagol.com",
+      "alt_text": "Gráfico de bienvenida a PredictaGol con fondo verde y dorado, invitando a pronosticar el Mundial con amigos.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#FutbolEnEspañol",
+        "#QuinielaPredictaGol"
+      ],
+      "assets": {
+        "1080x1920": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_728d\\1080x1920.png",
+        "1080x1350": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_728d\\1080x1350.png",
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_728d\\1080x1080.png"
+      }
+    },
+    "priority": 10,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:27:49",
+    "updated_at": "2026-06-13 01:59:29",
+    "posts": [
+      {
+        "id": 13,
+        "card_id": "c_728d",
+        "platform": "threads",
+        "status": "posted_manual",
+        "permalink": null,
+        "error": null,
+        "posted_at": "2026-06-13T01:59:29.488Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-13 01:59:29",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      },
+      {
+        "id": 10,
+        "card_id": "c_728d",
+        "platform": "x",
+        "status": "posted_manual",
+        "permalink": null,
+        "error": null,
+        "posted_at": "2026-06-13T01:59:23.414Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-11 16:44:18",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      },
+      {
+        "id": 9,
+        "card_id": "c_728d",
+        "platform": "instagram",
+        "status": "posted_manual",
+        "permalink": null,
+        "error": null,
+        "posted_at": "2026-06-13T01:59:18.241Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-11 16:42:29",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      }
+    ],
+    "events": [
+      {
+        "id": 195,
+        "card_id": "c_728d",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "posted",
+        "note": "Manual threads post confirmed",
+        "meta_json": "{}",
+        "created_at": "2026-06-13 01:59:29",
+        "meta": {}
+      },
+      {
+        "id": 194,
+        "card_id": "c_728d",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual threads post confirmed",
+        "meta_json": "{\"platform\":\"threads\",\"permalink\":null}",
+        "created_at": "2026-06-13 01:59:29",
+        "meta": {
+          "platform": "threads",
+          "permalink": null
+        }
+      },
+      {
+        "id": 193,
+        "card_id": "c_728d",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual x post confirmed",
+        "meta_json": "{\"platform\":\"x\",\"permalink\":null}",
+        "created_at": "2026-06-13 01:59:23",
+        "meta": {
+          "platform": "x",
+          "permalink": null
+        }
+      },
+      {
+        "id": 192,
+        "card_id": "c_728d",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual instagram post confirmed",
+        "meta_json": "{\"platform\":\"instagram\",\"permalink\":null}",
+        "created_at": "2026-06-13 01:59:18",
+        "meta": {
+          "platform": "instagram",
+          "permalink": null
+        }
+      },
+      {
+        "id": 191,
+        "card_id": "c_728d",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual x post confirmed",
+        "meta_json": "{\"platform\":\"x\",\"permalink\":\"https://x.com/predictagol/status/2065112779867218363\"}",
+        "created_at": "2026-06-11 16:44:18",
+        "meta": {
+          "platform": "x",
+          "permalink": "https://x.com/predictagol/status/2065112779867218363"
+        }
+      },
+      {
+        "id": 190,
+        "card_id": "c_728d",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual instagram post confirmed",
+        "meta_json": "{\"platform\":\"instagram\",\"permalink\":\"https://www.instagram.com/p/DZc1fJDm0y6/\"}",
+        "created_at": "2026-06-11 16:42:29",
+        "meta": {
+          "platform": "instagram",
+          "permalink": "https://www.instagram.com/p/DZc1fJDm0y6/"
+        }
+      },
+      {
+        "id": 187,
+        "card_id": "c_728d",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual instagram post confirmed",
+        "meta_json": "{\"platform\":\"instagram\",\"permalink\":\"https://www.instagram.com/p/DZc1fJDm0y6/\"}",
+        "created_at": "2026-06-11 15:59:11",
+        "meta": {
+          "platform": "instagram",
+          "permalink": "https://www.instagram.com/p/DZc1fJDm0y6/"
+        }
+      },
+      {
+        "id": 186,
+        "card_id": "c_728d",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "posted",
+        "note": "Manual threads post confirmed",
+        "meta_json": "{}",
+        "created_at": "2026-06-11 15:55:56",
+        "meta": {}
+      },
+      {
+        "id": 170,
+        "card_id": "c_728d",
+        "actor": "cap",
+        "type": "advance",
+        "from_stage": "review",
+        "to_stage": "to_be_posted",
+        "note": "Approved for autonomous publish",
+        "meta_json": "{\"scorecard\":[{\"gate\":1,\"name\":\"Forbidden vocabulary\",\"score\":\"G\",\"note\":\"No forbidden vocabulary detected.\"},{\"gate\":2,\"name\":\"Sportsbook positioning\",\"score\":\"G\",\"note\":\"Soft/no CTA; no sportsbook-positioning pattern detected.\"},{\"gate\":3,\"name\":\"Brand-safe imagery\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":4,\"name\":\"Design tokens\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":5,\"name\":\"Typography & wordmark\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":6,\"name\":\"Safe zones\",\"score\":\"G\",\"note\":\"Renderer SAFE_ZONES constant enforced.\"},{\"gate\":7,\"name\":\"Factual accuracy\",\"score\":\"G\",\"note\":\"No verifiable false claim detected; opinion-framed predictions allowed.\"},{\"gate\":8,\"name\":\"Spanish quality\",\"score\":\"G\",\"note\":\"Natural Spanish quality heuristic passed.\"}],\"verdict\":\"PASS\"}",
+        "created_at": "2026-06-10 21:29:28",
+        "meta": {
+          "scorecard": [
+            {
+              "gate": 1,
+              "name": "Forbidden vocabulary",
+              "score": "G",
+              "note": "No forbidden vocabulary detected."
+            },
+            {
+              "gate": 2,
+              "name": "Sportsbook positioning",
+              "score": "G",
+              "note": "Soft/no CTA; no sportsbook-positioning pattern detected."
+            },
+            {
+              "gate": 3,
+              "name": "Brand-safe imagery",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 4,
+              "name": "Design tokens",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 5,
+              "name": "Typography & wordmark",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 6,
+              "name": "Safe zones",
+              "score": "G",
+              "note": "Renderer SAFE_ZONES constant enforced."
+            },
+            {
+              "gate": 7,
+              "name": "Factual accuracy",
+              "score": "G",
+              "note": "No verifiable false claim detected; opinion-framed predictions allowed."
+            },
+            {
+              "gate": 8,
+              "name": "Spanish quality",
+              "score": "G",
+              "note": "Natural Spanish quality heuristic passed."
+            }
+          ],
+          "verdict": "PASS"
+        }
+      },
+      {
+        "id": 169,
+        "card_id": "c_728d",
+        "actor": "cap",
+        "type": "advance",
+        "from_stage": "copywritten",
+        "to_stage": "review",
+        "note": "Cap intermediate gate passed",
+        "meta_json": "{\"scorecard\":[{\"gate\":1,\"name\":\"Forbidden vocabulary\",\"score\":\"G\",\"note\":\"No forbidden vocabulary detected.\"},{\"gate\":2,\"name\":\"Sportsbook positioning\",\"score\":\"G\",\"note\":\"Soft/no CTA; no sportsbook-positioning pattern detected.\"},{\"gate\":3,\"name\":\"Brand-safe imagery\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":4,\"name\":\"Design tokens\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":5,\"name\":\"Typography & wordmark\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":6,\"name\":\"Safe zones\",\"score\":\"G\",\"note\":\"Renderer SAFE_ZONES constant enforced.\"},{\"gate\":7,\"name\":\"Factual accuracy\",\"score\":\"G\",\"note\":\"No verifiable false claim detected; opinion-framed predictions allowed.\"},{\"gate\":8,\"name\":\"Spanish quality\",\"score\":\"G\",\"note\":\"Natural Spanish quality heuristic passed.\"}],\"verdict\":\"PASS\"}",
+        "created_at": "2026-06-10 21:29:28",
+        "meta": {
+          "scorecard": [
+            {
+              "gate": 1,
+              "name": "Forbidden vocabulary",
+              "score": "G",
+              "note": "No forbidden vocabulary detected."
+            },
+            {
+              "gate": 2,
+              "name": "Sportsbook positioning",
+              "score": "G",
+              "note": "Soft/no CTA; no sportsbook-positioning pattern detected."
+            },
+            {
+              "gate": 3,
+              "name": "Brand-safe imagery",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 4,
+              "name": "Design tokens",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 5,
+              "name": "Typography & wordmark",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 6,
+              "name": "Safe zones",
+              "score": "G",
+              "note": "Renderer SAFE_ZONES constant enforced."
+            },
+            {
+              "gate": 7,
+              "name": "Factual accuracy",
+              "score": "G",
+              "note": "No verifiable false claim detected; opinion-framed predictions allowed."
+            },
+            {
+              "gate": 8,
+              "name": "Spanish quality",
+              "score": "G",
+              "note": "Natural Spanish quality heuristic passed."
+            }
+          ],
+          "verdict": "PASS"
+        }
+      }
+    ]
+  }
+}

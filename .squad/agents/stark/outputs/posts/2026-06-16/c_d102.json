@@ -1,0 +1,656 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-16T03:54:44.219Z",
+  "event": {
+    "type": "kill",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "killed",
+    "note": "Bulk discard expired To Be Posted cards from column header",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_d102",
+    "title": "PGS® España 2-0 Cabo Verde — T-15 dato clave",
+    "stage": "killed",
+    "owner": "stark",
+    "pillar": "datos_curiosos",
+    "platforms": [
+      "x"
+    ],
+    "payload": {
+      "template": "data-callout",
+      "format_variant": "data_callout",
+      "scheduled_for": "2026-06-15T09:45:00-06:00",
+      "target_match": {
+        "home": "España",
+        "away": "Cabo Verde",
+        "kickoff_iso": "2026-06-15T10:00:00-06:00",
+        "venue": "Atlanta, EE.UU."
+      },
+      "homeTeam": "España",
+      "awayTeam": "Cabo Verde",
+      "flagEmojiHome": "🇧🇷",
+      "flagEmojiAway": "🇲🇦",
+      "kickoff": "2026-06-13T16:00:00-06:00",
+      "venue": "New York/New Jersey (East Rutherford)",
+      "pgsHome": "2",
+      "pgsAway": "1",
+      "pickShort": "Brasil gana",
+      "hook": "Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.",
+      "cta": "Más datos en predictagol.com",
+      "caption": "Dato a 15 minutos del España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+      "alt_text": "Tarjeta cuadrada con el número PGS® 2-0 para España vs Cabo Verde.",
+      "hashtags": [
+        "#PredictaGol",
+        "#WorldCup2026"
+      ],
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_d102\\1080x1080.png"
+      },
+      "window_key": "t_minus_15",
+      "window_label": "T-15m · dato clave",
+      "expires_at": "2026-06-15T16:15:00.000Z",
+      "flagCodeHome": "es",
+      "flagCodeAway": "cv",
+      "bigNumber": "2-0",
+      "eyebrow": "PGS® España vs Cabo Verde",
+      "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Atlanta, EE.UU.",
+      "platform_copy": {
+        "x": {
+          "format": "quote_post",
+          "text": "Para quote-postear sobre una alineación/dato oficial de España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+          "hashtags": [
+            "#PredictaGol",
+            "#WorldCup2026"
+          ],
+          "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+        }
+      }
+    },
+    "priority": 7,
+    "stalled_at": null,
+    "expires_at": "2026-06-15T16:15:00.000Z",
+    "created_at": "2026-06-13 02:42:30",
+    "updated_at": "2026-06-16 03:54:44",
+    "posts": [
+      {
+        "id": 14,
+        "card_id": "c_d102",
+        "platform": "instagram",
+        "status": "posted_manual",
+        "permalink": "https://www.instagram.com/p/DZgvkk7FH6b/?img_index=1",
+        "error": null,
+        "posted_at": "2026-06-13T03:51:35.045Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-13 03:51:35",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      }
+    ],
+    "events": [
+      {
+        "id": 885,
+        "card_id": "c_d102",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Bulk discard expired To Be Posted cards from column header",
+        "meta_json": "{}",
+        "created_at": "2026-06-16 03:54:44",
+        "meta": {}
+      },
+      {
+        "id": 768,
+        "card_id": "c_d102",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T09:45:00-06:00\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagEmojiHome\":\"🇧🇷\",\"flagEmojiAway\":\"🇲🇦\",\"kickoff\":\"2026-06-13T16:00:00-06:00\",\"venue\":\"New York/New Jersey (East Rutherford)\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Brasil gana\",\"hook\":\"Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del España vs Cabo Verde:\\n\\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-0 para España vs Cabo Verde.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_d102\\\\1080x1080.png\"},\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T16:15:00.000Z\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"bigNumber\":\"2-0\",\"eyebrow\":\"PGS® España vs Cabo Verde\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Atlanta, EE.UU.\",\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de España vs Cabo Verde:\\n\\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}}}}",
+        "created_at": "2026-06-16 01:38:48",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T09:45:00-06:00",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagEmojiHome": "🇧🇷",
+            "flagEmojiAway": "🇲🇦",
+            "kickoff": "2026-06-13T16:00:00-06:00",
+            "venue": "New York/New Jersey (East Rutherford)",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Brasil gana",
+            "hook": "Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-0 para España vs Cabo Verde.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_d102\\1080x1080.png"
+            },
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T16:15:00.000Z",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "bigNumber": "2-0",
+            "eyebrow": "PGS® España vs Cabo Verde",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Atlanta, EE.UU.",
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": 767,
+        "card_id": "c_d102",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "killed",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® España 2-0 Cabo Verde — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-15T16:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T09:45:00-06:00\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagEmojiHome\":\"🇧🇷\",\"flagEmojiAway\":\"🇲🇦\",\"kickoff\":\"2026-06-13T16:00:00-06:00\",\"venue\":\"New York/New Jersey (East Rutherford)\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Brasil gana\",\"hook\":\"Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del España vs Cabo Verde:\\n\\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-0 para España vs Cabo Verde.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_d102\\\\1080x1080.png\"},\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T16:15:00.000Z\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"bigNumber\":\"2-0\",\"eyebrow\":\"PGS® España vs Cabo Verde\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Atlanta, EE.UU.\",\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de España vs Cabo Verde:\\n\\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}}}}",
+        "created_at": "2026-06-16 01:38:48",
+        "meta": {
+          "title": "PGS® España 2-0 Cabo Verde — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-15T16:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T09:45:00-06:00",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagEmojiHome": "🇧🇷",
+            "flagEmojiAway": "🇲🇦",
+            "kickoff": "2026-06-13T16:00:00-06:00",
+            "venue": "New York/New Jersey (East Rutherford)",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Brasil gana",
+            "hook": "Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-0 para España vs Cabo Verde.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_d102\\1080x1080.png"
+            },
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T16:15:00.000Z",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "bigNumber": "2-0",
+            "eyebrow": "PGS® España vs Cabo Verde",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Atlanta, EE.UU.",
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": 751,
+        "card_id": "c_d102",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-16 01:27:36",
+        "meta": {}
+      },
+      {
+        "id": 641,
+        "card_id": "c_d102",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T09:45:00-06:00\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagEmojiHome\":\"🇧🇷\",\"flagEmojiAway\":\"🇲🇦\",\"kickoff\":\"2026-06-13T16:00:00-06:00\",\"venue\":\"New York/New Jersey (East Rutherford)\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Brasil gana\",\"hook\":\"Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del España vs Cabo Verde:\\n\\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-0 para España vs Cabo Verde.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_d102\\\\1080x1080.png\"},\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T16:15:00.000Z\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"bigNumber\":\"2-0\",\"eyebrow\":\"PGS® España vs Cabo Verde\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Atlanta, EE.UU.\",\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de España vs Cabo Verde:\\n\\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}}}}",
+        "created_at": "2026-06-15 15:03:01",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T09:45:00-06:00",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagEmojiHome": "🇧🇷",
+            "flagEmojiAway": "🇲🇦",
+            "kickoff": "2026-06-13T16:00:00-06:00",
+            "venue": "New York/New Jersey (East Rutherford)",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Brasil gana",
+            "hook": "Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-0 para España vs Cabo Verde.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_d102\\1080x1080.png"
+            },
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T16:15:00.000Z",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "bigNumber": "2-0",
+            "eyebrow": "PGS® España vs Cabo Verde",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Atlanta, EE.UU.",
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": 640,
+        "card_id": "c_d102",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® España 2-0 Cabo Verde — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-15T16:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T09:45:00-06:00\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagEmojiHome\":\"🇧🇷\",\"flagEmojiAway\":\"🇲🇦\",\"kickoff\":\"2026-06-13T16:00:00-06:00\",\"venue\":\"New York/New Jersey (East Rutherford)\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Brasil gana\",\"hook\":\"Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del España vs Cabo Verde:\\n\\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-0 para España vs Cabo Verde.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_d102\\\\1080x1080.png\"},\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T16:15:00.000Z\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"bigNumber\":\"2-0\",\"eyebrow\":\"PGS® España vs Cabo Verde\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Atlanta, EE.UU.\",\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de España vs Cabo Verde:\\n\\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}}}}",
+        "created_at": "2026-06-15 15:03:01",
+        "meta": {
+          "title": "PGS® España 2-0 Cabo Verde — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-15T16:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T09:45:00-06:00",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagEmojiHome": "🇧🇷",
+            "flagEmojiAway": "🇲🇦",
+            "kickoff": "2026-06-13T16:00:00-06:00",
+            "venue": "New York/New Jersey (East Rutherford)",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Brasil gana",
+            "hook": "Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-0 para España vs Cabo Verde.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_d102\\1080x1080.png"
+            },
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T16:15:00.000Z",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "bigNumber": "2-0",
+            "eyebrow": "PGS® España vs Cabo Verde",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Atlanta, EE.UU.",
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": 532,
+        "card_id": "c_d102",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T09:45:00-06:00\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagEmojiHome\":\"🇧🇷\",\"flagEmojiAway\":\"🇲🇦\",\"kickoff\":\"2026-06-13T16:00:00-06:00\",\"venue\":\"New York/New Jersey (East Rutherford)\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Brasil gana\",\"hook\":\"Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del España vs Cabo Verde:\\n\\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-0 para España vs Cabo Verde.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_d102\\\\1080x1080.png\"},\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T16:15:00.000Z\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"bigNumber\":\"2-0\",\"eyebrow\":\"PGS® España vs Cabo Verde\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Atlanta, EE.UU.\",\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del España vs Cabo Verde:\\n\\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}}}}",
+        "created_at": "2026-06-15 14:48:01",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T09:45:00-06:00",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagEmojiHome": "🇧🇷",
+            "flagEmojiAway": "🇲🇦",
+            "kickoff": "2026-06-13T16:00:00-06:00",
+            "venue": "New York/New Jersey (East Rutherford)",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Brasil gana",
+            "hook": "Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-0 para España vs Cabo Verde.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_d102\\1080x1080.png"
+            },
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T16:15:00.000Z",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "bigNumber": "2-0",
+            "eyebrow": "PGS® España vs Cabo Verde",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Atlanta, EE.UU.",
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": 531,
+        "card_id": "c_d102",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® España 2-0 Cabo Verde — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-15T16:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T09:45:00-06:00\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagEmojiHome\":\"🇧🇷\",\"flagEmojiAway\":\"🇲🇦\",\"kickoff\":\"2026-06-13T16:00:00-06:00\",\"venue\":\"New York/New Jersey (East Rutherford)\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Brasil gana\",\"hook\":\"Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del España vs Cabo Verde:\\n\\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-0 para España vs Cabo Verde.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_d102\\\\1080x1080.png\"},\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T16:15:00.000Z\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"bigNumber\":\"2-0\",\"eyebrow\":\"PGS® España vs Cabo Verde\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Atlanta, EE.UU.\",\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del España vs Cabo Verde:\\n\\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}}}}",
+        "created_at": "2026-06-15 14:48:01",
+        "meta": {
+          "title": "PGS® España 2-0 Cabo Verde — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-15T16:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T09:45:00-06:00",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagEmojiHome": "🇧🇷",
+            "flagEmojiAway": "🇲🇦",
+            "kickoff": "2026-06-13T16:00:00-06:00",
+            "venue": "New York/New Jersey (East Rutherford)",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Brasil gana",
+            "hook": "Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-0 para España vs Cabo Verde.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_d102\\1080x1080.png"
+            },
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T16:15:00.000Z",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "bigNumber": "2-0",
+            "eyebrow": "PGS® España vs Cabo Verde",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Atlanta, EE.UU.",
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": 464,
+        "card_id": "c_d102",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T09:45:00-06:00\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagEmojiHome\":\"🇧🇷\",\"flagEmojiAway\":\"🇲🇦\",\"kickoff\":\"2026-06-13T16:00:00-06:00\",\"venue\":\"New York/New Jersey (East Rutherford)\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Brasil gana\",\"hook\":\"Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del España vs Cabo Verde:\\n\\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-0 para España vs Cabo Verde.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_d102\\\\1080x1080.png\"},\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T16:15:00.000Z\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"bigNumber\":\"2-0\",\"eyebrow\":\"PGS® España vs Cabo Verde\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Atlanta, EE.UU.\",\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del España vs Cabo Verde:\\n\\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}}}}",
+        "created_at": "2026-06-15 03:21:52",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T09:45:00-06:00",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagEmojiHome": "🇧🇷",
+            "flagEmojiAway": "🇲🇦",
+            "kickoff": "2026-06-13T16:00:00-06:00",
+            "venue": "New York/New Jersey (East Rutherford)",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Brasil gana",
+            "hook": "Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-0 para España vs Cabo Verde.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_d102\\1080x1080.png"
+            },
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T16:15:00.000Z",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "bigNumber": "2-0",
+            "eyebrow": "PGS® España vs Cabo Verde",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Atlanta, EE.UU.",
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            }
+          }
+        }
+      },
+      {
+        "id": 463,
+        "card_id": "c_d102",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® España 2-0 Cabo Verde — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-15T16:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T09:45:00-06:00\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\",\"venue\":\"Atlanta, EE.UU.\"},\"homeTeam\":\"España\",\"awayTeam\":\"Cabo Verde\",\"flagEmojiHome\":\"🇧🇷\",\"flagEmojiAway\":\"🇲🇦\",\"kickoff\":\"2026-06-13T16:00:00-06:00\",\"venue\":\"New York/New Jersey (East Rutherford)\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Brasil gana\",\"hook\":\"Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del España vs Cabo Verde:\\n\\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-0 para España vs Cabo Verde.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_d102\\\\1080x1080.png\"},\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T16:15:00.000Z\",\"flagCodeHome\":\"es\",\"flagCodeAway\":\"cv\",\"bigNumber\":\"2-0\",\"eyebrow\":\"PGS® España vs Cabo Verde\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Atlanta, EE.UU.\",\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del España vs Cabo Verde:\\n\\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}}}}",
+        "created_at": "2026-06-15 03:21:51",
+        "meta": {
+          "title": "PGS® España 2-0 Cabo Verde — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-15T16:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T09:45:00-06:00",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00",
+              "venue": "Atlanta, EE.UU."
+            },
+            "homeTeam": "España",
+            "awayTeam": "Cabo Verde",
+            "flagEmojiHome": "🇧🇷",
+            "flagEmojiAway": "🇲🇦",
+            "kickoff": "2026-06-13T16:00:00-06:00",
+            "venue": "New York/New Jersey (East Rutherford)",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Brasil gana",
+            "hook": "Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-0 para España vs Cabo Verde.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_d102\\1080x1080.png"
+            },
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T16:15:00.000Z",
+            "flagCodeHome": "es",
+            "flagCodeAway": "cv",
+            "bigNumber": "2-0",
+            "eyebrow": "PGS® España vs Cabo Verde",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Atlanta, EE.UU.",
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del España vs Cabo Verde:\n\nPGS® 2-0. España vs Cabo Verde: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

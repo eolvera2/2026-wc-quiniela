@@ -1,0 +1,21 @@
+{
+  "id": "c_8ebf",
+  "signal_type": "fixture-window",
+  "fixture_key": "AUS-TUR-2026-06-14",
+  "target_match": {
+    "home": "AUS",
+    "away": "TUR",
+    "kickoff_iso": "2026-06-14T19:00:00.000Z"
+  },
+  "pgs": {
+    "home": 1,
+    "away": 2
+  },
+  "hook_candidates": [
+    "Australia vs Türkiye: el algoritmo PGS ya tiene veredicto.",
+    "Antes del silbatazo: cómo se siente Australia contra Türkiye.",
+    "Australia-Türkiye: tres datos rápidos para tu pick."
+  ],
+  "notes": "Pulse incremental generado por Widow refresh — ventana 48h. TTL hasta 2026-06-15T07:00:00.000Z.",
+  "expires_at": "2026-06-15T07:00:00.000Z"
+}

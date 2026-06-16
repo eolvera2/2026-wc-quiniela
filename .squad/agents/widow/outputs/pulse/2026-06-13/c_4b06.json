@@ -1,0 +1,21 @@
+{
+  "id": "c_4b06",
+  "signal_type": "fixture-window",
+  "fixture_key": "HAI-SCO-2026-06-14",
+  "target_match": {
+    "home": "HAI",
+    "away": "SCO",
+    "kickoff_iso": "2026-06-14T19:00:00.000Z"
+  },
+  "pgs": {
+    "home": 0,
+    "away": 1
+  },
+  "hook_candidates": [
+    "Haití vs Escocia: el algoritmo PGS ya tiene veredicto.",
+    "Antes del silbatazo: cómo se siente Haití contra Escocia.",
+    "Haití-Escocia: tres datos rápidos para tu pick."
+  ],
+  "notes": "Pulse incremental generado por Widow refresh — ventana 48h. TTL hasta 2026-06-15T07:00:00.000Z.",
+  "expires_at": "2026-06-15T07:00:00.000Z"
+}

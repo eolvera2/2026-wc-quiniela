@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:27:49.895Z",
+  "event": {
+    "type": "create",
+    "actor": "strange",
+    "to_stage": "ideas"
+  },
+  "card": {
+    "id": "c_c3db",
+    "title": "Reactivo: momento Messi o respuesta de Argelia",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "momento_del_partido",
+    "platforms": [
+      "x",
+      "threads",
+      "instagram",
+      "tiktok",
+      "youtube"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-16T19:45:00-06:00",
+      "hook": "Si el partido se rompe, la quiniela se llena de capturas.",
+      "body_brief": "Slot vivo para gol, asistencia, atajada o jugada que cambie el guion. Pedir reacción breve: lo viste venir o te movió todo el grupo.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Argentina",
+        "#QuinielaPredictaGol"
+      ],
+      "notes": "Evitar usar material oficial. Reacción con texto y formas abstractas.",
+      "target_match": {
+        "home": "Argentina",
+        "away": "Algeria",
+        "kickoff_iso": "2026-06-16T19:00:00-06:00",
+        "venue": "Kansas City"
+      },
+      "signal_source": "widow-2026-06-10-05"
+    },
+    "priority": 7,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:27:49",
+    "updated_at": "2026-06-10 19:27:49",
+    "posts": [],
+    "events": [
+      {
+        "id": 148,
+        "card_id": "c_c3db",
+        "actor": "strange",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "ideas",
+        "note": null,
+        "meta_json": "{\"owner\":\"strange\",\"pillar\":\"momento_del_partido\"}",
+        "created_at": "2026-06-10 19:27:49",
+        "meta": {
+          "owner": "strange",
+          "pillar": "momento_del_partido"
+        }
+      }
+    ]
+  }
+}

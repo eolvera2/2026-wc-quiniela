@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:17:08.933Z",
+  "event": {
+    "type": "create",
+    "actor": "seed-wave1",
+    "to_stage": "to_be_posted"
+  },
+  "card": {
+    "id": "c_1004",
+    "title": "Listo para publicar: México vs rival del día — pick con confianza",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "x",
+      "instagram",
+      "threads",
+      "tiktok"
+    ],
+    "payload": {
+      "caption": "Pronóstico del día con CTA a PredictaGol.",
+      "hashtags": [
+        "#Mundial2026",
+        "#PredictaGol"
+      ]
+    },
+    "priority": 50,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:17:08",
+    "updated_at": "2026-06-10 19:17:08",
+    "posts": [],
+    "events": [
+      {
+        "id": 104,
+        "card_id": "c_1004",
+        "actor": "seed-wave1",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": "Wave-1 demo seed",
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\"}",
+        "created_at": "2026-06-10 19:17:08",
+        "meta": {
+          "owner": "stark",
+          "pillar": "pronostico_del_dia"
+        }
+      }
+    ]
+  }
+}

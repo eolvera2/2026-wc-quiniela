@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-14T15:32:21.644Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "template": "pronostico-carousel-3up",
+        "format_variant": "carousel_3up",
+        "scheduled_for": "2026-06-14T11:00:00-06:00",
+        "target_match": {
+          "home": "Alemania",
+          "away": "Curazao",
+          "kickoff_iso": "2026-06-14T11:00:00-06:00",
+          "venue": "Houston, EE.UU."
+        },
+        "homeTeam": "Alemania",
+        "awayTeam": "Curazao",
+        "flagCodeHome": "de",
+        "flagCodeAway": "cw",
+        "slideTitle": "Alemania vs Curazao",
+        "kickoff": "2026-06-14T11:00:00-06:00",
+        "venue": "Houston, EE.UU.",
+        "pgsHome": "3",
+        "pgsAway": "0",
+        "pickShort": "Alemania gana",
+        "hook": "Alemania vs Curazao: el algoritmo PGS® tiene su veredicto.",
+        "cta": "Tu pick en predictagol.com",
+        "caption": "Alemania vs Curazao hoy domingo, 14 de junio, 11:00 a.m.\n\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Alemania 3-0 Curazao · 🎯 Pick inicial: Alemania gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+        "alt_text": "Carrusel de 3 slides para Alemania vs Curazao: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#Alemania",
+          "#Curazao",
+          "#PronosticoDelDia"
+        ],
+        "assets": {
+          "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_1.png",
+          "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_2.png",
+          "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_3.png"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_a732",
+    "title": "Alemania vs Curazao: pronóstico del día",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram"
+    ],
+    "payload": {
+      "template": "pronostico-carousel-3up",
+      "format_variant": "carousel_3up",
+      "scheduled_for": "2026-06-14T11:00:00-06:00",
+      "target_match": {
+        "home": "Alemania",
+        "away": "Curazao",
+        "kickoff_iso": "2026-06-14T11:00:00-06:00",
+        "venue": "Houston, EE.UU."
+      },
+      "homeTeam": "Alemania",
+      "awayTeam": "Curazao",
+      "flagCodeHome": "de",
+      "flagCodeAway": "cw",
+      "slideTitle": "Alemania vs Curazao",
+      "kickoff": "2026-06-14T11:00:00-06:00",
+      "venue": "Houston, EE.UU.",
+      "pgsHome": "3",
+      "pgsAway": "0",
+      "pickShort": "Alemania gana",
+      "hook": "Alemania vs Curazao: el algoritmo PGS® tiene su veredicto.",
+      "cta": "Tu pick en predictagol.com",
+      "caption": "Alemania vs Curazao hoy domingo, 14 de junio, 11:00 a.m.\n\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Alemania 3-0 Curazao · 🎯 Pick inicial: Alemania gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+      "alt_text": "Carrusel de 3 slides para Alemania vs Curazao: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Alemania",
+        "#Curazao",
+        "#PronosticoDelDia"
+      ],
+      "assets": {
+        "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_1.png",
+        "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_2.png",
+        "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_3.png"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": null,
+    "created_at": "2026-06-14 15:30:34",
+    "updated_at": "2026-06-14 15:32:21",
+    "posts": [],
+    "events": [
+      {
+        "id": 319,
+        "card_id": "c_a732",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T11:00:00-06:00\",\"target_match\":{\"home\":\"Alemania\",\"away\":\"Curazao\",\"kickoff_iso\":\"2026-06-14T11:00:00-06:00\",\"venue\":\"Houston, EE.UU.\"},\"homeTeam\":\"Alemania\",\"awayTeam\":\"Curazao\",\"flagCodeHome\":\"de\",\"flagCodeAway\":\"cw\",\"slideTitle\":\"Alemania vs Curazao\",\"kickoff\":\"2026-06-14T11:00:00-06:00\",\"venue\":\"Houston, EE.UU.\",\"pgsHome\":\"3\",\"pgsAway\":\"0\",\"pickShort\":\"Alemania gana\",\"hook\":\"Alemania vs Curazao: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Alemania vs Curazao hoy domingo, 14 de junio, 11:00 a.m.\\n\\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Alemania 3-0 Curazao · 🎯 Pick inicial: Alemania gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Alemania vs Curazao: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Alemania\",\"#Curazao\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_a732\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_a732\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_a732\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-14 15:32:21",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T11:00:00-06:00",
+            "target_match": {
+              "home": "Alemania",
+              "away": "Curazao",
+              "kickoff_iso": "2026-06-14T11:00:00-06:00",
+              "venue": "Houston, EE.UU."
+            },
+            "homeTeam": "Alemania",
+            "awayTeam": "Curazao",
+            "flagCodeHome": "de",
+            "flagCodeAway": "cw",
+            "slideTitle": "Alemania vs Curazao",
+            "kickoff": "2026-06-14T11:00:00-06:00",
+            "venue": "Houston, EE.UU.",
+            "pgsHome": "3",
+            "pgsAway": "0",
+            "pickShort": "Alemania gana",
+            "hook": "Alemania vs Curazao: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Alemania vs Curazao hoy domingo, 14 de junio, 11:00 a.m.\n\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Alemania 3-0 Curazao · 🎯 Pick inicial: Alemania gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Alemania vs Curazao: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Alemania",
+              "#Curazao",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 318,
+        "card_id": "c_a732",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Alemania vs Curazao: pronóstico del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T11:00:00-06:00\",\"target_match\":{\"home\":\"Alemania\",\"away\":\"Curazao\",\"kickoff_iso\":\"2026-06-14T11:00:00-06:00\",\"venue\":\"Houston, EE.UU.\"},\"homeTeam\":\"Alemania\",\"awayTeam\":\"Curazao\",\"flagCodeHome\":\"de\",\"flagCodeAway\":\"cw\",\"slideTitle\":\"Alemania vs Curazao\",\"kickoff\":\"2026-06-14T11:00:00-06:00\",\"venue\":\"Houston, EE.UU.\",\"pgsHome\":\"3\",\"pgsAway\":\"0\",\"pickShort\":\"Alemania gana\",\"hook\":\"Alemania vs Curazao: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Alemania vs Curazao hoy domingo, 14 de junio, 11:00 a.m.\\n\\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Alemania 3-0 Curazao · 🎯 Pick inicial: Alemania gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Alemania vs Curazao: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Alemania\",\"#Curazao\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_a732\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_a732\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_a732\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-14 15:32:20",
+        "meta": {
+          "title": "Alemania vs Curazao: pronóstico del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T11:00:00-06:00",
+            "target_match": {
+              "home": "Alemania",
+              "away": "Curazao",
+              "kickoff_iso": "2026-06-14T11:00:00-06:00",
+              "venue": "Houston, EE.UU."
+            },
+            "homeTeam": "Alemania",
+            "awayTeam": "Curazao",
+            "flagCodeHome": "de",
+            "flagCodeAway": "cw",
+            "slideTitle": "Alemania vs Curazao",
+            "kickoff": "2026-06-14T11:00:00-06:00",
+            "venue": "Houston, EE.UU.",
+            "pgsHome": "3",
+            "pgsAway": "0",
+            "pickShort": "Alemania gana",
+            "hook": "Alemania vs Curazao: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Alemania vs Curazao hoy domingo, 14 de junio, 11:00 a.m.\n\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Alemania 3-0 Curazao · 🎯 Pick inicial: Alemania gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Alemania vs Curazao: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Alemania",
+              "#Curazao",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 303,
+        "card_id": "c_a732",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T11:00:00-06:00\",\"target_match\":{\"home\":\"Alemania\",\"away\":\"Curazao\",\"kickoff_iso\":\"2026-06-14T11:00:00-06:00\",\"venue\":\"Houston, EE.UU.\"},\"homeTeam\":\"Alemania\",\"awayTeam\":\"Curazao\",\"flagCodeHome\":\"de\",\"flagCodeAway\":\"cw\",\"slideTitle\":\"Alemania vs Curazao\",\"kickoff\":\"2026-06-14T11:00:00-06:00\",\"venue\":\"Houston, EE.UU.\",\"pgsHome\":\"3\",\"pgsAway\":\"0\",\"pickShort\":\"Alemania gana\",\"hook\":\"Alemania vs Curazao: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Alemania vs Curazao hoy domingo, 14 de junio, 11:00 a.m.\\n\\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Alemania 3-0 Curazao · 🎯 Pick inicial: Alemania gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Alemania vs Curazao: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Alemania\",\"#Curazao\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_a732\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_a732\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_a732\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-14 15:31:52",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T11:00:00-06:00",
+            "target_match": {
+              "home": "Alemania",
+              "away": "Curazao",
+              "kickoff_iso": "2026-06-14T11:00:00-06:00",
+              "venue": "Houston, EE.UU."
+            },
+            "homeTeam": "Alemania",
+            "awayTeam": "Curazao",
+            "flagCodeHome": "de",
+            "flagCodeAway": "cw",
+            "slideTitle": "Alemania vs Curazao",
+            "kickoff": "2026-06-14T11:00:00-06:00",
+            "venue": "Houston, EE.UU.",
+            "pgsHome": "3",
+            "pgsAway": "0",
+            "pickShort": "Alemania gana",
+            "hook": "Alemania vs Curazao: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Alemania vs Curazao hoy domingo, 14 de junio, 11:00 a.m.\n\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Alemania 3-0 Curazao · 🎯 Pick inicial: Alemania gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Alemania vs Curazao: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Alemania",
+              "#Curazao",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 302,
+        "card_id": "c_a732",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Alemania vs Curazao: pronóstico del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T11:00:00-06:00\",\"target_match\":{\"home\":\"Alemania\",\"away\":\"Curazao\",\"kickoff_iso\":\"2026-06-14T11:00:00-06:00\",\"venue\":\"Houston, EE.UU.\"},\"homeTeam\":\"Alemania\",\"awayTeam\":\"Curazao\",\"flagCodeHome\":\"de\",\"flagCodeAway\":\"cw\",\"slideTitle\":\"Alemania vs Curazao\",\"kickoff\":\"2026-06-14T11:00:00-06:00\",\"venue\":\"Houston, EE.UU.\",\"pgsHome\":\"3\",\"pgsAway\":\"0\",\"pickShort\":\"Alemania gana\",\"hook\":\"Alemania vs Curazao: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Alemania vs Curazao hoy domingo, 14 de junio, 11:00 a.m.\\n\\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Alemania 3-0 Curazao · 🎯 Pick inicial: Alemania gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Alemania vs Curazao: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Alemania\",\"#Curazao\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_a732\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_a732\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_a732\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-14 15:31:51",
+        "meta": {
+          "title": "Alemania vs Curazao: pronóstico del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T11:00:00-06:00",
+            "target_match": {
+              "home": "Alemania",
+              "away": "Curazao",
+              "kickoff_iso": "2026-06-14T11:00:00-06:00",
+              "venue": "Houston, EE.UU."
+            },
+            "homeTeam": "Alemania",
+            "awayTeam": "Curazao",
+            "flagCodeHome": "de",
+            "flagCodeAway": "cw",
+            "slideTitle": "Alemania vs Curazao",
+            "kickoff": "2026-06-14T11:00:00-06:00",
+            "venue": "Houston, EE.UU.",
+            "pgsHome": "3",
+            "pgsAway": "0",
+            "pickShort": "Alemania gana",
+            "hook": "Alemania vs Curazao: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Alemania vs Curazao hoy domingo, 14 de junio, 11:00 a.m.\n\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Alemania 3-0 Curazao · 🎯 Pick inicial: Alemania gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Alemania vs Curazao: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Alemania",
+              "#Curazao",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 287,
+        "card_id": "c_a732",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T11:00:00-06:00\",\"target_match\":{\"home\":\"Alemania\",\"away\":\"Curazao\",\"kickoff_iso\":\"2026-06-14T11:00:00-06:00\",\"venue\":\"Houston, EE.UU.\"},\"homeTeam\":\"Alemania\",\"awayTeam\":\"Curazao\",\"flagCodeHome\":\"de\",\"flagCodeAway\":\"cw\",\"slideTitle\":\"Alemania vs Curazao\",\"kickoff\":\"2026-06-14T11:00:00-06:00\",\"venue\":\"Houston, EE.UU.\",\"pgsHome\":\"3\",\"pgsAway\":\"0\",\"pickShort\":\"Alemania gana\",\"hook\":\"Alemania vs Curazao: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Alemania vs Curazao hoy domingo, 14 de junio, 11:00 a.m.\\n\\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Alemania 3-0 Curazao · 🎯 Pick inicial: Alemania gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Alemania vs Curazao: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Alemania\",\"#Curazao\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_a732\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_a732\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_a732\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-14 15:30:38",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T11:00:00-06:00",
+            "target_match": {
+              "home": "Alemania",
+              "away": "Curazao",
+              "kickoff_iso": "2026-06-14T11:00:00-06:00",
+              "venue": "Houston, EE.UU."
+            },
+            "homeTeam": "Alemania",
+            "awayTeam": "Curazao",
+            "flagCodeHome": "de",
+            "flagCodeAway": "cw",
+            "slideTitle": "Alemania vs Curazao",
+            "kickoff": "2026-06-14T11:00:00-06:00",
+            "venue": "Houston, EE.UU.",
+            "pgsHome": "3",
+            "pgsAway": "0",
+            "pickShort": "Alemania gana",
+            "hook": "Alemania vs Curazao: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Alemania vs Curazao hoy domingo, 14 de junio, 11:00 a.m.\n\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Alemania 3-0 Curazao · 🎯 Pick inicial: Alemania gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Alemania vs Curazao: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Alemania",
+              "#Curazao",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_a732\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 286,
+        "card_id": "c_a732",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"expires_at\":null}",
+        "created_at": "2026-06-14 15:30:34",
+        "meta": {
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "expires_at": null
+        }
+      }
+    ]
+  }
+}

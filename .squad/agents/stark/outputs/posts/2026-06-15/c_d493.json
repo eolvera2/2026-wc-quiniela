@@ -1,0 +1,535 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:03:49.695Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "template": "data-callout",
+        "format_variant": "data_callout",
+        "scheduled_for": "2026-06-16T12:45:00-06:00",
+        "window_key": "t_minus_15",
+        "window_label": "T-15m · dato clave",
+        "expires_at": "2026-06-16T19:15:00.000Z",
+        "target_match": {
+          "home": "Francia",
+          "away": "Senegal",
+          "kickoff_iso": "2026-06-16T13:00:00-06:00",
+          "venue": "East Rutherford, EE.UU."
+        },
+        "homeTeam": "Francia",
+        "awayTeam": "Senegal",
+        "flagCodeHome": "fr",
+        "flagCodeAway": "sn",
+        "bigNumber": "2-1",
+        "eyebrow": "PGS® Francia vs Senegal",
+        "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en East Rutherford, EE.UU.",
+        "cta": "Más datos en predictagol.com",
+        "caption": "Dato a 15 minutos del Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+        "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Francia vs Senegal.",
+        "hashtags": [
+          "#PredictaGol",
+          "#WorldCup2026"
+        ],
+        "platform_copy": {
+          "x": {
+            "format": "quote_post",
+            "text": "Para quote-postear sobre una alineación/dato oficial de Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+          }
+        },
+        "assets": {
+          "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_d493\\1080x1080.png"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_d493",
+    "title": "PGS® Francia 2-1 Senegal — T-15 dato clave",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "datos_curiosos",
+    "platforms": [
+      "x"
+    ],
+    "payload": {
+      "template": "data-callout",
+      "format_variant": "data_callout",
+      "scheduled_for": "2026-06-16T12:45:00-06:00",
+      "window_key": "t_minus_15",
+      "window_label": "T-15m · dato clave",
+      "expires_at": "2026-06-16T19:15:00.000Z",
+      "target_match": {
+        "home": "Francia",
+        "away": "Senegal",
+        "kickoff_iso": "2026-06-16T13:00:00-06:00",
+        "venue": "East Rutherford, EE.UU."
+      },
+      "homeTeam": "Francia",
+      "awayTeam": "Senegal",
+      "flagCodeHome": "fr",
+      "flagCodeAway": "sn",
+      "bigNumber": "2-1",
+      "eyebrow": "PGS® Francia vs Senegal",
+      "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en East Rutherford, EE.UU.",
+      "cta": "Más datos en predictagol.com",
+      "caption": "Dato a 15 minutos del Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+      "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Francia vs Senegal.",
+      "hashtags": [
+        "#PredictaGol",
+        "#WorldCup2026"
+      ],
+      "platform_copy": {
+        "x": {
+          "format": "quote_post",
+          "text": "Para quote-postear sobre una alineación/dato oficial de Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+          "hashtags": [
+            "#PredictaGol",
+            "#WorldCup2026"
+          ],
+          "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+        }
+      },
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_d493\\1080x1080.png"
+      }
+    },
+    "priority": 7,
+    "stalled_at": null,
+    "expires_at": "2026-06-16T19:15:00.000Z",
+    "created_at": "2026-06-15 02:52:57",
+    "updated_at": "2026-06-15 15:03:49",
+    "posts": [],
+    "events": [
+      {
+        "id": 693,
+        "card_id": "c_d493",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-16T12:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T19:15:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® Francia vs Senegal\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en East Rutherford, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Francia vs Senegal:\\n\\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 para Francia vs Senegal.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Francia vs Senegal:\\n\\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_d493\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:03:49",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-16T12:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T19:15:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® Francia vs Senegal",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en East Rutherford, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Francia vs Senegal.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_d493\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 692,
+        "card_id": "c_d493",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Francia 2-1 Senegal — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-16T19:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-16T12:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T19:15:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® Francia vs Senegal\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en East Rutherford, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Francia vs Senegal:\\n\\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 para Francia vs Senegal.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Francia vs Senegal:\\n\\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_d493\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:03:49",
+        "meta": {
+          "title": "PGS® Francia 2-1 Senegal — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-16T19:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-16T12:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T19:15:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® Francia vs Senegal",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en East Rutherford, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Francia vs Senegal.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_d493\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 584,
+        "card_id": "c_d493",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-16T12:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T19:15:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® Francia vs Senegal\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en East Rutherford, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Francia vs Senegal:\\n\\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 para Francia vs Senegal.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Francia vs Senegal:\\n\\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_d493\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 14:48:50",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-16T12:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T19:15:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® Francia vs Senegal",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en East Rutherford, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Francia vs Senegal.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_d493\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 583,
+        "card_id": "c_d493",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Francia 2-1 Senegal — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-16T19:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-16T12:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T19:15:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® Francia vs Senegal\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en East Rutherford, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Francia vs Senegal:\\n\\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 para Francia vs Senegal.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Francia vs Senegal:\\n\\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_d493\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 14:48:50",
+        "meta": {
+          "title": "PGS® Francia 2-1 Senegal — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-16T19:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-16T12:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T19:15:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® Francia vs Senegal",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en East Rutherford, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Francia vs Senegal.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_d493\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 388,
+        "card_id": "c_d493",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-16T12:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T19:15:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® Francia vs Senegal\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en East Rutherford, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Francia vs Senegal:\\n\\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 para Francia vs Senegal.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Francia vs Senegal:\\n\\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_d493\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 02:53:30",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-16T12:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T19:15:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® Francia vs Senegal",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en East Rutherford, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Francia vs Senegal.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_d493\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 387,
+        "card_id": "c_d493",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Francia 2-1 Senegal — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-16T19:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-16T12:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T19:15:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® Francia vs Senegal\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en East Rutherford, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Francia vs Senegal:\\n\\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 para Francia vs Senegal.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Francia vs Senegal:\\n\\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_d493\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 02:53:30",
+        "meta": {
+          "title": "PGS® Francia 2-1 Senegal — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-16T19:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-16T12:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T19:15:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® Francia vs Senegal",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en East Rutherford, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Francia vs Senegal.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_d493\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 352,
+        "card_id": "c_d493",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-16T12:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T19:15:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® Francia vs Senegal\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en East Rutherford, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Francia vs Senegal:\\n\\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 para Francia vs Senegal.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Francia vs Senegal:\\n\\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_d493\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 02:52:58",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-16T12:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T19:15:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® Francia vs Senegal",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en East Rutherford, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Francia vs Senegal.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Francia vs Senegal:\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_d493\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 351,
+        "card_id": "c_d493",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"expires_at\":\"2026-06-16T19:15:00.000Z\"}",
+        "created_at": "2026-06-15 02:52:57",
+        "meta": {
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "expires_at": "2026-06-16T19:15:00.000Z"
+        }
+      }
+    ]
+  }
+}

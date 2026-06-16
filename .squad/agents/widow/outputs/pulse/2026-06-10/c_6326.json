@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:22:27.086Z",
+  "event": {
+    "type": "create",
+    "actor": "widow",
+    "to_stage": "pulse_signals"
+  },
+  "card": {
+    "id": "c_6326",
+    "title": "La lista del Tri abre debate: experiencia, jóvenes y quién debe ser titular",
+    "stage": "pulse_signals",
+    "owner": "widow",
+    "pillar": "pulse",
+    "platforms": [],
+    "payload": {
+      "signal_type": "debate",
+      "platform_origin": "news",
+      "evidence_urls": [
+        "https://es-us.noticias.yahoo.com/m%C3%A9xico-rumbo-mundial-2026-reacciones-192912655.html",
+        "https://chivaspasion.bolavip.com/seleccion-mexicana/lista-oficial-de-mexico-para-el-mundial-2026-cinco-jugadores-de-chivas-fueron-convocados",
+        "https://expansion.mx/tendencias/2026/06/08/cuando-a-que-hora-es-inauguracion-mundial-2026"
+      ],
+      "predictagol_angle": "Lanzar “arma tu XI” con chips de portería, medio y delantero; convertir comentarios en picks de comunidad.",
+      "suggested_pillar": "Tu Equipo, Tu Data",
+      "urgency": "today",
+      "confidence": "high"
+    },
+    "priority": 10,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:22:27",
+    "updated_at": "2026-06-10 19:22:27",
+    "posts": [],
+    "events": [
+      {
+        "id": 123,
+        "card_id": "c_6326",
+        "actor": "widow",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "pulse_signals",
+        "note": null,
+        "meta_json": "{\"owner\":\"widow\",\"pillar\":\"pulse\"}",
+        "created_at": "2026-06-10 19:22:27",
+        "meta": {
+          "owner": "widow",
+          "pillar": "pulse"
+        }
+      }
+    ]
+  }
+}

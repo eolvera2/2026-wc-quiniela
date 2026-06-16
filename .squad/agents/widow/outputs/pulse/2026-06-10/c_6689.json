@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:22:25.041Z",
+  "event": {
+    "type": "create",
+    "actor": "widow",
+    "to_stage": "pulse_signals"
+  },
+  "card": {
+    "id": "c_6689",
+    "title": "Las mascotas se volvieron meme por verse demasiado caricatura",
+    "stage": "pulse_signals",
+    "owner": "widow",
+    "pillar": "pulse",
+    "platforms": [
+      "x"
+    ],
+    "payload": {
+      "signal_type": "meme_format",
+      "platform_origin": "x",
+      "evidence_urls": [
+        "https://www.infobae.com/mexico/deportes/2025/09/25/presentaron-a-las-mascotas-del-mundial-del-2026-y-los-memes-no-se-hicieron-esperar/",
+        "https://www.de10.com.mx/actualidad-mundialista/memes-se-burlan-de-las-mascotas-del-mundial-2026-los-comparan-conlos-backyardigans/"
+      ],
+      "predictagol_angle": "Hacer copy sin usar personajes oficiales: “elige tu animal de la quiniela” con jaguar genérico y humor de grupo.",
+      "suggested_pillar": "Quiniela Challenge",
+      "urgency": "this_week",
+      "confidence": "medium"
+    },
+    "priority": 10,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:22:25",
+    "updated_at": "2026-06-10 19:22:25",
+    "posts": [],
+    "events": [
+      {
+        "id": 122,
+        "card_id": "c_6689",
+        "actor": "widow",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "pulse_signals",
+        "note": null,
+        "meta_json": "{\"owner\":\"widow\",\"pillar\":\"pulse\"}",
+        "created_at": "2026-06-10 19:22:25",
+        "meta": {
+          "owner": "widow",
+          "pillar": "pulse"
+        }
+      }
+    ]
+  }
+}

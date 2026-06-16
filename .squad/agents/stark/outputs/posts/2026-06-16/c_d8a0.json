@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-16T01:41:01.844Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "title": "Austria vs Jordania: FT+30 recap predicción vs realidad",
+      "stage": "to_be_posted",
+      "owner": "stark",
+      "pillar": "momento_del_partido",
+      "priority": 6,
+      "expires_at": "2026-06-17T09:15:00.000Z",
+      "platforms": [
+        "instagram",
+        "x",
+        "threads"
+      ],
+      "payload": {
+        "scheduled_for": "2026-06-17T00:15:00-06:00",
+        "window_key": "fulltime_plus_30",
+        "window_label": "FT+30m · recap",
+        "expires_at": "2026-06-17T09:15:00.000Z",
+        "target_match": {
+          "home": "Austria",
+          "away": "Jordania",
+          "kickoff_iso": "2026-06-16T22:00:00-06:00"
+        },
+        "caption": "Austria vs Jordania: tocó revisar la libreta.\n\nPick inicial: Austria gana.\n\n¿Fue lectura fina o nos quemó el Mundial? Este recap es para guardar la racha con transparencia.",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#PronosticoDelDia"
+        ],
+        "platform_copy": {
+          "instagram": {
+            "format": "accountability_recap",
+            "caption": "Austria vs Jordania: tocó revisar la libreta.\n\nPick inicial: Austria gana.\n\n¿Fue lectura fina o nos quemó el Mundial? Este recap es para guardar la racha con transparencia.",
+            "script": "Reel/Story recap 7-20s:\n1. Mostrar resultado final.\n2. Mostrar pick inicial: Austria gana.\n3. Cerrar con \"acierto o error, aquí se rinde cuentas\".",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#PronosticoDelDia"
+            ]
+          },
+          "x": {
+            "format": "thread",
+            "text": "FT Austria vs Jordania: hilo de rendición de cuentas 🧵\n\n1/ Pick inicial: Austria gana\n2/ Lo que cambió el partido:\n3/ Qué ajusta PredictaGol para la próxima quiniela:",
+            "hashtags": [
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "accountability_prompt",
+            "text": "Austria vs Jordania: hora de rendir cuentas.\n\nNuestro pick inicial fue Austria gana. Si acertamos, ¿qué señal lo anticipó? Si fallamos, ¿qué nos faltó leer?",
+            "hashtags": [
+              "#PredictaGol"
+            ]
+          }
+        },
+        "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+      }
+    }
+  },
+  "card": {
+    "id": "c_d8a0",
+    "title": "Austria vs Jordania: FT+30 recap predicción vs realidad",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "momento_del_partido",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-17T00:15:00-06:00",
+      "window_key": "fulltime_plus_30",
+      "window_label": "FT+30m · recap",
+      "expires_at": "2026-06-17T09:15:00.000Z",
+      "target_match": {
+        "home": "Austria",
+        "away": "Jordania",
+        "kickoff_iso": "2026-06-16T22:00:00-06:00"
+      },
+      "caption": "Austria vs Jordania: tocó revisar la libreta.\n\nPick inicial: Austria gana.\n\n¿Fue lectura fina o nos quemó el Mundial? Este recap es para guardar la racha con transparencia.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#PronosticoDelDia"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "accountability_recap",
+          "caption": "Austria vs Jordania: tocó revisar la libreta.\n\nPick inicial: Austria gana.\n\n¿Fue lectura fina o nos quemó el Mundial? Este recap es para guardar la racha con transparencia.",
+          "script": "Reel/Story recap 7-20s:\n1. Mostrar resultado final.\n2. Mostrar pick inicial: Austria gana.\n3. Cerrar con \"acierto o error, aquí se rinde cuentas\".",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#PronosticoDelDia"
+          ]
+        },
+        "x": {
+          "format": "thread",
+          "text": "FT Austria vs Jordania: hilo de rendición de cuentas 🧵\n\n1/ Pick inicial: Austria gana\n2/ Lo que cambió el partido:\n3/ Qué ajusta PredictaGol para la próxima quiniela:",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "accountability_prompt",
+          "text": "Austria vs Jordania: hora de rendir cuentas.\n\nNuestro pick inicial fue Austria gana. Si acertamos, ¿qué señal lo anticipó? Si fallamos, ¿qué nos faltó leer?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+    },
+    "priority": 6,
+    "stalled_at": null,
+    "expires_at": "2026-06-17T09:15:00.000Z",
+    "created_at": "2026-06-15 14:49:26",
+    "updated_at": "2026-06-16 01:41:01",
+    "posts": [],
+    "events": [
+      {
+        "id": 861,
+        "card_id": "c_d8a0",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Austria vs Jordania: FT+30 recap predicción vs realidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"momento_del_partido\",\"priority\":6,\"expires_at\":\"2026-06-17T09:15:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-17T00:15:00-06:00\",\"window_key\":\"fulltime_plus_30\",\"window_label\":\"FT+30m · recap\",\"expires_at\":\"2026-06-17T09:15:00.000Z\",\"target_match\":{\"home\":\"Austria\",\"away\":\"Jordania\",\"kickoff_iso\":\"2026-06-16T22:00:00-06:00\"},\"caption\":\"Austria vs Jordania: tocó revisar la libreta.\\n\\nPick inicial: Austria gana.\\n\\n¿Fue lectura fina o nos quemó el Mundial? Este recap es para guardar la racha con transparencia.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"accountability_recap\",\"caption\":\"Austria vs Jordania: tocó revisar la libreta.\\n\\nPick inicial: Austria gana.\\n\\n¿Fue lectura fina o nos quemó el Mundial? Este recap es para guardar la racha con transparencia.\",\"script\":\"Reel/Story recap 7-20s:\\n1. Mostrar resultado final.\\n2. Mostrar pick inicial: Austria gana.\\n3. Cerrar con \\\"acierto o error, aquí se rinde cuentas\\\".\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#PronosticoDelDia\"]},\"x\":{\"format\":\"thread\",\"text\":\"FT Austria vs Jordania: hilo de rendición de cuentas 🧵\\n\\n1/ Pick inicial: Austria gana\\n2/ Lo que cambió el partido:\\n3/ Qué ajusta PredictaGol para la próxima quiniela:\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"accountability_prompt\",\"text\":\"Austria vs Jordania: hora de rendir cuentas.\\n\\nNuestro pick inicial fue Austria gana. Si acertamos, ¿qué señal lo anticipó? Si fallamos, ¿qué nos faltó leer?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-16 01:41:01",
+        "meta": {
+          "title": "Austria vs Jordania: FT+30 recap predicción vs realidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "momento_del_partido",
+          "priority": 6,
+          "expires_at": "2026-06-17T09:15:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-17T00:15:00-06:00",
+            "window_key": "fulltime_plus_30",
+            "window_label": "FT+30m · recap",
+            "expires_at": "2026-06-17T09:15:00.000Z",
+            "target_match": {
+              "home": "Austria",
+              "away": "Jordania",
+              "kickoff_iso": "2026-06-16T22:00:00-06:00"
+            },
+            "caption": "Austria vs Jordania: tocó revisar la libreta.\n\nPick inicial: Austria gana.\n\n¿Fue lectura fina o nos quemó el Mundial? Este recap es para guardar la racha con transparencia.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "accountability_recap",
+                "caption": "Austria vs Jordania: tocó revisar la libreta.\n\nPick inicial: Austria gana.\n\n¿Fue lectura fina o nos quemó el Mundial? Este recap es para guardar la racha con transparencia.",
+                "script": "Reel/Story recap 7-20s:\n1. Mostrar resultado final.\n2. Mostrar pick inicial: Austria gana.\n3. Cerrar con \"acierto o error, aquí se rinde cuentas\".",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#PronosticoDelDia"
+                ]
+              },
+              "x": {
+                "format": "thread",
+                "text": "FT Austria vs Jordania: hilo de rendición de cuentas 🧵\n\n1/ Pick inicial: Austria gana\n2/ Lo que cambió el partido:\n3/ Qué ajusta PredictaGol para la próxima quiniela:",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "accountability_prompt",
+                "text": "Austria vs Jordania: hora de rendir cuentas.\n\nNuestro pick inicial fue Austria gana. Si acertamos, ¿qué señal lo anticipó? Si fallamos, ¿qué nos faltó leer?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 734,
+        "card_id": "c_d8a0",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Austria vs Jordania: FT+30 recap predicción vs realidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"momento_del_partido\",\"priority\":6,\"expires_at\":\"2026-06-17T09:15:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-17T00:15:00-06:00\",\"window_key\":\"fulltime_plus_30\",\"window_label\":\"FT+30m · recap\",\"expires_at\":\"2026-06-17T09:15:00.000Z\",\"target_match\":{\"home\":\"Austria\",\"away\":\"Jordania\",\"kickoff_iso\":\"2026-06-16T22:00:00-06:00\"},\"caption\":\"Austria vs Jordania: tocó revisar la libreta.\\n\\nPick inicial: Austria gana.\\n\\n¿Fue lectura fina o nos quemó el Mundial? Este recap es para guardar la racha con transparencia.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"accountability_recap\",\"caption\":\"Austria vs Jordania: tocó revisar la libreta.\\n\\nPick inicial: Austria gana.\\n\\n¿Fue lectura fina o nos quemó el Mundial? Este recap es para guardar la racha con transparencia.\",\"script\":\"Reel/Story recap 7-20s:\\n1. Mostrar resultado final.\\n2. Mostrar pick inicial: Austria gana.\\n3. Cerrar con \\\"acierto o error, aquí se rinde cuentas\\\".\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#PronosticoDelDia\"]},\"x\":{\"format\":\"thread\",\"text\":\"FT Austria vs Jordania: hilo de rendición de cuentas 🧵\\n\\n1/ Pick inicial: Austria gana\\n2/ Lo que cambió el partido:\\n3/ Qué ajusta PredictaGol para la próxima quiniela:\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"accountability_prompt\",\"text\":\"Austria vs Jordania: hora de rendir cuentas.\\n\\nNuestro pick inicial fue Austria gana. Si acertamos, ¿qué señal lo anticipó? Si fallamos, ¿qué nos faltó leer?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 15:04:25",
+        "meta": {
+          "title": "Austria vs Jordania: FT+30 recap predicción vs realidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "momento_del_partido",
+          "priority": 6,
+          "expires_at": "2026-06-17T09:15:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-17T00:15:00-06:00",
+            "window_key": "fulltime_plus_30",
+            "window_label": "FT+30m · recap",
+            "expires_at": "2026-06-17T09:15:00.000Z",
+            "target_match": {
+              "home": "Austria",
+              "away": "Jordania",
+              "kickoff_iso": "2026-06-16T22:00:00-06:00"
+            },
+            "caption": "Austria vs Jordania: tocó revisar la libreta.\n\nPick inicial: Austria gana.\n\n¿Fue lectura fina o nos quemó el Mundial? Este recap es para guardar la racha con transparencia.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "accountability_recap",
+                "caption": "Austria vs Jordania: tocó revisar la libreta.\n\nPick inicial: Austria gana.\n\n¿Fue lectura fina o nos quemó el Mundial? Este recap es para guardar la racha con transparencia.",
+                "script": "Reel/Story recap 7-20s:\n1. Mostrar resultado final.\n2. Mostrar pick inicial: Austria gana.\n3. Cerrar con \"acierto o error, aquí se rinde cuentas\".",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#PronosticoDelDia"
+                ]
+              },
+              "x": {
+                "format": "thread",
+                "text": "FT Austria vs Jordania: hilo de rendición de cuentas 🧵\n\n1/ Pick inicial: Austria gana\n2/ Lo que cambió el partido:\n3/ Qué ajusta PredictaGol para la próxima quiniela:",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "accountability_prompt",
+                "text": "Austria vs Jordania: hora de rendir cuentas.\n\nNuestro pick inicial fue Austria gana. Si acertamos, ¿qué señal lo anticipó? Si fallamos, ¿qué nos faltó leer?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 625,
+        "card_id": "c_d8a0",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"momento_del_partido\",\"expires_at\":\"2026-06-17T09:15:00.000Z\"}",
+        "created_at": "2026-06-15 14:49:26",
+        "meta": {
+          "owner": "stark",
+          "pillar": "momento_del_partido",
+          "expires_at": "2026-06-17T09:15:00.000Z"
+        }
+      }
+    ]
+  }
+}

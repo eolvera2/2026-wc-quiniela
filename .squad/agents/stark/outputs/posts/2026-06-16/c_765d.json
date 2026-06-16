@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-16T03:54:44.284Z",
+  "event": {
+    "type": "kill",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "killed",
+    "note": "Bulk discard expired To Be Posted cards from column header",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_765d",
+    "title": "España vs Cabo Verde: HT debate en vivo",
+    "stage": "killed",
+    "owner": "stark",
+    "pillar": "quiniela_challenge",
+    "platforms": [
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-15T10:55:00-06:00",
+      "window_key": "halftime",
+      "window_label": "HT · debate en vivo",
+      "expires_at": "2026-06-15T17:30:00.000Z",
+      "target_match": {
+        "home": "España",
+        "away": "Cabo Verde",
+        "kickoff_iso": "2026-06-15T10:00:00-06:00"
+      },
+      "caption": "Reply live para HT en España vs Cabo Verde:\n\nEl pick inicial era España gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+      "hashtags": [
+        "#WorldCup2026"
+      ],
+      "platform_copy": {
+        "x": {
+          "format": "live_reply",
+          "text": "Reply live para HT en España vs Cabo Verde:\n\nEl pick inicial era España gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "match_thread_reply",
+          "text": "Para responder en un thread activo del partido:\n\nMedio tiempo en España vs Cabo Verde. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con España gana o ves giro en el segundo tiempo?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+    },
+    "priority": 6,
+    "stalled_at": null,
+    "expires_at": "2026-06-15T17:30:00.000Z",
+    "created_at": "2026-06-15 03:09:47",
+    "updated_at": "2026-06-16 03:54:44",
+    "posts": [],
+    "events": [
+      {
+        "id": 891,
+        "card_id": "c_765d",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Bulk discard expired To Be Posted cards from column header",
+        "meta_json": "{}",
+        "created_at": "2026-06-16 03:54:44",
+        "meta": {}
+      },
+      {
+        "id": 769,
+        "card_id": "c_765d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "killed",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"España vs Cabo Verde: HT debate en vivo\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":6,\"expires_at\":\"2026-06-15T17:30:00.000Z\",\"platforms\":[\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T10:55:00-06:00\",\"window_key\":\"halftime\",\"window_label\":\"HT · debate en vivo\",\"expires_at\":\"2026-06-15T17:30:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\"},\"caption\":\"Reply live para HT en España vs Cabo Verde:\\n\\nEl pick inicial era España gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?\",\"hashtags\":[\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"live_reply\",\"text\":\"Reply live para HT en España vs Cabo Verde:\\n\\nEl pick inicial era España gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Para responder en un thread activo del partido:\\n\\nMedio tiempo en España vs Cabo Verde. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con España gana o ves giro en el segundo tiempo?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-16 01:38:48",
+        "meta": {
+          "title": "España vs Cabo Verde: HT debate en vivo",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 6,
+          "expires_at": "2026-06-15T17:30:00.000Z",
+          "platforms": [
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T10:55:00-06:00",
+            "window_key": "halftime",
+            "window_label": "HT · debate en vivo",
+            "expires_at": "2026-06-15T17:30:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00"
+            },
+            "caption": "Reply live para HT en España vs Cabo Verde:\n\nEl pick inicial era España gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+            "hashtags": [
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "live_reply",
+                "text": "Reply live para HT en España vs Cabo Verde:\n\nEl pick inicial era España gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Para responder en un thread activo del partido:\n\nMedio tiempo en España vs Cabo Verde. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con España gana o ves giro en el segundo tiempo?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 752,
+        "card_id": "c_765d",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-16 01:27:38",
+        "meta": {}
+      },
+      {
+        "id": 642,
+        "card_id": "c_765d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"España vs Cabo Verde: HT debate en vivo\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":6,\"expires_at\":\"2026-06-15T17:30:00.000Z\",\"platforms\":[\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T10:55:00-06:00\",\"window_key\":\"halftime\",\"window_label\":\"HT · debate en vivo\",\"expires_at\":\"2026-06-15T17:30:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\"},\"caption\":\"Reply live para HT en España vs Cabo Verde:\\n\\nEl pick inicial era España gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?\",\"hashtags\":[\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"live_reply\",\"text\":\"Reply live para HT en España vs Cabo Verde:\\n\\nEl pick inicial era España gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Para responder en un thread activo del partido:\\n\\nMedio tiempo en España vs Cabo Verde. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con España gana o ves giro en el segundo tiempo?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 15:03:01",
+        "meta": {
+          "title": "España vs Cabo Verde: HT debate en vivo",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 6,
+          "expires_at": "2026-06-15T17:30:00.000Z",
+          "platforms": [
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T10:55:00-06:00",
+            "window_key": "halftime",
+            "window_label": "HT · debate en vivo",
+            "expires_at": "2026-06-15T17:30:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00"
+            },
+            "caption": "Reply live para HT en España vs Cabo Verde:\n\nEl pick inicial era España gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+            "hashtags": [
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "live_reply",
+                "text": "Reply live para HT en España vs Cabo Verde:\n\nEl pick inicial era España gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Para responder en un thread activo del partido:\n\nMedio tiempo en España vs Cabo Verde. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con España gana o ves giro en el segundo tiempo?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 533,
+        "card_id": "c_765d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"España vs Cabo Verde: HT debate en vivo\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":6,\"expires_at\":\"2026-06-15T17:30:00.000Z\",\"platforms\":[\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T10:55:00-06:00\",\"window_key\":\"halftime\",\"window_label\":\"HT · debate en vivo\",\"expires_at\":\"2026-06-15T17:30:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\"},\"caption\":\"HT en España vs Cabo Verde.\\n\\nNuestro pick inicial: España gana (PGS® 2-0). ¿Mantienes tu marcador o ya lo cambiaste?\",\"hashtags\":[\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"live_update\",\"text\":\"HT en España vs Cabo Verde.\\n\\nNuestro pick inicial: España gana (PGS® 2-0). ¿Mantienes tu marcador o ya lo cambiaste?\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Medio tiempo: España vs Cabo Verde.\\n\\nSi tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con el pick inicial o ves giro en el segundo tiempo?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 14:48:01",
+        "meta": {
+          "title": "España vs Cabo Verde: HT debate en vivo",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 6,
+          "expires_at": "2026-06-15T17:30:00.000Z",
+          "platforms": [
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T10:55:00-06:00",
+            "window_key": "halftime",
+            "window_label": "HT · debate en vivo",
+            "expires_at": "2026-06-15T17:30:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00"
+            },
+            "caption": "HT en España vs Cabo Verde.\n\nNuestro pick inicial: España gana (PGS® 2-0). ¿Mantienes tu marcador o ya lo cambiaste?",
+            "hashtags": [
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "live_update",
+                "text": "HT en España vs Cabo Verde.\n\nNuestro pick inicial: España gana (PGS® 2-0). ¿Mantienes tu marcador o ya lo cambiaste?",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Medio tiempo: España vs Cabo Verde.\n\nSi tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con el pick inicial o ves giro en el segundo tiempo?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 465,
+        "card_id": "c_765d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"España vs Cabo Verde: HT debate en vivo\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":6,\"expires_at\":\"2026-06-15T17:30:00.000Z\",\"platforms\":[\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T10:55:00-06:00\",\"window_key\":\"halftime\",\"window_label\":\"HT · debate en vivo\",\"expires_at\":\"2026-06-15T17:30:00.000Z\",\"target_match\":{\"home\":\"España\",\"away\":\"Cabo Verde\",\"kickoff_iso\":\"2026-06-15T10:00:00-06:00\"},\"caption\":\"HT en España vs Cabo Verde.\\n\\nNuestro pick inicial: España gana (PGS® 2-0). ¿Mantienes tu marcador o ya lo cambiaste?\",\"hashtags\":[\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"live_update\",\"text\":\"HT en España vs Cabo Verde.\\n\\nNuestro pick inicial: España gana (PGS® 2-0). ¿Mantienes tu marcador o ya lo cambiaste?\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Medio tiempo: España vs Cabo Verde.\\n\\nSi tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con el pick inicial o ves giro en el segundo tiempo?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 03:21:52",
+        "meta": {
+          "title": "España vs Cabo Verde: HT debate en vivo",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 6,
+          "expires_at": "2026-06-15T17:30:00.000Z",
+          "platforms": [
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T10:55:00-06:00",
+            "window_key": "halftime",
+            "window_label": "HT · debate en vivo",
+            "expires_at": "2026-06-15T17:30:00.000Z",
+            "target_match": {
+              "home": "España",
+              "away": "Cabo Verde",
+              "kickoff_iso": "2026-06-15T10:00:00-06:00"
+            },
+            "caption": "HT en España vs Cabo Verde.\n\nNuestro pick inicial: España gana (PGS® 2-0). ¿Mantienes tu marcador o ya lo cambiaste?",
+            "hashtags": [
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "live_update",
+                "text": "HT en España vs Cabo Verde.\n\nNuestro pick inicial: España gana (PGS® 2-0). ¿Mantienes tu marcador o ya lo cambiaste?",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Medio tiempo: España vs Cabo Verde.\n\nSi tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con el pick inicial o ves giro en el segundo tiempo?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 413,
+        "card_id": "c_765d",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"expires_at\":\"2026-06-15T17:30:00.000Z\"}",
+        "created_at": "2026-06-15 03:09:47",
+        "meta": {
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "expires_at": "2026-06-15T17:30:00.000Z"
+        }
+      }
+    ]
+  }
+}

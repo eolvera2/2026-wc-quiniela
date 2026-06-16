@@ -1,0 +1,380 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-14T18:41:44.785Z",
+  "event": {
+    "type": "manual_post_confirmed",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "posted",
+    "note": "Manual instagram post confirmed",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_e085",
+    "title": "Países Bajos vs Japón: pronóstico del día",
+    "stage": "posted",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram"
+    ],
+    "payload": {
+      "template": "pronostico-carousel-3up",
+      "format_variant": "carousel_3up",
+      "scheduled_for": "2026-06-14T14:00:00-06:00",
+      "target_match": {
+        "home": "Países Bajos",
+        "away": "Japón",
+        "kickoff_iso": "2026-06-14T14:00:00-06:00",
+        "venue": "Arlington, EE.UU."
+      },
+      "homeTeam": "Países Bajos",
+      "awayTeam": "Japón",
+      "flagCodeHome": "nl",
+      "flagCodeAway": "jp",
+      "slideTitle": "Países Bajos vs Japón",
+      "kickoff": "2026-06-14T14:00:00-06:00",
+      "venue": "Arlington, EE.UU.",
+      "pgsHome": "2",
+      "pgsAway": "1",
+      "pickShort": "Países Bajos gana",
+      "hook": "Países Bajos vs Japón: el algoritmo PGS® tiene su veredicto.",
+      "cta": "Tu pick en predictagol.com",
+      "caption": "Países Bajos vs Japón hoy domingo, 14 de junio, 02:00 p.m.\n\nPaíses Bajos vs Japón: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Países Bajos 2-1 Japón · 🎯 Pick inicial: Países Bajos gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+      "alt_text": "Carrusel de 3 slides para Países Bajos vs Japón: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#PaisesBajos",
+        "#Japon",
+        "#PronosticoDelDia"
+      ],
+      "assets": {
+        "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_1.png",
+        "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_2.png",
+        "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_3.png"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": null,
+    "created_at": "2026-06-14 15:30:40",
+    "updated_at": "2026-06-14 18:41:44",
+    "posts": [
+      {
+        "id": 25,
+        "card_id": "c_e085",
+        "platform": "instagram",
+        "status": "posted_manual",
+        "permalink": "https://www.instagram.com/p/DZk6RKdnINr/?img_index=1",
+        "error": null,
+        "posted_at": "2026-06-14T18:41:44.757Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-14 18:41:44",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      }
+    ],
+    "events": [
+      {
+        "id": 335,
+        "card_id": "c_e085",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "posted",
+        "note": "Manual instagram post confirmed",
+        "meta_json": "{}",
+        "created_at": "2026-06-14 18:41:44",
+        "meta": {}
+      },
+      {
+        "id": 334,
+        "card_id": "c_e085",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual instagram post confirmed",
+        "meta_json": "{\"platform\":\"instagram\",\"permalink\":\"https://www.instagram.com/p/DZk6RKdnINr/?img_index=1\"}",
+        "created_at": "2026-06-14 18:41:44",
+        "meta": {
+          "platform": "instagram",
+          "permalink": "https://www.instagram.com/p/DZk6RKdnINr/?img_index=1"
+        }
+      },
+      {
+        "id": 327,
+        "card_id": "c_e085",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T14:00:00-06:00\",\"target_match\":{\"home\":\"Países Bajos\",\"away\":\"Japón\",\"kickoff_iso\":\"2026-06-14T14:00:00-06:00\",\"venue\":\"Arlington, EE.UU.\"},\"homeTeam\":\"Países Bajos\",\"awayTeam\":\"Japón\",\"flagCodeHome\":\"nl\",\"flagCodeAway\":\"jp\",\"slideTitle\":\"Países Bajos vs Japón\",\"kickoff\":\"2026-06-14T14:00:00-06:00\",\"venue\":\"Arlington, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Países Bajos gana\",\"hook\":\"Países Bajos vs Japón: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Países Bajos vs Japón hoy domingo, 14 de junio, 02:00 p.m.\\n\\nPaíses Bajos vs Japón: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Países Bajos 2-1 Japón · 🎯 Pick inicial: Países Bajos gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Países Bajos vs Japón: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#PaisesBajos\",\"#Japon\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_e085\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_e085\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_e085\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-14 15:32:25",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T14:00:00-06:00",
+            "target_match": {
+              "home": "Países Bajos",
+              "away": "Japón",
+              "kickoff_iso": "2026-06-14T14:00:00-06:00",
+              "venue": "Arlington, EE.UU."
+            },
+            "homeTeam": "Países Bajos",
+            "awayTeam": "Japón",
+            "flagCodeHome": "nl",
+            "flagCodeAway": "jp",
+            "slideTitle": "Países Bajos vs Japón",
+            "kickoff": "2026-06-14T14:00:00-06:00",
+            "venue": "Arlington, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Países Bajos gana",
+            "hook": "Países Bajos vs Japón: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Países Bajos vs Japón hoy domingo, 14 de junio, 02:00 p.m.\n\nPaíses Bajos vs Japón: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Países Bajos 2-1 Japón · 🎯 Pick inicial: Países Bajos gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Países Bajos vs Japón: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#PaisesBajos",
+              "#Japon",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 326,
+        "card_id": "c_e085",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Países Bajos vs Japón: pronóstico del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T14:00:00-06:00\",\"target_match\":{\"home\":\"Países Bajos\",\"away\":\"Japón\",\"kickoff_iso\":\"2026-06-14T14:00:00-06:00\",\"venue\":\"Arlington, EE.UU.\"},\"homeTeam\":\"Países Bajos\",\"awayTeam\":\"Japón\",\"flagCodeHome\":\"nl\",\"flagCodeAway\":\"jp\",\"slideTitle\":\"Países Bajos vs Japón\",\"kickoff\":\"2026-06-14T14:00:00-06:00\",\"venue\":\"Arlington, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Países Bajos gana\",\"hook\":\"Países Bajos vs Japón: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Países Bajos vs Japón hoy domingo, 14 de junio, 02:00 p.m.\\n\\nPaíses Bajos vs Japón: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Países Bajos 2-1 Japón · 🎯 Pick inicial: Países Bajos gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Países Bajos vs Japón: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#PaisesBajos\",\"#Japon\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_e085\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_e085\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_e085\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-14 15:32:23",
+        "meta": {
+          "title": "Países Bajos vs Japón: pronóstico del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T14:00:00-06:00",
+            "target_match": {
+              "home": "Países Bajos",
+              "away": "Japón",
+              "kickoff_iso": "2026-06-14T14:00:00-06:00",
+              "venue": "Arlington, EE.UU."
+            },
+            "homeTeam": "Países Bajos",
+            "awayTeam": "Japón",
+            "flagCodeHome": "nl",
+            "flagCodeAway": "jp",
+            "slideTitle": "Países Bajos vs Japón",
+            "kickoff": "2026-06-14T14:00:00-06:00",
+            "venue": "Arlington, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Países Bajos gana",
+            "hook": "Países Bajos vs Japón: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Países Bajos vs Japón hoy domingo, 14 de junio, 02:00 p.m.\n\nPaíses Bajos vs Japón: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Países Bajos 2-1 Japón · 🎯 Pick inicial: Países Bajos gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Países Bajos vs Japón: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#PaisesBajos",
+              "#Japon",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 311,
+        "card_id": "c_e085",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T14:00:00-06:00\",\"target_match\":{\"home\":\"Países Bajos\",\"away\":\"Japón\",\"kickoff_iso\":\"2026-06-14T14:00:00-06:00\",\"venue\":\"Arlington, EE.UU.\"},\"homeTeam\":\"Países Bajos\",\"awayTeam\":\"Japón\",\"flagCodeHome\":\"nl\",\"flagCodeAway\":\"jp\",\"slideTitle\":\"Países Bajos vs Japón\",\"kickoff\":\"2026-06-14T14:00:00-06:00\",\"venue\":\"Arlington, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Países Bajos gana\",\"hook\":\"Países Bajos vs Japón: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Países Bajos vs Japón hoy domingo, 14 de junio, 02:00 p.m.\\n\\nPaíses Bajos vs Japón: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Países Bajos 2-1 Japón · 🎯 Pick inicial: Países Bajos gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Países Bajos vs Japón: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#PaisesBajos\",\"#Japon\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_e085\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_e085\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_e085\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-14 15:31:55",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T14:00:00-06:00",
+            "target_match": {
+              "home": "Países Bajos",
+              "away": "Japón",
+              "kickoff_iso": "2026-06-14T14:00:00-06:00",
+              "venue": "Arlington, EE.UU."
+            },
+            "homeTeam": "Países Bajos",
+            "awayTeam": "Japón",
+            "flagCodeHome": "nl",
+            "flagCodeAway": "jp",
+            "slideTitle": "Países Bajos vs Japón",
+            "kickoff": "2026-06-14T14:00:00-06:00",
+            "venue": "Arlington, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Países Bajos gana",
+            "hook": "Países Bajos vs Japón: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Países Bajos vs Japón hoy domingo, 14 de junio, 02:00 p.m.\n\nPaíses Bajos vs Japón: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Países Bajos 2-1 Japón · 🎯 Pick inicial: Países Bajos gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Países Bajos vs Japón: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#PaisesBajos",
+              "#Japon",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 310,
+        "card_id": "c_e085",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Países Bajos vs Japón: pronóstico del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T14:00:00-06:00\",\"target_match\":{\"home\":\"Países Bajos\",\"away\":\"Japón\",\"kickoff_iso\":\"2026-06-14T14:00:00-06:00\",\"venue\":\"Arlington, EE.UU.\"},\"homeTeam\":\"Países Bajos\",\"awayTeam\":\"Japón\",\"flagCodeHome\":\"nl\",\"flagCodeAway\":\"jp\",\"slideTitle\":\"Países Bajos vs Japón\",\"kickoff\":\"2026-06-14T14:00:00-06:00\",\"venue\":\"Arlington, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Países Bajos gana\",\"hook\":\"Países Bajos vs Japón: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Países Bajos vs Japón hoy domingo, 14 de junio, 02:00 p.m.\\n\\nPaíses Bajos vs Japón: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Países Bajos 2-1 Japón · 🎯 Pick inicial: Países Bajos gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Países Bajos vs Japón: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#PaisesBajos\",\"#Japon\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_e085\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_e085\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_e085\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-14 15:31:54",
+        "meta": {
+          "title": "Países Bajos vs Japón: pronóstico del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T14:00:00-06:00",
+            "target_match": {
+              "home": "Países Bajos",
+              "away": "Japón",
+              "kickoff_iso": "2026-06-14T14:00:00-06:00",
+              "venue": "Arlington, EE.UU."
+            },
+            "homeTeam": "Países Bajos",
+            "awayTeam": "Japón",
+            "flagCodeHome": "nl",
+            "flagCodeAway": "jp",
+            "slideTitle": "Países Bajos vs Japón",
+            "kickoff": "2026-06-14T14:00:00-06:00",
+            "venue": "Arlington, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Países Bajos gana",
+            "hook": "Países Bajos vs Japón: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Países Bajos vs Japón hoy domingo, 14 de junio, 02:00 p.m.\n\nPaíses Bajos vs Japón: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Países Bajos 2-1 Japón · 🎯 Pick inicial: Países Bajos gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Países Bajos vs Japón: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#PaisesBajos",
+              "#Japon",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 295,
+        "card_id": "c_e085",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T14:00:00-06:00\",\"target_match\":{\"home\":\"Países Bajos\",\"away\":\"Japón\",\"kickoff_iso\":\"2026-06-14T14:00:00-06:00\",\"venue\":\"Arlington, EE.UU.\"},\"homeTeam\":\"Países Bajos\",\"awayTeam\":\"Japón\",\"flagCodeHome\":\"nl\",\"flagCodeAway\":\"jp\",\"slideTitle\":\"Países Bajos vs Japón\",\"kickoff\":\"2026-06-14T14:00:00-06:00\",\"venue\":\"Arlington, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Países Bajos gana\",\"hook\":\"Países Bajos vs Japón: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Países Bajos vs Japón hoy domingo, 14 de junio, 02:00 p.m.\\n\\nPaíses Bajos vs Japón: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Países Bajos 2-1 Japón · 🎯 Pick inicial: Países Bajos gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Países Bajos vs Japón: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#PaisesBajos\",\"#Japon\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_e085\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_e085\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_e085\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-14 15:30:42",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T14:00:00-06:00",
+            "target_match": {
+              "home": "Países Bajos",
+              "away": "Japón",
+              "kickoff_iso": "2026-06-14T14:00:00-06:00",
+              "venue": "Arlington, EE.UU."
+            },
+            "homeTeam": "Países Bajos",
+            "awayTeam": "Japón",
+            "flagCodeHome": "nl",
+            "flagCodeAway": "jp",
+            "slideTitle": "Países Bajos vs Japón",
+            "kickoff": "2026-06-14T14:00:00-06:00",
+            "venue": "Arlington, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Países Bajos gana",
+            "hook": "Países Bajos vs Japón: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Países Bajos vs Japón hoy domingo, 14 de junio, 02:00 p.m.\n\nPaíses Bajos vs Japón: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Países Bajos 2-1 Japón · 🎯 Pick inicial: Países Bajos gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Países Bajos vs Japón: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#PaisesBajos",
+              "#Japon",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_e085\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 294,
+        "card_id": "c_e085",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"expires_at\":null}",
+        "created_at": "2026-06-14 15:30:40",
+        "meta": {
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "expires_at": null
+        }
+      }
+    ]
+  }
+}

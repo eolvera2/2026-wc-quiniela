@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:04:01.572Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "title": "Argentina vs Argelia: mañana siguiente dato para guardar",
+      "stage": "to_be_posted",
+      "owner": "stark",
+      "pillar": "datos_curiosos",
+      "priority": 4,
+      "expires_at": "2026-06-18T03:00:00.000Z",
+      "platforms": [
+        "instagram",
+        "threads"
+      ],
+      "payload": {
+        "scheduled_for": "2026-06-17T09:00:00-06:00",
+        "window_key": "next_morning",
+        "window_label": "Mañana siguiente · dato/standing",
+        "expires_at": "2026-06-18T03:00:00.000Z",
+        "target_match": {
+          "home": "Argentina",
+          "away": "Argelia",
+          "kickoff_iso": "2026-06-16T19:00:00-06:00"
+        },
+        "caption": "Argentina vs Argelia dejó una pista para la siguiente quiniela.\n\nPGS® inicial: 2-0. Guarda este dato antes de revisar los próximos partidos.",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#ElDato"
+        ],
+        "platform_copy": {
+          "instagram": {
+            "format": "carousel_for_saves",
+            "caption": "Argentina vs Argelia dejó una pista para la siguiente quiniela.\n\nPGS® inicial: 2-0. Guarda este dato antes de revisar los próximos partidos.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ElDato"
+            ]
+          },
+          "threads": {
+            "format": "short_list",
+            "text": "3 notas para la siguiente quiniela después de Argentina vs Argelia:\n\n1. PGS® inicial: 2-0\n2. La señal que más pesó: ritmo del primer tramo\n3. Lo que hay que vigilar mañana: ajustes y cansancio\n\n¿Qué equipo te hizo cambiar el bracket?",
+            "hashtags": [
+              "#PredictaGol"
+            ]
+          }
+        },
+        "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+      }
+    }
+  },
+  "card": {
+    "id": "c_aeb1",
+    "title": "Argentina vs Argelia: mañana siguiente dato para guardar",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "datos_curiosos",
+    "platforms": [
+      "instagram",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-17T09:00:00-06:00",
+      "window_key": "next_morning",
+      "window_label": "Mañana siguiente · dato/standing",
+      "expires_at": "2026-06-18T03:00:00.000Z",
+      "target_match": {
+        "home": "Argentina",
+        "away": "Argelia",
+        "kickoff_iso": "2026-06-16T19:00:00-06:00"
+      },
+      "caption": "Argentina vs Argelia dejó una pista para la siguiente quiniela.\n\nPGS® inicial: 2-0. Guarda este dato antes de revisar los próximos partidos.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#ElDato"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "carousel_for_saves",
+          "caption": "Argentina vs Argelia dejó una pista para la siguiente quiniela.\n\nPGS® inicial: 2-0. Guarda este dato antes de revisar los próximos partidos.",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#ElDato"
+          ]
+        },
+        "threads": {
+          "format": "short_list",
+          "text": "3 notas para la siguiente quiniela después de Argentina vs Argelia:\n\n1. PGS® inicial: 2-0\n2. La señal que más pesó: ritmo del primer tramo\n3. Lo que hay que vigilar mañana: ajustes y cansancio\n\n¿Qué equipo te hizo cambiar el bracket?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+    },
+    "priority": 4,
+    "stalled_at": null,
+    "expires_at": "2026-06-18T03:00:00.000Z",
+    "created_at": "2026-06-15 14:49:02",
+    "updated_at": "2026-06-15 15:04:01",
+    "posts": [],
+    "events": [
+      {
+        "id": 709,
+        "card_id": "c_aeb1",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Argentina vs Argelia: mañana siguiente dato para guardar\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":4,\"expires_at\":\"2026-06-18T03:00:00.000Z\",\"platforms\":[\"instagram\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-17T09:00:00-06:00\",\"window_key\":\"next_morning\",\"window_label\":\"Mañana siguiente · dato/standing\",\"expires_at\":\"2026-06-18T03:00:00.000Z\",\"target_match\":{\"home\":\"Argentina\",\"away\":\"Argelia\",\"kickoff_iso\":\"2026-06-16T19:00:00-06:00\"},\"caption\":\"Argentina vs Argelia dejó una pista para la siguiente quiniela.\\n\\nPGS® inicial: 2-0. Guarda este dato antes de revisar los próximos partidos.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel_for_saves\",\"caption\":\"Argentina vs Argelia dejó una pista para la siguiente quiniela.\\n\\nPGS® inicial: 2-0. Guarda este dato antes de revisar los próximos partidos.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ElDato\"]},\"threads\":{\"format\":\"short_list\",\"text\":\"3 notas para la siguiente quiniela después de Argentina vs Argelia:\\n\\n1. PGS® inicial: 2-0\\n2. La señal que más pesó: ritmo del primer tramo\\n3. Lo que hay que vigilar mañana: ajustes y cansancio\\n\\n¿Qué equipo te hizo cambiar el bracket?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 15:04:01",
+        "meta": {
+          "title": "Argentina vs Argelia: mañana siguiente dato para guardar",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 4,
+          "expires_at": "2026-06-18T03:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-17T09:00:00-06:00",
+            "window_key": "next_morning",
+            "window_label": "Mañana siguiente · dato/standing",
+            "expires_at": "2026-06-18T03:00:00.000Z",
+            "target_match": {
+              "home": "Argentina",
+              "away": "Argelia",
+              "kickoff_iso": "2026-06-16T19:00:00-06:00"
+            },
+            "caption": "Argentina vs Argelia dejó una pista para la siguiente quiniela.\n\nPGS® inicial: 2-0. Guarda este dato antes de revisar los próximos partidos.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel_for_saves",
+                "caption": "Argentina vs Argelia dejó una pista para la siguiente quiniela.\n\nPGS® inicial: 2-0. Guarda este dato antes de revisar los próximos partidos.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#ElDato"
+                ]
+              },
+              "threads": {
+                "format": "short_list",
+                "text": "3 notas para la siguiente quiniela después de Argentina vs Argelia:\n\n1. PGS® inicial: 2-0\n2. La señal que más pesó: ritmo del primer tramo\n3. Lo que hay que vigilar mañana: ajustes y cansancio\n\n¿Qué equipo te hizo cambiar el bracket?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 600,
+        "card_id": "c_aeb1",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"expires_at\":\"2026-06-18T03:00:00.000Z\"}",
+        "created_at": "2026-06-15 14:49:02",
+        "meta": {
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "expires_at": "2026-06-18T03:00:00.000Z"
+        }
+      }
+    ]
+  }
+}

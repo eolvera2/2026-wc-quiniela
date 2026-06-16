@@ -1,0 +1,535 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:04:13.098Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "template": "data-callout",
+        "format_variant": "data_callout",
+        "scheduled_for": "2026-06-16T15:45:00-06:00",
+        "window_key": "t_minus_15",
+        "window_label": "T-15m · dato clave",
+        "expires_at": "2026-06-16T22:15:00.000Z",
+        "target_match": {
+          "home": "Irak",
+          "away": "Noruega",
+          "kickoff_iso": "2026-06-16T16:00:00-06:00",
+          "venue": "Foxborough, EE.UU."
+        },
+        "homeTeam": "Irak",
+        "awayTeam": "Noruega",
+        "flagCodeHome": "iq",
+        "flagCodeAway": "no",
+        "bigNumber": "0-2",
+        "eyebrow": "PGS® Irak vs Noruega",
+        "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.",
+        "cta": "Más datos en predictagol.com",
+        "caption": "Dato a 15 minutos del Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+        "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Irak vs Noruega.",
+        "hashtags": [
+          "#PredictaGol",
+          "#WorldCup2026"
+        ],
+        "platform_copy": {
+          "x": {
+            "format": "quote_post",
+            "text": "Para quote-postear sobre una alineación/dato oficial de Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+          }
+        },
+        "assets": {
+          "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_2eec\\1080x1080.png"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_2eec",
+    "title": "PGS® Irak 0-2 Noruega — T-15 dato clave",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "datos_curiosos",
+    "platforms": [
+      "x"
+    ],
+    "payload": {
+      "template": "data-callout",
+      "format_variant": "data_callout",
+      "scheduled_for": "2026-06-16T15:45:00-06:00",
+      "window_key": "t_minus_15",
+      "window_label": "T-15m · dato clave",
+      "expires_at": "2026-06-16T22:15:00.000Z",
+      "target_match": {
+        "home": "Irak",
+        "away": "Noruega",
+        "kickoff_iso": "2026-06-16T16:00:00-06:00",
+        "venue": "Foxborough, EE.UU."
+      },
+      "homeTeam": "Irak",
+      "awayTeam": "Noruega",
+      "flagCodeHome": "iq",
+      "flagCodeAway": "no",
+      "bigNumber": "0-2",
+      "eyebrow": "PGS® Irak vs Noruega",
+      "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.",
+      "cta": "Más datos en predictagol.com",
+      "caption": "Dato a 15 minutos del Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+      "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Irak vs Noruega.",
+      "hashtags": [
+        "#PredictaGol",
+        "#WorldCup2026"
+      ],
+      "platform_copy": {
+        "x": {
+          "format": "quote_post",
+          "text": "Para quote-postear sobre una alineación/dato oficial de Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+          "hashtags": [
+            "#PredictaGol",
+            "#WorldCup2026"
+          ],
+          "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+        }
+      },
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_2eec\\1080x1080.png"
+      }
+    },
+    "priority": 7,
+    "stalled_at": null,
+    "expires_at": "2026-06-16T22:15:00.000Z",
+    "created_at": "2026-06-15 02:53:04",
+    "updated_at": "2026-06-15 15:04:13",
+    "posts": [],
+    "events": [
+      {
+        "id": 719,
+        "card_id": "c_2eec",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-16T15:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T22:15:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PGS® Irak vs Noruega\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Irak vs Noruega:\\n\\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-2 para Irak vs Noruega.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Irak vs Noruega:\\n\\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_2eec\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:04:13",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-16T15:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T22:15:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "bigNumber": "0-2",
+            "eyebrow": "PGS® Irak vs Noruega",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Irak vs Noruega.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_2eec\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 718,
+        "card_id": "c_2eec",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Irak 0-2 Noruega — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-16T22:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-16T15:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T22:15:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PGS® Irak vs Noruega\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Irak vs Noruega:\\n\\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-2 para Irak vs Noruega.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Irak vs Noruega:\\n\\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_2eec\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:04:12",
+        "meta": {
+          "title": "PGS® Irak 0-2 Noruega — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-16T22:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-16T15:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T22:15:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "bigNumber": "0-2",
+            "eyebrow": "PGS® Irak vs Noruega",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Irak vs Noruega.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_2eec\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 610,
+        "card_id": "c_2eec",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-16T15:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T22:15:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PGS® Irak vs Noruega\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Irak vs Noruega:\\n\\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-2 para Irak vs Noruega.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Irak vs Noruega:\\n\\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_2eec\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 14:49:14",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-16T15:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T22:15:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "bigNumber": "0-2",
+            "eyebrow": "PGS® Irak vs Noruega",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Irak vs Noruega.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_2eec\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 609,
+        "card_id": "c_2eec",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Irak 0-2 Noruega — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-16T22:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-16T15:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T22:15:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PGS® Irak vs Noruega\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Irak vs Noruega:\\n\\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-2 para Irak vs Noruega.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Irak vs Noruega:\\n\\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_2eec\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 14:49:14",
+        "meta": {
+          "title": "PGS® Irak 0-2 Noruega — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-16T22:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-16T15:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T22:15:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "bigNumber": "0-2",
+            "eyebrow": "PGS® Irak vs Noruega",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Irak vs Noruega.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_2eec\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 400,
+        "card_id": "c_2eec",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-16T15:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T22:15:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PGS® Irak vs Noruega\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Irak vs Noruega:\\n\\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-2 para Irak vs Noruega.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Irak vs Noruega:\\n\\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_2eec\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 02:53:34",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-16T15:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T22:15:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "bigNumber": "0-2",
+            "eyebrow": "PGS® Irak vs Noruega",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Irak vs Noruega.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_2eec\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 399,
+        "card_id": "c_2eec",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Irak 0-2 Noruega — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-16T22:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-16T15:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T22:15:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PGS® Irak vs Noruega\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Irak vs Noruega:\\n\\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-2 para Irak vs Noruega.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Irak vs Noruega:\\n\\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_2eec\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 02:53:34",
+        "meta": {
+          "title": "PGS® Irak 0-2 Noruega — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-16T22:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-16T15:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T22:15:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "bigNumber": "0-2",
+            "eyebrow": "PGS® Irak vs Noruega",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Irak vs Noruega.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_2eec\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 376,
+        "card_id": "c_2eec",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-16T15:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-16T22:15:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PGS® Irak vs Noruega\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Irak vs Noruega:\\n\\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-2 para Irak vs Noruega.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Irak vs Noruega:\\n\\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_2eec\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 02:53:04",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-16T15:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-16T22:15:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "bigNumber": "0-2",
+            "eyebrow": "PGS® Irak vs Noruega",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Foxborough, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Irak vs Noruega.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Irak vs Noruega:\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_2eec\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 375,
+        "card_id": "c_2eec",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"expires_at\":\"2026-06-16T22:15:00.000Z\"}",
+        "created_at": "2026-06-15 02:53:04",
+        "meta": {
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "expires_at": "2026-06-16T22:15:00.000Z"
+        }
+      }
+    ]
+  }
+}

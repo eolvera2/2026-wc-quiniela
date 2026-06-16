@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T21:29:28.674Z",
+  "event": {
+    "type": "advance",
+    "actor": "cap",
+    "from_stage": "review",
+    "to_stage": "to_be_posted",
+    "note": "Approved for autonomous publish",
+    "meta": {
+      "scorecard": [
+        {
+          "gate": 1,
+          "name": "Forbidden vocabulary",
+          "score": "G",
+          "note": "No forbidden vocabulary detected."
+        },
+        {
+          "gate": 2,
+          "name": "Sportsbook positioning",
+          "score": "G",
+          "note": "Soft/no CTA; no sportsbook-positioning pattern detected."
+        },
+        {
+          "gate": 3,
+          "name": "Brand-safe imagery",
+          "score": "G",
+          "note": "Renderer-tokens enforced."
+        },
+        {
+          "gate": 4,
+          "name": "Design tokens",
+          "score": "G",
+          "note": "Renderer-tokens enforced."
+        },
+        {
+          "gate": 5,
+          "name": "Typography & wordmark",
+          "score": "G",
+          "note": "Renderer-tokens enforced."
+        },
+        {
+          "gate": 6,
+          "name": "Safe zones",
+          "score": "G",
+          "note": "Renderer SAFE_ZONES constant enforced."
+        },
+        {
+          "gate": 7,
+          "name": "Factual accuracy",
+          "score": "G",
+          "note": "No verifiable false claim detected; opinion-framed predictions allowed."
+        },
+        {
+          "gate": 8,
+          "name": "Spanish quality",
+          "score": "G",
+          "note": "Natural Spanish quality heuristic passed."
+        }
+      ],
+      "verdict": "PASS"
+    }
+  },
+  "card": {
+    "id": "c_b520",
+    "title": "Reactivo: Gol de México vs Sudáfrica",
+    "stage": "to_be_posted",
+    "owner": "strange",
+    "pillar": "momento_del_partido",
+    "platforms": [
+      "x",
+      "threads",
+      "instagram",
+      "tiktok",
+      "youtube"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-11T13:45:00-06:00",
+      "hook": "Si cae el primero del Tri, el celular vibra con el pick de todos.",
+      "body_brief": "Slot vivo para gol, atajada grande o cierre de primer tiempo. Copy modular: marcador actual, quién lo vio venir y mini encuesta de siguiente momento. Pensado para vertical y segunda pantalla.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#ElTri",
+        "#Mundial2026",
+        "#QuinielaPredictaGol"
+      ],
+      "notes": "Reemplazar el hook con el evento real. Mantener tono celebratorio, nunca burlón.",
+      "target_match": {
+        "home": "Mexico",
+        "away": "South Africa",
+        "kickoff_iso": "2026-06-11T13:00:00-06:00",
+        "venue": "Mexico City"
+      },
+      "signal_source": "widow-2026-06-10-04",
+      "challengeQuestion": "¿Quién lo vio venir primero?",
+      "homeTeam": "México",
+      "awayTeam": "Sudáfrica",
+      "caption": "Si cae el primero del Tri, el celular vibra con el pick de todos. ⚽\n\nSi llega el primer gol, revisa quién lo vio venir y quién cambia marcador mental.\n\nTu grupo tiene lectura, no solo gritos.\n\nTu pick en predictagol.com\n\n#PredictaGol #Mundial2026 #ElTri #QuinielaPredictaGol",
+      "alt_text": "Gráfico reactivo para México vs Sudáfrica, invitando a comparar picks del grupo tras el primer gran momento.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#ElTri",
+        "#QuinielaPredictaGol"
+      ],
+      "assets": {
+        "1080x1920": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_b520\\1080x1920.png",
+        "1080x1350": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_b520\\1080x1350.png",
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_b520\\1080x1080.png"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:27:49",
+    "updated_at": "2026-06-10 21:29:28",
+    "posts": [],
+    "events": [
+      {
+        "id": 180,
+        "card_id": "c_b520",
+        "actor": "cap",
+        "type": "advance",
+        "from_stage": "review",
+        "to_stage": "to_be_posted",
+        "note": "Approved for autonomous publish",
+        "meta_json": "{\"scorecard\":[{\"gate\":1,\"name\":\"Forbidden vocabulary\",\"score\":\"G\",\"note\":\"No forbidden vocabulary detected.\"},{\"gate\":2,\"name\":\"Sportsbook positioning\",\"score\":\"G\",\"note\":\"Soft/no CTA; no sportsbook-positioning pattern detected.\"},{\"gate\":3,\"name\":\"Brand-safe imagery\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":4,\"name\":\"Design tokens\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":5,\"name\":\"Typography & wordmark\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":6,\"name\":\"Safe zones\",\"score\":\"G\",\"note\":\"Renderer SAFE_ZONES constant enforced.\"},{\"gate\":7,\"name\":\"Factual accuracy\",\"score\":\"G\",\"note\":\"No verifiable false claim detected; opinion-framed predictions allowed.\"},{\"gate\":8,\"name\":\"Spanish quality\",\"score\":\"G\",\"note\":\"Natural Spanish quality heuristic passed.\"}],\"verdict\":\"PASS\"}",
+        "created_at": "2026-06-10 21:29:28",
+        "meta": {
+          "scorecard": [
+            {
+              "gate": 1,
+              "name": "Forbidden vocabulary",
+              "score": "G",
+              "note": "No forbidden vocabulary detected."
+            },
+            {
+              "gate": 2,
+              "name": "Sportsbook positioning",
+              "score": "G",
+              "note": "Soft/no CTA; no sportsbook-positioning pattern detected."
+            },
+            {
+              "gate": 3,
+              "name": "Brand-safe imagery",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 4,
+              "name": "Design tokens",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 5,
+              "name": "Typography & wordmark",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 6,
+              "name": "Safe zones",
+              "score": "G",
+              "note": "Renderer SAFE_ZONES constant enforced."
+            },
+            {
+              "gate": 7,
+              "name": "Factual accuracy",
+              "score": "G",
+              "note": "No verifiable false claim detected; opinion-framed predictions allowed."
+            },
+            {
+              "gate": 8,
+              "name": "Spanish quality",
+              "score": "G",
+              "note": "Natural Spanish quality heuristic passed."
+            }
+          ],
+          "verdict": "PASS"
+        }
+      },
+      {
+        "id": 179,
+        "card_id": "c_b520",
+        "actor": "cap",
+        "type": "advance",
+        "from_stage": "copywritten",
+        "to_stage": "review",
+        "note": "Cap intermediate gate passed",
+        "meta_json": "{\"scorecard\":[{\"gate\":1,\"name\":\"Forbidden vocabulary\",\"score\":\"G\",\"note\":\"No forbidden vocabulary detected.\"},{\"gate\":2,\"name\":\"Sportsbook positioning\",\"score\":\"G\",\"note\":\"Soft/no CTA; no sportsbook-positioning pattern detected.\"},{\"gate\":3,\"name\":\"Brand-safe imagery\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":4,\"name\":\"Design tokens\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":5,\"name\":\"Typography & wordmark\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":6,\"name\":\"Safe zones\",\"score\":\"G\",\"note\":\"Renderer SAFE_ZONES constant enforced.\"},{\"gate\":7,\"name\":\"Factual accuracy\",\"score\":\"G\",\"note\":\"No verifiable false claim detected; opinion-framed predictions allowed.\"},{\"gate\":8,\"name\":\"Spanish quality\",\"score\":\"G\",\"note\":\"Natural Spanish quality heuristic passed.\"}],\"verdict\":\"PASS\"}",
+        "created_at": "2026-06-10 21:29:28",
+        "meta": {
+          "scorecard": [
+            {
+              "gate": 1,
+              "name": "Forbidden vocabulary",
+              "score": "G",
+              "note": "No forbidden vocabulary detected."
+            },
+            {
+              "gate": 2,
+              "name": "Sportsbook positioning",
+              "score": "G",
+              "note": "Soft/no CTA; no sportsbook-positioning pattern detected."
+            },
+            {
+              "gate": 3,
+              "name": "Brand-safe imagery",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 4,
+              "name": "Design tokens",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 5,
+              "name": "Typography & wordmark",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 6,
+              "name": "Safe zones",
+              "score": "G",
+              "note": "Renderer SAFE_ZONES constant enforced."
+            },
+            {
+              "gate": 7,
+              "name": "Factual accuracy",
+              "score": "G",
+              "note": "No verifiable false claim detected; opinion-framed predictions allowed."
+            },
+            {
+              "gate": 8,
+              "name": "Spanish quality",
+              "score": "G",
+              "note": "Natural Spanish quality heuristic passed."
+            }
+          ],
+          "verdict": "PASS"
+        }
+      },
+      {
+        "id": 162,
+        "card_id": "c_b520",
+        "actor": "shuri",
+        "type": "advance",
+        "from_stage": "ideas",
+        "to_stage": "copywritten",
+        "note": "Wave 1 creative ready",
+        "meta_json": "{}",
+        "created_at": "2026-06-10 21:27:04",
+        "meta": {}
+      },
+      {
+        "id": 161,
+        "card_id": "c_b520",
+        "actor": "shuri",
+        "type": "edit",
+        "from_stage": "ideas",
+        "to_stage": "ideas",
+        "note": "Wave 1 creative packet",
+        "meta_json": "{\"title\":\"Reactivo: Gol de México vs Sudáfrica\",\"payload\":{\"scheduled_for\":\"2026-06-11T13:45:00-06:00\",\"hook\":\"Si cae el primero del Tri, el celular vibra con el pick de todos.\",\"body_brief\":\"Slot vivo para gol, atajada grande o cierre de primer tiempo. Copy modular: marcador actual, quién lo vio venir y mini encuesta de siguiente momento. Pensado para vertical y segunda pantalla.\",\"template\":\"quiniela-challenge\",\"cta\":\"Tu pick en predictagol.com\",\"hashtag_brief\":[\"#PredictaGol\",\"#ElTri\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"notes\":\"Reemplazar el hook con el evento real. Mantener tono celebratorio, nunca burlón.\",\"target_match\":{\"home\":\"Mexico\",\"away\":\"South Africa\",\"kickoff_iso\":\"2026-06-11T13:00:00-06:00\",\"venue\":\"Mexico City\"},\"signal_source\":\"widow-2026-06-10-04\",\"challengeQuestion\":\"¿Quién lo vio venir primero?\",\"homeTeam\":\"México\",\"awayTeam\":\"Sudáfrica\",\"caption\":\"Si cae el primero del Tri, el celular vibra con el pick de todos. ⚽\\n\\nSi llega el primer gol, revisa quién lo vio venir y quién cambia marcador mental.\\n\\nTu grupo tiene lectura, no solo gritos.\\n\\nTu pick en predictagol.com\\n\\n#PredictaGol #Mundial2026 #ElTri #QuinielaPredictaGol\",\"alt_text\":\"Gráfico reactivo para México vs Sudáfrica, invitando a comparar picks del grupo tras el primer gran momento.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ElTri\",\"#QuinielaPredictaGol\"],\"assets\":{\"1080x1920\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-11\\\\c_b520\\\\1080x1920.png\",\"1080x1350\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-11\\\\c_b520\\\\1080x1350.png\",\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-11\\\\c_b520\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-10 21:27:04",
+        "meta": {
+          "title": "Reactivo: Gol de México vs Sudáfrica",
+          "payload": {
+            "scheduled_for": "2026-06-11T13:45:00-06:00",
+            "hook": "Si cae el primero del Tri, el celular vibra con el pick de todos.",
+            "body_brief": "Slot vivo para gol, atajada grande o cierre de primer tiempo. Copy modular: marcador actual, quién lo vio venir y mini encuesta de siguiente momento. Pensado para vertical y segunda pantalla.",
+            "template": "quiniela-challenge",
+            "cta": "Tu pick en predictagol.com",
+            "hashtag_brief": [
+              "#PredictaGol",
+              "#ElTri",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "notes": "Reemplazar el hook con el evento real. Mantener tono celebratorio, nunca burlón.",
+            "target_match": {
+              "home": "Mexico",
+              "away": "South Africa",
+              "kickoff_iso": "2026-06-11T13:00:00-06:00",
+              "venue": "Mexico City"
+            },
+            "signal_source": "widow-2026-06-10-04",
+            "challengeQuestion": "¿Quién lo vio venir primero?",
+            "homeTeam": "México",
+            "awayTeam": "Sudáfrica",
+            "caption": "Si cae el primero del Tri, el celular vibra con el pick de todos. ⚽\n\nSi llega el primer gol, revisa quién lo vio venir y quién cambia marcador mental.\n\nTu grupo tiene lectura, no solo gritos.\n\nTu pick en predictagol.com\n\n#PredictaGol #Mundial2026 #ElTri #QuinielaPredictaGol",
+            "alt_text": "Gráfico reactivo para México vs Sudáfrica, invitando a comparar picks del grupo tras el primer gran momento.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ElTri",
+              "#QuinielaPredictaGol"
+            ],
+            "assets": {
+              "1080x1920": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_b520\\1080x1920.png",
+              "1080x1350": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_b520\\1080x1350.png",
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_b520\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 130,
+        "card_id": "c_b520",
+        "actor": "strange",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "ideas",
+        "note": null,
+        "meta_json": "{\"owner\":\"strange\",\"pillar\":\"momento_del_partido\"}",
+        "created_at": "2026-06-10 19:27:49",
+        "meta": {
+          "owner": "strange",
+          "pillar": "momento_del_partido"
+        }
+      }
+    ]
+  }
+}

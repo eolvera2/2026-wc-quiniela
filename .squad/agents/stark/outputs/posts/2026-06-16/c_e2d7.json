@@ -1,0 +1,742 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-16T03:54:44.078Z",
+  "event": {
+    "type": "kill",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "killed",
+    "note": "Bulk discard expired To Be Posted cards from column header",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_e2d7",
+    "title": "Bélgica vs Egipto: T-24 predicción oficial",
+    "stage": "killed",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "template": "data-callout",
+      "format_variant": "data_callout",
+      "scheduled_for": "2026-06-14T13:00:00-06:00",
+      "window_key": "t_minus_24h",
+      "window_label": "T-24h · predicción oficial",
+      "expires_at": "2026-06-15T13:00:00.000Z",
+      "target_match": {
+        "home": "Bélgica",
+        "away": "Egipto",
+        "kickoff_iso": "2026-06-15T13:00:00-06:00",
+        "venue": "Seattle, EE.UU."
+      },
+      "homeTeam": "Bélgica",
+      "awayTeam": "Egipto",
+      "flagCodeHome": "be",
+      "flagCodeAway": "eg",
+      "bigNumber": "2-1",
+      "eyebrow": "PICK Bélgica vs Egipto",
+      "subtitle": "Predicción oficial PredictaGol para Seattle, EE.UU.",
+      "cta": "Tu pick en predictagol.com",
+      "caption": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.",
+      "alt_text": "Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Belgica",
+        "#Egipto",
+        "#PronosticoDelDia"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "carousel_or_feed_graphic",
+          "caption": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#Belgica",
+            "#Egipto",
+            "#PronosticoDelDia"
+          ],
+          "alt_text": "Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1."
+        },
+        "x": {
+          "format": "single_hot_take",
+          "text": "Hot take PredictaGol: Bélgica gana en Bélgica vs Egipto.\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.",
+          "reply_text": "Más contexto en predictagol.com",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "cross_posted_graphic_rewritten_caption",
+          "text": "Misma gráfica, otra conversación: Bélgica vs Egipto.\n\nNuestro pick oficial es Bélgica gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_e2d7\\1080x1080.png"
+      }
+    },
+    "priority": 9,
+    "stalled_at": null,
+    "expires_at": "2026-06-15T13:00:00.000Z",
+    "created_at": "2026-06-15 03:09:49",
+    "updated_at": "2026-06-16 03:54:44",
+    "posts": [
+      {
+        "id": 32,
+        "card_id": "c_e2d7",
+        "platform": "threads",
+        "status": "posted_manual",
+        "permalink": null,
+        "error": null,
+        "posted_at": "2026-06-15T03:16:34.983Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-15 03:16:34",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      },
+      {
+        "id": 31,
+        "card_id": "c_e2d7",
+        "platform": "x",
+        "status": "posted_manual",
+        "permalink": null,
+        "error": null,
+        "posted_at": "2026-06-15T03:16:26.072Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-15 03:16:26",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      },
+      {
+        "id": 30,
+        "card_id": "c_e2d7",
+        "platform": "instagram",
+        "status": "posted_manual",
+        "permalink": null,
+        "error": null,
+        "posted_at": "2026-06-15T03:15:16.730Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-15 03:15:16",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      }
+    ],
+    "events": [
+      {
+        "id": 871,
+        "card_id": "c_e2d7",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Bulk discard expired To Be Posted cards from column header",
+        "meta_json": "{}",
+        "created_at": "2026-06-16 03:54:44",
+        "meta": {}
+      },
+      {
+        "id": 775,
+        "card_id": "c_e2d7",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-14T13:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-15T13:00:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PICK Bélgica vs Egipto\",\"subtitle\":\"Predicción oficial PredictaGol para Seattle, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel_or_feed_graphic\",\"caption\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.\"},\"x\":{\"format\":\"single_hot_take\",\"text\":\"Hot take PredictaGol: Bélgica gana en Bélgica vs Egipto.\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"cross_posted_graphic_rewritten_caption\",\"text\":\"Misma gráfica, otra conversación: Bélgica vs Egipto.\\n\\nNuestro pick oficial es Bélgica gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_e2d7\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-16 01:38:50",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-14T13:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-15T13:00:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "bigNumber": "2-1",
+            "eyebrow": "PICK Bélgica vs Egipto",
+            "subtitle": "Predicción oficial PredictaGol para Seattle, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Belgica",
+              "#Egipto",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel_or_feed_graphic",
+                "caption": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Belgica",
+                  "#Egipto",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1."
+              },
+              "x": {
+                "format": "single_hot_take",
+                "text": "Hot take PredictaGol: Bélgica gana en Bélgica vs Egipto.\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "cross_posted_graphic_rewritten_caption",
+                "text": "Misma gráfica, otra conversación: Bélgica vs Egipto.\n\nNuestro pick oficial es Bélgica gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_e2d7\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 774,
+        "card_id": "c_e2d7",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "killed",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Bélgica vs Egipto: T-24 predicción oficial\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":9,\"expires_at\":\"2026-06-15T13:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-14T13:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-15T13:00:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PICK Bélgica vs Egipto\",\"subtitle\":\"Predicción oficial PredictaGol para Seattle, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel_or_feed_graphic\",\"caption\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.\"},\"x\":{\"format\":\"single_hot_take\",\"text\":\"Hot take PredictaGol: Bélgica gana en Bélgica vs Egipto.\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"cross_posted_graphic_rewritten_caption\",\"text\":\"Misma gráfica, otra conversación: Bélgica vs Egipto.\\n\\nNuestro pick oficial es Bélgica gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_e2d7\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-16 01:38:50",
+        "meta": {
+          "title": "Bélgica vs Egipto: T-24 predicción oficial",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 9,
+          "expires_at": "2026-06-15T13:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-14T13:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-15T13:00:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "bigNumber": "2-1",
+            "eyebrow": "PICK Bélgica vs Egipto",
+            "subtitle": "Predicción oficial PredictaGol para Seattle, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Belgica",
+              "#Egipto",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel_or_feed_graphic",
+                "caption": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Belgica",
+                  "#Egipto",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1."
+              },
+              "x": {
+                "format": "single_hot_take",
+                "text": "Hot take PredictaGol: Bélgica gana en Bélgica vs Egipto.\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "cross_posted_graphic_rewritten_caption",
+                "text": "Misma gráfica, otra conversación: Bélgica vs Egipto.\n\nNuestro pick oficial es Bélgica gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_e2d7\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 742,
+        "card_id": "c_e2d7",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-16 01:26:40",
+        "meta": {}
+      },
+      {
+        "id": 648,
+        "card_id": "c_e2d7",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-14T13:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-15T13:00:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PICK Bélgica vs Egipto\",\"subtitle\":\"Predicción oficial PredictaGol para Seattle, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel_or_feed_graphic\",\"caption\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.\"},\"x\":{\"format\":\"single_hot_take\",\"text\":\"Hot take PredictaGol: Bélgica gana en Bélgica vs Egipto.\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"cross_posted_graphic_rewritten_caption\",\"text\":\"Misma gráfica, otra conversación: Bélgica vs Egipto.\\n\\nNuestro pick oficial es Bélgica gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_e2d7\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:03:03",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-14T13:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-15T13:00:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "bigNumber": "2-1",
+            "eyebrow": "PICK Bélgica vs Egipto",
+            "subtitle": "Predicción oficial PredictaGol para Seattle, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Belgica",
+              "#Egipto",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel_or_feed_graphic",
+                "caption": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Belgica",
+                  "#Egipto",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1."
+              },
+              "x": {
+                "format": "single_hot_take",
+                "text": "Hot take PredictaGol: Bélgica gana en Bélgica vs Egipto.\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "cross_posted_graphic_rewritten_caption",
+                "text": "Misma gráfica, otra conversación: Bélgica vs Egipto.\n\nNuestro pick oficial es Bélgica gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_e2d7\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 647,
+        "card_id": "c_e2d7",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Bélgica vs Egipto: T-24 predicción oficial\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":9,\"expires_at\":\"2026-06-15T13:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-14T13:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-15T13:00:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PICK Bélgica vs Egipto\",\"subtitle\":\"Predicción oficial PredictaGol para Seattle, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel_or_feed_graphic\",\"caption\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.\"},\"x\":{\"format\":\"single_hot_take\",\"text\":\"Hot take PredictaGol: Bélgica gana en Bélgica vs Egipto.\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"cross_posted_graphic_rewritten_caption\",\"text\":\"Misma gráfica, otra conversación: Bélgica vs Egipto.\\n\\nNuestro pick oficial es Bélgica gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_e2d7\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:03:03",
+        "meta": {
+          "title": "Bélgica vs Egipto: T-24 predicción oficial",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 9,
+          "expires_at": "2026-06-15T13:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-14T13:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-15T13:00:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "bigNumber": "2-1",
+            "eyebrow": "PICK Bélgica vs Egipto",
+            "subtitle": "Predicción oficial PredictaGol para Seattle, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Belgica",
+              "#Egipto",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel_or_feed_graphic",
+                "caption": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Belgica",
+                  "#Egipto",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1."
+              },
+              "x": {
+                "format": "single_hot_take",
+                "text": "Hot take PredictaGol: Bélgica gana en Bélgica vs Egipto.\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "cross_posted_graphic_rewritten_caption",
+                "text": "Misma gráfica, otra conversación: Bélgica vs Egipto.\n\nNuestro pick oficial es Bélgica gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_e2d7\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 539,
+        "card_id": "c_e2d7",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-14T13:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-15T13:00:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PICK Bélgica vs Egipto\",\"subtitle\":\"Predicción oficial PredictaGol para Seattle, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"official_prediction_card\",\"caption\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.\"},\"x\":{\"format\":\"official_prediction_post\",\"text\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"official_prediction_discussion\",\"text\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\n¿Te vas con el pick oficial o ves upset?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_e2d7\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 14:48:03",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-14T13:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-15T13:00:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "bigNumber": "2-1",
+            "eyebrow": "PICK Bélgica vs Egipto",
+            "subtitle": "Predicción oficial PredictaGol para Seattle, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Belgica",
+              "#Egipto",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "official_prediction_card",
+                "caption": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Belgica",
+                  "#Egipto",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1."
+              },
+              "x": {
+                "format": "official_prediction_post",
+                "text": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "official_prediction_discussion",
+                "text": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\n¿Te vas con el pick oficial o ves upset?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_e2d7\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 538,
+        "card_id": "c_e2d7",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "killed",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Bélgica vs Egipto: T-24 predicción oficial\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":9,\"expires_at\":\"2026-06-15T13:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-14T13:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-15T13:00:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PICK Bélgica vs Egipto\",\"subtitle\":\"Predicción oficial PredictaGol para Seattle, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"official_prediction_card\",\"caption\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.\"},\"x\":{\"format\":\"official_prediction_post\",\"text\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"official_prediction_discussion\",\"text\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\n¿Te vas con el pick oficial o ves upset?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_e2d7\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 14:48:03",
+        "meta": {
+          "title": "Bélgica vs Egipto: T-24 predicción oficial",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 9,
+          "expires_at": "2026-06-15T13:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-14T13:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-15T13:00:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "bigNumber": "2-1",
+            "eyebrow": "PICK Bélgica vs Egipto",
+            "subtitle": "Predicción oficial PredictaGol para Seattle, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Belgica",
+              "#Egipto",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "official_prediction_card",
+                "caption": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Belgica",
+                  "#Egipto",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1."
+              },
+              "x": {
+                "format": "official_prediction_post",
+                "text": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "official_prediction_discussion",
+                "text": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\n¿Te vas con el pick oficial o ves upset?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_e2d7\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 509,
+        "card_id": "c_e2d7",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-15 03:28:30",
+        "meta": {}
+      },
+      {
+        "id": 471,
+        "card_id": "c_e2d7",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-14T13:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-15T13:00:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PICK Bélgica vs Egipto\",\"subtitle\":\"Predicción oficial PredictaGol para Seattle, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"official_prediction_card\",\"caption\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.\"},\"x\":{\"format\":\"official_prediction_post\",\"text\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"official_prediction_discussion\",\"text\":\"Pronóstico oficial PredictaGol: Bélgica vs Egipto\\n\\n📊 PGS® 2-1\\n🎯 Pick: Bélgica gana\\n\\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\n¿Te vas con el pick oficial o ves upset?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_e2d7\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 03:21:54",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-14T13:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-15T13:00:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "bigNumber": "2-1",
+            "eyebrow": "PICK Bélgica vs Egipto",
+            "subtitle": "Predicción oficial PredictaGol para Seattle, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Belgica",
+              "#Egipto",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "official_prediction_card",
+                "caption": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Belgica",
+                  "#Egipto",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Bélgica vs Egipto, PGS® 2-1."
+              },
+              "x": {
+                "format": "official_prediction_post",
+                "text": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "official_prediction_discussion",
+                "text": "Pronóstico oficial PredictaGol: Bélgica vs Egipto\n\n📊 PGS® 2-1\n🎯 Pick: Bélgica gana\n\nBélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\n¿Te vas con el pick oficial o ves upset?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_e2d7\\1080x1080.png"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

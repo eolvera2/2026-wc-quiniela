@@ -1,0 +1,737 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:04:03.266Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "template": "data-callout",
+        "format_variant": "data_callout",
+        "scheduled_for": "2026-06-15T16:00:00-06:00",
+        "window_key": "t_minus_24h",
+        "window_label": "T-24h · predicción oficial",
+        "expires_at": "2026-06-16T16:00:00.000Z",
+        "target_match": {
+          "home": "Irak",
+          "away": "Noruega",
+          "kickoff_iso": "2026-06-16T16:00:00-06:00",
+          "venue": "Foxborough, EE.UU."
+        },
+        "homeTeam": "Irak",
+        "awayTeam": "Noruega",
+        "flagCodeHome": "iq",
+        "flagCodeAway": "no",
+        "bigNumber": "0-2",
+        "eyebrow": "PICK Irak vs Noruega",
+        "subtitle": "Predicción oficial PredictaGol para Foxborough, EE.UU.",
+        "cta": "Tu pick en predictagol.com",
+        "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.",
+        "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#Irak",
+          "#Noruega",
+          "#PronosticoDelDia"
+        ],
+        "platform_copy": {
+          "instagram": {
+            "format": "carousel_or_feed_graphic",
+            "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Irak",
+              "#Noruega",
+              "#PronosticoDelDia"
+            ],
+            "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2."
+          },
+          "x": {
+            "format": "single_hot_take",
+            "text": "Hot take PredictaGol: Noruega gana en Irak vs Noruega.\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.",
+            "reply_text": "Más contexto en predictagol.com",
+            "hashtags": [
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "cross_posted_graphic_rewritten_caption",
+            "text": "Misma gráfica, otra conversación: Irak vs Noruega.\n\nNuestro pick oficial es Noruega gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?",
+            "hashtags": [
+              "#PredictaGol"
+            ]
+          }
+        },
+        "assets": {
+          "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_ea0e\\1080x1080.png"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_ea0e",
+    "title": "Irak vs Noruega: T-24 predicción oficial",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "template": "data-callout",
+      "format_variant": "data_callout",
+      "scheduled_for": "2026-06-15T16:00:00-06:00",
+      "window_key": "t_minus_24h",
+      "window_label": "T-24h · predicción oficial",
+      "expires_at": "2026-06-16T16:00:00.000Z",
+      "target_match": {
+        "home": "Irak",
+        "away": "Noruega",
+        "kickoff_iso": "2026-06-16T16:00:00-06:00",
+        "venue": "Foxborough, EE.UU."
+      },
+      "homeTeam": "Irak",
+      "awayTeam": "Noruega",
+      "flagCodeHome": "iq",
+      "flagCodeAway": "no",
+      "bigNumber": "0-2",
+      "eyebrow": "PICK Irak vs Noruega",
+      "subtitle": "Predicción oficial PredictaGol para Foxborough, EE.UU.",
+      "cta": "Tu pick en predictagol.com",
+      "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.",
+      "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Irak",
+        "#Noruega",
+        "#PronosticoDelDia"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "carousel_or_feed_graphic",
+          "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#Irak",
+            "#Noruega",
+            "#PronosticoDelDia"
+          ],
+          "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2."
+        },
+        "x": {
+          "format": "single_hot_take",
+          "text": "Hot take PredictaGol: Noruega gana en Irak vs Noruega.\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.",
+          "reply_text": "Más contexto en predictagol.com",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "cross_posted_graphic_rewritten_caption",
+          "text": "Misma gráfica, otra conversación: Irak vs Noruega.\n\nNuestro pick oficial es Noruega gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_ea0e\\1080x1080.png"
+      }
+    },
+    "priority": 9,
+    "stalled_at": null,
+    "expires_at": "2026-06-16T16:00:00.000Z",
+    "created_at": "2026-06-15 02:53:02",
+    "updated_at": "2026-06-15 15:04:03",
+    "posts": [],
+    "events": [
+      {
+        "id": 713,
+        "card_id": "c_ea0e",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T16:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-16T16:00:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PICK Irak vs Noruega\",\"subtitle\":\"Predicción oficial PredictaGol para Foxborough, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Irak\",\"#Noruega\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel_or_feed_graphic\",\"caption\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Irak\",\"#Noruega\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.\"},\"x\":{\"format\":\"single_hot_take\",\"text\":\"Hot take PredictaGol: Noruega gana en Irak vs Noruega.\\n\\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"cross_posted_graphic_rewritten_caption\",\"text\":\"Misma gráfica, otra conversación: Irak vs Noruega.\\n\\nNuestro pick oficial es Noruega gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_ea0e\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:04:03",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T16:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-16T16:00:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "bigNumber": "0-2",
+            "eyebrow": "PICK Irak vs Noruega",
+            "subtitle": "Predicción oficial PredictaGol para Foxborough, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Irak",
+              "#Noruega",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel_or_feed_graphic",
+                "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Irak",
+                  "#Noruega",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2."
+              },
+              "x": {
+                "format": "single_hot_take",
+                "text": "Hot take PredictaGol: Noruega gana en Irak vs Noruega.\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "cross_posted_graphic_rewritten_caption",
+                "text": "Misma gráfica, otra conversación: Irak vs Noruega.\n\nNuestro pick oficial es Noruega gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_ea0e\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 712,
+        "card_id": "c_ea0e",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Irak vs Noruega: T-24 predicción oficial\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":9,\"expires_at\":\"2026-06-16T16:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T16:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-16T16:00:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PICK Irak vs Noruega\",\"subtitle\":\"Predicción oficial PredictaGol para Foxborough, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Irak\",\"#Noruega\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel_or_feed_graphic\",\"caption\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Irak\",\"#Noruega\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.\"},\"x\":{\"format\":\"single_hot_take\",\"text\":\"Hot take PredictaGol: Noruega gana en Irak vs Noruega.\\n\\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"cross_posted_graphic_rewritten_caption\",\"text\":\"Misma gráfica, otra conversación: Irak vs Noruega.\\n\\nNuestro pick oficial es Noruega gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_ea0e\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:04:02",
+        "meta": {
+          "title": "Irak vs Noruega: T-24 predicción oficial",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 9,
+          "expires_at": "2026-06-16T16:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T16:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-16T16:00:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "bigNumber": "0-2",
+            "eyebrow": "PICK Irak vs Noruega",
+            "subtitle": "Predicción oficial PredictaGol para Foxborough, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Irak",
+              "#Noruega",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel_or_feed_graphic",
+                "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Irak",
+                  "#Noruega",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2."
+              },
+              "x": {
+                "format": "single_hot_take",
+                "text": "Hot take PredictaGol: Noruega gana en Irak vs Noruega.\n\nPGS® 0-2. Irak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "cross_posted_graphic_rewritten_caption",
+                "text": "Misma gráfica, otra conversación: Irak vs Noruega.\n\nNuestro pick oficial es Noruega gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_ea0e\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 604,
+        "card_id": "c_ea0e",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T16:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-16T16:00:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PICK Irak vs Noruega\",\"subtitle\":\"Predicción oficial PredictaGol para Foxborough, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Irak\",\"#Noruega\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"official_prediction_card\",\"caption\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Irak\",\"#Noruega\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.\"},\"x\":{\"format\":\"official_prediction_post\",\"text\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"official_prediction_discussion\",\"text\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\n¿Te vas con el pick oficial o ves upset?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_ea0e\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 14:49:04",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T16:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-16T16:00:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "bigNumber": "0-2",
+            "eyebrow": "PICK Irak vs Noruega",
+            "subtitle": "Predicción oficial PredictaGol para Foxborough, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Irak",
+              "#Noruega",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "official_prediction_card",
+                "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Irak",
+                  "#Noruega",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2."
+              },
+              "x": {
+                "format": "official_prediction_post",
+                "text": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "official_prediction_discussion",
+                "text": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\n¿Te vas con el pick oficial o ves upset?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_ea0e\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 603,
+        "card_id": "c_ea0e",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Irak vs Noruega: T-24 predicción oficial\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":9,\"expires_at\":\"2026-06-16T16:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T16:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-16T16:00:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PICK Irak vs Noruega\",\"subtitle\":\"Predicción oficial PredictaGol para Foxborough, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Irak\",\"#Noruega\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"official_prediction_card\",\"caption\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Irak\",\"#Noruega\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.\"},\"x\":{\"format\":\"official_prediction_post\",\"text\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"official_prediction_discussion\",\"text\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\n¿Te vas con el pick oficial o ves upset?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_ea0e\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 14:49:04",
+        "meta": {
+          "title": "Irak vs Noruega: T-24 predicción oficial",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 9,
+          "expires_at": "2026-06-16T16:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T16:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-16T16:00:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "bigNumber": "0-2",
+            "eyebrow": "PICK Irak vs Noruega",
+            "subtitle": "Predicción oficial PredictaGol para Foxborough, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Irak",
+              "#Noruega",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "official_prediction_card",
+                "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Irak",
+                  "#Noruega",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2."
+              },
+              "x": {
+                "format": "official_prediction_post",
+                "text": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "official_prediction_discussion",
+                "text": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\n¿Te vas con el pick oficial o ves upset?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_ea0e\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 395,
+        "card_id": "c_ea0e",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T16:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-16T16:00:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PICK Irak vs Noruega\",\"subtitle\":\"Predicción oficial PredictaGol para Foxborough, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Irak\",\"#Noruega\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"official_prediction_card\",\"caption\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Irak\",\"#Noruega\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.\"},\"x\":{\"format\":\"official_prediction_post\",\"text\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"official_prediction_discussion\",\"text\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\n¿Te vas con el pick oficial o ves upset?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_ea0e\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 02:53:32",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T16:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-16T16:00:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "bigNumber": "0-2",
+            "eyebrow": "PICK Irak vs Noruega",
+            "subtitle": "Predicción oficial PredictaGol para Foxborough, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Irak",
+              "#Noruega",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "official_prediction_card",
+                "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Irak",
+                  "#Noruega",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2."
+              },
+              "x": {
+                "format": "official_prediction_post",
+                "text": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "official_prediction_discussion",
+                "text": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\n¿Te vas con el pick oficial o ves upset?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_ea0e\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 394,
+        "card_id": "c_ea0e",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Irak vs Noruega: T-24 predicción oficial\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":9,\"expires_at\":\"2026-06-16T16:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T16:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-16T16:00:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PICK Irak vs Noruega\",\"subtitle\":\"Predicción oficial PredictaGol para Foxborough, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Irak\",\"#Noruega\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"official_prediction_card\",\"caption\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Irak\",\"#Noruega\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.\"},\"x\":{\"format\":\"official_prediction_post\",\"text\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"official_prediction_discussion\",\"text\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\n¿Te vas con el pick oficial o ves upset?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_ea0e\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 02:53:32",
+        "meta": {
+          "title": "Irak vs Noruega: T-24 predicción oficial",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 9,
+          "expires_at": "2026-06-16T16:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T16:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-16T16:00:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "bigNumber": "0-2",
+            "eyebrow": "PICK Irak vs Noruega",
+            "subtitle": "Predicción oficial PredictaGol para Foxborough, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Irak",
+              "#Noruega",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "official_prediction_card",
+                "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Irak",
+                  "#Noruega",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2."
+              },
+              "x": {
+                "format": "official_prediction_post",
+                "text": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "official_prediction_discussion",
+                "text": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\n¿Te vas con el pick oficial o ves upset?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_ea0e\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 371,
+        "card_id": "c_ea0e",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T16:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-16T16:00:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PICK Irak vs Noruega\",\"subtitle\":\"Predicción oficial PredictaGol para Foxborough, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Irak\",\"#Noruega\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"official_prediction_card\",\"caption\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Irak\",\"#Noruega\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.\"},\"x\":{\"format\":\"official_prediction_post\",\"text\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"official_prediction_discussion\",\"text\":\"Pronóstico oficial PredictaGol: Irak vs Noruega\\n\\n📊 PGS® 0-2\\n🎯 Pick: Noruega gana\\n\\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\\n\\n¿Te vas con el pick oficial o ves upset?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_ea0e\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 02:53:03",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T16:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-16T16:00:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "bigNumber": "0-2",
+            "eyebrow": "PICK Irak vs Noruega",
+            "subtitle": "Predicción oficial PredictaGol para Foxborough, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Irak",
+              "#Noruega",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "official_prediction_card",
+                "caption": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Irak",
+                  "#Noruega",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Irak vs Noruega, PGS® 0-2."
+              },
+              "x": {
+                "format": "official_prediction_post",
+                "text": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "official_prediction_discussion",
+                "text": "Pronóstico oficial PredictaGol: Irak vs Noruega\n\n📊 PGS® 0-2\n🎯 Pick: Noruega gana\n\nIrak vs Noruega: el algoritmo PGS® tiene su veredicto.\n\n¿Te vas con el pick oficial o ves upset?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_ea0e\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 370,
+        "card_id": "c_ea0e",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"expires_at\":\"2026-06-16T16:00:00.000Z\"}",
+        "created_at": "2026-06-15 02:53:02",
+        "meta": {
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "expires_at": "2026-06-16T16:00:00.000Z"
+        }
+      }
+    ]
+  }
+}

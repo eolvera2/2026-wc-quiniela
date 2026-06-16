@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:17:08.937Z",
+  "event": {
+    "type": "create",
+    "actor": "seed-wave1",
+    "to_stage": "to_be_posted"
+  },
+  "card": {
+    "id": "c_1005",
+    "title": "Listo para publicar: el XI de datos para tu quiniela",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "tu_equipo_tu_data",
+    "platforms": [
+      "instagram",
+      "threads"
+    ],
+    "payload": {
+      "asset": "carousel-demo",
+      "alt": "Carrusel con 11 datos clave para quiniela."
+    },
+    "priority": 48,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:17:08",
+    "updated_at": "2026-06-10 19:17:08",
+    "posts": [],
+    "events": [
+      {
+        "id": 105,
+        "card_id": "c_1005",
+        "actor": "seed-wave1",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": "Wave-1 demo seed",
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"tu_equipo_tu_data\"}",
+        "created_at": "2026-06-10 19:17:08",
+        "meta": {
+          "owner": "stark",
+          "pillar": "tu_equipo_tu_data"
+        }
+      }
+    ]
+  }
+}

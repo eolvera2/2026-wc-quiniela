@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:17:08.929Z",
+  "event": {
+    "type": "create",
+    "actor": "seed-wave1",
+    "to_stage": "ideas"
+  },
+  "card": {
+    "id": "c_1003",
+    "title": "Idea: tres datos que cambian tu pronóstico del partido inaugural",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "datos_curiosos",
+    "platforms": [
+      "youtube",
+      "tiktok"
+    ],
+    "payload": {
+      "beats": [
+        "dato histórico",
+        "forma reciente",
+        "factor localía"
+      ]
+    },
+    "priority": 18,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:17:08",
+    "updated_at": "2026-06-10 19:17:08",
+    "posts": [],
+    "events": [
+      {
+        "id": 103,
+        "card_id": "c_1003",
+        "actor": "seed-wave1",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "ideas",
+        "note": "Wave-1 demo seed",
+        "meta_json": "{\"owner\":\"strange\",\"pillar\":\"datos_curiosos\"}",
+        "created_at": "2026-06-10 19:17:08",
+        "meta": {
+          "owner": "strange",
+          "pillar": "datos_curiosos"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>PredictaGol · Marketing</title>
+    <link rel="stylesheet" href="/board.css?v=20">
+  </head>
+  <body>
+    <a class="skip-link" href="#board">Saltar al tablero</a>
+    <header class="topbar">
+      <div class="brand" aria-label="PredictaGol">
+        <img class="brand__logo" src="/PredictaGol_Logo.png" alt="" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+        <span class="brand__mark" hidden>PG</span>
+      </div>
+      <h1>PredictaGol · Marketing</h1>
+      <div class="topbar__actions">
+        <label class="filter" aria-label="Filtrar cartas">
+          <span aria-hidden="true">⚙</span>
+          <input id="filterInput" type="search" placeholder="Filtrar cartas… [F]" autocomplete="off">
+        </label>
+        <button id="refreshButton" class="icon-button" type="button" aria-label="Actualizar tablero">↻</button>
+      </div>
+    </header>
+
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden>
+      <span id="toastMessage"></span>
+      <button id="retryButton" type="button">Reintentar</button>
+      <button id="dismissToast" type="button" class="toast__dismiss" aria-label="Cerrar aviso">×</button>
+    </div>
+
+    <main id="board" class="board" aria-label="Tablero de marketing">
+      <section class="loading-grid" aria-label="Cargando tablero">
+        <div class="skeleton skeleton--tab"></div>
+        <div class="skeleton skeleton--column"></div>
+        <div class="skeleton skeleton--column"></div>
+        <div class="skeleton skeleton--tab"></div>
+      </section>
+    </main>
+
+    <div id="drawerBackdrop" class="drawer-backdrop" hidden></div>
+    <aside id="cardDrawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">
+      <header class="drawer__header">
+        <p id="drawerId" class="drawer__eyebrow"></p>
+        <button id="drawerClose" class="icon-button" type="button" aria-label="Cerrar detalle">✕</button>
+      </header>
+      <div class="drawer__body">
+        <h2 id="drawerTitle"></h2>
+        <div id="drawerMeta" class="drawer__meta"></div>
+        <div id="drawerPlatforms" class="platform-tabs" role="tablist" aria-label="Plataformas"></div>
+        <div id="drawerPreview" class="asset-preview"></div>
+        <div id="drawerSections" class="drawer__sections"></div>
+      </div>
+      <form id="drawerActionForm" class="drawer__action" aria-label="Acciones de carta">
+        <div id="actionReasonWrap" class="action-reason" hidden>
+          <label for="actionReason" id="actionReasonLabel">Notas</label>
+          <textarea id="actionReason" rows="3" placeholder="Escribe la razón…"></textarea>
+        </div>
+        <div id="snoozeWrap" class="snooze" hidden>
+          <label for="snoozeSelect">Posponer</label>
+          <select id="snoozeSelect">
+            <option value="1h">1h</option>
+            <option value="4h">4h</option>
+            <option value="next-day">Mañana</option>
+          </select>
+        </div>
+        <div id="drawerActions" class="action-row"></div>
+      </form>
+    </aside>
+
+    <script src="/board.js?v=20" defer></script>
+  </body>
+</html>

@@ -1,0 +1,549 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:04:11.351Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "scheduled_for": "2026-06-16T12:00:00-06:00",
+        "window_key": "t_minus_4h",
+        "window_label": "T-4h · poll comunidad",
+        "expires_at": "2026-06-16T20:30:00.000Z",
+        "target_match": {
+          "home": "Irak",
+          "away": "Noruega",
+          "kickoff_iso": "2026-06-16T16:00:00-06:00"
+        },
+        "caption": "Poll de comunidad: Irak vs Noruega\n\nSticker sugerido: ¿Quién gana?\nOpciones: Irak / Empate / Noruega\n\nNuestro pick temprano: Noruega gana",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#QuinielaPredictaGol"
+        ],
+        "platform_copy": {
+          "instagram": {
+            "format": "story_poll",
+            "caption": "Poll de comunidad: Irak vs Noruega\n\nSticker sugerido: ¿Quién gana?\nOpciones: Irak / Empate / Noruega\n\nNuestro pick temprano: Noruega gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "alt_text": "GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "asset_keys": [
+              "animated_gif",
+              "1080x1080"
+            ]
+          },
+          "x": {
+            "format": "native_poll",
+            "text": "Poll a 4h: Irak vs Noruega\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Irak / Empate / Noruega / No sé",
+            "hashtags": [
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "debate_prompt",
+            "text": "Debate a 4h: Irak vs Noruega.\n\nPredictaGol trae Noruega gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+            "hashtags": [
+              "#PredictaGol"
+            ]
+          }
+        },
+        "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+        "template": "poll-question-gif",
+        "format_variant": "poll_question_gif",
+        "homeTeam": "Irak",
+        "awayTeam": "Noruega",
+        "flagCodeHome": "iq",
+        "flagCodeAway": "no",
+        "question": "¿Quién gana?",
+        "challengeQuestion": "¿Quién gana?",
+        "alt_text": "GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+        "assets": {
+          "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_149b\\1080x1080.png",
+          "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_149b\\animated_gif.gif"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_149b",
+    "title": "Irak vs Noruega: T-4 poll comunidad",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "quiniela_challenge",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-16T12:00:00-06:00",
+      "window_key": "t_minus_4h",
+      "window_label": "T-4h · poll comunidad",
+      "expires_at": "2026-06-16T20:30:00.000Z",
+      "target_match": {
+        "home": "Irak",
+        "away": "Noruega",
+        "kickoff_iso": "2026-06-16T16:00:00-06:00"
+      },
+      "caption": "Poll de comunidad: Irak vs Noruega\n\nSticker sugerido: ¿Quién gana?\nOpciones: Irak / Empate / Noruega\n\nNuestro pick temprano: Noruega gana",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#QuinielaPredictaGol"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "story_poll",
+          "caption": "Poll de comunidad: Irak vs Noruega\n\nSticker sugerido: ¿Quién gana?\nOpciones: Irak / Empate / Noruega\n\nNuestro pick temprano: Noruega gana",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#QuinielaPredictaGol"
+          ],
+          "alt_text": "GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+          "asset_keys": [
+            "animated_gif",
+            "1080x1080"
+          ]
+        },
+        "x": {
+          "format": "native_poll",
+          "text": "Poll a 4h: Irak vs Noruega\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Irak / Empate / Noruega / No sé",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "debate_prompt",
+          "text": "Debate a 4h: Irak vs Noruega.\n\nPredictaGol trae Noruega gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+      "template": "poll-question-gif",
+      "format_variant": "poll_question_gif",
+      "homeTeam": "Irak",
+      "awayTeam": "Noruega",
+      "flagCodeHome": "iq",
+      "flagCodeAway": "no",
+      "question": "¿Quién gana?",
+      "challengeQuestion": "¿Quién gana?",
+      "alt_text": "GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_149b\\1080x1080.png",
+        "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_149b\\animated_gif.gif"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": "2026-06-16T20:30:00.000Z",
+    "created_at": "2026-06-15 02:53:03",
+    "updated_at": "2026-06-15 15:04:11",
+    "posts": [],
+    "events": [
+      {
+        "id": 715,
+        "card_id": "c_149b",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"scheduled_for\":\"2026-06-16T12:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-16T20:30:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\"},\"caption\":\"Poll de comunidad: Irak vs Noruega\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Irak / Empate / Noruega\\n\\nNuestro pick temprano: Noruega gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"story_poll\",\"caption\":\"Poll de comunidad: Irak vs Noruega\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Irak / Empate / Noruega\\n\\nNuestro pick temprano: Noruega gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Irak vs Noruega\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Irak / Empate / Noruega / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Debate a 4h: Irak vs Noruega.\\n\\nPredictaGol trae Noruega gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_149b\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_149b\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 15:04:11",
+        "meta": {
+          "payload": {
+            "scheduled_for": "2026-06-16T12:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-16T20:30:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: Irak vs Noruega\n\nSticker sugerido: ¿Quién gana?\nOpciones: Irak / Empate / Noruega\n\nNuestro pick temprano: Noruega gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll",
+                "caption": "Poll de comunidad: Irak vs Noruega\n\nSticker sugerido: ¿Quién gana?\nOpciones: Irak / Empate / Noruega\n\nNuestro pick temprano: Noruega gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Irak vs Noruega\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Irak / Empate / Noruega / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Debate a 4h: Irak vs Noruega.\n\nPredictaGol trae Noruega gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_149b\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_149b\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 714,
+        "card_id": "c_149b",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Irak vs Noruega: T-4 poll comunidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":8,\"expires_at\":\"2026-06-16T20:30:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-16T12:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-16T20:30:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\"},\"caption\":\"Poll de comunidad: Irak vs Noruega\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Irak / Empate / Noruega\\n\\nNuestro pick temprano: Noruega gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"story_poll\",\"caption\":\"Poll de comunidad: Irak vs Noruega\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Irak / Empate / Noruega\\n\\nNuestro pick temprano: Noruega gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Irak vs Noruega\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Irak / Empate / Noruega / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Debate a 4h: Irak vs Noruega.\\n\\nPredictaGol trae Noruega gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_149b\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_149b\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 15:04:03",
+        "meta": {
+          "title": "Irak vs Noruega: T-4 poll comunidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 8,
+          "expires_at": "2026-06-16T20:30:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-16T12:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-16T20:30:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: Irak vs Noruega\n\nSticker sugerido: ¿Quién gana?\nOpciones: Irak / Empate / Noruega\n\nNuestro pick temprano: Noruega gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll",
+                "caption": "Poll de comunidad: Irak vs Noruega\n\nSticker sugerido: ¿Quién gana?\nOpciones: Irak / Empate / Noruega\n\nNuestro pick temprano: Noruega gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Irak vs Noruega\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Irak / Empate / Noruega / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Debate a 4h: Irak vs Noruega.\n\nPredictaGol trae Noruega gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_149b\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_149b\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 606,
+        "card_id": "c_149b",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"scheduled_for\":\"2026-06-16T12:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-16T20:30:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\"},\"caption\":\"Poll de comunidad: Irak vs Noruega\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Irak / Empate / Noruega\\n\\nNuestro pick temprano: Noruega gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"animated_poll_gif\",\"caption\":\"Poll de comunidad: Irak vs Noruega\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Irak / Empate / Noruega\\n\\nNuestro pick temprano: Noruega gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Irak vs Noruega\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Irak / Empate / Noruega / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"community_question\",\"text\":\"Irak vs Noruega: a 4 horas del partido, la comunidad decide.\\n\\n¿Te quedas con Noruega gana o cambias por contexto/lineup?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_149b\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_149b\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 14:49:12",
+        "meta": {
+          "payload": {
+            "scheduled_for": "2026-06-16T12:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-16T20:30:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: Irak vs Noruega\n\nSticker sugerido: ¿Quién gana?\nOpciones: Irak / Empate / Noruega\n\nNuestro pick temprano: Noruega gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "animated_poll_gif",
+                "caption": "Poll de comunidad: Irak vs Noruega\n\nSticker sugerido: ¿Quién gana?\nOpciones: Irak / Empate / Noruega\n\nNuestro pick temprano: Noruega gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Irak vs Noruega\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Irak / Empate / Noruega / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "community_question",
+                "text": "Irak vs Noruega: a 4 horas del partido, la comunidad decide.\n\n¿Te quedas con Noruega gana o cambias por contexto/lineup?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_149b\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_149b\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 605,
+        "card_id": "c_149b",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Irak vs Noruega: T-4 poll comunidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":8,\"expires_at\":\"2026-06-16T20:30:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-16T12:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-16T20:30:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\"},\"caption\":\"Poll de comunidad: Irak vs Noruega\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Irak / Empate / Noruega\\n\\nNuestro pick temprano: Noruega gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"animated_poll_gif\",\"caption\":\"Poll de comunidad: Irak vs Noruega\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Irak / Empate / Noruega\\n\\nNuestro pick temprano: Noruega gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Irak vs Noruega\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Irak / Empate / Noruega / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"community_question\",\"text\":\"Irak vs Noruega: a 4 horas del partido, la comunidad decide.\\n\\n¿Te quedas con Noruega gana o cambias por contexto/lineup?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"homeTeam\":\"Irak\",\"awayTeam\":\"Noruega\",\"flagCodeHome\":\"iq\",\"flagCodeAway\":\"no\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\"}}",
+        "created_at": "2026-06-15 14:49:04",
+        "meta": {
+          "title": "Irak vs Noruega: T-4 poll comunidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 8,
+          "expires_at": "2026-06-16T20:30:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-16T12:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-16T20:30:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: Irak vs Noruega\n\nSticker sugerido: ¿Quién gana?\nOpciones: Irak / Empate / Noruega\n\nNuestro pick temprano: Noruega gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "animated_poll_gif",
+                "caption": "Poll de comunidad: Irak vs Noruega\n\nSticker sugerido: ¿Quién gana?\nOpciones: Irak / Empate / Noruega\n\nNuestro pick temprano: Noruega gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Irak vs Noruega\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Irak / Empate / Noruega / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "community_question",
+                "text": "Irak vs Noruega: a 4 horas del partido, la comunidad decide.\n\n¿Te quedas con Noruega gana o cambias por contexto/lineup?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "homeTeam": "Irak",
+            "awayTeam": "Noruega",
+            "flagCodeHome": "iq",
+            "flagCodeAway": "no",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "GIF animado de poll de comunidad para Irak vs Noruega, con logo PredictaGol, signo de pregunta y banderas de ambos equipos."
+          }
+        }
+      },
+      {
+        "id": 396,
+        "card_id": "c_149b",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Irak vs Noruega: T-4 poll comunidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":8,\"expires_at\":\"2026-06-16T20:30:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-16T12:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-16T20:30:00.000Z\",\"target_match\":{\"home\":\"Irak\",\"away\":\"Noruega\",\"kickoff_iso\":\"2026-06-16T16:00:00-06:00\"},\"caption\":\"Poll de comunidad: Irak vs Noruega\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Irak / Empate / Noruega\\n\\nNuestro pick temprano: Noruega gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"story_poll\",\"caption\":\"Poll de comunidad: Irak vs Noruega\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Irak / Empate / Noruega\\n\\nNuestro pick temprano: Noruega gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Irak vs Noruega\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Irak / Empate / Noruega / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"community_question\",\"text\":\"Irak vs Noruega: a 4 horas del partido, la comunidad decide.\\n\\n¿Te quedas con Noruega gana o cambias por contexto/lineup?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 02:53:32",
+        "meta": {
+          "title": "Irak vs Noruega: T-4 poll comunidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 8,
+          "expires_at": "2026-06-16T20:30:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-16T12:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-16T20:30:00.000Z",
+            "target_match": {
+              "home": "Irak",
+              "away": "Noruega",
+              "kickoff_iso": "2026-06-16T16:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: Irak vs Noruega\n\nSticker sugerido: ¿Quién gana?\nOpciones: Irak / Empate / Noruega\n\nNuestro pick temprano: Noruega gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll",
+                "caption": "Poll de comunidad: Irak vs Noruega\n\nSticker sugerido: ¿Quién gana?\nOpciones: Irak / Empate / Noruega\n\nNuestro pick temprano: Noruega gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Irak vs Noruega\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Irak / Empate / Noruega / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "community_question",
+                "text": "Irak vs Noruega: a 4 horas del partido, la comunidad decide.\n\n¿Te quedas con Noruega gana o cambias por contexto/lineup?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 372,
+        "card_id": "c_149b",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"expires_at\":\"2026-06-16T20:30:00.000Z\"}",
+        "created_at": "2026-06-15 02:53:03",
+        "meta": {
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "expires_at": "2026-06-16T20:30:00.000Z"
+        }
+      }
+    ]
+  }
+}

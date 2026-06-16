@@ -1,0 +1,290 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-13T02:43:19.853Z",
+  "event": {
+    "type": "kill",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "killed",
+    "note": "Descartada desde tarjeta (To Be Posted)",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_585d",
+    "title": "El XI del Tri bajo la lupa tras el debut",
+    "stage": "killed",
+    "owner": "strange",
+    "pillar": "tu_equipo_tu_data",
+    "platforms": [
+      "instagram",
+      "threads",
+      "tiktok"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-12T10:00:00-06:00",
+      "hook": "El primer once ya habló: ¿qué línea te dejó más confianza?",
+      "body_brief": "Usar 3 bloques: salida, medio campo y ataque. Pedir lectura de comunidad sobre quién sostuvo mejor el plan. Si hubo cambios clave, Shuri puede intercambiar los chips.",
+      "template": "tu-equipo-tu-data",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#ElTri",
+        "#Mundial2026",
+        "#TuEquipoTuData"
+      ],
+      "notes": "Derivado del debate de convocatoria. Sin señalar jugadores en tono personal; hablar de roles.",
+      "target_match": {
+        "home": "Mexico",
+        "away": "South Africa",
+        "kickoff_iso": "2026-06-11T13:00:00-06:00",
+        "venue": "Mexico City"
+      },
+      "signal_source": "widow-2026-06-10-07",
+      "homeTeam": "México",
+      "flagEmojiHome": "🇲🇽",
+      "form": "Salida",
+      "goals": "Medio",
+      "cleanSheets": "Cierre",
+      "caption": "El primer once ya habló: ¿qué línea te dejó más confianza? 📊\n\nLa lectura: salida, medio y ataque dicen mucho más que un marcador aislado.\n\nDinos qué zona te dio más confianza y arma tu pick con la banda.\n\nTu pick en predictagol.com",
+      "alt_text": "Gráfico de datos de México con tres bloques para leer forma, goles y solidez antes de compartir tu pick.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#ElTri",
+        "#TuEquipoTuData"
+      ],
+      "assets": {
+        "1080x1920": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_585d\\1080x1920.png",
+        "1080x1350": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_585d\\1080x1350.png",
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_585d\\1080x1080.png"
+      }
+    },
+    "priority": 9,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:27:49",
+    "updated_at": "2026-06-13 02:43:19",
+    "posts": [],
+    "events": [
+      {
+        "id": 208,
+        "card_id": "c_585d",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-13 02:43:19",
+        "meta": {}
+      },
+      {
+        "id": 172,
+        "card_id": "c_585d",
+        "actor": "cap",
+        "type": "advance",
+        "from_stage": "review",
+        "to_stage": "to_be_posted",
+        "note": "Approved for autonomous publish",
+        "meta_json": "{\"scorecard\":[{\"gate\":1,\"name\":\"Forbidden vocabulary\",\"score\":\"G\",\"note\":\"No forbidden vocabulary detected.\"},{\"gate\":2,\"name\":\"Sportsbook positioning\",\"score\":\"G\",\"note\":\"Soft/no CTA; no sportsbook-positioning pattern detected.\"},{\"gate\":3,\"name\":\"Brand-safe imagery\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":4,\"name\":\"Design tokens\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":5,\"name\":\"Typography & wordmark\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":6,\"name\":\"Safe zones\",\"score\":\"G\",\"note\":\"Renderer SAFE_ZONES constant enforced.\"},{\"gate\":7,\"name\":\"Factual accuracy\",\"score\":\"G\",\"note\":\"No verifiable false claim detected; opinion-framed predictions allowed.\"},{\"gate\":8,\"name\":\"Spanish quality\",\"score\":\"G\",\"note\":\"Natural Spanish quality heuristic passed.\"}],\"verdict\":\"PASS\"}",
+        "created_at": "2026-06-10 21:29:28",
+        "meta": {
+          "scorecard": [
+            {
+              "gate": 1,
+              "name": "Forbidden vocabulary",
+              "score": "G",
+              "note": "No forbidden vocabulary detected."
+            },
+            {
+              "gate": 2,
+              "name": "Sportsbook positioning",
+              "score": "G",
+              "note": "Soft/no CTA; no sportsbook-positioning pattern detected."
+            },
+            {
+              "gate": 3,
+              "name": "Brand-safe imagery",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 4,
+              "name": "Design tokens",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 5,
+              "name": "Typography & wordmark",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 6,
+              "name": "Safe zones",
+              "score": "G",
+              "note": "Renderer SAFE_ZONES constant enforced."
+            },
+            {
+              "gate": 7,
+              "name": "Factual accuracy",
+              "score": "G",
+              "note": "No verifiable false claim detected; opinion-framed predictions allowed."
+            },
+            {
+              "gate": 8,
+              "name": "Spanish quality",
+              "score": "G",
+              "note": "Natural Spanish quality heuristic passed."
+            }
+          ],
+          "verdict": "PASS"
+        }
+      },
+      {
+        "id": 171,
+        "card_id": "c_585d",
+        "actor": "cap",
+        "type": "advance",
+        "from_stage": "copywritten",
+        "to_stage": "review",
+        "note": "Cap intermediate gate passed",
+        "meta_json": "{\"scorecard\":[{\"gate\":1,\"name\":\"Forbidden vocabulary\",\"score\":\"G\",\"note\":\"No forbidden vocabulary detected.\"},{\"gate\":2,\"name\":\"Sportsbook positioning\",\"score\":\"G\",\"note\":\"Soft/no CTA; no sportsbook-positioning pattern detected.\"},{\"gate\":3,\"name\":\"Brand-safe imagery\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":4,\"name\":\"Design tokens\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":5,\"name\":\"Typography & wordmark\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":6,\"name\":\"Safe zones\",\"score\":\"G\",\"note\":\"Renderer SAFE_ZONES constant enforced.\"},{\"gate\":7,\"name\":\"Factual accuracy\",\"score\":\"G\",\"note\":\"No verifiable false claim detected; opinion-framed predictions allowed.\"},{\"gate\":8,\"name\":\"Spanish quality\",\"score\":\"G\",\"note\":\"Natural Spanish quality heuristic passed.\"}],\"verdict\":\"PASS\"}",
+        "created_at": "2026-06-10 21:29:28",
+        "meta": {
+          "scorecard": [
+            {
+              "gate": 1,
+              "name": "Forbidden vocabulary",
+              "score": "G",
+              "note": "No forbidden vocabulary detected."
+            },
+            {
+              "gate": 2,
+              "name": "Sportsbook positioning",
+              "score": "G",
+              "note": "Soft/no CTA; no sportsbook-positioning pattern detected."
+            },
+            {
+              "gate": 3,
+              "name": "Brand-safe imagery",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 4,
+              "name": "Design tokens",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 5,
+              "name": "Typography & wordmark",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 6,
+              "name": "Safe zones",
+              "score": "G",
+              "note": "Renderer SAFE_ZONES constant enforced."
+            },
+            {
+              "gate": 7,
+              "name": "Factual accuracy",
+              "score": "G",
+              "note": "No verifiable false claim detected; opinion-framed predictions allowed."
+            },
+            {
+              "gate": 8,
+              "name": "Spanish quality",
+              "score": "G",
+              "note": "Natural Spanish quality heuristic passed."
+            }
+          ],
+          "verdict": "PASS"
+        }
+      },
+      {
+        "id": 160,
+        "card_id": "c_585d",
+        "actor": "shuri",
+        "type": "advance",
+        "from_stage": "ideas",
+        "to_stage": "copywritten",
+        "note": "Wave 1 creative ready",
+        "meta_json": "{}",
+        "created_at": "2026-06-10 21:27:03",
+        "meta": {}
+      },
+      {
+        "id": 159,
+        "card_id": "c_585d",
+        "actor": "shuri",
+        "type": "edit",
+        "from_stage": "ideas",
+        "to_stage": "ideas",
+        "note": "Wave 1 creative packet",
+        "meta_json": "{\"title\":\"El XI del Tri bajo la lupa tras el debut\",\"payload\":{\"scheduled_for\":\"2026-06-12T10:00:00-06:00\",\"hook\":\"El primer once ya habló: ¿qué línea te dejó más confianza?\",\"body_brief\":\"Usar 3 bloques: salida, medio campo y ataque. Pedir lectura de comunidad sobre quién sostuvo mejor el plan. Si hubo cambios clave, Shuri puede intercambiar los chips.\",\"template\":\"tu-equipo-tu-data\",\"cta\":\"Tu pick en predictagol.com\",\"hashtag_brief\":[\"#PredictaGol\",\"#ElTri\",\"#Mundial2026\",\"#TuEquipoTuData\"],\"notes\":\"Derivado del debate de convocatoria. Sin señalar jugadores en tono personal; hablar de roles.\",\"target_match\":{\"home\":\"Mexico\",\"away\":\"South Africa\",\"kickoff_iso\":\"2026-06-11T13:00:00-06:00\",\"venue\":\"Mexico City\"},\"signal_source\":\"widow-2026-06-10-07\",\"homeTeam\":\"México\",\"flagEmojiHome\":\"🇲🇽\",\"form\":\"Salida\",\"goals\":\"Medio\",\"cleanSheets\":\"Cierre\",\"caption\":\"El primer once ya habló: ¿qué línea te dejó más confianza? 📊\\n\\nLa lectura: salida, medio y ataque dicen mucho más que un marcador aislado.\\n\\nDinos qué zona te dio más confianza y arma tu pick con la banda.\\n\\nTu pick en predictagol.com\\n\\n#PredictaGol #Mundial2026 #ElTri #TuEquipoTuData\",\"alt_text\":\"Gráfico de datos de México con tres bloques para leer forma, goles y solidez antes de compartir tu pick.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ElTri\",\"#TuEquipoTuData\"],\"assets\":{\"1080x1920\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-11\\\\c_585d\\\\1080x1920.png\",\"1080x1350\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-11\\\\c_585d\\\\1080x1350.png\",\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-11\\\\c_585d\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-10 21:27:03",
+        "meta": {
+          "title": "El XI del Tri bajo la lupa tras el debut",
+          "payload": {
+            "scheduled_for": "2026-06-12T10:00:00-06:00",
+            "hook": "El primer once ya habló: ¿qué línea te dejó más confianza?",
+            "body_brief": "Usar 3 bloques: salida, medio campo y ataque. Pedir lectura de comunidad sobre quién sostuvo mejor el plan. Si hubo cambios clave, Shuri puede intercambiar los chips.",
+            "template": "tu-equipo-tu-data",
+            "cta": "Tu pick en predictagol.com",
+            "hashtag_brief": [
+              "#PredictaGol",
+              "#ElTri",
+              "#Mundial2026",
+              "#TuEquipoTuData"
+            ],
+            "notes": "Derivado del debate de convocatoria. Sin señalar jugadores en tono personal; hablar de roles.",
+            "target_match": {
+              "home": "Mexico",
+              "away": "South Africa",
+              "kickoff_iso": "2026-06-11T13:00:00-06:00",
+              "venue": "Mexico City"
+            },
+            "signal_source": "widow-2026-06-10-07",
+            "homeTeam": "México",
+            "flagEmojiHome": "🇲🇽",
+            "form": "Salida",
+            "goals": "Medio",
+            "cleanSheets": "Cierre",
+            "caption": "El primer once ya habló: ¿qué línea te dejó más confianza? 📊\n\nLa lectura: salida, medio y ataque dicen mucho más que un marcador aislado.\n\nDinos qué zona te dio más confianza y arma tu pick con la banda.\n\nTu pick en predictagol.com\n\n#PredictaGol #Mundial2026 #ElTri #TuEquipoTuData",
+            "alt_text": "Gráfico de datos de México con tres bloques para leer forma, goles y solidez antes de compartir tu pick.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ElTri",
+              "#TuEquipoTuData"
+            ],
+            "assets": {
+              "1080x1920": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_585d\\1080x1920.png",
+              "1080x1350": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_585d\\1080x1350.png",
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_585d\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 131,
+        "card_id": "c_585d",
+        "actor": "strange",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "ideas",
+        "note": null,
+        "meta_json": "{\"owner\":\"strange\",\"pillar\":\"tu_equipo_tu_data\"}",
+        "created_at": "2026-06-10 19:27:49",
+        "meta": {
+          "owner": "strange",
+          "pillar": "tu_equipo_tu_data"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:17:08.951Z",
+  "event": {
+    "type": "create",
+    "actor": "seed-wave1",
+    "to_stage": "to_be_posted"
+  },
+  "card": {
+    "id": "c_1008",
+    "title": "Listo para publicar: dato curioso para abrir debate",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "datos_curiosos",
+    "platforms": [
+      "instagram",
+      "tiktok"
+    ],
+    "payload": {
+      "hook": "Este dato cambia cómo ves el grupo."
+    },
+    "priority": 42,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:17:08",
+    "updated_at": "2026-06-10 19:17:08",
+    "posts": [],
+    "events": [
+      {
+        "id": 108,
+        "card_id": "c_1008",
+        "actor": "seed-wave1",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": "Wave-1 demo seed",
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"datos_curiosos\"}",
+        "created_at": "2026-06-10 19:17:08",
+        "meta": {
+          "owner": "stark",
+          "pillar": "datos_curiosos"
+        }
+      }
+    ]
+  }
+}

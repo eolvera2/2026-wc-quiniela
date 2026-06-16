@@ -1,0 +1,856 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:03:03.264Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "template": "pronostico-carousel-3up",
+        "format_variant": "carousel_3up",
+        "scheduled_for": "2026-06-13T13:00:00-06:00",
+        "window_key": "t_minus_48h",
+        "window_label": "T-48h · breakdown",
+        "expires_at": "2026-06-14T19:00:00.000Z",
+        "target_match": {
+          "home": "Bélgica",
+          "away": "Egipto",
+          "kickoff_iso": "2026-06-15T13:00:00-06:00",
+          "venue": "Seattle, EE.UU."
+        },
+        "homeTeam": "Bélgica",
+        "awayTeam": "Egipto",
+        "flagCodeHome": "be",
+        "flagCodeAway": "eg",
+        "slideTitle": "Bélgica vs Egipto",
+        "kickoff": "2026-06-15T13:00:00-06:00",
+        "venue": "Seattle, EE.UU.",
+        "pgsHome": "2",
+        "pgsAway": "1",
+        "pickShort": "Bélgica gana",
+        "hook": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.",
+        "cta": "Guárdalo para tu quiniela",
+        "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+        "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#Belgica",
+          "#Egipto",
+          "#ElDato"
+        ],
+        "platform_copy": {
+          "instagram": {
+            "format": "breakdown_carousel",
+            "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Belgica",
+              "#Egipto",
+              "#ElDato"
+            ],
+            "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+            "asset_keys": [
+              "slide_1",
+              "slide_2",
+              "slide_3"
+            ]
+          },
+          "x": {
+            "format": "breakdown_thread",
+            "text": "Breakdown temprano: Bélgica vs Egipto 🧵\n\n1/ PGS® inicial: 2-1\n2/ Pick temprano: Bélgica gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+            "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+            "hashtags": [
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "short_list",
+            "text": "3 señales a 48h de Bélgica vs Egipto:\n\n1. PGS® inicial 2-1\n2. Pick temprano: Bélgica gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+            "hashtags": [
+              "#PredictaGol"
+            ]
+          }
+        },
+        "assets": {
+          "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_1.png",
+          "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_2.png",
+          "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_3.png"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_3335",
+    "title": "Bélgica vs Egipto: T-48 breakdown",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "tu_equipo_tu_data",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "template": "pronostico-carousel-3up",
+      "format_variant": "carousel_3up",
+      "scheduled_for": "2026-06-13T13:00:00-06:00",
+      "window_key": "t_minus_48h",
+      "window_label": "T-48h · breakdown",
+      "expires_at": "2026-06-14T19:00:00.000Z",
+      "target_match": {
+        "home": "Bélgica",
+        "away": "Egipto",
+        "kickoff_iso": "2026-06-15T13:00:00-06:00",
+        "venue": "Seattle, EE.UU."
+      },
+      "homeTeam": "Bélgica",
+      "awayTeam": "Egipto",
+      "flagCodeHome": "be",
+      "flagCodeAway": "eg",
+      "slideTitle": "Bélgica vs Egipto",
+      "kickoff": "2026-06-15T13:00:00-06:00",
+      "venue": "Seattle, EE.UU.",
+      "pgsHome": "2",
+      "pgsAway": "1",
+      "pickShort": "Bélgica gana",
+      "hook": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.",
+      "cta": "Guárdalo para tu quiniela",
+      "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+      "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Belgica",
+        "#Egipto",
+        "#ElDato"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "breakdown_carousel",
+          "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#Belgica",
+            "#Egipto",
+            "#ElDato"
+          ],
+          "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+          "asset_keys": [
+            "slide_1",
+            "slide_2",
+            "slide_3"
+          ]
+        },
+        "x": {
+          "format": "breakdown_thread",
+          "text": "Breakdown temprano: Bélgica vs Egipto 🧵\n\n1/ PGS® inicial: 2-1\n2/ Pick temprano: Bélgica gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+          "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "short_list",
+          "text": "3 señales a 48h de Bélgica vs Egipto:\n\n1. PGS® inicial 2-1\n2. Pick temprano: Bélgica gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "assets": {
+        "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_1.png",
+        "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_2.png",
+        "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_3.png"
+      }
+    },
+    "priority": 9,
+    "stalled_at": null,
+    "expires_at": "2026-06-14T19:00:00.000Z",
+    "created_at": "2026-06-15 03:09:47",
+    "updated_at": "2026-06-15 15:03:03",
+    "posts": [],
+    "events": [
+      {
+        "id": 646,
+        "card_id": "c_3335",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T13:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T19:00:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"slideTitle\":\"Bélgica vs Egipto\",\"kickoff\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Bélgica gana\",\"hook\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Bélgica gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Bélgica gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Bélgica vs Egipto 🧵\\n\\n1/ PGS® inicial: 2-1\\n2/ Pick temprano: Bélgica gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"short_list\",\"text\":\"3 señales a 48h de Bélgica vs Egipto:\\n\\n1. PGS® inicial 2-1\\n2. Pick temprano: Bélgica gana\\n3. La primera media hora puede cambiar toda la quiniela.\\n\\n¿Cuál señal estás viendo tú?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:03:03",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T13:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T19:00:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "slideTitle": "Bélgica vs Egipto",
+            "kickoff": "2026-06-15T13:00:00-06:00",
+            "venue": "Seattle, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Bélgica gana",
+            "hook": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Belgica",
+              "#Egipto",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Belgica",
+                  "#Egipto",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Bélgica vs Egipto 🧵\n\n1/ PGS® inicial: 2-1\n2/ Pick temprano: Bélgica gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "short_list",
+                "text": "3 señales a 48h de Bélgica vs Egipto:\n\n1. PGS® inicial 2-1\n2. Pick temprano: Bélgica gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 645,
+        "card_id": "c_3335",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "killed",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Bélgica vs Egipto: T-48 breakdown\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"tu_equipo_tu_data\",\"priority\":9,\"expires_at\":\"2026-06-14T19:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T13:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T19:00:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"slideTitle\":\"Bélgica vs Egipto\",\"kickoff\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Bélgica gana\",\"hook\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Bélgica gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Bélgica gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Bélgica vs Egipto 🧵\\n\\n1/ PGS® inicial: 2-1\\n2/ Pick temprano: Bélgica gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"short_list\",\"text\":\"3 señales a 48h de Bélgica vs Egipto:\\n\\n1. PGS® inicial 2-1\\n2. Pick temprano: Bélgica gana\\n3. La primera media hora puede cambiar toda la quiniela.\\n\\n¿Cuál señal estás viendo tú?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:03:01",
+        "meta": {
+          "title": "Bélgica vs Egipto: T-48 breakdown",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "tu_equipo_tu_data",
+          "priority": 9,
+          "expires_at": "2026-06-14T19:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T13:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T19:00:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "slideTitle": "Bélgica vs Egipto",
+            "kickoff": "2026-06-15T13:00:00-06:00",
+            "venue": "Seattle, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Bélgica gana",
+            "hook": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Belgica",
+              "#Egipto",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Belgica",
+                  "#Egipto",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Bélgica vs Egipto 🧵\n\n1/ PGS® inicial: 2-1\n2/ Pick temprano: Bélgica gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "short_list",
+                "text": "3 señales a 48h de Bélgica vs Egipto:\n\n1. PGS® inicial 2-1\n2. Pick temprano: Bélgica gana\n3. La primera media hora puede cambiar toda la quiniela.\n\n¿Cuál señal estás viendo tú?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 628,
+        "card_id": "c_3335",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-15 14:55:39",
+        "meta": {}
+      },
+      {
+        "id": 537,
+        "card_id": "c_3335",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T13:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T19:00:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"slideTitle\":\"Bélgica vs Egipto\",\"kickoff\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Bélgica gana\",\"hook\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Bélgica gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Bélgica gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Bélgica vs Egipto 🧵\\n\\n1/ PGS® inicial: 2-1\\n2/ Pick temprano: Bélgica gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"discussion_breakdown\",\"text\":\"Bélgica vs Egipto, lectura a 48h.\\n\\nPGS® inicial 2-1. Pick temprano: Bélgica gana.\\n\\n¿Qué señal estás viendo tú antes de que cambie la conversación?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 14:48:03",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T13:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T19:00:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "slideTitle": "Bélgica vs Egipto",
+            "kickoff": "2026-06-15T13:00:00-06:00",
+            "venue": "Seattle, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Bélgica gana",
+            "hook": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Belgica",
+              "#Egipto",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Belgica",
+                  "#Egipto",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Bélgica vs Egipto 🧵\n\n1/ PGS® inicial: 2-1\n2/ Pick temprano: Bélgica gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "discussion_breakdown",
+                "text": "Bélgica vs Egipto, lectura a 48h.\n\nPGS® inicial 2-1. Pick temprano: Bélgica gana.\n\n¿Qué señal estás viendo tú antes de que cambie la conversación?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 536,
+        "card_id": "c_3335",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "killed",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Bélgica vs Egipto: T-48 breakdown\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"tu_equipo_tu_data\",\"priority\":9,\"expires_at\":\"2026-06-14T19:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T13:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T19:00:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"slideTitle\":\"Bélgica vs Egipto\",\"kickoff\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Bélgica gana\",\"hook\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Bélgica gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Bélgica gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Bélgica vs Egipto 🧵\\n\\n1/ PGS® inicial: 2-1\\n2/ Pick temprano: Bélgica gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"discussion_breakdown\",\"text\":\"Bélgica vs Egipto, lectura a 48h.\\n\\nPGS® inicial 2-1. Pick temprano: Bélgica gana.\\n\\n¿Qué señal estás viendo tú antes de que cambie la conversación?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 14:48:01",
+        "meta": {
+          "title": "Bélgica vs Egipto: T-48 breakdown",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "tu_equipo_tu_data",
+          "priority": 9,
+          "expires_at": "2026-06-14T19:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T13:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T19:00:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "slideTitle": "Bélgica vs Egipto",
+            "kickoff": "2026-06-15T13:00:00-06:00",
+            "venue": "Seattle, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Bélgica gana",
+            "hook": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Belgica",
+              "#Egipto",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Belgica",
+                  "#Egipto",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Bélgica vs Egipto 🧵\n\n1/ PGS® inicial: 2-1\n2/ Pick temprano: Bélgica gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "discussion_breakdown",
+                "text": "Bélgica vs Egipto, lectura a 48h.\n\nPGS® inicial 2-1. Pick temprano: Bélgica gana.\n\n¿Qué señal estás viendo tú antes de que cambie la conversación?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 505,
+        "card_id": "c_3335",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-15 03:27:58",
+        "meta": {}
+      },
+      {
+        "id": 469,
+        "card_id": "c_3335",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T13:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T19:00:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"slideTitle\":\"Bélgica vs Egipto\",\"kickoff\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Bélgica gana\",\"hook\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Bélgica gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Bélgica gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Bélgica vs Egipto 🧵\\n\\n1/ PGS® inicial: 2-1\\n2/ Pick temprano: Bélgica gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"discussion_breakdown\",\"text\":\"Bélgica vs Egipto, lectura a 48h.\\n\\nPGS® inicial 2-1. Pick temprano: Bélgica gana.\\n\\n¿Qué señal estás viendo tú antes de que cambie la conversación?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 03:21:53",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T13:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T19:00:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "slideTitle": "Bélgica vs Egipto",
+            "kickoff": "2026-06-15T13:00:00-06:00",
+            "venue": "Seattle, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Bélgica gana",
+            "hook": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Belgica",
+              "#Egipto",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Belgica",
+                  "#Egipto",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Bélgica vs Egipto 🧵\n\n1/ PGS® inicial: 2-1\n2/ Pick temprano: Bélgica gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "discussion_breakdown",
+                "text": "Bélgica vs Egipto, lectura a 48h.\n\nPGS® inicial 2-1. Pick temprano: Bélgica gana.\n\n¿Qué señal estás viendo tú antes de que cambie la conversación?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 468,
+        "card_id": "c_3335",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "killed",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Bélgica vs Egipto: T-48 breakdown\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"tu_equipo_tu_data\",\"priority\":9,\"expires_at\":\"2026-06-14T19:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T13:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T19:00:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"slideTitle\":\"Bélgica vs Egipto\",\"kickoff\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Bélgica gana\",\"hook\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Bélgica gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Bélgica gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Bélgica vs Egipto 🧵\\n\\n1/ PGS® inicial: 2-1\\n2/ Pick temprano: Bélgica gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"discussion_breakdown\",\"text\":\"Bélgica vs Egipto, lectura a 48h.\\n\\nPGS® inicial 2-1. Pick temprano: Bélgica gana.\\n\\n¿Qué señal estás viendo tú antes de que cambie la conversación?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 03:21:52",
+        "meta": {
+          "title": "Bélgica vs Egipto: T-48 breakdown",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "tu_equipo_tu_data",
+          "priority": 9,
+          "expires_at": "2026-06-14T19:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T13:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T19:00:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "slideTitle": "Bélgica vs Egipto",
+            "kickoff": "2026-06-15T13:00:00-06:00",
+            "venue": "Seattle, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Bélgica gana",
+            "hook": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Belgica",
+              "#Egipto",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Belgica",
+                  "#Egipto",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Bélgica vs Egipto 🧵\n\n1/ PGS® inicial: 2-1\n2/ Pick temprano: Bélgica gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "discussion_breakdown",
+                "text": "Bélgica vs Egipto, lectura a 48h.\n\nPGS® inicial 2-1. Pick temprano: Bélgica gana.\n\n¿Qué señal estás viendo tú antes de que cambie la conversación?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 445,
+        "card_id": "c_3335",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-15 03:14:00",
+        "meta": {}
+      },
+      {
+        "id": 417,
+        "card_id": "c_3335",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T13:00:00-06:00\",\"window_key\":\"t_minus_48h\",\"window_label\":\"T-48h · breakdown\",\"expires_at\":\"2026-06-14T19:00:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"slideTitle\":\"Bélgica vs Egipto\",\"kickoff\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Bélgica gana\",\"hook\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\",\"cta\":\"Guárdalo para tu quiniela\",\"caption\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Bélgica gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"alt_text\":\"Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#ElDato\"],\"platform_copy\":{\"instagram\":{\"format\":\"breakdown_carousel\",\"caption\":\"Bélgica vs Egipto: 3 señales para empezar a leer el partido.\\n\\n1. Contexto del grupo\\n2. PGS® inicial 2-1\\n3. Pick temprano: Bélgica gana\\n\\nGuarda este breakdown y compáralo cuando salgan alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Belgica\",\"#Egipto\",\"#ElDato\"],\"alt_text\":\"Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"breakdown_thread\",\"text\":\"Breakdown temprano: Bélgica vs Egipto 🧵\\n\\n1/ PGS® inicial: 2-1\\n2/ Pick temprano: Bélgica gana\\n3/ La clave será el primer gol y cómo cambia la quiniela.\",\"reply_text\":\"Guarda el partido y revisa el contexto completo en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"discussion_breakdown\",\"text\":\"Bélgica vs Egipto, lectura a 48h.\\n\\nPGS® inicial 2-1. Pick temprano: Bélgica gana.\\n\\n¿Qué señal estás viendo tú antes de que cambie la conversación?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_3335\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 03:09:48",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T13:00:00-06:00",
+            "window_key": "t_minus_48h",
+            "window_label": "T-48h · breakdown",
+            "expires_at": "2026-06-14T19:00:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "slideTitle": "Bélgica vs Egipto",
+            "kickoff": "2026-06-15T13:00:00-06:00",
+            "venue": "Seattle, EE.UU.",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Bélgica gana",
+            "hook": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.",
+            "cta": "Guárdalo para tu quiniela",
+            "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+            "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Belgica",
+              "#Egipto",
+              "#ElDato"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "breakdown_carousel",
+                "caption": "Bélgica vs Egipto: 3 señales para empezar a leer el partido.\n\n1. Contexto del grupo\n2. PGS® inicial 2-1\n3. Pick temprano: Bélgica gana\n\nGuarda este breakdown y compáralo cuando salgan alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Belgica",
+                  "#Egipto",
+                  "#ElDato"
+                ],
+                "alt_text": "Breakdown de 3 slides para Bélgica vs Egipto: contexto, PGS® y pick temprano.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "breakdown_thread",
+                "text": "Breakdown temprano: Bélgica vs Egipto 🧵\n\n1/ PGS® inicial: 2-1\n2/ Pick temprano: Bélgica gana\n3/ La clave será el primer gol y cómo cambia la quiniela.",
+                "reply_text": "Guarda el partido y revisa el contexto completo en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "discussion_breakdown",
+                "text": "Bélgica vs Egipto, lectura a 48h.\n\nPGS® inicial 2-1. Pick temprano: Bélgica gana.\n\n¿Qué señal estás viendo tú antes de que cambie la conversación?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_3335\\slide_3.png"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

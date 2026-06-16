@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:17:08.975Z",
+  "event": {
+    "type": "create",
+    "actor": "seed-wave1",
+    "to_stage": "posted"
+  },
+  "card": {
+    "id": "c_1013",
+    "title": "Publicado: carrusel “tu equipo, tu data”",
+    "stage": "posted",
+    "owner": "stark",
+    "pillar": "tu_equipo_tu_data",
+    "platforms": [
+      "instagram"
+    ],
+    "payload": {
+      "permalink": "demo://instagram/tu-equipo-tu-data"
+    },
+    "priority": 6,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:17:08",
+    "updated_at": "2026-06-10 19:17:08",
+    "posts": [],
+    "events": [
+      {
+        "id": 113,
+        "card_id": "c_1013",
+        "actor": "seed-wave1",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "posted",
+        "note": "Wave-1 demo seed",
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"tu_equipo_tu_data\"}",
+        "created_at": "2026-06-10 19:17:08",
+        "meta": {
+          "owner": "stark",
+          "pillar": "tu_equipo_tu_data"
+        }
+      }
+    ]
+  }
+}

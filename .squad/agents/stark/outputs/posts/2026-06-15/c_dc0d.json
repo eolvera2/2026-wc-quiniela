@@ -1,0 +1,549 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:03:23.864Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "scheduled_for": "2026-06-15T12:00:00-06:00",
+        "window_key": "t_minus_4h",
+        "window_label": "T-4h · poll comunidad",
+        "expires_at": "2026-06-15T20:30:00.000Z",
+        "target_match": {
+          "home": "Arabia Saudita",
+          "away": "Uruguay",
+          "kickoff_iso": "2026-06-15T16:00:00-06:00"
+        },
+        "caption": "Poll de comunidad: Arabia Saudita vs Uruguay\n\nSticker sugerido: ¿Quién gana?\nOpciones: Arabia Saudita / Empate / Uruguay\n\nNuestro pick temprano: Uruguay gana",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#QuinielaPredictaGol"
+        ],
+        "platform_copy": {
+          "instagram": {
+            "format": "story_poll",
+            "caption": "Poll de comunidad: Arabia Saudita vs Uruguay\n\nSticker sugerido: ¿Quién gana?\nOpciones: Arabia Saudita / Empate / Uruguay\n\nNuestro pick temprano: Uruguay gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "alt_text": "GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "asset_keys": [
+              "animated_gif",
+              "1080x1080"
+            ]
+          },
+          "x": {
+            "format": "native_poll",
+            "text": "Poll a 4h: Arabia Saudita vs Uruguay\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Arabia Saudita / Empate / Uruguay / No sé",
+            "hashtags": [
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "debate_prompt",
+            "text": "Debate a 4h: Arabia Saudita vs Uruguay.\n\nPredictaGol trae Uruguay gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+            "hashtags": [
+              "#PredictaGol"
+            ]
+          }
+        },
+        "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+        "template": "poll-question-gif",
+        "format_variant": "poll_question_gif",
+        "homeTeam": "Arabia Saudita",
+        "awayTeam": "Uruguay",
+        "flagCodeHome": "sa",
+        "flagCodeAway": "uy",
+        "question": "¿Quién gana?",
+        "challengeQuestion": "¿Quién gana?",
+        "alt_text": "GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+        "assets": {
+          "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_dc0d\\1080x1080.png",
+          "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_dc0d\\animated_gif.gif"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_dc0d",
+    "title": "Arabia Saudita vs Uruguay: T-4 poll comunidad",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "quiniela_challenge",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-15T12:00:00-06:00",
+      "window_key": "t_minus_4h",
+      "window_label": "T-4h · poll comunidad",
+      "expires_at": "2026-06-15T20:30:00.000Z",
+      "target_match": {
+        "home": "Arabia Saudita",
+        "away": "Uruguay",
+        "kickoff_iso": "2026-06-15T16:00:00-06:00"
+      },
+      "caption": "Poll de comunidad: Arabia Saudita vs Uruguay\n\nSticker sugerido: ¿Quién gana?\nOpciones: Arabia Saudita / Empate / Uruguay\n\nNuestro pick temprano: Uruguay gana",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#QuinielaPredictaGol"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "story_poll",
+          "caption": "Poll de comunidad: Arabia Saudita vs Uruguay\n\nSticker sugerido: ¿Quién gana?\nOpciones: Arabia Saudita / Empate / Uruguay\n\nNuestro pick temprano: Uruguay gana",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#QuinielaPredictaGol"
+          ],
+          "alt_text": "GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+          "asset_keys": [
+            "animated_gif",
+            "1080x1080"
+          ]
+        },
+        "x": {
+          "format": "native_poll",
+          "text": "Poll a 4h: Arabia Saudita vs Uruguay\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Arabia Saudita / Empate / Uruguay / No sé",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "debate_prompt",
+          "text": "Debate a 4h: Arabia Saudita vs Uruguay.\n\nPredictaGol trae Uruguay gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+      "template": "poll-question-gif",
+      "format_variant": "poll_question_gif",
+      "homeTeam": "Arabia Saudita",
+      "awayTeam": "Uruguay",
+      "flagCodeHome": "sa",
+      "flagCodeAway": "uy",
+      "question": "¿Quién gana?",
+      "challengeQuestion": "¿Quién gana?",
+      "alt_text": "GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_dc0d\\1080x1080.png",
+        "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_dc0d\\animated_gif.gif"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": "2026-06-15T20:30:00.000Z",
+    "created_at": "2026-06-15 03:09:52",
+    "updated_at": "2026-06-15 15:03:23",
+    "posts": [],
+    "events": [
+      {
+        "id": 663,
+        "card_id": "c_dc0d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"scheduled_for\":\"2026-06-15T12:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-15T20:30:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\"},\"caption\":\"Poll de comunidad: Arabia Saudita vs Uruguay\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Arabia Saudita / Empate / Uruguay\\n\\nNuestro pick temprano: Uruguay gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"story_poll\",\"caption\":\"Poll de comunidad: Arabia Saudita vs Uruguay\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Arabia Saudita / Empate / Uruguay\\n\\nNuestro pick temprano: Uruguay gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Arabia Saudita vs Uruguay\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Arabia Saudita / Empate / Uruguay / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Debate a 4h: Arabia Saudita vs Uruguay.\\n\\nPredictaGol trae Uruguay gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_dc0d\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_dc0d\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 15:03:23",
+        "meta": {
+          "payload": {
+            "scheduled_for": "2026-06-15T12:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-15T20:30:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: Arabia Saudita vs Uruguay\n\nSticker sugerido: ¿Quién gana?\nOpciones: Arabia Saudita / Empate / Uruguay\n\nNuestro pick temprano: Uruguay gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll",
+                "caption": "Poll de comunidad: Arabia Saudita vs Uruguay\n\nSticker sugerido: ¿Quién gana?\nOpciones: Arabia Saudita / Empate / Uruguay\n\nNuestro pick temprano: Uruguay gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Arabia Saudita vs Uruguay\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Arabia Saudita / Empate / Uruguay / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Debate a 4h: Arabia Saudita vs Uruguay.\n\nPredictaGol trae Uruguay gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_dc0d\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_dc0d\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 662,
+        "card_id": "c_dc0d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Arabia Saudita vs Uruguay: T-4 poll comunidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":8,\"expires_at\":\"2026-06-15T20:30:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T12:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-15T20:30:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\"},\"caption\":\"Poll de comunidad: Arabia Saudita vs Uruguay\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Arabia Saudita / Empate / Uruguay\\n\\nNuestro pick temprano: Uruguay gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"story_poll\",\"caption\":\"Poll de comunidad: Arabia Saudita vs Uruguay\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Arabia Saudita / Empate / Uruguay\\n\\nNuestro pick temprano: Uruguay gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Arabia Saudita vs Uruguay\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Arabia Saudita / Empate / Uruguay / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Debate a 4h: Arabia Saudita vs Uruguay.\\n\\nPredictaGol trae Uruguay gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_dc0d\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_dc0d\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 15:03:15",
+        "meta": {
+          "title": "Arabia Saudita vs Uruguay: T-4 poll comunidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 8,
+          "expires_at": "2026-06-15T20:30:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T12:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-15T20:30:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: Arabia Saudita vs Uruguay\n\nSticker sugerido: ¿Quién gana?\nOpciones: Arabia Saudita / Empate / Uruguay\n\nNuestro pick temprano: Uruguay gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll",
+                "caption": "Poll de comunidad: Arabia Saudita vs Uruguay\n\nSticker sugerido: ¿Quién gana?\nOpciones: Arabia Saudita / Empate / Uruguay\n\nNuestro pick temprano: Uruguay gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Arabia Saudita vs Uruguay\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Arabia Saudita / Empate / Uruguay / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Debate a 4h: Arabia Saudita vs Uruguay.\n\nPredictaGol trae Uruguay gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_dc0d\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_dc0d\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 554,
+        "card_id": "c_dc0d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"scheduled_for\":\"2026-06-15T12:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-15T20:30:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\"},\"caption\":\"Poll de comunidad: Arabia Saudita vs Uruguay\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Arabia Saudita / Empate / Uruguay\\n\\nNuestro pick temprano: Uruguay gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"animated_poll_gif\",\"caption\":\"Poll de comunidad: Arabia Saudita vs Uruguay\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Arabia Saudita / Empate / Uruguay\\n\\nNuestro pick temprano: Uruguay gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Arabia Saudita vs Uruguay\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Arabia Saudita / Empate / Uruguay / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"community_question\",\"text\":\"Arabia Saudita vs Uruguay: a 4 horas del partido, la comunidad decide.\\n\\n¿Te quedas con Uruguay gana o cambias por contexto/lineup?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_dc0d\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_dc0d\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 14:48:25",
+        "meta": {
+          "payload": {
+            "scheduled_for": "2026-06-15T12:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-15T20:30:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: Arabia Saudita vs Uruguay\n\nSticker sugerido: ¿Quién gana?\nOpciones: Arabia Saudita / Empate / Uruguay\n\nNuestro pick temprano: Uruguay gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "animated_poll_gif",
+                "caption": "Poll de comunidad: Arabia Saudita vs Uruguay\n\nSticker sugerido: ¿Quién gana?\nOpciones: Arabia Saudita / Empate / Uruguay\n\nNuestro pick temprano: Uruguay gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Arabia Saudita vs Uruguay\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Arabia Saudita / Empate / Uruguay / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "community_question",
+                "text": "Arabia Saudita vs Uruguay: a 4 horas del partido, la comunidad decide.\n\n¿Te quedas con Uruguay gana o cambias por contexto/lineup?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_dc0d\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_dc0d\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 553,
+        "card_id": "c_dc0d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Arabia Saudita vs Uruguay: T-4 poll comunidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":8,\"expires_at\":\"2026-06-15T20:30:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T12:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-15T20:30:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\"},\"caption\":\"Poll de comunidad: Arabia Saudita vs Uruguay\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Arabia Saudita / Empate / Uruguay\\n\\nNuestro pick temprano: Uruguay gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"animated_poll_gif\",\"caption\":\"Poll de comunidad: Arabia Saudita vs Uruguay\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Arabia Saudita / Empate / Uruguay\\n\\nNuestro pick temprano: Uruguay gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Arabia Saudita vs Uruguay\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Arabia Saudita / Empate / Uruguay / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"community_question\",\"text\":\"Arabia Saudita vs Uruguay: a 4 horas del partido, la comunidad decide.\\n\\n¿Te quedas con Uruguay gana o cambias por contexto/lineup?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"alt_text\":\"GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\"}}",
+        "created_at": "2026-06-15 14:48:15",
+        "meta": {
+          "title": "Arabia Saudita vs Uruguay: T-4 poll comunidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 8,
+          "expires_at": "2026-06-15T20:30:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T12:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-15T20:30:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: Arabia Saudita vs Uruguay\n\nSticker sugerido: ¿Quién gana?\nOpciones: Arabia Saudita / Empate / Uruguay\n\nNuestro pick temprano: Uruguay gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "animated_poll_gif",
+                "caption": "Poll de comunidad: Arabia Saudita vs Uruguay\n\nSticker sugerido: ¿Quién gana?\nOpciones: Arabia Saudita / Empate / Uruguay\n\nNuestro pick temprano: Uruguay gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Arabia Saudita vs Uruguay\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Arabia Saudita / Empate / Uruguay / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "community_question",
+                "text": "Arabia Saudita vs Uruguay: a 4 horas del partido, la comunidad decide.\n\n¿Te quedas con Uruguay gana o cambias por contexto/lineup?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "alt_text": "GIF animado de poll de comunidad para Arabia Saudita vs Uruguay, con logo PredictaGol, signo de pregunta y banderas de ambos equipos."
+          }
+        }
+      },
+      {
+        "id": 484,
+        "card_id": "c_dc0d",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Arabia Saudita vs Uruguay: T-4 poll comunidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":8,\"expires_at\":\"2026-06-15T20:30:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T12:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-15T20:30:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\"},\"caption\":\"Poll de comunidad: Arabia Saudita vs Uruguay\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Arabia Saudita / Empate / Uruguay\\n\\nNuestro pick temprano: Uruguay gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"platform_copy\":{\"instagram\":{\"format\":\"story_poll\",\"caption\":\"Poll de comunidad: Arabia Saudita vs Uruguay\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Arabia Saudita / Empate / Uruguay\\n\\nNuestro pick temprano: Uruguay gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Arabia Saudita vs Uruguay\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Arabia Saudita / Empate / Uruguay / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"community_question\",\"text\":\"Arabia Saudita vs Uruguay: a 4 horas del partido, la comunidad decide.\\n\\n¿Te quedas con Uruguay gana o cambias por contexto/lineup?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 03:21:58",
+        "meta": {
+          "title": "Arabia Saudita vs Uruguay: T-4 poll comunidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 8,
+          "expires_at": "2026-06-15T20:30:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T12:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-15T20:30:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00"
+            },
+            "caption": "Poll de comunidad: Arabia Saudita vs Uruguay\n\nSticker sugerido: ¿Quién gana?\nOpciones: Arabia Saudita / Empate / Uruguay\n\nNuestro pick temprano: Uruguay gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll",
+                "caption": "Poll de comunidad: Arabia Saudita vs Uruguay\n\nSticker sugerido: ¿Quién gana?\nOpciones: Arabia Saudita / Empate / Uruguay\n\nNuestro pick temprano: Uruguay gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Arabia Saudita vs Uruguay\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Arabia Saudita / Empate / Uruguay / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "community_question",
+                "text": "Arabia Saudita vs Uruguay: a 4 horas del partido, la comunidad decide.\n\n¿Te quedas con Uruguay gana o cambias por contexto/lineup?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 432,
+        "card_id": "c_dc0d",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"expires_at\":\"2026-06-15T20:30:00.000Z\"}",
+        "created_at": "2026-06-15 03:09:52",
+        "meta": {
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "expires_at": "2026-06-15T20:30:00.000Z"
+        }
+      }
+    ]
+  }
+}

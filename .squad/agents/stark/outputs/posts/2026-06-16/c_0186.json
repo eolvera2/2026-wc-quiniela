@@ -1,0 +1,610 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-16T03:54:44.200Z",
+  "event": {
+    "type": "kill",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "killed",
+    "note": "Bulk discard expired To Be Posted cards from column header",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_0186",
+    "title": "PGS® Arabia Saudita 0-2 Uruguay — T-15 dato clave",
+    "stage": "killed",
+    "owner": "stark",
+    "pillar": "datos_curiosos",
+    "platforms": [
+      "x"
+    ],
+    "payload": {
+      "template": "data-callout",
+      "format_variant": "data_callout",
+      "scheduled_for": "2026-06-15T15:45:00-06:00",
+      "window_key": "t_minus_15",
+      "window_label": "T-15m · dato clave",
+      "expires_at": "2026-06-15T22:15:00.000Z",
+      "target_match": {
+        "home": "Arabia Saudita",
+        "away": "Uruguay",
+        "kickoff_iso": "2026-06-15T16:00:00-06:00",
+        "venue": "Miami Gardens, EE.UU."
+      },
+      "homeTeam": "Arabia Saudita",
+      "awayTeam": "Uruguay",
+      "flagCodeHome": "sa",
+      "flagCodeAway": "uy",
+      "bigNumber": "0-2",
+      "eyebrow": "PGS® Arabia Saudita vs Uruguay",
+      "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.",
+      "cta": "Más datos en predictagol.com",
+      "caption": "Dato a 15 minutos del Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+      "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.",
+      "hashtags": [
+        "#PredictaGol",
+        "#WorldCup2026"
+      ],
+      "platform_copy": {
+        "x": {
+          "format": "quote_post",
+          "text": "Para quote-postear sobre una alineación/dato oficial de Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+          "hashtags": [
+            "#PredictaGol",
+            "#WorldCup2026"
+          ],
+          "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+        }
+      },
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0186\\1080x1080.png"
+      }
+    },
+    "priority": 7,
+    "stalled_at": null,
+    "expires_at": "2026-06-15T22:15:00.000Z",
+    "created_at": "2026-06-15 03:09:53",
+    "updated_at": "2026-06-16 03:54:44",
+    "posts": [],
+    "events": [
+      {
+        "id": 883,
+        "card_id": "c_0186",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Bulk discard expired To Be Posted cards from column header",
+        "meta_json": "{}",
+        "created_at": "2026-06-16 03:54:44",
+        "meta": {}
+      },
+      {
+        "id": 794,
+        "card_id": "c_0186",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T15:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T22:15:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PGS® Arabia Saudita vs Uruguay\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0186\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-16 01:39:25",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T15:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T22:15:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "bigNumber": "0-2",
+            "eyebrow": "PGS® Arabia Saudita vs Uruguay",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0186\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 793,
+        "card_id": "c_0186",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Arabia Saudita 0-2 Uruguay — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-15T22:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T15:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T22:15:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PGS® Arabia Saudita vs Uruguay\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0186\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-16 01:39:25",
+        "meta": {
+          "title": "PGS® Arabia Saudita 0-2 Uruguay — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-15T22:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T15:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T22:15:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "bigNumber": "0-2",
+            "eyebrow": "PGS® Arabia Saudita vs Uruguay",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0186\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 667,
+        "card_id": "c_0186",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T15:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T22:15:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PGS® Arabia Saudita vs Uruguay\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0186\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:03:25",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T15:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T22:15:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "bigNumber": "0-2",
+            "eyebrow": "PGS® Arabia Saudita vs Uruguay",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0186\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 666,
+        "card_id": "c_0186",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Arabia Saudita 0-2 Uruguay — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-15T22:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T15:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T22:15:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PGS® Arabia Saudita vs Uruguay\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0186\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:03:25",
+        "meta": {
+          "title": "PGS® Arabia Saudita 0-2 Uruguay — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-15T22:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T15:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T22:15:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "bigNumber": "0-2",
+            "eyebrow": "PGS® Arabia Saudita vs Uruguay",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0186\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 558,
+        "card_id": "c_0186",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T15:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T22:15:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PGS® Arabia Saudita vs Uruguay\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0186\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 14:48:27",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T15:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T22:15:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "bigNumber": "0-2",
+            "eyebrow": "PGS® Arabia Saudita vs Uruguay",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0186\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 557,
+        "card_id": "c_0186",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Arabia Saudita 0-2 Uruguay — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-15T22:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T15:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T22:15:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PGS® Arabia Saudita vs Uruguay\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0186\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 14:48:26",
+        "meta": {
+          "title": "PGS® Arabia Saudita 0-2 Uruguay — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-15T22:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T15:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T22:15:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "bigNumber": "0-2",
+            "eyebrow": "PGS® Arabia Saudita vs Uruguay",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0186\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 488,
+        "card_id": "c_0186",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T15:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T22:15:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PGS® Arabia Saudita vs Uruguay\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0186\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 03:22:00",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T15:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T22:15:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "bigNumber": "0-2",
+            "eyebrow": "PGS® Arabia Saudita vs Uruguay",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0186\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 487,
+        "card_id": "c_0186",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Arabia Saudita 0-2 Uruguay — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-15T22:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T15:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T22:15:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PGS® Arabia Saudita vs Uruguay\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0186\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 03:22:00",
+        "meta": {
+          "title": "PGS® Arabia Saudita 0-2 Uruguay — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-15T22:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T15:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T22:15:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "bigNumber": "0-2",
+            "eyebrow": "PGS® Arabia Saudita vs Uruguay",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0186\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 436,
+        "card_id": "c_0186",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T15:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T22:15:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"bigNumber\":\"0-2\",\"eyebrow\":\"PGS® Arabia Saudita vs Uruguay\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Arabia Saudita vs Uruguay:\\n\\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_0186\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 03:09:54",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T15:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T22:15:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "bigNumber": "0-2",
+            "eyebrow": "PGS® Arabia Saudita vs Uruguay",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Miami Gardens, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 0-2 para Arabia Saudita vs Uruguay.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Arabia Saudita vs Uruguay:\n\nPGS® 0-2. Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_0186\\1080x1080.png"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

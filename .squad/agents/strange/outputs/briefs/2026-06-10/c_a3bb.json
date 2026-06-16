@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:27:49.837Z",
+  "event": {
+    "type": "create",
+    "actor": "strange",
+    "to_stage": "ideas"
+  },
+  "card": {
+    "id": "c_a3bb",
+    "title": "Dato curioso: Curazao abre su grupo contra Alemania",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "datos_curiosos",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-14T10:15:00-06:00",
+      "hook": "Un debut pequeño en nombre, enorme en historia de grupo.",
+      "body_brief": "Pieza de contexto: Alemania carga tradición, Curazao carga ilusión y el primer partido puede volver enorme una jornada. Enmarcarlo como historia de fixture, no como trámite.",
+      "template": "datos-curiosos",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Alemania",
+        "#Curazao",
+        "#DatosCuriosos"
+      ],
+      "notes": "Verificar acentos y bandera si se usa. Evitar caricaturizar al equipo debutante.",
+      "target_match": {
+        "home": "Germany",
+        "away": "Curaçao",
+        "kickoff_iso": "2026-06-14T11:00:00-06:00",
+        "venue": "Houston"
+      }
+    },
+    "priority": 7,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:27:49",
+    "updated_at": "2026-06-10 19:27:49",
+    "posts": [],
+    "events": [
+      {
+        "id": 140,
+        "card_id": "c_a3bb",
+        "actor": "strange",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "ideas",
+        "note": null,
+        "meta_json": "{\"owner\":\"strange\",\"pillar\":\"datos_curiosos\"}",
+        "created_at": "2026-06-10 19:27:49",
+        "meta": {
+          "owner": "strange",
+          "pillar": "datos_curiosos"
+        }
+      }
+    ]
+  }
+}

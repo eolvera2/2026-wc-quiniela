@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:22:14.826Z",
+  "event": {
+    "type": "create",
+    "actor": "widow",
+    "to_stage": "pulse_signals"
+  },
+  "card": {
+    "id": "c_e054",
+    "title": "El debut México–Sudáfrica revive el 1-1 de 2010 y prende el “ahora sí” local",
+    "stage": "pulse_signals",
+    "owner": "widow",
+    "pillar": "pulse",
+    "platforms": [],
+    "payload": {
+      "signal_type": "factual_hook",
+      "platform_origin": "news",
+      "evidence_urls": [
+        "https://www.si.com/mx/futbol/mexico-vs-sudafrica-repite-historia-partido-inaugural-mundial-2026",
+        "https://www.sopitas.com/deportes/donde-ver-mexico-vs-sudafrica-ceremonia-inauguracion-mundial-2026/",
+        "https://expansion.mx/tendencias/2026/06/08/cuando-a-que-hora-es-inauguracion-mundial-2026"
+      ],
+      "predictagol_angle": "Abrir una Quiniela Challenge con “¿se rompe la racha del debut?” y picks de marcador sin tono de premio.",
+      "suggested_pillar": "Quiniela Challenge",
+      "urgency": "today",
+      "confidence": "high"
+    },
+    "priority": 10,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:22:14",
+    "updated_at": "2026-06-10 19:22:14",
+    "posts": [],
+    "events": [
+      {
+        "id": 117,
+        "card_id": "c_e054",
+        "actor": "widow",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "pulse_signals",
+        "note": null,
+        "meta_json": "{\"owner\":\"widow\",\"pillar\":\"pulse\"}",
+        "created_at": "2026-06-10 19:22:14",
+        "meta": {
+          "owner": "widow",
+          "pillar": "pulse"
+        }
+      }
+    ]
+  }
+}

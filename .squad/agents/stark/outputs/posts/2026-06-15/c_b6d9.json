@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T02:47:22.904Z",
+  "event": {
+    "type": "kill",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "killed",
+    "note": "Descartada desde tarjeta (To Be Posted)",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_b6d9",
+    "title": "Costa de Marfil vs Ecuador: pronóstico del día",
+    "stage": "killed",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram"
+    ],
+    "payload": {
+      "template": "pronostico-carousel-3up",
+      "format_variant": "carousel_3up",
+      "scheduled_for": "2026-06-14T17:00:00-06:00",
+      "target_match": {
+        "home": "Costa de Marfil",
+        "away": "Ecuador",
+        "kickoff_iso": "2026-06-14T17:00:00-06:00",
+        "venue": "Philadelphia, EE.UU."
+      },
+      "homeTeam": "Costa de Marfil",
+      "awayTeam": "Ecuador",
+      "flagCodeHome": "ci",
+      "flagCodeAway": "ec",
+      "slideTitle": "Costa de Marfil vs Ecuador",
+      "kickoff": "2026-06-14T17:00:00-06:00",
+      "venue": "Philadelphia, EE.UU.",
+      "pgsHome": "1",
+      "pgsAway": "1",
+      "pickShort": "empate",
+      "hook": "Costa de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.",
+      "cta": "Tu pick en predictagol.com",
+      "caption": "Costa de Marfil vs Ecuador hoy domingo, 14 de junio, 05:00 p.m.\n\nCosta de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Costa de Marfil 1-1 Ecuador · 🎯 Pick inicial: empate\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+      "alt_text": "Carrusel de 3 slides para Costa de Marfil vs Ecuador: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#CostadeMarfil",
+        "#Ecuador",
+        "#PronosticoDelDia"
+      ],
+      "assets": {
+        "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_1.png",
+        "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_2.png",
+        "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_3.png"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": null,
+    "created_at": "2026-06-14 15:30:38",
+    "updated_at": "2026-06-15 02:47:22",
+    "posts": [],
+    "events": [
+      {
+        "id": 341,
+        "card_id": "c_b6d9",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-15 02:47:22",
+        "meta": {}
+      },
+      {
+        "id": 323,
+        "card_id": "c_b6d9",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T17:00:00-06:00\",\"target_match\":{\"home\":\"Costa de Marfil\",\"away\":\"Ecuador\",\"kickoff_iso\":\"2026-06-14T17:00:00-06:00\",\"venue\":\"Philadelphia, EE.UU.\"},\"homeTeam\":\"Costa de Marfil\",\"awayTeam\":\"Ecuador\",\"flagCodeHome\":\"ci\",\"flagCodeAway\":\"ec\",\"slideTitle\":\"Costa de Marfil vs Ecuador\",\"kickoff\":\"2026-06-14T17:00:00-06:00\",\"venue\":\"Philadelphia, EE.UU.\",\"pgsHome\":\"1\",\"pgsAway\":\"1\",\"pickShort\":\"empate\",\"hook\":\"Costa de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Costa de Marfil vs Ecuador hoy domingo, 14 de junio, 05:00 p.m.\\n\\nCosta de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Costa de Marfil 1-1 Ecuador · 🎯 Pick inicial: empate\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Costa de Marfil vs Ecuador: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#CostadeMarfil\",\"#Ecuador\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_b6d9\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_b6d9\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_b6d9\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-14 15:32:23",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T17:00:00-06:00",
+            "target_match": {
+              "home": "Costa de Marfil",
+              "away": "Ecuador",
+              "kickoff_iso": "2026-06-14T17:00:00-06:00",
+              "venue": "Philadelphia, EE.UU."
+            },
+            "homeTeam": "Costa de Marfil",
+            "awayTeam": "Ecuador",
+            "flagCodeHome": "ci",
+            "flagCodeAway": "ec",
+            "slideTitle": "Costa de Marfil vs Ecuador",
+            "kickoff": "2026-06-14T17:00:00-06:00",
+            "venue": "Philadelphia, EE.UU.",
+            "pgsHome": "1",
+            "pgsAway": "1",
+            "pickShort": "empate",
+            "hook": "Costa de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Costa de Marfil vs Ecuador hoy domingo, 14 de junio, 05:00 p.m.\n\nCosta de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Costa de Marfil 1-1 Ecuador · 🎯 Pick inicial: empate\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Costa de Marfil vs Ecuador: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#CostadeMarfil",
+              "#Ecuador",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 322,
+        "card_id": "c_b6d9",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Costa de Marfil vs Ecuador: pronóstico del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T17:00:00-06:00\",\"target_match\":{\"home\":\"Costa de Marfil\",\"away\":\"Ecuador\",\"kickoff_iso\":\"2026-06-14T17:00:00-06:00\",\"venue\":\"Philadelphia, EE.UU.\"},\"homeTeam\":\"Costa de Marfil\",\"awayTeam\":\"Ecuador\",\"flagCodeHome\":\"ci\",\"flagCodeAway\":\"ec\",\"slideTitle\":\"Costa de Marfil vs Ecuador\",\"kickoff\":\"2026-06-14T17:00:00-06:00\",\"venue\":\"Philadelphia, EE.UU.\",\"pgsHome\":\"1\",\"pgsAway\":\"1\",\"pickShort\":\"empate\",\"hook\":\"Costa de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Costa de Marfil vs Ecuador hoy domingo, 14 de junio, 05:00 p.m.\\n\\nCosta de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Costa de Marfil 1-1 Ecuador · 🎯 Pick inicial: empate\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Costa de Marfil vs Ecuador: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#CostadeMarfil\",\"#Ecuador\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_b6d9\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_b6d9\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_b6d9\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-14 15:32:22",
+        "meta": {
+          "title": "Costa de Marfil vs Ecuador: pronóstico del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T17:00:00-06:00",
+            "target_match": {
+              "home": "Costa de Marfil",
+              "away": "Ecuador",
+              "kickoff_iso": "2026-06-14T17:00:00-06:00",
+              "venue": "Philadelphia, EE.UU."
+            },
+            "homeTeam": "Costa de Marfil",
+            "awayTeam": "Ecuador",
+            "flagCodeHome": "ci",
+            "flagCodeAway": "ec",
+            "slideTitle": "Costa de Marfil vs Ecuador",
+            "kickoff": "2026-06-14T17:00:00-06:00",
+            "venue": "Philadelphia, EE.UU.",
+            "pgsHome": "1",
+            "pgsAway": "1",
+            "pickShort": "empate",
+            "hook": "Costa de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Costa de Marfil vs Ecuador hoy domingo, 14 de junio, 05:00 p.m.\n\nCosta de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Costa de Marfil 1-1 Ecuador · 🎯 Pick inicial: empate\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Costa de Marfil vs Ecuador: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#CostadeMarfil",
+              "#Ecuador",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 307,
+        "card_id": "c_b6d9",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T17:00:00-06:00\",\"target_match\":{\"home\":\"Costa de Marfil\",\"away\":\"Ecuador\",\"kickoff_iso\":\"2026-06-14T17:00:00-06:00\",\"venue\":\"Philadelphia, EE.UU.\"},\"homeTeam\":\"Costa de Marfil\",\"awayTeam\":\"Ecuador\",\"flagCodeHome\":\"ci\",\"flagCodeAway\":\"ec\",\"slideTitle\":\"Costa de Marfil vs Ecuador\",\"kickoff\":\"2026-06-14T17:00:00-06:00\",\"venue\":\"Philadelphia, EE.UU.\",\"pgsHome\":\"1\",\"pgsAway\":\"1\",\"pickShort\":\"empate\",\"hook\":\"Costa de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Costa de Marfil vs Ecuador hoy domingo, 14 de junio, 05:00 p.m.\\n\\nCosta de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Costa de Marfil 1-1 Ecuador · 🎯 Pick inicial: empate\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Costa de Marfil vs Ecuador: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#CostadeMarfil\",\"#Ecuador\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_b6d9\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_b6d9\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_b6d9\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-14 15:31:54",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T17:00:00-06:00",
+            "target_match": {
+              "home": "Costa de Marfil",
+              "away": "Ecuador",
+              "kickoff_iso": "2026-06-14T17:00:00-06:00",
+              "venue": "Philadelphia, EE.UU."
+            },
+            "homeTeam": "Costa de Marfil",
+            "awayTeam": "Ecuador",
+            "flagCodeHome": "ci",
+            "flagCodeAway": "ec",
+            "slideTitle": "Costa de Marfil vs Ecuador",
+            "kickoff": "2026-06-14T17:00:00-06:00",
+            "venue": "Philadelphia, EE.UU.",
+            "pgsHome": "1",
+            "pgsAway": "1",
+            "pickShort": "empate",
+            "hook": "Costa de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Costa de Marfil vs Ecuador hoy domingo, 14 de junio, 05:00 p.m.\n\nCosta de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Costa de Marfil 1-1 Ecuador · 🎯 Pick inicial: empate\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Costa de Marfil vs Ecuador: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#CostadeMarfil",
+              "#Ecuador",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 306,
+        "card_id": "c_b6d9",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Costa de Marfil vs Ecuador: pronóstico del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T17:00:00-06:00\",\"target_match\":{\"home\":\"Costa de Marfil\",\"away\":\"Ecuador\",\"kickoff_iso\":\"2026-06-14T17:00:00-06:00\",\"venue\":\"Philadelphia, EE.UU.\"},\"homeTeam\":\"Costa de Marfil\",\"awayTeam\":\"Ecuador\",\"flagCodeHome\":\"ci\",\"flagCodeAway\":\"ec\",\"slideTitle\":\"Costa de Marfil vs Ecuador\",\"kickoff\":\"2026-06-14T17:00:00-06:00\",\"venue\":\"Philadelphia, EE.UU.\",\"pgsHome\":\"1\",\"pgsAway\":\"1\",\"pickShort\":\"empate\",\"hook\":\"Costa de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Costa de Marfil vs Ecuador hoy domingo, 14 de junio, 05:00 p.m.\\n\\nCosta de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Costa de Marfil 1-1 Ecuador · 🎯 Pick inicial: empate\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Costa de Marfil vs Ecuador: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#CostadeMarfil\",\"#Ecuador\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_b6d9\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_b6d9\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_b6d9\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-14 15:31:52",
+        "meta": {
+          "title": "Costa de Marfil vs Ecuador: pronóstico del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T17:00:00-06:00",
+            "target_match": {
+              "home": "Costa de Marfil",
+              "away": "Ecuador",
+              "kickoff_iso": "2026-06-14T17:00:00-06:00",
+              "venue": "Philadelphia, EE.UU."
+            },
+            "homeTeam": "Costa de Marfil",
+            "awayTeam": "Ecuador",
+            "flagCodeHome": "ci",
+            "flagCodeAway": "ec",
+            "slideTitle": "Costa de Marfil vs Ecuador",
+            "kickoff": "2026-06-14T17:00:00-06:00",
+            "venue": "Philadelphia, EE.UU.",
+            "pgsHome": "1",
+            "pgsAway": "1",
+            "pickShort": "empate",
+            "hook": "Costa de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Costa de Marfil vs Ecuador hoy domingo, 14 de junio, 05:00 p.m.\n\nCosta de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Costa de Marfil 1-1 Ecuador · 🎯 Pick inicial: empate\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Costa de Marfil vs Ecuador: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#CostadeMarfil",
+              "#Ecuador",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 291,
+        "card_id": "c_b6d9",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-14T17:00:00-06:00\",\"target_match\":{\"home\":\"Costa de Marfil\",\"away\":\"Ecuador\",\"kickoff_iso\":\"2026-06-14T17:00:00-06:00\",\"venue\":\"Philadelphia, EE.UU.\"},\"homeTeam\":\"Costa de Marfil\",\"awayTeam\":\"Ecuador\",\"flagCodeHome\":\"ci\",\"flagCodeAway\":\"ec\",\"slideTitle\":\"Costa de Marfil vs Ecuador\",\"kickoff\":\"2026-06-14T17:00:00-06:00\",\"venue\":\"Philadelphia, EE.UU.\",\"pgsHome\":\"1\",\"pgsAway\":\"1\",\"pickShort\":\"empate\",\"hook\":\"Costa de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Costa de Marfil vs Ecuador hoy domingo, 14 de junio, 05:00 p.m.\\n\\nCosta de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Costa de Marfil 1-1 Ecuador · 🎯 Pick inicial: empate\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Costa de Marfil vs Ecuador: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#CostadeMarfil\",\"#Ecuador\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_b6d9\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_b6d9\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_b6d9\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-14 15:30:40",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-14T17:00:00-06:00",
+            "target_match": {
+              "home": "Costa de Marfil",
+              "away": "Ecuador",
+              "kickoff_iso": "2026-06-14T17:00:00-06:00",
+              "venue": "Philadelphia, EE.UU."
+            },
+            "homeTeam": "Costa de Marfil",
+            "awayTeam": "Ecuador",
+            "flagCodeHome": "ci",
+            "flagCodeAway": "ec",
+            "slideTitle": "Costa de Marfil vs Ecuador",
+            "kickoff": "2026-06-14T17:00:00-06:00",
+            "venue": "Philadelphia, EE.UU.",
+            "pgsHome": "1",
+            "pgsAway": "1",
+            "pickShort": "empate",
+            "hook": "Costa de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Costa de Marfil vs Ecuador hoy domingo, 14 de junio, 05:00 p.m.\n\nCosta de Marfil vs Ecuador: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Costa de Marfil 1-1 Ecuador · 🎯 Pick inicial: empate\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Costa de Marfil vs Ecuador: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#CostadeMarfil",
+              "#Ecuador",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_b6d9\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 290,
+        "card_id": "c_b6d9",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"expires_at\":null}",
+        "created_at": "2026-06-14 15:30:38",
+        "meta": {
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "expires_at": null
+        }
+      }
+    ]
+  }
+}

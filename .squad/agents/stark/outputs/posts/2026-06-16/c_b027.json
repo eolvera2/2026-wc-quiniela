@@ -1,0 +1,568 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-16T03:54:44.210Z",
+  "event": {
+    "type": "kill",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "killed",
+    "note": "Bulk discard expired To Be Posted cards from column header",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_b027",
+    "title": "PGS® Bélgica 2-1 Egipto — T-15 dato clave",
+    "stage": "killed",
+    "owner": "stark",
+    "pillar": "datos_curiosos",
+    "platforms": [
+      "x"
+    ],
+    "payload": {
+      "template": "data-callout",
+      "format_variant": "data_callout",
+      "scheduled_for": "2026-06-15T12:45:00-06:00",
+      "window_key": "t_minus_15",
+      "window_label": "T-15m · dato clave",
+      "expires_at": "2026-06-15T19:15:00.000Z",
+      "target_match": {
+        "home": "Bélgica",
+        "away": "Egipto",
+        "kickoff_iso": "2026-06-15T13:00:00-06:00",
+        "venue": "Seattle, EE.UU."
+      },
+      "homeTeam": "Bélgica",
+      "awayTeam": "Egipto",
+      "flagCodeHome": "be",
+      "flagCodeAway": "eg",
+      "bigNumber": "2-1",
+      "eyebrow": "PGS® Bélgica vs Egipto",
+      "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Seattle, EE.UU.",
+      "cta": "Más datos en predictagol.com",
+      "caption": "Dato a 15 minutos del Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+      "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Bélgica vs Egipto.",
+      "hashtags": [
+        "#PredictaGol",
+        "#WorldCup2026"
+      ],
+      "platform_copy": {
+        "x": {
+          "format": "quote_post",
+          "text": "Para quote-postear sobre una alineación/dato oficial de Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+          "hashtags": [
+            "#PredictaGol",
+            "#WorldCup2026"
+          ],
+          "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+        }
+      },
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b027\\1080x1080.png"
+      }
+    },
+    "priority": 7,
+    "stalled_at": null,
+    "expires_at": "2026-06-15T19:15:00.000Z",
+    "created_at": "2026-06-15 03:09:50",
+    "updated_at": "2026-06-16 03:54:44",
+    "posts": [],
+    "events": [
+      {
+        "id": 884,
+        "card_id": "c_b027",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Bulk discard expired To Be Posted cards from column header",
+        "meta_json": "{}",
+        "created_at": "2026-06-16 03:54:44",
+        "meta": {}
+      },
+      {
+        "id": 781,
+        "card_id": "c_b027",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T12:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T19:15:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® Bélgica vs Egipto\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Seattle, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Bélgica vs Egipto:\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 para Bélgica vs Egipto.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Bélgica vs Egipto:\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_b027\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-16 01:39:06",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T12:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T19:15:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® Bélgica vs Egipto",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Seattle, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Bélgica vs Egipto.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b027\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 780,
+        "card_id": "c_b027",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "killed",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Bélgica 2-1 Egipto — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-15T19:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T12:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T19:15:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® Bélgica vs Egipto\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Seattle, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Bélgica vs Egipto:\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 para Bélgica vs Egipto.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Bélgica vs Egipto:\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_b027\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-16 01:39:06",
+        "meta": {
+          "title": "PGS® Bélgica 2-1 Egipto — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-15T19:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T12:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T19:15:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® Bélgica vs Egipto",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Seattle, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Bélgica vs Egipto.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b027\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 756,
+        "card_id": "c_b027",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-16 01:28:03",
+        "meta": {}
+      },
+      {
+        "id": 654,
+        "card_id": "c_b027",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T12:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T19:15:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® Bélgica vs Egipto\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Seattle, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Bélgica vs Egipto:\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 para Bélgica vs Egipto.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Bélgica vs Egipto:\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_b027\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:03:13",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T12:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T19:15:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® Bélgica vs Egipto",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Seattle, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Bélgica vs Egipto.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b027\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 653,
+        "card_id": "c_b027",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Bélgica 2-1 Egipto — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-15T19:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T12:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T19:15:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® Bélgica vs Egipto\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Seattle, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Bélgica vs Egipto:\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 para Bélgica vs Egipto.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"quote_post\",\"text\":\"Para quote-postear sobre una alineación/dato oficial de Bélgica vs Egipto:\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nSi el primer tramo confirma esto, el pick se sostiene.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"instructions\":\"Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take.\"}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_b027\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:03:13",
+        "meta": {
+          "title": "PGS® Bélgica 2-1 Egipto — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-15T19:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T12:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T19:15:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® Bélgica vs Egipto",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Seattle, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Bélgica vs Egipto.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "quote_post",
+                "text": "Para quote-postear sobre una alineación/dato oficial de Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi el primer tramo confirma esto, el pick se sostiene.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ],
+                "instructions": "Busca un post reciente de FIFA/equipo/periodista sobre lineups o dato del partido; usa este texto como quote post. Si no hay post útil, publícalo como single hot take."
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b027\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 545,
+        "card_id": "c_b027",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T12:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T19:15:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® Bélgica vs Egipto\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Seattle, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Bélgica vs Egipto:\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 para Bélgica vs Egipto.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Bélgica vs Egipto:\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_b027\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 14:48:13",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T12:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T19:15:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® Bélgica vs Egipto",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Seattle, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Bélgica vs Egipto.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b027\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 544,
+        "card_id": "c_b027",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Bélgica 2-1 Egipto — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-15T19:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T12:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T19:15:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® Bélgica vs Egipto\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Seattle, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Bélgica vs Egipto:\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 para Bélgica vs Egipto.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Bélgica vs Egipto:\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_b027\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 14:48:13",
+        "meta": {
+          "title": "PGS® Bélgica 2-1 Egipto — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-15T19:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T12:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T19:15:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® Bélgica vs Egipto",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Seattle, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Bélgica vs Egipto.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b027\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 476,
+        "card_id": "c_b027",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T12:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T19:15:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® Bélgica vs Egipto\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Seattle, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Bélgica vs Egipto:\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 para Bélgica vs Egipto.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Bélgica vs Egipto:\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_b027\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 03:21:56",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T12:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T19:15:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® Bélgica vs Egipto",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Seattle, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Bélgica vs Egipto.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b027\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 475,
+        "card_id": "c_b027",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Bélgica 2-1 Egipto — T-15 dato clave\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"datos_curiosos\",\"priority\":7,\"expires_at\":\"2026-06-15T19:15:00.000Z\",\"platforms\":[\"x\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T12:45:00-06:00\",\"window_key\":\"t_minus_15\",\"window_label\":\"T-15m · dato clave\",\"expires_at\":\"2026-06-15T19:15:00.000Z\",\"target_match\":{\"home\":\"Bélgica\",\"away\":\"Egipto\",\"kickoff_iso\":\"2026-06-15T13:00:00-06:00\",\"venue\":\"Seattle, EE.UU.\"},\"homeTeam\":\"Bélgica\",\"awayTeam\":\"Egipto\",\"flagCodeHome\":\"be\",\"flagCodeAway\":\"eg\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® Bélgica vs Egipto\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Seattle, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"Dato a 15 minutos del Bélgica vs Egipto:\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 para Bélgica vs Egipto.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"single_post\",\"text\":\"Dato a 15 minutos del Bélgica vs Egipto:\\n\\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\\n\\nSi cambia el partido temprano, volvemos en HT.\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_b027\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 03:21:55",
+        "meta": {
+          "title": "PGS® Bélgica 2-1 Egipto — T-15 dato clave",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "datos_curiosos",
+          "priority": 7,
+          "expires_at": "2026-06-15T19:15:00.000Z",
+          "platforms": [
+            "x"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T12:45:00-06:00",
+            "window_key": "t_minus_15",
+            "window_label": "T-15m · dato clave",
+            "expires_at": "2026-06-15T19:15:00.000Z",
+            "target_match": {
+              "home": "Bélgica",
+              "away": "Egipto",
+              "kickoff_iso": "2026-06-15T13:00:00-06:00",
+              "venue": "Seattle, EE.UU."
+            },
+            "homeTeam": "Bélgica",
+            "awayTeam": "Egipto",
+            "flagCodeHome": "be",
+            "flagCodeAway": "eg",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® Bélgica vs Egipto",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Seattle, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "Dato a 15 minutos del Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 para Bélgica vs Egipto.",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "single_post",
+                "text": "Dato a 15 minutos del Bélgica vs Egipto:\n\nPGS® 2-1. Bélgica vs Egipto: el algoritmo PGS® tiene su veredicto.\n\nSi cambia el partido temprano, volvemos en HT.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_b027\\1080x1080.png"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

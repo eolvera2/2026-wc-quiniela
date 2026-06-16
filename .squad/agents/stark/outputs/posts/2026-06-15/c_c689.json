@@ -1,0 +1,401 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:03:59.875Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "template": "poll-question-gif",
+        "format_variant": "poll_question_gif",
+        "scheduled_for": "2026-06-16T15:00:00-06:00",
+        "window_key": "t_minus_4h",
+        "window_label": "T-4h · poll comunidad",
+        "expires_at": "2026-06-16T23:30:00.000Z",
+        "target_match": {
+          "home": "Argentina",
+          "away": "Argelia",
+          "kickoff_iso": "2026-06-16T19:00:00-06:00"
+        },
+        "homeTeam": "Argentina",
+        "awayTeam": "Argelia",
+        "flagCodeHome": "ar",
+        "flagCodeAway": "dz",
+        "question": "¿Quién gana?",
+        "challengeQuestion": "¿Quién gana?",
+        "caption": "Poll de comunidad: Argentina vs Argelia\n\nSticker sugerido: ¿Quién gana?\nOpciones: Argentina / Empate / Argelia\n\nNuestro pick temprano: Argentina gana",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#QuinielaPredictaGol"
+        ],
+        "alt_text": "GIF animado de poll de comunidad para Argentina vs Argelia, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+        "platform_copy": {
+          "instagram": {
+            "format": "story_poll",
+            "caption": "Poll de comunidad: Argentina vs Argelia\n\nSticker sugerido: ¿Quién gana?\nOpciones: Argentina / Empate / Argelia\n\nNuestro pick temprano: Argentina gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "alt_text": "GIF animado de poll de comunidad para Argentina vs Argelia, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "asset_keys": [
+              "animated_gif",
+              "1080x1080"
+            ]
+          },
+          "x": {
+            "format": "native_poll",
+            "text": "Poll a 4h: Argentina vs Argelia\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Argentina / Empate / Argelia / No sé",
+            "hashtags": [
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "debate_prompt",
+            "text": "Debate a 4h: Argentina vs Argelia.\n\nPredictaGol trae Argentina gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+            "hashtags": [
+              "#PredictaGol"
+            ]
+          }
+        },
+        "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+        "assets": {
+          "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_c689\\1080x1080.png",
+          "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_c689\\animated_gif.gif"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_c689",
+    "title": "Argentina vs Argelia: T-4 poll comunidad",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "quiniela_challenge",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "template": "poll-question-gif",
+      "format_variant": "poll_question_gif",
+      "scheduled_for": "2026-06-16T15:00:00-06:00",
+      "window_key": "t_minus_4h",
+      "window_label": "T-4h · poll comunidad",
+      "expires_at": "2026-06-16T23:30:00.000Z",
+      "target_match": {
+        "home": "Argentina",
+        "away": "Argelia",
+        "kickoff_iso": "2026-06-16T19:00:00-06:00"
+      },
+      "homeTeam": "Argentina",
+      "awayTeam": "Argelia",
+      "flagCodeHome": "ar",
+      "flagCodeAway": "dz",
+      "question": "¿Quién gana?",
+      "challengeQuestion": "¿Quién gana?",
+      "caption": "Poll de comunidad: Argentina vs Argelia\n\nSticker sugerido: ¿Quién gana?\nOpciones: Argentina / Empate / Argelia\n\nNuestro pick temprano: Argentina gana",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#QuinielaPredictaGol"
+      ],
+      "alt_text": "GIF animado de poll de comunidad para Argentina vs Argelia, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+      "platform_copy": {
+        "instagram": {
+          "format": "story_poll",
+          "caption": "Poll de comunidad: Argentina vs Argelia\n\nSticker sugerido: ¿Quién gana?\nOpciones: Argentina / Empate / Argelia\n\nNuestro pick temprano: Argentina gana",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#QuinielaPredictaGol"
+          ],
+          "alt_text": "GIF animado de poll de comunidad para Argentina vs Argelia, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+          "asset_keys": [
+            "animated_gif",
+            "1080x1080"
+          ]
+        },
+        "x": {
+          "format": "native_poll",
+          "text": "Poll a 4h: Argentina vs Argelia\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Argentina / Empate / Argelia / No sé",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "debate_prompt",
+          "text": "Debate a 4h: Argentina vs Argelia.\n\nPredictaGol trae Argentina gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_c689\\1080x1080.png",
+        "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_c689\\animated_gif.gif"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": "2026-06-16T23:30:00.000Z",
+    "created_at": "2026-06-15 14:48:52",
+    "updated_at": "2026-06-15 15:03:59",
+    "posts": [],
+    "events": [
+      {
+        "id": 702,
+        "card_id": "c_c689",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"scheduled_for\":\"2026-06-16T15:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-16T23:30:00.000Z\",\"target_match\":{\"home\":\"Argentina\",\"away\":\"Argelia\",\"kickoff_iso\":\"2026-06-16T19:00:00-06:00\"},\"homeTeam\":\"Argentina\",\"awayTeam\":\"Argelia\",\"flagCodeHome\":\"ar\",\"flagCodeAway\":\"dz\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"caption\":\"Poll de comunidad: Argentina vs Argelia\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Argentina / Empate / Argelia\\n\\nNuestro pick temprano: Argentina gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Argentina vs Argelia, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"platform_copy\":{\"instagram\":{\"format\":\"story_poll\",\"caption\":\"Poll de comunidad: Argentina vs Argelia\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Argentina / Empate / Argelia\\n\\nNuestro pick temprano: Argentina gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Argentina vs Argelia, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Argentina vs Argelia\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Argentina / Empate / Argelia / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Debate a 4h: Argentina vs Argelia.\\n\\nPredictaGol trae Argentina gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_c689\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_c689\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 15:03:59",
+        "meta": {
+          "payload": {
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "scheduled_for": "2026-06-16T15:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-16T23:30:00.000Z",
+            "target_match": {
+              "home": "Argentina",
+              "away": "Argelia",
+              "kickoff_iso": "2026-06-16T19:00:00-06:00"
+            },
+            "homeTeam": "Argentina",
+            "awayTeam": "Argelia",
+            "flagCodeHome": "ar",
+            "flagCodeAway": "dz",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "caption": "Poll de comunidad: Argentina vs Argelia\n\nSticker sugerido: ¿Quién gana?\nOpciones: Argentina / Empate / Argelia\n\nNuestro pick temprano: Argentina gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "alt_text": "GIF animado de poll de comunidad para Argentina vs Argelia, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll",
+                "caption": "Poll de comunidad: Argentina vs Argelia\n\nSticker sugerido: ¿Quién gana?\nOpciones: Argentina / Empate / Argelia\n\nNuestro pick temprano: Argentina gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Argentina vs Argelia, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Argentina vs Argelia\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Argentina / Empate / Argelia / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Debate a 4h: Argentina vs Argelia.\n\nPredictaGol trae Argentina gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_c689\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_c689\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 701,
+        "card_id": "c_c689",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Argentina vs Argelia: T-4 poll comunidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":8,\"expires_at\":\"2026-06-16T23:30:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"scheduled_for\":\"2026-06-16T15:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-16T23:30:00.000Z\",\"target_match\":{\"home\":\"Argentina\",\"away\":\"Argelia\",\"kickoff_iso\":\"2026-06-16T19:00:00-06:00\"},\"homeTeam\":\"Argentina\",\"awayTeam\":\"Argelia\",\"flagCodeHome\":\"ar\",\"flagCodeAway\":\"dz\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"caption\":\"Poll de comunidad: Argentina vs Argelia\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Argentina / Empate / Argelia\\n\\nNuestro pick temprano: Argentina gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Argentina vs Argelia, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"platform_copy\":{\"instagram\":{\"format\":\"story_poll\",\"caption\":\"Poll de comunidad: Argentina vs Argelia\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Argentina / Empate / Argelia\\n\\nNuestro pick temprano: Argentina gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Argentina vs Argelia, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Argentina vs Argelia\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Argentina / Empate / Argelia / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Debate a 4h: Argentina vs Argelia.\\n\\nPredictaGol trae Argentina gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_c689\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_c689\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 15:03:51",
+        "meta": {
+          "title": "Argentina vs Argelia: T-4 poll comunidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 8,
+          "expires_at": "2026-06-16T23:30:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "scheduled_for": "2026-06-16T15:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-16T23:30:00.000Z",
+            "target_match": {
+              "home": "Argentina",
+              "away": "Argelia",
+              "kickoff_iso": "2026-06-16T19:00:00-06:00"
+            },
+            "homeTeam": "Argentina",
+            "awayTeam": "Argelia",
+            "flagCodeHome": "ar",
+            "flagCodeAway": "dz",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "caption": "Poll de comunidad: Argentina vs Argelia\n\nSticker sugerido: ¿Quién gana?\nOpciones: Argentina / Empate / Argelia\n\nNuestro pick temprano: Argentina gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "alt_text": "GIF animado de poll de comunidad para Argentina vs Argelia, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll",
+                "caption": "Poll de comunidad: Argentina vs Argelia\n\nSticker sugerido: ¿Quién gana?\nOpciones: Argentina / Empate / Argelia\n\nNuestro pick temprano: Argentina gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Argentina vs Argelia, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Argentina vs Argelia\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Argentina / Empate / Argelia / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Debate a 4h: Argentina vs Argelia.\n\nPredictaGol trae Argentina gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_c689\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_c689\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 593,
+        "card_id": "c_c689",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"scheduled_for\":\"2026-06-16T15:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-16T23:30:00.000Z\",\"target_match\":{\"home\":\"Argentina\",\"away\":\"Argelia\",\"kickoff_iso\":\"2026-06-16T19:00:00-06:00\"},\"homeTeam\":\"Argentina\",\"awayTeam\":\"Argelia\",\"flagCodeHome\":\"ar\",\"flagCodeAway\":\"dz\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"caption\":\"Poll de comunidad: Argentina vs Argelia\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Argentina / Empate / Argelia\\n\\nNuestro pick temprano: Argentina gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Argentina vs Argelia, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"platform_copy\":{\"instagram\":{\"format\":\"animated_poll_gif\",\"caption\":\"Poll de comunidad: Argentina vs Argelia\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Argentina / Empate / Argelia\\n\\nNuestro pick temprano: Argentina gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Argentina vs Argelia, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Argentina vs Argelia\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Argentina / Empate / Argelia / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"community_question\",\"text\":\"Argentina vs Argelia: a 4 horas del partido, la comunidad decide.\\n\\n¿Te quedas con Argentina gana o cambias por contexto/lineup?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_c689\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_c689\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 14:49:00",
+        "meta": {
+          "payload": {
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "scheduled_for": "2026-06-16T15:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-16T23:30:00.000Z",
+            "target_match": {
+              "home": "Argentina",
+              "away": "Argelia",
+              "kickoff_iso": "2026-06-16T19:00:00-06:00"
+            },
+            "homeTeam": "Argentina",
+            "awayTeam": "Argelia",
+            "flagCodeHome": "ar",
+            "flagCodeAway": "dz",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "caption": "Poll de comunidad: Argentina vs Argelia\n\nSticker sugerido: ¿Quién gana?\nOpciones: Argentina / Empate / Argelia\n\nNuestro pick temprano: Argentina gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "alt_text": "GIF animado de poll de comunidad para Argentina vs Argelia, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "platform_copy": {
+              "instagram": {
+                "format": "animated_poll_gif",
+                "caption": "Poll de comunidad: Argentina vs Argelia\n\nSticker sugerido: ¿Quién gana?\nOpciones: Argentina / Empate / Argelia\n\nNuestro pick temprano: Argentina gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Argentina vs Argelia, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Argentina vs Argelia\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Argentina / Empate / Argelia / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "community_question",
+                "text": "Argentina vs Argelia: a 4 horas del partido, la comunidad decide.\n\n¿Te quedas con Argentina gana o cambias por contexto/lineup?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_c689\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_c689\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 592,
+        "card_id": "c_c689",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"expires_at\":\"2026-06-16T23:30:00.000Z\"}",
+        "created_at": "2026-06-15 14:48:52",
+        "meta": {
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "expires_at": "2026-06-16T23:30:00.000Z"
+        }
+      }
+    ]
+  }
+}

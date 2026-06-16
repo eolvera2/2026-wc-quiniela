@@ -1,0 +1,449 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-14T00:40:26.413Z",
+  "event": {
+    "type": "manual_post_confirmed",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "posted",
+    "note": "Manual threads post confirmed",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_e232",
+    "title": "PGS® Australia 1-2 Turquía — dato del día",
+    "stage": "posted",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "template": "data-callout",
+      "format_variant": "data_callout",
+      "scheduled_for": "2026-06-13T22:00:00-06:00",
+      "target_match": {
+        "home": "Australia",
+        "away": "Turquía",
+        "kickoff_iso": "2026-06-13T22:00:00-06:00",
+        "venue": "Vancouver, Canadá"
+      },
+      "homeTeam": "Australia",
+      "awayTeam": "Turquía",
+      "flagCodeHome": "au",
+      "flagCodeAway": "tr",
+      "bigNumber": "1-2",
+      "eyebrow": "PGS® Australia vs Turquía",
+      "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Vancouver, Canadá",
+      "cta": "Más datos en predictagol.com",
+      "caption": "📊 PGS® inicial · Australia 1-2 Turquía\n\nTurquía es favorita en la pizarra, Australia se siente fuerte con presión alta.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+      "alt_text": "Tarjeta cuadrada con el número PGS® 1-2 para Australia vs Turquía.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Australia",
+        "#Turquía",
+        "#PGS"
+      ],
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e232\\1080x1080.png"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": null,
+    "created_at": "2026-06-13 14:19:18",
+    "updated_at": "2026-06-14 00:40:26",
+    "posts": [
+      {
+        "id": 24,
+        "card_id": "c_e232",
+        "platform": "threads",
+        "status": "posted_manual",
+        "permalink": null,
+        "error": null,
+        "posted_at": "2026-06-14T00:40:26.395Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-14 00:40:26",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      },
+      {
+        "id": 23,
+        "card_id": "c_e232",
+        "platform": "x",
+        "status": "posted_manual",
+        "permalink": null,
+        "error": null,
+        "posted_at": "2026-06-14T00:40:26.369Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-14 00:40:26",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      }
+    ],
+    "events": [
+      {
+        "id": 285,
+        "card_id": "c_e232",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "posted",
+        "note": "Manual threads post confirmed",
+        "meta_json": "{}",
+        "created_at": "2026-06-14 00:40:26",
+        "meta": {}
+      },
+      {
+        "id": 284,
+        "card_id": "c_e232",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual threads post confirmed",
+        "meta_json": "{\"platform\":\"threads\",\"permalink\":null}",
+        "created_at": "2026-06-14 00:40:26",
+        "meta": {
+          "platform": "threads",
+          "permalink": null
+        }
+      },
+      {
+        "id": 283,
+        "card_id": "c_e232",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual x post confirmed",
+        "meta_json": "{\"platform\":\"x\",\"permalink\":null}",
+        "created_at": "2026-06-14 00:40:26",
+        "meta": {
+          "platform": "x",
+          "permalink": null
+        }
+      },
+      {
+        "id": 268,
+        "card_id": "c_e232",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-13T22:00:00-06:00\",\"target_match\":{\"home\":\"Australia\",\"away\":\"Turquía\",\"kickoff_iso\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\"},\"homeTeam\":\"Australia\",\"awayTeam\":\"Turquía\",\"flagCodeHome\":\"au\",\"flagCodeAway\":\"tr\",\"bigNumber\":\"1-2\",\"eyebrow\":\"PGS® Australia vs Turquía\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Vancouver, Canadá\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Australia 1-2 Turquía\\n\\nTurquía es favorita en la pizarra, Australia se siente fuerte con presión alta.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-2 para Australia vs Turquía.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Australia\",\"#Turquía\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e232\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-13 14:24:41",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-13T22:00:00-06:00",
+            "target_match": {
+              "home": "Australia",
+              "away": "Turquía",
+              "kickoff_iso": "2026-06-13T22:00:00-06:00",
+              "venue": "Vancouver, Canadá"
+            },
+            "homeTeam": "Australia",
+            "awayTeam": "Turquía",
+            "flagCodeHome": "au",
+            "flagCodeAway": "tr",
+            "bigNumber": "1-2",
+            "eyebrow": "PGS® Australia vs Turquía",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Vancouver, Canadá",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Australia 1-2 Turquía\n\nTurquía es favorita en la pizarra, Australia se siente fuerte con presión alta.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-2 para Australia vs Turquía.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Australia",
+              "#Turquía",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e232\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 267,
+        "card_id": "c_e232",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Australia 1-2 Turquía — dato del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-13T22:00:00-06:00\",\"target_match\":{\"home\":\"Australia\",\"away\":\"Turquía\",\"kickoff_iso\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\"},\"homeTeam\":\"Australia\",\"awayTeam\":\"Turquía\",\"flagCodeHome\":\"au\",\"flagCodeAway\":\"tr\",\"bigNumber\":\"1-2\",\"eyebrow\":\"PGS® Australia vs Turquía\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Vancouver, Canadá\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Australia 1-2 Turquía\\n\\nTurquía es favorita en la pizarra, Australia se siente fuerte con presión alta.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-2 para Australia vs Turquía.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Australia\",\"#Turquía\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e232\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-13 14:24:40",
+        "meta": {
+          "title": "PGS® Australia 1-2 Turquía — dato del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-13T22:00:00-06:00",
+            "target_match": {
+              "home": "Australia",
+              "away": "Turquía",
+              "kickoff_iso": "2026-06-13T22:00:00-06:00",
+              "venue": "Vancouver, Canadá"
+            },
+            "homeTeam": "Australia",
+            "awayTeam": "Turquía",
+            "flagCodeHome": "au",
+            "flagCodeAway": "tr",
+            "bigNumber": "1-2",
+            "eyebrow": "PGS® Australia vs Turquía",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Vancouver, Canadá",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Australia 1-2 Turquía\n\nTurquía es favorita en la pizarra, Australia se siente fuerte con presión alta.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-2 para Australia vs Turquía.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Australia",
+              "#Turquía",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e232\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 256,
+        "card_id": "c_e232",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-13T22:00:00-06:00\",\"target_match\":{\"home\":\"Australia\",\"away\":\"Turquía\",\"kickoff_iso\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\"},\"homeTeam\":\"Australia\",\"awayTeam\":\"Turquía\",\"flagCodeHome\":\"au\",\"flagCodeAway\":\"tr\",\"bigNumber\":\"1-2\",\"eyebrow\":\"PGS® Australia vs Turquía\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Vancouver, Canadá\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Australia 1-2 Turquía\\n\\nTurquía es favorita en la pizarra, Australia se siente fuerte con presión alta.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-2 para Australia vs Turquía.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Australia\",\"#Turquía\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e232\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-13 14:23:43",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-13T22:00:00-06:00",
+            "target_match": {
+              "home": "Australia",
+              "away": "Turquía",
+              "kickoff_iso": "2026-06-13T22:00:00-06:00",
+              "venue": "Vancouver, Canadá"
+            },
+            "homeTeam": "Australia",
+            "awayTeam": "Turquía",
+            "flagCodeHome": "au",
+            "flagCodeAway": "tr",
+            "bigNumber": "1-2",
+            "eyebrow": "PGS® Australia vs Turquía",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Vancouver, Canadá",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Australia 1-2 Turquía\n\nTurquía es favorita en la pizarra, Australia se siente fuerte con presión alta.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-2 para Australia vs Turquía.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Australia",
+              "#Turquía",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e232\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 255,
+        "card_id": "c_e232",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Australia 1-2 Turquía — dato del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-13T22:00:00-06:00\",\"target_match\":{\"home\":\"Australia\",\"away\":\"Turquía\",\"kickoff_iso\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\"},\"homeTeam\":\"Australia\",\"awayTeam\":\"Turquía\",\"flagCodeHome\":\"au\",\"flagCodeAway\":\"tr\",\"bigNumber\":\"1-2\",\"eyebrow\":\"PGS® Australia vs Turquía\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Vancouver, Canadá\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Australia 1-2 Turquía\\n\\nTurquía es favorita en la pizarra, Australia se siente fuerte con presión alta.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-2 para Australia vs Turquía.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Australia\",\"#Turquía\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e232\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-13 14:23:43",
+        "meta": {
+          "title": "PGS® Australia 1-2 Turquía — dato del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-13T22:00:00-06:00",
+            "target_match": {
+              "home": "Australia",
+              "away": "Turquía",
+              "kickoff_iso": "2026-06-13T22:00:00-06:00",
+              "venue": "Vancouver, Canadá"
+            },
+            "homeTeam": "Australia",
+            "awayTeam": "Turquía",
+            "flagCodeHome": "au",
+            "flagCodeAway": "tr",
+            "bigNumber": "1-2",
+            "eyebrow": "PGS® Australia vs Turquía",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Vancouver, Canadá",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Australia 1-2 Turquía\n\nTurquía es favorita en la pizarra, Australia se siente fuerte con presión alta.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-2 para Australia vs Turquía.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Australia",
+              "#Turquía",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e232\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 244,
+        "card_id": "c_e232",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-13T22:00:00-06:00\",\"target_match\":{\"home\":\"Australia\",\"away\":\"Turquía\",\"kickoff_iso\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\"},\"homeTeam\":\"Australia\",\"awayTeam\":\"Turquía\",\"flagCodeHome\":\"au\",\"flagCodeAway\":\"tr\",\"bigNumber\":\"1-2\",\"eyebrow\":\"PGS® Australia vs Turquía\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Vancouver, Canadá.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Australia 1-2 Turquía\\n\\nTurquía es favorita en la pizarra, Australia se siente fuerte con presión alta.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-2 para Australia vs Turquía.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Australia\",\"#Turquía\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e232\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-13 14:22:29",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-13T22:00:00-06:00",
+            "target_match": {
+              "home": "Australia",
+              "away": "Turquía",
+              "kickoff_iso": "2026-06-13T22:00:00-06:00",
+              "venue": "Vancouver, Canadá"
+            },
+            "homeTeam": "Australia",
+            "awayTeam": "Turquía",
+            "flagCodeHome": "au",
+            "flagCodeAway": "tr",
+            "bigNumber": "1-2",
+            "eyebrow": "PGS® Australia vs Turquía",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Vancouver, Canadá.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Australia 1-2 Turquía\n\nTurquía es favorita en la pizarra, Australia se siente fuerte con presión alta.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-2 para Australia vs Turquía.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Australia",
+              "#Turquía",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e232\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 243,
+        "card_id": "c_e232",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Australia 1-2 Turquía — dato del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-13T22:00:00-06:00\",\"target_match\":{\"home\":\"Australia\",\"away\":\"Turquía\",\"kickoff_iso\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\"},\"homeTeam\":\"Australia\",\"awayTeam\":\"Turquía\",\"flagCodeHome\":\"au\",\"flagCodeAway\":\"tr\",\"bigNumber\":\"1-2\",\"eyebrow\":\"PGS® Australia vs Turquía\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Vancouver, Canadá.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Australia 1-2 Turquía\\n\\nTurquía es favorita en la pizarra, Australia se siente fuerte con presión alta.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-2 para Australia vs Turquía.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Australia\",\"#Turquía\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e232\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-13 14:22:28",
+        "meta": {
+          "title": "PGS® Australia 1-2 Turquía — dato del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-13T22:00:00-06:00",
+            "target_match": {
+              "home": "Australia",
+              "away": "Turquía",
+              "kickoff_iso": "2026-06-13T22:00:00-06:00",
+              "venue": "Vancouver, Canadá"
+            },
+            "homeTeam": "Australia",
+            "awayTeam": "Turquía",
+            "flagCodeHome": "au",
+            "flagCodeAway": "tr",
+            "bigNumber": "1-2",
+            "eyebrow": "PGS® Australia vs Turquía",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Vancouver, Canadá.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Australia 1-2 Turquía\n\nTurquía es favorita en la pizarra, Australia se siente fuerte con presión alta.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-2 para Australia vs Turquía.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Australia",
+              "#Turquía",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e232\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 232,
+        "card_id": "c_e232",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-13T18:00:00-06:00\",\"target_match\":{\"home\":\"Australia\",\"away\":\"Turquía\",\"kickoff_iso\":\"2026-06-13T18:00:00-06:00\",\"venue\":\"Vancouver\"},\"homeTeam\":\"Australia\",\"awayTeam\":\"Turquía\",\"flagCodeHome\":\"au\",\"flagCodeAway\":\"tr\",\"bigNumber\":\"1-2\",\"eyebrow\":\"PGS® Australia vs Turquía\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Vancouver.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Australia 1-2 Turquía\\n\\nTurquía es favorita en la pizarra, Australia se siente fuerte con presión alta.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 1-2 para Australia vs Turquía.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Australia\",\"#Turquía\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e232\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-13 14:19:18",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-13T18:00:00-06:00",
+            "target_match": {
+              "home": "Australia",
+              "away": "Turquía",
+              "kickoff_iso": "2026-06-13T18:00:00-06:00",
+              "venue": "Vancouver"
+            },
+            "homeTeam": "Australia",
+            "awayTeam": "Turquía",
+            "flagCodeHome": "au",
+            "flagCodeAway": "tr",
+            "bigNumber": "1-2",
+            "eyebrow": "PGS® Australia vs Turquía",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Vancouver.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Australia 1-2 Turquía\n\nTurquía es favorita en la pizarra, Australia se siente fuerte con presión alta.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 1-2 para Australia vs Turquía.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Australia",
+              "#Turquía",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e232\\1080x1080.png"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:27:49.888Z",
+  "event": {
+    "type": "create",
+    "actor": "strange",
+    "to_stage": "ideas"
+  },
+  "card": {
+    "id": "c_533e",
+    "title": "Quiniela: Argentina vs Argelia, marcador con corazón frío",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "quiniela_challenge",
+    "platforms": [
+      "instagram",
+      "tiktok",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-16T18:20:00-06:00",
+      "hook": "Tu pick: fiesta albiceleste, partido cerrado o sorpresa africana.",
+      "body_brief": "Dinámica de tres chips para marcador y primer anotador sin promesas externas. Invitar a comentar el resultado y comparar después del silbatazo final.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#QuinielaPredictaGol",
+        "#PredictaGol",
+        "#Argentina",
+        "#Mundial2026"
+      ],
+      "notes": "La frase debe invitar conversación, no presión de último minuto.",
+      "target_match": {
+        "home": "Argentina",
+        "away": "Algeria",
+        "kickoff_iso": "2026-06-16T19:00:00-06:00",
+        "venue": "Kansas City"
+      },
+      "signal_source": "widow-2026-06-10-08"
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:27:49",
+    "updated_at": "2026-06-10 19:27:49",
+    "posts": [],
+    "events": [
+      {
+        "id": 147,
+        "card_id": "c_533e",
+        "actor": "strange",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "ideas",
+        "note": null,
+        "meta_json": "{\"owner\":\"strange\",\"pillar\":\"quiniela_challenge\"}",
+        "created_at": "2026-06-10 19:27:49",
+        "meta": {
+          "owner": "strange",
+          "pillar": "quiniela_challenge"
+        }
+      }
+    ]
+  }
+}

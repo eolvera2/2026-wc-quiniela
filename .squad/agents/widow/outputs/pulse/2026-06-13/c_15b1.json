@@ -1,0 +1,21 @@
+{
+  "id": "c_15b1",
+  "signal_type": "fixture-window",
+  "fixture_key": "BRA-MAR-2026-06-13",
+  "target_match": {
+    "home": "BRA",
+    "away": "MAR",
+    "kickoff_iso": "2026-06-13T19:00:00.000Z"
+  },
+  "pgs": {
+    "home": 2,
+    "away": 1
+  },
+  "hook_candidates": [
+    "Brasil vs Marruecos: el algoritmo PGS ya tiene veredicto.",
+    "Antes del silbatazo: cómo se siente Brasil contra Marruecos.",
+    "Brasil-Marruecos: tres datos rápidos para tu pick."
+  ],
+  "notes": "Pulse incremental generado por Widow refresh — ventana 48h. TTL hasta 2026-06-14T07:00:00.000Z.",
+  "expires_at": "2026-06-14T07:00:00.000Z"
+}

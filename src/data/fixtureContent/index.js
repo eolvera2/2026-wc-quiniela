@@ -1000,7 +1000,7 @@ const FX_SUI_CAN_20260624 = {
   },
 };
 
-const FX_SWE_TUN_20260615 = {
+const FX_SWE_TUN_20260614 = {
   pgs: { home: 1, away: 0 },
   teamSummaries: {
     SWE: `<p><strong>Suecia</strong> aparece bajo Graham Potter después de una clasificación turbulenta resuelta en repechaje, con Victor Lindelöf como voz veterana y Viktor Gyökeres como figura ofensiva. Su ruta genera dudas por resultados previos, pero también impulso emocional tras partidos decisivos donde la pegada marcó la diferencia.</p><p>Potter ha trabajado una estructura de tres centrales, carrileros altos y ataques directos hacia Gyökeres, Alexander Isak, Anthony Elanga o Dejan Kulusevski si el estado físico acompaña. Suecia ofrece potencia, balón parado y duelos aéreos; el mercado la ubica cerca de Japón, aunque con más preguntas defensivas. Su torneo puede depender del debut ante Túnez.</p>`,
@@ -1223,7 +1223,7 @@ export const INITIAL_FIXTURE_CONTENT = {
   'SEN-IRQ-2026-06-26': FX_SEN_IRQ_20260626,
   'SUI-BIH-2026-06-18': FX_SUI_BIH_20260618,
   'SUI-CAN-2026-06-24': FX_SUI_CAN_20260624,
-  'SWE-TUN-2026-06-15': FX_SWE_TUN_20260615,
+  'SWE-TUN-2026-06-14': FX_SWE_TUN_20260614,
   'TUN-JPN-2026-06-21': FX_TUN_JPN_20260621,
   'TUN-NED-2026-06-25': FX_TUN_NED_20260625,
   'TUR-PAR-2026-06-20': FX_TUR_PAR_20260620,
@@ -1422,9 +1422,9 @@ export const INITIAL_FIXTURE_CONTENT_ALIASES = {
   'SUIZA-CANADÁ-2026-06-24': FX_SUI_CAN_20260624,
   'SUI-CANADÁ-2026-06-24': FX_SUI_CAN_20260624,
   'SUIZA-CAN-2026-06-24': FX_SUI_CAN_20260624,
-  'SUECIA-TÚNEZ-2026-06-15': FX_SWE_TUN_20260615,
-  'SWE-TÚNEZ-2026-06-15': FX_SWE_TUN_20260615,
-  'SUECIA-TUN-2026-06-15': FX_SWE_TUN_20260615,
+  'SUECIA-TÚNEZ-2026-06-14': FX_SWE_TUN_20260614,
+  'SWE-TÚNEZ-2026-06-14': FX_SWE_TUN_20260614,
+  'SUECIA-TUN-2026-06-14': FX_SWE_TUN_20260614,
   'TÚNEZ-JAPÓN-2026-06-21': FX_TUN_JPN_20260621,
   'TUN-JAPÓN-2026-06-21': FX_TUN_JPN_20260621,
   'TÚNEZ-JPN-2026-06-21': FX_TUN_JPN_20260621,

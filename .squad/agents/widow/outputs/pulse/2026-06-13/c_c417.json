@@ -1,0 +1,21 @@
+{
+  "id": "c_c417",
+  "signal_type": "fixture-window",
+  "fixture_key": "CIV-ECU-2026-06-14",
+  "target_match": {
+    "home": "CIV",
+    "away": "ECU",
+    "kickoff_iso": "2026-06-14T19:00:00.000Z"
+  },
+  "pgs": {
+    "home": 1,
+    "away": 1
+  },
+  "hook_candidates": [
+    "CIV vs ECU: el algoritmo PGS ya tiene veredicto.",
+    "Antes del silbatazo: cómo se siente CIV contra ECU.",
+    "CIV-ECU: tres datos rápidos para tu pick."
+  ],
+  "notes": "Pulse incremental generado por Widow refresh — ventana 48h. TTL hasta 2026-06-15T07:00:00.000Z.",
+  "expires_at": "2026-06-15T07:00:00.000Z"
+}

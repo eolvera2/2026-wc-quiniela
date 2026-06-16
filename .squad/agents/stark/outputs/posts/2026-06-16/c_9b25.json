@@ -1,0 +1,256 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-16T03:54:44.228Z",
+  "event": {
+    "type": "kill",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "killed",
+    "note": "Bulk discard expired To Be Posted cards from column header",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_9b25",
+    "title": "Irán vs Nueva Zelanda: HT debate en vivo",
+    "stage": "killed",
+    "owner": "stark",
+    "pillar": "quiniela_challenge",
+    "platforms": [
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-15T19:55:00-06:00",
+      "window_key": "halftime",
+      "window_label": "HT · debate en vivo",
+      "expires_at": "2026-06-16T02:30:00.000Z",
+      "target_match": {
+        "home": "Irán",
+        "away": "Nueva Zelanda",
+        "kickoff_iso": "2026-06-15T19:00:00-06:00"
+      },
+      "caption": "Reply live para HT en Irán vs Nueva Zelanda:\n\nEl pick inicial era Irán gana (PGS® 1-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+      "hashtags": [
+        "#WorldCup2026"
+      ],
+      "platform_copy": {
+        "x": {
+          "format": "live_reply",
+          "text": "Reply live para HT en Irán vs Nueva Zelanda:\n\nEl pick inicial era Irán gana (PGS® 1-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "match_thread_reply",
+          "text": "Para responder en un thread activo del partido:\n\nMedio tiempo en Irán vs Nueva Zelanda. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Irán gana o ves giro en el segundo tiempo?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+    },
+    "priority": 6,
+    "stalled_at": null,
+    "expires_at": "2026-06-16T02:30:00.000Z",
+    "created_at": "2026-06-15 03:22:05",
+    "updated_at": "2026-06-16 03:54:44",
+    "posts": [],
+    "events": [
+      {
+        "id": 886,
+        "card_id": "c_9b25",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Bulk discard expired To Be Posted cards from column header",
+        "meta_json": "{}",
+        "created_at": "2026-06-16 03:54:44",
+        "meta": {}
+      },
+      {
+        "id": 808,
+        "card_id": "c_9b25",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Irán vs Nueva Zelanda: HT debate en vivo\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":6,\"expires_at\":\"2026-06-16T02:30:00.000Z\",\"platforms\":[\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T19:55:00-06:00\",\"window_key\":\"halftime\",\"window_label\":\"HT · debate en vivo\",\"expires_at\":\"2026-06-16T02:30:00.000Z\",\"target_match\":{\"home\":\"Irán\",\"away\":\"Nueva Zelanda\",\"kickoff_iso\":\"2026-06-15T19:00:00-06:00\"},\"caption\":\"Reply live para HT en Irán vs Nueva Zelanda:\\n\\nEl pick inicial era Irán gana (PGS® 1-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?\",\"hashtags\":[\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"live_reply\",\"text\":\"Reply live para HT en Irán vs Nueva Zelanda:\\n\\nEl pick inicial era Irán gana (PGS® 1-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Para responder en un thread activo del partido:\\n\\nMedio tiempo en Irán vs Nueva Zelanda. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Irán gana o ves giro en el segundo tiempo?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-16 01:39:44",
+        "meta": {
+          "title": "Irán vs Nueva Zelanda: HT debate en vivo",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 6,
+          "expires_at": "2026-06-16T02:30:00.000Z",
+          "platforms": [
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T19:55:00-06:00",
+            "window_key": "halftime",
+            "window_label": "HT · debate en vivo",
+            "expires_at": "2026-06-16T02:30:00.000Z",
+            "target_match": {
+              "home": "Irán",
+              "away": "Nueva Zelanda",
+              "kickoff_iso": "2026-06-15T19:00:00-06:00"
+            },
+            "caption": "Reply live para HT en Irán vs Nueva Zelanda:\n\nEl pick inicial era Irán gana (PGS® 1-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+            "hashtags": [
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "live_reply",
+                "text": "Reply live para HT en Irán vs Nueva Zelanda:\n\nEl pick inicial era Irán gana (PGS® 1-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Para responder en un thread activo del partido:\n\nMedio tiempo en Irán vs Nueva Zelanda. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Irán gana o ves giro en el segundo tiempo?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 681,
+        "card_id": "c_9b25",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Irán vs Nueva Zelanda: HT debate en vivo\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":6,\"expires_at\":\"2026-06-16T02:30:00.000Z\",\"platforms\":[\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T19:55:00-06:00\",\"window_key\":\"halftime\",\"window_label\":\"HT · debate en vivo\",\"expires_at\":\"2026-06-16T02:30:00.000Z\",\"target_match\":{\"home\":\"Irán\",\"away\":\"Nueva Zelanda\",\"kickoff_iso\":\"2026-06-15T19:00:00-06:00\"},\"caption\":\"Reply live para HT en Irán vs Nueva Zelanda:\\n\\nEl pick inicial era Irán gana (PGS® 1-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?\",\"hashtags\":[\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"live_reply\",\"text\":\"Reply live para HT en Irán vs Nueva Zelanda:\\n\\nEl pick inicial era Irán gana (PGS® 1-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Para responder en un thread activo del partido:\\n\\nMedio tiempo en Irán vs Nueva Zelanda. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Irán gana o ves giro en el segundo tiempo?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 15:03:37",
+        "meta": {
+          "title": "Irán vs Nueva Zelanda: HT debate en vivo",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 6,
+          "expires_at": "2026-06-16T02:30:00.000Z",
+          "platforms": [
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T19:55:00-06:00",
+            "window_key": "halftime",
+            "window_label": "HT · debate en vivo",
+            "expires_at": "2026-06-16T02:30:00.000Z",
+            "target_match": {
+              "home": "Irán",
+              "away": "Nueva Zelanda",
+              "kickoff_iso": "2026-06-15T19:00:00-06:00"
+            },
+            "caption": "Reply live para HT en Irán vs Nueva Zelanda:\n\nEl pick inicial era Irán gana (PGS® 1-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+            "hashtags": [
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "live_reply",
+                "text": "Reply live para HT en Irán vs Nueva Zelanda:\n\nEl pick inicial era Irán gana (PGS® 1-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Para responder en un thread activo del partido:\n\nMedio tiempo en Irán vs Nueva Zelanda. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Irán gana o ves giro en el segundo tiempo?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 572,
+        "card_id": "c_9b25",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Irán vs Nueva Zelanda: HT debate en vivo\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":6,\"expires_at\":\"2026-06-16T02:30:00.000Z\",\"platforms\":[\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-15T19:55:00-06:00\",\"window_key\":\"halftime\",\"window_label\":\"HT · debate en vivo\",\"expires_at\":\"2026-06-16T02:30:00.000Z\",\"target_match\":{\"home\":\"Irán\",\"away\":\"Nueva Zelanda\",\"kickoff_iso\":\"2026-06-15T19:00:00-06:00\"},\"caption\":\"HT en Irán vs Nueva Zelanda.\\n\\nNuestro pick inicial: Irán gana (PGS® 1-0). ¿Mantienes tu marcador o ya lo cambiaste?\",\"hashtags\":[\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"live_update\",\"text\":\"HT en Irán vs Nueva Zelanda.\\n\\nNuestro pick inicial: Irán gana (PGS® 1-0). ¿Mantienes tu marcador o ya lo cambiaste?\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Medio tiempo: Irán vs Nueva Zelanda.\\n\\nSi tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con el pick inicial o ves giro en el segundo tiempo?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 14:48:38",
+        "meta": {
+          "title": "Irán vs Nueva Zelanda: HT debate en vivo",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 6,
+          "expires_at": "2026-06-16T02:30:00.000Z",
+          "platforms": [
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-15T19:55:00-06:00",
+            "window_key": "halftime",
+            "window_label": "HT · debate en vivo",
+            "expires_at": "2026-06-16T02:30:00.000Z",
+            "target_match": {
+              "home": "Irán",
+              "away": "Nueva Zelanda",
+              "kickoff_iso": "2026-06-15T19:00:00-06:00"
+            },
+            "caption": "HT en Irán vs Nueva Zelanda.\n\nNuestro pick inicial: Irán gana (PGS® 1-0). ¿Mantienes tu marcador o ya lo cambiaste?",
+            "hashtags": [
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "live_update",
+                "text": "HT en Irán vs Nueva Zelanda.\n\nNuestro pick inicial: Irán gana (PGS® 1-0). ¿Mantienes tu marcador o ya lo cambiaste?",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Medio tiempo: Irán vs Nueva Zelanda.\n\nSi tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con el pick inicial o ves giro en el segundo tiempo?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 501,
+        "card_id": "c_9b25",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"expires_at\":\"2026-06-16T02:30:00.000Z\"}",
+        "created_at": "2026-06-15 03:22:05",
+        "meta": {
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "expires_at": "2026-06-16T02:30:00.000Z"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-13T19:59:36.542Z",
+  "event": {
+    "type": "kill",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "killed",
+    "note": "Descartada desde tarjeta (To Be Posted)",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_d101",
+    "title": "PGS® México 2-1 Sudáfrica — el dato del día",
+    "stage": "killed",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "template": "data-callout",
+      "format_variant": "data_callout",
+      "scheduled_for": "2026-06-12T08:30:00-06:00",
+      "bigNumber": "2-1",
+      "eyebrow": "PGS® MEX vs RSA",
+      "subtitle": "Nuestro PredictaGoal Score para el debut de México en casa.",
+      "cta": "Más datos en predictagol.com",
+      "caption": "📊 PGS® inicial · México 2-1 Sudáfrica\n\nNuestro pick inicial favorece al anfitrión, pero el primer gol cambia toda la conversación.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+      "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 en grande sobre fondo azul marino, indicando el pronóstico inicial de México vs Sudáfrica.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#ElTri",
+        "#PGS"
+      ],
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-12\\c_d101\\1080x1080.png"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": null,
+    "created_at": "2026-06-13 02:42:29",
+    "updated_at": "2026-06-13 19:59:36",
+    "posts": [],
+    "events": [
+      {
+        "id": 271,
+        "card_id": "c_d101",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-13 19:59:36",
+        "meta": {}
+      },
+      {
+        "id": 217,
+        "card_id": "c_d101",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "killed",
+        "to_stage": "killed",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-12T08:30:00-06:00\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® MEX vs RSA\",\"subtitle\":\"Nuestro PredictaGoal Score para el debut de México en casa.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · México 2-1 Sudáfrica\\n\\nNuestro pick inicial favorece al anfitrión, pero el primer gol cambia toda la conversación.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 en grande sobre fondo azul marino, indicando el pronóstico inicial de México vs Sudáfrica.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ElTri\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-12\\\\c_d101\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-13 03:13:20",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-12T08:30:00-06:00",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® MEX vs RSA",
+            "subtitle": "Nuestro PredictaGoal Score para el debut de México en casa.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · México 2-1 Sudáfrica\n\nNuestro pick inicial favorece al anfitrión, pero el primer gol cambia toda la conversación.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 en grande sobre fondo azul marino, indicando el pronóstico inicial de México vs Sudáfrica.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ElTri",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-12\\c_d101\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 215,
+        "card_id": "c_d101",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "killed",
+        "to_stage": "killed",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-12T08:30:00-06:00\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® MEX vs RSA\",\"subtitle\":\"Nuestro PredictaGoal Score para el debut de México en casa.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · México 2-1 Sudáfrica\\n\\nNuestro pick inicial favorece al anfitrión, pero el primer gol cambia toda la conversación.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 en grande sobre fondo azul marino, indicando el pronóstico inicial de México vs Sudáfrica.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ElTri\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-12\\\\c_d101\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-13 03:12:39",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-12T08:30:00-06:00",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® MEX vs RSA",
+            "subtitle": "Nuestro PredictaGoal Score para el debut de México en casa.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · México 2-1 Sudáfrica\n\nNuestro pick inicial favorece al anfitrión, pero el primer gol cambia toda la conversación.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 en grande sobre fondo azul marino, indicando el pronóstico inicial de México vs Sudáfrica.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ElTri",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-12\\c_d101\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 213,
+        "card_id": "c_d101",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-13 02:55:57",
+        "meta": {}
+      },
+      {
+        "id": 209,
+        "card_id": "c_d101",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-12T08:30:00-06:00\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PGS® MEX vs RSA\",\"subtitle\":\"Nuestro PredictaGoal Score para el debut de México en casa.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · México 2-1 Sudáfrica\\n\\nNuestro pick inicial favorece al anfitrión, pero el primer gol cambia toda la conversación.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 2-1 en grande sobre fondo azul marino, indicando el pronóstico inicial de México vs Sudáfrica.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ElTri\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-12\\\\c_d101\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-13 02:43:20",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-12T08:30:00-06:00",
+            "bigNumber": "2-1",
+            "eyebrow": "PGS® MEX vs RSA",
+            "subtitle": "Nuestro PredictaGoal Score para el debut de México en casa.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · México 2-1 Sudáfrica\n\nNuestro pick inicial favorece al anfitrión, pero el primer gol cambia toda la conversación.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 2-1 en grande sobre fondo azul marino, indicando el pronóstico inicial de México vs Sudáfrica.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ElTri",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-12\\c_d101\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 204,
+        "card_id": "c_d101",
+        "actor": "demo",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"expires_at\":null}",
+        "created_at": "2026-06-13 02:42:29",
+        "meta": {
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "expires_at": null
+        }
+      }
+    ]
+  }
+}

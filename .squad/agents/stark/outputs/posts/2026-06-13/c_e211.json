@@ -1,0 +1,481 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-13T19:59:21.689Z",
+  "event": {
+    "type": "manual_post_confirmed",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "posted",
+    "note": "Manual instagram post confirmed",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_e211",
+    "title": "Catar vs Suiza: pronóstico del día",
+    "stage": "posted",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram"
+    ],
+    "payload": {
+      "template": "pronostico-carousel-3up",
+      "format_variant": "carousel_3up",
+      "scheduled_for": "2026-06-13T13:00:00-06:00",
+      "target_match": {
+        "home": "Catar",
+        "away": "Suiza",
+        "kickoff_iso": "2026-06-13T13:00:00-06:00",
+        "venue": "Santa Clara, EE.UU."
+      },
+      "homeTeam": "Catar",
+      "awayTeam": "Suiza",
+      "flagCodeHome": "qa",
+      "flagCodeAway": "ch",
+      "kickoff": "2026-06-13T13:00:00-06:00",
+      "venue": "Santa Clara, EE.UU.",
+      "pgsHome": "0",
+      "pgsAway": "2",
+      "pickShort": "Suiza gana",
+      "hook": "Suiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.",
+      "cta": "Tu pick en predictagol.com",
+      "caption": "Catar vs Suiza hoy sábado, 13 de junio, 01:00 p.m.\n\nSuiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\n\n📊 PGS® Catar 0-2 Suiza · 🎯 Pick inicial: Suiza gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+      "alt_text": "Carrusel de 3 slides para Catar vs Suiza: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Catar",
+        "#Suiza",
+        "#PronosticoDelDia"
+      ],
+      "assets": {
+        "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_1.png",
+        "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_2.png",
+        "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_3.png"
+      },
+      "slideTitle": "Catar vs Suiza"
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": null,
+    "created_at": "2026-06-13 14:19:10",
+    "updated_at": "2026-06-13 19:59:21",
+    "posts": [
+      {
+        "id": 15,
+        "card_id": "c_e211",
+        "platform": "instagram",
+        "status": "posted_manual",
+        "permalink": "https://www.instagram.com/p/DZieV4kEmTP/?img_index=1",
+        "error": null,
+        "posted_at": "2026-06-13T19:59:21.662Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-13 19:59:21",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      }
+    ],
+    "events": [
+      {
+        "id": 270,
+        "card_id": "c_e211",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "posted",
+        "note": "Manual instagram post confirmed",
+        "meta_json": "{}",
+        "created_at": "2026-06-13 19:59:21",
+        "meta": {}
+      },
+      {
+        "id": 269,
+        "card_id": "c_e211",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual instagram post confirmed",
+        "meta_json": "{\"platform\":\"instagram\",\"permalink\":\"https://www.instagram.com/p/DZieV4kEmTP/?img_index=1\"}",
+        "created_at": "2026-06-13 19:59:21",
+        "meta": {
+          "platform": "instagram",
+          "permalink": "https://www.instagram.com/p/DZieV4kEmTP/?img_index=1"
+        }
+      },
+      {
+        "id": 258,
+        "card_id": "c_e211",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T13:00:00-06:00\",\"target_match\":{\"home\":\"Catar\",\"away\":\"Suiza\",\"kickoff_iso\":\"2026-06-13T13:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\"},\"homeTeam\":\"Catar\",\"awayTeam\":\"Suiza\",\"flagCodeHome\":\"qa\",\"flagCodeAway\":\"ch\",\"kickoff\":\"2026-06-13T13:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Suiza gana\",\"hook\":\"Suiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Catar vs Suiza hoy sábado, 13 de junio, 01:00 p.m.\\n\\nSuiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\\n\\n📊 PGS® Catar 0-2 Suiza · 🎯 Pick inicial: Suiza gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Catar vs Suiza: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Catar\",\"#Suiza\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_3.png\"},\"slideTitle\":\"Catar vs Suiza\"}}",
+        "created_at": "2026-06-13 14:24:37",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T13:00:00-06:00",
+            "target_match": {
+              "home": "Catar",
+              "away": "Suiza",
+              "kickoff_iso": "2026-06-13T13:00:00-06:00",
+              "venue": "Santa Clara, EE.UU."
+            },
+            "homeTeam": "Catar",
+            "awayTeam": "Suiza",
+            "flagCodeHome": "qa",
+            "flagCodeAway": "ch",
+            "kickoff": "2026-06-13T13:00:00-06:00",
+            "venue": "Santa Clara, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Suiza gana",
+            "hook": "Suiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Catar vs Suiza hoy sábado, 13 de junio, 01:00 p.m.\n\nSuiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\n\n📊 PGS® Catar 0-2 Suiza · 🎯 Pick inicial: Suiza gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Catar vs Suiza: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Catar",
+              "#Suiza",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_3.png"
+            },
+            "slideTitle": "Catar vs Suiza"
+          }
+        }
+      },
+      {
+        "id": 257,
+        "card_id": "c_e211",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Catar vs Suiza: pronóstico del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T13:00:00-06:00\",\"target_match\":{\"home\":\"Catar\",\"away\":\"Suiza\",\"kickoff_iso\":\"2026-06-13T13:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\"},\"homeTeam\":\"Catar\",\"awayTeam\":\"Suiza\",\"flagCodeHome\":\"qa\",\"flagCodeAway\":\"ch\",\"kickoff\":\"2026-06-13T13:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Suiza gana\",\"hook\":\"Suiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Catar vs Suiza hoy sábado, 13 de junio, 01:00 p.m.\\n\\nSuiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\\n\\n📊 PGS® Catar 0-2 Suiza · 🎯 Pick inicial: Suiza gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Catar vs Suiza: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Catar\",\"#Suiza\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_3.png\"},\"slideTitle\":\"Catar vs Suiza\"}}",
+        "created_at": "2026-06-13 14:24:36",
+        "meta": {
+          "title": "Catar vs Suiza: pronóstico del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T13:00:00-06:00",
+            "target_match": {
+              "home": "Catar",
+              "away": "Suiza",
+              "kickoff_iso": "2026-06-13T13:00:00-06:00",
+              "venue": "Santa Clara, EE.UU."
+            },
+            "homeTeam": "Catar",
+            "awayTeam": "Suiza",
+            "flagCodeHome": "qa",
+            "flagCodeAway": "ch",
+            "kickoff": "2026-06-13T13:00:00-06:00",
+            "venue": "Santa Clara, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Suiza gana",
+            "hook": "Suiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Catar vs Suiza hoy sábado, 13 de junio, 01:00 p.m.\n\nSuiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\n\n📊 PGS® Catar 0-2 Suiza · 🎯 Pick inicial: Suiza gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Catar vs Suiza: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Catar",
+              "#Suiza",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_3.png"
+            },
+            "slideTitle": "Catar vs Suiza"
+          }
+        }
+      },
+      {
+        "id": 246,
+        "card_id": "c_e211",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T13:00:00-06:00\",\"target_match\":{\"home\":\"Catar\",\"away\":\"Suiza\",\"kickoff_iso\":\"2026-06-13T13:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\"},\"homeTeam\":\"Catar\",\"awayTeam\":\"Suiza\",\"flagCodeHome\":\"qa\",\"flagCodeAway\":\"ch\",\"kickoff\":\"2026-06-13T13:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Suiza gana\",\"hook\":\"Suiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Catar vs Suiza hoy sábado, 13 de junio, 01:00 p.m.\\n\\nSuiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\\n\\n📊 PGS® Catar 0-2 Suiza · 🎯 Pick inicial: Suiza gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Catar vs Suiza: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Catar\",\"#Suiza\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_3.png\"},\"slideTitle\":\"Catar vs Suiza\"}}",
+        "created_at": "2026-06-13 14:23:39",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T13:00:00-06:00",
+            "target_match": {
+              "home": "Catar",
+              "away": "Suiza",
+              "kickoff_iso": "2026-06-13T13:00:00-06:00",
+              "venue": "Santa Clara, EE.UU."
+            },
+            "homeTeam": "Catar",
+            "awayTeam": "Suiza",
+            "flagCodeHome": "qa",
+            "flagCodeAway": "ch",
+            "kickoff": "2026-06-13T13:00:00-06:00",
+            "venue": "Santa Clara, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Suiza gana",
+            "hook": "Suiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Catar vs Suiza hoy sábado, 13 de junio, 01:00 p.m.\n\nSuiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\n\n📊 PGS® Catar 0-2 Suiza · 🎯 Pick inicial: Suiza gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Catar vs Suiza: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Catar",
+              "#Suiza",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_3.png"
+            },
+            "slideTitle": "Catar vs Suiza"
+          }
+        }
+      },
+      {
+        "id": 245,
+        "card_id": "c_e211",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Catar vs Suiza: pronóstico del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T13:00:00-06:00\",\"target_match\":{\"home\":\"Catar\",\"away\":\"Suiza\",\"kickoff_iso\":\"2026-06-13T13:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\"},\"homeTeam\":\"Catar\",\"awayTeam\":\"Suiza\",\"flagCodeHome\":\"qa\",\"flagCodeAway\":\"ch\",\"kickoff\":\"2026-06-13T13:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Suiza gana\",\"hook\":\"Suiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Catar vs Suiza hoy sábado, 13 de junio, 01:00 p.m.\\n\\nSuiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\\n\\n📊 PGS® Catar 0-2 Suiza · 🎯 Pick inicial: Suiza gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Catar vs Suiza: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Catar\",\"#Suiza\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_3.png\"},\"slideTitle\":\"Catar vs Suiza\"}}",
+        "created_at": "2026-06-13 14:23:38",
+        "meta": {
+          "title": "Catar vs Suiza: pronóstico del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T13:00:00-06:00",
+            "target_match": {
+              "home": "Catar",
+              "away": "Suiza",
+              "kickoff_iso": "2026-06-13T13:00:00-06:00",
+              "venue": "Santa Clara, EE.UU."
+            },
+            "homeTeam": "Catar",
+            "awayTeam": "Suiza",
+            "flagCodeHome": "qa",
+            "flagCodeAway": "ch",
+            "kickoff": "2026-06-13T13:00:00-06:00",
+            "venue": "Santa Clara, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Suiza gana",
+            "hook": "Suiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Catar vs Suiza hoy sábado, 13 de junio, 01:00 p.m.\n\nSuiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\n\n📊 PGS® Catar 0-2 Suiza · 🎯 Pick inicial: Suiza gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Catar vs Suiza: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Catar",
+              "#Suiza",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_3.png"
+            },
+            "slideTitle": "Catar vs Suiza"
+          }
+        }
+      },
+      {
+        "id": 234,
+        "card_id": "c_e211",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T13:00:00-06:00\",\"target_match\":{\"home\":\"Catar\",\"away\":\"Suiza\",\"kickoff_iso\":\"2026-06-13T13:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\"},\"homeTeam\":\"Catar\",\"awayTeam\":\"Suiza\",\"flagCodeHome\":\"qa\",\"flagCodeAway\":\"ch\",\"kickoff\":\"2026-06-13T13:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Suiza gana\",\"hook\":\"Suiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Catar vs Suiza hoy sábado, 13 de junio, 01:00 p.m.\\n\\nSuiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\\n\\n📊 PGS® Catar 0-2 Suiza · 🎯 Pick inicial: Suiza gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Catar vs Suiza: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Catar\",\"#Suiza\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_3.png\"},\"slideTitle\":\"Catar vs Suiza\"}}",
+        "created_at": "2026-06-13 14:22:25",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T13:00:00-06:00",
+            "target_match": {
+              "home": "Catar",
+              "away": "Suiza",
+              "kickoff_iso": "2026-06-13T13:00:00-06:00",
+              "venue": "Santa Clara, EE.UU."
+            },
+            "homeTeam": "Catar",
+            "awayTeam": "Suiza",
+            "flagCodeHome": "qa",
+            "flagCodeAway": "ch",
+            "kickoff": "2026-06-13T13:00:00-06:00",
+            "venue": "Santa Clara, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Suiza gana",
+            "hook": "Suiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Catar vs Suiza hoy sábado, 13 de junio, 01:00 p.m.\n\nSuiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\n\n📊 PGS® Catar 0-2 Suiza · 🎯 Pick inicial: Suiza gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Catar vs Suiza: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Catar",
+              "#Suiza",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_3.png"
+            },
+            "slideTitle": "Catar vs Suiza"
+          }
+        }
+      },
+      {
+        "id": 233,
+        "card_id": "c_e211",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Catar vs Suiza: pronóstico del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T13:00:00-06:00\",\"target_match\":{\"home\":\"Catar\",\"away\":\"Suiza\",\"kickoff_iso\":\"2026-06-13T13:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\"},\"homeTeam\":\"Catar\",\"awayTeam\":\"Suiza\",\"flagCodeHome\":\"qa\",\"flagCodeAway\":\"ch\",\"kickoff\":\"2026-06-13T13:00:00-06:00\",\"venue\":\"Santa Clara, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Suiza gana\",\"hook\":\"Suiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Catar vs Suiza hoy sábado, 13 de junio, 01:00 p.m.\\n\\nSuiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\\n\\n📊 PGS® Catar 0-2 Suiza · 🎯 Pick inicial: Suiza gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Catar vs Suiza: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Catar\",\"#Suiza\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_3.png\"},\"slideTitle\":\"Catar vs Suiza\"}}",
+        "created_at": "2026-06-13 14:22:23",
+        "meta": {
+          "title": "Catar vs Suiza: pronóstico del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T13:00:00-06:00",
+            "target_match": {
+              "home": "Catar",
+              "away": "Suiza",
+              "kickoff_iso": "2026-06-13T13:00:00-06:00",
+              "venue": "Santa Clara, EE.UU."
+            },
+            "homeTeam": "Catar",
+            "awayTeam": "Suiza",
+            "flagCodeHome": "qa",
+            "flagCodeAway": "ch",
+            "kickoff": "2026-06-13T13:00:00-06:00",
+            "venue": "Santa Clara, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Suiza gana",
+            "hook": "Suiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Catar vs Suiza hoy sábado, 13 de junio, 01:00 p.m.\n\nSuiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\n\n📊 PGS® Catar 0-2 Suiza · 🎯 Pick inicial: Suiza gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Catar vs Suiza: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Catar",
+              "#Suiza",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_3.png"
+            },
+            "slideTitle": "Catar vs Suiza"
+          }
+        }
+      },
+      {
+        "id": 222,
+        "card_id": "c_e211",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T14:00:00-06:00\",\"target_match\":{\"home\":\"Catar\",\"away\":\"Suiza\",\"kickoff_iso\":\"2026-06-13T14:00:00-06:00\",\"venue\":\"Kansas City\"},\"homeTeam\":\"Catar\",\"awayTeam\":\"Suiza\",\"flagCodeHome\":\"qa\",\"flagCodeAway\":\"ch\",\"kickoff\":\"2026-06-13T14:00:00-06:00\",\"venue\":\"Kansas City\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Suiza gana\",\"hook\":\"Suiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Catar vs Suiza hoy sábado, 13 de junio, 02:00 p.m.\\n\\nSuiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\\n\\n📊 PGS® Catar 0-2 Suiza · 🎯 Pick inicial: Suiza gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Catar vs Suiza: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Catar\",\"#Suiza\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e211\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-13 14:19:13",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T14:00:00-06:00",
+            "target_match": {
+              "home": "Catar",
+              "away": "Suiza",
+              "kickoff_iso": "2026-06-13T14:00:00-06:00",
+              "venue": "Kansas City"
+            },
+            "homeTeam": "Catar",
+            "awayTeam": "Suiza",
+            "flagCodeHome": "qa",
+            "flagCodeAway": "ch",
+            "kickoff": "2026-06-13T14:00:00-06:00",
+            "venue": "Kansas City",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Suiza gana",
+            "hook": "Suiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Catar vs Suiza hoy sábado, 13 de junio, 02:00 p.m.\n\nSuiza pone oficio; Catar busca dar la nota en su segundo Mundial seguido.\n\n📊 PGS® Catar 0-2 Suiza · 🎯 Pick inicial: Suiza gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Catar vs Suiza: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Catar",
+              "#Suiza",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e211\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 221,
+        "card_id": "c_e211",
+        "actor": "demo",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"expires_at\":null}",
+        "created_at": "2026-06-13 14:19:10",
+        "meta": {
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "expires_at": null
+        }
+      }
+    ]
+  }
+}

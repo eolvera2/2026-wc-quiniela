@@ -19,6 +19,13 @@ node_modules/
 *.log
 dist/
 coverage/
+marketing.sqlite
+marketing.sqlite-journal
+marketing.sqlite-wal
+marketing.sqlite-shm
+marketing-board/.assets/
+marketing-board/.tokens/
+marketing-board/.cache/
 
 # Windows: stray device-name file that can be accidentally created
 nul

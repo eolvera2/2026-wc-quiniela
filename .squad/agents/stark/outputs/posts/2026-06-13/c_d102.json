@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-13T03:51:35.073Z",
+  "event": {
+    "type": "manual_post_confirmed",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "posted",
+    "note": "Manual instagram post confirmed",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_d102",
+    "title": "Brasil vs Marruecos: paciencia vs orden",
+    "stage": "posted",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram"
+    ],
+    "payload": {
+      "template": "pronostico-carousel-3up",
+      "format_variant": "carousel_3up",
+      "scheduled_for": "2026-06-13T09:00:00-06:00",
+      "target_match": {
+        "home": "Brazil",
+        "away": "Morocco",
+        "kickoff_iso": "2026-06-13T16:00:00-06:00",
+        "venue": "New York/New Jersey (East Rutherford)"
+      },
+      "homeTeam": "Brasil",
+      "awayTeam": "Marruecos",
+      "flagEmojiHome": "🇧🇷",
+      "flagEmojiAway": "🇲🇦",
+      "kickoff": "2026-06-13T16:00:00-06:00",
+      "venue": "New York/New Jersey (East Rutherford)",
+      "pgsHome": "2",
+      "pgsAway": "1",
+      "pickShort": "Brasil gana",
+      "hook": "Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.",
+      "cta": "Tu pick en predictagol.com",
+      "caption": "Brasil 🇧🇷 vs Marruecos 🇲🇦 mañana\n\nBrasil trae cartel; Marruecos trae orden para hacerlo incómodo.\n\n📊 PGS® Brasil 2-1 Marruecos · 🎯 Pick inicial: Brasil gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+      "alt_text": "Carrusel de 3 slides para Brasil vs Marruecos: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Brasil",
+        "#Marruecos",
+        "#PronosticoDelDia"
+      ],
+      "assets": {
+        "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-12\\c_d102\\slide_1.png",
+        "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-12\\c_d102\\slide_2.png",
+        "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-12\\c_d102\\slide_3.png"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": null,
+    "created_at": "2026-06-13 02:42:30",
+    "updated_at": "2026-06-13 03:51:35",
+    "posts": [
+      {
+        "id": 14,
+        "card_id": "c_d102",
+        "platform": "instagram",
+        "status": "posted_manual",
+        "permalink": "https://www.instagram.com/p/DZgvkk7FH6b/?img_index=1",
+        "error": null,
+        "posted_at": "2026-06-13T03:51:35.045Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-13 03:51:35",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      }
+    ],
+    "events": [
+      {
+        "id": 220,
+        "card_id": "c_d102",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "posted",
+        "note": "Manual instagram post confirmed",
+        "meta_json": "{}",
+        "created_at": "2026-06-13 03:51:35",
+        "meta": {}
+      },
+      {
+        "id": 219,
+        "card_id": "c_d102",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual instagram post confirmed",
+        "meta_json": "{\"platform\":\"instagram\",\"permalink\":\"https://www.instagram.com/p/DZgvkk7FH6b/?img_index=1\"}",
+        "created_at": "2026-06-13 03:51:35",
+        "meta": {
+          "platform": "instagram",
+          "permalink": "https://www.instagram.com/p/DZgvkk7FH6b/?img_index=1"
+        }
+      },
+      {
+        "id": 218,
+        "card_id": "c_d102",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T09:00:00-06:00\",\"target_match\":{\"home\":\"Brazil\",\"away\":\"Morocco\",\"kickoff_iso\":\"2026-06-13T16:00:00-06:00\",\"venue\":\"New York/New Jersey (East Rutherford)\"},\"homeTeam\":\"Brasil\",\"awayTeam\":\"Marruecos\",\"flagEmojiHome\":\"🇧🇷\",\"flagEmojiAway\":\"🇲🇦\",\"kickoff\":\"2026-06-13T16:00:00-06:00\",\"venue\":\"New York/New Jersey (East Rutherford)\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Brasil gana\",\"hook\":\"Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Brasil 🇧🇷 vs Marruecos 🇲🇦 mañana\\n\\nBrasil trae cartel; Marruecos trae orden para hacerlo incómodo.\\n\\n📊 PGS® Brasil 2-1 Marruecos · 🎯 Pick inicial: Brasil gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Brasil vs Marruecos: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Brasil\",\"#Marruecos\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-12\\\\c_d102\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-12\\\\c_d102\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-12\\\\c_d102\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-13 03:13:21",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T09:00:00-06:00",
+            "target_match": {
+              "home": "Brazil",
+              "away": "Morocco",
+              "kickoff_iso": "2026-06-13T16:00:00-06:00",
+              "venue": "New York/New Jersey (East Rutherford)"
+            },
+            "homeTeam": "Brasil",
+            "awayTeam": "Marruecos",
+            "flagEmojiHome": "🇧🇷",
+            "flagEmojiAway": "🇲🇦",
+            "kickoff": "2026-06-13T16:00:00-06:00",
+            "venue": "New York/New Jersey (East Rutherford)",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Brasil gana",
+            "hook": "Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Brasil 🇧🇷 vs Marruecos 🇲🇦 mañana\n\nBrasil trae cartel; Marruecos trae orden para hacerlo incómodo.\n\n📊 PGS® Brasil 2-1 Marruecos · 🎯 Pick inicial: Brasil gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Brasil vs Marruecos: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Brasil",
+              "#Marruecos",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-12\\c_d102\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-12\\c_d102\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-12\\c_d102\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 216,
+        "card_id": "c_d102",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T09:00:00-06:00\",\"target_match\":{\"home\":\"Brazil\",\"away\":\"Morocco\",\"kickoff_iso\":\"2026-06-13T16:00:00-06:00\",\"venue\":\"New York/New Jersey (East Rutherford)\"},\"homeTeam\":\"Brasil\",\"awayTeam\":\"Marruecos\",\"flagEmojiHome\":\"🇧🇷\",\"flagEmojiAway\":\"🇲🇦\",\"kickoff\":\"2026-06-13T16:00:00-06:00\",\"venue\":\"New York/New Jersey (East Rutherford)\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Brasil gana\",\"hook\":\"Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Brasil 🇧🇷 vs Marruecos 🇲🇦 mañana\\n\\nBrasil trae cartel; Marruecos trae orden para hacerlo incómodo.\\n\\n📊 PGS® Brasil 2-1 Marruecos · 🎯 Pick inicial: Brasil gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Brasil vs Marruecos: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Brasil\",\"#Marruecos\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-12\\\\c_d102\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-12\\\\c_d102\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-12\\\\c_d102\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-13 03:12:41",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T09:00:00-06:00",
+            "target_match": {
+              "home": "Brazil",
+              "away": "Morocco",
+              "kickoff_iso": "2026-06-13T16:00:00-06:00",
+              "venue": "New York/New Jersey (East Rutherford)"
+            },
+            "homeTeam": "Brasil",
+            "awayTeam": "Marruecos",
+            "flagEmojiHome": "🇧🇷",
+            "flagEmojiAway": "🇲🇦",
+            "kickoff": "2026-06-13T16:00:00-06:00",
+            "venue": "New York/New Jersey (East Rutherford)",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Brasil gana",
+            "hook": "Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Brasil 🇧🇷 vs Marruecos 🇲🇦 mañana\n\nBrasil trae cartel; Marruecos trae orden para hacerlo incómodo.\n\n📊 PGS® Brasil 2-1 Marruecos · 🎯 Pick inicial: Brasil gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Brasil vs Marruecos: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Brasil",
+              "#Marruecos",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-12\\c_d102\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-12\\c_d102\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-12\\c_d102\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 210,
+        "card_id": "c_d102",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T09:00:00-06:00\",\"target_match\":{\"home\":\"Brazil\",\"away\":\"Morocco\",\"kickoff_iso\":\"2026-06-13T16:00:00-06:00\",\"venue\":\"New York/New Jersey (East Rutherford)\"},\"homeTeam\":\"Brasil\",\"awayTeam\":\"Marruecos\",\"flagEmojiHome\":\"🇧🇷\",\"flagEmojiAway\":\"🇲🇦\",\"kickoff\":\"2026-06-13T16:00:00-06:00\",\"venue\":\"New York/New Jersey (East Rutherford)\",\"pgsHome\":\"2\",\"pgsAway\":\"1\",\"pickShort\":\"Brasil gana\",\"hook\":\"Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Brasil 🇧🇷 vs Marruecos 🇲🇦 mañana\\n\\nBrasil trae cartel; Marruecos trae orden para hacerlo incómodo.\\n\\n📊 PGS® Brasil 2-1 Marruecos · 🎯 Pick inicial: Brasil gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Brasil vs Marruecos: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Brasil\",\"#Marruecos\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-12\\\\c_d102\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-12\\\\c_d102\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-12\\\\c_d102\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-13 02:43:22",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T09:00:00-06:00",
+            "target_match": {
+              "home": "Brazil",
+              "away": "Morocco",
+              "kickoff_iso": "2026-06-13T16:00:00-06:00",
+              "venue": "New York/New Jersey (East Rutherford)"
+            },
+            "homeTeam": "Brasil",
+            "awayTeam": "Marruecos",
+            "flagEmojiHome": "🇧🇷",
+            "flagEmojiAway": "🇲🇦",
+            "kickoff": "2026-06-13T16:00:00-06:00",
+            "venue": "New York/New Jersey (East Rutherford)",
+            "pgsHome": "2",
+            "pgsAway": "1",
+            "pickShort": "Brasil gana",
+            "hook": "Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Brasil 🇧🇷 vs Marruecos 🇲🇦 mañana\n\nBrasil trae cartel; Marruecos trae orden para hacerlo incómodo.\n\n📊 PGS® Brasil 2-1 Marruecos · 🎯 Pick inicial: Brasil gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Brasil vs Marruecos: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Brasil",
+              "#Marruecos",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-12\\c_d102\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-12\\c_d102\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-12\\c_d102\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 205,
+        "card_id": "c_d102",
+        "actor": "demo",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"expires_at\":null}",
+        "created_at": "2026-06-13 02:42:30",
+        "meta": {
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "expires_at": null
+        }
+      }
+    ]
+  }
+}

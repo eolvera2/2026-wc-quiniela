@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T21:29:28.614Z",
+  "event": {
+    "type": "advance",
+    "actor": "cap",
+    "from_stage": "review",
+    "to_stage": "to_be_posted",
+    "note": "Approved for autonomous publish",
+    "meta": {
+      "scorecard": [
+        {
+          "gate": 1,
+          "name": "Forbidden vocabulary",
+          "score": "G",
+          "note": "No forbidden vocabulary detected."
+        },
+        {
+          "gate": 2,
+          "name": "Sportsbook positioning",
+          "score": "G",
+          "note": "Soft/no CTA; no sportsbook-positioning pattern detected."
+        },
+        {
+          "gate": 3,
+          "name": "Brand-safe imagery",
+          "score": "G",
+          "note": "Renderer-tokens enforced."
+        },
+        {
+          "gate": 4,
+          "name": "Design tokens",
+          "score": "G",
+          "note": "Renderer-tokens enforced."
+        },
+        {
+          "gate": 5,
+          "name": "Typography & wordmark",
+          "score": "G",
+          "note": "Renderer-tokens enforced."
+        },
+        {
+          "gate": 6,
+          "name": "Safe zones",
+          "score": "G",
+          "note": "Renderer SAFE_ZONES constant enforced."
+        },
+        {
+          "gate": 7,
+          "name": "Factual accuracy",
+          "score": "G",
+          "note": "No verifiable false claim detected; opinion-framed predictions allowed."
+        },
+        {
+          "gate": 8,
+          "name": "Spanish quality",
+          "score": "G",
+          "note": "Natural Spanish quality heuristic passed."
+        }
+      ],
+      "verdict": "PASS"
+    }
+  },
+  "card": {
+    "id": "c_9af5",
+    "title": "Quiniela: ¿se repite el 1-1 o México rompe el guion?",
+    "stage": "to_be_posted",
+    "owner": "strange",
+    "pillar": "quiniela_challenge",
+    "platforms": [
+      "instagram",
+      "tiktok",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-11T12:15:00-06:00",
+      "hook": "Tu marcador antes del silbatazo: 1-1, 2-1 o sorpresa.",
+      "body_brief": "Convertir la memoria de 2010 en dinámica rápida. Proponer chips de marcador y pedir que comenten su pick antes del inicio. Ideal para Story poll y comentario fijado.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#QuinielaPredictaGol",
+        "#PredictaGol",
+        "#ElTri",
+        "#Mundial2026"
+      ],
+      "notes": "Usar pregunta directa; no prometer recompensas. Evitar imágenes de trofeo o marcas oficiales.",
+      "target_match": {
+        "home": "Mexico",
+        "away": "South Africa",
+        "kickoff_iso": "2026-06-11T13:00:00-06:00",
+        "venue": "Mexico City"
+      },
+      "signal_source": "widow-2026-06-10-01",
+      "challengeQuestion": "¿Se repite el 1-1 o México rompe el guion?",
+      "homeTeam": "1-1",
+      "awayTeam": "2-1",
+      "caption": "Tu marcador antes del silbatazo: 1-1, 2-1 o sorpresa. ⚽\n\nPon tu marcador antes del silbatazo: 1-1, 2-1 o sorpresa bien leída.\n\nCompara con tu grupo cuando ruede la pelota.\n\nTu pick en predictagol.com\n\n#PredictaGol #Mundial2026 #QuinielaPredictaGol #ElTri",
+      "alt_text": "Gráfico de quiniela para México vs Sudáfrica, con opciones rápidas para elegir marcador con amigos.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#QuinielaPredictaGol",
+        "#ElTri"
+      ],
+      "assets": {
+        "1080x1920": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_9af5\\1080x1920.png",
+        "1080x1350": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_9af5\\1080x1350.png",
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_9af5\\1080x1080.png"
+      }
+    },
+    "priority": 9,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:27:49",
+    "updated_at": "2026-06-10 21:29:28",
+    "posts": [],
+    "events": [
+      {
+        "id": 174,
+        "card_id": "c_9af5",
+        "actor": "cap",
+        "type": "advance",
+        "from_stage": "review",
+        "to_stage": "to_be_posted",
+        "note": "Approved for autonomous publish",
+        "meta_json": "{\"scorecard\":[{\"gate\":1,\"name\":\"Forbidden vocabulary\",\"score\":\"G\",\"note\":\"No forbidden vocabulary detected.\"},{\"gate\":2,\"name\":\"Sportsbook positioning\",\"score\":\"G\",\"note\":\"Soft/no CTA; no sportsbook-positioning pattern detected.\"},{\"gate\":3,\"name\":\"Brand-safe imagery\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":4,\"name\":\"Design tokens\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":5,\"name\":\"Typography & wordmark\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":6,\"name\":\"Safe zones\",\"score\":\"G\",\"note\":\"Renderer SAFE_ZONES constant enforced.\"},{\"gate\":7,\"name\":\"Factual accuracy\",\"score\":\"G\",\"note\":\"No verifiable false claim detected; opinion-framed predictions allowed.\"},{\"gate\":8,\"name\":\"Spanish quality\",\"score\":\"G\",\"note\":\"Natural Spanish quality heuristic passed.\"}],\"verdict\":\"PASS\"}",
+        "created_at": "2026-06-10 21:29:28",
+        "meta": {
+          "scorecard": [
+            {
+              "gate": 1,
+              "name": "Forbidden vocabulary",
+              "score": "G",
+              "note": "No forbidden vocabulary detected."
+            },
+            {
+              "gate": 2,
+              "name": "Sportsbook positioning",
+              "score": "G",
+              "note": "Soft/no CTA; no sportsbook-positioning pattern detected."
+            },
+            {
+              "gate": 3,
+              "name": "Brand-safe imagery",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 4,
+              "name": "Design tokens",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 5,
+              "name": "Typography & wordmark",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 6,
+              "name": "Safe zones",
+              "score": "G",
+              "note": "Renderer SAFE_ZONES constant enforced."
+            },
+            {
+              "gate": 7,
+              "name": "Factual accuracy",
+              "score": "G",
+              "note": "No verifiable false claim detected; opinion-framed predictions allowed."
+            },
+            {
+              "gate": 8,
+              "name": "Spanish quality",
+              "score": "G",
+              "note": "Natural Spanish quality heuristic passed."
+            }
+          ],
+          "verdict": "PASS"
+        }
+      },
+      {
+        "id": 173,
+        "card_id": "c_9af5",
+        "actor": "cap",
+        "type": "advance",
+        "from_stage": "copywritten",
+        "to_stage": "review",
+        "note": "Cap intermediate gate passed",
+        "meta_json": "{\"scorecard\":[{\"gate\":1,\"name\":\"Forbidden vocabulary\",\"score\":\"G\",\"note\":\"No forbidden vocabulary detected.\"},{\"gate\":2,\"name\":\"Sportsbook positioning\",\"score\":\"G\",\"note\":\"Soft/no CTA; no sportsbook-positioning pattern detected.\"},{\"gate\":3,\"name\":\"Brand-safe imagery\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":4,\"name\":\"Design tokens\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":5,\"name\":\"Typography & wordmark\",\"score\":\"G\",\"note\":\"Renderer-tokens enforced.\"},{\"gate\":6,\"name\":\"Safe zones\",\"score\":\"G\",\"note\":\"Renderer SAFE_ZONES constant enforced.\"},{\"gate\":7,\"name\":\"Factual accuracy\",\"score\":\"G\",\"note\":\"No verifiable false claim detected; opinion-framed predictions allowed.\"},{\"gate\":8,\"name\":\"Spanish quality\",\"score\":\"G\",\"note\":\"Natural Spanish quality heuristic passed.\"}],\"verdict\":\"PASS\"}",
+        "created_at": "2026-06-10 21:29:28",
+        "meta": {
+          "scorecard": [
+            {
+              "gate": 1,
+              "name": "Forbidden vocabulary",
+              "score": "G",
+              "note": "No forbidden vocabulary detected."
+            },
+            {
+              "gate": 2,
+              "name": "Sportsbook positioning",
+              "score": "G",
+              "note": "Soft/no CTA; no sportsbook-positioning pattern detected."
+            },
+            {
+              "gate": 3,
+              "name": "Brand-safe imagery",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 4,
+              "name": "Design tokens",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 5,
+              "name": "Typography & wordmark",
+              "score": "G",
+              "note": "Renderer-tokens enforced."
+            },
+            {
+              "gate": 6,
+              "name": "Safe zones",
+              "score": "G",
+              "note": "Renderer SAFE_ZONES constant enforced."
+            },
+            {
+              "gate": 7,
+              "name": "Factual accuracy",
+              "score": "G",
+              "note": "No verifiable false claim detected; opinion-framed predictions allowed."
+            },
+            {
+              "gate": 8,
+              "name": "Spanish quality",
+              "score": "G",
+              "note": "Natural Spanish quality heuristic passed."
+            }
+          ],
+          "verdict": "PASS"
+        }
+      },
+      {
+        "id": 158,
+        "card_id": "c_9af5",
+        "actor": "shuri",
+        "type": "advance",
+        "from_stage": "ideas",
+        "to_stage": "copywritten",
+        "note": "Wave 1 creative ready",
+        "meta_json": "{}",
+        "created_at": "2026-06-10 21:27:01",
+        "meta": {}
+      },
+      {
+        "id": 157,
+        "card_id": "c_9af5",
+        "actor": "shuri",
+        "type": "edit",
+        "from_stage": "ideas",
+        "to_stage": "ideas",
+        "note": "Wave 1 creative packet",
+        "meta_json": "{\"title\":\"Quiniela: ¿se repite el 1-1 o México rompe el guion?\",\"payload\":{\"scheduled_for\":\"2026-06-11T12:15:00-06:00\",\"hook\":\"Tu marcador antes del silbatazo: 1-1, 2-1 o sorpresa.\",\"body_brief\":\"Convertir la memoria de 2010 en dinámica rápida. Proponer chips de marcador y pedir que comenten su pick antes del inicio. Ideal para Story poll y comentario fijado.\",\"template\":\"quiniela-challenge\",\"cta\":\"Tu pick en predictagol.com\",\"hashtag_brief\":[\"#QuinielaPredictaGol\",\"#PredictaGol\",\"#ElTri\",\"#Mundial2026\"],\"notes\":\"Usar pregunta directa; no prometer recompensas. Evitar imágenes de trofeo o marcas oficiales.\",\"target_match\":{\"home\":\"Mexico\",\"away\":\"South Africa\",\"kickoff_iso\":\"2026-06-11T13:00:00-06:00\",\"venue\":\"Mexico City\"},\"signal_source\":\"widow-2026-06-10-01\",\"challengeQuestion\":\"¿Se repite el 1-1 o México rompe el guion?\",\"homeTeam\":\"1-1\",\"awayTeam\":\"2-1\",\"caption\":\"Tu marcador antes del silbatazo: 1-1, 2-1 o sorpresa. ⚽\\n\\nPon tu marcador antes del silbatazo: 1-1, 2-1 o sorpresa bien leída.\\n\\nCompara con tu grupo cuando ruede la pelota.\\n\\nTu pick en predictagol.com\\n\\n#PredictaGol #Mundial2026 #QuinielaPredictaGol #ElTri\",\"alt_text\":\"Gráfico de quiniela para México vs Sudáfrica, con opciones rápidas para elegir marcador con amigos.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\",\"#ElTri\"],\"assets\":{\"1080x1920\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-11\\\\c_9af5\\\\1080x1920.png\",\"1080x1350\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-11\\\\c_9af5\\\\1080x1350.png\",\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-11\\\\c_9af5\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-10 21:27:01",
+        "meta": {
+          "title": "Quiniela: ¿se repite el 1-1 o México rompe el guion?",
+          "payload": {
+            "scheduled_for": "2026-06-11T12:15:00-06:00",
+            "hook": "Tu marcador antes del silbatazo: 1-1, 2-1 o sorpresa.",
+            "body_brief": "Convertir la memoria de 2010 en dinámica rápida. Proponer chips de marcador y pedir que comenten su pick antes del inicio. Ideal para Story poll y comentario fijado.",
+            "template": "quiniela-challenge",
+            "cta": "Tu pick en predictagol.com",
+            "hashtag_brief": [
+              "#QuinielaPredictaGol",
+              "#PredictaGol",
+              "#ElTri",
+              "#Mundial2026"
+            ],
+            "notes": "Usar pregunta directa; no prometer recompensas. Evitar imágenes de trofeo o marcas oficiales.",
+            "target_match": {
+              "home": "Mexico",
+              "away": "South Africa",
+              "kickoff_iso": "2026-06-11T13:00:00-06:00",
+              "venue": "Mexico City"
+            },
+            "signal_source": "widow-2026-06-10-01",
+            "challengeQuestion": "¿Se repite el 1-1 o México rompe el guion?",
+            "homeTeam": "1-1",
+            "awayTeam": "2-1",
+            "caption": "Tu marcador antes del silbatazo: 1-1, 2-1 o sorpresa. ⚽\n\nPon tu marcador antes del silbatazo: 1-1, 2-1 o sorpresa bien leída.\n\nCompara con tu grupo cuando ruede la pelota.\n\nTu pick en predictagol.com\n\n#PredictaGol #Mundial2026 #QuinielaPredictaGol #ElTri",
+            "alt_text": "Gráfico de quiniela para México vs Sudáfrica, con opciones rápidas para elegir marcador con amigos.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol",
+              "#ElTri"
+            ],
+            "assets": {
+              "1080x1920": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_9af5\\1080x1920.png",
+              "1080x1350": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_9af5\\1080x1350.png",
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-11\\c_9af5\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 129,
+        "card_id": "c_9af5",
+        "actor": "strange",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "ideas",
+        "note": null,
+        "meta_json": "{\"owner\":\"strange\",\"pillar\":\"quiniela_challenge\"}",
+        "created_at": "2026-06-10 19:27:49",
+        "meta": {
+          "owner": "strange",
+          "pillar": "quiniela_challenge"
+        }
+      }
+    ]
+  }
+}

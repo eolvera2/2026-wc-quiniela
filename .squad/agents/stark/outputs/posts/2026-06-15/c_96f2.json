@@ -1,0 +1,737 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:03:39.624Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "template": "data-callout",
+        "format_variant": "data_callout",
+        "scheduled_for": "2026-06-15T13:00:00-06:00",
+        "window_key": "t_minus_24h",
+        "window_label": "T-24h · predicción oficial",
+        "expires_at": "2026-06-16T13:00:00.000Z",
+        "target_match": {
+          "home": "Francia",
+          "away": "Senegal",
+          "kickoff_iso": "2026-06-16T13:00:00-06:00",
+          "venue": "East Rutherford, EE.UU."
+        },
+        "homeTeam": "Francia",
+        "awayTeam": "Senegal",
+        "flagCodeHome": "fr",
+        "flagCodeAway": "sn",
+        "bigNumber": "2-1",
+        "eyebrow": "PICK Francia vs Senegal",
+        "subtitle": "Predicción oficial PredictaGol para East Rutherford, EE.UU.",
+        "cta": "Tu pick en predictagol.com",
+        "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.",
+        "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#Francia",
+          "#Senegal",
+          "#PronosticoDelDia"
+        ],
+        "platform_copy": {
+          "instagram": {
+            "format": "carousel_or_feed_graphic",
+            "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Francia",
+              "#Senegal",
+              "#PronosticoDelDia"
+            ],
+            "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1."
+          },
+          "x": {
+            "format": "single_hot_take",
+            "text": "Hot take PredictaGol: Francia gana en Francia vs Senegal.\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.",
+            "reply_text": "Más contexto en predictagol.com",
+            "hashtags": [
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "cross_posted_graphic_rewritten_caption",
+            "text": "Misma gráfica, otra conversación: Francia vs Senegal.\n\nNuestro pick oficial es Francia gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?",
+            "hashtags": [
+              "#PredictaGol"
+            ]
+          }
+        },
+        "assets": {
+          "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_96f2\\1080x1080.png"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_96f2",
+    "title": "Francia vs Senegal: T-24 predicción oficial",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "template": "data-callout",
+      "format_variant": "data_callout",
+      "scheduled_for": "2026-06-15T13:00:00-06:00",
+      "window_key": "t_minus_24h",
+      "window_label": "T-24h · predicción oficial",
+      "expires_at": "2026-06-16T13:00:00.000Z",
+      "target_match": {
+        "home": "Francia",
+        "away": "Senegal",
+        "kickoff_iso": "2026-06-16T13:00:00-06:00",
+        "venue": "East Rutherford, EE.UU."
+      },
+      "homeTeam": "Francia",
+      "awayTeam": "Senegal",
+      "flagCodeHome": "fr",
+      "flagCodeAway": "sn",
+      "bigNumber": "2-1",
+      "eyebrow": "PICK Francia vs Senegal",
+      "subtitle": "Predicción oficial PredictaGol para East Rutherford, EE.UU.",
+      "cta": "Tu pick en predictagol.com",
+      "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.",
+      "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Francia",
+        "#Senegal",
+        "#PronosticoDelDia"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "carousel_or_feed_graphic",
+          "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#Francia",
+            "#Senegal",
+            "#PronosticoDelDia"
+          ],
+          "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1."
+        },
+        "x": {
+          "format": "single_hot_take",
+          "text": "Hot take PredictaGol: Francia gana en Francia vs Senegal.\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.",
+          "reply_text": "Más contexto en predictagol.com",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "cross_posted_graphic_rewritten_caption",
+          "text": "Misma gráfica, otra conversación: Francia vs Senegal.\n\nNuestro pick oficial es Francia gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_96f2\\1080x1080.png"
+      }
+    },
+    "priority": 9,
+    "stalled_at": null,
+    "expires_at": "2026-06-16T13:00:00.000Z",
+    "created_at": "2026-06-15 02:52:55",
+    "updated_at": "2026-06-15 15:03:39",
+    "posts": [],
+    "events": [
+      {
+        "id": 687,
+        "card_id": "c_96f2",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T13:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-16T13:00:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PICK Francia vs Senegal\",\"subtitle\":\"Predicción oficial PredictaGol para East Rutherford, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel_or_feed_graphic\",\"caption\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.\"},\"x\":{\"format\":\"single_hot_take\",\"text\":\"Hot take PredictaGol: Francia gana en Francia vs Senegal.\\n\\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"cross_posted_graphic_rewritten_caption\",\"text\":\"Misma gráfica, otra conversación: Francia vs Senegal.\\n\\nNuestro pick oficial es Francia gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_96f2\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:03:39",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T13:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-16T13:00:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "bigNumber": "2-1",
+            "eyebrow": "PICK Francia vs Senegal",
+            "subtitle": "Predicción oficial PredictaGol para East Rutherford, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Francia",
+              "#Senegal",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel_or_feed_graphic",
+                "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Francia",
+                  "#Senegal",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1."
+              },
+              "x": {
+                "format": "single_hot_take",
+                "text": "Hot take PredictaGol: Francia gana en Francia vs Senegal.\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "cross_posted_graphic_rewritten_caption",
+                "text": "Misma gráfica, otra conversación: Francia vs Senegal.\n\nNuestro pick oficial es Francia gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_96f2\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 686,
+        "card_id": "c_96f2",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Francia vs Senegal: T-24 predicción oficial\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":9,\"expires_at\":\"2026-06-16T13:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T13:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-16T13:00:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PICK Francia vs Senegal\",\"subtitle\":\"Predicción oficial PredictaGol para East Rutherford, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel_or_feed_graphic\",\"caption\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.\"},\"x\":{\"format\":\"single_hot_take\",\"text\":\"Hot take PredictaGol: Francia gana en Francia vs Senegal.\\n\\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"cross_posted_graphic_rewritten_caption\",\"text\":\"Misma gráfica, otra conversación: Francia vs Senegal.\\n\\nNuestro pick oficial es Francia gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_96f2\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 15:03:39",
+        "meta": {
+          "title": "Francia vs Senegal: T-24 predicción oficial",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 9,
+          "expires_at": "2026-06-16T13:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T13:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-16T13:00:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "bigNumber": "2-1",
+            "eyebrow": "PICK Francia vs Senegal",
+            "subtitle": "Predicción oficial PredictaGol para East Rutherford, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Francia",
+              "#Senegal",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel_or_feed_graphic",
+                "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Francia",
+                  "#Senegal",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1."
+              },
+              "x": {
+                "format": "single_hot_take",
+                "text": "Hot take PredictaGol: Francia gana en Francia vs Senegal.\n\nPGS® 2-1. Francia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nMañana vemos si el XI confirma o nos obliga a mover la quiniela.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "cross_posted_graphic_rewritten_caption",
+                "text": "Misma gráfica, otra conversación: Francia vs Senegal.\n\nNuestro pick oficial es Francia gana, pero aquí va la pregunta real: ¿es lectura lógica o estamos subestimando la sorpresa?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_96f2\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 578,
+        "card_id": "c_96f2",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T13:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-16T13:00:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PICK Francia vs Senegal\",\"subtitle\":\"Predicción oficial PredictaGol para East Rutherford, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"official_prediction_card\",\"caption\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.\"},\"x\":{\"format\":\"official_prediction_post\",\"text\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"official_prediction_discussion\",\"text\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\n¿Te vas con el pick oficial o ves upset?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_96f2\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 14:48:40",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T13:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-16T13:00:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "bigNumber": "2-1",
+            "eyebrow": "PICK Francia vs Senegal",
+            "subtitle": "Predicción oficial PredictaGol para East Rutherford, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Francia",
+              "#Senegal",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "official_prediction_card",
+                "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Francia",
+                  "#Senegal",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1."
+              },
+              "x": {
+                "format": "official_prediction_post",
+                "text": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "official_prediction_discussion",
+                "text": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\n¿Te vas con el pick oficial o ves upset?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_96f2\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 577,
+        "card_id": "c_96f2",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Francia vs Senegal: T-24 predicción oficial\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":9,\"expires_at\":\"2026-06-16T13:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T13:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-16T13:00:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PICK Francia vs Senegal\",\"subtitle\":\"Predicción oficial PredictaGol para East Rutherford, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"official_prediction_card\",\"caption\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.\"},\"x\":{\"format\":\"official_prediction_post\",\"text\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"official_prediction_discussion\",\"text\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\n¿Te vas con el pick oficial o ves upset?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_96f2\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 14:48:40",
+        "meta": {
+          "title": "Francia vs Senegal: T-24 predicción oficial",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 9,
+          "expires_at": "2026-06-16T13:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T13:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-16T13:00:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "bigNumber": "2-1",
+            "eyebrow": "PICK Francia vs Senegal",
+            "subtitle": "Predicción oficial PredictaGol para East Rutherford, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Francia",
+              "#Senegal",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "official_prediction_card",
+                "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Francia",
+                  "#Senegal",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1."
+              },
+              "x": {
+                "format": "official_prediction_post",
+                "text": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "official_prediction_discussion",
+                "text": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\n¿Te vas con el pick oficial o ves upset?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_96f2\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 383,
+        "card_id": "c_96f2",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T13:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-16T13:00:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PICK Francia vs Senegal\",\"subtitle\":\"Predicción oficial PredictaGol para East Rutherford, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"official_prediction_card\",\"caption\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.\"},\"x\":{\"format\":\"official_prediction_post\",\"text\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"official_prediction_discussion\",\"text\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\n¿Te vas con el pick oficial o ves upset?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_96f2\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 02:53:29",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T13:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-16T13:00:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "bigNumber": "2-1",
+            "eyebrow": "PICK Francia vs Senegal",
+            "subtitle": "Predicción oficial PredictaGol para East Rutherford, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Francia",
+              "#Senegal",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "official_prediction_card",
+                "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Francia",
+                  "#Senegal",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1."
+              },
+              "x": {
+                "format": "official_prediction_post",
+                "text": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "official_prediction_discussion",
+                "text": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\n¿Te vas con el pick oficial o ves upset?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_96f2\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 382,
+        "card_id": "c_96f2",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Francia vs Senegal: T-24 predicción oficial\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":9,\"expires_at\":\"2026-06-16T13:00:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T13:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-16T13:00:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PICK Francia vs Senegal\",\"subtitle\":\"Predicción oficial PredictaGol para East Rutherford, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"official_prediction_card\",\"caption\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.\"},\"x\":{\"format\":\"official_prediction_post\",\"text\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"official_prediction_discussion\",\"text\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\n¿Te vas con el pick oficial o ves upset?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_96f2\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 02:53:29",
+        "meta": {
+          "title": "Francia vs Senegal: T-24 predicción oficial",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 9,
+          "expires_at": "2026-06-16T13:00:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T13:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-16T13:00:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "bigNumber": "2-1",
+            "eyebrow": "PICK Francia vs Senegal",
+            "subtitle": "Predicción oficial PredictaGol para East Rutherford, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Francia",
+              "#Senegal",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "official_prediction_card",
+                "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Francia",
+                  "#Senegal",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1."
+              },
+              "x": {
+                "format": "official_prediction_post",
+                "text": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "official_prediction_discussion",
+                "text": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\n¿Te vas con el pick oficial o ves upset?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_96f2\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 347,
+        "card_id": "c_96f2",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-15T13:00:00-06:00\",\"window_key\":\"t_minus_24h\",\"window_label\":\"T-24h · predicción oficial\",\"expires_at\":\"2026-06-16T13:00:00.000Z\",\"target_match\":{\"home\":\"Francia\",\"away\":\"Senegal\",\"kickoff_iso\":\"2026-06-16T13:00:00-06:00\",\"venue\":\"East Rutherford, EE.UU.\"},\"homeTeam\":\"Francia\",\"awayTeam\":\"Senegal\",\"flagCodeHome\":\"fr\",\"flagCodeAway\":\"sn\",\"bigNumber\":\"2-1\",\"eyebrow\":\"PICK Francia vs Senegal\",\"subtitle\":\"Predicción oficial PredictaGol para East Rutherford, EE.UU.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\",\"alt_text\":\"Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"official_prediction_card\",\"caption\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Francia\",\"#Senegal\",\"#PronosticoDelDia\"],\"alt_text\":\"Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.\"},\"x\":{\"format\":\"official_prediction_post\",\"text\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\",\"reply_text\":\"Más contexto en predictagol.com\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"official_prediction_discussion\",\"text\":\"Pronóstico oficial PredictaGol: Francia vs Senegal\\n\\n📊 PGS® 2-1\\n🎯 Pick: Francia gana\\n\\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\\n\\n¿Te vas con el pick oficial o ves upset?\",\"hashtags\":[\"#PredictaGol\"]}},\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_96f2\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-15 02:52:56",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-15T13:00:00-06:00",
+            "window_key": "t_minus_24h",
+            "window_label": "T-24h · predicción oficial",
+            "expires_at": "2026-06-16T13:00:00.000Z",
+            "target_match": {
+              "home": "Francia",
+              "away": "Senegal",
+              "kickoff_iso": "2026-06-16T13:00:00-06:00",
+              "venue": "East Rutherford, EE.UU."
+            },
+            "homeTeam": "Francia",
+            "awayTeam": "Senegal",
+            "flagCodeHome": "fr",
+            "flagCodeAway": "sn",
+            "bigNumber": "2-1",
+            "eyebrow": "PICK Francia vs Senegal",
+            "subtitle": "Predicción oficial PredictaGol para East Rutherford, EE.UU.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.",
+            "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Francia",
+              "#Senegal",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "official_prediction_card",
+                "caption": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\nGuárdalo y vuelve mañana para revisar si cambió algo con alineaciones.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Francia",
+                  "#Senegal",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Tarjeta de predicción oficial para Francia vs Senegal, PGS® 2-1."
+              },
+              "x": {
+                "format": "official_prediction_post",
+                "text": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.",
+                "reply_text": "Más contexto en predictagol.com",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "official_prediction_discussion",
+                "text": "Pronóstico oficial PredictaGol: Francia vs Senegal\n\n📊 PGS® 2-1\n🎯 Pick: Francia gana\n\nFrancia vs Senegal: el algoritmo PGS® tiene su veredicto.\n\n¿Te vas con el pick oficial o ves upset?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_96f2\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 346,
+        "card_id": "c_96f2",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"expires_at\":\"2026-06-16T13:00:00.000Z\"}",
+        "created_at": "2026-06-15 02:52:55",
+        "meta": {
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "expires_at": "2026-06-16T13:00:00.000Z"
+        }
+      }
+    ]
+  }
+}

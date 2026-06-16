@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-16T01:41:01.837Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "title": "Austria vs Jordania: HT debate en vivo",
+      "stage": "to_be_posted",
+      "owner": "stark",
+      "pillar": "quiniela_challenge",
+      "priority": 6,
+      "expires_at": "2026-06-17T05:30:00.000Z",
+      "platforms": [
+        "x",
+        "threads"
+      ],
+      "payload": {
+        "scheduled_for": "2026-06-16T22:55:00-06:00",
+        "window_key": "halftime",
+        "window_label": "HT · debate en vivo",
+        "expires_at": "2026-06-17T05:30:00.000Z",
+        "target_match": {
+          "home": "Austria",
+          "away": "Jordania",
+          "kickoff_iso": "2026-06-16T22:00:00-06:00"
+        },
+        "caption": "Reply live para HT en Austria vs Jordania:\n\nEl pick inicial era Austria gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+        "hashtags": [
+          "#WorldCup2026"
+        ],
+        "platform_copy": {
+          "x": {
+            "format": "live_reply",
+            "text": "Reply live para HT en Austria vs Jordania:\n\nEl pick inicial era Austria gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+            "hashtags": [
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "match_thread_reply",
+            "text": "Para responder en un thread activo del partido:\n\nMedio tiempo en Austria vs Jordania. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Austria gana o ves giro en el segundo tiempo?",
+            "hashtags": [
+              "#PredictaGol"
+            ]
+          }
+        },
+        "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+      }
+    }
+  },
+  "card": {
+    "id": "c_bb77",
+    "title": "Austria vs Jordania: HT debate en vivo",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "quiniela_challenge",
+    "platforms": [
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-16T22:55:00-06:00",
+      "window_key": "halftime",
+      "window_label": "HT · debate en vivo",
+      "expires_at": "2026-06-17T05:30:00.000Z",
+      "target_match": {
+        "home": "Austria",
+        "away": "Jordania",
+        "kickoff_iso": "2026-06-16T22:00:00-06:00"
+      },
+      "caption": "Reply live para HT en Austria vs Jordania:\n\nEl pick inicial era Austria gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+      "hashtags": [
+        "#WorldCup2026"
+      ],
+      "platform_copy": {
+        "x": {
+          "format": "live_reply",
+          "text": "Reply live para HT en Austria vs Jordania:\n\nEl pick inicial era Austria gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "match_thread_reply",
+          "text": "Para responder en un thread activo del partido:\n\nMedio tiempo en Austria vs Jordania. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Austria gana o ves giro en el segundo tiempo?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+    },
+    "priority": 6,
+    "stalled_at": null,
+    "expires_at": "2026-06-17T05:30:00.000Z",
+    "created_at": "2026-06-15 14:49:26",
+    "updated_at": "2026-06-16 01:41:01",
+    "posts": [],
+    "events": [
+      {
+        "id": 860,
+        "card_id": "c_bb77",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Austria vs Jordania: HT debate en vivo\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":6,\"expires_at\":\"2026-06-17T05:30:00.000Z\",\"platforms\":[\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-16T22:55:00-06:00\",\"window_key\":\"halftime\",\"window_label\":\"HT · debate en vivo\",\"expires_at\":\"2026-06-17T05:30:00.000Z\",\"target_match\":{\"home\":\"Austria\",\"away\":\"Jordania\",\"kickoff_iso\":\"2026-06-16T22:00:00-06:00\"},\"caption\":\"Reply live para HT en Austria vs Jordania:\\n\\nEl pick inicial era Austria gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?\",\"hashtags\":[\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"live_reply\",\"text\":\"Reply live para HT en Austria vs Jordania:\\n\\nEl pick inicial era Austria gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Para responder en un thread activo del partido:\\n\\nMedio tiempo en Austria vs Jordania. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Austria gana o ves giro en el segundo tiempo?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-16 01:41:01",
+        "meta": {
+          "title": "Austria vs Jordania: HT debate en vivo",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 6,
+          "expires_at": "2026-06-17T05:30:00.000Z",
+          "platforms": [
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-16T22:55:00-06:00",
+            "window_key": "halftime",
+            "window_label": "HT · debate en vivo",
+            "expires_at": "2026-06-17T05:30:00.000Z",
+            "target_match": {
+              "home": "Austria",
+              "away": "Jordania",
+              "kickoff_iso": "2026-06-16T22:00:00-06:00"
+            },
+            "caption": "Reply live para HT en Austria vs Jordania:\n\nEl pick inicial era Austria gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+            "hashtags": [
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "live_reply",
+                "text": "Reply live para HT en Austria vs Jordania:\n\nEl pick inicial era Austria gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Para responder en un thread activo del partido:\n\nMedio tiempo en Austria vs Jordania. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Austria gana o ves giro en el segundo tiempo?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 733,
+        "card_id": "c_bb77",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Austria vs Jordania: HT debate en vivo\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":6,\"expires_at\":\"2026-06-17T05:30:00.000Z\",\"platforms\":[\"x\",\"threads\"],\"payload\":{\"scheduled_for\":\"2026-06-16T22:55:00-06:00\",\"window_key\":\"halftime\",\"window_label\":\"HT · debate en vivo\",\"expires_at\":\"2026-06-17T05:30:00.000Z\",\"target_match\":{\"home\":\"Austria\",\"away\":\"Jordania\",\"kickoff_iso\":\"2026-06-16T22:00:00-06:00\"},\"caption\":\"Reply live para HT en Austria vs Jordania:\\n\\nEl pick inicial era Austria gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?\",\"hashtags\":[\"#WorldCup2026\"],\"platform_copy\":{\"x\":{\"format\":\"live_reply\",\"text\":\"Reply live para HT en Austria vs Jordania:\\n\\nEl pick inicial era Austria gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Para responder en un thread activo del partido:\\n\\nMedio tiempo en Austria vs Jordania. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Austria gana o ves giro en el segundo tiempo?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Texto listo para copiar/pegar; no requiere asset visual.\"}}",
+        "created_at": "2026-06-15 15:04:25",
+        "meta": {
+          "title": "Austria vs Jordania: HT debate en vivo",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 6,
+          "expires_at": "2026-06-17T05:30:00.000Z",
+          "platforms": [
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "scheduled_for": "2026-06-16T22:55:00-06:00",
+            "window_key": "halftime",
+            "window_label": "HT · debate en vivo",
+            "expires_at": "2026-06-17T05:30:00.000Z",
+            "target_match": {
+              "home": "Austria",
+              "away": "Jordania",
+              "kickoff_iso": "2026-06-16T22:00:00-06:00"
+            },
+            "caption": "Reply live para HT en Austria vs Jordania:\n\nEl pick inicial era Austria gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+            "hashtags": [
+              "#WorldCup2026"
+            ],
+            "platform_copy": {
+              "x": {
+                "format": "live_reply",
+                "text": "Reply live para HT en Austria vs Jordania:\n\nEl pick inicial era Austria gana (PGS® 2-0). Si viste el primer tiempo, ¿qué cambió: ritmo, bandas o pelota parada?",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Para responder en un thread activo del partido:\n\nMedio tiempo en Austria vs Jordania. Si tuvieras que cambiar tu quiniela ahora mismo, ¿te quedas con Austria gana o ves giro en el segundo tiempo?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Texto listo para copiar/pegar; no requiere asset visual."
+          }
+        }
+      },
+      {
+        "id": 624,
+        "card_id": "c_bb77",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"expires_at\":\"2026-06-17T05:30:00.000Z\"}",
+        "created_at": "2026-06-15 14:49:26",
+        "meta": {
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "expires_at": "2026-06-17T05:30:00.000Z"
+        }
+      }
+    ]
+  }
+}

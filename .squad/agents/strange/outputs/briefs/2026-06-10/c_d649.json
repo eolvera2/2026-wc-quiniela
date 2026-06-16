@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:27:49.831Z",
+  "event": {
+    "type": "create",
+    "actor": "strange",
+    "to_stage": "ideas"
+  },
+  "card": {
+    "id": "c_d649",
+    "title": "Pronóstico del día: Países Bajos vs Japón, ajedrez con velocidad",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-14T13:00:00-06:00",
+      "hook": "Dos equipos que te castigan si pierdes la pelota donde no debes.",
+      "body_brief": "Preview con foco en presión, posesión y rupturas al espacio. Predicción suave: Japón puede incomodar si el partido se juega a ritmo alto desde temprano.",
+      "template": "pronostico-del-dia",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Japon",
+        "#PaisesBajos"
+      ],
+      "notes": "Usar mapas simples de zonas, no tablas pesadas.",
+      "target_match": {
+        "home": "Netherlands",
+        "away": "Japan",
+        "kickoff_iso": "2026-06-14T14:00:00-06:00",
+        "venue": "Dallas (Arlington)"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:27:49",
+    "updated_at": "2026-06-10 19:27:49",
+    "posts": [],
+    "events": [
+      {
+        "id": 139,
+        "card_id": "c_d649",
+        "actor": "strange",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "ideas",
+        "note": null,
+        "meta_json": "{\"owner\":\"strange\",\"pillar\":\"pronostico_del_dia\"}",
+        "created_at": "2026-06-10 19:27:49",
+        "meta": {
+          "owner": "strange",
+          "pillar": "pronostico_del_dia"
+        }
+      }
+    ]
+  }
+}

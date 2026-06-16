@@ -1,0 +1,669 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:03:37.338Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "template": "pronostico-carousel-3up",
+        "format_variant": "carousel_3up",
+        "scheduled_for": "2026-06-15T18:00:00-06:00",
+        "window_key": "t_minus_60",
+        "window_label": "T-60m · predicción final",
+        "expires_at": "2026-06-16T00:45:00.000Z",
+        "target_match": {
+          "home": "Irán",
+          "away": "Nueva Zelanda",
+          "kickoff_iso": "2026-06-15T19:00:00-06:00",
+          "venue": "Inglewood, EE.UU."
+        },
+        "homeTeam": "Irán",
+        "awayTeam": "Nueva Zelanda",
+        "flagCodeHome": "ir",
+        "flagCodeAway": "nz",
+        "slideTitle": "Irán vs Nueva Zelanda",
+        "kickoff": "2026-06-15T19:00:00-06:00",
+        "venue": "Inglewood, EE.UU.",
+        "pgsHome": "1",
+        "pgsAway": "0",
+        "pickShort": "Irán gana",
+        "hook": "Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.",
+        "cta": "Tu pick en predictagol.com",
+        "caption": "Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\n\nNuestro pick final: Irán gana.\n\nPGS® Irán 1-0 Nueva Zelanda. Guarda este Reel y compara al FT.",
+        "alt_text": "Storyboard de Reel para Irán vs Nueva Zelanda: hook, PGS® y pick final.",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#Iran",
+          "#NuevaZelanda",
+          "#PronosticoDelDia"
+        ],
+        "platform_copy": {
+          "instagram": {
+            "format": "reel_7_30s",
+            "caption": "Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\n\nNuestro pick final: Irán gana.\n\nPGS® Irán 1-0 Nueva Zelanda. Guarda este Reel y compara al FT.",
+            "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"Irán vs Nueva Zelanda: nuestro pick final\".\n3-8s: Mostrar slide PGS® 1-0.\n9-16s: Decir la razón corta: \"Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"Irán gana. ¿Lo bancas o ves sorpresa?\"",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Iran",
+              "#NuevaZelanda",
+              "#PronosticoDelDia"
+            ],
+            "alt_text": "Storyboard de Reel para Irán vs Nueva Zelanda: hook, PGS® y pick final.",
+            "asset_keys": [
+              "slide_1",
+              "slide_2",
+              "slide_3"
+            ]
+          },
+          "x": {
+            "format": "thread",
+            "text": "Hilo express a 1h de Irán vs Nueva Zelanda 🧵\n\n1/ Pick final: Irán gana\n2/ PGS®: 1-0\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+            "reply_text": "Más contexto y picks en predictagol.com",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "match_thread_reply",
+            "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con Irán gana para Irán vs Nueva Zelanda. PGS® 1-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026"
+            ]
+          }
+        },
+        "assets": {
+          "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_1.png",
+          "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_2.png",
+          "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_3.png"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_68f8",
+    "title": "Irán vs Nueva Zelanda: T-60 predicción final",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "template": "pronostico-carousel-3up",
+      "format_variant": "carousel_3up",
+      "scheduled_for": "2026-06-15T18:00:00-06:00",
+      "window_key": "t_minus_60",
+      "window_label": "T-60m · predicción final",
+      "expires_at": "2026-06-16T00:45:00.000Z",
+      "target_match": {
+        "home": "Irán",
+        "away": "Nueva Zelanda",
+        "kickoff_iso": "2026-06-15T19:00:00-06:00",
+        "venue": "Inglewood, EE.UU."
+      },
+      "homeTeam": "Irán",
+      "awayTeam": "Nueva Zelanda",
+      "flagCodeHome": "ir",
+      "flagCodeAway": "nz",
+      "slideTitle": "Irán vs Nueva Zelanda",
+      "kickoff": "2026-06-15T19:00:00-06:00",
+      "venue": "Inglewood, EE.UU.",
+      "pgsHome": "1",
+      "pgsAway": "0",
+      "pickShort": "Irán gana",
+      "hook": "Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.",
+      "cta": "Tu pick en predictagol.com",
+      "caption": "Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\n\nNuestro pick final: Irán gana.\n\nPGS® Irán 1-0 Nueva Zelanda. Guarda este Reel y compara al FT.",
+      "alt_text": "Storyboard de Reel para Irán vs Nueva Zelanda: hook, PGS® y pick final.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Iran",
+        "#NuevaZelanda",
+        "#PronosticoDelDia"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "reel_7_30s",
+          "caption": "Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\n\nNuestro pick final: Irán gana.\n\nPGS® Irán 1-0 Nueva Zelanda. Guarda este Reel y compara al FT.",
+          "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"Irán vs Nueva Zelanda: nuestro pick final\".\n3-8s: Mostrar slide PGS® 1-0.\n9-16s: Decir la razón corta: \"Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"Irán gana. ¿Lo bancas o ves sorpresa?\"",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#Iran",
+            "#NuevaZelanda",
+            "#PronosticoDelDia"
+          ],
+          "alt_text": "Storyboard de Reel para Irán vs Nueva Zelanda: hook, PGS® y pick final.",
+          "asset_keys": [
+            "slide_1",
+            "slide_2",
+            "slide_3"
+          ]
+        },
+        "x": {
+          "format": "thread",
+          "text": "Hilo express a 1h de Irán vs Nueva Zelanda 🧵\n\n1/ Pick final: Irán gana\n2/ PGS®: 1-0\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+          "reply_text": "Más contexto y picks en predictagol.com",
+          "hashtags": [
+            "#PredictaGol",
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "match_thread_reply",
+          "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con Irán gana para Irán vs Nueva Zelanda. PGS® 1-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026"
+          ]
+        }
+      },
+      "assets": {
+        "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_1.png",
+        "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_2.png",
+        "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_3.png"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": "2026-06-16T00:45:00.000Z",
+    "created_at": "2026-06-15 03:22:02",
+    "updated_at": "2026-06-15 15:03:37",
+    "posts": [],
+    "events": [
+      {
+        "id": 678,
+        "card_id": "c_68f8",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T18:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-16T00:45:00.000Z\",\"target_match\":{\"home\":\"Irán\",\"away\":\"Nueva Zelanda\",\"kickoff_iso\":\"2026-06-15T19:00:00-06:00\",\"venue\":\"Inglewood, EE.UU.\"},\"homeTeam\":\"Irán\",\"awayTeam\":\"Nueva Zelanda\",\"flagCodeHome\":\"ir\",\"flagCodeAway\":\"nz\",\"slideTitle\":\"Irán vs Nueva Zelanda\",\"kickoff\":\"2026-06-15T19:00:00-06:00\",\"venue\":\"Inglewood, EE.UU.\",\"pgsHome\":\"1\",\"pgsAway\":\"0\",\"pickShort\":\"Irán gana\",\"hook\":\"Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\\n\\nNuestro pick final: Irán gana.\\n\\nPGS® Irán 1-0 Nueva Zelanda. Guarda este Reel y compara al FT.\",\"alt_text\":\"Storyboard de Reel para Irán vs Nueva Zelanda: hook, PGS® y pick final.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Iran\",\"#NuevaZelanda\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"reel_7_30s\",\"caption\":\"Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\\n\\nNuestro pick final: Irán gana.\\n\\nPGS® Irán 1-0 Nueva Zelanda. Guarda este Reel y compara al FT.\",\"script\":\"Reel 7-30s:\\n0-2s: Hook en pantalla: \\\"Irán vs Nueva Zelanda: nuestro pick final\\\".\\n3-8s: Mostrar slide PGS® 1-0.\\n9-16s: Decir la razón corta: \\\"Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\\".\\n17-24s: Cierre: \\\"Irán gana. ¿Lo bancas o ves sorpresa?\\\"\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Iran\",\"#NuevaZelanda\",\"#PronosticoDelDia\"],\"alt_text\":\"Storyboard de Reel para Irán vs Nueva Zelanda: hook, PGS® y pick final.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"thread\",\"text\":\"Hilo express a 1h de Irán vs Nueva Zelanda 🧵\\n\\n1/ Pick final: Irán gana\\n2/ PGS®: 1-0\\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Respuesta lista para usar en threads de cuentas grandes del partido:\\n\\nPredictaGol llega con Irán gana para Irán vs Nueva Zelanda. PGS® 1-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_68f8\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_68f8\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_68f8\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:03:37",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T18:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-16T00:45:00.000Z",
+            "target_match": {
+              "home": "Irán",
+              "away": "Nueva Zelanda",
+              "kickoff_iso": "2026-06-15T19:00:00-06:00",
+              "venue": "Inglewood, EE.UU."
+            },
+            "homeTeam": "Irán",
+            "awayTeam": "Nueva Zelanda",
+            "flagCodeHome": "ir",
+            "flagCodeAway": "nz",
+            "slideTitle": "Irán vs Nueva Zelanda",
+            "kickoff": "2026-06-15T19:00:00-06:00",
+            "venue": "Inglewood, EE.UU.",
+            "pgsHome": "1",
+            "pgsAway": "0",
+            "pickShort": "Irán gana",
+            "hook": "Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\n\nNuestro pick final: Irán gana.\n\nPGS® Irán 1-0 Nueva Zelanda. Guarda este Reel y compara al FT.",
+            "alt_text": "Storyboard de Reel para Irán vs Nueva Zelanda: hook, PGS® y pick final.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Iran",
+              "#NuevaZelanda",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "reel_7_30s",
+                "caption": "Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\n\nNuestro pick final: Irán gana.\n\nPGS® Irán 1-0 Nueva Zelanda. Guarda este Reel y compara al FT.",
+                "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"Irán vs Nueva Zelanda: nuestro pick final\".\n3-8s: Mostrar slide PGS® 1-0.\n9-16s: Decir la razón corta: \"Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"Irán gana. ¿Lo bancas o ves sorpresa?\"",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Iran",
+                  "#NuevaZelanda",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Storyboard de Reel para Irán vs Nueva Zelanda: hook, PGS® y pick final.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "thread",
+                "text": "Hilo express a 1h de Irán vs Nueva Zelanda 🧵\n\n1/ Pick final: Irán gana\n2/ PGS®: 1-0\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con Irán gana para Irán vs Nueva Zelanda. PGS® 1-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 677,
+        "card_id": "c_68f8",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Irán vs Nueva Zelanda: T-60 predicción final\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":8,\"expires_at\":\"2026-06-16T00:45:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T18:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-16T00:45:00.000Z\",\"target_match\":{\"home\":\"Irán\",\"away\":\"Nueva Zelanda\",\"kickoff_iso\":\"2026-06-15T19:00:00-06:00\",\"venue\":\"Inglewood, EE.UU.\"},\"homeTeam\":\"Irán\",\"awayTeam\":\"Nueva Zelanda\",\"flagCodeHome\":\"ir\",\"flagCodeAway\":\"nz\",\"slideTitle\":\"Irán vs Nueva Zelanda\",\"kickoff\":\"2026-06-15T19:00:00-06:00\",\"venue\":\"Inglewood, EE.UU.\",\"pgsHome\":\"1\",\"pgsAway\":\"0\",\"pickShort\":\"Irán gana\",\"hook\":\"Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\\n\\nNuestro pick final: Irán gana.\\n\\nPGS® Irán 1-0 Nueva Zelanda. Guarda este Reel y compara al FT.\",\"alt_text\":\"Storyboard de Reel para Irán vs Nueva Zelanda: hook, PGS® y pick final.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Iran\",\"#NuevaZelanda\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"reel_7_30s\",\"caption\":\"Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\\n\\nNuestro pick final: Irán gana.\\n\\nPGS® Irán 1-0 Nueva Zelanda. Guarda este Reel y compara al FT.\",\"script\":\"Reel 7-30s:\\n0-2s: Hook en pantalla: \\\"Irán vs Nueva Zelanda: nuestro pick final\\\".\\n3-8s: Mostrar slide PGS® 1-0.\\n9-16s: Decir la razón corta: \\\"Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\\".\\n17-24s: Cierre: \\\"Irán gana. ¿Lo bancas o ves sorpresa?\\\"\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Iran\",\"#NuevaZelanda\",\"#PronosticoDelDia\"],\"alt_text\":\"Storyboard de Reel para Irán vs Nueva Zelanda: hook, PGS® y pick final.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"thread\",\"text\":\"Hilo express a 1h de Irán vs Nueva Zelanda 🧵\\n\\n1/ Pick final: Irán gana\\n2/ PGS®: 1-0\\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Respuesta lista para usar en threads de cuentas grandes del partido:\\n\\nPredictaGol llega con Irán gana para Irán vs Nueva Zelanda. PGS® 1-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_68f8\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_68f8\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_68f8\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:03:35",
+        "meta": {
+          "title": "Irán vs Nueva Zelanda: T-60 predicción final",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 8,
+          "expires_at": "2026-06-16T00:45:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T18:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-16T00:45:00.000Z",
+            "target_match": {
+              "home": "Irán",
+              "away": "Nueva Zelanda",
+              "kickoff_iso": "2026-06-15T19:00:00-06:00",
+              "venue": "Inglewood, EE.UU."
+            },
+            "homeTeam": "Irán",
+            "awayTeam": "Nueva Zelanda",
+            "flagCodeHome": "ir",
+            "flagCodeAway": "nz",
+            "slideTitle": "Irán vs Nueva Zelanda",
+            "kickoff": "2026-06-15T19:00:00-06:00",
+            "venue": "Inglewood, EE.UU.",
+            "pgsHome": "1",
+            "pgsAway": "0",
+            "pickShort": "Irán gana",
+            "hook": "Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\n\nNuestro pick final: Irán gana.\n\nPGS® Irán 1-0 Nueva Zelanda. Guarda este Reel y compara al FT.",
+            "alt_text": "Storyboard de Reel para Irán vs Nueva Zelanda: hook, PGS® y pick final.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Iran",
+              "#NuevaZelanda",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "reel_7_30s",
+                "caption": "Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\n\nNuestro pick final: Irán gana.\n\nPGS® Irán 1-0 Nueva Zelanda. Guarda este Reel y compara al FT.",
+                "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"Irán vs Nueva Zelanda: nuestro pick final\".\n3-8s: Mostrar slide PGS® 1-0.\n9-16s: Decir la razón corta: \"Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"Irán gana. ¿Lo bancas o ves sorpresa?\"",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Iran",
+                  "#NuevaZelanda",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Storyboard de Reel para Irán vs Nueva Zelanda: hook, PGS® y pick final.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "thread",
+                "text": "Hilo express a 1h de Irán vs Nueva Zelanda 🧵\n\n1/ Pick final: Irán gana\n2/ PGS®: 1-0\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con Irán gana para Irán vs Nueva Zelanda. PGS® 1-0; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 569,
+        "card_id": "c_68f8",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T18:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-16T00:45:00.000Z\",\"target_match\":{\"home\":\"Irán\",\"away\":\"Nueva Zelanda\",\"kickoff_iso\":\"2026-06-15T19:00:00-06:00\",\"venue\":\"Inglewood, EE.UU.\"},\"homeTeam\":\"Irán\",\"awayTeam\":\"Nueva Zelanda\",\"flagCodeHome\":\"ir\",\"flagCodeAway\":\"nz\",\"slideTitle\":\"Irán vs Nueva Zelanda\",\"kickoff\":\"2026-06-15T19:00:00-06:00\",\"venue\":\"Inglewood, EE.UU.\",\"pgsHome\":\"1\",\"pgsAway\":\"0\",\"pickShort\":\"Irán gana\",\"hook\":\"Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\\n\\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Irán 1-0 Nueva Zelanda · 🎯 Pick inicial: Irán gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Irán vs Nueva Zelanda: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Iran\",\"#NuevaZelanda\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel\",\"caption\":\"Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\\n\\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Irán 1-0 Nueva Zelanda · 🎯 Pick inicial: Irán gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Iran\",\"#NuevaZelanda\",\"#PronosticoDelDia\"],\"alt_text\":\"Carrusel de 3 slides para Irán vs Nueva Zelanda: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"single_post\",\"text\":\"Falta 1 hora para Irán vs Nueva Zelanda.\\n\\n📊 PGS® Irán 1-0 Nueva Zelanda\\n🎯 Pick inicial: Irán gana\\n\\n¿Cuál es tu marcador?\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Irán vs Nueva Zelanda: nuestro pick está listo.\\n\\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\nPGS® 1-0. ¿Lo ves igual o hay sorpresa?\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_68f8\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_68f8\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_68f8\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 14:48:38",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T18:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-16T00:45:00.000Z",
+            "target_match": {
+              "home": "Irán",
+              "away": "Nueva Zelanda",
+              "kickoff_iso": "2026-06-15T19:00:00-06:00",
+              "venue": "Inglewood, EE.UU."
+            },
+            "homeTeam": "Irán",
+            "awayTeam": "Nueva Zelanda",
+            "flagCodeHome": "ir",
+            "flagCodeAway": "nz",
+            "slideTitle": "Irán vs Nueva Zelanda",
+            "kickoff": "2026-06-15T19:00:00-06:00",
+            "venue": "Inglewood, EE.UU.",
+            "pgsHome": "1",
+            "pgsAway": "0",
+            "pickShort": "Irán gana",
+            "hook": "Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\n\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Irán 1-0 Nueva Zelanda · 🎯 Pick inicial: Irán gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Irán vs Nueva Zelanda: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Iran",
+              "#NuevaZelanda",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel",
+                "caption": "Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\n\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Irán 1-0 Nueva Zelanda · 🎯 Pick inicial: Irán gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Iran",
+                  "#NuevaZelanda",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Carrusel de 3 slides para Irán vs Nueva Zelanda: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "single_post",
+                "text": "Falta 1 hora para Irán vs Nueva Zelanda.\n\n📊 PGS® Irán 1-0 Nueva Zelanda\n🎯 Pick inicial: Irán gana\n\n¿Cuál es tu marcador?",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Irán vs Nueva Zelanda: nuestro pick está listo.\n\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nPGS® 1-0. ¿Lo ves igual o hay sorpresa?",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 568,
+        "card_id": "c_68f8",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Irán vs Nueva Zelanda: T-60 predicción final\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":8,\"expires_at\":\"2026-06-16T00:45:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T18:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-16T00:45:00.000Z\",\"target_match\":{\"home\":\"Irán\",\"away\":\"Nueva Zelanda\",\"kickoff_iso\":\"2026-06-15T19:00:00-06:00\",\"venue\":\"Inglewood, EE.UU.\"},\"homeTeam\":\"Irán\",\"awayTeam\":\"Nueva Zelanda\",\"flagCodeHome\":\"ir\",\"flagCodeAway\":\"nz\",\"slideTitle\":\"Irán vs Nueva Zelanda\",\"kickoff\":\"2026-06-15T19:00:00-06:00\",\"venue\":\"Inglewood, EE.UU.\",\"pgsHome\":\"1\",\"pgsAway\":\"0\",\"pickShort\":\"Irán gana\",\"hook\":\"Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\\n\\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Irán 1-0 Nueva Zelanda · 🎯 Pick inicial: Irán gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Irán vs Nueva Zelanda: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Iran\",\"#NuevaZelanda\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel\",\"caption\":\"Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\\n\\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Irán 1-0 Nueva Zelanda · 🎯 Pick inicial: Irán gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Iran\",\"#NuevaZelanda\",\"#PronosticoDelDia\"],\"alt_text\":\"Carrusel de 3 slides para Irán vs Nueva Zelanda: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"single_post\",\"text\":\"Falta 1 hora para Irán vs Nueva Zelanda.\\n\\n📊 PGS® Irán 1-0 Nueva Zelanda\\n🎯 Pick inicial: Irán gana\\n\\n¿Cuál es tu marcador?\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Irán vs Nueva Zelanda: nuestro pick está listo.\\n\\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\nPGS® 1-0. ¿Lo ves igual o hay sorpresa?\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_68f8\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_68f8\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_68f8\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 14:48:37",
+        "meta": {
+          "title": "Irán vs Nueva Zelanda: T-60 predicción final",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 8,
+          "expires_at": "2026-06-16T00:45:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T18:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-16T00:45:00.000Z",
+            "target_match": {
+              "home": "Irán",
+              "away": "Nueva Zelanda",
+              "kickoff_iso": "2026-06-15T19:00:00-06:00",
+              "venue": "Inglewood, EE.UU."
+            },
+            "homeTeam": "Irán",
+            "awayTeam": "Nueva Zelanda",
+            "flagCodeHome": "ir",
+            "flagCodeAway": "nz",
+            "slideTitle": "Irán vs Nueva Zelanda",
+            "kickoff": "2026-06-15T19:00:00-06:00",
+            "venue": "Inglewood, EE.UU.",
+            "pgsHome": "1",
+            "pgsAway": "0",
+            "pickShort": "Irán gana",
+            "hook": "Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\n\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Irán 1-0 Nueva Zelanda · 🎯 Pick inicial: Irán gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Irán vs Nueva Zelanda: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Iran",
+              "#NuevaZelanda",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel",
+                "caption": "Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\n\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Irán 1-0 Nueva Zelanda · 🎯 Pick inicial: Irán gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Iran",
+                  "#NuevaZelanda",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Carrusel de 3 slides para Irán vs Nueva Zelanda: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "single_post",
+                "text": "Falta 1 hora para Irán vs Nueva Zelanda.\n\n📊 PGS® Irán 1-0 Nueva Zelanda\n🎯 Pick inicial: Irán gana\n\n¿Cuál es tu marcador?",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Irán vs Nueva Zelanda: nuestro pick está listo.\n\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nPGS® 1-0. ¿Lo ves igual o hay sorpresa?",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 498,
+        "card_id": "c_68f8",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T18:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-16T00:45:00.000Z\",\"target_match\":{\"home\":\"Irán\",\"away\":\"Nueva Zelanda\",\"kickoff_iso\":\"2026-06-15T19:00:00-06:00\",\"venue\":\"Inglewood, EE.UU.\"},\"homeTeam\":\"Irán\",\"awayTeam\":\"Nueva Zelanda\",\"flagCodeHome\":\"ir\",\"flagCodeAway\":\"nz\",\"slideTitle\":\"Irán vs Nueva Zelanda\",\"kickoff\":\"2026-06-15T19:00:00-06:00\",\"venue\":\"Inglewood, EE.UU.\",\"pgsHome\":\"1\",\"pgsAway\":\"0\",\"pickShort\":\"Irán gana\",\"hook\":\"Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\\n\\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Irán 1-0 Nueva Zelanda · 🎯 Pick inicial: Irán gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Irán vs Nueva Zelanda: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Iran\",\"#NuevaZelanda\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel\",\"caption\":\"Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\\n\\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Irán 1-0 Nueva Zelanda · 🎯 Pick inicial: Irán gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Iran\",\"#NuevaZelanda\",\"#PronosticoDelDia\"],\"alt_text\":\"Carrusel de 3 slides para Irán vs Nueva Zelanda: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"single_post\",\"text\":\"Falta 1 hora para Irán vs Nueva Zelanda.\\n\\n📊 PGS® Irán 1-0 Nueva Zelanda\\n🎯 Pick inicial: Irán gana\\n\\n¿Cuál es tu marcador?\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Irán vs Nueva Zelanda: nuestro pick está listo.\\n\\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\\n\\nPGS® 1-0. ¿Lo ves igual o hay sorpresa?\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_68f8\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_68f8\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_68f8\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 03:22:04",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T18:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-16T00:45:00.000Z",
+            "target_match": {
+              "home": "Irán",
+              "away": "Nueva Zelanda",
+              "kickoff_iso": "2026-06-15T19:00:00-06:00",
+              "venue": "Inglewood, EE.UU."
+            },
+            "homeTeam": "Irán",
+            "awayTeam": "Nueva Zelanda",
+            "flagCodeHome": "ir",
+            "flagCodeAway": "nz",
+            "slideTitle": "Irán vs Nueva Zelanda",
+            "kickoff": "2026-06-15T19:00:00-06:00",
+            "venue": "Inglewood, EE.UU.",
+            "pgsHome": "1",
+            "pgsAway": "0",
+            "pickShort": "Irán gana",
+            "hook": "Irán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\n\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Irán 1-0 Nueva Zelanda · 🎯 Pick inicial: Irán gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Irán vs Nueva Zelanda: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Iran",
+              "#NuevaZelanda",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel",
+                "caption": "Irán vs Nueva Zelanda hoy lunes, 15 de junio, 07:00 p.m.\n\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Irán 1-0 Nueva Zelanda · 🎯 Pick inicial: Irán gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#Iran",
+                  "#NuevaZelanda",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Carrusel de 3 slides para Irán vs Nueva Zelanda: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "single_post",
+                "text": "Falta 1 hora para Irán vs Nueva Zelanda.\n\n📊 PGS® Irán 1-0 Nueva Zelanda\n🎯 Pick inicial: Irán gana\n\n¿Cuál es tu marcador?",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Irán vs Nueva Zelanda: nuestro pick está listo.\n\nIrán vs Nueva Zelanda: el algoritmo PGS® tiene su veredicto.\n\nPGS® 1-0. ¿Lo ves igual o hay sorpresa?",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_68f8\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 497,
+        "card_id": "c_68f8",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"expires_at\":\"2026-06-16T00:45:00.000Z\"}",
+        "created_at": "2026-06-15 03:22:02",
+        "meta": {
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "expires_at": "2026-06-16T00:45:00.000Z"
+        }
+      }
+    ]
+  }
+}

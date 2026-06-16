@@ -1,0 +1,481 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-14T00:39:33.926Z",
+  "event": {
+    "type": "manual_post_confirmed",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "posted",
+    "note": "Manual instagram post confirmed",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_e231",
+    "title": "Australia vs Turquía: pronóstico del día",
+    "stage": "posted",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram"
+    ],
+    "payload": {
+      "template": "pronostico-carousel-3up",
+      "format_variant": "carousel_3up",
+      "scheduled_for": "2026-06-13T22:00:00-06:00",
+      "target_match": {
+        "home": "Australia",
+        "away": "Turquía",
+        "kickoff_iso": "2026-06-13T22:00:00-06:00",
+        "venue": "Vancouver, Canadá"
+      },
+      "homeTeam": "Australia",
+      "awayTeam": "Turquía",
+      "flagCodeHome": "au",
+      "flagCodeAway": "tr",
+      "kickoff": "2026-06-13T22:00:00-06:00",
+      "venue": "Vancouver, Canadá",
+      "pgsHome": "1",
+      "pgsAway": "2",
+      "pickShort": "Turquía gana",
+      "hook": "Turquía llega con vértigo; Australia confía en su intensidad clásica.",
+      "cta": "Tu pick en predictagol.com",
+      "caption": "Australia vs Turquía hoy sábado, 13 de junio, 10:00 p.m.\n\nTurquía llega con vértigo; Australia confía en su intensidad clásica.\n\n📊 PGS® Australia 1-2 Turquía · 🎯 Pick inicial: Turquía gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+      "alt_text": "Carrusel de 3 slides para Australia vs Turquía: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Australia",
+        "#Turquía",
+        "#PronosticoDelDia"
+      ],
+      "assets": {
+        "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_1.png",
+        "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_2.png",
+        "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_3.png"
+      },
+      "slideTitle": "Australia vs Turquía"
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": null,
+    "created_at": "2026-06-13 14:19:16",
+    "updated_at": "2026-06-14 00:39:33",
+    "posts": [
+      {
+        "id": 22,
+        "card_id": "c_e231",
+        "platform": "instagram",
+        "status": "posted_manual",
+        "permalink": "https://www.instagram.com/p/DZi-aUKGm81/?img_index=1",
+        "error": null,
+        "posted_at": "2026-06-14T00:39:33.911Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-14 00:39:33",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      }
+    ],
+    "events": [
+      {
+        "id": 282,
+        "card_id": "c_e231",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "posted",
+        "note": "Manual instagram post confirmed",
+        "meta_json": "{}",
+        "created_at": "2026-06-14 00:39:33",
+        "meta": {}
+      },
+      {
+        "id": 281,
+        "card_id": "c_e231",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual instagram post confirmed",
+        "meta_json": "{\"platform\":\"instagram\",\"permalink\":\"https://www.instagram.com/p/DZi-aUKGm81/?img_index=1\"}",
+        "created_at": "2026-06-14 00:39:33",
+        "meta": {
+          "platform": "instagram",
+          "permalink": "https://www.instagram.com/p/DZi-aUKGm81/?img_index=1"
+        }
+      },
+      {
+        "id": 266,
+        "card_id": "c_e231",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T22:00:00-06:00\",\"target_match\":{\"home\":\"Australia\",\"away\":\"Turquía\",\"kickoff_iso\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\"},\"homeTeam\":\"Australia\",\"awayTeam\":\"Turquía\",\"flagCodeHome\":\"au\",\"flagCodeAway\":\"tr\",\"kickoff\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\",\"pgsHome\":\"1\",\"pgsAway\":\"2\",\"pickShort\":\"Turquía gana\",\"hook\":\"Turquía llega con vértigo; Australia confía en su intensidad clásica.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Australia vs Turquía hoy sábado, 13 de junio, 10:00 p.m.\\n\\nTurquía llega con vértigo; Australia confía en su intensidad clásica.\\n\\n📊 PGS® Australia 1-2 Turquía · 🎯 Pick inicial: Turquía gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Australia vs Turquía: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Australia\",\"#Turquía\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_3.png\"},\"slideTitle\":\"Australia vs Turquía\"}}",
+        "created_at": "2026-06-13 14:24:40",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T22:00:00-06:00",
+            "target_match": {
+              "home": "Australia",
+              "away": "Turquía",
+              "kickoff_iso": "2026-06-13T22:00:00-06:00",
+              "venue": "Vancouver, Canadá"
+            },
+            "homeTeam": "Australia",
+            "awayTeam": "Turquía",
+            "flagCodeHome": "au",
+            "flagCodeAway": "tr",
+            "kickoff": "2026-06-13T22:00:00-06:00",
+            "venue": "Vancouver, Canadá",
+            "pgsHome": "1",
+            "pgsAway": "2",
+            "pickShort": "Turquía gana",
+            "hook": "Turquía llega con vértigo; Australia confía en su intensidad clásica.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Australia vs Turquía hoy sábado, 13 de junio, 10:00 p.m.\n\nTurquía llega con vértigo; Australia confía en su intensidad clásica.\n\n📊 PGS® Australia 1-2 Turquía · 🎯 Pick inicial: Turquía gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Australia vs Turquía: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Australia",
+              "#Turquía",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_3.png"
+            },
+            "slideTitle": "Australia vs Turquía"
+          }
+        }
+      },
+      {
+        "id": 265,
+        "card_id": "c_e231",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Australia vs Turquía: pronóstico del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T22:00:00-06:00\",\"target_match\":{\"home\":\"Australia\",\"away\":\"Turquía\",\"kickoff_iso\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\"},\"homeTeam\":\"Australia\",\"awayTeam\":\"Turquía\",\"flagCodeHome\":\"au\",\"flagCodeAway\":\"tr\",\"kickoff\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\",\"pgsHome\":\"1\",\"pgsAway\":\"2\",\"pickShort\":\"Turquía gana\",\"hook\":\"Turquía llega con vértigo; Australia confía en su intensidad clásica.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Australia vs Turquía hoy sábado, 13 de junio, 10:00 p.m.\\n\\nTurquía llega con vértigo; Australia confía en su intensidad clásica.\\n\\n📊 PGS® Australia 1-2 Turquía · 🎯 Pick inicial: Turquía gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Australia vs Turquía: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Australia\",\"#Turquía\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_3.png\"},\"slideTitle\":\"Australia vs Turquía\"}}",
+        "created_at": "2026-06-13 14:24:39",
+        "meta": {
+          "title": "Australia vs Turquía: pronóstico del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T22:00:00-06:00",
+            "target_match": {
+              "home": "Australia",
+              "away": "Turquía",
+              "kickoff_iso": "2026-06-13T22:00:00-06:00",
+              "venue": "Vancouver, Canadá"
+            },
+            "homeTeam": "Australia",
+            "awayTeam": "Turquía",
+            "flagCodeHome": "au",
+            "flagCodeAway": "tr",
+            "kickoff": "2026-06-13T22:00:00-06:00",
+            "venue": "Vancouver, Canadá",
+            "pgsHome": "1",
+            "pgsAway": "2",
+            "pickShort": "Turquía gana",
+            "hook": "Turquía llega con vértigo; Australia confía en su intensidad clásica.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Australia vs Turquía hoy sábado, 13 de junio, 10:00 p.m.\n\nTurquía llega con vértigo; Australia confía en su intensidad clásica.\n\n📊 PGS® Australia 1-2 Turquía · 🎯 Pick inicial: Turquía gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Australia vs Turquía: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Australia",
+              "#Turquía",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_3.png"
+            },
+            "slideTitle": "Australia vs Turquía"
+          }
+        }
+      },
+      {
+        "id": 254,
+        "card_id": "c_e231",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T22:00:00-06:00\",\"target_match\":{\"home\":\"Australia\",\"away\":\"Turquía\",\"kickoff_iso\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\"},\"homeTeam\":\"Australia\",\"awayTeam\":\"Turquía\",\"flagCodeHome\":\"au\",\"flagCodeAway\":\"tr\",\"kickoff\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\",\"pgsHome\":\"1\",\"pgsAway\":\"2\",\"pickShort\":\"Turquía gana\",\"hook\":\"Turquía llega con vértigo; Australia confía en su intensidad clásica.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Australia vs Turquía hoy sábado, 13 de junio, 10:00 p.m.\\n\\nTurquía llega con vértigo; Australia confía en su intensidad clásica.\\n\\n📊 PGS® Australia 1-2 Turquía · 🎯 Pick inicial: Turquía gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Australia vs Turquía: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Australia\",\"#Turquía\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_3.png\"},\"slideTitle\":\"Australia vs Turquía\"}}",
+        "created_at": "2026-06-13 14:23:43",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T22:00:00-06:00",
+            "target_match": {
+              "home": "Australia",
+              "away": "Turquía",
+              "kickoff_iso": "2026-06-13T22:00:00-06:00",
+              "venue": "Vancouver, Canadá"
+            },
+            "homeTeam": "Australia",
+            "awayTeam": "Turquía",
+            "flagCodeHome": "au",
+            "flagCodeAway": "tr",
+            "kickoff": "2026-06-13T22:00:00-06:00",
+            "venue": "Vancouver, Canadá",
+            "pgsHome": "1",
+            "pgsAway": "2",
+            "pickShort": "Turquía gana",
+            "hook": "Turquía llega con vértigo; Australia confía en su intensidad clásica.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Australia vs Turquía hoy sábado, 13 de junio, 10:00 p.m.\n\nTurquía llega con vértigo; Australia confía en su intensidad clásica.\n\n📊 PGS® Australia 1-2 Turquía · 🎯 Pick inicial: Turquía gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Australia vs Turquía: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Australia",
+              "#Turquía",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_3.png"
+            },
+            "slideTitle": "Australia vs Turquía"
+          }
+        }
+      },
+      {
+        "id": 253,
+        "card_id": "c_e231",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Australia vs Turquía: pronóstico del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T22:00:00-06:00\",\"target_match\":{\"home\":\"Australia\",\"away\":\"Turquía\",\"kickoff_iso\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\"},\"homeTeam\":\"Australia\",\"awayTeam\":\"Turquía\",\"flagCodeHome\":\"au\",\"flagCodeAway\":\"tr\",\"kickoff\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\",\"pgsHome\":\"1\",\"pgsAway\":\"2\",\"pickShort\":\"Turquía gana\",\"hook\":\"Turquía llega con vértigo; Australia confía en su intensidad clásica.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Australia vs Turquía hoy sábado, 13 de junio, 10:00 p.m.\\n\\nTurquía llega con vértigo; Australia confía en su intensidad clásica.\\n\\n📊 PGS® Australia 1-2 Turquía · 🎯 Pick inicial: Turquía gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Australia vs Turquía: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Australia\",\"#Turquía\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_3.png\"},\"slideTitle\":\"Australia vs Turquía\"}}",
+        "created_at": "2026-06-13 14:23:42",
+        "meta": {
+          "title": "Australia vs Turquía: pronóstico del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T22:00:00-06:00",
+            "target_match": {
+              "home": "Australia",
+              "away": "Turquía",
+              "kickoff_iso": "2026-06-13T22:00:00-06:00",
+              "venue": "Vancouver, Canadá"
+            },
+            "homeTeam": "Australia",
+            "awayTeam": "Turquía",
+            "flagCodeHome": "au",
+            "flagCodeAway": "tr",
+            "kickoff": "2026-06-13T22:00:00-06:00",
+            "venue": "Vancouver, Canadá",
+            "pgsHome": "1",
+            "pgsAway": "2",
+            "pickShort": "Turquía gana",
+            "hook": "Turquía llega con vértigo; Australia confía en su intensidad clásica.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Australia vs Turquía hoy sábado, 13 de junio, 10:00 p.m.\n\nTurquía llega con vértigo; Australia confía en su intensidad clásica.\n\n📊 PGS® Australia 1-2 Turquía · 🎯 Pick inicial: Turquía gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Australia vs Turquía: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Australia",
+              "#Turquía",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_3.png"
+            },
+            "slideTitle": "Australia vs Turquía"
+          }
+        }
+      },
+      {
+        "id": 242,
+        "card_id": "c_e231",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T22:00:00-06:00\",\"target_match\":{\"home\":\"Australia\",\"away\":\"Turquía\",\"kickoff_iso\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\"},\"homeTeam\":\"Australia\",\"awayTeam\":\"Turquía\",\"flagCodeHome\":\"au\",\"flagCodeAway\":\"tr\",\"kickoff\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\",\"pgsHome\":\"1\",\"pgsAway\":\"2\",\"pickShort\":\"Turquía gana\",\"hook\":\"Turquía llega con vértigo; Australia confía en su intensidad clásica.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Australia vs Turquía hoy sábado, 13 de junio, 10:00 p.m.\\n\\nTurquía llega con vértigo; Australia confía en su intensidad clásica.\\n\\n📊 PGS® Australia 1-2 Turquía · 🎯 Pick inicial: Turquía gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Australia vs Turquía: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Australia\",\"#Turquía\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_3.png\"},\"slideTitle\":\"Australia vs Turquía\"}}",
+        "created_at": "2026-06-13 14:22:28",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T22:00:00-06:00",
+            "target_match": {
+              "home": "Australia",
+              "away": "Turquía",
+              "kickoff_iso": "2026-06-13T22:00:00-06:00",
+              "venue": "Vancouver, Canadá"
+            },
+            "homeTeam": "Australia",
+            "awayTeam": "Turquía",
+            "flagCodeHome": "au",
+            "flagCodeAway": "tr",
+            "kickoff": "2026-06-13T22:00:00-06:00",
+            "venue": "Vancouver, Canadá",
+            "pgsHome": "1",
+            "pgsAway": "2",
+            "pickShort": "Turquía gana",
+            "hook": "Turquía llega con vértigo; Australia confía en su intensidad clásica.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Australia vs Turquía hoy sábado, 13 de junio, 10:00 p.m.\n\nTurquía llega con vértigo; Australia confía en su intensidad clásica.\n\n📊 PGS® Australia 1-2 Turquía · 🎯 Pick inicial: Turquía gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Australia vs Turquía: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Australia",
+              "#Turquía",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_3.png"
+            },
+            "slideTitle": "Australia vs Turquía"
+          }
+        }
+      },
+      {
+        "id": 241,
+        "card_id": "c_e231",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Australia vs Turquía: pronóstico del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T22:00:00-06:00\",\"target_match\":{\"home\":\"Australia\",\"away\":\"Turquía\",\"kickoff_iso\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\"},\"homeTeam\":\"Australia\",\"awayTeam\":\"Turquía\",\"flagCodeHome\":\"au\",\"flagCodeAway\":\"tr\",\"kickoff\":\"2026-06-13T22:00:00-06:00\",\"venue\":\"Vancouver, Canadá\",\"pgsHome\":\"1\",\"pgsAway\":\"2\",\"pickShort\":\"Turquía gana\",\"hook\":\"Turquía llega con vértigo; Australia confía en su intensidad clásica.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Australia vs Turquía hoy sábado, 13 de junio, 10:00 p.m.\\n\\nTurquía llega con vértigo; Australia confía en su intensidad clásica.\\n\\n📊 PGS® Australia 1-2 Turquía · 🎯 Pick inicial: Turquía gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Australia vs Turquía: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Australia\",\"#Turquía\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_3.png\"},\"slideTitle\":\"Australia vs Turquía\"}}",
+        "created_at": "2026-06-13 14:22:27",
+        "meta": {
+          "title": "Australia vs Turquía: pronóstico del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T22:00:00-06:00",
+            "target_match": {
+              "home": "Australia",
+              "away": "Turquía",
+              "kickoff_iso": "2026-06-13T22:00:00-06:00",
+              "venue": "Vancouver, Canadá"
+            },
+            "homeTeam": "Australia",
+            "awayTeam": "Turquía",
+            "flagCodeHome": "au",
+            "flagCodeAway": "tr",
+            "kickoff": "2026-06-13T22:00:00-06:00",
+            "venue": "Vancouver, Canadá",
+            "pgsHome": "1",
+            "pgsAway": "2",
+            "pickShort": "Turquía gana",
+            "hook": "Turquía llega con vértigo; Australia confía en su intensidad clásica.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Australia vs Turquía hoy sábado, 13 de junio, 10:00 p.m.\n\nTurquía llega con vértigo; Australia confía en su intensidad clásica.\n\n📊 PGS® Australia 1-2 Turquía · 🎯 Pick inicial: Turquía gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Australia vs Turquía: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Australia",
+              "#Turquía",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_3.png"
+            },
+            "slideTitle": "Australia vs Turquía"
+          }
+        }
+      },
+      {
+        "id": 230,
+        "card_id": "c_e231",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T18:00:00-06:00\",\"target_match\":{\"home\":\"Australia\",\"away\":\"Turquía\",\"kickoff_iso\":\"2026-06-13T18:00:00-06:00\",\"venue\":\"Vancouver\"},\"homeTeam\":\"Australia\",\"awayTeam\":\"Turquía\",\"flagCodeHome\":\"au\",\"flagCodeAway\":\"tr\",\"kickoff\":\"2026-06-13T18:00:00-06:00\",\"venue\":\"Vancouver\",\"pgsHome\":\"1\",\"pgsAway\":\"2\",\"pickShort\":\"Turquía gana\",\"hook\":\"Turquía llega con vértigo; Australia confía en su intensidad clásica.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Australia vs Turquía hoy sábado, 13 de junio, 06:00 p.m.\\n\\nTurquía llega con vértigo; Australia confía en su intensidad clásica.\\n\\n📊 PGS® Australia 1-2 Turquía · 🎯 Pick inicial: Turquía gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Australia vs Turquía: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Australia\",\"#Turquía\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e231\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-13 14:19:18",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T18:00:00-06:00",
+            "target_match": {
+              "home": "Australia",
+              "away": "Turquía",
+              "kickoff_iso": "2026-06-13T18:00:00-06:00",
+              "venue": "Vancouver"
+            },
+            "homeTeam": "Australia",
+            "awayTeam": "Turquía",
+            "flagCodeHome": "au",
+            "flagCodeAway": "tr",
+            "kickoff": "2026-06-13T18:00:00-06:00",
+            "venue": "Vancouver",
+            "pgsHome": "1",
+            "pgsAway": "2",
+            "pickShort": "Turquía gana",
+            "hook": "Turquía llega con vértigo; Australia confía en su intensidad clásica.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Australia vs Turquía hoy sábado, 13 de junio, 06:00 p.m.\n\nTurquía llega con vértigo; Australia confía en su intensidad clásica.\n\n📊 PGS® Australia 1-2 Turquía · 🎯 Pick inicial: Turquía gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Australia vs Turquía: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Australia",
+              "#Turquía",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e231\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 229,
+        "card_id": "c_e231",
+        "actor": "demo",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"expires_at\":null}",
+        "created_at": "2026-06-13 14:19:16",
+        "meta": {
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "expires_at": null
+        }
+      }
+    ]
+  }
+}

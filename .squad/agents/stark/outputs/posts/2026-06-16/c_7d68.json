@@ -1,0 +1,560 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-16T01:40:59.992Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "template": "poll-question-video",
+        "format_variant": "poll_question_mp4",
+        "scheduled_for": "2026-06-16T18:00:00-06:00",
+        "window_key": "t_minus_4h",
+        "window_label": "T-4h · poll comunidad",
+        "expires_at": "2026-06-17T02:30:00.000Z",
+        "target_match": {
+          "home": "Austria",
+          "away": "Jordania",
+          "kickoff_iso": "2026-06-16T22:00:00-06:00"
+        },
+        "homeTeam": "Austria",
+        "awayTeam": "Jordania",
+        "flagCodeHome": "at",
+        "flagCodeAway": "jo",
+        "question": "¿Quién gana?",
+        "challengeQuestion": "¿Quién gana?",
+        "caption": "Poll de comunidad: Austria vs Jordania\n\nSticker sugerido: ¿Quién gana?\nOpciones: Austria / Empate / Jordania\n\nNuestro pick temprano: Austria gana",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#QuinielaPredictaGol"
+        ],
+        "alt_text": "Video corto de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+        "platform_copy": {
+          "instagram": {
+            "format": "story_poll_video",
+            "caption": "Poll de comunidad: Austria vs Jordania\n\nSticker sugerido: ¿Quién gana?\nOpciones: Austria / Empate / Jordania\n\nNuestro pick temprano: Austria gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "alt_text": "Video corto de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "asset_keys": [
+              "animated_mp4",
+              "1080x1080"
+            ]
+          },
+          "x": {
+            "format": "native_poll",
+            "text": "Poll a 4h: Austria vs Jordania\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Austria / Empate / Jordania / No sé",
+            "hashtags": [
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "debate_prompt",
+            "text": "Debate a 4h: Austria vs Jordania.\n\nPredictaGol trae Austria gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+            "hashtags": [
+              "#PredictaGol"
+            ]
+          }
+        },
+        "notes": "Usa el MP4 animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+        "assets": {
+          "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_7d68\\1080x1080.png",
+          "animated_mp4": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_7d68\\animated_mp4.mp4"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_7d68",
+    "title": "Austria vs Jordania: T-4 poll comunidad",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "quiniela_challenge",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "template": "poll-question-video",
+      "format_variant": "poll_question_mp4",
+      "scheduled_for": "2026-06-16T18:00:00-06:00",
+      "window_key": "t_minus_4h",
+      "window_label": "T-4h · poll comunidad",
+      "expires_at": "2026-06-17T02:30:00.000Z",
+      "target_match": {
+        "home": "Austria",
+        "away": "Jordania",
+        "kickoff_iso": "2026-06-16T22:00:00-06:00"
+      },
+      "homeTeam": "Austria",
+      "awayTeam": "Jordania",
+      "flagCodeHome": "at",
+      "flagCodeAway": "jo",
+      "question": "¿Quién gana?",
+      "challengeQuestion": "¿Quién gana?",
+      "caption": "Poll de comunidad: Austria vs Jordania\n\nSticker sugerido: ¿Quién gana?\nOpciones: Austria / Empate / Jordania\n\nNuestro pick temprano: Austria gana",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#QuinielaPredictaGol"
+      ],
+      "alt_text": "Video corto de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+      "platform_copy": {
+        "instagram": {
+          "format": "story_poll_video",
+          "caption": "Poll de comunidad: Austria vs Jordania\n\nSticker sugerido: ¿Quién gana?\nOpciones: Austria / Empate / Jordania\n\nNuestro pick temprano: Austria gana",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#QuinielaPredictaGol"
+          ],
+          "alt_text": "Video corto de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+          "asset_keys": [
+            "animated_mp4",
+            "1080x1080"
+          ]
+        },
+        "x": {
+          "format": "native_poll",
+          "text": "Poll a 4h: Austria vs Jordania\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Austria / Empate / Jordania / No sé",
+          "hashtags": [
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "debate_prompt",
+          "text": "Debate a 4h: Austria vs Jordania.\n\nPredictaGol trae Austria gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+          "hashtags": [
+            "#PredictaGol"
+          ]
+        }
+      },
+      "notes": "Usa el MP4 animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_7d68\\1080x1080.png",
+        "animated_mp4": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_7d68\\animated_mp4.mp4"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": "2026-06-17T02:30:00.000Z",
+    "created_at": "2026-06-15 14:49:16",
+    "updated_at": "2026-06-16 01:40:59",
+    "posts": [],
+    "events": [
+      {
+        "id": 855,
+        "card_id": "c_7d68",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"poll-question-video\",\"format_variant\":\"poll_question_mp4\",\"scheduled_for\":\"2026-06-16T18:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-17T02:30:00.000Z\",\"target_match\":{\"home\":\"Austria\",\"away\":\"Jordania\",\"kickoff_iso\":\"2026-06-16T22:00:00-06:00\"},\"homeTeam\":\"Austria\",\"awayTeam\":\"Jordania\",\"flagCodeHome\":\"at\",\"flagCodeAway\":\"jo\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"caption\":\"Poll de comunidad: Austria vs Jordania\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Austria / Empate / Jordania\\n\\nNuestro pick temprano: Austria gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"Video corto de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"platform_copy\":{\"instagram\":{\"format\":\"story_poll_video\",\"caption\":\"Poll de comunidad: Austria vs Jordania\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Austria / Empate / Jordania\\n\\nNuestro pick temprano: Austria gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"Video corto de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_mp4\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Austria vs Jordania\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Austria / Empate / Jordania / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Debate a 4h: Austria vs Jordania.\\n\\nPredictaGol trae Austria gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el MP4 animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_7d68\\\\1080x1080.png\",\"animated_mp4\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_7d68\\\\animated_mp4.mp4\"}}}",
+        "created_at": "2026-06-16 01:40:59",
+        "meta": {
+          "payload": {
+            "template": "poll-question-video",
+            "format_variant": "poll_question_mp4",
+            "scheduled_for": "2026-06-16T18:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-17T02:30:00.000Z",
+            "target_match": {
+              "home": "Austria",
+              "away": "Jordania",
+              "kickoff_iso": "2026-06-16T22:00:00-06:00"
+            },
+            "homeTeam": "Austria",
+            "awayTeam": "Jordania",
+            "flagCodeHome": "at",
+            "flagCodeAway": "jo",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "caption": "Poll de comunidad: Austria vs Jordania\n\nSticker sugerido: ¿Quién gana?\nOpciones: Austria / Empate / Jordania\n\nNuestro pick temprano: Austria gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "alt_text": "Video corto de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll_video",
+                "caption": "Poll de comunidad: Austria vs Jordania\n\nSticker sugerido: ¿Quién gana?\nOpciones: Austria / Empate / Jordania\n\nNuestro pick temprano: Austria gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "Video corto de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_mp4",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Austria vs Jordania\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Austria / Empate / Jordania / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Debate a 4h: Austria vs Jordania.\n\nPredictaGol trae Austria gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el MP4 animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_7d68\\1080x1080.png",
+              "animated_mp4": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_7d68\\animated_mp4.mp4"
+            }
+          }
+        }
+      },
+      {
+        "id": 854,
+        "card_id": "c_7d68",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Austria vs Jordania: T-4 poll comunidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":8,\"expires_at\":\"2026-06-17T02:30:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"poll-question-video\",\"format_variant\":\"poll_question_mp4\",\"scheduled_for\":\"2026-06-16T18:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-17T02:30:00.000Z\",\"target_match\":{\"home\":\"Austria\",\"away\":\"Jordania\",\"kickoff_iso\":\"2026-06-16T22:00:00-06:00\"},\"homeTeam\":\"Austria\",\"awayTeam\":\"Jordania\",\"flagCodeHome\":\"at\",\"flagCodeAway\":\"jo\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"caption\":\"Poll de comunidad: Austria vs Jordania\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Austria / Empate / Jordania\\n\\nNuestro pick temprano: Austria gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"Video corto de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"platform_copy\":{\"instagram\":{\"format\":\"story_poll_video\",\"caption\":\"Poll de comunidad: Austria vs Jordania\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Austria / Empate / Jordania\\n\\nNuestro pick temprano: Austria gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"Video corto de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_mp4\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Austria vs Jordania\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Austria / Empate / Jordania / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Debate a 4h: Austria vs Jordania.\\n\\nPredictaGol trae Austria gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el MP4 animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_7d68\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_7d68\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-16 01:40:42",
+        "meta": {
+          "title": "Austria vs Jordania: T-4 poll comunidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 8,
+          "expires_at": "2026-06-17T02:30:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "poll-question-video",
+            "format_variant": "poll_question_mp4",
+            "scheduled_for": "2026-06-16T18:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-17T02:30:00.000Z",
+            "target_match": {
+              "home": "Austria",
+              "away": "Jordania",
+              "kickoff_iso": "2026-06-16T22:00:00-06:00"
+            },
+            "homeTeam": "Austria",
+            "awayTeam": "Jordania",
+            "flagCodeHome": "at",
+            "flagCodeAway": "jo",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "caption": "Poll de comunidad: Austria vs Jordania\n\nSticker sugerido: ¿Quién gana?\nOpciones: Austria / Empate / Jordania\n\nNuestro pick temprano: Austria gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "alt_text": "Video corto de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll_video",
+                "caption": "Poll de comunidad: Austria vs Jordania\n\nSticker sugerido: ¿Quién gana?\nOpciones: Austria / Empate / Jordania\n\nNuestro pick temprano: Austria gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "Video corto de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_mp4",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Austria vs Jordania\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Austria / Empate / Jordania / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Debate a 4h: Austria vs Jordania.\n\nPredictaGol trae Austria gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el MP4 animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_7d68\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_7d68\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 728,
+        "card_id": "c_7d68",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"scheduled_for\":\"2026-06-16T18:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-17T02:30:00.000Z\",\"target_match\":{\"home\":\"Austria\",\"away\":\"Jordania\",\"kickoff_iso\":\"2026-06-16T22:00:00-06:00\"},\"homeTeam\":\"Austria\",\"awayTeam\":\"Jordania\",\"flagCodeHome\":\"at\",\"flagCodeAway\":\"jo\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"caption\":\"Poll de comunidad: Austria vs Jordania\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Austria / Empate / Jordania\\n\\nNuestro pick temprano: Austria gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"platform_copy\":{\"instagram\":{\"format\":\"story_poll\",\"caption\":\"Poll de comunidad: Austria vs Jordania\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Austria / Empate / Jordania\\n\\nNuestro pick temprano: Austria gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Austria vs Jordania\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Austria / Empate / Jordania / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Debate a 4h: Austria vs Jordania.\\n\\nPredictaGol trae Austria gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_7d68\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_7d68\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 15:04:23",
+        "meta": {
+          "payload": {
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "scheduled_for": "2026-06-16T18:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-17T02:30:00.000Z",
+            "target_match": {
+              "home": "Austria",
+              "away": "Jordania",
+              "kickoff_iso": "2026-06-16T22:00:00-06:00"
+            },
+            "homeTeam": "Austria",
+            "awayTeam": "Jordania",
+            "flagCodeHome": "at",
+            "flagCodeAway": "jo",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "caption": "Poll de comunidad: Austria vs Jordania\n\nSticker sugerido: ¿Quién gana?\nOpciones: Austria / Empate / Jordania\n\nNuestro pick temprano: Austria gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "alt_text": "GIF animado de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll",
+                "caption": "Poll de comunidad: Austria vs Jordania\n\nSticker sugerido: ¿Quién gana?\nOpciones: Austria / Empate / Jordania\n\nNuestro pick temprano: Austria gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Austria vs Jordania\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Austria / Empate / Jordania / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Debate a 4h: Austria vs Jordania.\n\nPredictaGol trae Austria gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_7d68\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_7d68\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 727,
+        "card_id": "c_7d68",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Austria vs Jordania: T-4 poll comunidad\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"priority\":8,\"expires_at\":\"2026-06-17T02:30:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"scheduled_for\":\"2026-06-16T18:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-17T02:30:00.000Z\",\"target_match\":{\"home\":\"Austria\",\"away\":\"Jordania\",\"kickoff_iso\":\"2026-06-16T22:00:00-06:00\"},\"homeTeam\":\"Austria\",\"awayTeam\":\"Jordania\",\"flagCodeHome\":\"at\",\"flagCodeAway\":\"jo\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"caption\":\"Poll de comunidad: Austria vs Jordania\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Austria / Empate / Jordania\\n\\nNuestro pick temprano: Austria gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"platform_copy\":{\"instagram\":{\"format\":\"story_poll\",\"caption\":\"Poll de comunidad: Austria vs Jordania\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Austria / Empate / Jordania\\n\\nNuestro pick temprano: Austria gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Austria vs Jordania\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Austria / Empate / Jordania / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Debate a 4h: Austria vs Jordania.\\n\\nPredictaGol trae Austria gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_7d68\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_7d68\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 15:04:14",
+        "meta": {
+          "title": "Austria vs Jordania: T-4 poll comunidad",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "priority": 8,
+          "expires_at": "2026-06-17T02:30:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "scheduled_for": "2026-06-16T18:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-17T02:30:00.000Z",
+            "target_match": {
+              "home": "Austria",
+              "away": "Jordania",
+              "kickoff_iso": "2026-06-16T22:00:00-06:00"
+            },
+            "homeTeam": "Austria",
+            "awayTeam": "Jordania",
+            "flagCodeHome": "at",
+            "flagCodeAway": "jo",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "caption": "Poll de comunidad: Austria vs Jordania\n\nSticker sugerido: ¿Quién gana?\nOpciones: Austria / Empate / Jordania\n\nNuestro pick temprano: Austria gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "alt_text": "GIF animado de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "platform_copy": {
+              "instagram": {
+                "format": "story_poll",
+                "caption": "Poll de comunidad: Austria vs Jordania\n\nSticker sugerido: ¿Quién gana?\nOpciones: Austria / Empate / Jordania\n\nNuestro pick temprano: Austria gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Austria vs Jordania\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Austria / Empate / Jordania / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Debate a 4h: Austria vs Jordania.\n\nPredictaGol trae Austria gana, pero quiero leer argumentos en contra. ¿Qué dato te haría cambiar la quiniela?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_7d68\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_7d68\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 619,
+        "card_id": "c_7d68",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"poll-question-gif\",\"format_variant\":\"poll_question_gif\",\"scheduled_for\":\"2026-06-16T18:00:00-06:00\",\"window_key\":\"t_minus_4h\",\"window_label\":\"T-4h · poll comunidad\",\"expires_at\":\"2026-06-17T02:30:00.000Z\",\"target_match\":{\"home\":\"Austria\",\"away\":\"Jordania\",\"kickoff_iso\":\"2026-06-16T22:00:00-06:00\"},\"homeTeam\":\"Austria\",\"awayTeam\":\"Jordania\",\"flagCodeHome\":\"at\",\"flagCodeAway\":\"jo\",\"question\":\"¿Quién gana?\",\"challengeQuestion\":\"¿Quién gana?\",\"caption\":\"Poll de comunidad: Austria vs Jordania\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Austria / Empate / Jordania\\n\\nNuestro pick temprano: Austria gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"platform_copy\":{\"instagram\":{\"format\":\"animated_poll_gif\",\"caption\":\"Poll de comunidad: Austria vs Jordania\\n\\nSticker sugerido: ¿Quién gana?\\nOpciones: Austria / Empate / Jordania\\n\\nNuestro pick temprano: Austria gana\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#QuinielaPredictaGol\"],\"alt_text\":\"GIF animado de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.\",\"asset_keys\":[\"animated_gif\",\"1080x1080\"]},\"x\":{\"format\":\"native_poll\",\"text\":\"Poll a 4h: Austria vs Jordania\\n\\n¿Qué marcas en tu quiniela?\\n\\nOpciones sugeridas: Austria / Empate / Jordania / No sé\",\"hashtags\":[\"#WorldCup2026\"]},\"threads\":{\"format\":\"community_question\",\"text\":\"Austria vs Jordania: a 4 horas del partido, la comunidad decide.\\n\\n¿Te quedas con Austria gana o cambias por contexto/lineup?\",\"hashtags\":[\"#PredictaGol\"]}},\"notes\":\"Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.\",\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_7d68\\\\1080x1080.png\",\"animated_gif\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-16\\\\c_7d68\\\\animated_gif.gif\"}}}",
+        "created_at": "2026-06-15 14:49:24",
+        "meta": {
+          "payload": {
+            "template": "poll-question-gif",
+            "format_variant": "poll_question_gif",
+            "scheduled_for": "2026-06-16T18:00:00-06:00",
+            "window_key": "t_minus_4h",
+            "window_label": "T-4h · poll comunidad",
+            "expires_at": "2026-06-17T02:30:00.000Z",
+            "target_match": {
+              "home": "Austria",
+              "away": "Jordania",
+              "kickoff_iso": "2026-06-16T22:00:00-06:00"
+            },
+            "homeTeam": "Austria",
+            "awayTeam": "Jordania",
+            "flagCodeHome": "at",
+            "flagCodeAway": "jo",
+            "question": "¿Quién gana?",
+            "challengeQuestion": "¿Quién gana?",
+            "caption": "Poll de comunidad: Austria vs Jordania\n\nSticker sugerido: ¿Quién gana?\nOpciones: Austria / Empate / Jordania\n\nNuestro pick temprano: Austria gana",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#QuinielaPredictaGol"
+            ],
+            "alt_text": "GIF animado de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+            "platform_copy": {
+              "instagram": {
+                "format": "animated_poll_gif",
+                "caption": "Poll de comunidad: Austria vs Jordania\n\nSticker sugerido: ¿Quién gana?\nOpciones: Austria / Empate / Jordania\n\nNuestro pick temprano: Austria gana",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#QuinielaPredictaGol"
+                ],
+                "alt_text": "GIF animado de poll de comunidad para Austria vs Jordania, con logo PredictaGol, signo de pregunta y banderas de ambos equipos.",
+                "asset_keys": [
+                  "animated_gif",
+                  "1080x1080"
+                ]
+              },
+              "x": {
+                "format": "native_poll",
+                "text": "Poll a 4h: Austria vs Jordania\n\n¿Qué marcas en tu quiniela?\n\nOpciones sugeridas: Austria / Empate / Jordania / No sé",
+                "hashtags": [
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "community_question",
+                "text": "Austria vs Jordania: a 4 horas del partido, la comunidad decide.\n\n¿Te quedas con Austria gana o cambias por contexto/lineup?",
+                "hashtags": [
+                  "#PredictaGol"
+                ]
+              }
+            },
+            "notes": "Usa el GIF animado como primera opción para Instagram; si la plataforma no lo acepta, usa el PNG 1080x1080 como fallback y agrega el sticker de poll manualmente.",
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_7d68\\1080x1080.png",
+              "animated_gif": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-16\\c_7d68\\animated_gif.gif"
+            }
+          }
+        }
+      },
+      {
+        "id": 618,
+        "card_id": "c_7d68",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"quiniela_challenge\",\"expires_at\":\"2026-06-17T02:30:00.000Z\"}",
+        "created_at": "2026-06-15 14:49:16",
+        "meta": {
+          "owner": "stark",
+          "pillar": "quiniela_challenge",
+          "expires_at": "2026-06-17T02:30:00.000Z"
+        }
+      }
+    ]
+  }
+}

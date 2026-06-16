@@ -1,0 +1,481 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-13T22:31:20.610Z",
+  "event": {
+    "type": "manual_post_confirmed",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "posted",
+    "note": "Manual instagram post confirmed",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_e221",
+    "title": "Haití vs Escocia: pronóstico del día",
+    "stage": "posted",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram"
+    ],
+    "payload": {
+      "template": "pronostico-carousel-3up",
+      "format_variant": "carousel_3up",
+      "scheduled_for": "2026-06-13T19:00:00-06:00",
+      "target_match": {
+        "home": "Haití",
+        "away": "Escocia",
+        "kickoff_iso": "2026-06-13T19:00:00-06:00",
+        "venue": "Foxborough, EE.UU."
+      },
+      "homeTeam": "Haití",
+      "awayTeam": "Escocia",
+      "flagCodeHome": "ht",
+      "flagCodeAway": "gb-sct",
+      "kickoff": "2026-06-13T19:00:00-06:00",
+      "venue": "Foxborough, EE.UU.",
+      "pgsHome": "0",
+      "pgsAway": "1",
+      "pickShort": "Escocia gana",
+      "hook": "Escocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.",
+      "cta": "Tu pick en predictagol.com",
+      "caption": "Haití vs Escocia hoy sábado, 13 de junio, 07:00 p.m.\n\nEscocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\n\n📊 PGS® Haití 0-1 Escocia · 🎯 Pick inicial: Escocia gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+      "alt_text": "Carrusel de 3 slides para Haití vs Escocia: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Haití",
+        "#Escocia",
+        "#PronosticoDelDia"
+      ],
+      "assets": {
+        "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_1.png",
+        "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_2.png",
+        "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_3.png"
+      },
+      "slideTitle": "Haití vs Escocia"
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": null,
+    "created_at": "2026-06-13 14:19:14",
+    "updated_at": "2026-06-13 22:31:20",
+    "posts": [
+      {
+        "id": 19,
+        "card_id": "c_e221",
+        "platform": "instagram",
+        "status": "posted_manual",
+        "permalink": "https://www.instagram.com/p/DZivr3WEnK5/?img_index=1",
+        "error": null,
+        "posted_at": "2026-06-13T22:31:20.591Z",
+        "meta_json": "{\"actor\":\"you\",\"manual\":true}",
+        "created_at": "2026-06-13 22:31:20",
+        "meta": {
+          "actor": "you",
+          "manual": true
+        }
+      }
+    ],
+    "events": [
+      {
+        "id": 277,
+        "card_id": "c_e221",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "posted",
+        "note": "Manual instagram post confirmed",
+        "meta_json": "{}",
+        "created_at": "2026-06-13 22:31:20",
+        "meta": {}
+      },
+      {
+        "id": 276,
+        "card_id": "c_e221",
+        "actor": "you",
+        "type": "manual_post_confirmed",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": "Manual instagram post confirmed",
+        "meta_json": "{\"platform\":\"instagram\",\"permalink\":\"https://www.instagram.com/p/DZivr3WEnK5/?img_index=1\"}",
+        "created_at": "2026-06-13 22:31:20",
+        "meta": {
+          "platform": "instagram",
+          "permalink": "https://www.instagram.com/p/DZivr3WEnK5/?img_index=1"
+        }
+      },
+      {
+        "id": 262,
+        "card_id": "c_e221",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T19:00:00-06:00\",\"target_match\":{\"home\":\"Haití\",\"away\":\"Escocia\",\"kickoff_iso\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Haití\",\"awayTeam\":\"Escocia\",\"flagCodeHome\":\"ht\",\"flagCodeAway\":\"gb-sct\",\"kickoff\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"1\",\"pickShort\":\"Escocia gana\",\"hook\":\"Escocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Haití vs Escocia hoy sábado, 13 de junio, 07:00 p.m.\\n\\nEscocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\\n\\n📊 PGS® Haití 0-1 Escocia · 🎯 Pick inicial: Escocia gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Haití vs Escocia: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Haití\",\"#Escocia\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_3.png\"},\"slideTitle\":\"Haití vs Escocia\"}}",
+        "created_at": "2026-06-13 14:24:39",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T19:00:00-06:00",
+            "target_match": {
+              "home": "Haití",
+              "away": "Escocia",
+              "kickoff_iso": "2026-06-13T19:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Haití",
+            "awayTeam": "Escocia",
+            "flagCodeHome": "ht",
+            "flagCodeAway": "gb-sct",
+            "kickoff": "2026-06-13T19:00:00-06:00",
+            "venue": "Foxborough, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "1",
+            "pickShort": "Escocia gana",
+            "hook": "Escocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Haití vs Escocia hoy sábado, 13 de junio, 07:00 p.m.\n\nEscocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\n\n📊 PGS® Haití 0-1 Escocia · 🎯 Pick inicial: Escocia gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Haití vs Escocia: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Haití",
+              "#Escocia",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_3.png"
+            },
+            "slideTitle": "Haití vs Escocia"
+          }
+        }
+      },
+      {
+        "id": 261,
+        "card_id": "c_e221",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Haití vs Escocia: pronóstico del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T19:00:00-06:00\",\"target_match\":{\"home\":\"Haití\",\"away\":\"Escocia\",\"kickoff_iso\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Haití\",\"awayTeam\":\"Escocia\",\"flagCodeHome\":\"ht\",\"flagCodeAway\":\"gb-sct\",\"kickoff\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"1\",\"pickShort\":\"Escocia gana\",\"hook\":\"Escocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Haití vs Escocia hoy sábado, 13 de junio, 07:00 p.m.\\n\\nEscocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\\n\\n📊 PGS® Haití 0-1 Escocia · 🎯 Pick inicial: Escocia gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Haití vs Escocia: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Haití\",\"#Escocia\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_3.png\"},\"slideTitle\":\"Haití vs Escocia\"}}",
+        "created_at": "2026-06-13 14:24:38",
+        "meta": {
+          "title": "Haití vs Escocia: pronóstico del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T19:00:00-06:00",
+            "target_match": {
+              "home": "Haití",
+              "away": "Escocia",
+              "kickoff_iso": "2026-06-13T19:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Haití",
+            "awayTeam": "Escocia",
+            "flagCodeHome": "ht",
+            "flagCodeAway": "gb-sct",
+            "kickoff": "2026-06-13T19:00:00-06:00",
+            "venue": "Foxborough, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "1",
+            "pickShort": "Escocia gana",
+            "hook": "Escocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Haití vs Escocia hoy sábado, 13 de junio, 07:00 p.m.\n\nEscocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\n\n📊 PGS® Haití 0-1 Escocia · 🎯 Pick inicial: Escocia gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Haití vs Escocia: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Haití",
+              "#Escocia",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_3.png"
+            },
+            "slideTitle": "Haití vs Escocia"
+          }
+        }
+      },
+      {
+        "id": 250,
+        "card_id": "c_e221",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T19:00:00-06:00\",\"target_match\":{\"home\":\"Haití\",\"away\":\"Escocia\",\"kickoff_iso\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Haití\",\"awayTeam\":\"Escocia\",\"flagCodeHome\":\"ht\",\"flagCodeAway\":\"gb-sct\",\"kickoff\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"1\",\"pickShort\":\"Escocia gana\",\"hook\":\"Escocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Haití vs Escocia hoy sábado, 13 de junio, 07:00 p.m.\\n\\nEscocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\\n\\n📊 PGS® Haití 0-1 Escocia · 🎯 Pick inicial: Escocia gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Haití vs Escocia: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Haití\",\"#Escocia\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_3.png\"},\"slideTitle\":\"Haití vs Escocia\"}}",
+        "created_at": "2026-06-13 14:23:41",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T19:00:00-06:00",
+            "target_match": {
+              "home": "Haití",
+              "away": "Escocia",
+              "kickoff_iso": "2026-06-13T19:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Haití",
+            "awayTeam": "Escocia",
+            "flagCodeHome": "ht",
+            "flagCodeAway": "gb-sct",
+            "kickoff": "2026-06-13T19:00:00-06:00",
+            "venue": "Foxborough, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "1",
+            "pickShort": "Escocia gana",
+            "hook": "Escocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Haití vs Escocia hoy sábado, 13 de junio, 07:00 p.m.\n\nEscocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\n\n📊 PGS® Haití 0-1 Escocia · 🎯 Pick inicial: Escocia gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Haití vs Escocia: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Haití",
+              "#Escocia",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_3.png"
+            },
+            "slideTitle": "Haití vs Escocia"
+          }
+        }
+      },
+      {
+        "id": 249,
+        "card_id": "c_e221",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Haití vs Escocia: pronóstico del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T19:00:00-06:00\",\"target_match\":{\"home\":\"Haití\",\"away\":\"Escocia\",\"kickoff_iso\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Haití\",\"awayTeam\":\"Escocia\",\"flagCodeHome\":\"ht\",\"flagCodeAway\":\"gb-sct\",\"kickoff\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"1\",\"pickShort\":\"Escocia gana\",\"hook\":\"Escocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Haití vs Escocia hoy sábado, 13 de junio, 07:00 p.m.\\n\\nEscocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\\n\\n📊 PGS® Haití 0-1 Escocia · 🎯 Pick inicial: Escocia gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Haití vs Escocia: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Haití\",\"#Escocia\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_3.png\"},\"slideTitle\":\"Haití vs Escocia\"}}",
+        "created_at": "2026-06-13 14:23:40",
+        "meta": {
+          "title": "Haití vs Escocia: pronóstico del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T19:00:00-06:00",
+            "target_match": {
+              "home": "Haití",
+              "away": "Escocia",
+              "kickoff_iso": "2026-06-13T19:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Haití",
+            "awayTeam": "Escocia",
+            "flagCodeHome": "ht",
+            "flagCodeAway": "gb-sct",
+            "kickoff": "2026-06-13T19:00:00-06:00",
+            "venue": "Foxborough, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "1",
+            "pickShort": "Escocia gana",
+            "hook": "Escocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Haití vs Escocia hoy sábado, 13 de junio, 07:00 p.m.\n\nEscocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\n\n📊 PGS® Haití 0-1 Escocia · 🎯 Pick inicial: Escocia gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Haití vs Escocia: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Haití",
+              "#Escocia",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_3.png"
+            },
+            "slideTitle": "Haití vs Escocia"
+          }
+        }
+      },
+      {
+        "id": 238,
+        "card_id": "c_e221",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T19:00:00-06:00\",\"target_match\":{\"home\":\"Haití\",\"away\":\"Escocia\",\"kickoff_iso\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Haití\",\"awayTeam\":\"Escocia\",\"flagCodeHome\":\"ht\",\"flagCodeAway\":\"gb-sct\",\"kickoff\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"1\",\"pickShort\":\"Escocia gana\",\"hook\":\"Escocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Haití vs Escocia hoy sábado, 13 de junio, 07:00 p.m.\\n\\nEscocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\\n\\n📊 PGS® Haití 0-1 Escocia · 🎯 Pick inicial: Escocia gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Haití vs Escocia: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Haití\",\"#Escocia\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_3.png\"},\"slideTitle\":\"Haití vs Escocia\"}}",
+        "created_at": "2026-06-13 14:22:27",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T19:00:00-06:00",
+            "target_match": {
+              "home": "Haití",
+              "away": "Escocia",
+              "kickoff_iso": "2026-06-13T19:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Haití",
+            "awayTeam": "Escocia",
+            "flagCodeHome": "ht",
+            "flagCodeAway": "gb-sct",
+            "kickoff": "2026-06-13T19:00:00-06:00",
+            "venue": "Foxborough, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "1",
+            "pickShort": "Escocia gana",
+            "hook": "Escocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Haití vs Escocia hoy sábado, 13 de junio, 07:00 p.m.\n\nEscocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\n\n📊 PGS® Haití 0-1 Escocia · 🎯 Pick inicial: Escocia gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Haití vs Escocia: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Haití",
+              "#Escocia",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_3.png"
+            },
+            "slideTitle": "Haití vs Escocia"
+          }
+        }
+      },
+      {
+        "id": 237,
+        "card_id": "c_e221",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Haití vs Escocia: pronóstico del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T19:00:00-06:00\",\"target_match\":{\"home\":\"Haití\",\"away\":\"Escocia\",\"kickoff_iso\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\"},\"homeTeam\":\"Haití\",\"awayTeam\":\"Escocia\",\"flagCodeHome\":\"ht\",\"flagCodeAway\":\"gb-sct\",\"kickoff\":\"2026-06-13T19:00:00-06:00\",\"venue\":\"Foxborough, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"1\",\"pickShort\":\"Escocia gana\",\"hook\":\"Escocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Haití vs Escocia hoy sábado, 13 de junio, 07:00 p.m.\\n\\nEscocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\\n\\n📊 PGS® Haití 0-1 Escocia · 🎯 Pick inicial: Escocia gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Haití vs Escocia: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Haití\",\"#Escocia\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_3.png\"},\"slideTitle\":\"Haití vs Escocia\"}}",
+        "created_at": "2026-06-13 14:22:25",
+        "meta": {
+          "title": "Haití vs Escocia: pronóstico del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T19:00:00-06:00",
+            "target_match": {
+              "home": "Haití",
+              "away": "Escocia",
+              "kickoff_iso": "2026-06-13T19:00:00-06:00",
+              "venue": "Foxborough, EE.UU."
+            },
+            "homeTeam": "Haití",
+            "awayTeam": "Escocia",
+            "flagCodeHome": "ht",
+            "flagCodeAway": "gb-sct",
+            "kickoff": "2026-06-13T19:00:00-06:00",
+            "venue": "Foxborough, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "1",
+            "pickShort": "Escocia gana",
+            "hook": "Escocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Haití vs Escocia hoy sábado, 13 de junio, 07:00 p.m.\n\nEscocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\n\n📊 PGS® Haití 0-1 Escocia · 🎯 Pick inicial: Escocia gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Haití vs Escocia: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Haití",
+              "#Escocia",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_3.png"
+            },
+            "slideTitle": "Haití vs Escocia"
+          }
+        }
+      },
+      {
+        "id": 226,
+        "card_id": "c_e221",
+        "actor": "demo",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-13T16:00:00-06:00\",\"target_match\":{\"home\":\"Haití\",\"away\":\"Escocia\",\"kickoff_iso\":\"2026-06-13T16:00:00-06:00\",\"venue\":\"Toronto\"},\"homeTeam\":\"Haití\",\"awayTeam\":\"Escocia\",\"flagCodeHome\":\"ht\",\"flagCodeAway\":\"gb-sct\",\"kickoff\":\"2026-06-13T16:00:00-06:00\",\"venue\":\"Toronto\",\"pgsHome\":\"0\",\"pgsAway\":\"1\",\"pickShort\":\"Escocia gana\",\"hook\":\"Escocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Haití vs Escocia hoy sábado, 13 de junio, 04:00 p.m.\\n\\nEscocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\\n\\n📊 PGS® Haití 0-1 Escocia · 🎯 Pick inicial: Escocia gana\\n\\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Haití vs Escocia: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Haití\",\"#Escocia\",\"#PronosticoDelDia\"],\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-13\\\\c_e221\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-13 14:19:15",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-13T16:00:00-06:00",
+            "target_match": {
+              "home": "Haití",
+              "away": "Escocia",
+              "kickoff_iso": "2026-06-13T16:00:00-06:00",
+              "venue": "Toronto"
+            },
+            "homeTeam": "Haití",
+            "awayTeam": "Escocia",
+            "flagCodeHome": "ht",
+            "flagCodeAway": "gb-sct",
+            "kickoff": "2026-06-13T16:00:00-06:00",
+            "venue": "Toronto",
+            "pgsHome": "0",
+            "pgsAway": "1",
+            "pickShort": "Escocia gana",
+            "hook": "Escocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Haití vs Escocia hoy sábado, 13 de junio, 04:00 p.m.\n\nEscocia pisa Mundial con experiencia europea; Haití apuesta por el dato emocional.\n\n📊 PGS® Haití 0-1 Escocia · 🎯 Pick inicial: Escocia gana\n\n👉 Desliza el carrusel para ver el desglose. Tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Haití vs Escocia: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Haití",
+              "#Escocia",
+              "#PronosticoDelDia"
+            ],
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-13\\c_e221\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 225,
+        "card_id": "c_e221",
+        "actor": "demo",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"expires_at\":null}",
+        "created_at": "2026-06-13 14:19:14",
+        "meta": {
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "expires_at": null
+        }
+      }
+    ]
+  }
+}

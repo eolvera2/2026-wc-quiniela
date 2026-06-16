@@ -1,0 +1,313 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T02:47:30.441Z",
+  "event": {
+    "type": "kill",
+    "actor": "you",
+    "from_stage": "to_be_posted",
+    "to_stage": "killed",
+    "note": "Descartada desde tarjeta (To Be Posted)",
+    "meta": {}
+  },
+  "card": {
+    "id": "c_f5b5",
+    "title": "PGS® Alemania 3-0 Curazao — dato del día",
+    "stage": "killed",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "x"
+    ],
+    "payload": {
+      "template": "data-callout",
+      "format_variant": "data_callout",
+      "scheduled_for": "2026-06-14T11:00:00-06:00",
+      "target_match": {
+        "home": "Alemania",
+        "away": "Curazao",
+        "kickoff_iso": "2026-06-14T11:00:00-06:00",
+        "venue": "Houston, EE.UU."
+      },
+      "homeTeam": "Alemania",
+      "awayTeam": "Curazao",
+      "flagCodeHome": "de",
+      "flagCodeAway": "cw",
+      "bigNumber": "3-0",
+      "eyebrow": "PGS® Alemania vs Curazao",
+      "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Houston, EE.UU.",
+      "cta": "Más datos en predictagol.com",
+      "caption": "📊 PGS® inicial · Alemania 3-0 Curazao\n\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+      "alt_text": "Tarjeta cuadrada con el número PGS® 3-0 para Alemania vs Curazao.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Alemania",
+        "#Curazao",
+        "#PGS"
+      ],
+      "assets": {
+        "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_f5b5\\1080x1080.png"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": null,
+    "created_at": "2026-06-14 15:30:38",
+    "updated_at": "2026-06-15 02:47:30",
+    "posts": [],
+    "events": [
+      {
+        "id": 343,
+        "card_id": "c_f5b5",
+        "actor": "you",
+        "type": "kill",
+        "from_stage": "to_be_posted",
+        "to_stage": "killed",
+        "note": "Descartada desde tarjeta (To Be Posted)",
+        "meta_json": "{}",
+        "created_at": "2026-06-15 02:47:30",
+        "meta": {}
+      },
+      {
+        "id": 321,
+        "card_id": "c_f5b5",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-14T11:00:00-06:00\",\"target_match\":{\"home\":\"Alemania\",\"away\":\"Curazao\",\"kickoff_iso\":\"2026-06-14T11:00:00-06:00\",\"venue\":\"Houston, EE.UU.\"},\"homeTeam\":\"Alemania\",\"awayTeam\":\"Curazao\",\"flagCodeHome\":\"de\",\"flagCodeAway\":\"cw\",\"bigNumber\":\"3-0\",\"eyebrow\":\"PGS® Alemania vs Curazao\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Houston, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Alemania 3-0 Curazao\\n\\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 3-0 para Alemania vs Curazao.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Alemania\",\"#Curazao\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_f5b5\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-14 15:32:22",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-14T11:00:00-06:00",
+            "target_match": {
+              "home": "Alemania",
+              "away": "Curazao",
+              "kickoff_iso": "2026-06-14T11:00:00-06:00",
+              "venue": "Houston, EE.UU."
+            },
+            "homeTeam": "Alemania",
+            "awayTeam": "Curazao",
+            "flagCodeHome": "de",
+            "flagCodeAway": "cw",
+            "bigNumber": "3-0",
+            "eyebrow": "PGS® Alemania vs Curazao",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Houston, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Alemania 3-0 Curazao\n\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 3-0 para Alemania vs Curazao.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Alemania",
+              "#Curazao",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_f5b5\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 320,
+        "card_id": "c_f5b5",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Alemania 3-0 Curazao — dato del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-14T11:00:00-06:00\",\"target_match\":{\"home\":\"Alemania\",\"away\":\"Curazao\",\"kickoff_iso\":\"2026-06-14T11:00:00-06:00\",\"venue\":\"Houston, EE.UU.\"},\"homeTeam\":\"Alemania\",\"awayTeam\":\"Curazao\",\"flagCodeHome\":\"de\",\"flagCodeAway\":\"cw\",\"bigNumber\":\"3-0\",\"eyebrow\":\"PGS® Alemania vs Curazao\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Houston, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Alemania 3-0 Curazao\\n\\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 3-0 para Alemania vs Curazao.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Alemania\",\"#Curazao\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_f5b5\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-14 15:32:21",
+        "meta": {
+          "title": "PGS® Alemania 3-0 Curazao — dato del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-14T11:00:00-06:00",
+            "target_match": {
+              "home": "Alemania",
+              "away": "Curazao",
+              "kickoff_iso": "2026-06-14T11:00:00-06:00",
+              "venue": "Houston, EE.UU."
+            },
+            "homeTeam": "Alemania",
+            "awayTeam": "Curazao",
+            "flagCodeHome": "de",
+            "flagCodeAway": "cw",
+            "bigNumber": "3-0",
+            "eyebrow": "PGS® Alemania vs Curazao",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Houston, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Alemania 3-0 Curazao\n\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 3-0 para Alemania vs Curazao.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Alemania",
+              "#Curazao",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_f5b5\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 305,
+        "card_id": "c_f5b5",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-14T11:00:00-06:00\",\"target_match\":{\"home\":\"Alemania\",\"away\":\"Curazao\",\"kickoff_iso\":\"2026-06-14T11:00:00-06:00\",\"venue\":\"Houston, EE.UU.\"},\"homeTeam\":\"Alemania\",\"awayTeam\":\"Curazao\",\"flagCodeHome\":\"de\",\"flagCodeAway\":\"cw\",\"bigNumber\":\"3-0\",\"eyebrow\":\"PGS® Alemania vs Curazao\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Houston, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Alemania 3-0 Curazao\\n\\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 3-0 para Alemania vs Curazao.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Alemania\",\"#Curazao\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_f5b5\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-14 15:31:52",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-14T11:00:00-06:00",
+            "target_match": {
+              "home": "Alemania",
+              "away": "Curazao",
+              "kickoff_iso": "2026-06-14T11:00:00-06:00",
+              "venue": "Houston, EE.UU."
+            },
+            "homeTeam": "Alemania",
+            "awayTeam": "Curazao",
+            "flagCodeHome": "de",
+            "flagCodeAway": "cw",
+            "bigNumber": "3-0",
+            "eyebrow": "PGS® Alemania vs Curazao",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Houston, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Alemania 3-0 Curazao\n\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 3-0 para Alemania vs Curazao.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Alemania",
+              "#Curazao",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_f5b5\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 304,
+        "card_id": "c_f5b5",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"PGS® Alemania 3-0 Curazao — dato del día\",\"stage\":\"to_be_posted\",\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-14T11:00:00-06:00\",\"target_match\":{\"home\":\"Alemania\",\"away\":\"Curazao\",\"kickoff_iso\":\"2026-06-14T11:00:00-06:00\",\"venue\":\"Houston, EE.UU.\"},\"homeTeam\":\"Alemania\",\"awayTeam\":\"Curazao\",\"flagCodeHome\":\"de\",\"flagCodeAway\":\"cw\",\"bigNumber\":\"3-0\",\"eyebrow\":\"PGS® Alemania vs Curazao\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Houston, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Alemania 3-0 Curazao\\n\\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 3-0 para Alemania vs Curazao.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Alemania\",\"#Curazao\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_f5b5\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-14 15:31:52",
+        "meta": {
+          "title": "PGS® Alemania 3-0 Curazao — dato del día",
+          "stage": "to_be_posted",
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-14T11:00:00-06:00",
+            "target_match": {
+              "home": "Alemania",
+              "away": "Curazao",
+              "kickoff_iso": "2026-06-14T11:00:00-06:00",
+              "venue": "Houston, EE.UU."
+            },
+            "homeTeam": "Alemania",
+            "awayTeam": "Curazao",
+            "flagCodeHome": "de",
+            "flagCodeAway": "cw",
+            "bigNumber": "3-0",
+            "eyebrow": "PGS® Alemania vs Curazao",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Houston, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Alemania 3-0 Curazao\n\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 3-0 para Alemania vs Curazao.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Alemania",
+              "#Curazao",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_f5b5\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 289,
+        "card_id": "c_f5b5",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"data-callout\",\"format_variant\":\"data_callout\",\"scheduled_for\":\"2026-06-14T11:00:00-06:00\",\"target_match\":{\"home\":\"Alemania\",\"away\":\"Curazao\",\"kickoff_iso\":\"2026-06-14T11:00:00-06:00\",\"venue\":\"Houston, EE.UU.\"},\"homeTeam\":\"Alemania\",\"awayTeam\":\"Curazao\",\"flagCodeHome\":\"de\",\"flagCodeAway\":\"cw\",\"bigNumber\":\"3-0\",\"eyebrow\":\"PGS® Alemania vs Curazao\",\"subtitle\":\"Nuestro PredictaGoal Score para el partido de hoy en Houston, EE.UU.\",\"cta\":\"Más datos en predictagol.com\",\"caption\":\"📊 PGS® inicial · Alemania 3-0 Curazao\\n\\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\\n\\n¿Cuál es tu marcador? Compara con la banda en predictagol.com\",\"alt_text\":\"Tarjeta cuadrada con el número PGS® 3-0 para Alemania vs Curazao.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#Alemania\",\"#Curazao\",\"#PGS\"],\"assets\":{\"1080x1080\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-14\\\\c_f5b5\\\\1080x1080.png\"}}}",
+        "created_at": "2026-06-14 15:30:38",
+        "meta": {
+          "payload": {
+            "template": "data-callout",
+            "format_variant": "data_callout",
+            "scheduled_for": "2026-06-14T11:00:00-06:00",
+            "target_match": {
+              "home": "Alemania",
+              "away": "Curazao",
+              "kickoff_iso": "2026-06-14T11:00:00-06:00",
+              "venue": "Houston, EE.UU."
+            },
+            "homeTeam": "Alemania",
+            "awayTeam": "Curazao",
+            "flagCodeHome": "de",
+            "flagCodeAway": "cw",
+            "bigNumber": "3-0",
+            "eyebrow": "PGS® Alemania vs Curazao",
+            "subtitle": "Nuestro PredictaGoal Score para el partido de hoy en Houston, EE.UU.",
+            "cta": "Más datos en predictagol.com",
+            "caption": "📊 PGS® inicial · Alemania 3-0 Curazao\n\nAlemania vs Curazao: el algoritmo PGS® tiene su veredicto.\n\n¿Cuál es tu marcador? Compara con la banda en predictagol.com",
+            "alt_text": "Tarjeta cuadrada con el número PGS® 3-0 para Alemania vs Curazao.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#Alemania",
+              "#Curazao",
+              "#PGS"
+            ],
+            "assets": {
+              "1080x1080": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-14\\c_f5b5\\1080x1080.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 288,
+        "card_id": "c_f5b5",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"expires_at\":null}",
+        "created_at": "2026-06-14 15:30:38",
+        "meta": {
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "expires_at": null
+        }
+      }
+    ]
+  }
+}

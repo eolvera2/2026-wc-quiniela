@@ -1,0 +1,858 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-15T15:03:25.294Z",
+  "event": {
+    "type": "edit",
+    "actor": "seeder",
+    "meta": {
+      "payload": {
+        "template": "pronostico-carousel-3up",
+        "format_variant": "carousel_3up",
+        "scheduled_for": "2026-06-15T15:00:00-06:00",
+        "window_key": "t_minus_60",
+        "window_label": "T-60m · predicción final",
+        "expires_at": "2026-06-15T21:45:00.000Z",
+        "target_match": {
+          "home": "Arabia Saudita",
+          "away": "Uruguay",
+          "kickoff_iso": "2026-06-15T16:00:00-06:00",
+          "venue": "Miami Gardens, EE.UU."
+        },
+        "homeTeam": "Arabia Saudita",
+        "awayTeam": "Uruguay",
+        "flagCodeHome": "sa",
+        "flagCodeAway": "uy",
+        "slideTitle": "Arabia Saudita vs Uruguay",
+        "kickoff": "2026-06-15T16:00:00-06:00",
+        "venue": "Miami Gardens, EE.UU.",
+        "pgsHome": "0",
+        "pgsAway": "2",
+        "pickShort": "Uruguay gana",
+        "hook": "Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.",
+        "cta": "Tu pick en predictagol.com",
+        "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nNuestro pick final: Uruguay gana.\n\nPGS® Arabia Saudita 0-2 Uruguay. Guarda este Reel y compara al FT.",
+        "alt_text": "Storyboard de Reel para Arabia Saudita vs Uruguay: hook, PGS® y pick final.",
+        "hashtags": [
+          "#PredictaGol",
+          "#Mundial2026",
+          "#ArabiaSaudita",
+          "#Uruguay",
+          "#PronosticoDelDia"
+        ],
+        "platform_copy": {
+          "instagram": {
+            "format": "reel_7_30s",
+            "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nNuestro pick final: Uruguay gana.\n\nPGS® Arabia Saudita 0-2 Uruguay. Guarda este Reel y compara al FT.",
+            "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"Arabia Saudita vs Uruguay: nuestro pick final\".\n3-8s: Mostrar slide PGS® 0-2.\n9-16s: Decir la razón corta: \"Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"Uruguay gana. ¿Lo bancas o ves sorpresa?\"",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ArabiaSaudita",
+              "#Uruguay",
+              "#PronosticoDelDia"
+            ],
+            "alt_text": "Storyboard de Reel para Arabia Saudita vs Uruguay: hook, PGS® y pick final.",
+            "asset_keys": [
+              "slide_1",
+              "slide_2",
+              "slide_3"
+            ]
+          },
+          "x": {
+            "format": "thread",
+            "text": "Hilo express a 1h de Arabia Saudita vs Uruguay 🧵\n\n1/ Pick final: Uruguay gana\n2/ PGS®: 0-2\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+            "reply_text": "Más contexto y picks en predictagol.com",
+            "hashtags": [
+              "#PredictaGol",
+              "#WorldCup2026"
+            ]
+          },
+          "threads": {
+            "format": "match_thread_reply",
+            "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con Uruguay gana para Arabia Saudita vs Uruguay. PGS® 0-2; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026"
+            ]
+          }
+        },
+        "assets": {
+          "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_1.png",
+          "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_2.png",
+          "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_3.png"
+        }
+      }
+    }
+  },
+  "card": {
+    "id": "c_2ee5",
+    "title": "Arabia Saudita vs Uruguay: T-60 predicción final",
+    "stage": "to_be_posted",
+    "owner": "stark",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "template": "pronostico-carousel-3up",
+      "format_variant": "carousel_3up",
+      "scheduled_for": "2026-06-15T15:00:00-06:00",
+      "window_key": "t_minus_60",
+      "window_label": "T-60m · predicción final",
+      "expires_at": "2026-06-15T21:45:00.000Z",
+      "target_match": {
+        "home": "Arabia Saudita",
+        "away": "Uruguay",
+        "kickoff_iso": "2026-06-15T16:00:00-06:00",
+        "venue": "Miami Gardens, EE.UU."
+      },
+      "homeTeam": "Arabia Saudita",
+      "awayTeam": "Uruguay",
+      "flagCodeHome": "sa",
+      "flagCodeAway": "uy",
+      "slideTitle": "Arabia Saudita vs Uruguay",
+      "kickoff": "2026-06-15T16:00:00-06:00",
+      "venue": "Miami Gardens, EE.UU.",
+      "pgsHome": "0",
+      "pgsAway": "2",
+      "pickShort": "Uruguay gana",
+      "hook": "Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.",
+      "cta": "Tu pick en predictagol.com",
+      "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nNuestro pick final: Uruguay gana.\n\nPGS® Arabia Saudita 0-2 Uruguay. Guarda este Reel y compara al FT.",
+      "alt_text": "Storyboard de Reel para Arabia Saudita vs Uruguay: hook, PGS® y pick final.",
+      "hashtags": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#ArabiaSaudita",
+        "#Uruguay",
+        "#PronosticoDelDia"
+      ],
+      "platform_copy": {
+        "instagram": {
+          "format": "reel_7_30s",
+          "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nNuestro pick final: Uruguay gana.\n\nPGS® Arabia Saudita 0-2 Uruguay. Guarda este Reel y compara al FT.",
+          "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"Arabia Saudita vs Uruguay: nuestro pick final\".\n3-8s: Mostrar slide PGS® 0-2.\n9-16s: Decir la razón corta: \"Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"Uruguay gana. ¿Lo bancas o ves sorpresa?\"",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026",
+            "#ArabiaSaudita",
+            "#Uruguay",
+            "#PronosticoDelDia"
+          ],
+          "alt_text": "Storyboard de Reel para Arabia Saudita vs Uruguay: hook, PGS® y pick final.",
+          "asset_keys": [
+            "slide_1",
+            "slide_2",
+            "slide_3"
+          ]
+        },
+        "x": {
+          "format": "thread",
+          "text": "Hilo express a 1h de Arabia Saudita vs Uruguay 🧵\n\n1/ Pick final: Uruguay gana\n2/ PGS®: 0-2\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+          "reply_text": "Más contexto y picks en predictagol.com",
+          "hashtags": [
+            "#PredictaGol",
+            "#WorldCup2026"
+          ]
+        },
+        "threads": {
+          "format": "match_thread_reply",
+          "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con Uruguay gana para Arabia Saudita vs Uruguay. PGS® 0-2; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+          "hashtags": [
+            "#PredictaGol",
+            "#Mundial2026"
+          ]
+        }
+      },
+      "assets": {
+        "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_1.png",
+        "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_2.png",
+        "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_3.png"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "expires_at": "2026-06-15T21:45:00.000Z",
+    "created_at": "2026-06-15 03:09:52",
+    "updated_at": "2026-06-15 15:03:25",
+    "posts": [],
+    "events": [
+      {
+        "id": 665,
+        "card_id": "c_2ee5",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T15:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-15T21:45:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"slideTitle\":\"Arabia Saudita vs Uruguay\",\"kickoff\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Uruguay gana\",\"hook\":\"Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\\n\\nNuestro pick final: Uruguay gana.\\n\\nPGS® Arabia Saudita 0-2 Uruguay. Guarda este Reel y compara al FT.\",\"alt_text\":\"Storyboard de Reel para Arabia Saudita vs Uruguay: hook, PGS® y pick final.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"reel_7_30s\",\"caption\":\"Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\\n\\nNuestro pick final: Uruguay gana.\\n\\nPGS® Arabia Saudita 0-2 Uruguay. Guarda este Reel y compara al FT.\",\"script\":\"Reel 7-30s:\\n0-2s: Hook en pantalla: \\\"Arabia Saudita vs Uruguay: nuestro pick final\\\".\\n3-8s: Mostrar slide PGS® 0-2.\\n9-16s: Decir la razón corta: \\\"Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\\".\\n17-24s: Cierre: \\\"Uruguay gana. ¿Lo bancas o ves sorpresa?\\\"\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#PronosticoDelDia\"],\"alt_text\":\"Storyboard de Reel para Arabia Saudita vs Uruguay: hook, PGS® y pick final.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"thread\",\"text\":\"Hilo express a 1h de Arabia Saudita vs Uruguay 🧵\\n\\n1/ Pick final: Uruguay gana\\n2/ PGS®: 0-2\\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Respuesta lista para usar en threads de cuentas grandes del partido:\\n\\nPredictaGol llega con Uruguay gana para Arabia Saudita vs Uruguay. PGS® 0-2; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:03:25",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T15:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-15T21:45:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "slideTitle": "Arabia Saudita vs Uruguay",
+            "kickoff": "2026-06-15T16:00:00-06:00",
+            "venue": "Miami Gardens, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Uruguay gana",
+            "hook": "Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nNuestro pick final: Uruguay gana.\n\nPGS® Arabia Saudita 0-2 Uruguay. Guarda este Reel y compara al FT.",
+            "alt_text": "Storyboard de Reel para Arabia Saudita vs Uruguay: hook, PGS® y pick final.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ArabiaSaudita",
+              "#Uruguay",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "reel_7_30s",
+                "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nNuestro pick final: Uruguay gana.\n\nPGS® Arabia Saudita 0-2 Uruguay. Guarda este Reel y compara al FT.",
+                "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"Arabia Saudita vs Uruguay: nuestro pick final\".\n3-8s: Mostrar slide PGS® 0-2.\n9-16s: Decir la razón corta: \"Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"Uruguay gana. ¿Lo bancas o ves sorpresa?\"",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#ArabiaSaudita",
+                  "#Uruguay",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Storyboard de Reel para Arabia Saudita vs Uruguay: hook, PGS® y pick final.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "thread",
+                "text": "Hilo express a 1h de Arabia Saudita vs Uruguay 🧵\n\n1/ Pick final: Uruguay gana\n2/ PGS®: 0-2\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con Uruguay gana para Arabia Saudita vs Uruguay. PGS® 0-2; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 664,
+        "card_id": "c_2ee5",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Arabia Saudita vs Uruguay: T-60 predicción final\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":8,\"expires_at\":\"2026-06-15T21:45:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T15:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-15T21:45:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"slideTitle\":\"Arabia Saudita vs Uruguay\",\"kickoff\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Uruguay gana\",\"hook\":\"Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\\n\\nNuestro pick final: Uruguay gana.\\n\\nPGS® Arabia Saudita 0-2 Uruguay. Guarda este Reel y compara al FT.\",\"alt_text\":\"Storyboard de Reel para Arabia Saudita vs Uruguay: hook, PGS® y pick final.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"reel_7_30s\",\"caption\":\"Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\\n\\nNuestro pick final: Uruguay gana.\\n\\nPGS® Arabia Saudita 0-2 Uruguay. Guarda este Reel y compara al FT.\",\"script\":\"Reel 7-30s:\\n0-2s: Hook en pantalla: \\\"Arabia Saudita vs Uruguay: nuestro pick final\\\".\\n3-8s: Mostrar slide PGS® 0-2.\\n9-16s: Decir la razón corta: \\\"Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\\".\\n17-24s: Cierre: \\\"Uruguay gana. ¿Lo bancas o ves sorpresa?\\\"\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#PronosticoDelDia\"],\"alt_text\":\"Storyboard de Reel para Arabia Saudita vs Uruguay: hook, PGS® y pick final.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"thread\",\"text\":\"Hilo express a 1h de Arabia Saudita vs Uruguay 🧵\\n\\n1/ Pick final: Uruguay gana\\n2/ PGS®: 0-2\\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"match_thread_reply\",\"text\":\"Respuesta lista para usar en threads de cuentas grandes del partido:\\n\\nPredictaGol llega con Uruguay gana para Arabia Saudita vs Uruguay. PGS® 0-2; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 15:03:23",
+        "meta": {
+          "title": "Arabia Saudita vs Uruguay: T-60 predicción final",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 8,
+          "expires_at": "2026-06-15T21:45:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T15:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-15T21:45:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "slideTitle": "Arabia Saudita vs Uruguay",
+            "kickoff": "2026-06-15T16:00:00-06:00",
+            "venue": "Miami Gardens, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Uruguay gana",
+            "hook": "Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nNuestro pick final: Uruguay gana.\n\nPGS® Arabia Saudita 0-2 Uruguay. Guarda este Reel y compara al FT.",
+            "alt_text": "Storyboard de Reel para Arabia Saudita vs Uruguay: hook, PGS® y pick final.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ArabiaSaudita",
+              "#Uruguay",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "reel_7_30s",
+                "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nNuestro pick final: Uruguay gana.\n\nPGS® Arabia Saudita 0-2 Uruguay. Guarda este Reel y compara al FT.",
+                "script": "Reel 7-30s:\n0-2s: Hook en pantalla: \"Arabia Saudita vs Uruguay: nuestro pick final\".\n3-8s: Mostrar slide PGS® 0-2.\n9-16s: Decir la razón corta: \"Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\".\n17-24s: Cierre: \"Uruguay gana. ¿Lo bancas o ves sorpresa?\"",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#ArabiaSaudita",
+                  "#Uruguay",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Storyboard de Reel para Arabia Saudita vs Uruguay: hook, PGS® y pick final.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "thread",
+                "text": "Hilo express a 1h de Arabia Saudita vs Uruguay 🧵\n\n1/ Pick final: Uruguay gana\n2/ PGS®: 0-2\n3/ Si las alineaciones no cambian el ritmo, esta es nuestra lectura.",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "match_thread_reply",
+                "text": "Respuesta lista para usar en threads de cuentas grandes del partido:\n\nPredictaGol llega con Uruguay gana para Arabia Saudita vs Uruguay. PGS® 0-2; la clave es si el primer tramo confirma esta lectura o rompe la quiniela.",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 556,
+        "card_id": "c_2ee5",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T15:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-15T21:45:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"slideTitle\":\"Arabia Saudita vs Uruguay\",\"kickoff\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Uruguay gana\",\"hook\":\"Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\\n\\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel\",\"caption\":\"Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\\n\\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#PronosticoDelDia\"],\"alt_text\":\"Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"single_post\",\"text\":\"Falta 1 hora para Arabia Saudita vs Uruguay.\\n\\n📊 PGS® Arabia Saudita 0-2 Uruguay\\n🎯 Pick inicial: Uruguay gana\\n\\n¿Cuál es tu marcador?\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Arabia Saudita vs Uruguay: nuestro pick está listo.\\n\\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nPGS® 0-2. ¿Lo ves igual o hay sorpresa?\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 14:48:26",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T15:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-15T21:45:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "slideTitle": "Arabia Saudita vs Uruguay",
+            "kickoff": "2026-06-15T16:00:00-06:00",
+            "venue": "Miami Gardens, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Uruguay gana",
+            "hook": "Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ArabiaSaudita",
+              "#Uruguay",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel",
+                "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#ArabiaSaudita",
+                  "#Uruguay",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "single_post",
+                "text": "Falta 1 hora para Arabia Saudita vs Uruguay.\n\n📊 PGS® Arabia Saudita 0-2 Uruguay\n🎯 Pick inicial: Uruguay gana\n\n¿Cuál es tu marcador?",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Arabia Saudita vs Uruguay: nuestro pick está listo.\n\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nPGS® 0-2. ¿Lo ves igual o hay sorpresa?",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 555,
+        "card_id": "c_2ee5",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Arabia Saudita vs Uruguay: T-60 predicción final\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":8,\"expires_at\":\"2026-06-15T21:45:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T15:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-15T21:45:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"slideTitle\":\"Arabia Saudita vs Uruguay\",\"kickoff\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Uruguay gana\",\"hook\":\"Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\\n\\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel\",\"caption\":\"Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\\n\\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#PronosticoDelDia\"],\"alt_text\":\"Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"single_post\",\"text\":\"Falta 1 hora para Arabia Saudita vs Uruguay.\\n\\n📊 PGS® Arabia Saudita 0-2 Uruguay\\n🎯 Pick inicial: Uruguay gana\\n\\n¿Cuál es tu marcador?\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Arabia Saudita vs Uruguay: nuestro pick está listo.\\n\\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nPGS® 0-2. ¿Lo ves igual o hay sorpresa?\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 14:48:25",
+        "meta": {
+          "title": "Arabia Saudita vs Uruguay: T-60 predicción final",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 8,
+          "expires_at": "2026-06-15T21:45:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T15:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-15T21:45:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "slideTitle": "Arabia Saudita vs Uruguay",
+            "kickoff": "2026-06-15T16:00:00-06:00",
+            "venue": "Miami Gardens, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Uruguay gana",
+            "hook": "Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ArabiaSaudita",
+              "#Uruguay",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel",
+                "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#ArabiaSaudita",
+                  "#Uruguay",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "single_post",
+                "text": "Falta 1 hora para Arabia Saudita vs Uruguay.\n\n📊 PGS® Arabia Saudita 0-2 Uruguay\n🎯 Pick inicial: Uruguay gana\n\n¿Cuál es tu marcador?",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Arabia Saudita vs Uruguay: nuestro pick está listo.\n\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nPGS® 0-2. ¿Lo ves igual o hay sorpresa?",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 486,
+        "card_id": "c_2ee5",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T15:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-15T21:45:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"slideTitle\":\"Arabia Saudita vs Uruguay\",\"kickoff\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Uruguay gana\",\"hook\":\"Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\\n\\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel\",\"caption\":\"Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\\n\\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#PronosticoDelDia\"],\"alt_text\":\"Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"single_post\",\"text\":\"Falta 1 hora para Arabia Saudita vs Uruguay.\\n\\n📊 PGS® Arabia Saudita 0-2 Uruguay\\n🎯 Pick inicial: Uruguay gana\\n\\n¿Cuál es tu marcador?\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Arabia Saudita vs Uruguay: nuestro pick está listo.\\n\\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nPGS® 0-2. ¿Lo ves igual o hay sorpresa?\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 03:22:00",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T15:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-15T21:45:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "slideTitle": "Arabia Saudita vs Uruguay",
+            "kickoff": "2026-06-15T16:00:00-06:00",
+            "venue": "Miami Gardens, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Uruguay gana",
+            "hook": "Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ArabiaSaudita",
+              "#Uruguay",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel",
+                "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#ArabiaSaudita",
+                  "#Uruguay",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "single_post",
+                "text": "Falta 1 hora para Arabia Saudita vs Uruguay.\n\n📊 PGS® Arabia Saudita 0-2 Uruguay\n🎯 Pick inicial: Uruguay gana\n\n¿Cuál es tu marcador?",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Arabia Saudita vs Uruguay: nuestro pick está listo.\n\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nPGS® 0-2. ¿Lo ves igual o hay sorpresa?",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 485,
+        "card_id": "c_2ee5",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"title\":\"Arabia Saudita vs Uruguay: T-60 predicción final\",\"stage\":\"to_be_posted\",\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"priority\":8,\"expires_at\":\"2026-06-15T21:45:00.000Z\",\"platforms\":[\"instagram\",\"x\",\"threads\"],\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T15:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-15T21:45:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"slideTitle\":\"Arabia Saudita vs Uruguay\",\"kickoff\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Uruguay gana\",\"hook\":\"Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\\n\\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel\",\"caption\":\"Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\\n\\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#PronosticoDelDia\"],\"alt_text\":\"Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"single_post\",\"text\":\"Falta 1 hora para Arabia Saudita vs Uruguay.\\n\\n📊 PGS® Arabia Saudita 0-2 Uruguay\\n🎯 Pick inicial: Uruguay gana\\n\\n¿Cuál es tu marcador?\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Arabia Saudita vs Uruguay: nuestro pick está listo.\\n\\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nPGS® 0-2. ¿Lo ves igual o hay sorpresa?\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 03:21:58",
+        "meta": {
+          "title": "Arabia Saudita vs Uruguay: T-60 predicción final",
+          "stage": "to_be_posted",
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "priority": 8,
+          "expires_at": "2026-06-15T21:45:00.000Z",
+          "platforms": [
+            "instagram",
+            "x",
+            "threads"
+          ],
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T15:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-15T21:45:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "slideTitle": "Arabia Saudita vs Uruguay",
+            "kickoff": "2026-06-15T16:00:00-06:00",
+            "venue": "Miami Gardens, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Uruguay gana",
+            "hook": "Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ArabiaSaudita",
+              "#Uruguay",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel",
+                "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#ArabiaSaudita",
+                  "#Uruguay",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "single_post",
+                "text": "Falta 1 hora para Arabia Saudita vs Uruguay.\n\n📊 PGS® Arabia Saudita 0-2 Uruguay\n🎯 Pick inicial: Uruguay gana\n\n¿Cuál es tu marcador?",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Arabia Saudita vs Uruguay: nuestro pick está listo.\n\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nPGS® 0-2. ¿Lo ves igual o hay sorpresa?",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 434,
+        "card_id": "c_2ee5",
+        "actor": "seeder",
+        "type": "edit",
+        "from_stage": "to_be_posted",
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"payload\":{\"template\":\"pronostico-carousel-3up\",\"format_variant\":\"carousel_3up\",\"scheduled_for\":\"2026-06-15T15:00:00-06:00\",\"window_key\":\"t_minus_60\",\"window_label\":\"T-60m · predicción final\",\"expires_at\":\"2026-06-15T21:45:00.000Z\",\"target_match\":{\"home\":\"Arabia Saudita\",\"away\":\"Uruguay\",\"kickoff_iso\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\"},\"homeTeam\":\"Arabia Saudita\",\"awayTeam\":\"Uruguay\",\"flagCodeHome\":\"sa\",\"flagCodeAway\":\"uy\",\"slideTitle\":\"Arabia Saudita vs Uruguay\",\"kickoff\":\"2026-06-15T16:00:00-06:00\",\"venue\":\"Miami Gardens, EE.UU.\",\"pgsHome\":\"0\",\"pgsAway\":\"2\",\"pickShort\":\"Uruguay gana\",\"hook\":\"Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\",\"cta\":\"Tu pick en predictagol.com\",\"caption\":\"Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\\n\\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"alt_text\":\"Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#PronosticoDelDia\"],\"platform_copy\":{\"instagram\":{\"format\":\"carousel\",\"caption\":\"Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\\n\\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\\n\\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\",\"#ArabiaSaudita\",\"#Uruguay\",\"#PronosticoDelDia\"],\"alt_text\":\"Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.\",\"asset_keys\":[\"slide_1\",\"slide_2\",\"slide_3\"]},\"x\":{\"format\":\"single_post\",\"text\":\"Falta 1 hora para Arabia Saudita vs Uruguay.\\n\\n📊 PGS® Arabia Saudita 0-2 Uruguay\\n🎯 Pick inicial: Uruguay gana\\n\\n¿Cuál es tu marcador?\",\"reply_text\":\"Más contexto y picks en predictagol.com\",\"hashtags\":[\"#PredictaGol\",\"#WorldCup2026\"]},\"threads\":{\"format\":\"debate_prompt\",\"text\":\"Arabia Saudita vs Uruguay: nuestro pick está listo.\\n\\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\\n\\nPGS® 0-2. ¿Lo ves igual o hay sorpresa?\",\"hashtags\":[\"#PredictaGol\",\"#Mundial2026\"]}},\"assets\":{\"slide_1\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_1.png\",\"slide_2\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_2.png\",\"slide_3\":\".squad\\\\agents\\\\shuri\\\\outputs\\\\creative\\\\2026-06-15\\\\c_2ee5\\\\slide_3.png\"}}}",
+        "created_at": "2026-06-15 03:09:53",
+        "meta": {
+          "payload": {
+            "template": "pronostico-carousel-3up",
+            "format_variant": "carousel_3up",
+            "scheduled_for": "2026-06-15T15:00:00-06:00",
+            "window_key": "t_minus_60",
+            "window_label": "T-60m · predicción final",
+            "expires_at": "2026-06-15T21:45:00.000Z",
+            "target_match": {
+              "home": "Arabia Saudita",
+              "away": "Uruguay",
+              "kickoff_iso": "2026-06-15T16:00:00-06:00",
+              "venue": "Miami Gardens, EE.UU."
+            },
+            "homeTeam": "Arabia Saudita",
+            "awayTeam": "Uruguay",
+            "flagCodeHome": "sa",
+            "flagCodeAway": "uy",
+            "slideTitle": "Arabia Saudita vs Uruguay",
+            "kickoff": "2026-06-15T16:00:00-06:00",
+            "venue": "Miami Gardens, EE.UU.",
+            "pgsHome": "0",
+            "pgsAway": "2",
+            "pickShort": "Uruguay gana",
+            "hook": "Arabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.",
+            "cta": "Tu pick en predictagol.com",
+            "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+            "alt_text": "Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+            "hashtags": [
+              "#PredictaGol",
+              "#Mundial2026",
+              "#ArabiaSaudita",
+              "#Uruguay",
+              "#PronosticoDelDia"
+            ],
+            "platform_copy": {
+              "instagram": {
+                "format": "carousel",
+                "caption": "Arabia Saudita vs Uruguay hoy lunes, 15 de junio, 04:00 p.m.\n\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\n📊 PGS® Arabia Saudita 0-2 Uruguay · 🎯 Pick inicial: Uruguay gana\n\n👉 Desliza el carrusel y deja listo tu pick en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026",
+                  "#ArabiaSaudita",
+                  "#Uruguay",
+                  "#PronosticoDelDia"
+                ],
+                "alt_text": "Carrusel de 3 slides para Arabia Saudita vs Uruguay: hook con banderas, datos PGS® y pick inicial, y cierre con CTA.",
+                "asset_keys": [
+                  "slide_1",
+                  "slide_2",
+                  "slide_3"
+                ]
+              },
+              "x": {
+                "format": "single_post",
+                "text": "Falta 1 hora para Arabia Saudita vs Uruguay.\n\n📊 PGS® Arabia Saudita 0-2 Uruguay\n🎯 Pick inicial: Uruguay gana\n\n¿Cuál es tu marcador?",
+                "reply_text": "Más contexto y picks en predictagol.com",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#WorldCup2026"
+                ]
+              },
+              "threads": {
+                "format": "debate_prompt",
+                "text": "Arabia Saudita vs Uruguay: nuestro pick está listo.\n\nArabia Saudita vs Uruguay: el algoritmo PGS® tiene su veredicto.\n\nPGS® 0-2. ¿Lo ves igual o hay sorpresa?",
+                "hashtags": [
+                  "#PredictaGol",
+                  "#Mundial2026"
+                ]
+              }
+            },
+            "assets": {
+              "slide_1": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_1.png",
+              "slide_2": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_2.png",
+              "slide_3": ".squad\\agents\\shuri\\outputs\\creative\\2026-06-15\\c_2ee5\\slide_3.png"
+            }
+          }
+        }
+      },
+      {
+        "id": 433,
+        "card_id": "c_2ee5",
+        "actor": "seeder",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "to_be_posted",
+        "note": null,
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"pronostico_del_dia\",\"expires_at\":\"2026-06-15T21:45:00.000Z\"}",
+        "created_at": "2026-06-15 03:09:52",
+        "meta": {
+          "owner": "stark",
+          "pillar": "pronostico_del_dia",
+          "expires_at": "2026-06-15T21:45:00.000Z"
+        }
+      }
+    ]
+  }
+}

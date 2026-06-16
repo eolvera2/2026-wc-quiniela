@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Acceso · PredictaGol Marketing</title>
+    <link rel="stylesheet" href="/board.css">
+  </head>
+  <body class="login-page">
+    <main class="login-card" aria-labelledby="loginTitle">
+      <div class="brand brand--login">
+        <img class="brand__logo" src="/PredictaGol_Logo.png" alt="" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+        <span class="brand__mark" hidden>PG</span>
+      </div>
+      <h1 id="loginTitle">PredictaGol · Marketing</h1>
+      <p>Ingresa la passphrase del tablero para continuar.</p>
+      <form id="loginForm">
+        <label for="passphrase">Passphrase</label>
+        <input id="passphrase" name="passphrase" type="password" autocomplete="current-password" required autofocus>
+        <button type="submit">Entrar</button>
+      </form>
+      <p id="loginError" class="login-error" role="alert" hidden>No se pudo autenticar.</p>
+    </main>
+    <script>
+      const form = document.querySelector('#loginForm');
+      const error = document.querySelector('#loginError');
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        error.hidden = true;
+        const passphrase = new FormData(form).get('passphrase');
+        try {
+          const response = await fetch('/api/auth', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ passphrase })
+          });
+          if (!response.ok) throw new Error('auth');
+          const data = await response.json().catch(() => ({}));
+          localStorage.setItem('board:token', data.token || passphrase);
+          location.href = '/';
+        } catch {
+          error.hidden = false;
+        }
+      });
+    </script>
+  </body>
+</html>

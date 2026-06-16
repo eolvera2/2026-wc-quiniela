@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:27:49.910Z",
+  "event": {
+    "type": "create",
+    "actor": "strange",
+    "to_stage": "ideas"
+  },
+  "card": {
+    "id": "c_092a",
+    "title": "Pronóstico del día: Inglaterra vs Croacia trae memoria reciente",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "pronostico_del_dia",
+    "platforms": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "payload": {
+      "scheduled_for": "2026-06-17T13:00:00-06:00",
+      "hook": "Inglaterra quiere control; Croacia sabe vivir en partidos largos.",
+      "body_brief": "Preview de Grupo L con foco en paciencia, mediocampo y primer error. Predicción suave: el partido puede definirse por detalles más que por volumen.",
+      "template": "pronostico-del-dia",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Inglaterra",
+        "#Croacia",
+        "#PronosticoDelDia"
+      ],
+      "notes": "Analítico, sobrio y útil para IG feed + conversación en X.",
+      "target_match": {
+        "home": "England",
+        "away": "Croatia",
+        "kickoff_iso": "2026-06-17T14:00:00-06:00",
+        "venue": "Dallas (Arlington)"
+      }
+    },
+    "priority": 8,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:27:49",
+    "updated_at": "2026-06-10 19:27:49",
+    "posts": [],
+    "events": [
+      {
+        "id": 149,
+        "card_id": "c_092a",
+        "actor": "strange",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "ideas",
+        "note": null,
+        "meta_json": "{\"owner\":\"strange\",\"pillar\":\"pronostico_del_dia\"}",
+        "created_at": "2026-06-10 19:27:49",
+        "meta": {
+          "owner": "strange",
+          "pillar": "pronostico_del_dia"
+        }
+      }
+    ]
+  }
+}

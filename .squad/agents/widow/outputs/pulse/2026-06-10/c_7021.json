@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:22:22.986Z",
+  "event": {
+    "type": "create",
+    "actor": "widow",
+    "to_stage": "pulse_signals"
+  },
+  "card": {
+    "id": "c_7021",
+    "title": "TikTok será hub de clips: goles, reacciones y “lo vi primero en vertical”",
+    "stage": "pulse_signals",
+    "owner": "widow",
+    "pillar": "pulse",
+    "platforms": [
+      "tiktok"
+    ],
+    "payload": {
+      "signal_type": "viral_format",
+      "platform_origin": "tiktok",
+      "evidence_urls": [
+        "https://www.eldestapeweb.com/tecnologia/redes-sociales/tiktok-transmitira-fragmentos-de-partidos-del-mundial-2026-como-verlos-202611415463",
+        "https://planetared.com/2026/05/como-seguir-partidos-mundial-2026-tiktok-clips-directos/",
+        "https://eloutput.com/noticias/redes-sociales/como-seguir-los-partidos-del-mundial-2026-en-tiktok-clips-directos-parciales-y-cobertura-oficial/"
+      ],
+      "predictagol_angle": "Preparar react cards de 9:16: “tu pick antes del clip” y “¿quién lo vio venir?” después de cada jugada grande.",
+      "suggested_pillar": "Momento del Partido",
+      "urgency": "this_week",
+      "confidence": "high"
+    },
+    "priority": 10,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:22:22",
+    "updated_at": "2026-06-10 19:22:22",
+    "posts": [],
+    "events": [
+      {
+        "id": 121,
+        "card_id": "c_7021",
+        "actor": "widow",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "pulse_signals",
+        "note": null,
+        "meta_json": "{\"owner\":\"widow\",\"pillar\":\"pulse\"}",
+        "created_at": "2026-06-10 19:22:22",
+        "meta": {
+          "owner": "widow",
+          "pillar": "pulse"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,862 @@
+[
+  {
+    "title": "Bienvenido a PredictaGol: tu Mundial se pronostica con amigos",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "pronostico_del_dia",
+    "platforms_json": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "priority": 10,
+    "payload_json": {
+      "scheduled_for": "2026-06-11T09:00:00-06:00",
+      "hook": "Arranca el Mundial y también tu mesa de picks con la banda.",
+      "body_brief": "Presentar PredictaGol como juego social de pronósticos para vivir el fixture con amigos. Tono cálido: datos, picks y conversación diaria sin vender humo. Cerrar con el primer llamado al pick del día.",
+      "template": "launch-announcement",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#ElTri",
+        "#QuinielaPredictaGol"
+      ],
+      "notes": "Única tarjeta de lanzamiento del Día 1. Usar logo propio y energía de bienvenida; evitar marcas oficiales.",
+      "signal_source": "widow-2026-06-10-09"
+    }
+  },
+  {
+    "title": "Pronóstico del día: México vs Sudáfrica abre la historia",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "pronostico_del_dia",
+    "platforms_json": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "priority": 10,
+    "payload_json": {
+      "scheduled_for": "2026-06-11T11:30:00-06:00",
+      "hook": "México abre en casa: ¿nervio de debut o golpe de autoridad?",
+      "body_brief": "Enmarcar el 1-1 de 2010 como espejo emocional, no como destino. Señalar el factor localía en CDMX, la primera media hora y una predicción suave: México empuja desde el inicio, pero necesita paciencia.",
+      "template": "pronostico-del-dia",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#ElTri",
+        "#MexicoSudafrica",
+        "#PronosticoDelDia"
+      ],
+      "notes": "Abrir con matchup limpio. Sin vocabulario de mercado; pedir marcador como conversación.",
+      "target_match": {
+        "home": "Mexico",
+        "away": "South Africa",
+        "kickoff_iso": "2026-06-11T13:00:00-06:00",
+        "venue": "Mexico City"
+      },
+      "signal_source": "widow-2026-06-10-01"
+    }
+  },
+  {
+    "title": "Quiniela: ¿se repite el 1-1 o México rompe el guion?",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "quiniela_challenge",
+    "platforms_json": [
+      "instagram",
+      "tiktok",
+      "x",
+      "threads"
+    ],
+    "priority": 9,
+    "payload_json": {
+      "scheduled_for": "2026-06-11T12:15:00-06:00",
+      "hook": "Tu marcador antes del silbatazo: 1-1, 2-1 o sorpresa.",
+      "body_brief": "Convertir la memoria de 2010 en dinámica rápida. Proponer chips de marcador y pedir que comenten su pick antes del inicio. Ideal para Story poll y comentario fijado.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#QuinielaPredictaGol",
+        "#PredictaGol",
+        "#ElTri",
+        "#Mundial2026"
+      ],
+      "notes": "Usar pregunta directa; no prometer recompensas. Evitar imágenes de trofeo o marcas oficiales.",
+      "target_match": {
+        "home": "Mexico",
+        "away": "South Africa",
+        "kickoff_iso": "2026-06-11T13:00:00-06:00",
+        "venue": "Mexico City"
+      },
+      "signal_source": "widow-2026-06-10-01"
+    }
+  },
+  {
+    "title": "Reactivo: Gol de México vs Sudáfrica",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "momento_del_partido",
+    "platforms_json": [
+      "x",
+      "threads",
+      "instagram",
+      "tiktok",
+      "youtube"
+    ],
+    "priority": 8,
+    "payload_json": {
+      "scheduled_for": "2026-06-11T13:45:00-06:00",
+      "hook": "Si cae el primero del Tri, el celular vibra con el pick de todos.",
+      "body_brief": "Slot vivo para gol, atajada grande o cierre de primer tiempo. Copy modular: marcador actual, quién lo vio venir y mini encuesta de siguiente momento. Pensado para vertical y segunda pantalla.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#ElTri",
+        "#Mundial2026",
+        "#QuinielaPredictaGol"
+      ],
+      "notes": "Reemplazar el hook con el evento real. Mantener tono celebratorio, nunca burlón.",
+      "target_match": {
+        "home": "Mexico",
+        "away": "South Africa",
+        "kickoff_iso": "2026-06-11T13:00:00-06:00",
+        "venue": "Mexico City"
+      },
+      "signal_source": "widow-2026-06-10-04"
+    }
+  },
+  {
+    "title": "El XI del Tri bajo la lupa tras el debut",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "tu_equipo_tu_data",
+    "platforms_json": [
+      "instagram",
+      "threads",
+      "tiktok"
+    ],
+    "priority": 9,
+    "payload_json": {
+      "scheduled_for": "2026-06-12T10:00:00-06:00",
+      "hook": "El primer once ya habló: ¿qué línea te dejó más confianza?",
+      "body_brief": "Usar 3 bloques: salida, medio campo y ataque. Pedir lectura de comunidad sobre quién sostuvo mejor el plan. Si hubo cambios clave, Shuri puede intercambiar los chips.",
+      "template": "tu-equipo-tu-data",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#ElTri",
+        "#Mundial2026",
+        "#TuEquipoTuData"
+      ],
+      "notes": "Derivado del debate de convocatoria. Sin señalar jugadores en tono personal; hablar de roles.",
+      "target_match": {
+        "home": "Mexico",
+        "away": "South Africa",
+        "kickoff_iso": "2026-06-11T13:00:00-06:00",
+        "venue": "Mexico City"
+      },
+      "signal_source": "widow-2026-06-10-07"
+    }
+  },
+  {
+    "title": "Pronóstico del día: Canadá vs Bosnia y Herzegovina en Toronto",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "pronostico_del_dia",
+    "platforms_json": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "priority": 8,
+    "payload_json": {
+      "scheduled_for": "2026-06-12T11:30:00-06:00",
+      "hook": "Canadá debuta en casa y el Grupo B empieza con presión local.",
+      "body_brief": "Preview de anfitrión con localía, ritmo físico y primer gol como llave emocional. Predicción suave: partido cerrado si Bosnia administra los primeros 20 minutos.",
+      "template": "pronostico-del-dia",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Canada",
+        "#PronosticoDelDia"
+      ],
+      "notes": "Buen puente para recordar que los anfitriones también viven presión de debut.",
+      "target_match": {
+        "home": "Canada",
+        "away": "Bosnia & Herzegovina",
+        "kickoff_iso": "2026-06-12T15:00:00-04:00",
+        "venue": "Toronto"
+      }
+    }
+  },
+  {
+    "title": "Tu data: USA abre contra Paraguay con examen de ritmo",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "tu_equipo_tu_data",
+    "platforms_json": [
+      "instagram",
+      "threads",
+      "tiktok"
+    ],
+    "priority": 8,
+    "payload_json": {
+      "scheduled_for": "2026-06-12T17:15:00-06:00",
+      "hook": "USA llega a casa; Paraguay llega a incomodar el libreto.",
+      "body_brief": "Hacer grid de tres líneas: presión alta, bandas y control emocional. Enfoque LatAm: Paraguay como rival que no regala metros. Cerrar con pick de resultado.",
+      "template": "tu-equipo-tu-data",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#USMNT",
+        "#Paraguay"
+      ],
+      "notes": "No-México fuerte de semana; útil para captar audiencia de anfitrión norteamericano.",
+      "target_match": {
+        "home": "USA",
+        "away": "Paraguay",
+        "kickoff_iso": "2026-06-12T18:00:00-07:00",
+        "venue": "Los Angeles (Inglewood)"
+      }
+    }
+  },
+  {
+    "title": "Reactivo: primer golpe de USA vs Paraguay",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "momento_del_partido",
+    "platforms_json": [
+      "x",
+      "threads",
+      "instagram",
+      "tiktok",
+      "youtube"
+    ],
+    "priority": 7,
+    "payload_json": {
+      "scheduled_for": "2026-06-12T19:30:00-06:00",
+      "hook": "¿Quién leyó mejor el arranque en Los Ángeles?",
+      "body_brief": "Slot para gol temprano, presión alta o tarjeta que cambie el ritmo. Pedir respuesta rápida: sostener pick, cambiar marcador mental o esperar al descanso.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#USMNT",
+        "#QuinielaPredictaGol"
+      ],
+      "notes": "Mantenerlo ágil para segunda pantalla. No usar lenguaje de cierre urgente.",
+      "target_match": {
+        "home": "USA",
+        "away": "Paraguay",
+        "kickoff_iso": "2026-06-12T18:00:00-07:00",
+        "venue": "Los Angeles (Inglewood)"
+      }
+    }
+  },
+  {
+    "title": "Pronóstico del día: Brasil vs Marruecos mide control y vértigo",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "pronostico_del_dia",
+    "platforms_json": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "priority": 9,
+    "payload_json": {
+      "scheduled_for": "2026-06-13T15:00:00-06:00",
+      "hook": "Brasil trae cartel; Marruecos trae orden para hacerlo incómodo.",
+      "body_brief": "Preview del duelo de estilos: paciencia brasileña contra transiciones marroquíes. Señalar que el primer gol puede abrir o tensar todo el Grupo C.",
+      "template": "pronostico-del-dia",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Brasil",
+        "#Marruecos",
+        "#PronosticoDelDia"
+      ],
+      "notes": "No-México con gran potencial LatAm. Evitar tono de favorito absoluto.",
+      "target_match": {
+        "home": "Brazil",
+        "away": "Morocco",
+        "kickoff_iso": "2026-06-13T18:00:00-04:00",
+        "venue": "New York/New Jersey (East Rutherford)"
+      }
+    }
+  },
+  {
+    "title": "Dato curioso: Brasil no necesita correr para acelerar el partido",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "datos_curiosos",
+    "platforms_json": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "priority": 7,
+    "payload_json": {
+      "scheduled_for": "2026-06-13T12:00:00-06:00",
+      "hook": "El dato no es la velocidad: es cuándo Brasil decide cambiarla.",
+      "body_brief": "Construir una pieza de lectura táctica simple: pausas, tercer hombre y ráfagas por banda. Conectar con Marruecos como prueba de paciencia y orden.",
+      "template": "datos-curiosos",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Brasil",
+        "#DatosCuriosos"
+      ],
+      "notes": "Usar dato visual sin números inventados; si Shuri requiere cifra, validar con fuente antes de render.",
+      "target_match": {
+        "home": "Brazil",
+        "away": "Morocco",
+        "kickoff_iso": "2026-06-13T18:00:00-04:00",
+        "venue": "New York/New Jersey (East Rutherford)"
+      }
+    }
+  },
+  {
+    "title": "Quiniela en 15 segundos: arma tu Grupo C",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "quiniela_challenge",
+    "platforms_json": [
+      "tiktok",
+      "instagram",
+      "youtube",
+      "threads"
+    ],
+    "priority": 8,
+    "payload_json": {
+      "scheduled_for": "2026-06-13T14:15:00-06:00",
+      "hook": "Brasil, Marruecos, Haití, Escocia: ordena tu grupo sin pensarlo tanto.",
+      "body_brief": "Formato vertical con captura/plantilla: cuatro equipos, un orden final y comentario con pick del líder. Cerrar con invitación a completar la quiniela digital.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#QuinielaPredictaGol",
+        "#PredictaGol",
+        "#Mundial2026",
+        "#GrupoC"
+      ],
+      "notes": "Aprovecha la señal de quiniela en video. Mantenerlo de juego social, no de incentivo material.",
+      "target_match": {
+        "home": "Brazil",
+        "away": "Morocco",
+        "kickoff_iso": "2026-06-13T18:00:00-04:00",
+        "venue": "New York/New Jersey (East Rutherford)"
+      },
+      "signal_source": "widow-2026-06-10-09"
+    }
+  },
+  {
+    "title": "Reactivo: jugada grande de Brasil vs Marruecos",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "momento_del_partido",
+    "platforms_json": [
+      "x",
+      "threads",
+      "instagram",
+      "tiktok",
+      "youtube"
+    ],
+    "priority": 7,
+    "payload_json": {
+      "scheduled_for": "2026-06-13T16:40:00-06:00",
+      "hook": "Ese giro del partido merece pick nuevo en el grupo.",
+      "body_brief": "Slot para gol, atajada o contraataque claro. Pedir a la comunidad si el partido confirma su marcador o si el Grupo C ya cambió de lectura.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Brasil",
+        "#QuinielaPredictaGol"
+      ],
+      "notes": "Mantener copy modular para adaptar al evento real en menos de cinco minutos.",
+      "target_match": {
+        "home": "Brazil",
+        "away": "Morocco",
+        "kickoff_iso": "2026-06-13T18:00:00-04:00",
+        "venue": "New York/New Jersey (East Rutherford)"
+      },
+      "signal_source": "widow-2026-06-10-05"
+    }
+  },
+  {
+    "title": "Pronóstico del día: Países Bajos vs Japón, ajedrez con velocidad",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "pronostico_del_dia",
+    "platforms_json": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "priority": 8,
+    "payload_json": {
+      "scheduled_for": "2026-06-14T13:00:00-06:00",
+      "hook": "Dos equipos que te castigan si pierdes la pelota donde no debes.",
+      "body_brief": "Preview con foco en presión, posesión y rupturas al espacio. Predicción suave: Japón puede incomodar si el partido se juega a ritmo alto desde temprano.",
+      "template": "pronostico-del-dia",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Japon",
+        "#PaisesBajos"
+      ],
+      "notes": "Usar mapas simples de zonas, no tablas pesadas.",
+      "target_match": {
+        "home": "Netherlands",
+        "away": "Japan",
+        "kickoff_iso": "2026-06-14T15:00:00-05:00",
+        "venue": "Dallas (Arlington)"
+      }
+    }
+  },
+  {
+    "title": "Dato curioso: Curazao abre su grupo contra Alemania",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "datos_curiosos",
+    "platforms_json": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "priority": 7,
+    "payload_json": {
+      "scheduled_for": "2026-06-14T10:15:00-06:00",
+      "hook": "Un debut pequeño en nombre, enorme en historia de grupo.",
+      "body_brief": "Pieza de contexto: Alemania carga tradición, Curazao carga ilusión y el primer partido puede volver enorme una jornada. Enmarcarlo como historia de fixture, no como trámite.",
+      "template": "datos-curiosos",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Alemania",
+        "#Curazao",
+        "#DatosCuriosos"
+      ],
+      "notes": "Verificar acentos y bandera si se usa. Evitar caricaturizar al equipo debutante.",
+      "target_match": {
+        "home": "Germany",
+        "away": "Curaçao",
+        "kickoff_iso": "2026-06-14T12:00:00-05:00",
+        "venue": "Houston"
+      }
+    }
+  },
+  {
+    "title": "Reactivo: noche mundialista en Monterrey, Suecia vs Túnez",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "momento_del_partido",
+    "platforms_json": [
+      "x",
+      "threads",
+      "instagram",
+      "tiktok",
+      "youtube"
+    ],
+    "priority": 6,
+    "payload_json": {
+      "scheduled_for": "2026-06-14T20:30:00-06:00",
+      "hook": "Monterrey tiene partido y la quiniela todavía respira.",
+      "body_brief": "Slot para gol, empate parcial o cierre intenso. El ángulo es México como sede activa más allá del Tri, con reacción rápida y pregunta de marcador final.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Monterrey",
+        "#QuinielaPredictaGol"
+      ],
+      "notes": "Acento local de sede mexicana. No usar marcas de estadio si no están autorizadas.",
+      "target_match": {
+        "home": "Sweden",
+        "away": "Tunisia",
+        "kickoff_iso": "2026-06-14T20:00:00-06:00",
+        "venue": "Monterrey (Guadalupe)"
+      }
+    }
+  },
+  {
+    "title": "Pronóstico del día: España vs Cabo Verde abre con presión de gigante",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "pronostico_del_dia",
+    "platforms_json": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "priority": 8,
+    "payload_json": {
+      "scheduled_for": "2026-06-15T09:00:00-06:00",
+      "hook": "España tiene pelota; Cabo Verde tiene un debut para jugar sin miedo.",
+      "body_brief": "Preview del Grupo H: control español, paciencia ante bloque bajo y atención a la primera transición. Predicción suave: si España anota temprano, el partido cambia de tono.",
+      "template": "pronostico-del-dia",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Espana",
+        "#CaboVerde"
+      ],
+      "notes": "Usar nombre normalizado Cabo Verde en copy final.",
+      "target_match": {
+        "home": "Spain",
+        "away": "Cape Verde",
+        "kickoff_iso": "2026-06-15T12:00:00-04:00",
+        "venue": "Atlanta"
+      }
+    }
+  },
+  {
+    "title": "Tu data: Uruguay llega a Miami con ADN de partido bravo",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "tu_equipo_tu_data",
+    "platforms_json": [
+      "instagram",
+      "threads",
+      "tiktok"
+    ],
+    "priority": 7,
+    "payload_json": {
+      "scheduled_for": "2026-06-15T15:00:00-06:00",
+      "hook": "Uruguay no necesita presentación: necesita primera señal fuerte.",
+      "body_brief": "Grid de identidad: presión, duelos y balón parado. Conectar con Arabia Saudita como rival que puede estirar el partido si resiste el inicio.",
+      "template": "tu-equipo-tu-data",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Uruguay",
+        "#TuEquipoTuData"
+      ],
+      "notes": "LatAm fuera de México para ampliar comunidad regional.",
+      "target_match": {
+        "home": "Saudi Arabia",
+        "away": "Uruguay",
+        "kickoff_iso": "2026-06-15T18:00:00-04:00",
+        "venue": "Miami (Miami Gardens)"
+      }
+    }
+  },
+  {
+    "title": "Reactivo: atajada o gol en Arabia Saudita vs Uruguay",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "momento_del_partido",
+    "platforms_json": [
+      "x",
+      "threads",
+      "instagram",
+      "tiktok",
+      "youtube"
+    ],
+    "priority": 6,
+    "payload_json": {
+      "scheduled_for": "2026-06-15T16:45:00-06:00",
+      "hook": "Un momento puede cambiar toda la lectura del Grupo H.",
+      "body_brief": "Slot para intervención grande o primer gol. Preguntar si Uruguay confirma el plan o si Arabia Saudita ya movió la conversación del grupo.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Uruguay",
+        "#QuinielaPredictaGol"
+      ],
+      "notes": "Energía alta, sin exagerar ni personalizar errores.",
+      "target_match": {
+        "home": "Saudi Arabia",
+        "away": "Uruguay",
+        "kickoff_iso": "2026-06-15T18:00:00-04:00",
+        "venue": "Miami (Miami Gardens)"
+      }
+    }
+  },
+  {
+    "title": "Pronóstico del día: Francia vs Senegal viene con choque de potencia",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "pronostico_del_dia",
+    "platforms_json": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "priority": 9,
+    "payload_json": {
+      "scheduled_for": "2026-06-16T12:00:00-06:00",
+      "hook": "Francia tiene talento; Senegal tiene físico y memoria competitiva.",
+      "body_brief": "Preview del Grupo I: ritmo, duelos por banda y control de pérdidas. Predicción suave: Francia parte con iniciativa, pero Senegal puede golpear si roba alto.",
+      "template": "pronostico-del-dia",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Francia",
+        "#Senegal",
+        "#PronosticoDelDia"
+      ],
+      "notes": "No-México con equipo grande y buena conversación táctica.",
+      "target_match": {
+        "home": "France",
+        "away": "Senegal",
+        "kickoff_iso": "2026-06-16T15:00:00-04:00",
+        "venue": "New York/New Jersey (East Rutherford)"
+      }
+    }
+  },
+  {
+    "title": "Dato curioso: Messi y la cuenta de récords que mira toda LatAm",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "datos_curiosos",
+    "platforms_json": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "priority": 9,
+    "payload_json": {
+      "scheduled_for": "2026-06-16T17:00:00-06:00",
+      "hook": "Argentina juega y cada toque de Messi ya parece archivo histórico.",
+      "body_brief": "Carrusel de récords posibles y contexto emocional sin caer en despedida solemne. Cerrar con pregunta: ¿hasta dónde llega Argentina en tu fixture?",
+      "template": "datos-curiosos",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Argentina",
+        "#Messi",
+        "#DatosCuriosos"
+      ],
+      "notes": "Usar nostalgia medible. Cuidar derechos de imagen: gráfica tipográfica, no fotos no autorizadas.",
+      "target_match": {
+        "home": "Argentina",
+        "away": "Algeria",
+        "kickoff_iso": "2026-06-16T20:00:00-05:00",
+        "venue": "Kansas City"
+      },
+      "signal_source": "widow-2026-06-10-08"
+    }
+  },
+  {
+    "title": "Quiniela: Argentina vs Argelia, marcador con corazón frío",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "quiniela_challenge",
+    "platforms_json": [
+      "instagram",
+      "tiktok",
+      "x",
+      "threads"
+    ],
+    "priority": 8,
+    "payload_json": {
+      "scheduled_for": "2026-06-16T18:20:00-06:00",
+      "hook": "Tu pick: fiesta albiceleste, partido cerrado o sorpresa africana.",
+      "body_brief": "Dinámica de tres chips para marcador y primer anotador sin promesas externas. Invitar a comentar el resultado y comparar después del silbatazo final.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#QuinielaPredictaGol",
+        "#PredictaGol",
+        "#Argentina",
+        "#Mundial2026"
+      ],
+      "notes": "La frase debe invitar conversación, no presión de último minuto.",
+      "target_match": {
+        "home": "Argentina",
+        "away": "Algeria",
+        "kickoff_iso": "2026-06-16T20:00:00-05:00",
+        "venue": "Kansas City"
+      },
+      "signal_source": "widow-2026-06-10-08"
+    }
+  },
+  {
+    "title": "Reactivo: momento Messi o respuesta de Argelia",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "momento_del_partido",
+    "platforms_json": [
+      "x",
+      "threads",
+      "instagram",
+      "tiktok",
+      "youtube"
+    ],
+    "priority": 7,
+    "payload_json": {
+      "scheduled_for": "2026-06-16T19:45:00-06:00",
+      "hook": "Si el partido se rompe, la quiniela se llena de capturas.",
+      "body_brief": "Slot vivo para gol, asistencia, atajada o jugada que cambie el guion. Pedir reacción breve: lo viste venir o te movió todo el grupo.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Argentina",
+        "#QuinielaPredictaGol"
+      ],
+      "notes": "Evitar usar material oficial. Reacción con texto y formas abstractas.",
+      "target_match": {
+        "home": "Argentina",
+        "away": "Algeria",
+        "kickoff_iso": "2026-06-16T20:00:00-05:00",
+        "venue": "Kansas City"
+      },
+      "signal_source": "widow-2026-06-10-05"
+    }
+  },
+  {
+    "title": "Pronóstico del día: Inglaterra vs Croacia trae memoria reciente",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "pronostico_del_dia",
+    "platforms_json": [
+      "instagram",
+      "x",
+      "threads"
+    ],
+    "priority": 8,
+    "payload_json": {
+      "scheduled_for": "2026-06-17T13:00:00-06:00",
+      "hook": "Inglaterra quiere control; Croacia sabe vivir en partidos largos.",
+      "body_brief": "Preview de Grupo L con foco en paciencia, mediocampo y primer error. Predicción suave: el partido puede definirse por detalles más que por volumen.",
+      "template": "pronostico-del-dia",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Inglaterra",
+        "#Croacia",
+        "#PronosticoDelDia"
+      ],
+      "notes": "Analítico, sobrio y útil para IG feed + conversación en X.",
+      "target_match": {
+        "home": "England",
+        "away": "Croatia",
+        "kickoff_iso": "2026-06-17T15:00:00-05:00",
+        "venue": "Dallas (Arlington)"
+      }
+    }
+  },
+  {
+    "title": "Tu data: Colombia cierra el día en CDMX contra Uzbekistán",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "tu_equipo_tu_data",
+    "platforms_json": [
+      "instagram",
+      "threads",
+      "tiktok"
+    ],
+    "priority": 8,
+    "payload_json": {
+      "scheduled_for": "2026-06-17T18:30:00-06:00",
+      "hook": "Colombia en el Azteca: noche grande para la banda cafetera y LatAm.",
+      "body_brief": "Grid de tres claves: ritmo por bandas, pelota quieta y manejo emocional en sede mexicana. Pedir pick de marcador y figura del partido.",
+      "template": "tu-equipo-tu-data",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Colombia",
+        "#TuEquipoTuData"
+      ],
+      "notes": "No-México con sede mexicana; excelente puente para audiencia LatAm.",
+      "target_match": {
+        "home": "Uzbekistan",
+        "away": "Colombia",
+        "kickoff_iso": "2026-06-17T20:00:00-06:00",
+        "venue": "Mexico City"
+      }
+    }
+  },
+  {
+    "title": "Quiniela: Portugal vs DR Congo abre el Grupo K",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "quiniela_challenge",
+    "platforms_json": [
+      "instagram",
+      "tiktok",
+      "x",
+      "threads"
+    ],
+    "priority": 7,
+    "payload_json": {
+      "scheduled_for": "2026-06-17T10:15:00-06:00",
+      "hook": "Primer pick del Grupo K: control portugués o partido incómodo.",
+      "body_brief": "Dinámica de marcador antes del juego en Houston. Dar tres chips simples: Portugal por uno, empate con goles o golpe temprano de DR Congo.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#QuinielaPredictaGol",
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Portugal"
+      ],
+      "notes": "Usar Congo DR si Cap prefiere nombre normalizado en arte final.",
+      "target_match": {
+        "home": "Portugal",
+        "away": "DR Congo",
+        "kickoff_iso": "2026-06-17T12:00:00-05:00",
+        "venue": "Houston"
+      }
+    }
+  },
+  {
+    "title": "Reactivo: Colombia en el Azteca",
+    "stage": "ideas",
+    "owner": "strange",
+    "pillar": "momento_del_partido",
+    "platforms_json": [
+      "x",
+      "threads",
+      "instagram",
+      "tiktok",
+      "youtube"
+    ],
+    "priority": 7,
+    "payload_json": {
+      "scheduled_for": "2026-06-17T20:35:00-06:00",
+      "hook": "CDMX vuelve a sonar: Colombia ya movió la quiniela.",
+      "body_brief": "Slot para gol colombiano, respuesta de Uzbekistán o descanso con marcador apretado. Enfatizar ambiente LatAm y pregunta rápida de marcador final.",
+      "template": "quiniela-challenge",
+      "cta": "Tu pick en predictagol.com",
+      "hashtag_brief": [
+        "#PredictaGol",
+        "#Mundial2026",
+        "#Colombia",
+        "#QuinielaPredictaGol"
+      ],
+      "notes": "Energía de sede mexicana + equipo LatAm. No usar logos oficiales del torneo.",
+      "target_match": {
+        "home": "Uzbekistan",
+        "away": "Colombia",
+        "kickoff_iso": "2026-06-17T20:00:00-06:00",
+        "venue": "Mexico City"
+      }
+    }
+  }
+]

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-06-10T19:17:08.970Z",
+  "event": {
+    "type": "create",
+    "actor": "seed-wave1",
+    "to_stage": "posted"
+  },
+  "card": {
+    "id": "c_1012",
+    "title": "Publicado: video corto con tres claves del grupo",
+    "stage": "posted",
+    "owner": "stark",
+    "pillar": "datos_curiosos",
+    "platforms": [
+      "tiktok"
+    ],
+    "payload": {
+      "permalink": "demo://tiktok/tres-claves"
+    },
+    "priority": 7,
+    "stalled_at": null,
+    "created_at": "2026-06-10 19:17:08",
+    "updated_at": "2026-06-10 19:17:08",
+    "posts": [],
+    "events": [
+      {
+        "id": 112,
+        "card_id": "c_1012",
+        "actor": "seed-wave1",
+        "type": "create",
+        "from_stage": null,
+        "to_stage": "posted",
+        "note": "Wave-1 demo seed",
+        "meta_json": "{\"owner\":\"stark\",\"pillar\":\"datos_curiosos\"}",
+        "created_at": "2026-06-10 19:17:08",
+        "meta": {
+          "owner": "stark",
+          "pillar": "datos_curiosos"
+        }
+      }
+    ]
+  }
+}
