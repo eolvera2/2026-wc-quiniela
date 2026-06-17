@@ -192,7 +192,10 @@ describe('publish/staticSite', () => {
     expect(index).toContain("document.documentElement.style.setProperty('--sticky-anchor-offset'");
     expect(index).toContain("document.documentElement.style.setProperty('--schedule-stack-height'");
     expect(index).toContain("timeZone: 'America/Mexico_City'");
-    expect(index).toContain("const defaultDate = hashDate || findDefaultDate();");
+    expect(index).toContain("if ('scrollRestoration' in history) history.scrollRestoration = 'manual';");
+    expect(index).toContain('function isReloadNavigation()');
+    expect(index).toContain('function resolveInitialDate(hashDate)');
+    expect(index).toContain("const defaultDate = resolveInitialDate(hashDate);");
     expect(index).toContain("day.scrollIntoView({ behavior, block: 'start' });");
     expect(index).toContain('new ResizeObserver(setStickyMetrics).observe(header);');
     expect(index).toContain('new ResizeObserver(setStickyMetrics).observe(homeHero);');

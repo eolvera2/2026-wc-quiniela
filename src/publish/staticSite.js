@@ -1298,6 +1298,7 @@ const HOME_SCHEDULE_SCRIPT = `
   const dateTabs = [...document.querySelectorAll('.date-tab[data-date]')];
   const days = [...document.querySelectorAll('.calendar-day[data-date]')];
   if (!dateTabs.length || !days.length) return;
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 
   function mexicoCityDateKey(date = new Date()) {
     const parts = new Intl.DateTimeFormat('en-CA', {
@@ -1325,6 +1326,18 @@ const HOME_SCHEDULE_SCRIPT = `
     return days.find((day) => day.dataset.date)?.dataset.date || '';
   }
 
+  function isReloadNavigation() {
+    const [navigation] = performance.getEntriesByType?.('navigation') || [];
+    return navigation?.type === 'reload' || performance.navigation?.type === 1;
+  }
+
+  function resolveInitialDate(hashDate) {
+    const today = findDefaultDate();
+    if (hashDate && !isReloadNavigation() && days.some((day) => day.dataset.date === hashDate)) return hashDate;
+    if (hashDate && today && hashDate !== today) history.replaceState(null, '', '#fecha-' + today);
+    return today;
+  }
+
   function scrollToDate(dateKey, behavior = 'auto') {
     const day = document.querySelector('#fecha-' + dateKey);
     if (!day) return;
@@ -1343,7 +1356,7 @@ const HOME_SCHEDULE_SCRIPT = `
   });
 
   const hashDate = location.hash.match(/^#fecha-(\\d{4}-\\d{2}-\\d{2})$/)?.[1];
-  const defaultDate = hashDate || findDefaultDate();
+  const defaultDate = resolveInitialDate(hashDate);
   if (defaultDate) scrollToDate(defaultDate);
 })();
 `;
