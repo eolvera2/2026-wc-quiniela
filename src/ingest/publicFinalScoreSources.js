@@ -120,11 +120,17 @@ export async function fetchAndParseSource(source, { fetchImpl = globalThis.fetch
 }
 
 async function findEspnScoreboardSources(fixture, { fetchImpl, scoreboardCache }) {
-  const dateKey = localDateKey(fixture.kickoffUtc);
-  const scoreboard = await fetchEspnScoreboard(dateKey, { fetchImpl, scoreboardCache });
-  if (!scoreboard) return [];
+  const localDate = localDateKey(fixture.kickoffUtc);
+  let matchedEvent = null;
+  for (const dateKey of espnScoreboardDateKeys(fixture)) {
+    const scoreboard = await fetchEspnScoreboard(dateKey, { fetchImpl, scoreboardCache });
+    if (!scoreboard) continue;
 
-  const event = (scoreboard.events || []).find((candidate) => espnEventMatchesFixture(candidate, fixture));
+    matchedEvent = (scoreboard.events || []).find((candidate) => espnEventMatchesFixture(candidate, fixture));
+    if (matchedEvent) break;
+  }
+
+  const event = matchedEvent;
   const competition = event?.competitions?.[0];
   if (!event || !competition?.status?.type?.completed) return [];
 
@@ -141,13 +147,19 @@ async function findEspnScoreboardSources(fixture, { fetchImpl, scoreboardCache }
   return [{
     homeTeam: fixture.homeTeam,
     awayTeam: fixture.awayTeam,
-    kickoffLocalDate: dateKey,
+    kickoffLocalDate: localDate,
     homeScore,
     awayScore,
     sourceName: 'ESPN',
     sourceUrl: summaryUrl,
     parserType: 'espn-scoreboard',
   }];
+}
+
+function espnScoreboardDateKeys(fixture) {
+  const localDate = localDateKey(fixture.kickoffUtc);
+  const utcDate = new Date(fixture.kickoffUtc).toISOString().slice(0, 10);
+  return [...new Set([localDate, utcDate])];
 }
 
 async function fetchEspnScoreboard(dateKey, { fetchImpl, scoreboardCache }) {

@@ -137,6 +137,57 @@ describe('ingest/publicFinalScoreSources', () => {
     });
   });
 
+  it('checks the ESPN UTC scoreboard date for late local kickoffs', async () => {
+    db = openDb(':memory:');
+    seedStaticData(db);
+    tmpDir = mkdtempSync(join(tmpdir(), 'final-score-sources-test-'));
+    const sourcesPath = join(tmpDir, 'final-score-sources.json');
+    writeFileSync(sourcesPath, JSON.stringify([]));
+
+    nock.disableNetConnect();
+    nock('https://site.api.espn.com')
+      .get('/apis/site/v2/sports/soccer/fifa.world/scoreboard')
+      .query({ dates: '20260616' })
+      .reply(200, { events: [] })
+      .get('/apis/site/v2/sports/soccer/fifa.world/scoreboard')
+      .query({ dates: '20260617' })
+      .reply(200, {
+        events: [{
+          id: '760431',
+          links: [{ rel: ['summary'], href: 'https://www.espn.com/soccer/match/_/gameId/760431/jordan-austria' }],
+          competitions: [{
+            status: { type: { completed: true } },
+            competitors: [
+              { homeAway: 'home', score: '3', team: { abbreviation: 'AUT', displayName: 'Austria' } },
+              { homeAway: 'away', score: '1', team: { abbreviation: 'JOR', displayName: 'Jordan' } },
+            ],
+          }],
+        }],
+      });
+
+    const result = await retrievePublicFinalScores(db, {
+      now: '2026-06-17T07:00:00.000Z',
+      sourcesPath,
+      limit: 1,
+    });
+
+    expect(result.applied).toBe(1);
+    expect(result.warnings).toEqual([]);
+    const row = db.prepare(`
+      SELECT final_home_score, final_away_score, final_score_source_name, final_score_source_url
+      FROM fixtures f
+      JOIN teams h ON h.id = f.home_team_id
+      JOIN teams a ON a.id = f.away_team_id
+      WHERE h.name = 'Austria' AND a.name = 'Jordan'
+    `).get();
+    expect(row).toEqual({
+      final_home_score: 3,
+      final_away_score: 1,
+      final_score_source_name: 'ESPN',
+      final_score_source_url: 'https://www.espn.com/soccer/match/_/gameId/760431/jordan-austria',
+    });
+  });
+
   it('warns when neither configured sources nor ESPN scoreboard have the final score', async () => {
     db = openDb(':memory:');
     seedStaticData(db);
@@ -148,6 +199,9 @@ describe('ingest/publicFinalScoreSources', () => {
     nock('https://site.api.espn.com')
       .get('/apis/site/v2/sports/soccer/fifa.world/scoreboard')
       .query({ dates: '20260614' })
+      .reply(200, { events: [] })
+      .get('/apis/site/v2/sports/soccer/fifa.world/scoreboard')
+      .query({ dates: '20260615' })
       .reply(200, { events: [] });
 
     const result = await retrievePublicFinalScores(db, {

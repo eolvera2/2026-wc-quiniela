@@ -115,5 +115,23 @@
     "awayScore": 0,
     "sourceName": "ESPN",
     "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/760428/cape-verde-spain"
+  },
+  {
+    "homeTeam": "Argentina",
+    "awayTeam": "Algeria",
+    "kickoffLocalDate": "2026-06-16",
+    "homeScore": 3,
+    "awayScore": 0,
+    "sourceName": "Yahoo Sports",
+    "sourceUrl": "https://sports.yahoo.com/soccer/live/world-cup-2026-scores-results-schedule-live-updates-135432982.html"
+  },
+  {
+    "homeTeam": "Austria",
+    "awayTeam": "Jordan",
+    "kickoffLocalDate": "2026-06-16",
+    "homeScore": 3,
+    "awayScore": 1,
+    "sourceName": "ESPN",
+    "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/760431/jordan-austria"
   }
 ]
