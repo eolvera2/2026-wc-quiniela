@@ -2,6 +2,52 @@ export const ACTIVE_SOCIAL_PLATFORMS = ['instagram', 'x', 'threads'];
 export const OPTIONAL_SOCIAL_PLATFORMS = ['tiktok', 'youtube'];
 export const RETIRED_DAILY_PLATFORMS = ['facebook'];
 
+const INSTAGRAM_PAUSE_DEFAULT = 'paused';
+const INSTAGRAM_PAUSE_VALUE = String(process.env.INSTAGRAM_SAFE_MODE || INSTAGRAM_PAUSE_DEFAULT).toLowerCase();
+const INSTAGRAM_ACTIVE_VALUES = new Set(['active', 'off', 'false', '0']);
+
+export function normalizePlatform(value) {
+  const key = String(value || '').toLowerCase();
+  if (key === 'twitter') return 'x';
+  if (key === 'ig') return 'instagram';
+  if (key === 'th') return 'threads';
+  if (key === 'tt') return 'tiktok';
+  if (key === 'yt') return 'youtube';
+  return key;
+}
+
+export function isInstagramPaused() {
+  return !INSTAGRAM_ACTIVE_VALUES.has(INSTAGRAM_PAUSE_VALUE);
+}
+
+export function platformStatus(value) {
+  const platform = normalizePlatform(value);
+  if (platform === 'instagram' && isInstagramPaused()) {
+    return {
+      state: 'paused',
+      reason: 'Instagram account under review; pause posting until appeal/escalation is resolved.',
+    };
+  }
+  return { state: 'active', reason: null };
+}
+
+export function isPlatformPaused(value) {
+  return platformStatus(value).state === 'paused';
+}
+
+export function postablePlatforms(values = []) {
+  const normalized = (Array.isArray(values) ? values : [values]).map(normalizePlatform);
+  return normalized.filter((platform, index) => (
+    isKnownPlatform(platform) &&
+    !isPlatformPaused(platform) &&
+    normalized.indexOf(platform) === index
+  ));
+}
+
+export function platformStatusMap(platforms = ACTIVE_SOCIAL_PLATFORMS) {
+  return Object.fromEntries(platforms.map((platform) => [platform, platformStatus(platform)]));
+}
+
 export const PLATFORM_LABELS = {
   instagram: 'IG',
   x: 'X',
@@ -74,16 +120,6 @@ export const POST_WINDOWS = {
     urgencyMinutes: 120,
   },
 };
-
-export function normalizePlatform(value) {
-  const key = String(value || '').toLowerCase();
-  if (key === 'twitter') return 'x';
-  if (key === 'ig') return 'instagram';
-  if (key === 'th') return 'threads';
-  if (key === 'tt') return 'tiktok';
-  if (key === 'yt') return 'youtube';
-  return key;
-}
 
 export function isKnownPlatform(value) {
   const platform = normalizePlatform(value);

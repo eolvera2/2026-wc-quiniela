@@ -200,6 +200,29 @@ a:focus-visible {
   background: linear-gradient(135deg, rgba(22,163,74,.95), rgba(7,94,40,.95)) !important;
 }
 
+.channel-banner {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  margin: .8rem clamp(.8rem, 2vw, 1.5rem) 0;
+  border: 1px solid rgba(244, 189, 79, .45);
+  border-radius: var(--radius-l);
+  padding: .75rem 1rem;
+  color: var(--color-navy-950);
+  background: linear-gradient(135deg, rgba(244, 189, 79, .96), rgba(215, 234, 31, .9));
+  box-shadow: var(--shadow-card);
+}
+
+.channel-banner strong {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.channel-banner span {
+  font-weight: 700;
+}
+
 .asset-meta {
   margin: .5rem 0 0;
   color: var(--text-secondary);
@@ -223,6 +246,23 @@ a:focus-visible {
   color: var(--color-jaguar-200, #e6f7ff);
   font: 600 .68rem/1 var(--font-body);
   letter-spacing: .04em;
+}
+
+.platform-pill--paused {
+  opacity: .62;
+  filter: grayscale(.45);
+  text-decoration: line-through;
+}
+
+.action-warning {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(244, 189, 79, .5);
+  border-radius: var(--radius-pill);
+  padding: .55rem .8rem;
+  color: var(--color-jaguar-300);
+  background: rgba(244, 189, 79, .12);
+  font-weight: 800;
 }
 
 .due-mini,

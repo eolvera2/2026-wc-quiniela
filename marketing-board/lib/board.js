@@ -1,5 +1,11 @@
 import { listCards, STAGES } from './cards.js';
-import { POST_WINDOWS, dueStatus } from './socialStrategy.js';
+import {
+  ACTIVE_SOCIAL_PLATFORMS,
+  POST_WINDOWS,
+  dueStatus,
+  platformStatusMap,
+  postablePlatforms,
+} from './socialStrategy.js';
 
 const HOUR = 60 * 60 * 1000;
 const AGENT_OWNERS = new Set(['widow', 'strange', 'shuri', 'cap', 'stark']);
@@ -60,6 +66,7 @@ export function getBoardPayload(db) {
   return {
     columns,
     generated_at: now.toISOString(),
-    active_platforms: ['instagram', 'x', 'threads'],
+    active_platforms: postablePlatforms(ACTIVE_SOCIAL_PLATFORMS),
+    platform_status: platformStatusMap(ACTIVE_SOCIAL_PLATFORMS),
   };
 }

@@ -2,7 +2,12 @@ import crypto from 'node:crypto';
 import { parseJson } from './db.js';
 import { writeCardSnapshot } from './snapshot.js';
 import { notifyToBePosted } from './notify.js';
-import { ACTIVE_SOCIAL_PLATFORMS, OPTIONAL_SOCIAL_PLATFORMS, normalizePlatform } from './socialStrategy.js';
+import {
+  ACTIVE_SOCIAL_PLATFORMS,
+  OPTIONAL_SOCIAL_PLATFORMS,
+  normalizePlatform,
+  postablePlatforms,
+} from './socialStrategy.js';
 
 export const STAGES = [
   'pulse_signals',
@@ -269,7 +274,8 @@ export async function upsertPost(db, cardId, { platform, status, permalink = nul
 }
 
 export function allPlatformsDone(card, posts) {
-  const required = card.platforms.length ? card.platforms : ['tiktok'];
+  const required = postablePlatforms(card.platforms.length ? card.platforms : ['tiktok']);
+  if (!required.length) return false;
   const done = new Set(posts.filter((post) => ['posted', 'posted_manual', 'skipped'].includes(post.status)).map((post) => post.platform));
   return required.every((platform) => done.has(platform));
 }

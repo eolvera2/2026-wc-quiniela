@@ -3,6 +3,7 @@ import * as youtube from './youtube.js';
 import * as instagram from './meta-ig.js';
 import * as threads from './meta-threads.js';
 import * as tiktok from './tiktok.js';
+import { isPlatformPaused, platformDisplayName, platformStatus } from '../lib/socialStrategy.js';
 
 export const adapters = {
   x,
@@ -17,7 +18,17 @@ export const adapters = {
 export async function publishCard(card) {
   const platforms = parsePlatforms(card?.platforms_json);
   const results = await Promise.allSettled(
-    platforms.map((platform) => adapters[platform]?.publish(card) ?? Promise.resolve({ status: 'skipped', error: `no adapter for ${platform}` })),
+    platforms.map((platform) => {
+      if (isPlatformPaused(platform)) {
+        const status = platformStatus(platform);
+        return Promise.resolve({
+          status: 'skipped',
+          permalink: null,
+          error: `${platformDisplayName(platform)} paused: ${status.reason}`,
+        });
+      }
+      return adapters[platform]?.publish(card) ?? Promise.resolve({ status: 'skipped', error: `no adapter for ${platform}` });
+    }),
   );
 
   return platforms.map((platform, index) => {

@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { getDb, runMigrations } from './lib/db.js';
 import { authenticatePassphrase, isAuthEnabled, requireBoardAuth, setAuthCookie } from './lib/auth.js';
 import { getBoardPayload } from './lib/board.js';
+import { isPlatformPaused, normalizePlatform, platformDisplayName } from './lib/socialStrategy.js';
 import {
   advanceCard,
   allPlatformsDone,
@@ -177,7 +178,10 @@ app.post(
   asyncRoute(async (req, res) => {
     const card = getCardFull(db, req.params.id);
     if (!card) return res.status(404).json({ error: 'card not found' });
-    const platform = req.body?.platform || 'tiktok';
+    const platform = normalizePlatform(req.body?.platform || 'tiktok');
+    if (isPlatformPaused(platform)) {
+      return res.status(409).json({ error: `${platformDisplayName(platform)} is paused for account review` });
+    }
     await upsertPost(db, card.id, {
       platform,
       status: 'posted_manual',

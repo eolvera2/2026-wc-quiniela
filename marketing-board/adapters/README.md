@@ -65,6 +65,8 @@ Env vars:
 
 Publishes Reels when `video.path` exists; otherwise publishes a feed image using `assets['1080x1350']`. Caption includes the hashtag block.
 
+Instagram is skipped while `INSTAGRAM_SAFE_MODE` is paused (the default during account review). Set `INSTAGRAM_SAFE_MODE=active` only after recovery and warmup.
+
 Env vars:
 
 - `IG_BUSINESS_ID`
@@ -106,4 +108,3 @@ node marketing-board/adapters/smoke.js
 ```
 
 Expected: five results, with X/YouTube/Instagram/Threads in `dry_run` and TikTok in `manual_required` unless `FLIP_TIKTOK_AUTO=true`.
-

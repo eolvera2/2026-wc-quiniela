@@ -9,6 +9,35 @@ The daily workflow is optimized for the current low-effort social plan:
 - Facebook is intentionally not generated as a daily posting target.
 - Cards in **To Be Posted** include schedule windows, paste-ready copy, platform tabs, assets, and manual posted confirmation.
 
+## Instagram Safe Mode
+
+Instagram is paused while `@predictagol` is under account review. By default, `INSTAGRAM_SAFE_MODE` is treated as paused, so generated daily cards continue for X/Threads but do not target Instagram. Set `INSTAGRAM_SAFE_MODE=active` only after the account is recovered and the restart checklist below is complete.
+
+While paused:
+
+1. Do not publish, copy, open, or mark Instagram cards as posted.
+2. Continue X and Threads tasks normally.
+3. Preserve Instagram captions/assets as evidence or drafts only.
+4. Do not create replacement Instagram accounts while escalation is pending.
+
+### Appeal/escalation checklist
+
+1. Screenshot the disabled-account screen, especially if it says "You cannot request another review of this decision."
+2. Check the account email and spam/junk folders for Instagram/Meta messages. If one email has a reply or verification path, use that thread.
+3. Try the in-app path once: log in, follow any visible "Learn more", "Disagree with decision", "Request review", or "Submit appeal" flow. If it says no more reviews are available, stop and preserve the screenshot.
+4. Try the official Instagram Help Center disabled/deactivated-account path from a clean browser session. If it redirects or blocks another review, document that result.
+5. If PredictaGol is linked to Meta Business Suite, Business Support, Account Quality, or Meta Verified support, open one support request for a disabled Instagram account.
+6. Use concise language: original Spanish soccer commentary, manually published by the owner, no bots, no paid picks, no prizes, no betting sales, no impersonation.
+7. Wait after one escalation. Repeated duplicate appeals can worsen the trust signal.
+
+### Restart checklist after recovery
+
+1. Complete profile trust signals: logo/profile photo, bio, website, contact email, verified phone/email, 2FA, stable device/IP, and linked Meta Account Center/Business assets if available.
+2. Add/verify a landing-page disclaimer that PredictaGol is informational/entertainment soccer content, not a betting operator, paid-tip service, or prize promotion.
+3. Start with one low-risk intro/static brand post; avoid polls, reels, match bursts, and aggressive score-pick wording.
+4. Wait before posting again, then keep Instagram to one post per day until the account has stable reach and no warning banners.
+5. Re-enable Instagram by setting `INSTAGRAM_SAFE_MODE=active`.
+
 ## Boot
 
 ```powershell
@@ -49,16 +78,16 @@ This creates a focused set of timed posting tasks for up to three featured match
 |---|---|---|---|
 | T-48h | Breakdown carousel | Breakdown thread | Short list |
 | T-24h | Feed graphic/carousel | Single hot take | Cross-posted graphic with rewritten caption |
-| T-4h | Story poll with animated MP4 + PNG fallback | Native poll | Debate prompt |
+| T-4h | Story poll with animated MP4 + lyric-free instrumental audio + PNG fallback | Native poll | Debate prompt |
 | T-60m | 7-30s Reel storyboard | Thread | Match-thread reply |
 | T-15m | — | Quote post or single hot take | — |
-| Halftime | — | Live reply | Match-thread reply |
+| Halftime | — | Live reply with 1080x1080 graphic | Match-thread reply with 1080x1080 graphic |
 | FT+30 | Accountability recap with 1080x1080 visual | Thread | Accountability prompt |
-| Next morning | Carousel for saves | — | Short list |
+| Next morning | Saveable illustrated recap visual | — | Short list |
 
 Use `--dry-run` to preview without writing cards.
 
-FT+30 recap cards generate a square prediction-vs-reality visual for Instagram by default. The graphic is intentionally result-neutral at seed time, so the poster can add the final score/context in the caption or Reel/Story text without regenerating the card.
+Every seeded card must include a rendered visual asset. FT+30 recap cards generate a square prediction-vs-reality visual once the final score exists in `data/public/final-scores.json`: green gradient for exact-score hits (`¡EN EL BLANCO!`, `¿NO QUE NO?`, `¡VICTORIA!`), standard brand background for right winner but wrong score (`CASI, CASI`, `UFF, POR POCO`, `ESTUVO CERCA`), and red gradient for wrong outcome (`¡VAYA SORPRESA!`, `¿QUÉ PASÓ?`, `OUCH, ESO DUELE`). HT cards generate a live-debate graphic for X/Threads, and next-morning cards generate a saveable abstract soccer illustration with match flags and PGS® context.
 
 ## Reusable T-4 poll videos
 
@@ -70,7 +99,7 @@ node marketing-board/scripts/render-poll-video.mjs --home=IRN --away=NZL
 
 The output includes:
 
-- `animated_mp4.mp4` for Instagram-first posting.
+- `animated_mp4.mp4` for Instagram-first posting, including generated lyric-free instrumental suspense/sports music.
 - `1080x1080.png` as the fallback image if the platform rejects video upload.
 
 ## Manual posting flow

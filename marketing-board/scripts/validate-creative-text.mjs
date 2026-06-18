@@ -4,15 +4,23 @@
 // before declaring images ready.
 
 import Database from 'better-sqlite3';
+import { execFileSync } from 'node:child_process';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import ffmpeg from '@ffmpeg-installer/ffmpeg';
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(scriptDir, '..', '..');
 process.chdir(repoRoot);
 
 const { templates } = await import('../renderers/index.js');
-const { ACTIVE_SOCIAL_PLATFORMS, OPTIONAL_SOCIAL_PLATFORMS, RETIRED_DAILY_PLATFORMS } = await import('../lib/socialStrategy.js');
+const {
+  ACTIVE_SOCIAL_PLATFORMS,
+  OPTIONAL_SOCIAL_PLATFORMS,
+  RETIRED_DAILY_PLATFORMS,
+  isPlatformPaused,
+  platformDisplayName,
+} = await import('../lib/socialStrategy.js');
 const TEMPLATE_BY_PILLAR = {
   pronostico_del_dia: 'pronostico-del-dia',
   quiniela_challenge: 'quiniela-challenge',
@@ -51,6 +59,7 @@ const rows = db
   .all();
 
 let failed = 0;
+const instagramScheduleRows = [];
 const BANNED_SOCIAL_TERMS = [
   'momios',
   'apuesta',
@@ -76,6 +85,14 @@ const BAIT_PATTERNS = [
   /\betiqueta\s+5\b/i,
   /\bcomenta\s+[ab]\b/i,
   /\bdale like si\b/i,
+];
+const IG_RISK_PATTERNS = [
+  /\bsticker sugerido\b/i,
+  /\bnuestro pick\b/i,
+  /\bpick (?:final|temprano|oficial)\b/i,
+  /\bpronóstico oficial\b/i,
+  /\balgoritmo\b/i,
+  /\bveredicto\b/i,
 ];
 
 function socialText(payload) {
@@ -110,6 +127,10 @@ function validatePolicy(row, payload) {
   const text = socialText(payload);
   const lower = text.toLowerCase();
   for (const platform of platforms) {
+    if (isPlatformPaused(platform)) {
+      console.log(`  ✗ ${row.id} targets paused platform: ${platformDisplayName(platform)}`);
+      failed += 1;
+    }
     if (RETIRED_DAILY_PLATFORMS.includes(platform)) {
       console.log(`  ✗ ${row.id} uses retired daily platform: ${platform}`);
       failed += 1;
@@ -141,6 +162,28 @@ function validatePolicy(row, payload) {
   }
 }
 
+function validateInstagramCopy(row, payload) {
+  const platforms = Array.isArray(payload.platforms) ? payload.platforms : [];
+  if (!platforms.includes('instagram')) return;
+  const igCopy = payload.platform_copy?.instagram || {};
+  const text = [igCopy.caption, igCopy.text, igCopy.cta, payload.caption, payload.cta]
+    .filter(Boolean)
+    .join('\n');
+  for (const pattern of IG_RISK_PATTERNS) {
+    if (pattern.test(text)) {
+      console.log(`  ✗ ${row.id} [instagram] contains risky account-review phrasing ${pattern}`);
+      failed += 1;
+    }
+  }
+}
+
+function collectInstagramSchedule(row, payload) {
+  const platforms = Array.isArray(payload.platforms) ? payload.platforms : [];
+  if (!platforms.includes('instagram')) return;
+  const localDate = String(payload.scheduled_for || '').slice(0, 10) || 'unscheduled';
+  instagramScheduleRows.push({ id: row.id, localDate });
+}
+
 function normalizeCopyForDupe(value) {
   return String(value || '').toLowerCase().replace(/#[\p{L}\p{N}_]+/gu, '').replace(/\s+/g, ' ').trim();
 }
@@ -159,13 +202,34 @@ function validateDuplicatePlatformCopy(row, payload) {
   }
 }
 
+function mp4HasAudio(assetPath) {
+  if (!assetPath) return false;
+  try {
+    execFileSync(ffmpeg.path, ['-hide_banner', '-i', resolve(repoRoot, assetPath)], { stdio: 'pipe' });
+  } catch (error) {
+    const output = Buffer.concat([
+      Buffer.isBuffer(error.stdout) ? error.stdout : Buffer.from(String(error.stdout || '')),
+      Buffer.isBuffer(error.stderr) ? error.stderr : Buffer.from(String(error.stderr || '')),
+    ]).toString('utf8');
+    return /\bAudio:/i.test(output);
+  }
+  return false;
+}
+
 for (const row of rows) {
   const payload = JSON.parse(row.payload_json || '{}');
   row.platforms = JSON.parse(row.platforms_json || '[]');
   payload.platforms = row.platforms;
   validatePolicy(row, payload);
+  validateInstagramCopy(row, payload);
+  collectInstagramSchedule(row, payload);
   validateHashtags(row, payload);
   validateDuplicatePlatformCopy(row, payload);
+  const assets = payload.assets && typeof payload.assets === 'object' ? payload.assets : {};
+  if (Object.keys(assets).length === 0) {
+    console.log(`  ✗ ${row.id} requires at least one rendered visual asset`);
+    failed += 1;
+  }
   if (!payload.template && !payload.format_variant && !payload.assets) {
     console.log(`  ✓ ${row.id} [text-only] policy checks passed`);
     continue;
@@ -182,13 +246,15 @@ for (const row of rows) {
     continue;
   }
   if (payload.template === 'poll-question-gif' || payload.template === 'poll-question-video' || payload.format_variant === 'poll_question_gif' || payload.format_variant === 'poll_question_mp4') {
-    const assets = payload.assets && typeof payload.assets === 'object' ? payload.assets : {};
     const missing = ['animated_mp4', '1080x1080'].filter((key) => !assets[key]);
     if (missing.length) {
       console.log(`  ✗ ${row.id} [poll-question-video] missing assets: ${missing.join(', ')}`);
       failed += 1;
+    } else if (!mp4HasAudio(assets.animated_mp4)) {
+      console.log(`  ✗ ${row.id} [poll-question-video] animated MP4 is missing audio`);
+      failed += 1;
     } else {
-      console.log(`  ✓ ${row.id} [poll-question-video] animated MP4 and PNG fallback present`);
+      console.log(`  ✓ ${row.id} [poll-question-video] animated MP4 with audio and PNG fallback present`);
     }
     continue;
   }
@@ -209,7 +275,9 @@ for (const row of rows) {
   else if (templateName === 'quiniela-challenge') required = payload.challengeQuestion || card.title;
   else if (templateName === 'datos-curiosos') required = payload.statLine || card.title;
   else if (templateName === 'data-callout') required = payload.eyebrow || payload.bigNumber || card.title;
-  else if (templateName === 'accountability-recap') required = payload.headline || 'Tocó rendir cuentas';
+  else if (templateName === 'halftime-debate') required = payload.question || card.title;
+  else if (templateName === 'accountability-recap') required = payload.headline || '¿Acierto o error?';
+  else if (templateName === 'next-morning-saveable') required = payload.lesson || payload.pgsScore || card.title;
   else if (templateName === 'tu-equipo-tu-data') required = payload.homeTeam || 'México';
   else required = card.title;
 
@@ -231,6 +299,18 @@ for (const row of rows) {
 }
 
 db.close();
+
+const igByDate = new Map();
+for (const row of instagramScheduleRows) {
+  if (!igByDate.has(row.localDate)) igByDate.set(row.localDate, []);
+  igByDate.get(row.localDate).push(row.id);
+}
+for (const [localDate, ids] of igByDate) {
+  if (ids.length > 1) {
+    console.log(`  ✗ Instagram warmup pacing exceeded on ${localDate}: ${ids.join(', ')}`);
+    failed += 1;
+  }
+}
 
 if (failed > 0) {
   console.log(`\n${failed} size(s) failed validation.`);
