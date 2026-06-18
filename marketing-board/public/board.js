@@ -50,6 +50,7 @@
     filter: '',
     activeCard: null,
     activePlatform: null,
+    platformStatus: {},
     pollTimer: null,
     lastModified: null,
     actionMode: null,
@@ -64,6 +65,7 @@
   const retryButton = document.querySelector('#retryButton');
   const dismissToast = document.querySelector('#dismissToast');
   const drawer = document.querySelector('#cardDrawer');
+  const channelBanner = document.querySelector('#channelBanner');
   const backdrop = document.querySelector('#drawerBackdrop');
   const drawerClose = document.querySelector('#drawerClose');
   const drawerId = document.querySelector('#drawerId');
@@ -159,6 +161,7 @@
       hideToast();
       if (!options.force && nextVersion && nextVersion === state.version) return;
       state.version = nextVersion;
+      state.platformStatus = data.platform_status || {};
       state.cards = normalizeCards(data);
       try {
         renderBoard();
@@ -246,6 +249,7 @@
   function renderBoard() {
     const scrollState = captureScrollState();
     const filtered = state.cards.filter(matchesFilter);
+    renderChannelBanner();
     board.innerHTML = '';
     stages.forEach((stage) => {
       const cards = sortCardsForStage(stage.key, filtered.filter((card) => card.stage === stage.key));
@@ -253,6 +257,22 @@
       board.appendChild(renderColumn(stage, cards, allStageCards.length, allStageCards));
     });
     restoreScrollState(scrollState);
+  }
+
+  function renderChannelBanner() {
+    if (!channelBanner) return;
+    const paused = Object.entries(state.platformStatus || {})
+      .filter(([, status]) => status?.state === 'paused');
+    if (!paused.length) {
+      channelBanner.hidden = true;
+      channelBanner.innerHTML = '';
+      return;
+    }
+    channelBanner.hidden = false;
+    channelBanner.innerHTML = paused.map(([platform, status]) => `
+      <strong>${escapeHtml(platformDisplayName(platform))} pausado</strong>
+      <span>${escapeHtml(status.reason || 'Publicación pausada temporalmente.')}</span>
+    `).join('');
   }
 
   function sortCardsForStage(stageKey, cards) {
@@ -524,6 +544,7 @@
     drawerTitle.textContent = card.title;
     const [chipBg, chipText] = pillarColors[card.pillar] || ['#b7c3d7', '#020f2a'];
     const progress = postProgress(card);
+    const platformPaused = isPlatformPaused(state.activePlatform);
     drawerMeta.innerHTML = `
       <span class="chip" style="--chip-bg:${chipBg};--chip-text:${chipText}">${escapeHtml(formatPillar(card.pillar))}</span>
       ${card.platforms.map(platformPill).join('')}
@@ -540,7 +561,7 @@
   }
 
   function postProgress(card) {
-    const platforms = card.platforms || [];
+    const platforms = postableCardPlatforms(card);
     const posts = Array.isArray(card.posts) ? card.posts : [];
     const done = new Set(
       posts
@@ -552,6 +573,10 @@
       total: platforms.length,
       pending: platforms.filter((p) => !done.has(String(p).toLowerCase())),
     };
+  }
+
+  function postableCardPlatforms(card) {
+    return (card.platforms || []).filter((platform) => !isPlatformPaused(platform));
   }
 
   function renderPlatformTabs(card) {
@@ -703,6 +728,7 @@
 
   function renderActions(card) {
     const tiktokFallback = isTikTokFallback(card);
+    const platformPaused = isPlatformPaused(state.activePlatform);
     actionReasonWrap.hidden = !['revise', 'kill', 'confirm_posted'].includes(state.actionMode);
     snoozeWrap.hidden = state.actionMode !== 'snooze';
     const submitLabel = SUBMIT_LABELS[state.actionMode] || 'Confirmar';
@@ -710,10 +736,11 @@
     const showBulkButton = (card.stage === 'to_be_posted' || card.stage === 'posted') && progress.total > 0 && progress.done < progress.total;
     drawerActions.innerHTML = `
       ${card.stage === 'to_be_posted' ? '<button type="button" class="success" data-action="approve_publish" aria-label="Aprobar y publicar carta">Aprobar y publicar</button>' : ''}
-      ${hasCopyForPlatform(card, state.activePlatform) ? `<button type="button" class="secondary" data-action="copy_caption" aria-label="Copiar texto al portapapeles">Copiar ${escapeHtml(platformDisplayName(state.activePlatform))}</button>` : ''}
-      ${copyReplyForPlatform(card, state.activePlatform) ? '<button type="button" class="secondary" data-action="copy_reply" aria-label="Copiar reply/link">Copiar reply/link</button>' : ''}
-      ${openUrlForPlatform(state.activePlatform) ? `<button type="button" class="secondary" data-action="open_platform" aria-label="Abrir plataforma">Abrir ${escapeHtml(platformDisplayName(state.activePlatform))}</button>` : ''}
-      ${card.stage === 'to_be_posted' || card.stage === 'posted' ? `<button type="button" class="secondary" data-mode="confirm_posted" aria-label="Marcar publicado en una plataforma">Marcar publicado en ${escapeHtml(platformDisplayName(state.activePlatform))}</button>` : ''}
+      ${platformPaused ? `<span class="action-warning">${escapeHtml(platformDisplayName(state.activePlatform))} está pausado por revisión de cuenta.</span>` : ''}
+      ${!platformPaused && hasCopyForPlatform(card, state.activePlatform) ? `<button type="button" class="secondary" data-action="copy_caption" aria-label="Copiar texto al portapapeles">Copiar ${escapeHtml(platformDisplayName(state.activePlatform))}</button>` : ''}
+      ${!platformPaused && copyReplyForPlatform(card, state.activePlatform) ? '<button type="button" class="secondary" data-action="copy_reply" aria-label="Copiar reply/link">Copiar reply/link</button>' : ''}
+      ${!platformPaused && openUrlForPlatform(state.activePlatform) ? `<button type="button" class="secondary" data-action="open_platform" aria-label="Abrir plataforma">Abrir ${escapeHtml(platformDisplayName(state.activePlatform))}</button>` : ''}
+      ${!platformPaused && (card.stage === 'to_be_posted' || card.stage === 'posted') ? `<button type="button" class="secondary" data-mode="confirm_posted" aria-label="Marcar publicado en una plataforma">Marcar publicado en ${escapeHtml(platformDisplayName(state.activePlatform))}</button>` : ''}
       ${showBulkButton ? `<button type="button" class="success" data-action="confirm_all_posted" aria-label="Marcar todas las plataformas como publicadas">Marcar TODAS publicadas (mover a POSTED)</button>` : ''}
       <button type="button" class="secondary" data-mode="revise" aria-label="Pedir cambios">Pedir cambios</button>
       <button type="button" class="secondary" data-mode="snooze" aria-label="Posponer carta">Posponer</button>
@@ -817,6 +844,10 @@
     if ((action === 'revise' || action === 'kill') && !actionReason.value.trim()) {
       showToast('Escribe una nota breve para el resto del equipo antes de continuar.');
       actionReason.focus();
+      return;
+    }
+    if (action === 'confirm_posted' && isPlatformPaused(state.activePlatform)) {
+      showToast(`${platformDisplayName(state.activePlatform)} está pausado; no se puede marcar como publicado.`);
       return;
     }
     await sendAction(card, action);
@@ -1125,6 +1156,9 @@
   }
 
   function platformInstructions(platform, activeCopy) {
+    if (isPlatformPaused(platform)) {
+      return `${platformDisplayName(platform)} está pausado mientras resolvemos la revisión de cuenta.\n1. No abras ni publiques en esta plataforma.\n2. Usa X/Threads si están activos.\n3. Conserva esta copia como evidencia o borrador, no como tarea para publicar.`;
+    }
     const format = activeCopy.format ? `Formato: ${activeCopy.format}` : null;
     const customInstructions = activeCopy.instructions || null;
     const steps = [
@@ -1151,12 +1185,19 @@
     const key = String(platform).toLowerCase();
     const color = platformColors[key] || '#326295';
     const label = PLATFORM_LABEL[key] || String(platform).toUpperCase();
-    return `<span class="platform-pill" style="--platform-color:${color}">${escapeHtml(label)}</span>`;
+    const paused = isPlatformPaused(key);
+    const title = paused ? `${platformDisplayName(platform)} pausado` : platformDisplayName(platform);
+    return `<span class="platform-pill${paused ? ' platform-pill--paused' : ''}" title="${escapeAttribute(title)}" style="--platform-color:${color}">${escapeHtml(label)}${paused ? ' ⏸' : ''}</span>`;
   }
 
   function platformDisplayName(platform) {
     const key = String(platform).toLowerCase();
     return PLATFORM_NAME[key] || String(platform);
+  }
+
+  function isPlatformPaused(platform) {
+    const key = String(platform || '').toLowerCase();
+    return state.platformStatus?.[key]?.state === 'paused';
   }
 
   function initials(name) {
