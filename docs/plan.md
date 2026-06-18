@@ -172,12 +172,12 @@ To overcome the new-domain authority gap, drive direct traffic via social. 94% o
 |---|---|---|---|
 | T-48h | Breakdown carousel | Breakdown thread | Short list |
 | T-24h | Feed graphic/carousel | Single hot take | Cross-posted graphic with rewritten caption |
-| T-4h | Story poll with animated MP4 + PNG fallback | Native poll | Debate prompt |
+| T-4h | Story poll with animated MP4 + music + PNG fallback | Native poll | Debate prompt |
 | T-60m | 7-30s Reel storyboard | Thread | Match-thread reply |
 | T-15m | — | Quote post or single hot take | — |
-| Halftime | — | Live reply | Match-thread reply |
-| FT+30m | Accountability recap with 1080x1080 visual | Thread | Accountability prompt |
-| Next morning | Carousel for saves | — | Short list |
+| Halftime | — | Live reply with graphic | Match-thread reply with graphic |
+| FT+30m | Outcome-based accountability recap visual | Thread | Accountability prompt |
+| Next morning | Saveable illustrated recap visual | — | Short list |
 
 **Hashtag rules:** Instagram 3-5 targeted tags; X 0-2; Threads 0-2. Prefer `#PredictaGol`, `#Mundial2026`, `#WorldCup2026`, match/team-specific tags, and avoid generic hashtag stuffing.
 

@@ -16,6 +16,57 @@ const PICK_RAMP = [
   { chars: 42, lines: 3, font: 34 },
 ];
 
+const THEMES = {
+  exact_score: {
+    bgStart: '#d9ffe2',
+    bgMid: '#83ef9f',
+    bgEnd: '#0b5c32',
+    headlineFill: TOKENS.color.navy950,
+    eyebrowFill: TOKENS.color.navy950,
+    matchFill: TOKENS.color.navy950,
+    cardStroke: TOKENS.color.green500,
+    accent: TOKENS.color.green500,
+    subhead: 'PGS® EN MODO FRANCOTIRADOR',
+    footer: 'Marcador clavado. Captura para la racha.',
+  },
+  right_winner: {
+    bgStart: TOKENS.color.navy900,
+    bgMid: TOKENS.color.navy950,
+    bgEnd: '#000915',
+    headlineFill: TOKENS.color.white,
+    eyebrowFill: TOKENS.color.jaguar300,
+    matchFill: TOKENS.color.offWhite,
+    cardStroke: TOKENS.color.turquoise400,
+    accent: TOKENS.color.jaguar300,
+    subhead: 'GANADOR CORRECTO, MARCADOR NO',
+    footer: 'La lectura iba bien, faltó afinar el número.',
+  },
+  wrong_outcome: {
+    bgStart: '#ffd8d8',
+    bgMid: '#ff8b8b',
+    bgEnd: TOKENS.color.red600,
+    headlineFill: TOKENS.color.navy950,
+    eyebrowFill: TOKENS.color.navy950,
+    matchFill: TOKENS.color.navy950,
+    cardStroke: TOKENS.color.red600,
+    accent: TOKENS.color.red600,
+    subhead: 'EL MUNDIAL NOS MOVIÓ EL PISO',
+    footer: 'Se aprende, se ajusta y se vuelve a tirar.',
+  },
+  pending: {
+    bgStart: TOKENS.color.navy900,
+    bgMid: TOKENS.color.navy950,
+    bgEnd: '#000915',
+    headlineFill: TOKENS.color.white,
+    eyebrowFill: TOKENS.color.jaguar300,
+    matchFill: TOKENS.color.offWhite,
+    cardStroke: TOKENS.color.turquoise400,
+    accent: TOKENS.color.jaguar300,
+    subhead: 'LISTA PARA COMPARAR',
+    footer: 'Completa el marcador al publicar.',
+  },
+};
+
 export default function accountabilityRecap(card = {}, size) {
   const { width, height } = size;
   const payload = card.payload ?? {};
@@ -34,9 +85,13 @@ export default function accountabilityRecap(card = {}, size) {
   const home = sanitizeVisualText(required.homeTeam);
   const away = sanitizeVisualText(required.awayTeam);
   const pick = sanitizeVisualText(required.pickShort);
+  const theme = THEMES[payload.outcomeVariant] || THEMES.pending;
   const match = `${home} vs ${away}`;
   const headlineFit = fitTextRamp(headline, HEADLINE_RAMP, { label: 'accountability headline' });
-  const pickFit = fitTextRamp(`Pick inicial: ${pick}`, PICK_RAMP, { label: 'accountability pick' });
+  const scoreLine = payload.actualScore
+    ? `PGS® ${payload.predictedScore || pick} · Final ${payload.actualScore}`
+    : `Pick inicial: ${pick}`;
+  const pickFit = fitTextRamp(scoreLine, PICK_RAMP, { label: 'accountability pick' });
   const isSquare = Math.abs(width - height) < 4;
   const centerX = width / 2;
   const flagW = Math.round(width * 0.25);
@@ -50,36 +105,36 @@ export default function accountabilityRecap(card = {}, size) {
     height,
     defs: `
       <radialGradient id="recapGlow" cx="50%" cy="18%" r="82%">
-        <stop offset="0%" stop-color="${TOKENS.color.red600}" stop-opacity=".30"/>
-        <stop offset="45%" stop-color="${TOKENS.color.jaguar300}" stop-opacity=".16"/>
-        <stop offset="100%" stop-color="${TOKENS.color.navy950}" stop-opacity="0"/>
+        <stop offset="0%" stop-color="${theme.bgStart}" stop-opacity=".95"/>
+        <stop offset="54%" stop-color="${theme.bgMid}" stop-opacity=".80"/>
+        <stop offset="100%" stop-color="${theme.bgEnd}" stop-opacity=".98"/>
       </radialGradient>
       <linearGradient id="recapCard" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%" stop-color="${TOKENS.color.navy900}"/>
         <stop offset="100%" stop-color="${TOKENS.color.jungle900}"/>
       </linearGradient>`,
     body: `
-      <rect width="${width}" height="${height}" fill="${TOKENS.color.navy950}"/>
+      <rect width="${width}" height="${height}" fill="${theme.bgEnd}"/>
       <rect width="${width}" height="${height}" fill="url(#recapGlow)"/>
       ${dotGrid({ width, height, opacity: 0.11 })}
-      <text x="${centerX}" y="${isSquare ? 72 : 98}" text-anchor="middle" font-family='${TOKENS.font.body}' font-size="30" font-weight="900" letter-spacing=".18em" fill="${TOKENS.color.jaguar300}">PREDICCIÓN VS REALIDAD</text>
+      <text x="${centerX}" y="${isSquare ? 72 : 98}" text-anchor="middle" font-family='${TOKENS.font.body}' font-size="30" font-weight="900" letter-spacing=".18em" fill="${theme.eyebrowFill}">PREDICCIÓN VS REALIDAD</text>
 
       ${flagImage({ code: payload.flagCodeHome || home, x: 96, y: flagY, width: flagW, height: flagH, rx: 24 })}
       ${flagImage({ code: payload.flagCodeAway || away, x: width - 96 - flagW, y: flagY, width: flagW, height: flagH, rx: 24 })}
-      <text x="${centerX}" y="${flagY + flagH / 2 + 12}" text-anchor="middle" font-family='${TOKENS.font.display}' font-size="46" font-weight="1000" fill="${TOKENS.color.white}">FT+30</text>
-      <text x="${centerX}" y="${flagY + flagH + 82}" text-anchor="middle" font-family='${TOKENS.font.body}' font-size="34" font-weight="900" fill="${TOKENS.color.offWhite}">${escapeXml(clipText(match, 40))}</text>
+      <text x="${centerX}" y="${flagY + flagH / 2 + 12}" text-anchor="middle" font-family='${TOKENS.font.display}' font-size="46" font-weight="1000" fill="${theme.matchFill}">FT+30</text>
+      <text x="${centerX}" y="${flagY + flagH + 82}" text-anchor="middle" font-family='${TOKENS.font.body}' font-size="34" font-weight="900" fill="${theme.matchFill}">${escapeXml(clipText(match, 40))}</text>
 
       ${textLines(headlineFit.lines, {
         x: centerX,
         y: isSquare ? 420 : 520,
         fontSize: headlineFit.fontSize,
         lineHeight: headlineFit.lineHeight + 4,
-        fill: TOKENS.color.white,
+        fill: theme.headlineFill,
         weight: 1000,
       })}
 
-      <rect x="86" y="${cardTop}" width="${width - 172}" height="${cardHeight}" rx="42" fill="url(#recapCard)" stroke="${TOKENS.color.turquoise400}" stroke-opacity=".55" stroke-width="4"/>
-      <text x="${centerX}" y="${cardTop + 72}" text-anchor="middle" font-family='${TOKENS.font.body}' font-size="30" font-weight="900" letter-spacing=".14em" fill="${TOKENS.color.turquoise400}">LA LIBRETA QUEDA ABIERTA</text>
+      <rect x="86" y="${cardTop}" width="${width - 172}" height="${cardHeight}" rx="42" fill="url(#recapCard)" stroke="${theme.cardStroke}" stroke-opacity=".70" stroke-width="4"/>
+      <text x="${centerX}" y="${cardTop + 72}" text-anchor="middle" font-family='${TOKENS.font.body}' font-size="30" font-weight="900" letter-spacing=".10em" fill="${theme.accent}">${escapeXml(theme.subhead)}</text>
       ${textLines(pickFit.lines, {
         x: centerX,
         y: cardTop + 150,
@@ -88,8 +143,8 @@ export default function accountabilityRecap(card = {}, size) {
         fill: TOKENS.color.white,
         weight: 900,
       })}
-      <text x="${centerX}" y="${cardTop + cardHeight - 78}" text-anchor="middle" font-family='${TOKENS.font.body}' font-size="32" font-weight="900" fill="${TOKENS.color.jaguar300}">¿Lectura fina o nos quemó el Mundial?</text>
-      <text x="${centerX}" y="${cardTop + cardHeight - 32}" text-anchor="middle" font-family='${TOKENS.font.body}' font-size="25" font-weight="800" fill="${TOKENS.color.neutral300}">Acierto o error: aquí se rinde cuentas.</text>
+      <text x="${centerX}" y="${cardTop + cardHeight - 78}" text-anchor="middle" font-family='${TOKENS.font.body}' font-size="32" font-weight="900" fill="${theme.accent}">${escapeXml(clipText(theme.footer, 46))}</text>
+      <text x="${centerX}" y="${cardTop + cardHeight - 32}" text-anchor="middle" font-family='${TOKENS.font.body}' font-size="25" font-weight="800" fill="${TOKENS.color.neutral300}">Predicción publicada. Resultado comparado.</text>
 
       ${logoLockup({ x: centerX, y: height - (isSquare ? 62 : 92), mark: 62 })}
     `,
