@@ -63,6 +63,7 @@ TAREA ESPECÍFICA: Escribe un artículo de pronóstico y momios para el partido.
 - Da un pronóstico claro con marcador y explicación.
 - Incluye una línea explícita en el HTML con el formato exacto: "Predicción final: [Equipo A] X-Y [Equipo B]".
 - El campo pronostico_quiniela debe repetir el mismo marcador exacto con el formato "[Equipo A] X-Y [Equipo B]".
+- Si los momios muestran un favorito claro, el marcador de pronostico_quiniela DEBE favorecer a ese equipo o explicar explícitamente una sorpresa; nunca des un marcador que contradiga los momios y el análisis.
 - Menciona momios específicos con el formato "Momios: Local X.XX | Empate X.XX | Visitante X.XX".
 - El H1 debe seguir el patrón: "Pronósticos y momios [Equipo A] vs [Equipo B]"`,
 

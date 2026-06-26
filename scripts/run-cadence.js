@@ -205,6 +205,9 @@ export async function runCadence(config) {
              f.final_away_score AS finalAwayScore,
              f.final_score_source_name AS finalScoreSourceName,
              f.final_score_source_url AS finalScoreSourceUrl,
+             o.home_win AS homeOdds,
+             o.draw AS drawOdds,
+             o.away_win AS awayOdds,
              CASE WHEN f.is_tbd = 1 THEN COALESCE(f.tbd_home_label, 'TBD') ELSE COALESCE(hln.name, ht.name) END AS homeTeam,
              CASE WHEN f.is_tbd = 1 THEN COALESCE(f.tbd_away_label, 'TBD') ELSE COALESCE(aln.name, at.name) END AS awayTeam,
              CASE WHEN f.is_tbd = 1 THEN NULL ELSE ht.fifa_code END AS homeTeamCode,
@@ -214,6 +217,7 @@ export async function runCadence(config) {
       JOIN teams at ON at.id = f.away_team_id
       LEFT JOIN localized_names hln ON hln.entity_type = 'team' AND hln.entity_id = ht.id AND hln.locale = 'es-MX'
       LEFT JOIN localized_names aln ON aln.entity_type = 'team' AND aln.entity_id = at.id AND aln.locale = 'es-MX'
+      LEFT JOIN odds o ON o.fixture_id = f.id
       ORDER BY f.kickoff_utc, f.match_number, f.id
     `).all();
 

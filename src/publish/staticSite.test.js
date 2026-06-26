@@ -51,6 +51,22 @@ const LATE_LOCAL_FIXTURE = {
   status: 'scheduled',
 };
 
+const TUNISIA_NETHERLANDS_FIXTURE = {
+  fixtureId: 36,
+  matchNumber: 36,
+  homeTeam: 'Túnez',
+  awayTeam: 'Países Bajos',
+  homeTeamCode: 'TUN',
+  awayTeamCode: 'NED',
+  kickoffUtc: '2026-06-25T23:00:00.000Z',
+  venue: 'Kansas City',
+  stage: 'group',
+  status: 'scheduled',
+  homeOdds: 9.3,
+  drawOdds: 4.85,
+  awayOdds: 1.3,
+};
+
 describe('publish/staticSite', () => {
   let tmpDir;
 
@@ -367,6 +383,35 @@ describe('publish/staticSite', () => {
     const match = readFileSync(join(outDir, 'partido-1-2026-06-11-mexico-vs-sudafrica.html'), 'utf-8');
     expect(match).toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 1 - Sudáfrica 0');
     expect(match).not.toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 3 - Sudáfrica 1');
+  });
+
+  it('rejects generated PGS scores that contradict clear odds and editorial favorite signals', () => {
+    const outDir = join(tmpDir, 'dist');
+    buildSite({
+      fixtures: [TUNISIA_NETHERLANDS_FIXTURE],
+      teams: WORLD_CUP_TEAMS.map((team) => ({ name: team.displayName, code: team.code })),
+      articles: [{
+        ...SAMPLE_ARTICLE,
+        fixtureId: 36,
+        homeTeam: 'Túnez',
+        awayTeam: 'Países Bajos',
+        status: 'generated',
+        lastPass: 'lock',
+        contentJson: {
+          h1_title: 'Pronóstico Túnez vs Países Bajos',
+          meta_description: 'Pronóstico actualizado.',
+          pronostico_quiniela: 'Túnez 3-0 Países Bajos',
+          analisis_tactico_html: '<h2>¿Cuáles son los momios?</h2><p>Países Bajos es favorito claro por momios, calidad y profundidad. Predicción final: Túnez 3-0 Países Bajos.</p>',
+        },
+      }],
+      siteBaseUrl: 'https://example.com',
+      outputDir: outDir,
+      affiliateUrls: AFFILIATE_URLS,
+    });
+
+    const match = readFileSync(join(outDir, 'fixture-36-2026-06-25-tunez-vs-paises-bajos.html'), 'utf-8');
+    expect(match).not.toContain('Resultado PredictaGoal Score basado en los datos más recientes: Túnez 3 - Países Bajos 0');
+    expect(match).toContain('Resultado PredictaGoal Score basado en los datos más recientes: Túnez 0 - Países Bajos 2');
   });
 
   it('does not render placeholder affiliate URLs from generated content or injection config', () => {

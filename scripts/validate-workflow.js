@@ -9,10 +9,13 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const WORKFLOW_PATH = resolve('.github/workflows/cadence.yml');
+const KNOCKOUT_WORKFLOW_PATH = resolve('.github/workflows/knockout-fixture-refresh.yml');
 
 let content;
+let knockoutContent;
 try {
   content = readFileSync(WORKFLOW_PATH, 'utf-8');
+  knockoutContent = readFileSync(KNOCKOUT_WORKFLOW_PATH, 'utf-8');
 } catch (err) {
   console.error(`❌ Cannot read workflow file: ${err.message}`);
   process.exit(1);
@@ -58,9 +61,27 @@ const REQUIRED_PATTERNS = [
   { pattern: /run-cadence\.js/, label: 'run-cadence.js execution' },
 ];
 
+const REQUIRED_KNOCKOUT_PATTERNS = [
+  { pattern: /cron:\s*'0 6,14,22 \* \* \*'/, label: '3x daily knockout refresh schedule' },
+  { pattern: /workflow_dispatch:/, label: 'manual knockout refresh trigger' },
+  { pattern: /concurrency:\s*\n\s+group:\s*wc26-pipeline/, label: 'shared knockout refresh concurrency group' },
+  { pattern: /npm run knockout:refresh/, label: 'knockout refresh script execution' },
+  { pattern: /secrets\.AZURE_STORAGE_CONNECTION_STRING/, label: 'knockout refresh Azure storage secret' },
+  { pattern: /Azure\/static-web-apps-deploy/, label: 'knockout refresh deploy step' },
+];
+
 let allPassed = true;
 for (const { pattern, label } of REQUIRED_PATTERNS) {
   if (!pattern.test(content)) {
+    console.error(`❌ Missing: ${label}`);
+    allPassed = false;
+  } else {
+    console.log(`✅ Found: ${label}`);
+  }
+}
+
+for (const { pattern, label } of REQUIRED_KNOCKOUT_PATTERNS) {
+  if (!pattern.test(knockoutContent)) {
     console.error(`❌ Missing: ${label}`);
     allPassed = false;
   } else {

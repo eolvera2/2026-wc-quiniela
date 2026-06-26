@@ -494,6 +494,9 @@ function deriveFixturesFromArticles(articles) {
         finalAwayScore: article.finalAwayScore ?? null,
         finalScoreSourceName: article.finalScoreSourceName || null,
         finalScoreSourceUrl: article.finalScoreSourceUrl || null,
+        homeOdds: article.homeOdds ?? null,
+        drawOdds: article.drawOdds ?? null,
+        awayOdds: article.awayOdds ?? null,
       });
     }
   }
@@ -649,12 +652,82 @@ function getInitialFixtureContent(fixture) {
 }
 
 function getFixturePgsSource(fixture, fixtureArticles = new Map()) {
-  const generatedPgs = extractGeneratedPgs(fixtureArticles.get('pronostico_momios')?.contentJson);
-  if (generatedPgs) return { pgs: generatedPgs };
+  const generatedArticle = fixtureArticles.get('pronostico_momios')?.contentJson;
+  const generatedPgs = extractGeneratedPgs(generatedArticle);
+  if (generatedPgs && isPgsCoherent(fixture, generatedPgs, generatedArticle)) return { pgs: generatedPgs };
 
   const initialContent = getInitialFixtureContent(fixture);
-  if (initialContent?.pgs) return { ...initialContent, pgs: initialContent.pgs };
+  if (initialContent?.pgs && isPgsCoherent(fixture, initialContent.pgs, initialContent)) return { ...initialContent, pgs: initialContent.pgs };
   return { pgs: { home: '#', away: '#' } };
+}
+
+function isPgsCoherent(fixture, pgs, context) {
+  if (!Number.isInteger(pgs?.home) || !Number.isInteger(pgs?.away)) return false;
+  const pgsOutcome = outcomeFromScore(pgs);
+  if (pgsOutcome === 'draw') return true;
+
+  const expectedOutcome = inferExpectedOutcome(fixture, context);
+  return !expectedOutcome || expectedOutcome === pgsOutcome || expectedOutcome === 'draw';
+}
+
+function outcomeFromScore(score) {
+  if (score.home > score.away) return 'home';
+  if (score.away > score.home) return 'away';
+  return 'draw';
+}
+
+function inferExpectedOutcome(fixture, context) {
+  const oddsOutcome = inferOutcomeFromOdds(fixture);
+  if (oddsOutcome) return oddsOutcome;
+  return inferOutcomeFromText(fixture, context);
+}
+
+function inferOutcomeFromOdds(fixture) {
+  const home = numericOdd(fixture.homeOdds ?? fixture.homeWinOdds);
+  const away = numericOdd(fixture.awayOdds ?? fixture.awayWinOdds);
+  if (!home || !away) return null;
+
+  const favorite = home < away ? 'home' : away < home ? 'away' : 'draw';
+  if (favorite === 'draw') return null;
+  const favoriteOdd = Math.min(home, away);
+  const underdogOdd = Math.max(home, away);
+  return underdogOdd / favoriteOdd >= 1.75 ? favorite : null;
+}
+
+function numericOdd(value) {
+  return typeof value === 'number' && Number.isFinite(value) && value > 1 ? value : null;
+}
+
+function inferOutcomeFromText(fixture, context) {
+  const homeTeam = normalizeTextForPgs(fixture.homeTeam);
+  const awayTeam = normalizeTextForPgs(fixture.awayTeam);
+  if (!homeTeam || !awayTeam) return null;
+  const text = normalizeTextForPgs(contextText(context));
+  const homeScore = teamFavoriteSignalScore(text, homeTeam);
+  const awayScore = teamFavoriteSignalScore(text, awayTeam);
+  if (homeScore === awayScore) return null;
+  return homeScore > awayScore ? 'home' : 'away';
+}
+
+function teamFavoriteSignalScore(text, team) {
+  const teamPattern = escapeRegExp(team);
+  const positiveNearTeam = new RegExp(`\\b${teamPattern}\\b.{0,90}\\b(?:favorit[oa]s?|ventaja|gana|triunfo|superior|domina|amplio favorito|favorito claro)\\b`, 'i');
+  const positiveBeforeTeam = new RegExp(`\\b(?:favorit[oa]s?|ventaja|gana|triunfo|superior|domina|amplio favorito|favorito claro)\\b.{0,90}\\b${teamPattern}\\b`, 'i');
+  let score = 0;
+  if (positiveNearTeam.test(text)) score += 1;
+  if (positiveBeforeTeam.test(text)) score += 1;
+  return score;
+}
+
+function contextText(context) {
+  if (!context) return '';
+  if (typeof context === 'string') return context;
+  return [
+    context.pronostico_quiniela,
+    context.analisis_tactico_html,
+    context.teamSummaries && Object.values(context.teamSummaries).join(' '),
+    context.sections && Object.values(context.sections).join(' '),
+  ].filter(Boolean).join(' ');
 }
 
 function extractGeneratedPgs(contentJson) {
@@ -687,6 +760,19 @@ function decodeHtmlEntities(value) {
     .replace(/&gt;/gi, '>')
     .replace(/&quot;/gi, '"')
     .replace(/&#39;/gi, "'");
+}
+
+function normalizeTextForPgs(value) {
+  return decodeHtmlEntities(stripHtml(value))
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 function renderPredictionPanel(fixture) {

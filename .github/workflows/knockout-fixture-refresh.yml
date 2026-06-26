@@ -1,0 +1,55 @@
+name: WC26 Knockout Fixture Refresh
+
+on:
+  schedule:
+    # Three daily checks for newly resolved/tentative knockout teams.
+    - cron: '0 6,14,22 * * *'
+  workflow_dispatch:
+
+concurrency:
+  group: wc26-pipeline
+  cancel-in-progress: false
+
+env:
+  NODE_VERSION: '20'
+  BLOB_CONTAINER: 'wc26'
+  BLOB_NAME: 'wc26.sqlite'
+  DB_PATH: '/tmp/wc26.sqlite'
+
+jobs:
+  knockout-fixture-refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Resolve knockout teams from public sources
+        env:
+          SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
+          OUTPUT_DIR: dist
+          AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+          CALIENTE_AFFILIATE_URL: ${{ secrets.CALIENTE_AFFILIATE_URL }}
+          BET365_AFFILIATE_URL: ${{ secrets.BET365_AFFILIATE_URL }}
+          SKIMLINKS_AFFILIATE_URL: ${{ secrets.SKIMLINKS_AFFILIATE_URL }}
+        run: npm run knockout:refresh
+
+      - name: Deploy to Azure Static Web Apps
+        if: ${{ success() }}
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          azure_static_web_apps_api_token: ${{ secrets.SWA_DEPLOYMENT_TOKEN }}
+          action: upload
+          app_location: dist
+          output_location: ''
+          skip_app_build: true

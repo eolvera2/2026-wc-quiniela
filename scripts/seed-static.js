@@ -233,20 +233,40 @@ function upsertFixtures(db, fixtures) {
       @tbdHomeLabel, @tbdAwayLabel
     )
     ON CONFLICT(api_football_id) DO UPDATE SET
-      home_team_id = excluded.home_team_id,
-      away_team_id = excluded.away_team_id,
+      home_team_id = CASE
+        WHEN fixtures.is_tbd = 0 AND excluded.is_tbd = 1 THEN fixtures.home_team_id
+        ELSE excluded.home_team_id
+      END,
+      away_team_id = CASE
+        WHEN fixtures.is_tbd = 0 AND excluded.is_tbd = 1 THEN fixtures.away_team_id
+        ELSE excluded.away_team_id
+      END,
       kickoff_utc = excluded.kickoff_utc,
       round = excluded.round,
       stage = excluded.stage,
-      status = excluded.status,
+      status = CASE
+        WHEN fixtures.is_tbd = 0 AND excluded.is_tbd = 1 THEN fixtures.status
+        ELSE excluded.status
+      END,
       venue = excluded.venue,
       group_id = excluded.group_id,
       stadium_id = excluded.stadium_id,
       match_number = excluded.match_number,
       static_source_id = excluded.static_source_id,
-      is_tbd = excluded.is_tbd,
-      tbd_home_label = excluded.tbd_home_label,
-      tbd_away_label = excluded.tbd_away_label,
+      is_tbd = CASE
+        WHEN fixtures.is_tbd = 0 AND excluded.is_tbd = 1 THEN fixtures.is_tbd
+        ELSE excluded.is_tbd
+      END,
+      tbd_home_label = CASE
+        WHEN fixtures.is_tbd = 0 AND excluded.is_tbd = 1 THEN fixtures.tbd_home_label
+        WHEN excluded.is_tbd = 1 AND fixtures.tbd_home_label IS NOT NULL AND fixtures.tbd_home_label != excluded.tbd_home_label THEN fixtures.tbd_home_label
+        ELSE excluded.tbd_home_label
+      END,
+      tbd_away_label = CASE
+        WHEN fixtures.is_tbd = 0 AND excluded.is_tbd = 1 THEN fixtures.tbd_away_label
+        WHEN excluded.is_tbd = 1 AND fixtures.tbd_away_label IS NOT NULL AND fixtures.tbd_away_label != excluded.tbd_away_label THEN fixtures.tbd_away_label
+        ELSE excluded.tbd_away_label
+      END,
       updated_at = datetime('now')
   `);
 

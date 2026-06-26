@@ -15,6 +15,7 @@
     "test:watch": "vitest",
     "cost-report": "node scripts/cost-report.js",
     "cadence": "node scripts/run-cadence.js",
+    "knockout:refresh": "node scripts/refresh-knockout-fixtures.js",
     "seed-static": "node scripts/seed-static.js",
     "cloudflare:dns": "node scripts/update-cloudflare-dns.js",
     "validate-workflow": "node scripts/validate-workflow.js",
