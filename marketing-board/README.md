@@ -70,7 +70,7 @@ This inserts deterministic Wave-1 placeholder cards across the board.
 node marketing-board/scripts/seed-matches-for-date.mjs --date=2026-06-16 --max=3
 ```
 
-If `--date` is omitted, the seeder targets **tomorrow and two days ahead** in CDMX so the board gets T-24 cards for tomorrow plus T-48 cards for the following match day instead of only same-day cards that may already be stale.
+If `--date` is omitted, the seeder targets **today, tomorrow, and two days ahead** in CDMX and skips posting windows whose scheduled time has already passed. That keeps the board current without creating stale T-48/T-24/T-4 cards for matches that are already too close.
 
 This creates a focused set of timed posting tasks for up to three featured matches on the selected match date. Each platform gets native format/copy instead of copy-paste reposts:
 

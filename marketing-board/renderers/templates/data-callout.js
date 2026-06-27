@@ -11,6 +11,7 @@ import {
   svgShell,
   textLines,
 } from '../tokens.js';
+import { flagImage, teamFlagCode } from '../flags.js';
 
 const TEMPLATE = 'data-callout';
 
@@ -41,17 +42,26 @@ export default function dataCallout(card = {}, size) {
   const eyebrow = sanitizeVisualText(required.eyebrow).toUpperCase();
   const subtitle = sanitizeVisualText(required.subtitle);
   const cta = sanitizeVisualText(required.cta);
+  const homeTeam = sanitizeVisualText(payload.homeTeam || payload.target_match?.home || '');
+  const awayTeam = sanitizeVisualText(payload.awayTeam || payload.target_match?.away || '');
+  const hasMatchup = Boolean(homeTeam && awayTeam);
+  const flagHome = payload.flagCodeHome || teamFlagCode(homeTeam);
+  const flagAway = payload.flagCodeAway || teamFlagCode(awayTeam);
 
   // Auto-size the giant number to fit width. Reserve safe-zone padding both sides.
   const innerWidth = width - safe.left - safe.right;
   // Rough character-width heuristic: 0.55 of font-size per char in display weight.
-  const numberFontSize = Math.min(420, Math.floor(innerWidth / Math.max(2, bigNumber.length * 0.55)));
+  const numberFontSize = Math.min(hasMatchup ? 300 : 420, Math.floor(innerWidth / Math.max(2, bigNumber.length * 0.55)));
 
   const subtitleFitted = fitTextRamp(subtitle, SUBTITLE_RAMP, { label: `data-callout subtitle @${height}` });
 
   // Vertical layout: eyebrow → bigNumber (centered visually) → subtitle → CTA.
-  const centerY = height / 2;
+  const centerY = hasMatchup ? height * 0.44 : height / 2;
   const numberY = centerY + numberFontSize / 3; // baseline tweak
+  const matchupY = numberY + 60;
+  const flagW = 100;
+  const flagH = 74;
+  const nameY = matchupY + 94;
 
   return svgShell({
     width,
@@ -79,11 +89,27 @@ export default function dataCallout(card = {}, size) {
         font-family='${TOKENS.font.display}' font-size="${numberFontSize}" font-weight="900"
         fill="url(#numberFill)" letter-spacing="-.02em">${escapeXml(clipText(bigNumber, 18))}</text>
 
+      ${hasMatchup ? `
+        <g aria-label="${escapeXml(`${homeTeam} vs ${awayTeam}`)}">
+          ${flagImage({ code: flagHome, x: width * 0.24 - flagW / 2, y: matchupY - 28, width: flagW, height: flagH, rx: 10 })}
+          ${flagImage({ code: flagAway, x: width * 0.76 - flagW / 2, y: matchupY - 28, width: flagW, height: flagH, rx: 10 })}
+          <text x="${width / 2}" y="${matchupY + 26}" text-anchor="middle"
+            font-family='${TOKENS.font.display}' font-size="44" font-weight="900"
+            fill="${TOKENS.color.jaguar300}">VS</text>
+          <text x="${width * 0.24}" y="${nameY}" text-anchor="middle"
+            font-family='${TOKENS.font.display}' font-size="30" font-weight="900"
+            fill="${TOKENS.color.white}">${escapeXml(clipText(homeTeam.toUpperCase(), 22))}</text>
+          <text x="${width * 0.76}" y="${nameY}" text-anchor="middle"
+            font-family='${TOKENS.font.display}' font-size="30" font-weight="900"
+            fill="${TOKENS.color.white}">${escapeXml(clipText(awayTeam.toUpperCase(), 22))}</text>
+        </g>
+      ` : ''}
+
       ${textLines(subtitleFitted.lines, {
         x: width / 2,
-        y: centerY + numberFontSize * 0.55,
-        fontSize: subtitleFitted.fontSize,
-        lineHeight: subtitleFitted.lineHeight + 10,
+        y: hasMatchup ? nameY + 54 : centerY + numberFontSize * 0.55,
+        fontSize: hasMatchup ? Math.min(28, subtitleFitted.fontSize) : subtitleFitted.fontSize,
+        lineHeight: hasMatchup ? 36 : subtitleFitted.lineHeight + 10,
         fill: TOKENS.color.white,
         weight: 700,
       })}

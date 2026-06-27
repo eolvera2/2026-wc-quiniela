@@ -1,12 +1,13 @@
 // Dynamic seed: reads data/static/openfootball/cup.txt, finds every match
 // whose kickoff falls on the requested CDMX date. If no date is supplied,
-// it seeds a rolling plan for tomorrow (T-24) and two days out (T-48).
+// it seeds a rolling plan for today, tomorrow, and two days out, skipping
+// posting windows whose scheduled time has already passed.
 // creates match-relative social cards in To Be Posted.
 // Idempotent on re-run — re-renders assets and updates payload fields
 // (post windows, kickoff, venue, PGS) on existing cards.
 //
 // Usage:
-//   node marketing-board/scripts/seed-matches-for-date.mjs              # tomorrow + two days ahead (CDMX)
+//   node marketing-board/scripts/seed-matches-for-date.mjs              # today + tomorrow + two days ahead (CDMX)
 //   node marketing-board/scripts/seed-matches-for-date.mjs --date=2026-06-15
 //   node marketing-board/scripts/seed-matches-for-date.mjs --dry-run
 
@@ -14,6 +15,7 @@ import { dirname, relative, resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readFileSync, statSync } from 'node:fs';
 import { createHash } from 'node:crypto';
+import Database from 'better-sqlite3';
 
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(scriptDir, '..', '..');
@@ -39,9 +41,12 @@ const maxArg = args.find((a) => a.startsWith('--max='));
 const onlyWindowArg = args.find((a) => a.startsWith('--only-window='));
 const onlyCardArg = args.find((a) => a.startsWith('--only-card='));
 const allowPlaceholder = args.includes('--allow-placeholder');
+const includeStaleWindows = args.includes('--include-stale-windows');
+const fixtureDbArg = args.find((a) => a.startsWith('--fixture-db='));
+const FIXTURE_DB_PATH = fixtureDbArg ? fixtureDbArg.split('=')[1] : 'data\\wc26.sqlite';
 const TARGET_DATES = dateArg
   ? [dateArg.split('=')[1]]
-  : [addCdmxDays(todayInCdmx(), 1), addCdmxDays(todayInCdmx(), 2)];
+  : [todayInCdmx(), addCdmxDays(todayInCdmx(), 1), addCdmxDays(todayInCdmx(), 2)];
 const MAX_FEATURED_MATCHES = maxArg ? Math.max(1, Number(maxArg.split('=')[1])) : 3;
 const ONLY_WINDOWS = onlyWindowArg
   ? new Set(onlyWindowArg.split('=')[1].split(',').map((value) => value.trim()).filter(Boolean))
@@ -50,6 +55,7 @@ const ONLY_CARDS = onlyCardArg
   ? new Set(onlyCardArg.split('=')[1].split(',').map((value) => value.trim()).filter(Boolean))
   : null;
 let activeTargetDate = TARGET_DATES[0];
+const now = new Date();
 
 for (const targetDate of TARGET_DATES) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(targetDate)) {
@@ -77,8 +83,25 @@ function todayInCdmx() {
   }).format(new Date());
 }
 
-function shouldSeedWindow(windowKey) {
-  return !ONLY_WINDOWS || ONLY_WINDOWS.has(windowKey);
+const WINDOW_ALIASES = {
+  t48: 't_minus_48h',
+  t24: 't_minus_24h',
+  t4: 't_minus_4h',
+  t60: 't_minus_60',
+  t15x: 't_minus_15',
+  ht: 'halftime',
+  recap: 'fulltime_plus_30',
+  nextam: 'next_morning',
+};
+
+function shouldSeedWindow(alias, kickoffIso) {
+  const windowKey = WINDOW_ALIASES[alias] || alias;
+  if (ONLY_WINDOWS && !ONLY_WINDOWS.has(alias) && !ONLY_WINDOWS.has(windowKey)) return false;
+  if (includeStaleWindows || ONLY_CARDS) return true;
+
+  const scheduled = scheduledForWindow(kickoffIso, windowKey);
+  if (!scheduled) return false;
+  return new Date(scheduled).getTime() >= now.getTime();
 }
 
 function shouldSeedCard(id) {
@@ -182,6 +205,96 @@ function parseCupForDate(text, targetCdmxDate, year = 2026) {
   }
 
   return fixtures;
+}
+
+function teamForSiteFixture({ name, code, fallbackLabel }) {
+  const label = String(name || fallbackLabel || 'TBD').trim();
+  const normalizedCode = String(code || '').toUpperCase();
+  const known = TEAMS_BY_CODE.get(normalizedCode)
+    || WORLD_CUP_TEAMS.find((team) => normalizeName(team.displayName) === normalizeName(label))
+    || WORLD_CUP_TEAMS.find((team) => normalizeName(team.seedName) === normalizeName(label))
+    || WORLD_CUP_TEAMS.find((team) => team.fifaName && normalizeName(team.fifaName) === normalizeName(label));
+  if (known) return known;
+  const safeCode = normalizedCode && normalizedCode !== 'TBD'
+    ? normalizedCode
+    : label.toUpperCase().replace(/[^A-Z0-9]+/g, '').slice(0, 8) || 'TBD';
+  return {
+    seedName: label,
+    code: safeCode,
+    displayName: label,
+    flag: null,
+    groupCode: 'KO',
+    isPlaceholder: true,
+  };
+}
+
+function parseSiteKnockoutFixturesForDate(dbPath, targetCdmxDate) {
+  let db;
+  try {
+    db = new Database(resolve(repoRoot, dbPath), { readonly: true, fileMustExist: true });
+  } catch (error) {
+    console.warn(`[seed] Knockout fixture DB unavailable at ${dbPath}: ${error.message}`);
+    return [];
+  }
+
+  try {
+    const rows = db.prepare(`
+      SELECT f.id AS fixtureId,
+             f.match_number AS matchNumber,
+             f.kickoff_utc AS kickoffUtc,
+             f.venue,
+             f.stage,
+             f.status,
+             f.is_tbd AS isTbd,
+             f.tbd_home_label AS tbdHomeLabel,
+             f.tbd_away_label AS tbdAwayLabel,
+             COALESCE(hln.name, ht.name) AS homeTeam,
+             ht.fifa_code AS homeTeamCode,
+             COALESCE(aln.name, at.name) AS awayTeam,
+             at.fifa_code AS awayTeamCode
+      FROM fixtures f
+      JOIN teams ht ON ht.id = f.home_team_id
+      JOIN teams at ON at.id = f.away_team_id
+      LEFT JOIN localized_names hln ON hln.entity_type = 'team' AND hln.entity_id = ht.id AND hln.locale = 'es-MX'
+      LEFT JOIN localized_names aln ON aln.entity_type = 'team' AND aln.entity_id = at.id AND aln.locale = 'es-MX'
+      WHERE f.stage = 'knockout'
+      ORDER BY f.kickoff_utc, f.match_number, f.id
+    `).all();
+
+    return rows
+      .filter((row) => cdmxDateOf(row.kickoffUtc) === targetCdmxDate)
+      .map((row) => {
+        const homeLabel = row.isTbd ? row.tbdHomeLabel : row.homeTeam;
+        const awayLabel = row.isTbd ? row.tbdAwayLabel : row.awayTeam;
+        return {
+          fixtureId: row.fixtureId,
+          matchNumber: row.matchNumber,
+          home: teamForSiteFixture({ name: homeLabel, code: row.homeTeamCode, fallbackLabel: row.tbdHomeLabel }),
+          away: teamForSiteFixture({ name: awayLabel, code: row.awayTeamCode, fallbackLabel: row.tbdAwayLabel }),
+          venue: row.venue || 'Sede por confirmar',
+          utcIso: row.kickoffUtc,
+          cdmxIso: cdmxIsoOf(row.kickoffUtc),
+          groupCode: 'KO',
+          stage: 'knockout',
+          source: 'site-db',
+          status: row.status,
+        };
+      });
+  } finally {
+    db.close();
+  }
+}
+
+function mergeFixtures(primary, secondary) {
+  const out = [...primary];
+  const seen = new Set(primary.map((fixture) => fixture.fixtureId ? `fixture:${fixture.fixtureId}` : `${fixture.home.code}|${fixture.away.code}|${fixture.utcIso}`));
+  for (const fixture of secondary) {
+    const key = fixture.fixtureId ? `fixture:${fixture.fixtureId}` : `${fixture.home.code}|${fixture.away.code}|${fixture.utcIso}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(fixture);
+  }
+  return out.sort((a, b) => String(a.utcIso).localeCompare(String(b.utcIso)));
 }
 
 function venueShort(raw) {
@@ -442,7 +555,7 @@ function buildOfficialPredictionPayload({ home, away, cdmxIso, venueDisplay, pgs
       flagCodeHome: home.flag,
       flagCodeAway: away.flag,
       bigNumber: `${pgsHome}-${pgsAway}`,
-      eyebrow: `LECTURA ${homeUpper} vs ${awayUpper}`,
+      eyebrow: `LECTURA ${home.code}-${away.code}`,
       subtitle: `Predicción editorial PredictaGol para ${venueDisplay}`,
       cta: 'Más contexto en predictagol.com',
       caption: text,
@@ -851,16 +964,53 @@ function toRelativeAssets(assets) {
   return out;
 }
 
+function cardDefinitionKey(def) {
+  const target = def?.payload?.target_match || {};
+  return [
+    target.home || def?.payload?.homeTeam,
+    target.away || def?.payload?.awayTeam,
+    target.kickoff_iso || def?.payload?.kickoff,
+    def?.payload?.window_key || def?.payload?.format_variant,
+  ].map((value) => String(value || '')).join('|');
+}
+
+function sameCardDefinition(card, def) {
+  if (!card) return false;
+  return cardDefinitionKey(card) === cardDefinitionKey(def);
+}
+
+function collisionCardId(def, attempt) {
+  const hex = createHash('sha1')
+    .update(`${cardDefinitionKey(def)}|collision|${attempt}`)
+    .digest('hex')
+    .slice(0, 4);
+  return `c_${hex}`;
+}
+
+function resolveCardId(db, preferredId, def) {
+  let id = preferredId;
+  for (let attempt = 0; attempt < 16; attempt += 1) {
+    const existing = getCard(db, id);
+    if (!existing || sameCardDefinition(existing, def)) return { id, card: existing };
+    id = collisionCardId(def, attempt);
+  }
+  throw new Error(`Could not resolve deterministic card id collision for ${preferredId} (${cardDefinitionKey(def)})`);
+}
+
 async function ensureCard(db, { id, builder, expectAssets }) {
   const def = builder();
-  let card = getCard(db, id);
+  const resolved = resolveCardId(db, id, def);
+  const preferredId = id;
+  id = resolved.id;
+  let card = resolved.card;
   const variantLabel = def.payload.format_variant || def.payload.window_key || 'text_only';
+  const collisionNote = id !== preferredId ? ` (id collision: ${preferredId} → ${id})` : '';
   if (!card) {
-    if (dryRun) { console.log(`  + would insert ${id} (${variantLabel})`); return; }
+    if (dryRun) { console.log(`  + would insert ${id} (${variantLabel})${collisionNote}`); return; }
     await insertCard(db, { ...def, id, actor: 'seeder' });
-    console.log(`  + inserted ${id} (${variantLabel})`);
+    console.log(`  + inserted ${id} (${variantLabel})${collisionNote}`);
   } else {
-    if (dryRun) { console.log(`  ~ would update ${id} (${variantLabel})`); return; }
+    if (dryRun) { console.log(`  ~ would update ${id} (${variantLabel})${collisionNote}`); return; }
     await updateCard(db, id, {
       title: def.title,
       stage: def.stage,
@@ -872,7 +1022,7 @@ async function ensureCard(db, { id, builder, expectAssets }) {
       payload: { ...card.payload, ...def.payload },
       actor: 'seeder',
     });
-    console.log(`  ~ updated ${id} (${variantLabel})`);
+    console.log(`  ~ updated ${id} (${variantLabel})${collisionNote}`);
   }
   card = getCard(db, id);
   if (!expectAssets.length) return;
@@ -909,21 +1059,23 @@ function pickFeaturedFixtures(fixtures) {
     .slice(0, MAX_FEATURED_MATCHES);
 }
 
-function cardIdFor(home, away, kind) {
+function cardIdFor(home, away, kind, fixtureId = null) {
   // Card IDs must be `c_` + 4 lowercase hex chars (see marketing-board/lib/cards.js).
   // Build a stable 4-hex from sha1(home|away|date|kind) so repeated runs produce the
   // same ID. Collisions are checked by the seeder via getCard before insert.
-  const seed = `${home.code}|${away.code}|${activeTargetDate}|${kind}`;
+  const seed = fixtureId ? `fixture:${fixtureId}|${kind}` : `${home.code}|${away.code}|${activeTargetDate}|${kind}`;
   const hex = createHash('sha1').update(seed).digest('hex').slice(0, 4);
   return `c_${hex}`;
 }
 
 async function seedTargetDate(db, cupText, targetDate) {
   activeTargetDate = targetDate;
-  const fixtures = parseCupForDate(cupText, targetDate);
+  const cupFixtures = parseCupForDate(cupText, targetDate);
+  const knockoutFixtures = parseSiteKnockoutFixturesForDate(FIXTURE_DB_PATH, targetDate);
+  const fixtures = mergeFixtures(cupFixtures, knockoutFixtures);
 
   console.log(`\n[seed] Target CDMX date: ${targetDate}`);
-  console.log(`[seed] Matches found in cup.txt: ${fixtures.length}`);
+  console.log(`[seed] Matches found in cup.txt: ${cupFixtures.length}; knockout/site DB: ${knockoutFixtures.length}; total: ${fixtures.length}`);
   if (fixtures.length === 0) {
     console.log('[seed] Nothing to seed for this date.');
     return { seededFixtures: 0, featuredFixtures: 0 };
@@ -939,9 +1091,11 @@ async function seedTargetDate(db, cupText, targetDate) {
     const { home, away, venue, cdmxIso, utcIso } = fx;
     const venueDisplay = venueShort(venue);
     const { key, content, sourceKey } = fixtureContentFor(home, away, targetDate, utcIso);
+    const fixtureLabel = fx.matchNumber ? `M${fx.matchNumber}` : key;
+    const makeCardId = (kind) => cardIdFor(home, away, kind, fx.fixtureId);
 
     let pgsHome, pgsAway, pickShort, hookCarousel, hookCallout;
-    if (!content && !allowPlaceholder) {
+    if (!content && !allowPlaceholder && fx.stage !== 'knockout') {
       console.warn(`[seed] Skipping ${key}: no fixture content yet. Use --allow-placeholder only for demos.`);
       continue;
     }
@@ -960,10 +1114,10 @@ async function seedTargetDate(db, cupText, targetDate) {
       hookCallout = fallbackHook(home, away);
     }
 
-    console.log(`\n— ${home.displayName} vs ${away.displayName} (${key}${sourceKey ? ` via ${sourceKey}` : ''})  kickoff ${cdmxIso}  @ ${venueDisplay}`);
+    console.log(`\n— ${home.displayName} vs ${away.displayName} (${fixtureLabel}${sourceKey ? ` via ${sourceKey}` : ''}${fx.stage === 'knockout' ? ' · knockout' : ''})  kickoff ${cdmxIso}  @ ${venueDisplay}`);
 
-    if (shouldSeedWindow('t48')) {
-      const breakdownId = cardIdFor(home, away, 't48');
+    if (shouldSeedWindow('t48', cdmxIso)) {
+      const breakdownId = makeCardId('t48');
       if (shouldSeedCard(breakdownId)) {
         await ensureCard(db, {
           id: breakdownId,
@@ -973,8 +1127,8 @@ async function seedTargetDate(db, cupText, targetDate) {
       }
     }
 
-    if (shouldSeedWindow('t24')) {
-      const officialId = cardIdFor(home, away, 't24');
+    if (shouldSeedWindow('t24', cdmxIso)) {
+      const officialId = makeCardId('t24');
       if (shouldSeedCard(officialId)) {
         await ensureCard(db, {
           id: officialId,
@@ -984,8 +1138,8 @@ async function seedTargetDate(db, cupText, targetDate) {
       }
     }
 
-    if (shouldSeedWindow('t4')) {
-      const pollId = cardIdFor(home, away, 't4');
+    if (shouldSeedWindow('t4', cdmxIso)) {
+      const pollId = makeCardId('t4');
       if (shouldSeedCard(pollId)) {
         await ensureCard(db, {
           id: pollId,
@@ -995,8 +1149,8 @@ async function seedTargetDate(db, cupText, targetDate) {
       }
     }
 
-    if (shouldSeedWindow('t60')) {
-      const finalId = cardIdFor(home, away, 't60');
+    if (shouldSeedWindow('t60', cdmxIso)) {
+      const finalId = makeCardId('t60');
       if (shouldSeedCard(finalId)) {
         await ensureCard(db, {
           id: finalId,
@@ -1006,8 +1160,8 @@ async function seedTargetDate(db, cupText, targetDate) {
       }
     }
 
-    if (shouldSeedWindow('t15x')) {
-      const xId = cardIdFor(home, away, 't15x');
+    if (shouldSeedWindow('t15x', cdmxIso)) {
+      const xId = makeCardId('t15x');
       if (shouldSeedCard(xId)) {
         await ensureCard(db, {
           id: xId,
@@ -1017,8 +1171,8 @@ async function seedTargetDate(db, cupText, targetDate) {
       }
     }
 
-    if (shouldSeedWindow('ht')) {
-      const halftimeId = cardIdFor(home, away, 'ht');
+    if (shouldSeedWindow('ht', cdmxIso)) {
+      const halftimeId = makeCardId('ht');
       if (shouldSeedCard(halftimeId)) {
         await ensureCard(db, {
           id: halftimeId,
@@ -1028,8 +1182,8 @@ async function seedTargetDate(db, cupText, targetDate) {
       }
     }
 
-    if (shouldSeedWindow('recap')) {
-      const recapId = cardIdFor(home, away, 'recap');
+    if (shouldSeedWindow('recap', cdmxIso)) {
+      const recapId = makeCardId('recap');
       if (shouldSeedCard(recapId)) {
         await ensureCard(db, {
           id: recapId,
@@ -1039,8 +1193,8 @@ async function seedTargetDate(db, cupText, targetDate) {
       }
     }
 
-    if (shouldSeedWindow('nextam')) {
-      const nextId = cardIdFor(home, away, 'nextam');
+    if (shouldSeedWindow('nextam', cdmxIso)) {
+      const nextId = makeCardId('nextam');
       if (shouldSeedCard(nextId)) {
         await ensureCard(db, {
           id: nextId,
@@ -1060,7 +1214,7 @@ async function main() {
   const cupPath = resolve(repoRoot, 'data', 'static', 'openfootball', 'cup.txt');
   const cupText = readFileSync(cupPath, 'utf8');
   if (!dateArg) {
-    console.log(`[seed] Rolling default dates: ${TARGET_DATES.join(', ')} (tomorrow + two days ahead, CDMX).`);
+    console.log(`[seed] Rolling default dates: ${TARGET_DATES.join(', ')} (today + tomorrow + two days ahead, CDMX; stale windows skipped).`);
   }
 
   runMigrations();
