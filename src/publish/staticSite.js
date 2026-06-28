@@ -475,6 +475,15 @@ const SECTION_LABELS = {
   analisis_apostar: 'Análisis para apostar',
 };
 
+const TEAM_POWER_RATING = {
+  ARG: 96, ESP: 95, FRA: 95, BRA: 94, ENG: 93, POR: 92, GER: 91, NED: 90,
+  BEL: 88, COL: 87, CRO: 86, MAR: 85, SUI: 85, JPN: 84, SEN: 84, USA: 84,
+  AUT: 83, MEX: 83, SWE: 83, ECU: 82, NOR: 82, CIV: 81, CAN: 80, PAR: 80,
+  GHA: 80, ALG: 79, EGY: 79, AUS: 78, BIH: 78, COD: 75, RSA: 74, CPV: 72,
+};
+
+let initialTeamSummaryCache;
+
 function deriveFixturesFromArticles(articles) {
   const seen = new Map();
   for (const article of articles) {
@@ -648,7 +657,81 @@ function getInitialFixtureContent(fixture) {
   return INITIAL_FIXTURE_CONTENT[codeKey]
     || INITIAL_FIXTURE_CONTENT_ALIASES[codeKey]
     || INITIAL_FIXTURE_CONTENT_ALIASES[nameKey]
-    || null;
+    || buildKnockoutFixtureContent(fixture);
+}
+
+function buildKnockoutFixtureContent(fixture) {
+  if (fixture.stage !== 'knockout') return null;
+  const homeTeam = fixtureTeam(fixture, 'home');
+  const awayTeam = fixtureTeam(fixture, 'away');
+  if (homeTeam.isPlaceholder || awayTeam.isPlaceholder || !homeTeam.code || !awayTeam.code) return null;
+
+  const pgs = estimateKnockoutPgs(fixture, homeTeam, awayTeam);
+  const winner = pgs.home > pgs.away ? homeTeam : awayTeam;
+  const underdog = pgs.home > pgs.away ? awayTeam : homeTeam;
+  const pgsText = `${homeTeam.name} ${pgs.home}-${pgs.away} ${awayTeam.name}`;
+  const venue = translateVenue(fixture.venue) || 'sede mundialista';
+  const kickoff = formatDateTime(fixture.kickoffUtc);
+  const oddsContext = hasFixtureOdds(fixture)
+    ? 'La lectura combina momios disponibles, fuerza reciente y contexto de eliminación directa.'
+    : 'La lectura combina fuerza de plantel, rendimiento del torneo y contexto de eliminación directa mientras se actualizan momios cercanos al partido.';
+
+  return {
+    pgs,
+    teamSummaries: {
+      [homeTeam.code]: findInitialTeamSummary(homeTeam.code) || genericTeamSummary(homeTeam),
+      [awayTeam.code]: findInitialTeamSummary(awayTeam.code) || genericTeamSummary(awayTeam),
+    },
+    sections: {
+      pronostico_momios: `<section class="initial-section"><h2>Análisis actualizado de eliminación directa</h2><p>El cruce ${escapeHtml(homeTeam.name)} vs ${escapeHtml(awayTeam.name)} ya está definido en el calendario y se jugará ${escapeHtml(kickoff)} en ${escapeHtml(venue)}. ${escapeHtml(oddsContext)}</p><p>El PGS® preliminar marca <strong>${escapeHtml(pgsText)}</strong>: ${escapeHtml(winner.name)} tiene una ligera ventaja por jerarquía y rutas de gol, aunque ${escapeHtml(underdog.name)} conserva valor si logra llevar el partido a tramos cerrados y castigar transiciones o balón parado.</p></section>`,
+      quiniela_verdict: `<section class="initial-section"><h2>${escapeHtml(winner.name)} con ventaja inicial</h2><p><strong>Pick inicial para quiniela: ${escapeHtml(winner.name)} gana.</strong> En una eliminatoria, la prioridad es elegir al equipo con más caminos para anotar primero y administrar los momentos de presión.</p><p>La ruta alternativa de ${escapeHtml(underdog.name)} pasa por bajar el ritmo, proteger el área en los primeros 30 minutos y convertir el partido en detalles: faltas laterales, errores en salida o una transición aislada.</p></section>`,
+      alineacion_probable: `<section class="initial-section"><h2>Lectura preliminar de alineaciones</h2><p>Sin onces confirmados, la expectativa es que ambos técnicos prioricen sus bases más estables por tratarse de eliminación directa. ${escapeHtml(homeTeam.name)} necesita equilibrio entre presión y protección de espalda; ${escapeHtml(awayTeam.name)} debe administrar cargas y evitar quedar partido tras pérdida.</p><p>Cerca del kickoff conviene revisar bajas, rotaciones por acumulación de minutos y si alguno ajusta el mediocampo para proteger una ventaja temprana o perseguir el empate.</p></section>`,
+      analisis_apostar: `<section class="initial-section"><h2>Ángulos educativos para leer el partido</h2><p class="freshness-label">Contenido informativo y de entretenimiento. No es recomendación financiera; se actualizará con datos actuales cerca del partido.</p><p>Los puntos clave son primer gol, manejo emocional después del descanso y balón parado. Si ${escapeHtml(winner.name)} confirma favoritismo temprano, el partido puede abrir espacios; si ${escapeHtml(underdog.name)} sostiene el empate, el valor táctico se mueve hacia mercados conservadores y posibles tiempos extra.</p><p>Antes de jugar tu quiniela, revisa alineaciones oficiales, noticias de lesiones y movimiento final de cuotas. El PGS® se mantendrá actualizado conforme entren nuevos datos confiables.</p></section>`,
+    },
+  };
+}
+
+function findInitialTeamSummary(code) {
+  if (!initialTeamSummaryCache) {
+    initialTeamSummaryCache = new Map();
+    for (const content of Object.values(INITIAL_FIXTURE_CONTENT)) {
+      for (const [teamCode, summary] of Object.entries(content.teamSummaries || {})) {
+        if (!initialTeamSummaryCache.has(teamCode)) initialTeamSummaryCache.set(teamCode, summary);
+      }
+    }
+  }
+  return initialTeamSummaryCache.get(code) || null;
+}
+
+function genericTeamSummary(team) {
+  return `<p><strong>${escapeHtml(team.name)}</strong> llega a la fase de eliminación directa con un perfil competitivo que debe evaluarse por forma reciente, gestión física y capacidad para sostener ventajas.</p><p>La página se actualizará conforme entren datos más cercanos al partido, incluyendo noticias de plantilla y alineaciones confirmadas.</p>`;
+}
+
+function estimateKnockoutPgs(fixture, homeTeam, awayTeam) {
+  const oddsOutcome = inferOutcomeFromOdds(fixture);
+  if (oddsOutcome === 'home') return scoreFromAdvantage('home', 10);
+  if (oddsOutcome === 'away') return scoreFromAdvantage('away', 10);
+
+  const homeRating = TEAM_POWER_RATING[homeTeam.code] || 78;
+  const awayRating = TEAM_POWER_RATING[awayTeam.code] || 78;
+  let diff = homeRating - awayRating;
+  if (homeTeam.code === 'MEX') diff += 2;
+  if (awayTeam.code === 'MEX') diff -= 2;
+  return scoreFromAdvantage(diff >= 0 ? 'home' : 'away', Math.abs(diff));
+}
+
+function scoreFromAdvantage(side, advantage) {
+  const favoriteGoals = advantage >= 18 ? 3 : 2;
+  const underdogGoals = advantage >= 9 ? 0 : 1;
+  return side === 'home'
+    ? { home: favoriteGoals, away: underdogGoals }
+    : { home: underdogGoals, away: favoriteGoals };
+}
+
+function hasFixtureOdds(fixture) {
+  return Boolean(numericOdd(fixture.homeOdds ?? fixture.homeWinOdds)
+    && numericOdd(fixture.drawOdds)
+    && numericOdd(fixture.awayOdds ?? fixture.awayWinOdds));
 }
 
 function getFixturePgsSource(fixture, fixtureArticles = new Map()) {

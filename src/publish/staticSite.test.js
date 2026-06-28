@@ -414,6 +414,38 @@ describe('publish/staticSite', () => {
     expect(match).toContain('Resultado PredictaGoal Score basado en los datos más recientes: Túnez 0 - Países Bajos 2');
   });
 
+  it('renders resolved knockout fixtures with synthesized Datos content and numeric PGS', () => {
+    const outDir = join(tmpDir, 'r32-dist');
+    buildSite({
+      fixtures: [{
+        fixtureId: 74,
+        matchNumber: 74,
+        homeTeam: 'Alemania',
+        awayTeam: 'Paraguay',
+        homeTeamCode: 'GER',
+        awayTeamCode: 'PAR',
+        kickoffUtc: '2026-06-29T20:30:00.000Z',
+        venue: 'Houston',
+        stage: 'knockout',
+        status: 'scheduled',
+      }],
+      teams: WORLD_CUP_TEAMS.map((team) => ({ name: team.displayName, code: team.code })),
+      articles: [],
+      siteBaseUrl: 'https://example.com',
+      outputDir: outDir,
+      affiliateUrls: AFFILIATE_URLS,
+    });
+
+    const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
+    const match = readFileSync(join(outDir, 'partido-74-2026-06-29-alemania-vs-paraguay.html'), 'utf-8');
+    expect(index).toContain('Resultado PredictaGoal Score basado en los datos más recientes: Alemania 2 - Paraguay 0');
+    expect(match).toContain('Resultado PredictaGoal Score basado en los datos más recientes: Alemania 2 - Paraguay 0');
+    expect(match).toContain('Análisis actualizado de eliminación directa');
+    expect(match).toContain('Pick inicial para quiniela: Alemania gana.');
+    expect(match).not.toContain('Próximamente: actualizaremos esta sección');
+    expect(match).not.toContain('Alemania # - Paraguay #');
+  });
+
   it('does not render placeholder affiliate URLs from generated content or injection config', () => {
     const outDir = join(tmpDir, 'dist');
     buildSite({
