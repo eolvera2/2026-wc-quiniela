@@ -20,6 +20,7 @@ import { buildSite } from '../src/publish/staticSite.js';
 import { hydrateFixtureFromFootballData } from '../src/ingest/matchHydration.js';
 import { applyPublicFinalScores, findMissingPublicFinalScores, findUpcomingPublicFinalScoreWindows } from '../src/ingest/publicFinalScores.js';
 import { retrievePublicFinalScores } from '../src/ingest/publicFinalScoreSources.js';
+import { advanceKnockoutBracketFromFinalScores } from '../src/ingest/knockoutAdvancement.js';
 import { seedStaticData } from './seed-static.js';
 
 /**
@@ -90,6 +91,14 @@ export async function runCadence(config) {
     for (const warning of retrievedFinalScoreResult.warnings || []) {
       console.warn(`[cadence] WARN ${warning}`);
       console.warn(`::warning title=Public final score retrieval::${warning}`);
+    }
+    const bracketAdvancement = advanceKnockoutBracketFromFinalScores(db);
+    if (bracketAdvancement.applied > 0) {
+      console.log(`[cadence] Knockout bracket advanced from existing finals=${bracketAdvancement.applied}`);
+    }
+    for (const warning of bracketAdvancement.warnings || []) {
+      console.warn(`[cadence] WARN ${warning}`);
+      console.warn(`::warning title=Knockout bracket advancement::${warning}`);
     }
     const missingFinalScores = findMissingPublicFinalScores(db, { now });
     for (const missing of missingFinalScores) {

@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { downloadDb, renewDbLease, uploadDb } from '../src/storage/blob.js';
 import { closeDb, openDb } from '../src/db/db.js';
+import { advanceKnockoutBracketFromFinalScores } from '../src/ingest/knockoutAdvancement.js';
 import { refreshKnockoutFixtures } from '../src/ingest/knockoutFixtures.js';
 import { buildSite } from '../src/publish/staticSite.js';
 import { seedStaticData } from './seed-static.js';
@@ -48,6 +49,15 @@ export async function runKnockoutFixtureRefresh(config) {
     for (const warning of refreshResult.warnings) {
       console.warn(`[knockout-refresh] WARN ${warning}`);
       console.warn(`::warning title=Knockout fixture refresh::${warning}`);
+    }
+
+    const advancementResult = advanceKnockoutBracketFromFinalScores(db);
+    if (advancementResult.applied > 0) {
+      console.log(`[knockout-refresh] Advanced knockout bracket from existing finals=${advancementResult.applied}`);
+    }
+    for (const warning of advancementResult.warnings) {
+      console.warn(`[knockout-refresh] WARN ${warning}`);
+      console.warn(`::warning title=Knockout bracket advancement::${warning}`);
     }
 
     const { fixtures, teams, articles } = readSiteBuildData(db);

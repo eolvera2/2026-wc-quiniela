@@ -39,6 +39,10 @@ vi.mock('../src/ingest/publicFinalScoreSources.js', () => ({
   retrievePublicFinalScores: vi.fn().mockResolvedValue({ applied: 0, skipped: 0, warnings: [] }),
 }));
 
+vi.mock('../src/ingest/knockoutAdvancement.js', () => ({
+  advanceKnockoutBracketFromFinalScores: vi.fn().mockReturnValue({ applied: 0, warnings: [] }),
+}));
+
 vi.mock('./seed-static.js', () => ({
   seedStaticData: vi.fn().mockReturnValue({ fixtures: 104, teams: 48, stadiums: 16, groups: 12 }),
 }));
@@ -49,6 +53,7 @@ import { selectPass } from '../src/cadence/selectPass.js';
 import { runBatch } from '../src/generate/batch.js';
 import { buildSite } from '../src/publish/staticSite.js';
 import { retrievePublicFinalScores } from '../src/ingest/publicFinalScoreSources.js';
+import { advanceKnockoutBracketFromFinalScores } from '../src/ingest/knockoutAdvancement.js';
 import { seedStaticData } from './seed-static.js';
 
 describe('run-cadence orchestrator', () => {
@@ -81,6 +86,7 @@ describe('run-cadence orchestrator', () => {
     expect(openDb).toHaveBeenCalledWith('/tmp/wc26.sqlite');
     expect(seedStaticData).toHaveBeenCalled();
     expect(retrievePublicFinalScores).toHaveBeenCalled();
+    expect(advanceKnockoutBracketFromFinalScores).toHaveBeenCalled();
     expect(uploadDb).toHaveBeenCalledWith({
       connectionString: 'conn-string',
       containerName: 'wc26',
