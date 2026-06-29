@@ -273,6 +273,36 @@ describe('publish/staticSite', () => {
     expect(index).not.toContain('id="fecha-2026-06-12"');
   });
 
+  it('renders date tabs for the full fixture calendar through the final', () => {
+    const outDir = join(tmpDir, 'dist');
+    const fixtureDates = [
+      '2026-06-11', '2026-06-12', '2026-06-13', '2026-06-14', '2026-06-15',
+      '2026-06-16', '2026-06-17', '2026-06-18', '2026-06-19', '2026-06-20',
+      '2026-06-21', '2026-06-22', '2026-06-23', '2026-06-24', '2026-06-25',
+      '2026-06-26', '2026-06-27', '2026-06-28', '2026-06-29', '2026-07-19',
+    ];
+    const fixtures = fixtureDates.map((date, index) => ({
+      ...SAMPLE_FIXTURE,
+      fixtureId: index + 1,
+      matchNumber: index + 1,
+      kickoffUtc: `${date}T18:00:00.000Z`,
+      stage: date === '2026-07-19' ? 'knockout' : 'group',
+    }));
+
+    buildSite({
+      fixtures,
+      teams: WORLD_CUP_TEAMS.map((team) => ({ name: team.displayName, code: team.code })),
+      articles: [],
+      siteBaseUrl: 'https://example.com',
+      outputDir: outDir,
+      affiliateUrls: AFFILIATE_URLS,
+    });
+
+    const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
+    expect(index).toContain('href="#fecha-2026-07-19"');
+    expect(index).toContain('id="fecha-2026-07-19"');
+  });
+
   it('renders public final score above PGS on cards and next to PGS on match pages', () => {
     const outDir = join(tmpDir, 'dist');
     buildSite({

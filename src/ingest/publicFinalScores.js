@@ -1,5 +1,6 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { advanceKnockoutBracketFromFinalScores } from './knockoutAdvancement.js';
 
 const DEFAULT_FINAL_SCORES_PATH = join(process.cwd(), 'data', 'public', 'final-scores.json');
 
@@ -22,6 +23,7 @@ export function applyPublicFinalScoreEntries(db, entries, {
 } = {}) {
   let applied = 0;
   let skipped = 0;
+  const warnings = [];
 
   for (const entry of entries) {
     if (!Number.isInteger(entry.homeScore) || !Number.isInteger(entry.awayScore)) {
@@ -59,6 +61,16 @@ export function applyPublicFinalScoreEntries(db, entries, {
     else skipped += 1;
   }
 
+  let advanced = 0;
+  if (applied > 0) {
+    const advancement = advanceKnockoutBracketFromFinalScores(db);
+    advanced = advancement.applied;
+    warnings.push(...advancement.warnings);
+  }
+
+  if (advanced > 0 || warnings.length > 0) {
+    return warnings.length > 0 ? { applied, skipped, advanced, warnings } : { applied, skipped, advanced };
+  }
   return { applied, skipped };
 }
 

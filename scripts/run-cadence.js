@@ -77,11 +77,15 @@ export async function runCadence(config) {
     now = await waitForUpcomingFinalScoreWindow(db, { now, finalScoreWaitMinutes });
     const finalScoreResult = applyPublicFinalScores(db, { now });
     if (finalScoreResult.applied > 0 || finalScoreResult.skipped > 0) {
-      console.log(`[cadence] Public final scores applied=${finalScoreResult.applied}, skipped=${finalScoreResult.skipped}`);
+      console.log(`[cadence] Public final scores applied=${finalScoreResult.applied}, skipped=${finalScoreResult.skipped}, advanced=${finalScoreResult.advanced || 0}`);
+    }
+    for (const warning of finalScoreResult.warnings || []) {
+      console.warn(`[cadence] WARN ${warning}`);
+      console.warn(`::warning title=Knockout bracket advancement::${warning}`);
     }
     const retrievedFinalScoreResult = await retrievePublicFinalScores(db, { now, sourcesPath: finalScoreSourcesPath });
     if (retrievedFinalScoreResult.applied > 0 || retrievedFinalScoreResult.skipped > 0) {
-      console.log(`[cadence] Public final scores retrieved=${retrievedFinalScoreResult.applied}, skipped=${retrievedFinalScoreResult.skipped}`);
+      console.log(`[cadence] Public final scores retrieved=${retrievedFinalScoreResult.applied}, skipped=${retrievedFinalScoreResult.skipped}, advanced=${retrievedFinalScoreResult.advanced || 0}`);
     }
     for (const warning of retrievedFinalScoreResult.warnings || []) {
       console.warn(`[cadence] WARN ${warning}`);

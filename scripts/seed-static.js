@@ -235,10 +235,12 @@ function upsertFixtures(db, fixtures) {
     ON CONFLICT(api_football_id) DO UPDATE SET
       home_team_id = CASE
         WHEN fixtures.is_tbd = 0 AND excluded.is_tbd = 1 THEN fixtures.home_team_id
+        WHEN fixtures.is_tbd = 1 AND excluded.is_tbd = 1 AND fixtures.home_team_id != 0 AND fixtures.tbd_home_label IS NOT NULL AND fixtures.tbd_home_label != excluded.tbd_home_label THEN fixtures.home_team_id
         ELSE excluded.home_team_id
       END,
       away_team_id = CASE
         WHEN fixtures.is_tbd = 0 AND excluded.is_tbd = 1 THEN fixtures.away_team_id
+        WHEN fixtures.is_tbd = 1 AND excluded.is_tbd = 1 AND fixtures.away_team_id != 0 AND fixtures.tbd_away_label IS NOT NULL AND fixtures.tbd_away_label != excluded.tbd_away_label THEN fixtures.away_team_id
         ELSE excluded.away_team_id
       END,
       kickoff_utc = excluded.kickoff_utc,

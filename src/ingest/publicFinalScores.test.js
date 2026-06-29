@@ -4,7 +4,7 @@ import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { openDb, closeDb } from '../db/db.js';
 import { seedStaticData } from '../../scripts/seed-static.js';
-import { applyPublicFinalScores, findMissingPublicFinalScores, findUpcomingPublicFinalScoreWindows } from './publicFinalScores.js';
+import { applyPublicFinalScoreEntries, applyPublicFinalScores, findMissingPublicFinalScores, findUpcomingPublicFinalScoreWindows } from './publicFinalScores.js';
 
 describe('ingest/publicFinalScores', () => {
   let db;
@@ -133,4 +133,96 @@ describe('ingest/publicFinalScores', () => {
       minutesUntilEligible: 30,
     }));
   });
+
+  it('advances knockout winners into downstream bracket fixtures when final scores are applied', () => {
+    db = openDb(':memory:');
+    seedStaticData(db);
+
+    setKnockoutFixtureTeams(db, 74, 'GER', 'PAR');
+    setKnockoutFixtureTeams(db, 77, 'FRA', 'SWE');
+
+    const first = applyPublicFinalScoresFromEntries(db, [{
+      matchNumber: 74,
+      homeScore: 2,
+      awayScore: 0,
+      sourceName: 'ESPN',
+      sourceUrl: 'https://www.espn.com/match/74',
+    }]);
+
+    expect(first).toEqual({ applied: 1, skipped: 0, advanced: 1 });
+    expect(db.prepare(`
+      SELECT is_tbd, h.fifa_code AS homeCode, tbd_home_label, tbd_away_label
+      FROM fixtures f
+      JOIN teams h ON h.id = f.home_team_id
+      WHERE f.match_number = 89
+    `).get()).toEqual({
+      is_tbd: 1,
+      homeCode: 'GER',
+      tbd_home_label: 'Alemania',
+      tbd_away_label: 'W77',
+    });
+
+    seedStaticData(db);
+    expect(db.prepare(`
+      SELECT is_tbd, h.fifa_code AS homeCode, tbd_home_label, tbd_away_label
+      FROM fixtures f
+      JOIN teams h ON h.id = f.home_team_id
+      WHERE f.match_number = 89
+    `).get()).toEqual({
+      is_tbd: 1,
+      homeCode: 'GER',
+      tbd_home_label: 'Alemania',
+      tbd_away_label: 'W77',
+    });
+
+    const second = applyPublicFinalScoresFromEntries(db, [{
+      matchNumber: 77,
+      homeScore: 1,
+      awayScore: 0,
+      sourceName: 'ESPN',
+      sourceUrl: 'https://www.espn.com/match/77',
+    }]);
+
+    expect(second).toEqual({ applied: 1, skipped: 0, advanced: 2 });
+    expect(db.prepare(`
+      SELECT f.is_tbd, f.status, h.fifa_code AS homeCode, a.fifa_code AS awayCode,
+             f.tbd_home_label, f.tbd_away_label
+      FROM fixtures f
+      JOIN teams h ON h.id = f.home_team_id
+      JOIN teams a ON a.id = f.away_team_id
+      WHERE f.match_number = 89
+    `).get()).toEqual({
+      is_tbd: 0,
+      status: 'scheduled',
+      homeCode: 'GER',
+      awayCode: 'FRA',
+      tbd_home_label: null,
+      tbd_away_label: null,
+    });
+  });
 });
+
+function applyPublicFinalScoresFromEntries(db, entries) {
+  return applyPublicFinalScoreEntries(db, entries, {
+    now: '2026-07-02T00:00:00.000Z',
+  });
+}
+
+function setKnockoutFixtureTeams(db, matchNumber, homeCode, awayCode) {
+  const home = db.prepare('SELECT id FROM teams WHERE fifa_code = ?').get(homeCode);
+  const away = db.prepare('SELECT id FROM teams WHERE fifa_code = ?').get(awayCode);
+  db.prepare(`
+    UPDATE fixtures
+    SET home_team_id = @homeTeamId,
+        away_team_id = @awayTeamId,
+        is_tbd = 0,
+        status = 'scheduled',
+        tbd_home_label = NULL,
+        tbd_away_label = NULL
+    WHERE match_number = @matchNumber
+  `).run({
+    matchNumber,
+    homeTeamId: home.id,
+    awayTeamId: away.id,
+  });
+}

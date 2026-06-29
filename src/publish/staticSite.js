@@ -938,7 +938,7 @@ function renderIndexPage({ fixtures, teams, slugs, siteBaseUrl, articlesByFixtur
 }
 
 function renderDateTabs(fixtures) {
-  const dates = uniqueDates(fixtures).filter((date) => date !== 'por-confirmar').slice(0, 18);
+  const dates = uniqueDates(fixtures).filter((date) => date !== 'por-confirmar');
   if (dates.length === 0) return '';
   const tabs = dates.map((date, index) => `<a class="date-tab ${index === 0 ? 'is-active' : ''}" href="#fecha-${date}" data-date="${date}" ${index === 0 ? 'aria-current="date"' : ''}>
       <span class="date-tab__day">${escapeHtml(shortDay(date))}</span>

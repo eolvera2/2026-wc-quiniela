@@ -31,6 +31,7 @@ export async function retrievePublicFinalScores(db, {
   const missingFixtures = findMissingPublicFinalScores(db, { now, delayHours, limit });
   let applied = 0;
   let skipped = 0;
+  let advanced = 0;
   const warnings = [];
   const scoreboardCache = new Map();
 
@@ -56,6 +57,8 @@ export async function retrievePublicFinalScores(db, {
       const applyResult = applyPublicFinalScoreEntries(db, [result.candidate], { now, delayHours });
       applied += applyResult.applied;
       skipped += applyResult.skipped;
+      advanced += applyResult.advanced || 0;
+      warnings.push(...(applyResult.warnings || []));
       if (applyResult.applied > 0) {
         published = true;
         break;
@@ -67,7 +70,7 @@ export async function retrievePublicFinalScores(db, {
     }
   }
 
-  return { applied, skipped, warnings };
+  return advanced > 0 ? { applied, skipped, advanced, warnings } : { applied, skipped, warnings };
 }
 
 export async function fetchAndParseSource(source, { fetchImpl = globalThis.fetch } = {}) {
