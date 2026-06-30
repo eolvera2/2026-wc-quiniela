@@ -67,6 +67,7 @@ for (const targetDate of TARGET_DATES) {
 const TEAMS_BY_SEED = new Map(WORLD_CUP_TEAMS.map((t) => [t.seedName, t]));
 const TEAMS_BY_CODE = new Map(WORLD_CUP_TEAMS.map((t) => [t.code, t]));
 const FINAL_SCORES = JSON.parse(readFileSync(resolve(repoRoot, 'data', 'public', 'final-scores.json'), 'utf8'));
+const TEAM_POWER_RATINGS = buildTeamPowerRatings();
 
 const RECAP_HEADLINES = {
   exact_score: ['¡EN EL BLANCO!', '¿NO QUE NO?', '¡VICTORIA!'],
@@ -340,6 +341,51 @@ function pickFallback(pgsHome, pgsAway, home, away) {
   if (pgsHome > pgsAway) return `${home.displayName} con ventaja inicial`;
   if (pgsAway > pgsHome) return `${away.displayName} con ventaja inicial`;
   return 'Empate como lectura inicial';
+}
+
+function buildTeamPowerRatings() {
+  const ratings = new Map(WORLD_CUP_TEAMS.map((team) => [team.code, { matches: 0, gf: 0, ga: 0, gd: 0, rating: 0 }]));
+  for (const [key, fixture] of Object.entries(INITIAL_FIXTURE_CONTENT)) {
+    const [homeCode, awayCode] = key.split('-');
+    const home = ratings.get(homeCode);
+    const away = ratings.get(awayCode);
+    if (!home || !away || !fixture?.pgs) continue;
+
+    home.matches += 1;
+    home.gf += fixture.pgs.home;
+    home.ga += fixture.pgs.away;
+    home.gd += fixture.pgs.home - fixture.pgs.away;
+    away.matches += 1;
+    away.gf += fixture.pgs.away;
+    away.ga += fixture.pgs.home;
+    away.gd += fixture.pgs.away - fixture.pgs.home;
+  }
+
+  for (const team of ratings.values()) {
+    if (!team.matches) continue;
+    team.rating = (team.gd / team.matches) + (team.gf / team.matches) * 0.25 - (team.ga / team.matches) * 0.15;
+  }
+  return ratings;
+}
+
+function inferredPrediction(home, away) {
+  const homeRating = TEAM_POWER_RATINGS.get(home.code)?.rating ?? 0;
+  const awayRating = TEAM_POWER_RATINGS.get(away.code)?.rating ?? 0;
+  const diff = homeRating - awayRating;
+  const absDiff = Math.abs(diff);
+  if (absDiff < 0.45) {
+    return { pgsHome: 1, pgsAway: 1, pickShort: 'Empate como lectura inicial' };
+  }
+  const favoriteIsHome = diff > 0;
+  const favoriteGoals = absDiff >= 2.4 ? 2 : 2;
+  const underdogGoals = absDiff >= 2.4 ? 0 : 1;
+  const pgsHome = favoriteIsHome ? favoriteGoals : underdogGoals;
+  const pgsAway = favoriteIsHome ? underdogGoals : favoriteGoals;
+  return {
+    pgsHome,
+    pgsAway,
+    pickShort: pickFallback(pgsHome, pgsAway, home, away),
+  };
 }
 
 function hashtagFor(displayName) {
@@ -900,24 +946,45 @@ function buildRecapPayload({ home, away, cdmxIso, pgsHome, pgsAway, pickShort })
   };
 }
 
+function saveableDataPoint({ home, away, pgsHome, pgsAway }) {
+  const diff = Math.abs(pgsHome - pgsAway);
+  if (diff === 0) {
+    return {
+      statValue: 'EMPATE PGS®',
+      statLabel: 'margen cero',
+      lesson: 'No fuerces ganador sin una señal nueva',
+      dataContext: 'Dato clave: XI inicial, bajas o cansancio pueden romper el equilibrio.',
+    };
+  }
+  const favorite = pgsHome > pgsAway ? home : away;
+  return {
+    statValue: `${favorite.code || favorite.displayName} +${diff}`,
+    statLabel: diff >= 2 ? 'ventaja clara' : 'margen fino',
+    lesson: diff >= 2
+      ? 'Exige una razón fuerte para ir contra el favorito'
+      : 'Ventaja corta: revisa contexto antes de cerrar pick',
+    dataContext: `Guarda la señal: ${favorite.displayName} parte arriba en la lectura PGS®.`,
+  };
+}
+
 function buildNextMorningPayload({ home, away, cdmxIso, pgsHome, pgsAway }) {
   const homeUpper = home.displayName;
   const awayUpper = away.displayName;
   const scheduled = scheduledForWindow(cdmxIso, 'next_morning');
   const expiresAt = expiresForWindow(cdmxIso, 'next_morning');
   const pgsScore = `${pgsHome}-${pgsAway}`;
-  const lesson = 'Una pista visual para la próxima quiniela';
+  const dataPoint = saveableDataPoint({ home, away, pgsHome, pgsAway });
   const platformCopy = {
       instagram: {
         format: 'saveable_recap_visual',
-        caption: `${homeUpper} vs ${awayUpper} dejó una pista para la siguiente quiniela.\n\nPGS® inicial: ${pgsHome}-${pgsAway}. Guarda este dato antes de revisar los próximos partidos.`,
+        caption: `${homeUpper} vs ${awayUpper} dejó un dato para la siguiente quiniela.\n\n${dataPoint.statLabel.toUpperCase()}: ${dataPoint.statValue}. PGS® inicial: ${pgsHome}-${pgsAway}.\n\n${dataPoint.lesson}.`,
         hashtags: ['#PredictaGol', '#Mundial2026', '#ElDato'],
-        alt_text: `Ilustración conceptual de fútbol estilo boceto para guardar después de ${homeUpper} vs ${awayUpper}, con PGS inicial ${pgsScore}.`,
+        alt_text: `Tarjeta de dato para guardar de ${homeUpper} vs ${awayUpper}: ${dataPoint.statLabel}, ${dataPoint.statValue}, con PGS inicial ${pgsScore}.`,
         asset_keys: ['1080x1080'],
       },
       threads: {
         format: 'short_list',
-        text: `3 notas para la siguiente quiniela después de ${homeUpper} vs ${awayUpper}:\n\n1. PGS® inicial: ${pgsHome}-${pgsAway}\n2. La señal que más pesó: ritmo del primer tramo\n3. Lo que hay que vigilar mañana: ajustes y cansancio\n\n¿Qué equipo te hizo cambiar el bracket?`,
+        text: `Dato para guardar tras ${homeUpper} vs ${awayUpper}:\n\n${dataPoint.statValue} (${dataPoint.statLabel}).\nPGS® inicial: ${pgsHome}-${pgsAway}.\n\n${dataPoint.lesson}.`,
         hashtags: ['#PredictaGol'],
       },
   };
@@ -942,7 +1009,10 @@ function buildNextMorningPayload({ home, away, cdmxIso, pgsHome, pgsAway }) {
       flagCodeHome: home.flag,
       flagCodeAway: away.flag,
       pgsScore,
-      lesson,
+      statValue: dataPoint.statValue,
+      statLabel: dataPoint.statLabel,
+      dataContext: dataPoint.dataContext,
+      lesson: dataPoint.lesson,
       caption: platformCopy.instagram.caption,
       hashtags: platformCopy.instagram.hashtags,
       alt_text: platformCopy.instagram.alt_text,
@@ -1107,9 +1177,11 @@ async function seedTargetDate(db, cupText, targetDate) {
       hookCarousel = fallbackHook(home, away);
       hookCallout = fallbackHook(home, away);
     } else {
-      console.warn(`[seed] No fixture content for ${key} — using neutral placeholder PGS 1-1.`);
-      pgsHome = 1; pgsAway = 1;
-      pickShort = 'Empate como pick inicial';
+      const inferred = inferredPrediction(home, away);
+      console.warn(`[seed] No fixture content for ${key} — using inferred PGS ${inferred.pgsHome}-${inferred.pgsAway}.`);
+      pgsHome = inferred.pgsHome;
+      pgsAway = inferred.pgsAway;
+      pickShort = inferred.pickShort;
       hookCarousel = fallbackHook(home, away);
       hookCallout = fallbackHook(home, away);
     }

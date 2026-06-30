@@ -275,7 +275,7 @@ for (const row of rows) {
   else if (templateName === 'quiniela-challenge') required = payload.challengeQuestion || card.title;
   else if (templateName === 'datos-curiosos') required = payload.statLine || card.title;
   else if (templateName === 'data-callout') required = payload.eyebrow || payload.bigNumber || card.title;
-  else if (templateName === 'halftime-debate') required = payload.question || card.title;
+  else if (templateName === 'halftime-debate') required = `${payload.question || card.title} ${payload.pgsScore || ''}`;
   else if (templateName === 'accountability-recap') required = payload.headline || '¿Acierto o error?';
   else if (templateName === 'next-morning-saveable') required = payload.lesson || payload.pgsScore || card.title;
   else if (templateName === 'tu-equipo-tu-data') required = payload.homeTeam || 'México';
@@ -286,10 +286,15 @@ for (const row of rows) {
   const sizes = templateName === 'data-callout' ? [{ key: '1080x1080', w: 1080, h: 1080 }] : SIZES;
   for (const { key, w, h } of sizes) {
     const svg = template(card, { width: w, height: h });
-    const haystack = ` ${tokenize(visibleText(svg)).join(' ')} `;
+    const text = visibleText(svg);
+    const haystack = ` ${tokenize(text).join(' ')} `;
     const missing = requiredWords.filter((word) => !haystack.includes(` ${word} `));
-    if (missing.length > 0) {
+    const missingScore = templateName === 'halftime-debate'
+      && payload.pgsScore
+      && !text.includes(payload.pgsScore);
+    if (missing.length > 0 || missingScore) {
       console.log(`  ✗ ${row.id} [${templateName} ${key}] missing words: ${missing.join(', ')}`);
+      if (missingScore) console.log(`     missing PGS score: "${payload.pgsScore}"`);
       console.log(`     required: "${required}"`);
       failed += 1;
     } else {

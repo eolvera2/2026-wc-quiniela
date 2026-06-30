@@ -37,6 +37,7 @@ export default function halftimeDebate(card = {}, size) {
   const away = sanitizeVisualText(required.awayTeam);
   const pick = sanitizeVisualText(required.pickShort);
   const question = sanitizeVisualText(required.question);
+  const pgsScore = sanitizeVisualText(payload.pgsScore || '');
   const match = `${home} vs ${away}`;
   const questionFit = fitTextRamp(question, QUESTION_RAMP, { label: 'halftime question' });
   const pickFit = fitTextRamp(`Pick inicial: ${pick}`, PICK_RAMP, { label: 'halftime pick' });
@@ -71,6 +72,10 @@ export default function halftimeDebate(card = {}, size) {
       ${flagImage({ code: payload.flagCodeHome || home, x: 96, y: flagY, width: flagW, height: flagH, rx: 22 })}
       ${flagImage({ code: payload.flagCodeAway || away, x: width - 96 - flagW, y: flagY, width: flagW, height: flagH, rx: 22 })}
       <text x="${centerX}" y="${flagY + flagH / 2 + 12}" text-anchor="middle" font-family='${TOKENS.font.body}' font-size="34" font-weight="1000" fill="${TOKENS.color.offWhite}">${escapeXml(clipText(match, 36))}</text>
+      ${pgsScore ? `
+        <text x="${centerX}" y="${flagY + flagH + 68}" text-anchor="middle" font-family='${TOKENS.font.body}' font-size="28" font-weight="1000" letter-spacing=".14em" fill="${TOKENS.color.jaguar300}">PGS® INICIAL</text>
+        <text x="${centerX}" y="${flagY + flagH + 142}" text-anchor="middle" font-family='${TOKENS.font.display}' font-size="82" font-weight="1000" fill="${TOKENS.color.white}">${escapeXml(clipText(pgsScore, 12))}</text>
+      ` : ''}
 
       <rect x="84" y="${boardTop}" width="${width - 168}" height="${boardHeight}" rx="42" fill="url(#chalkboard)" stroke="${TOKENS.color.turquoise400}" stroke-opacity=".55" stroke-width="4"/>
       ${chalkLine(`M ${centerX} ${boardTop + 28} C ${centerX - 42} ${boardTop + 120}, ${centerX + 46} ${boardTop + 205}, ${centerX} ${boardTop + boardHeight - 24}`, { stroke: TOKENS.color.neutral300, width: 4, opacity: 0.34, dash: '10 14' })}

@@ -13,13 +13,18 @@ const AGENT_OWNERS = new Set(['widow', 'strange', 'shuri', 'cap', 'stark']);
 function withStalled(card, now = new Date()) {
   const updatedAt = new Date(card.updated_at);
   const age = now - updatedAt;
+  const scheduledFor = card.payload?.scheduled_for ? new Date(card.payload.scheduled_for) : null;
+  const expiresAt = (card.expires_at || card.payload?.expires_at) ? new Date(card.expires_at || card.payload?.expires_at) : null;
+  const isFuturePost = scheduledFor && !Number.isNaN(scheduledFor.getTime()) && scheduledFor > now;
+  const isExpiredPost = expiresAt && !Number.isNaN(expiresAt.getTime()) && expiresAt < now;
+  const isActiveScheduled = scheduledFor && expiresAt && !Number.isNaN(expiresAt.getTime()) && expiresAt >= now;
   const stalled =
-    (card.stage === 'to_be_posted' && age > HOUR) ||
-    (AGENT_OWNERS.has(card.owner) && !['to_be_posted', 'posted', 'killed'].includes(card.stage) && age > 24 * HOUR);
+    (card.stage === 'to_be_posted' && !isFuturePost && (isExpiredPost || age > HOUR)) ||
+    (AGENT_OWNERS.has(card.owner) && !isActiveScheduled && !['to_be_posted', 'posted', 'killed'].includes(card.stage) && age > 24 * HOUR);
 
   return {
     ...card,
-    stalled_at: card.stalled_at || (stalled ? card.updated_at : null),
+    stalled_at: stalled ? (card.stalled_at || card.updated_at) : null,
   };
 }
 
