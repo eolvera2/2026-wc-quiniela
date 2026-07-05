@@ -419,7 +419,7 @@ describe('publish/staticSite', () => {
     const outDir = join(tmpDir, 'dist');
     const fixture = {
       fixtureId: 92,
-      matchNumber: 92,
+      matchNumber: 192,
       homeTeam: 'México',
       awayTeam: 'Inglaterra',
       homeTeamCode: 'MEX',
@@ -453,7 +453,7 @@ describe('publish/staticSite', () => {
     });
 
     const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
-    const match = readFileSync(join(outDir, 'partido-92-2026-07-06-mexico-vs-inglaterra.html'), 'utf-8');
+    const match = readFileSync(join(outDir, 'partido-192-2026-07-06-mexico-vs-inglaterra.html'), 'utf-8');
     expect(index).toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 2 - Inglaterra 1');
     expect(match).toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 2 - Inglaterra 1');
     expect(match).toContain('pgs-aligned-section');
@@ -476,6 +476,9 @@ describe('publish/staticSite', () => {
       venue: 'Ciudad de México',
       stage: 'knockout',
       status: 'scheduled',
+      homeOdds: 3.4,
+      drawOdds: 3.1,
+      awayOdds: 1.9,
     };
 
     buildSite({
@@ -512,7 +515,7 @@ describe('publish/staticSite', () => {
     const outDir = join(tmpDir, 'dist');
     const fixture = {
       fixtureId: 92,
-      matchNumber: 92,
+      matchNumber: 192,
       homeTeam: 'México',
       awayTeam: 'Inglaterra',
       homeTeamCode: 'MEX',
@@ -544,7 +547,7 @@ describe('publish/staticSite', () => {
       affiliateUrls: AFFILIATE_URLS,
     });
 
-    const match = readFileSync(join(outDir, 'partido-92-2026-07-06-mexico-vs-inglaterra.html'), 'utf-8');
+    const match = readFileSync(join(outDir, 'partido-192-2026-07-06-mexico-vs-inglaterra.html'), 'utf-8');
     expect(match).toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 1 - Inglaterra 2');
     expect(match).not.toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 2 - Inglaterra 1');
   });

@@ -7,7 +7,7 @@
  * Reference: docs/plans/2026-06-01-phase2-live-service-integration-implementation.md Task 9/12
  */
 
-import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { injectAffiliateLinks } from './affiliateInjector.js';
 import { DISCLAIMER_FOOTER } from '../generate/prompt.js';
@@ -20,6 +20,8 @@ import {
 
 const PUBLIC_ASSET_DIR = 'public';
 const BRAND_MARK_PATH = 'public/PredictaGol_Logo.png';
+const PGS_OVERRIDES_PATH = join(process.cwd(), 'data', 'public', 'pgs-overrides.json');
+let pgsOverrideCache;
 
 /**
  * Builds a URL-safe slug from article type and team names.
@@ -741,6 +743,9 @@ function hasFixtureOdds(fixture) {
 }
 
 export function getFixturePgsSource(fixture, fixtureArticles = new Map()) {
+  const manualOverride = findPgsOverride(fixture);
+  if (manualOverride) return manualOverride;
+
   const generatedArticle = fixtureArticles.get('pronostico_momios')?.contentJson;
   const structuredGeneratedPgs = extractStructuredGeneratedPgs(generatedArticle, fixture);
   if (structuredGeneratedPgs && isPgsCoherent(fixture, structuredGeneratedPgs, generatedArticle)) {
@@ -757,6 +762,37 @@ export function getFixturePgsSource(fixture, fixtureArticles = new Map()) {
   if (initialPgsIsCoherent) return { ...initialContent, pgs: initialContent.pgs };
 
   return { pgs: { home: '#', away: '#' } };
+}
+
+function findPgsOverride(fixture) {
+  const override = loadPgsOverrides().find((entry) => pgsOverrideMatchesFixture(entry, fixture));
+  if (!override) return null;
+  return {
+    source: override.sourceName || 'manual_override',
+    pgs: { home: override.homeScore, away: override.awayScore },
+  };
+}
+
+function loadPgsOverrides() {
+  if (!pgsOverrideCache) {
+    pgsOverrideCache = existsSync(PGS_OVERRIDES_PATH)
+      ? JSON.parse(readFileSync(PGS_OVERRIDES_PATH, 'utf-8'))
+      : [];
+  }
+  return pgsOverrideCache;
+}
+
+function pgsOverrideMatchesFixture(entry, fixture) {
+  if (!Number.isInteger(entry?.homeScore) || !Number.isInteger(entry?.awayScore)) {
+    throw new Error(`Invalid PGS override entry: ${JSON.stringify(entry)}`);
+  }
+  if (Number.isInteger(entry.matchNumber)) return Number(fixture.matchNumber) === entry.matchNumber;
+
+  const entryDate = String(entry.kickoffUtcDate || entry.kickoffLocalDate || '');
+  const fixtureDate = fixture.kickoffUtc ? fixture.kickoffUtc.slice(0, 10) : '';
+  return normalizeTextForPgs(entry.homeTeam) === normalizeTextForPgs(fixture.homeTeam)
+    && normalizeTextForPgs(entry.awayTeam) === normalizeTextForPgs(fixture.awayTeam)
+    && entryDate === fixtureDate;
 }
 
 function isPgsCoherent(fixture, pgs, context) {
