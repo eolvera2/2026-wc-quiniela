@@ -575,6 +575,7 @@ function renderTeamSummaries(fixture, fixtureArticles = new Map()) {
 
 function renderSectionList({ fixture, fixtureArticles, affiliateUrls }) {
   const initialContent = getInitialFixtureContent(fixture);
+  const pgsSource = getFixturePgsSource(fixture, fixtureArticles);
   const hasGeneratedFixtureContent = [...fixtureArticles.values()].some((article) =>
     article?.status === 'generated'
     || ['refresh', 'final_refresh', 'lock'].includes(article?.lastPass)
@@ -587,9 +588,11 @@ function renderSectionList({ fixture, fixtureArticles, affiliateUrls }) {
       const initialSection = initialContent?.sections?.[sectionType];
       const displayInitialSection = hasGeneratedFixtureContent ? stripFreshnessLabels(initialSection) : initialSection;
       const isPlaceholder = !hasArticleContent && !initialSection;
-      const content = article?.contentJson?.analisis_tactico_html
+      const isStaleInitialPgs = !hasArticleContent && initialSection && !pgsScoresEqual(initialContent?.pgs, pgsSource?.pgs);
+      const rawContent = article?.contentJson?.analisis_tactico_html
         || displayInitialSection
         || `<section class="coming-soon"><h2>${escapeHtml(label)}</h2><p>Próximamente: actualizaremos esta sección de ${escapeHtml(fixture.homeTeam)} vs ${escapeHtml(fixture.awayTeam)} cuando tengamos datos confiables.</p></section>`;
+      const content = alignSectionContentWithPgs(fixture, sectionType, rawContent, pgsSource?.pgs, { force: isStaleInitialPgs });
       return `<section id="${escapeHtml(sectionType)}" class="match-section container reveal" data-section="${escapeHtml(sectionType)}">
         <p class="section-kicker">${escapeHtml(label)}</p>
         <div class="match-article">${hasArticleContent ? injectAffiliateLinks(content, affiliateUrls) : content}</div>
@@ -736,7 +739,7 @@ function hasFixtureOdds(fixture) {
 
 function getFixturePgsSource(fixture, fixtureArticles = new Map()) {
   const generatedArticle = fixtureArticles.get('pronostico_momios')?.contentJson;
-  const generatedPgs = extractGeneratedPgs(generatedArticle);
+  const generatedPgs = extractGeneratedPgs(generatedArticle, fixture);
   if (generatedPgs && isPgsCoherent(fixture, generatedPgs, generatedArticle)) return { pgs: generatedPgs };
 
   const initialContent = getInitialFixtureContent(fixture);
@@ -794,8 +797,8 @@ function inferOutcomeFromText(fixture, context) {
 
 function teamFavoriteSignalScore(text, team) {
   const teamPattern = escapeRegExp(team);
-  const positiveNearTeam = new RegExp(`\\b${teamPattern}\\b.{0,90}\\b(?:favorit[oa]s?|ventaja|gana|triunfo|superior|domina|amplio favorito|favorito claro)\\b`, 'i');
-  const positiveBeforeTeam = new RegExp(`\\b(?:favorit[oa]s?|ventaja|gana|triunfo|superior|domina|amplio favorito|favorito claro)\\b.{0,90}\\b${teamPattern}\\b`, 'i');
+  const positiveNearTeam = new RegExp(`\\b${teamPattern}\\b.{0,90}\\b(?:favorit[oa]s?|favoritismo|ventaja|gana|triunfo|superior|domina|amplio favorito|favorito claro)\\b`, 'i');
+  const positiveBeforeTeam = new RegExp(`\\b(?:favorit[oa]s?|favoritismo|ventaja|gana|triunfo|superior|domina|amplio favorito|favorito claro)\\b.{0,90}\\b${teamPattern}\\b`, 'i');
   let score = 0;
   if (positiveNearTeam.test(text)) score += 1;
   if (positiveBeforeTeam.test(text)) score += 1;
@@ -813,22 +816,115 @@ function contextText(context) {
   ].filter(Boolean).join(' ');
 }
 
-function extractGeneratedPgs(contentJson) {
-  const structuredForecast = extractScoreFromText(contentJson?.pronostico_quiniela);
+function alignSectionContentWithPgs(fixture, sectionType, content, pgs, { force = false } = {}) {
+  if (!pgs || (!force && !contentContradictsPgs(fixture, content, pgs))) return content;
+  return buildPgsAlignedSection(fixture, pgs, sectionType);
+}
+
+function pgsScoresEqual(left, right) {
+  return Number.isInteger(left?.home)
+    && Number.isInteger(left?.away)
+    && left.home === right?.home
+    && left.away === right?.away;
+}
+
+function contentContradictsPgs(fixture, content, pgs) {
+  if (!Number.isInteger(pgs?.home) || !Number.isInteger(pgs?.away)) return false;
+  if (contentMentionsExactPgs(fixture, content, pgs)) return false;
+
+  const score = extractScoreFromText(content, fixture);
+  if (score && (score.home !== pgs.home || score.away !== pgs.away)) return true;
+
+  const pgsOutcome = outcomeFromScore(pgs);
+  const textOutcome = inferOutcomeFromText(fixture, content);
+  return pgsOutcome !== 'draw' && textOutcome && textOutcome !== pgsOutcome;
+}
+
+function contentMentionsExactPgs(fixture, content, pgs) {
+  const home = normalizeScorePatternText(fixture.homeTeam);
+  const away = normalizeScorePatternText(fixture.awayTeam);
+  const normalized = normalizeScorePatternText(content);
+  if (!home || !away || !normalized) return false;
+
+  const direct = new RegExp(`\\b${escapeRegExp(home)}\\b\\s+${pgs.home}\\s*[-–]\\s*${pgs.away}\\s+\\b${escapeRegExp(away)}\\b`, 'i');
+  const reverse = new RegExp(`\\b${escapeRegExp(away)}\\b\\s+${pgs.away}\\s*[-–]\\s*${pgs.home}\\s+\\b${escapeRegExp(home)}\\b`, 'i');
+  return direct.test(normalized) || reverse.test(normalized);
+}
+
+function buildPgsAlignedSection(fixture, pgs, sectionType) {
+  const homeTeam = fixtureTeam(fixture, 'home');
+  const awayTeam = fixtureTeam(fixture, 'away');
+  const pgsText = `${homeTeam.name} ${pgs.home}-${pgs.away} ${awayTeam.name}`;
+  const pgsOutcome = outcomeFromScore(pgs);
+  const winner = pgsOutcome === 'home' ? homeTeam : pgsOutcome === 'away' ? awayTeam : null;
+  const underdog = pgsOutcome === 'home' ? awayTeam : pgsOutcome === 'away' ? homeTeam : null;
+  const pick = winner ? `${winner.name} gana` : 'empate';
+  const advantage = winner
+    ? `${winner.name} queda como la selección con mejor ruta para ganar, mientras ${underdog.name} necesita llevar el partido a detalles: ritmo bajo, balón parado o una transición limpia.`
+    : 'La lectura queda equilibrada: ningún equipo separa lo suficiente y el empate es el marcador PGS® vigente.';
+
+  if (sectionType === 'quiniela_verdict') {
+    return `<section class="initial-section pgs-aligned-section"><h2>Veredicto actualizado PGS®</h2><p><strong>Pick actualizado para quiniela: ${escapeHtml(pick)}.</strong> El marcador vigente es <strong>${escapeHtml(pgsText)}</strong>, así que esta sección se alinea con la predicción más reciente mostrada en el calendario.</p><p>${escapeHtml(advantage)}</p></section>`;
+  }
+
+  if (sectionType === 'analisis_apostar') {
+    return `<section class="initial-section pgs-aligned-section"><h2>Ángulos actualizados con PGS®</h2><p>El PGS® vigente marca <strong>${escapeHtml(pgsText)}</strong>. Para leer el partido, prioriza primer gol, manejo emocional después del descanso y ajustes si el favorito del PGS® no logra abrir el marcador.</p><p>Este contenido es informativo y de entretenimiento; revisa alineaciones, lesiones y momios finales antes de cerrar tu quiniela.</p></section>`;
+  }
+
+  return `<section class="initial-section pgs-aligned-section"><h2>Pronóstico actualizado PGS®</h2><p>La predicción más reciente para este partido es <strong>${escapeHtml(pgsText)}</strong>. ${escapeHtml(advantage)}</p><p>Esta vista reemplaza cualquier lectura previa que apuntara a otro marcador para mantener los Datos alineados con el PGS® del calendario.</p></section>`;
+}
+
+function extractGeneratedPgs(contentJson, fixture) {
+  const structuredForecast = extractScoreFromText(contentJson?.pronostico_quiniela, fixture);
   if (structuredForecast) return structuredForecast;
 
   const html = contentJson?.analisis_tactico_html;
   if (!html) return null;
   const text = decodeHtmlEntities(stripHtml(html)).replace(/\s+/g, ' ').trim();
-  return extractScoreFromText(text);
+  return extractScoreFromText(text, fixture);
 }
 
-function extractScoreFromText(value) {
+function extractScoreFromText(value, fixture) {
   if (!value) return null;
   const text = decodeHtmlEntities(stripHtml(value)).replace(/\s+/g, ' ').trim();
+  const teamOrderedScore = fixture ? extractTeamOrderedScore(text, fixture) : null;
+  if (teamOrderedScore) return teamOrderedScore;
+
   const match = text.match(/\b(?:predicci[oó]n(?:\s+final)?|pron[oó]stico(?:\s+del\s+marcador)?|marcador final|previsi[oó]n)?\b[\s:.,;]*(?:[^\d]{0,220}?)\b(\d{1,2})\s*[-–]\s*(\d{1,2})\b/i);
   if (!match) return null;
   return { home: Number(match[1]), away: Number(match[2]) };
+}
+
+function extractTeamOrderedScore(text, fixture) {
+  const home = normalizeScorePatternText(fixture.homeTeam);
+  const away = normalizeScorePatternText(fixture.awayTeam);
+  const normalized = normalizeScorePatternText(text);
+  if (!home || !away || !normalized) return null;
+
+  const direct = matchTeamOrderedScore(normalized, home, away);
+  if (direct) return { home: direct.first, away: direct.second };
+
+  const reverse = matchTeamOrderedScore(normalized, away, home);
+  if (reverse) return { home: reverse.second, away: reverse.first };
+
+  return null;
+}
+
+function matchTeamOrderedScore(text, firstTeam, secondTeam) {
+  const pattern = new RegExp(`\\b${escapeRegExp(firstTeam)}\\b.{0,140}?\\b(\\d{1,2})\\s*[-–]\\s*(\\d{1,2})\\b.{0,140}?\\b${escapeRegExp(secondTeam)}\\b`, 'i');
+  const match = text.match(pattern);
+  if (!match) return null;
+  return { first: Number(match[1]), second: Number(match[2]) };
+}
+
+function normalizeScorePatternText(value) {
+  return decodeHtmlEntities(stripHtml(value))
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9\-–]+/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 function stripHtml(value) {

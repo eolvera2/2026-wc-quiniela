@@ -415,6 +415,95 @@ describe('publish/staticSite', () => {
     expect(match).not.toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 3 - Sudáfrica 1');
   });
 
+  it('keeps Details analysis aligned when structured PGS updates but article HTML is stale', () => {
+    const outDir = join(tmpDir, 'dist');
+    const fixture = {
+      fixtureId: 92,
+      matchNumber: 92,
+      homeTeam: 'México',
+      awayTeam: 'Inglaterra',
+      homeTeamCode: 'MEX',
+      awayTeamCode: 'ENG',
+      kickoffUtc: '2026-07-06T00:00:00.000Z',
+      venue: 'Mexico City',
+      stage: 'knockout',
+      status: 'scheduled',
+    };
+
+    buildSite({
+      fixtures: [fixture],
+      teams: WORLD_CUP_TEAMS.map((team) => ({ name: team.displayName, code: team.code })),
+      articles: [{
+        ...SAMPLE_ARTICLE,
+        fixtureId: 92,
+        homeTeam: 'México',
+        awayTeam: 'Inglaterra',
+        status: 'generated',
+        lastPass: 'refresh',
+        contentJson: {
+          h1_title: 'Pronóstico México vs Inglaterra',
+          meta_description: 'Pronóstico actualizado.',
+          pronostico_quiniela: 'México 2-1 Inglaterra',
+          analisis_tactico_html: '<h2>Predicción y marcador exacto para México vs Inglaterra</h2><p>Un partido cerrado, pero con ligera ventaja para Inglaterra. <strong>Predicción final: Inglaterra 2-1 México</strong>.</p>',
+        },
+      }],
+      siteBaseUrl: 'https://example.com',
+      outputDir: outDir,
+      affiliateUrls: AFFILIATE_URLS,
+    });
+
+    const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
+    const match = readFileSync(join(outDir, 'partido-92-2026-07-06-mexico-vs-inglaterra.html'), 'utf-8');
+    expect(index).toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 2 - Inglaterra 1');
+    expect(match).toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 2 - Inglaterra 1');
+    expect(match).toContain('pgs-aligned-section');
+    expect(match).toContain('actualizado PGS®');
+    expect(match).toContain('México 2-1 Inglaterra');
+    expect(match).not.toContain('Predicción final: Inglaterra 2-1 México');
+    expect(match).not.toContain('Inglaterra confirma favoritismo temprano');
+  });
+
+  it('parses generated scores in reversed team order without flipping the winner', () => {
+    const outDir = join(tmpDir, 'dist');
+    const fixture = {
+      fixtureId: 92,
+      matchNumber: 92,
+      homeTeam: 'México',
+      awayTeam: 'Inglaterra',
+      homeTeamCode: 'MEX',
+      awayTeamCode: 'ENG',
+      kickoffUtc: '2026-07-06T00:00:00.000Z',
+      venue: 'Mexico City',
+      stage: 'knockout',
+      status: 'scheduled',
+    };
+
+    buildSite({
+      fixtures: [fixture],
+      teams: WORLD_CUP_TEAMS.map((team) => ({ name: team.displayName, code: team.code })),
+      articles: [{
+        ...SAMPLE_ARTICLE,
+        fixtureId: 92,
+        homeTeam: 'México',
+        awayTeam: 'Inglaterra',
+        status: 'generated',
+        lastPass: 'refresh',
+        contentJson: {
+          h1_title: 'Pronóstico México vs Inglaterra',
+          meta_description: 'Pronóstico actualizado.',
+          analisis_tactico_html: '<h2>Predicción y marcador exacto para México vs Inglaterra</h2><p><strong>Predicción final: Inglaterra 2-1 México</strong>.</p>',
+        },
+      }],
+      siteBaseUrl: 'https://example.com',
+      outputDir: outDir,
+      affiliateUrls: AFFILIATE_URLS,
+    });
+
+    const match = readFileSync(join(outDir, 'partido-92-2026-07-06-mexico-vs-inglaterra.html'), 'utf-8');
+    expect(match).toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 1 - Inglaterra 2');
+    expect(match).not.toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 2 - Inglaterra 1');
+  });
+
   it('rejects generated PGS scores that contradict clear odds and editorial favorite signals', () => {
     const outDir = join(tmpDir, 'dist');
     buildSite({
