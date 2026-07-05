@@ -463,6 +463,51 @@ describe('publish/staticSite', () => {
     expect(match).not.toContain('Inglaterra confirma favoritismo temprano');
   });
 
+  it('uses updated knockout PGS estimates over stale article-only scores and aligns Details', () => {
+    const outDir = join(tmpDir, 'dist');
+    const fixture = {
+      fixtureId: 92,
+      matchNumber: 92,
+      homeTeam: 'México',
+      awayTeam: 'Inglaterra',
+      homeTeamCode: 'MEX',
+      awayTeamCode: 'ENG',
+      kickoffUtc: '2026-07-06T00:00:00.000Z',
+      venue: 'Ciudad de México',
+      stage: 'knockout',
+      status: 'scheduled',
+    };
+
+    buildSite({
+      fixtures: [fixture],
+      teams: WORLD_CUP_TEAMS.map((team) => ({ name: team.displayName, code: team.code })),
+      articles: [{
+        ...SAMPLE_ARTICLE,
+        fixtureId: 92,
+        homeTeam: 'México',
+        awayTeam: 'Inglaterra',
+        status: 'generated',
+        lastPass: 'refresh',
+        contentJson: {
+          h1_title: 'Pronóstico México vs Inglaterra',
+          meta_description: 'Pronóstico actualizado.',
+          analisis_tactico_html: '<h2>Predicción y marcador exacto para México vs Inglaterra</h2><p>Un partido cerrado, pero con ligera ventaja para Inglaterra. <strong>Predicción final: Inglaterra 2-1 México</strong>.</p>',
+        },
+      }],
+      siteBaseUrl: 'https://example.com',
+      outputDir: outDir,
+      affiliateUrls: AFFILIATE_URLS,
+    });
+
+    const index = readFileSync(join(outDir, 'index.html'), 'utf-8');
+    const match = readFileSync(join(outDir, 'partido-92-2026-07-06-mexico-vs-inglaterra.html'), 'utf-8');
+    expect(index).toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 2 - Inglaterra 1');
+    expect(match).toContain('Resultado PredictaGoal Score basado en los datos más recientes: México 2 - Inglaterra 1');
+    expect(match).toContain('pgs-aligned-section');
+    expect(match).toContain('México 2-1 Inglaterra');
+    expect(match).not.toContain('Predicción final: Inglaterra 2-1 México');
+  });
+
   it('parses generated scores in reversed team order without flipping the winner', () => {
     const outDir = join(tmpDir, 'dist');
     const fixture = {
@@ -474,7 +519,7 @@ describe('publish/staticSite', () => {
       awayTeamCode: 'ENG',
       kickoffUtc: '2026-07-06T00:00:00.000Z',
       venue: 'Mexico City',
-      stage: 'knockout',
+      stage: 'group',
       status: 'scheduled',
     };
 

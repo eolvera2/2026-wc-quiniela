@@ -680,6 +680,7 @@ function buildKnockoutFixtureContent(fixture) {
     : 'La lectura combina fuerza de plantel, rendimiento del torneo y contexto de eliminación directa mientras se actualizan momios cercanos al partido.';
 
   return {
+    source: 'knockout_estimate',
     pgs,
     teamSummaries: {
       [homeTeam.code]: findInitialTeamSummary(homeTeam.code) || genericTeamSummary(homeTeam),
@@ -718,8 +719,10 @@ function estimateKnockoutPgs(fixture, homeTeam, awayTeam) {
   const homeRating = TEAM_POWER_RATING[homeTeam.code] || 78;
   const awayRating = TEAM_POWER_RATING[awayTeam.code] || 78;
   let diff = homeRating - awayRating;
-  if (homeTeam.code === 'MEX') diff += 2;
-  if (awayTeam.code === 'MEX') diff -= 2;
+  const venueText = normalizeTextForPgs(fixture.venue);
+  const isMexicoVenue = /\b(mexico|ciudad de mexico|mexico city|guadalajara|monterrey|guadalupe)\b/.test(venueText);
+  if (homeTeam.code === 'MEX') diff += isMexicoVenue ? 12 : 2;
+  if (awayTeam.code === 'MEX') diff -= isMexicoVenue ? 12 : 2;
   return scoreFromAdvantage(diff >= 0 ? 'home' : 'away', Math.abs(diff));
 }
 
@@ -737,13 +740,22 @@ function hasFixtureOdds(fixture) {
     && numericOdd(fixture.awayOdds ?? fixture.awayWinOdds));
 }
 
-function getFixturePgsSource(fixture, fixtureArticles = new Map()) {
+export function getFixturePgsSource(fixture, fixtureArticles = new Map()) {
   const generatedArticle = fixtureArticles.get('pronostico_momios')?.contentJson;
+  const structuredGeneratedPgs = extractStructuredGeneratedPgs(generatedArticle, fixture);
+  if (structuredGeneratedPgs && isPgsCoherent(fixture, structuredGeneratedPgs, generatedArticle)) {
+    return { pgs: structuredGeneratedPgs };
+  }
+
+  const initialContent = getInitialFixtureContent(fixture);
+  const initialPgsIsCoherent = initialContent?.pgs && isPgsCoherent(fixture, initialContent.pgs, initialContent);
+  if (initialContent?.source === 'knockout_estimate' && initialPgsIsCoherent) return { ...initialContent, pgs: initialContent.pgs };
+
   const generatedPgs = extractGeneratedPgs(generatedArticle, fixture);
   if (generatedPgs && isPgsCoherent(fixture, generatedPgs, generatedArticle)) return { pgs: generatedPgs };
 
-  const initialContent = getInitialFixtureContent(fixture);
-  if (initialContent?.pgs && isPgsCoherent(fixture, initialContent.pgs, initialContent)) return { ...initialContent, pgs: initialContent.pgs };
+  if (initialPgsIsCoherent) return { ...initialContent, pgs: initialContent.pgs };
+
   return { pgs: { home: '#', away: '#' } };
 }
 
@@ -875,13 +887,17 @@ function buildPgsAlignedSection(fixture, pgs, sectionType) {
 }
 
 function extractGeneratedPgs(contentJson, fixture) {
-  const structuredForecast = extractScoreFromText(contentJson?.pronostico_quiniela, fixture);
+  const structuredForecast = extractStructuredGeneratedPgs(contentJson, fixture);
   if (structuredForecast) return structuredForecast;
 
   const html = contentJson?.analisis_tactico_html;
   if (!html) return null;
   const text = decodeHtmlEntities(stripHtml(html)).replace(/\s+/g, ' ').trim();
   return extractScoreFromText(text, fixture);
+}
+
+function extractStructuredGeneratedPgs(contentJson, fixture) {
+  return extractScoreFromText(contentJson?.pronostico_quiniela, fixture);
 }
 
 function extractScoreFromText(value, fixture) {
