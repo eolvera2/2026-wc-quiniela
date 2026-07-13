@@ -1640,7 +1640,9 @@ const HOME_SCHEDULE_SCRIPT = `
   function findDefaultDate() {
     const today = mexicoCityDateKey();
     if (days.some((day) => day.dataset.date === today)) return today;
-    return days.find((day) => day.dataset.date)?.dataset.date || '';
+    const nextScheduledDay = days.find((day) => day.dataset.date > today);
+    if (nextScheduledDay?.dataset.date) return nextScheduledDay.dataset.date;
+    return days.at(-1)?.dataset.date || '';
   }
 
   function isReloadNavigation() {

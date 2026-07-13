@@ -211,6 +211,8 @@ describe('publish/staticSite', () => {
     expect(index).toContain("if ('scrollRestoration' in history) history.scrollRestoration = 'manual';");
     expect(index).toContain('function isReloadNavigation()');
     expect(index).toContain('function resolveInitialDate(hashDate)');
+    expect(index).toContain('const nextScheduledDay = days.find((day) => day.dataset.date > today);');
+    expect(index).toContain("return days.at(-1)?.dataset.date || '';");
     expect(index).toContain("const defaultDate = resolveInitialDate(hashDate);");
     expect(index).toContain("day.scrollIntoView({ behavior, block: 'start' });");
     expect(index).toContain('new ResizeObserver(setStickyMetrics).observe(header);');
