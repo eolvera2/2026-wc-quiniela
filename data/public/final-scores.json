@@ -133,5 +133,25 @@
     "awayScore": 1,
     "sourceName": "ESPN",
     "sourceUrl": "https://www.espn.com/soccer/match/_/gameId/760431/jordan-austria"
+  },
+  {
+    "matchNumber": 101,
+    "homeTeam": "France",
+    "awayTeam": "Spain",
+    "kickoffLocalDate": "2026-07-14",
+    "homeScore": 0,
+    "awayScore": 2,
+    "sourceName": "WorldCupTeams.com",
+    "sourceUrl": "https://worldcupteams.com/results/"
+  },
+  {
+    "matchNumber": 102,
+    "homeTeam": "England",
+    "awayTeam": "Argentina",
+    "kickoffLocalDate": "2026-07-15",
+    "homeScore": 1,
+    "awayScore": 2,
+    "sourceName": "WorldCupTeams.com",
+    "sourceUrl": "https://worldcupteams.com/results/"
   }
 ]
