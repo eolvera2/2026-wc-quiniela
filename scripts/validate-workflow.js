@@ -22,7 +22,7 @@ try {
 }
 
 const REQUIRED_PATTERNS = [
-  { pattern: /on:\s*\n\s+schedule:/, label: 'schedule trigger' },
+  { pattern: /Scheduled runs paused after the World Cup ended/, label: 'cadence schedule paused' },
   { pattern: /workflow_dispatch:/, label: 'workflow_dispatch trigger' },
   { pattern: /NODE_VERSION:\s*'20'/, label: 'Node.js 20 runtime' },
   { pattern: /concurrency:\s*\n\s+group:\s*wc26-pipeline/, label: 'concurrency group' },
@@ -40,7 +40,6 @@ const REQUIRED_PATTERNS = [
   { pattern: /publish_target:/, label: 'publish target dispatch input' },
   { pattern: /default:\s*live/, label: 'live default dispatch target' },
   { pattern: /run:\s*npm run build:coming-soon/, label: 'coming soon build step' },
-  { pattern: /cron:\s*'\*\/15 \* \* \* \*'/, label: '15-minute schedule' },
   { pattern: /timeout-minutes:\s*75/, label: 'extended cadence timeout' },
   { pattern: /FINAL_SCORE_WAIT_MINUTES:\s*'45'/, label: 'final-score wait window' },
   { pattern: /github\.event_name == 'workflow_dispatch' && inputs\.publish_target == 'demo'/, label: 'manual demo build' },
@@ -48,11 +47,11 @@ const REQUIRED_PATTERNS = [
     pattern: /github\.event_name == 'workflow_dispatch' && inputs\.publish_target == 'coming_soon'/,
     label: 'manual coming soon build',
   },
-  { pattern: /github\.event_name == 'schedule' \|\| inputs\.publish_target == 'live'/, label: 'scheduled/manual live cadence build' },
+  { pattern: /inputs\.publish_target == 'live'/, label: 'manual live cadence build' },
   { pattern: /BASE_PATH:\s*''/, label: 'coming soon root build' },
   {
-    pattern: /success\(\) && \(github\.event_name == 'schedule' \|\| inputs\.publish_target == 'live'\)/,
-    label: 'scheduled/live deploy enabled',
+    pattern: /success\(\) && inputs\.publish_target == 'live'/,
+    label: 'manual live deploy enabled',
   },
   {
     pattern: /Build demo site \(manual preview only\)/,
@@ -62,7 +61,7 @@ const REQUIRED_PATTERNS = [
 ];
 
 const REQUIRED_KNOCKOUT_PATTERNS = [
-  { pattern: /cron:\s*'0 6,14,22 \* \* \*'/, label: '3x daily knockout refresh schedule' },
+  { pattern: /Scheduled runs paused after the World Cup ended/, label: 'knockout refresh schedule paused' },
   { pattern: /workflow_dispatch:/, label: 'manual knockout refresh trigger' },
   { pattern: /concurrency:\s*\n\s+group:\s*wc26-pipeline/, label: 'shared knockout refresh concurrency group' },
   { pattern: /npm run knockout:refresh/, label: 'knockout refresh script execution' },

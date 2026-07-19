@@ -1,9 +1,8 @@
 name: WC26 Knockout Fixture Refresh
 
 on:
-  schedule:
-    # Three daily checks for newly resolved/tentative knockout teams.
-    - cron: '0 6,14,22 * * *'
+  # Scheduled runs paused after the World Cup ended. Re-enable with the previous
+  # '0 6,14,22 * * *' cron when knockout refresh automation is needed again.
   workflow_dispatch:
 
 concurrency:

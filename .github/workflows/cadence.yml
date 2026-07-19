@@ -1,13 +1,12 @@
 name: WC26 Quiniela Cadence
 
 on:
-  schedule:
-    # Frequent checks during launch/tournament windows reduce Actions scheduling drift around T-5h/T-1h thresholds.
-    - cron: '*/15 * * * *'
+  # Scheduled runs paused after the World Cup ended. Re-enable with the previous
+  # '*/15 * * * *' cron when cadence automation is needed again.
   workflow_dispatch:
     inputs:
       publish_target:
-        description: 'What to build. Scheduled/live runs deploy the full cadence site to Azure root; coming soon is manual only.'
+        description: 'What to build. Manual live runs deploy the full cadence site to Azure root; coming soon is manual only.'
         required: false
         type: choice
         default: live
@@ -59,7 +58,7 @@ jobs:
         run: npm run build:coming-soon
 
       - name: Run cadence pipeline
-        if: ${{ github.event_name == 'schedule' || inputs.publish_target == 'live' }}
+        if: ${{ inputs.publish_target == 'live' }}
         env:
           AZURE_AI_ENDPOINT: ${{ secrets.AZURE_AI_ENDPOINT }}
           AZURE_AI_KEY: ${{ secrets.AZURE_AI_KEY }}
@@ -75,7 +74,7 @@ jobs:
         run: node scripts/run-cadence.js
 
       - name: Deploy to Azure Static Web Apps
-        if: ${{ success() && (github.event_name == 'schedule' || inputs.publish_target == 'live') }}
+        if: ${{ success() && inputs.publish_target == 'live' }}
         uses: Azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.SWA_DEPLOYMENT_TOKEN }}
